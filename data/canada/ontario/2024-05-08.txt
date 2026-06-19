@@ -1,0 +1,265 @@
+Hansard Transcript 2024-May-08 vol. B | Legislative Assembly of Ontario
+Skip to main content
+Legislative Assembly of Ontario
+Legislative Assembly of Ontario
+Query
+Search entire site
+Search entire site
+Search entire site
+Search entire site
+Français
+Query
+Search entire site
+Search entire site
+Search entire site
+Search entire site
+Menu
+Close
+Français
+Members (MPPs)
+MPPs are your representatives in the Legislative Assembly of Ontario.
+MPPs are your representatives in the Legislative Assembly of Ontario.
+Go to Members (MPPs)
+Current MPPs
+All MPPs
+Contact
+The Speaker
+In memoriam
+Close
+Legislative business
+The Legislative Assembly makes laws that affect Ontarians.
+The Legislative Assembly makes laws that affect Ontarians.
+Go to Legislative business
+Bills
+House documents
+Video
+Committees
+Committee documents
+Calendar
+Close
+Get involved
+The Legislature works best when you get involved.
+The Legislature works best when you get involved.
+Go to Get involved
+Contact an MPP
+Participate in committees
+Petitions
+Use the Assembly grounds
+Close
+Visit and learn
+The Legislative Assembly offers a variety of guided tours, education programs, teaching tools, and more.
+The Legislative Assembly offers a variety of guided tours, education programs, teaching tools, and more.
+Go to Visit and learn
+Tours and webinars
+Teach, learn, and play
+Parliament and government
+School groups
+Plan your visit
+Close
+Breadcrumb
+Home
+Legislative business
+House documents
+Parliament 43, Session 1
+May 8, 2024
+May 8, 2024
+43rd Parliament, 1st Session
+< Previous sitting day
+Next sitting day >
+Hansard Transcripts
+vol. A
+Hansard Transcripts
+vol. B
+Votes and Proceedings
+Orders and Notices
+Hansard Transcript 2024-May-08 vol. B (PDF)
+L155B - Wed 8 May 2024 / Mer 8 mai 2024
+LEGISLATIVE ASSEMBLY OF ONTARIO
+ASSEMBLÉE LÉGISLATIVE DE L’ONTARIO
+Wednesday 8 May 2024 Mercredi 8 mai 2024
+Private Members’ Public Business
+Artificial intelligence
+Report continued from volume A.
+1800
+Private Members’ Public Business
+Artificial intelligence
+The Deputy Speaker (Ms. Donna Skelly):
+I recognize the member for Newmarket–Aurora—
+Interjections.
+The Deputy Speaker (Ms. Donna Skelly):
+And I would ask the government side to please be quiet. I recognize the member for Newmarket–Aurora.
+M
+me
+Dawn Gallagher Murphy:
+I move that, in the opinion of this House, the government of Ontario should adopt methods to assess potential risks and judge the successful adoption and ethical use of artificial intelligence use in government while developing measures to counter emerging cyber security threats.
+The Deputy Speaker (Ms. Donna Skelly):
+Pursuant to standing order 100, the member has 12 minutes for her presentation.
+M
+me
+Dawn Gallagher Murphy:
+We are a government that is building a better Ontario. It is not only a focus on building our province with critical infrastructure like hospitals, schools, transit and roads, a better Ontario also means building a more productive, positive customer service experience for Ontarians by implementing a digital transformation of public services.
+Artificial intelligence is all around us. It is rapidly advancing and changing the way people interact with businesses and government. Today, there is no legislation governing the safe and responsible use of AI in Canada. Ontario has the opportunity to become a Canadian leader in AI governance and risk mitigation to support transparent, responsible and ethical use of AI across government public services.
+As a government, we have a duty to ensure that services rendered to the taxpayers in this great province are provided in the most secure, efficient, transparent, trustworthy and ethical manner. By ensuring a secure digital future, the province can deliver on these core principles to Ontarians.
+Firstly, I would like to recognize the great work that the Ministry of Public Business and Service Delivery has performed to date, with respect to the consultations that took place in 2021, to the formation of the AI expert working group who has been providing the government with advice and recommendations on the development of Ontario’s trustworthy AI framework and for the responsible use of AI within public services.
+There are three strategic priorities that have been grounded in the trustworthy AI framework:
+(1) No AI in secret.
+(2) AI use the people of Ontario can trust.
+(3) AI that serves all people of Ontario.
+So why this motion? The goal of this motion is to move the government beyond the AI framework, to move with the next critical steps (1) in adopting methods to access provincial risks, (2) to judge the successful adoption and ethical use of AI, and (3) while developing measures to counter emerging cyber security threats.
+Why now? Because there’s no legislation governing the safe and responsible use of AI in government today. No provincial, territorial, or federal government in Canada, nor the USA, nor the UK. There are strong European Union comprehensive AI rules, which were first drafted in 2021, and many say that this could become a standard. However, as far as the governance of AI use within government, there is no current legislation.
+According to the government of Canada’s Artificial and Intelligence Data Act page:
+“There is no regulatory framework in Canada specific to AI.
+“While some regulations in specific areas, such as health” care “and finance, apply to certain uses of AI, there is no approach to ensure that AI systems address systemic risks during their design and development.”
+So what are the economic opportunities associated with AI? Over the past couple of months, I have had the fortunate opportunity to meet with many experts in AI, one of whom is the Vector Institute, which is an independent, not-for-profit corporation dedicated to research in the field of AI, excelling machine and deep learning. They launched in 2017 with support from the government of Canada, the government of Ontario and private industry, and in partnership with the University of Toronto and other universities. According to the Vector Institute’s 2022-23 annual report for the period of April 1, 2022, to March 31, 2023:
+—20,634 AI jobs were created in Ontario;
+—75,975 jobs were retained in Ontario;
+—Ontario attracted $1.16 billion in AI-related Ontario venture capital investments;
+—Ontario had 312 companies invested in the AI ecosystem; and
+—27 new AI companies were established in Ontario.
+When I met with the executive of the Vector Institute to discuss my private member’s motion, we had a great discussion, and I was honoured to receive an endorsement by Ben Davies, the CIO of the Vector Institute for Artificial Intelligence:
+“Vector believes that the AI trust and safety principles we have developed can provide valuable guidance for other organizations as they work to establish their own codes of conduct and AI policies. These principles serve as a starting point for organizations that are just beginning their AI journey, while more established organizations can build upon them to best suit their specific needs.
+“We think your motion fits into this theme and that these principles will cause organizations to consider how they will conduct business in an AI-enabled world. We believe it is important for Ontario to consider the global context to ensure interoperability across jurisdictions and alignment with best practices as it continues to develop and promote its AI ecosystem. Thank you for your efforts in advocating for this important issue in the Legislative Assembly of Ontario.”
+Okay, many of my esteemed colleagues here may be wondering what prompted me to put forward this motion. After performing my jurisdictional scan on motions, bills, regulations here in Canada, I questioned why no one has put forward such a motion before. Speaker, I spent more than 25 years in the secure payments industry. What I can tell this Legislature is that I spent a good part of my career digitally transforming the payment industry. Mobile payments and contactless technology are driving unprecedented change in how we pay. Consumers and businesses are embracing digital payment solutions to navigate the evolving landscape of the payments industry with agility and innovation.
+So what did I learn through this transformation journey? Interoperability is critical. Security and privacy are paramount. Digital transformation provides immense efficiencies for people, and the productivity of people increases significantly. By moving beyond digital transformation, we move to technology transformation that will enable intelligent automation and enhance cyber security. Generative AI is catalyzing transformation and innovation. It is being used today to rapidly improve customer service and support enhanced security. By utilizing AI capabilities, cyber threats can be detected in an expeditious manner.
+I believe that AI is transforming people’s lives in a similar way. However, trust is one of the most critical factors in gaining public buy-in for the use of this technology. So how do we establish trust? In a couple of great conversations with Sharon Polsky, president of the Privacy and Access Council of Canada, I intensely listened to her comments:
+“Citizens want to be safe (not just feel safe). Human intervention is needed. Common sense on where and when AI can be used is critical. People expect government to earn their trust. Trust is sustainable by ensuring verifiable evidence.”
+Back to this motion: It is asking the government to ensure that it is establishing metrics as to risk and understanding successes. How do we arrive at successful outcomes with AI? By showing Ontarians that AI can be trusted by verifying the outputs—trust but verify.
+1810
+In speaking with Dr. Ann Cavoukian, a three-term Information and Privacy Commissioner of Ontario—who created “privacy by design,” a framework that seeks to proactively embed privacy into the design specifications of information technologies. Ann said, “With the massive growth of generative AI and the potential for growing privacy- and security-related threats, clear guidance regarding the protections of the public’s data that has been entrusted with the government is vital.
+“Your motion offers such protection in establishing rules for the safe and responsible use of AI and measures to counter emerging threats, ideally before they arise. Your proposed motion will also provide much-needed transparency, enabling members of the public to examine what the government is doing to protect their personal data from the threats arising from AI.
+“Your motion also urges the Ontario government to adopt methods by which to address the successful adoption of AI, ensuring its ethical use while developing measures by which to counter potential privacy and security-related threats that may arise.
+“By advancing your motion, Ontario could indeed become a Canadian leader in AI governance and risk mitigation, supporting the responsible and accountable use of AI in public services offered by governments. I endorse your motion….” Thank you, Ann.
+My discussions with Dr. Cavoukian led me to a meeting with one of our Ontario municipalities which is actively engaging with AI to streamline their municipal services. They understand the need for anonymity to protect their data, at the same time utilizing this invasive technology to better enlighten their decision-making.
+Speaker, I’m running out of time, so I’ve got to skip over.
+By voting yes to this motion, we as the Legislative Assembly of Ontario have the opportunity to harness the data, to leverage what we have and to work to move things that need to change. We are looking at a cultural change and Ontario that needs to be a champion for our citizens. We start small and we build our foundational model. We take risks; however, trust and verify.
+The Deputy Speaker (Ms. Donna Skelly):
+Further debate?
+Mr. Chris Glover:
+I want to thank the member from Newmarket–Aurora for bringing forward this motion. This is a topic that is of great interest to me. The member from Humber River–Black Creek often says that I sound like a friendly professor when I speak. I used to be a professor before I came here, so today I’ve got a 12-minute speech and I’m going to sound like a friendly professor. I’m going to talk about the history of artificial intelligence, I’m going to talk about some of the opportunities and risks, and then I’m going to provide a bit of guidance for the government: some things that we should definitely be looking at; investments that we should be making into our schools, our colleges, our universities, our hospitals; and also measures that we need to take to protect our democracy in this AI revolution.
+I’m going to start with the history. All the buzz in the media is about artificial intelligence, but most people don’t know what it actually is. Artificial intelligence is the intelligence of machines or software, as opposed to the intelligence of humans or animals. The concept was developed by Alan Turing, the grandfather of modern computers, in the 1950s, and over the last 70 years it has gone through several stages of development, starting with machine learning, deep learning and generative AI. And the next step is artificial general intelligence. We don’t know when that step is going to be coming, but that is what people most fear, I think, is the artificial general intelligence, when we get there.
+So I’ll go through each of these steps. Machine learning is artificial intelligence that can automatically adapt with minimal human interference. So every time we do a Google search, it’s learning from what we put in, it’s learning from the response that we put to that Google search, it’s learning from other people’s searches, and it improves the algorithm each time, so that as more and more people are using Google Search, the search engine is improving. That’s machine learning.
+Deep learning and neural networks came about in the 1950s and 1960s. It’s based on the idea of computers mimicking how human brains work. They’re built on neural networks where each of the neurons—which is a human brain cell—is basically a mathematical function. There are some of these artificial neurons that take inputs and there are some that provide outputs, and there are some that are in between that are actually doing calculations. We don’t see what the neurons in between are doing, and that’s called deep learning. It’s called deep learning because we don’t see what it’s doing.
+And then the next generation of artificial intelligence was generative AI. Most of the conversation that has been in the media over the last year is about generative AI, and this is a relatively new form of AI. It really hit its stride in 2012, when processing power and the large amount of data on the Internet provided training data for large artificial neural networks.
+General artificial intelligence models learn from the patterns and structure of their input training data, and then generate new data that has similar characteristics. It can, for example—one of the most famous images that came out of generative AI was a picture of the Pope in a puffer jacket. Somebody put in a request and said, “I want a picture of the Pope in a puffer jacket,” so artificial intelligence, generative AI, scoured the Internet, looked for images of the Pope, looked for images of a puffer jacket, and put together the most plausible combination that it could, and we ended up with a picture of the Pope in a puffer jacket.
+Interjection.
+Mr. Chris Glover:
+I think the member from—Perth?
+Mr. Nolan Quinn:
+Stormont–Dundas–South Glengarry.
+Mr. Chris Glover:
+Okay. He knows this image.
+Let’s see. This generative AI is moving incredibly quickly. In 2019, generative pretrained transformers, GPT—so in ChatGPT, the “GPT” stands for “generative pretrained transformer”—language models began to generate coherent text. In 2019, they began to generate coherent text. By 2023, GPTs could solve or answer LSATs. They could do the law school admission test, they could do the GRE—in four years. It takes a human being from the first sentence a child makes at the age of two or three to the age of 18, when they might write an LSAT exam, 15 years to get to that. The GPTs developed that intelligence to do that in four years—and it’s not stopping. It keeps getting smarter and smarter.
+The next step, and I mentioned this in the beginning, is artificial general intelligence. This is when a computer can accomplish any intellectual task that a human can accomplish. It means that the computer is improving itself. There’s a famous quote that the last machine that humans will make is the machine that improves itself, because once the machine starts to improve itself, what is the role of humans? This is where people talk about the existential threat of artificial intelligence. It’s where so many science fiction stories—Star Trek and I, Robot—are talking about, when you combine advanced robotics and artificial intelligence, what is the role of humans? Are we going to go the way of Neanderthals? Are we building the next stage of evolution that’s ultimately going to replace us?
+So there are incredible opportunities in artificial intelligence. There are incredible risks. And there’s a Canadian history; there’s a Canadian angle to this. Some of the pioneering work in artificial intelligence development came from Canadian researchers. In 1949, Canadian psychologist Donald Hebb created a model of neurons interacting with one another that set the groundwork for how artificial intelligence and machine-learning algorithms work. In the 1980s and 1990s, Professor Geoffrey Hinton from the University of Toronto did pioneering work on the connections between artificial neurons. He is considered a global leader in artificial intelligence. And I will say, he has spoken out many times over the last few years about the need to mitigate the risks of artificial intelligence.
+The other thing I would say is: How big is this revolution? It’s pretty clear that the artificial intelligence revolution is going to be as big as any other revolution in human history. It’s going to be as big as the printing press revolution in the 1400s. It’s going to be as big as the Industrial Revolution in the late 1700s and early 1800s. It’s going to be as big as the computer and Internet revolutions in the 1980s and the early 2000s. It’s going to transform everybody’s job. It’s going to transform the ways that we interact with each other and with the machines that we use, so it’s an absolutely huge, huge historical transformation that we are on the cusp of.
+1820
+As legislators here in the Ontario Legislature, we have a responsibility to the people of Ontario, both to seize the opportunity—because it is going to transform the economy here and economies around the world, and we want to make sure that we are on the cusp of that, that we are leading that charge. But it’s also going to create incredible risks, and we need to protect the people of Ontario, and more broadly, from those risks.
+I’ll talk a little bit about some of the opportunities of this. Artificial intelligence in health care: Artificial intelligence can diagnose skin diseases better and more accurately than doctors. It can manage patient records. There’s an AI scribe that doctors can turn on in their office, and it will record the conversation that a doctor has with a patient and transform that conversation into a patient record, so that the doctor doesn’t have to sit down after the patient leaves and type all their notes into the computer. It’s already done for them; they just have to check to make sure that it’s accurate.
+In finance and banking, artificial intelligence can enhance fraud detection, risk assessment and market trends. The first AI hedge fund was developed in Canada by an entrepreneur named Peter George, who actually lives in Spadina–Fort York.
+It can transform the research or the search for mining. It can transform the research or the search for mining. It can transform our cities and make our cities smart, so that when you’re sitting at a traffic light at 1 in the morning and there are no other cars around, you’ll be thinking, “Wow, I can’t wait until there’s smart technology on those traffic lights, so that there will be sensors and it will recognize, ‘There are no other vehicles around; might as well turn that light green, so that person can go.’”
+It’s going to transform agriculture, education, manufacturing, entertainment and media, and it’s going to revolutionize content creation.
+It’s going to revolutionize cyber security, because it can strengthen cyber security measures by detecting anomalies, identifying threats and fortifying defences against cyber attacks.
+But with each of these opportunities, there is incredible risk, and some of those risks are with cyber security, because if the positive players, the benevolent players, are actually using AI to enhance cyber security, criminals are going to be using it to overcome those cyber security measures.
+There’s bias, and we’ve seen bias in human resources outputs. Google tried out a program for hiring engineers using artificial intelligence. It excluded women, because it was echoing the systemic bias in the data, which is our society. We’ve also seen it in human resources when it echoes racial biases.
+It’s going to cause incredible labour disruption. It’s going to replace jobs, and we’re already seeing it in arts and entertainment. The writers’ strike in Hollywood was the world’s first strike around artificial intelligence.
+It’s going to hurt small businesses, because large corporations have the money and the wherewithal to hire companies and hire people to help them with the artificial intelligence revolution. Small businesses don’t have that advantage.
+It also is a threat to our democratic rights. There’s the potential of surveillance. We’re seeing more and more surveillance. This government is introducing vape and noise detectors into school washrooms. What does that mean for the future of surveillance of our children and of ourselves? We’ve got to be very conscious of our right to privacy when we’re looking at artificial intelligence.
+It’s also potentially going to allow bad players to interfere with the outcome of elections. We’ve already seen that with social media in the 2016 presidential election, and we’ve seen echoes of that in previous elections in Canada. With artificial intelligence, that will allow some international players to interfere with our future elections.
+I’ve only got a minute left. Ontario needs to be at the lead of this artificial intelligence revolution, and in order to do that, we need to build on our education system, our public education system: our schools, our colleges and universities. But with this government, they are actually bankrupting our schools, our colleges, our universities. We are dead last in our funding for colleges and universities. This government has cut 5,000 educators out of our elementary and secondary schools since they got into power in 2018. It’s the worst possible time to be underfunding education.
+The other risk that we need to mitigate: We need to mitigate the risk to our democracy. So thank you very much for bringing this motion forward. I appreciate the opportunity—
+The Deputy Speaker (Ms. Donna Skelly):
+Thank you.
+Further debate?
+Hon. Todd J. McCarthy:
+It is a pleasure to join the debate this evening in this House with respect to the thoughtful motion and the advocacy associated with the motion through the good work of the member for Newmarket–Aurora.
+This motion aligns with our government’s mandate, which supports effective and trustworthy use of artificial intelligence. We are committed to working together with our public and private sector partners to position the province of Ontario as a global leader in the responsible adoption of artificial intelligence and emerging technologies.
+Madam Speaker, we cannot afford, as I’ve said many times in this House and elsewhere, to be an offline government in an online world. I’m proud to see that many Ontarians are driving innovative solutions across the province and around the world, positioning Ontario as that global leader in technology.
+When used safely, artificial intelligence advancements can unlock new ways to improve people’s lives and to foster Ontario’s long-term economic growth. These technologies have the potential to help us transform the vital programs and services to better serve the people of this province, while also saving time and money for all.
+But, Madam Speaker, our government clearly understands that artificial intelligence advancements do not come without risks. Without coordinated oversight and risk management, we could face serious negative outcomes, including the perpetuation of biases and threats to personal privacy. That is why we are leading by example and unlocking the power of AI by establishing our AI expert working group and developing Ontario’s Trustworthy Artificial Intelligence Framework. As AI adoption increases rapidly and as AI technologies evolve, we are continuously engaging with industry experts, academia and civil society, including our AI expert working group established in December of 2023. With their support, we have developed a trustworthy AI framework that will outline how our government will utilize AI responsibly to ensure transparency, accountability and the prevention of harm. It will also help us assess AI risk and provide guidance on risk-mitigation strategies, while maximizing the benefits of AI for all. It will help us achieve one of our top priorities, and that is to protect the privacy of the people of Ontario, to protect their personal information and to ensure online security for all. And it will help us build a better Ontario, because we are unlocking the power of artificial intelligence by taking these important first steps in guiding the government’s responsible use of this revolutionary new technology.
+Madam Speaker, last week when I was in Ottawa, I joined businesses and technology professionals from across Canada who all came together at the Cybersecurity and Identity Summit 2024. All came to hear from experts in the fields of cyber security, cyber threat intelligence and artificial intelligence. As our digital landscape rapidly evolves, it is imperative that we, in government, stay knowledgeable of technological advancements and anticipate cyber security trends, threats and challenges. AI does have the potential to create significant breakthroughs, improving the lives of Ontarians across the province. But it also raises legitimate concerns about its responsible use. That is why my ministry is working on ways to scale the adoption of artificial intelligence in responsible ways to help transform key programs and services to safely serve and protect our citizens and residents in our province.
+1830
+Our government understands that new protections are required, particularly for our children, for the ever-changing technology. We are stepping up to ensure the safety and peace of mind for all Ontarians. Under the leadership of this Premier, our government is delivering cyber security and privacy protections for Ontarians so that they can focus on what matters most to them.
+The Deputy Speaker (Ms. Donna Skelly):
+Further debate?
+Mr. John Fraser:
+I want to thank the member from Newmarket–Aurora for bringing this motion forward—it’s a very important subject—and the professor from Spadina–Fort York for his lecture, which I was glad to be able to sit in on this afternoon—it was very informative and very thoughtful—and the minister as well.
+You know, if you went outside of this building, I do have to say, if you said to people, “What do you think about artificial intelligence in government?” they might say, “We’d just like some intelligence in government.”
+Mrs. Robin Martin:
+Badoom tish.
+Mr. John Fraser:
+Badoom. I just wanted to loosen it up before I started going on this. It’s just—
+Mrs. Robin Martin:
+He’s here all night.
+Mr. John Fraser:
+Here all week; try the veal. Well, somebody had to say it, folks; you were all thinking it.
+Here’s the thing: There are risks. We talk about adopting artificial intelligence, but we’re at risk for artificial intelligence adopting us. It’s moving so quickly.
+Governments of all stripes—so I’m not picking on anybody—are not known for moving quickly. It’s hard for us to do that. We’re not nimble. So there’s two things I think we have to think about when it comes to AI and the risks that I think are significant risks. There’s probably more than this, but I just want to talk about these two because I only have three minutes and 39 seconds left. If I had artificial intelligence, I might be able to get this done quicker, but let’s go with this.
+Information is currency, right? Information is the new currency. Digital information is currency, right? It’s trading. With our currency and with our banking system, we have a regulatory framework. That regulatory framework, especially in this country, helped us survive some really difficult risks and tests that have occurred in the world over the last 20 years. So not only do we have to think about how we’re going to adopt it here and what we’re going to do, but we have to make sure that we have the regulations in place to protect that information. It’s really important. There are very big risks that are there. So I encourage the government to look outside.
+The other risk is not immediate. It’s not going to be tomorrow. It’s not going to be next week. It’s not going to be next year. It’s not going to be in the year after that. That risk is going to be artificial intelligence—it’s going to start replacing people’s jobs. Yes, it’s going to change people’s jobs, but it’s going to reduce the need for as many people doing certain tasks.
+As the member for Spadina–Fort York said, the Industrial Revolution, the changes that happened—you know we don’t have blacksmiths anymore, because we don’t need horseshoes, because we have cars. I know that’s a very rudimentary example, but that’s the kind of change that artificial intelligence is going to bring to this world. So, that economic dislocation is going to be something that governments have to figure out, just like they had to figure it out in the Industrial Revolution and all the things that have occurred over a period of time that have transformed our economy and transformed the nature of work.
+You can even take a look at Uber, right? How that small change, how that ability to summon—to go over governments, to go over traditional employment modes, changed the nature of deliveries and to driving taxis delivering people. That’s something that we should look at as just a low-hanging fruit.
+AI is going to affect jobs in health care, technology jobs and education everywhere. I really do want to thank the member for bringing this forward. I think it’s important. Governments have to be able—we have to be able to make sure that we are doing the things internally that we want to make sure are done externally. And it’s so hard for governments, because it’s so hard to move as quickly as the technology is changing.
+I will be supporting this motion.
+The Deputy Speaker (Ms. Donna Skelly):
+Further debate?
+Ms. Natalie Pierre:
+Good evening, I’m pleased to rise in the House today to speak to my colleague’s motion regarding the risks, adoption and ethical use of AI in government. As AI technologies continue to advance at an unprecedented pace, governments around the world are facing the need to ensure that AI is deployed responsibly, ethically and in the best interests of society.
+First and foremost, it’s essential to recognize the immense potential of AI to transform government operations and service delivery. From improving efficiency and accuracy to enhancing public service delivery, AI holds the promise of revolutionizing the way in which governments interact with citizens. The deployment of AI in government service delivery holds the potential to transform the way citizens interact with their governments, making services more accessible, more efficient and tailored to individual needs. From customer service chat bots to language translation and accessibility, these technologies can be used to overcome language barriers and disabilities, providing citizens with quick and convenient access to government information and services.
+As always, with great power comes great responsibility. The rapid proliferation of AI also raises ethical concerns that we’ve heard about this evening from some of our colleagues here in the House that need to be recognized and addressed. To ensure that AI is used in a manner consistent with democratic principles and human rights, as one of the other MPPs here mentioned earlier, governments must prioritize the ethical use of AI technologies that promote transparency, accountability and fairness. This may include establishing guidelines for the collection, use and sharing of data as well as developing measures to counter emerging cyber security threats. The use of AI in government must also ensure the benefits of AI technology are accessible to all members of society and include measures to address digital divides and to promote digital literacy.
+We also need to consider another important aspect: the protection of privacy. As AI systems become increasingly integrated, there is a growing risk of data breaches and cyber security threats. It’s imperative that governments protect citizens’ personal data and ensure that AI applications comply with legal and ethical standards. Governments have a responsibility to mitigate privacy and security risks, while at the same time fostering innovation, entrepreneurship and economic growth in AI-related industries.
+Speaker, Ontario is at the forefront of AI. Our AI programs at Ontario universities are world-renowned, and we are a global leader in artificial intelligence and AI research, working hand in hand with industry and education. We are a leader and a top global destination for artificial-intelligence research, investment and talent, attracting experts from around the world. Between 2022 and 2023, Ontario benefited from $1.16 billion in AI-related venture capital investments, resulting in the creation of 27 new AI companies right here in Ontario and 248 new AI-related patents being filed across Canada.
+At a time when many industries are experiencing an economic downturn, it’s encouraging to see our province’s AI ecosystem is continuing to grow and thrive. AI is here to stay. It’s the future, providing groundbreaking innovation to solve real-world problems in health care, agriculture, autonomous vehicles, traffic flow and government service delivery.
+We need to make the right decisions now to ensure that AI technologies serve the common good and to steer the evolution of this technology in a direction that promotes innovation and benefits society.
+The Deputy Speaker (Ms. Donna Skelly):
+Further debate?
+Mr. Brian Riddell:
+I’d like to thank the member from Newmarket–Aurora for bringing forward this motion and her continued advocacy on behalf of the people of her riding.
+1840
+We recognize that Ontarians need to feel empowered to work and play online securely and confidently, with the goal of achieving a thriving digital economy. After all, our job as representatives is to support the public and their well-being, and the digital landscape is no exception.
+In Ontario, we are focused on building a better, smarter and accountable government, one that safeguards the data entrusted to us by our people and businesses by continually assessing and enhancing our current cyber security practices. This is also why Ontario has been proactive in implementing AI to reimagine entire programs and services, all with the goal of better serving Ontario’s people and businesses while also saving precious time and money.
+As more and more people and businesses look to this digital landscape to connect with one another and perform their day-to-day transactions or benefit from the unlimited potential of technology and AI advancements, we as a government must ensure our communities are safe and reliable and have access to the services they need, when and where they need them.
+Our government’s work: What we’re doing is we’re tapping into digital technologies that help to make people’s busy lives easier and give our businesses the competitive edge and advantage they need to excel at home and abroad. Innovation knows no bounds, and that’s why we’re pushing the envelope of innovation even further by completely reimagining how members of the public engage with the world around them. Using emerging technologies like AI and sharing data in safe new ways will keep us at the forefront of improving services and growing our digital economy.
+I would like to commend the Minister of Public and Business Service Delivery for his ongoing work with his federal, provincial and territorial partners, fostering the partnerships that are critical for—
+The Deputy Speaker (Ms. Donna Skelly):
+I apologize to the member, but we are out of time. It’s now time to go back to the member from Newmarket–Aurora for a two-minute response.
+M
+me
+Dawn Gallagher Murphy:
+I’d like to thank all the speakers this evening. I’d like to thank the Minister of Public and Business Service Delivery. I would like to thank the member for Spadina–Fort York. I’d like to thank the member from Ottawa South. I’d also like to thank the member from Burlington and the member from Cambridge as well.
+I have so much to say. All the work that goes into a motion—and this is sounding like a really positive outcome here, so I’m extremely excited.
+I’d like to also thank representatives who are here today who have fully endorsed this motion, representatives from IBM Canada, from the Association of Consulting Engineering Companies, from Technation, from Southlake Regional Health Centre and the many more people who have supported and are watching today. Thank you for meeting with me and the discussions that we’ve had.
+In my short period, a couple of things that I did want to say that I didn’t get to say—and that goes back to a conversation I had with our Southlake Regional Health Centre. It addresses some of the things that we’re talking about: that legislation is needed as disruption will increase. It is constantly moving, so we need to re-look at how legislation can keep up with this ever-evolving technology.
+Speaker, when it comes down to it, I have so many more quotes I could use from so many groups. By saying yes to this motion, we are setting an example for the rest of Canada that we can take the essential steps to ensure the responsible and ethical use of AI in government.
+Again, thank you to all my colleagues. Thank you to all the support received on this motion.
+The Deputy Speaker (Ms. Donna Skelly):
+The time provided for private members’ public business has now expired.
+Ms. Gallagher Murphy has moved private member’s notice of motion number 92. Is it the pleasure of the House that the motion carry? I declare the motion carried.
+Motion agreed to.
+The Deputy Speaker (Ms. Donna Skelly):
+All matters relating to private members’ public business having been completed, this House stands adjourned until 9 a.m. tomorrow morning, May 9, 2024.
+The House adjourned at 1845.
+Was this page helpful?
+Yes
+, I found this page helpful. An optional survey will open in a new tab.
+No
+, I didn’t find this page helpful. An optional survey will open in a new tab.
+Back to top
+Legislative Assembly of Ontario
+The Legislative Assembly of Ontario is made up of members of provincial Parliament (MPPs) who are elected by Ontarians to represent them and their constituencies. The Legislative Assembly's main responsibilities are to debate and pass legislation, to hold the government to account, and to approve government spending. The Legislative Assembly meets in the Legislative Building located in Queen's Park in Toronto.
+Site map
+About us
+Office of the Assembly
+Contact us
+Careers
+Ontario Legislature Internship Programme (OLIP) (opens another site)
+Accessibility
+What's happening
+Resources
+House documents
+Library and research
+Find an MPP
+FAQ
+Media centre
+Data resources
+Notices of hearings
+Copyright and privacy

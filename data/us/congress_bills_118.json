@@ -1,0 +1,313 @@
+{
+  "bills": [
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent. (consideration: CR S6; text: CR S6)"
+      },
+      "number": "1",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution establishing a Committee to Inform the President of the United States that a quorum of each House is assembled.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/1?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent. (consideration: CR S6; text: CR S6)"
+      },
+      "number": "3",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution to elect Patty Murray, a Senator from the State of Washington, to be President pro tempore of the Senate of the United States.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/3?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent. (consideration: CR S6; text: CR S6)"
+      },
+      "number": "4",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution notifying the President of the United States of the election of a President pro tempore.",
+      "type": "SRES",
+      "updateDate": "2025-05-27",
+      "updateDateIncludingText": "2025-05-27",
+      "url": "https://api.congress.gov/v3/bill/118/sres/4?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent. (consideration: CR S7; text: CR S7)"
+      },
+      "number": "6",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution fixing the hour of daily meeting of the Senate.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/6?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "2",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution informing the House of Representatives that a quorum of the Senate is assembled.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/2?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent. (consideration: CR S7; text: CR S7)"
+      },
+      "number": "8",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution to make effective appointment of Senate Legal Counsel.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/8?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment by Unanimous Consent. (consideration: CR S7; text: CR S7)"
+      },
+      "number": "9",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution to make effective appointment of Deputy Senate Legal Counsel.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/9?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "5",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution notifying the House of Representatives of the election of a President pro tempore.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/5?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-03",
+        "text": "Submitted in the Senate. Placed on Senate Legislative Calendar under Over, Under the Rule. (text: CR S20)"
+      },
+      "number": "7",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution fixing the hour of daily meeting of the Senate.",
+      "type": "SRES",
+      "updateDate": "2024-04-17",
+      "updateDateIncludingText": "2024-04-17",
+      "url": "https://api.congress.gov/v3/bill/118/sres/7?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "8",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
+      "type": "HJRES",
+      "updateDate": "2025-12-05",
+      "updateDateIncludingText": "2025-12-05",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/8?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "27",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Prosecutors Need to Prosecute Act",
+      "type": "HR",
+      "updateDate": "2025-05-27",
+      "updateDateIncludingText": "2025-05-27",
+      "url": "https://api.congress.gov/v3/bill/118/hr/27?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "49",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "REVIEW Act of 2023",
+      "type": "HR",
+      "updateDate": "2025-12-05",
+      "updateDateIncludingText": "2025-12-05",
+      "url": "https://api.congress.gov/v3/bill/118/hr/49?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "53",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "FIND Act",
+      "type": "HR",
+      "updateDate": "2025-12-05",
+      "updateDateIncludingText": "2025-12-05",
+      "url": "https://api.congress.gov/v3/bill/118/hr/53?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-23",
+        "text": "Received in the Senate and referred to the Committee on the Judiciary."
+      },
+      "number": "3",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing the sense of Congress condemning the recent attacks on pro-life facilities, groups, and churches.",
+      "type": "HCONRES",
+      "updateDate": "2025-07-21",
+      "updateDateIncludingText": "2025-07-21",
+      "url": "https://api.congress.gov/v3/bill/118/hconres/3?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-01-24",
+        "text": "Sponsor introductory remarks on measure. (CR H271-272)"
+      },
+      "number": "175",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Heartbeat Protection Act of 2023",
+      "type": "HR",
+      "updateDate": "2024-12-31",
+      "updateDateIncludingText": "2024-12-31",
+      "url": "https://api.congress.gov/v3/bill/118/hr/175?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-02",
+        "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+      },
+      "number": "139",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "SHOW UP Act of 2023",
+      "type": "HR",
+      "updateDate": "2025-05-27",
+      "updateDateIncludingText": "2025-05-27",
+      "url": "https://api.congress.gov/v3/bill/118/hr/139?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2023-02-08",
+        "text": "Referred to the Subcommittee on Border Security and Enforcement."
+      },
+      "number": "29",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Border Safety and Security Act of 2023",
+      "type": "HR",
+      "updateDate": "2025-05-27",
+      "updateDateIncludingText": "2025-05-27",
+      "url": "https://api.congress.gov/v3/bill/118/hr/29?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-12-17",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "33",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Medicare Dental, Vision, and Hearing Benefit Act of 2023",
+      "type": "HR",
+      "updateDate": "2024-12-21",
+      "updateDateIncludingText": "2024-12-21",
+      "url": "https://api.congress.gov/v3/bill/118/hr/33?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-12-17",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "34",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Assuring Medicare\u2019s Promise Act of 2023",
+      "type": "HR",
+      "updateDate": "2024-12-21",
+      "updateDateIncludingText": "2024-12-21",
+      "url": "https://api.congress.gov/v3/bill/118/hr/34?format=json"
+    },
+    {
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-12-17",
+        "text": "Referred to the Subcommittee on Health."
+      },
+      "number": "35",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Close the Medigap Act of 2023",
+      "type": "HR",
+      "updateDate": "2024-12-21",
+      "updateDateIncludingText": "2024-12-21",
+      "url": "https://api.congress.gov/v3/bill/118/hr/35?format=json"
+    }
+  ],
+  "pagination": {
+    "count": 19315,
+    "next": "https://api.congress.gov/v3/bill/118?offset=20&limit=20&format=json"
+  },
+  "request": {
+    "congress": "118",
+    "contentType": "application/json",
+    "format": "json"
+  }
+}

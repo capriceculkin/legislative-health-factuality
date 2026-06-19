@@ -1,0 +1,3 @@
+.env
+venv/
+data/us/voteview/house_votes_1985_present.csv

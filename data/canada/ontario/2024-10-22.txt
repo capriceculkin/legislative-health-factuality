@@ -1,0 +1,506 @@
+Hansard Transcript 2024-Oct-22 vol. B | Legislative Assembly of Ontario
+Skip to main content
+Legislative Assembly of Ontario
+Legislative Assembly of Ontario
+Query
+Search entire site
+Search entire site
+Search entire site
+Search entire site
+Français
+Query
+Search entire site
+Search entire site
+Search entire site
+Search entire site
+Menu
+Close
+Français
+Members (MPPs)
+MPPs are your representatives in the Legislative Assembly of Ontario.
+MPPs are your representatives in the Legislative Assembly of Ontario.
+Go to Members (MPPs)
+Current MPPs
+All MPPs
+Contact
+The Speaker
+In memoriam
+Close
+Legislative business
+The Legislative Assembly makes laws that affect Ontarians.
+The Legislative Assembly makes laws that affect Ontarians.
+Go to Legislative business
+Bills
+House documents
+Video
+Committees
+Committee documents
+Calendar
+Close
+Get involved
+The Legislature works best when you get involved.
+The Legislature works best when you get involved.
+Go to Get involved
+Contact an MPP
+Participate in committees
+Petitions
+Use the Assembly grounds
+Close
+Visit and learn
+The Legislative Assembly offers a variety of guided tours, education programs, teaching tools, and more.
+The Legislative Assembly offers a variety of guided tours, education programs, teaching tools, and more.
+Go to Visit and learn
+Tours and webinars
+Teach, learn, and play
+Parliament and government
+School groups
+Plan your visit
+Close
+Breadcrumb
+Home
+Legislative business
+House documents
+Parliament 43, Session 1
+October 22, 2024
+October 22, 2024
+43rd Parliament, 1st Session
+< Previous sitting day
+Next sitting day >
+Hansard Transcripts
+vol. A
+Hansard Transcripts
+vol. B
+Votes and Proceedings
+Orders and Notices
+Hansard Transcript 2024-Oct-22 vol. B (PDF)
+L170B - Tue 22 Oct 2024 / Mar 22 oct 2024
+LEGISLATIVE ASSEMBLY OF ONTARIO
+ASSEMBLÉE LÉGISLATIVE DE L’ONTARIO
+Tuesday 22 October 2024 Mardi 22 octobre 2024
+Strengthening Cyber Security and Building Trust in the Public Sector Act, 2024 / Loi de 2024 visant à renforcer la cybersécurité et la confiance dans le secteur public
+Private Members’ Public Business
+Commercial to Residential Conversion Act, 2024 / Loi de 2024 sur la conversion d’un usage commercial à un usage résidentiel
+Adjournment Debate
+School transportation
+Report continued from volume A.
+1704
+Strengthening Cyber Security and Building Trust in the Public Sector Act, 2024 / Loi de 2024 visant à renforcer la cybersécurité et la confiance dans le secteur public
+Continuation of debate on the motion for second reading of the following bill:
+Bill 194, An Act to enact the Enhancing Digital Security and Trust Act, 2024 and to make amendments to the Freedom of Information and Protection of Privacy Act respecting privacy protection measures / Projet de loi 194, Loi édictant la Loi de 2024 visant à renforcer la sécurité et la confiance en matière de numérique et modifiant la Loi sur l’accès à l’information et la protection de la vie privée en ce qui concerne les mesures de protection de la vie privée.
+The Acting Speaker (M
+me
+Lucille Collard):
+We’re going to move to further debate.
+Mr. Tom Rakocevic:
+I’m really proud to speak on behalf of the residents of Humber River–Black Creek, my lifelong home, and I’m proud to be debating Bill 194, Strengthening Cyber Security and Building Trust in the Public Sector Act, 2024. I understand that the government is trying to work fast, to try to get ahead of something that’s affecting all of us. Does it go far enough? We’ll be exploring it within this debate.
+Identity theft, fraud and cyber attacks are serious problems that can have devastating impacts on individuals. We all know this. Ontarians need to be able to trust that their personal information and data is safe and their privacy is protected in our public and private institutions. When someone steals your personal information, like your name, social security number or banking information, they can pretend to be you. In 2021, Canadians lost over $230 million to online fraud, including identity theft, that we know of. The complexity involved with trying to recover from identity theft takes loads of time and money and, of course, incredible stress.
+When a cyber attack happens to an organization, they can not only steal massive amounts of personal data; they can shut down critical operations. When hackers hold this data hostage in a ransomware attack, it’s been reported that the cost of Canadian companies averages about $1.9 million per incident.
+Artificial intelligence: Who knows how much it will evolve? We know in our attempts to make life easier and for us to continue to increasingly rely on technology, we’re solving a lot of problems, but we’re also creating others. It’s hard to keep up. Once we have opened Pandora’s box and it’s open, once you commit to certain acts or train an AI or do whatever it is, you can’t step it back. At some point, we all know that this AI is going to overtake us in many different ways, so it’s important to have a handle on that. Again, it’s important for us to be discussing this here in our Legislature, and I’m hoping these conversations are happening across the world.
+First off, I’m going to be relying on information provided by different individuals, namely an expert in the field named John Wunderlich. I appreciate the research and comments on the bill he has provided. As well, I would like to thank the Law Commission of Ontario, who have made a detailed submission to the government on Bill 194. In the submission, they made 11 concrete recommendations that the government could implement to improve this legislation, and I hope that the government will take their recommendations very seriously.
+We also heard from one of the members opposite that this seems to be legislation in flux and movement, so again, I really hope that they will be listening to the experts as we see this move forward and that the regulations that will finally come will be in consultation with those that have our best interests at heart.
+Like many government bills, this here is largely a regulatory framework. Notwithstanding what was said earlier, we see this has been a pattern in a lot of government regulation. We don’t know exactly what all the regulations are going to be or if they will be enough to deal with the challenges of cyber security or emerging AI. There’s also, again, no regulation on the private sector, which is just as susceptible to data breaches.
+So when you look at schedule 1, it’s about enhancing digital trust in the public sector and what safe cyber security measures public agencies will have to follow to protect the data that’s in their hands. The problem is that smaller municipalities have said they don’t have the finances and capacity to manage this on their own. What are the assurances being made to Ontarians that measures will be in place to ensure that our data is safe with third-party and, perhaps, foreign corporations that will actually be handling the data?
+Why do I say this? It’s very easy for governments, and especially this government, to increasingly privatize as well as download. So what we’re seeing here is the government essentially telling municipalities, “Hey, look, this is important, but ultimately figure it out yourself.” There’s no money attached to it. There’s no real plan to help them with that. So while we may all agree this is a very, very important issue, I think more leadership is needed in this area, and something a little more prescriptive, and I’ll be getting to that a little later.
+Our libraries, schools and hospitals need support with resources, training and building capacity for better cyber security—again, not just slapping them with extra responsibility without any leadership or means of implementing these changes that they’re sort of alluding to. We have seen this before. We all know how it can end. The government is, again, downloading these responsibilities without funding. They love to tell municipalities what to do. I mean, we have seen that in a lot of legislation, but I’m not going to talk about that today.
+Schedule 2 makes changes to the Freedom of Information and Protection of Privacy Act. The Freedom of Information and Protection of Privacy Act applies to the provincial government, universities, colleges, hospitals and designated entities. These changes would expand the reporting requirements when there has been a data breach and make our institutions undertake proactive measures to avoid thefts, losses and other unauthorized uses of personal information.
+1710
+While the schedule sets a few standards, none of the sections propose substantive information. Essentially, what it says is, “Trust us. We will make those rules and regulations.” As I’ve mentioned before, when you listen to some of the government members, it’s almost as if cyber security will cease to exist if this passes into law. Let’s not over-promise here, right?
+The protections around those under 18, of course, are important, but also very vague. So we want to hear the real content on how they will be protecting the digital information of people under 18.
+Schedule 2 does add in whistle-blower protections—which is good—if someone believes there is a contravention or there will be an apparent contravention of the act. The complainant can request confidentiality and the Information and Privacy Commissioner would not be able to reveal the identity of the complainant. Of course, we want to protect our whistle-blowers, who are often putting themselves at risk to protect all of us. Again, that’s something that’s good. It would also allow the Information and Privacy Commissioner to consult with other privacy commissioners and enter into agreements with them to coordinate and publish guidelines. That’s good, too.
+Canada has become a target for cyber and ransomware attacks. We always have, but we continue to see increasing attacks here. Approximately 9% of Ontario municipalities have experienced a significant cyber breach in just the past two years alone. In Canada, and particularly Ontario, there have been several notable cyber security incidents that highlight vulnerabilities at various levels of governance and private organizations. One significant case involved the Better Outcomes Registry and Network, otherwise known as BORN Ontario. In May 2023, a cyber attack exposed the personal health information of 3.4 million people, including details relating to pregnancy care and newborns. The breach underscored the need for more robust data protection measures, as the compromised data included sensitive information such as names, addresses and health card numbers.
+When the Toronto Public Library was attacked last year, and more recently the Hamilton Public Library, people’s lives were put on hold. With no means to use a public computer or Internet at their local branch, many were left without a way to search for a job or housing. I know I was at the library following this attack and saw what it did to the system. Others were left disconnected from staying connected to friends and families abroad, or had their studies significantly curtailed by the outages.
+When the city of Hamilton was attacked, it was so paralyzing. Imagine that firefighters were using Google Maps to respond to calls for help. So they have major, major damage, you find, when you have a cyber attack. In the case, of course, of our first responders, it could be life-and-death results. It also, of course, had financial impacts. The city of Hamilton’s staff were unable to process approximately $36 million in preauthorized property tax payments, among other things. Furthermore, when the Toronto Public Library was attacked, it’s believed to have exposed the data of their own employees going back to 1998.
+The preamble of the bill states that Ontario recognizes the value of enhancing Ontario’s privacy safeguards through increased transparency and independent oversight. If this were true, it would include privacy and protection for employees both in the public and private sectors, which cannot be legislated federally except for employees under the federal labour code. In fact, employees in Ontario are the least likely to have privacy protection at work compared to other provinces and territories.
+Again, we see a lot of good things in the legislation but the government really needs not to just look at the public side, but the private side. As I’ve said earlier, a lot of our data is there and we need to protect literally everyone.
+Vaping detectors: Again, schools in Brampton and Mississauga installed vape detectors in student washrooms. Privacy concerns arose as a result of this when it was discovered that these devices were actually capable of detecting audio-capturing capabilities of the devices in a private space. The vape detectors came after the province announced a three-year $30-million fund to allow school boards to purchase the detectors.
+This is an example of how a privacy impact assessment is important prior to using technology with data-capturing technology. Of course, you would expect that parents would have wanted to know exactly what this was in advance and, as you can imagine, there were concerns that were raised.
+The importance of funding public institutions: Speaker, this legislation puts all the responsibility on public entities to develop in-house AI and other measures. But we know our schools are so starved by this government that they can’t even meet the basic needs, in many cases, of our students. How can we possibly expect and require them to do this without lots and lots of outsourcing to, of course, private companies? We have not been talking about private companies in this legislation.
+So what are we doing? We’re setting up schools and municipalities to open the door to foreign companies to have access to private data, including our children’s data. Data that is out there cannot be retracted. Data that is stolen can’t be recovered. Without proper funding, contracts will be given out, once again, to private hands from our public coffers. So, again, why no assurances and protections with regard to privately held data?
+It seems odd that we’re saying our public institutions must adhere to these standards, but we know they can’t and will have to rely on private companies that aren’t being included here. We know the public institutions are so cash-strapped they won’t be able to develop their own cyber security systems and, of course, will be relying on third parties.
+I’m going to read some excerpts from privacy expert and data protection expert John Wunderlich, who, again, we thank for weighing in on this matter. Here’s a quote from him:
+“Bill 194 has been introduced in the current context of the ongoing evolution of cyber security and privacy threats and the explosive growth of artificial intelligence.
+“It is worth noting that the bill does not make amendments to the Municipal Freedom of Information and Protection of Privacy-MFIPPA (the sister act to the Freedom of Information and Protection of Privacy Act-FIPPA). Hopefully, this can be addressed as the bill goes through the legislative process.” And of course, you know they’ve left a lot of this to regulation, so this is something they should be looking at.
+“It must be said that if one of the government’s objectives in the bill were to improve cyber security and privacy protections for Ontarians, this would have been a golden opportunity to introduce private sector legislation to provide a made-in-Ontario solution that could supplement and extend the protections offered by federal legislation and ensure that Ontarians have robust and equivalent protection in both the public and private sectors. In particular, the government of Ontario’s failure to protect employees’ privacy is a long-standing issue highlighted by the gaps in this legislation.
+“Employees in Ontario do not have legislation that protects their privacy in either the public or the” private “sector. Public sector privacy protections were removed in 1995, making Ontario unique among Canadian provinces in that it does not protect the privacy of civil servants at work. It is also the case that, due to employment being in provincial jurisdiction, federal private sector privacy legislation does not protect employees in Ontario.” That’s why it’s so important that we are doing things here in Ontario, since we can’t rely fully on the federal legislation.
+“The bill has two significant elements. Schedule 1, ‘Enhancing Digital Security and Trust Act,’ addresses cyber security issues, the use of artificial intelligence systems, the impact of digital technology on children, and some general provisions, all of which will be addressed below.
+“Schedule 2, ‘Freedom of Information and Protection of Privacy Act,” amends the Freedom of Information and Protection of Privacy Act,” 1990.
+Here’s a bit of a comparison of how non-prescriptive this is, as compared to similar legislation happening elsewhere:
+“Bill 194 is 51 pages long. From a content perspective, that is about 17 pages in English, with a matching section in French. If you think, ‘This seems a bit perfunctory, given the complicated nature of cyber security, digital protection of children, and privacy,’ you would be right. It seems to me that the entire bill could be summarized by saying that the government recognizes the importance of issues and will, therefore, write and implement regulations sometime in the future to deal with them. ‘Just trust us and pass the bill.’
+“When you compare this to the four years of discussion that went into creating the 458-page EU Artificial Intelligence Act, it comes up short, literally and figuratively.
+“Closer to home”—don’t look at Europe; just look at what’s going on federally. I think that they’re essentially allowing the feds to eat their lunch here. But what did John say? He said, “Closer to home, Bill C-27, which includes the Artificial Intelligence and Data Act, is 148 pages (or 74 pages in English) but is accompanied by more than 100 civil society, industry, and expert submissions on the provisions and issues of the bill.
+“Cyber security
+“This part of Bill 194 boils down to a requirement for the government to make regulations governing cyber security.
+“While section 3 allows the government to make regulations setting technical standards, the devil will be in the details here. Noting that there are boatloads of security standards to choose from. There needs to be governance to ensure that the standards chosen are enforced.
+“There is nothing to suggest in the bill that even if good standards are adopted, they will be enforced with any rigour.
+“Use of artificial intelligence systems
+“This part of Bill 194, similar to the prior section, mainly sets out the authority for the government to make regulations to govern the use of AI systems without creating content that could be publicly reviewed or publicly debated. I will note two particular gaps I feel should be addressed.”
+In the time that’s running out, I suggest that all of you, if you have not done so, look at his detailed submission.
+As you can see, there are experts out there who obviously hold this dear to their hearts and are doing their best for all of us, and they have a lot of solutions that are out there. If you just want to look at some of the submissions, look at what the feds received—as they said, 100 of them.
+1720
+In summary, “It is past time for Ontario to stop being a laggard in the protection of employee privacy and the government should, at the very least, amend Bill 194 to give public sector employees the privacy protection and respect they deserve.” Again, this is John.
+“A private sector privacy bill could address employment privacy issues, putting it under the authority of the commissioner with private sector order-making powers. Alternatively, elements of privacy protection for employees could also be addressed by adding to Ontario’s Employment Standards Act.” You can see how prescriptive an expert is weighing in here, and I hope you’ll be considering this if this legislation does moves forward.
+“The government should use Bill 194’s second reading and committee review to ensure that there is a clear legislative articulation of:
+“—what are the acceptable and unacceptable uses of artificial intelligence; and
+“—how to identify, categorize and mitigate individual and social risks associated with the use of artificial intelligence.” We’re going to hear from the law commission that talked about this as well.
+“If the government wants to ensure that digital technology doesn’t harm children, it should start with digital media training and take steps to prevent children from using technology to bully other children.” This was raised, and the response was, “Look, we’re banning cell phones.” Guess what? Kids use these phones outside of school.
+“Consider recognizing that the government has a duty of care when it processes sensitive personal information under a legislative authority that deprives individuals of the ability to refuse the processing.
+“Adding PIA requirements with breach notifications will raise the bar for institutions processing Ontarians’ personal information. This may lead to some interesting changes or headlines in the short term, but the longer-term consequences should be good.
+“At the end of the day, the government appears to want to be able to take steps to addressing cyber security, children’s data processing and artificial intelligence through regulations. It will be interesting to see how, or if, the consultation process will significantly alter this approach.” Again, I encourage you to look at John Wunderlich’s submission and all other submissions.
+The Law Commission of Ontario: In the short time I have left, the Law Commission of Ontario identified 11 recommendations that the government could use to improve this legislation. There is an opportunity for Ontario to become a leader in AI governance, and so they believe, as it stands, Bill 194 is brief and lacks key provisions needed to ensure that “public sector AI use is beneficial, lawful and accountable. More specifically, the bill does not address several widely acknowledged trustworthy AI priorities, including:
+“—human rights and procedural fairness;
+“—AI systems used in the criminal justice system;
+“—AI systems used in courts and tribunals;
+“—public AI registries;
+“—risk categories and mitigation strategies;
+“—impact assessments;
+“—explainability requirements; and
+“—governance.”
+Again, I encourage each and every one of you to look at the LCO recommendations.
+In the brief time that I have left—I do appreciate debating this—cyber security, the advent of AI and the changes it’s going to have on all of our lives is absolutely transforming. It’s almost hard to predict where we are going to go from here. I understand the government’s urgency on jumping on this, but, when you look comparatively, the government has been here for six years; the EU have been studying this for four years and came out with prescriptive solutions that total over 450 pages. Even the feds are putting more details into a lot of this.
+I understand that this government has used the practice to rely on regulations, but, ultimately, it’s a strategy of, “Just trust us,” and that’s not always the best way to move forward. I know that the explanations were given about being able to adapt and move quickly, but sometimes I wonder if that’s always what it’s about. We need to include experts, we need to let the public know where we are going, and we need to ensure that Ontario is the flagship of all the provinces when it comes to all things in terms of protecting us. We can simply look at the EU in so many means when it comes to consumer protections. They’re often the leaders and I think there’s a lot to learn from here.
+What we have is what I believe and hope is just the tip of the iceberg in a movement that recognizes the change that technology has had on their lives and the absolute importance that we adapt, because the changes that AI is going to bring is going to change industries across the province. If governments don’t get a handle on it, and if this government doesn’t make this an absolute priority, then who knows what the future holds for each and every one of us, our children and our grandchildren.
+Thank you, Speaker. I appreciate the opportunity to speak today.
+The Acting Speaker (M
+me
+Lucille Collard):
+We’re going to go to questions for the member.
+Mr. Andrew Dowie:
+I always thoroughly enjoy when the member from York South–Weston—it’s not York South–Weston.
+Interjection:
+Humber River–Black Creek.
+Mr. Andrew Dowie:
+Humber River–Black Creek. I apologize to the member opposite for that. Look, he just has such a great delivery, and we learn so, so much from his remarks. I’d actually just say thank you to the member opposite.
+This legislation introduces updates to Ontario’s privacy safeguards in line with the recommendations made by the non-partisan Information and Privacy Commissioner. Our government values the important input given by our partners and stakeholders, because we know that government doesn’t always know best.
+Speaker, through you: Does the member opposite support the recommendations made by the IPC, which is an independent watchdog of the government?
+Mr. Tom Rakocevic:
+We certainly support many of the recommendations we’ve heard relating to this. You will always hear us as New Democrats talking about the importance of consultation and listening to experts when developing legislation.
+There is definitely a lot of good stuff in here. Again, I’m glad to be able to debate this. This is an incredibly important matter. I surely hope that this is the beginning on a journey that will protect all of us here in the chamber, our families and every single Ontarian when it comes to AI and technology, which is increasingly becoming a major, major part of our lives. We see what happens when that technology fails.
+The Acting Speaker (M
+me
+Lucille Collard):
+Next question.
+Ms. Chandra Pasma:
+Thank you so much to my colleague from Humber River–Black Creek for those comments, which were very thoughtful. I do want to just remark that when the member talked about the nimbleness of regulations versus legislation, obviously if the Legislature wasn’t shuttered for 19 weeks, it would be a lot easier to be nimble in introducing amendments to legislation.
+The Information and Privacy Commissioner noted concerns about the lack of transparency, because the plans will come through regulations. The legislation says that the minister doesn’t even need to publish these in the Gazette or communicate them publicly in any way, and the commissioner believes that creates a concern for transparency, but then also for public buy-in.
+Can the member comment on why it’s very important that people in Ontario are able to see what their government is requiring and recommending in terms of protecting cyber security and ensuring that we adopt the correct approach to AI?
+Mr. Tom Rakocevic:
+Thank you very much for the question. I stated in the debate that there is quite a reliance on the government, through the legislation we see, in going to the regulations and saying, “Don’t worry. We’ll get to that.”
+As you stated and as has been stated now by experts, they want to see where this government is going. We don’t want to over-promise and under-deliver. If we rely on some of the speeches we heard from the government members, it was as if cyber security, cyber issues and cyber attacks might cease to exist simply by passing the legislation.
+Ultimately, we have a regulatory framework without the regulations, without the kind of prescriptive details we’re seeing at the federal level and what we’re seeing in the EU. We’re seeing experts saying, “Look, with more details, we appreciate what the others are doing,” and they’re saying to Ontario, “Let’s follow in line. Let’s look at what other jurisdictions are doing.” It’s always important to tell the people what you want to do so they can make the best judgments.
+The Acting Speaker (M
+me
+Lucille Collard):
+Next question.
+Mr. Will Bouma:
+I always very much enjoy engaging with my colleague from Humber River–Black Creek. We actually have a lot in common.
+I’m intrigued: He said at various times that this legislation has a lot of good in it and that it needs just a few amendments. We’re in second reading. Obviously, we’d like to get this bill into committee so that some of that work can be done.
+I’d like to ask him: Will he be supporting this legislation when it comes to a vote, yes or no?
+Mr. Tom Rakocevic:
+For my friend opposite: I don’t want to ruin surprises. Stay tuned. He’s been listening.
+I think I have stated that there is a lot here that is supportable. I have stated that this is the beginning of a road that I hope we’re all going to travel together, and that this is something that should be made a priority in a world where there is increasing and increasing reliance on technology. The more reliance you have when that technology fails—you see what devastating impacts it has.
+I will say this: There’s a lot of supportable stuff here. In a majority government, if—using my crystal ball—this proceeds to the next stages, I hope that this government will listen to the experts and make this the detailed, fulsome legislation we all hope for and expect.
+1730
+La Présidente suppléante (M
+me
+Lucille Collard):
+Le député de Mushkegowuk–Baie James.
+Mr. Guy Bourgouin:
+Merci. Thanks to my colleague from Humber River–Black Creek. I always enjoy it when you speak in the House, also.
+In your speech, you mentioned a lot of jurisdictions and especially the EU. This bill is—we’re talking not even five pages. It’s just very, very short. You have talked on others that have hundreds of pages, and they took four years to get to that. Like you mentioned, there is some good stuff in here, and we realize something needs to be done. But we are concerned, because, really, what they’re telling us is, “Trust us.” This government has burnt us many, many times. In fact they’re being investigated, not to mention that.
+But to get back to this point, when we look at hospitals and small school boards, and the financing part of it, this will cost a lot of money. I would like to hear your view on this, because there’s no mention of who’s going to pay. This won’t be free. I would like to hear you on this.
+Mr. Tom Rakocevic:
+Essentially, it’s sort of a downloading of responsibilities to the municipalities. I think that there is more leadership and more prescriptive direction that’s required with regard to this. There’s certainly no price tag that’s being attached to it. It’s sort of a directive: “Look, this is an issue.” It seems that they might feel they are a little late to the party, because this is being debated everywhere. So they get some legislation out really quick and they say, “Look, this is the framework, but we’ll develop the framework a little later. Municipalities, figure out.”
+I do think it’s in all of our best interests to see this government come out with real supports to the municipalities, to these public institutions directly—not just so much in telling them what to do, because it’s not clear they even know where they’re going with this. It’s certainly an important issue, but I, for one, would like to know more prescriptively where they’re going. I’m sure everybody would like to know that as well. I think they really need to provide that leadership and support to those who are asking to undertake what they’re asking.
+The Acting Speaker (M
+me
+Lucille Collard):
+Next question?
+Mr. Logan Kanapathi:
+Thank you to the member from Humber River–Black Creek. I have a lot of respect for this MPP.
+Madam Speaker, cyber security is a soaring issue. More and more staggering numbers are coming out. It’s a threat to so many public institutions, and also the hospitals and doctors’ offices. In hospitals across Ontario, when code grey is activated, there is a loss of critical systems, when there’s a hospital facility unable to function. While code grey may be an unfamiliar term for many Ontarians, for hospital staff, this is a matter-of-life-and-death issue.
+This proposed legislation would enhance support for critical broader-public-sector institutions like hospitals and doctors’ offices that require new cyber security protection. Can the member opposite please tell us why they are against concrete action to provide our hospitals with the support they need?
+Mr. Tom Rakocevic:
+I mean, I’m not really against that, and I’m sure he knows that.
+Look, I’ve stated this during my entire debate: Let’s be more prescriptive, all right? If you’re going to tell our public relations or municipalities that they need to undertake a regulatory framework, well, show them what the regulations are going to be, give them more information, give them more details and do not exclude the private sector. Our data is handled by both public and private instructions, and this government has the power to do it.
+In the little time remaining: If you get this right, you’re helping each and every one of us on all sides of the House, so we want you to get this right. You will get this right by including private sector and public sector, by listening to experts and telling people where exactly you want to go, and providing proper leadership and funding where necessary, so that we could be the leaders when it comes to cyber security protection, responding to the advent of AI and ensuring we’re all protected.
+The Acting Speaker (M
+me
+Lucille Collard):
+Further debate?
+Hon. Nina Tangri:
+It has been very interesting this afternoon, listening to many sides of the debate.
+I’m really proud to rise in the House today to speak about how our government is strengthening cyber security and protecting people online through Bill 194, the Strengthening Cyber Security and Building Trust in the Public Sector Act, 2024. This legislation really is a pivotal step towards ensuring the safety, privacy and trust of all Ontario citizens in this digital age.
+I want to start by extending my thanks to Minister McCarthy for his leadership on this crucial issue. Our work on Bill 194 highlights the government’s commitment to safeguarding our public sector while fostering the responsible use of advanced technologies like artificial intelligence, or AI.
+Speaker, this legislation comes at a very critical time. With cyber attacks becoming more frequent and sophisticated, the need for a robust response is urgent. Bill 194 provides that response. It strengthens Ontario’s digital security, protects against AI-related harms, and ensures that the public sector can safely and effectively navigate today’s complex digital landscape. This legislation will make Ontario a leader in digital security and responsible AI use.
+As the Associate Minister of Small Business, I’ve witnessed first-hand how cyber security and fraud have impacted small businesses across Ontario. Cyber criminals often target these businesses, exploiting gaps in their digital defences. Bill 194 is not only about protecting public sector organizations; it’s also about creating a safer digital environment for small businesses and the customers they serve. By enhancing cyber security measures, this legislation will help Ontario’s entrepreneurs protect their businesses, ensuring they can continue to grow and contribute to our economy.
+Cyber attacks are a growing threat. Over the last four years, we’ve seen cyber incidents across Ontario nearly triple. These attacks threaten essential services—our hospitals, our schools, our public agencies—and they can disrupt our way of life. Bill 194 addresses these threats head-on by giving the public sector the tools it needs to respond quickly and effectively.
+In my ministry, we have seen how cyber vulnerabilities impact services that citizens of Ontario rely on every day. That’s why we’ve partnered with the Ontario Centre of Innovation, or the OCI, to deliver the Digitalization Competence Centre, or the DCC, program, which focuses on driving the digital modernization of Ontario SMEs. Whether it’s health care systems, education networks or municipal services, the risks are significant.
+Recent incidents in public service, health care and education have highlighted the urgent need for better cyber protections. This bill will ensure that all public sector organizations are prepared to defend against these threats.
+In my role as Associate Minister of Small Business, we have been actively listening to the concerns of small business owners across Ontario. In fact, nearly two thirds of Canadian businesses have experienced a cyber incident. Data breaches, ransomware attacks and fraud schemes have impacted their operations and, in some cases, their very survival. Small businesses are the backbone of our economy, yet they often lack the resources to invest in sophisticated cyber security defences.
+Bill 194 addresses many of these concerns head-on. By strengthening cyber security frameworks across the public sector, this legislation will also benefit Ontario small businesses, especially those leveraging e-commerce to increase their sales and expand their presence. It creates a safer digital environment where businesses can operate with confidence, knowing they are better protected from digital threats. This bill will establish clear guidelines for responding to cyber incidents, ensuring that both public sector entities and small businesses have the tools and resources they need to defend against evolving digital threats.
+1740
+Artificial intelligence offers immense potential for sectors such as health care and education. Yet, with these advances come challenges. As AI rapidly evolves and continues to transform our society, we must ensure that it is used responsibly, with transparency and human oversight. Bill 194 establishes the framework for responsible AI use, particularly in public sector organizations, ensuring that Ontario citizens are protected from AI-related threats.
+Within the small business sector, AI is already being used to enhance customer service, streamline operations and improve decision-making. However, there is also the potential for misuse, including biased algorithms and data privacy concerns.
+This is why Bill 194’s emphasis on the responsible regulation of AI is so important. It ensures that we maintain Ontario’s leadership in AI innovation while safeguarding the public from unintended consequences.
+This bill sets out strong governance frameworks to ensure that AI used in the public sector is transparent and accountable. By aligning with Ontario’s Trustworthy AI Framework, Bill 194 ensures that AI systems are used ethically and with appropriate human supervision, bolstering public trust in these technologies.
+In my riding of Mississauga–Streetsville, we’ve faced unique challenges related to both cyber security and AI such as ransomware, fraud and other cyber attacks. Local businesses, schools and health care facilities are often vulnerable to digital attacks and data breaches. Bill 194 provides the necessary guidance and support to help these organizations strengthen their defences, ensuring that our local communities are better equipped to face the challenges of the digital age.
+In my ministry, we’ve worked very closely with local organizations, businesses and educational institutions to demonstrate the positive impacts that technology adoption can have within their enterprises, while fostering a culture of digital security and innovation. Bill 194 promotes ongoing collaboration with stakeholders, ensuring that Ontario can continue to be a leader in both cyber security and responsible AI use.
+One of the most important components of this bill is its focus on protecting children’s data. As more of our youth engage with digital platforms for education and social interaction, it is critical that we safeguard their privacy. This bill implements stricter regulations around how children’s data is collected and used, particularly in school environments, ensuring that their digital footprint is secure.
+In conclusion, Bill 194 offers a proactive and comprehensive solution to the urgent challenges of today’s digital landscape. By strengthening cyber security and promoting the responsible use of AI, this legislation is a vital step in building trust within Ontario’s public sector and safeguarding the privacy of all its citizens.
+I call on all members of the House to support Bill 194. In doing so, we safeguard the personal data of Ontario’s citizens and pave the way for a more secure and safer digital future.
+I want to thank you, Speaker, for the opportunity to speak on this important legislation. I look forward to hearing from my colleagues as we continue to discuss the future of Ontario’s digital landscape.
+The Acting Speaker (M
+me
+Lucille Collard):
+We’re going to go to questions for the associate minister.
+Mr. Will Bouma:
+I appreciate the minister’s portfolio as minister in small business. A friend of mine works inside of the administrative side of the city of Hamilton, and they recently had a major incident there. I know volunteer firefighters and professional firefighters in the city of Hamilton, and they were getting phone calls from people inside of payroll asking them, “Hey, could you tell us what your pay stub was for your last pay period?” because they were just inventing numbers in order to try to get this in hand. That’s for a large corporation, the city of Hamilton.
+I was wondering if the minister could tell us a little bit more about how devastating—because I’ve talked to small business owners, and when they’ve been held captive for ransomware, how that just shuts their businesses down and their ability to provide, not just for themselves and feed their families, but for every single member of their staff and their team. I was wondering if the minister could, if she has any, share some more stories about how devastating the impact of this can be.
+Hon. Nina Tangri:
+I want to thank the member from Brantford–Brant, because in my capacity, not just as the minister of small business—but I was listening to the member opposite earlier about her role as an insurance broker previous, and my role prior to coming to this house was as an insurance broker where I sold cyber security policies. Often, people come to us when it’s too late, when they’ve already been attacked.
+I have seen first-hand from many, many businesses who have been hit by a cyber security attack and they’ve been held to ransom in order to get their data back—and of course, there’s still no assurance that that data is not being used somewhere or sold to someone unethical. So it is extremely difficult for businesses of all sizes, especially small businesses, when they are held in this area. For some of them, unfortunately, it’s their very survival, and they’ve not been able to come back from this. It is devastating. So this is a great step in the right direction.
+The Acting Speaker (M
+me
+Lucille Collard):
+Next question.
+Mr. Tom Rakocevic:
+I want to thank the member for her submission, her debate and for bringing her own professional experiences to colour what she says and to really explain what she believes.
+Since so much of the legislation is being left to regulations and to, essentially, a regulatory framework, why not include protections in the private sector? As I’ve stated before, a lot of your data is being handled by a telecom provider, perhaps an energy supplier, and the list goes on and on and on. Since you’re leaving so much of this to, essentially, regulations that are coming at a later point, why not step back and include private sector protections as well? I think that would be an advantage to all of us.
+Hon. Nina Tangri:
+I do want to thank the member from Humber River–Black Creek for the question. It is critical and it’s very important. This piece of legislation is the correct beginning to ensure the safety and privacy of all Ontarians, especially through the broader public sector. We’ve seen so many times where there have been hospital breaches, there have been breaches of large corporations, there have been breaches of data centres that hold the information of numerous corporations, where they’ve been attacked and getting that data back is very, very difficult.
+But what we also see sometimes is that decisions need to be made extremely quickly and enable people to have that protection, so that’s why it’s being put with the legislation. But let’s not forget: This is second reading. Should this bill pass and go to the committee stage—we’ve been hearing and we’ve been talking to many stakeholders. We’re sure there are many more stakeholders that will come to the committee stage. This government is listening. This government takes it very, very seriously on how we protect people’s data, and in today’s world of—
+The Acting Speaker (M
+me
+Lucille Collard):
+Thank you. We don’t have time to go for another set of questions and answers, so we’re going to move to further debate.
+M
+me
+France Gélinas:
+Ça me fait toujours plaisir de vous voir dans la chaise de la présidence.
+I’m happy to have a few minutes to share my view of second reading of Bill 194, An Act to enact the Enhancing Digital Security and Trust Act and to make amendments to the Freedom of Information and Protection of Privacy Act respecting privacy protection measures.
+I will actually start with schedule 2 of the bill. I know that we have spent quite a bit of time on schedule 1 of the bill—don’t get me wrong, schedule 1 is very important.
+As most of you know, I come from the health care system. We have had some breaches of privacy in the health care system. You will remember that more than 325,000 patients’ files were stolen in a cyber attack on five southwestern Ontario hospitals last year. Those included letters to patients and roughly 20,000 social insurance numbers. During that period of time, the hospitals—there were five of them—were unable to access critical information, and thousands of patient appointments were cancelled. When we already know that people wait a long time to get an appointment for surgery or diagnostic imaging etc., and thousands of those were cancelled, it created a humongous backlog. Some of the data stolen was published online. The hospital and their IT service provider were subsequently served with a class action lawsuit following the breach. Nothing good comes of this. Should we prevent that? Absolutely. Early intervention, protection and prevention is the way to go, and certainly this is something that we support and this is something that needs to be done.
+1750
+The issue with this is, really, in order to get that done—as I said, the example that I gave you happened in 2023, we are in October 2024—do you think that all 142 hospital corporations in Ontario all looked at what happened in southwestern Ontario and said, “How do we make sure that it does not happen to us?” It is extremely bad for patient care. It’s extremely costly when this happens. None of the hospitals want this to happen. To leave each and every one of them to try to develop their own plan, like the way that it is written in the bill, I don’t think this is a good use of taxpayers’ money. Do we want hospitals to have plans to protect our data? Yes, absolutely. Do we want hospitals to strengthen their cyber security? Yes, absolutely. Do we want to leave each and every one of them out there to figure it out? No.
+I represent northern Ontario. If you look at the 50—I think there are 52—small, rural hospitals we have, they don’t have the knowledge, they don’t have the skills, they don’t have the know-how as to how to get that done. What will they have to do? They will have to hire somebody in the private sector to come and help them to put that into place. The problem is that the demand on our hospitals is such that all of them are in a deficit.
+You will know, Speaker, that there’s a law in Ontario that says that hospitals are not allowed to make a deficit. They’re already all in a deficit position and they had to ask the minister for permission to do a deficit. It was granted to everybody against the law that exists in Ontario. Now we’re asking them to spend a whole bunch of money. All of them will be asking for the same thing. All of them will be paying private companies to do this. Don’t we have a role to play to make that available to our hospitals? Don’t we have a role to play to have templates already developed for them so that they don’t have to spend money they don’t have on a private IT company that will come and tell them how they should have done things? The intentions are good, but the going there will cost money, and our health care system being in the situation that it is in now causes issues.
+It’s not only the health care system. We have some of the French school boards that cover the north part of our province—again, where I live—that don’t have a whole lot of money to do that kind of work. Do they have to do this? Yes, absolutely. Every transfer payment agency of the government should be doing that no matter what areas of service they are in, and the bill tells us so. Where it falls flat is—to add mandatory strengthening of cybersecurity when we know that it’s going to cost them a whole lot of money, without having a secure path as to how you get this done, creates a whole lot of anxiety in many sectors.
+Speaker, we all know that in order for our health care system to offer quality care, there needs to be trust. Health care is not something that you purchase; it’s a relationship between two human beings. And in order for the providers to be able to provide quality care, you have to trust them. You will tell your health care providers information that you don’t tell anybody else. Think of all the things that are taboo or discriminated against in our society. Most women won’t tell anybody they’ve had an abortion, but they will tell their care providers. Most men won’t tell their neighbours or friends they are using illegal drugs, but they will tell their health care providers.
+Health care providers need access to all sorts of information that is very, very personal. They know that if they share it with their care providers, they will get the best care. And they know that if they share it with a care provider, it will never go anywhere, because this is what being a regulated health professional is. You’re never going to share that information. You will use that information to provide quality care but not share it with anybody.
+But now, if you think, “Hmm, what if somebody breaks into my electronic medical record? What if somebody finds out that I have had this or that, or the other things that I don’t want people to know?” then it becomes really hard to provide quality care because people won’t feel confident to share things that would have an impact on the plan of care that they would need to get better. The name of the bill goes on to say “strengthening cyber security and building trust in the public sector.” You’re absolutely right: We need to guarantee to the public we have strong cyber security.
+Strong cyber security won’t come free. We know that everybody that has to do this, that is named in the bill, doesn’t have the money to do that. So let’s answer that question. Let’s make it clear as to what kind of help they can expect from the government to get that done. Where will the money come from? I’m guessing there would be economies of scale to have all of the small hospitals together; all of the hospitals that use the same EMR, electronic medical record, could probably have a similar cyber security system. I’m not a cyber security expert or anything, but I’m guessing that there could be economies of scale to be done at different levels. But none of that is being shared with the people on the front line. None of that is being shared with the CEOs of hospitals and the presidents of our school boards and children’s aid societies and everybody else who needs to strengthen their cyber security.
+So we have this dichotomy, this disconnect between that we all know we have to do this, we all know that it’s going to cost money, and we don’t know how to get there. We don’t know how to get resources to get it done. You have to answer that. You will get a whole lot more people moving on with the bill, which we all want to do, if you are able to answer this. Let us know, see it in the budget you have on November—
+The Acting Speaker (M
+me
+Lucille Collard):
+I apologize to the member; I’m sure you knew that was coming.
+Second reading debate deemed adjourned.
+The Acting Speaker (M
+me
+Lucille Collard):
+It is 6 o’clock, and so we need to move to private members’ public business.
+1800
+Private Members’ Public Business
+Commercial to Residential Conversion Act, 2024 / Loi de 2024 sur la conversion d’un usage commercial à un usage résidentiel
+Mrs. McCrimmon moved second reading of the following bill:
+Bill 201, An Act to amend the Environmental Protection Act with respect to change of use exemptions / Projet de loi 201, Loi modifiant la Loi sur la protection de l’environnement à l’égard des exemptions en matière de changement d’usage.
+The Acting Speaker (M
+me
+Lucille Collard):
+Pursuant to standing order 100, the member has 12 minutes for her presentation.
+Mrs. Karen McCrimmon:
+Good evening, everyone. I’m standing before you today to suggest what is a small but very achievable proposal to help address the affordable housing crisis in Ontario today.
+There is an apparent flaw in our current regulations regarding building conversions. At present, there is an arbitrary limit on the height of buildings that can be converted to residential use without additional administrative and financial barriers. When buildings reach seven storeys, an additional layer of red tape is arbitrarily imposed, despite there being no material differences from smaller buildings. This arbitrary restriction actively limits our municipalities in their efforts to increase housing supply. It keeps them from building inventories of homes in an efficient way, in a way that serves their residents, and in a way that adapts to the needs of municipalities.
+This bill is specifically tailored to address a regulation under the Environmental Protection Act. Ontario regulation 153/04 lays out the criteria for records of site conditions. A record of site condition is a summary of the environmental condition of a property based on scientific assessments conducted by qualified experts. Ultimately, they certify that the property meets environmental safety standards. A record of site condition is an important tool in reapportioning land in a safe way, and I fully support the continued use of records of site conditions. However, these assessments can also be an artificial barrier to commercial to residential conversion. It can take thousands of dollars and up to two years for a record of site condition to be finished and approved by the ministry. This might be completely reasonable in cases where an assessment is warranted. What this bill would address is an arbitrary and needless criteria that can easily be removed.
+The flaw with the record of site condition regulation is in section 15, where exemptions are laid out. These exemptions are very limited and rightfully do not allow any exemptions for industrial use sites where any harmful chemicals have been used. They do, however, allow some conversions for commercial buildings. Where they can be done, and with minimal changes to the building, commercial buildings can be converted into residential without the additional step of a record of site condition. The flaw in this regulation, which keeps many conversion projects mired in development delays, is the arbitrary restriction to six storeys. Commercial building exemptions are unavailable for buildings that are higher than six storeys. Keep in mind that these are the buildings where conversions would create the most reward. More floors mean more converted residential space. But for no known reason, a seven-storey building conversion is delayed by two years for paperwork that is not required for a six-storey conversion. This arbitrary oversight is now causing problems for our municipalities. During our consultations, we have been told that this can be a barrier in their efforts to create more homes.
+This change would be a safe way to open up commercial-to-residential conversions for our municipalities. The other exemptions would remain strict, keeping Ontarians safe from previous industrial contaminants. Buildings that are otherwise eligible that are just “too tall” can create a huge opportunity for housing—housing that should not be held back for two years with a needless and expensive delay, endangering the entire project by making it economically unfeasible.
+We all agree that there’s an affordable housing crisis in Ontario and that everything must be done to help families find a place to live, work and grow in Ontario. Everything from finding employment to choosing to raise a family is held back by the high price of housing today.
+Since the pandemic, we have rapidly embraced work-from-home. Not only has this given employees flexibility in their work arrangements, but it has created a huge opportunity in commercial real estate. The National Association for Industrial and Office Parks put out the research saying, “There has been a permanent shift towards e-commerce as a per cent of retail sales.” Reducing barriers to commercial-to-residential conversions, we can leverage this shift to create opportunities for affordable housing.
+Toronto’s downtown office vacancies in 2024 have reached 18%; almost a fifth of the office space in Toronto is empty. In the GTA as a whole, an estimated 35 million square feet of available office space is not being used. In the Ottawa area, I am sure that you have all heard of federal public servants being called back to downtown offices. A common argument for doing so is that downtown businesses are struggling without the local traffic. Why not create that traffic from commercial to residential?
+Eventually municipalities all over Ontario will have to face the fact that office space is not the exclusive option for employment that it once was. By reducing barriers to conversions, we give our cities a chance to reset and bring more people into downtowns, not just for work but to find a home. We’re very happy to have the support of the Ontario Real Estate Association, which represents nearly a hundred thousand realtors. They recognize that this is a common sense solution needed to create more housing in Ontario.
+We are also supported by the Ontario Society of Professional Engineers, the very experts who work with records of site conditions every day. They say, “The conversion of commercial to residential buildings is of the utmost importance when looking at the current landscape of real estate here in Ontario. This regulatory barrier is arbitrary and creates further difficulties in converting commercial buildings into residential homes.”
+This is a chance to adapt with the times. We must facilitate the conversion of office spaces to residential spaces and bring the traffic back to our downtowns naturally and positively.
+Conversions also have a huge environmental benefit. Every building that is not torn down saves tonnes in carbon emissions because of the reduction in redundant construction. While conversions are still costly and construction will always be necessary, the elimination of the overly restrictive two-year waiver application time will make more projects economically viable.
+Let’s paint a picture of our current regulatory landscape. Let’s imagine three building owners. Each is interested in converting their building to residential use. The first owner’s building has a history of industrial use. To determine whether their land is safe, they must complete a record of site condition. This would not be changed with this bill. The record of site condition is a vital step to ensure a safe residential environment.
+The second owner has a six-storey commercial building. It has no history of industrial use. They prepare a plan to convert it to residential use, and they can move ahead almost immediately. It will still cost them time and money, but they can start the process to create more housing. Under the current regulation, they have no requirement to complete a record of site condition.
+1810
+Now let’s consider the third building owner. Their situation is identical to the second owner’s in every way except that their building is seven storeys. It has the same clean use history, the same conversion plan and the owner is willing to invest time and money. But because of the building’s height, under the current regulations, they must spend thousands of dollars and up to two years waiting for this assessment process. This is the housing restriction that this bill would eliminate.
+Our municipalities are currently facing these restrictions when looking at commercial-to-residential conversion. The height limit is arbitrary and does not have a material impact on site conditions.
+I hope all members in the House choose to support this bill. This would make a reasonable change to a regulation that is currently hampering our ability to create affordable housing. The height restriction for conversions has been a needless barrier in the creation of housing in this province. Now more than ever, unused commercial spaces can be turned into homes for Ontarians. This is an easy way for this government to promote housing growth. I hope they will support this bill. Thank you for your time.
+The Acting Speaker (M
+me
+Lucille Collard):
+Further debate?
+Mr. Andrew Dowie:
+I appreciate the opportunity to speak on Bill 201, the Commercial to Residential Conversion Act, brought forth by the member from Kanata–Carleton. I love the member’s bills every time. They speak exactly my language. I want to thank the member opposite for bringing forth such a well-thought-out bill.
+I do want to get into the consequences of the bill in my remarks. The bill before us proposes to amend the Environmental Protection Act to restrict the height of a building from being used in regulation to exempt certain property use changes from the need for a record of site condition. Before I go specifically into the proposal that’s in this bill, I want to take a few moments to talk about exactly what a record of site condition—or RSC—is and some of the situations where it would be required.
+Now, we all know that Ontario’s population is expected to grow by more than 43%, or almost 6.6 million people, by 2046. That’s why we need to make sure that land is used appropriately and contaminated sites are cleaned up to allow for development. That’s why we encourage the redevelopment of underutilized or vacant land through the Ministry of the Environment, Conservation and Parks and our brownfields program.
+The ministry’s brownfields regulation sets out requirements for developers to follow when they want to convert properties to more sensitive uses such as schools or homes. An RSC confirms that sufficient environmental site assessments related to contaminants in soil and groundwater and, if needed, soil and groundwater remediation, have been completed. In short, the intention is to provide reasonable assurance that the property is appropriate for its intended new use.
+A qualified person must be hired to undertake these assessments and any remediation. Depending on the state of the specific property, these assessments can proceed in one of three ways:
+(1) A phase 1 environmental site assessment demonstrating that there is no likelihood of contamination;
+(2) A phase 2 environmental site assessment demonstrating that the site meets generic provincial standards; or
+(3) A risk assessment to establish site-specific standards and identify any necessary risk management initiatives that would mitigate the higher levels of contaminants. In these cases, any risk management measures would be made binding on the property through the issuance of a certificate of property use.
+Once the necessary steps are completed, an RSC can then be submitted to the Ministry of the Environment, Conservation and Parks, and provided that all regulatory requirements have been met, the ministry will file the RSC in the Environmental Site Registry, allowing a building permit to be issued.
+I can certainly tell you, Speaker, that I agree with the member that this process can be very onerous, speaking from direct, first-hand experience in applying for them myself, particularly for demolitions and the consequences of them.
+To give you a sense of how many RSCs are filed with the ministry every year, 461 were filed in the Environmental Site Registry in 2023 alone.
+Under current legislation and existing regulations, an RSC is mandatory when a property’s use is being converted from an industrial, commercial or community property use to a residential, parkland, institutional or agricultural or other property use. And where this comes into play is—think of new and emerging contaminants like PFAS, which are little threads that come off of pieces of equipment. So you may have a uniform-type organization in some of these commercial properties that could be a suitable conversion because it’s not a very significant burden or there’s no perceived contamination, but we are finding new and growing contaminants from some of our plastics and some of our more modern ways of doing things. So it’s more important than ever to have records of site condition. The criteria that are there are intended to capture sites where the property use is changing from a use that is less sensitive and generally more likely to have contaminants to a use that is more sensitive, where contamination is more likely to be a risk to future users.
+The RSC regulation also sets out some specific exemptions from these mandatory circumstances where those circumstances may generally be considered to be lower-risk. For example, in 2019, we introduced an exemption that allows for commercial- or community-use buildings to be converted to a mixed use of commercial or community with residential or other sensitive uses, without an RSC, if specified criteria are met, including:
+—the building must be limited to six storeys before and after the change;
+—the conversion to more sensitive uses must be limited to floors above the ground floor;
+—the building exterior dimensions must be unchanged, with no additions made to it; and
+—the property must not have a current or previous use as industrial, as a gas station, or as a dry cleaner.
+That last point is a bit important. That’s where you’re going to start seeing some of the new and emerging contaminants from that practice, because our fabrics have different types of threads than they did in the past.
+This exemption was largely in response to concerns that an RSC is too onerous for small commercial buildings that want to convert space in the upper stories to residential use. Specifically, this exemption was targeted at efforts to add residential use to older heritage downtown commercial buildings and smaller professional buildings.
+To ensure the exemption remained limited to these low-risk scenarios, criteria such as the limit of six storeys were included, meaning that the conversions of larger office buildings were not exempt from the requirement for an RSC.
+Speaker, I know the intent in putting this legislation forward is to remove that limit of six storeys from the current exemption. This intent can actually be achieved without legislative change. Regulatory change can deliver the same outcome.
+Even if this bill does pass, a regulatory change would still be necessary to achieve the intended outcome. More importantly, should the bill pass without an associated regulatory change, the current exemption for small commercial buildings would no longer be consistent with the legislation. That means that the bill could ultimately render the current exemption null and void, unintentionally subjecting those smaller projects to more onerous and burdensome requirements, as if the exemption never existed. That’s not a policy outcome that we would support on this side of the House, and as such, we’re not able to support Bill 201 in its current form.
+Now let me say this: Our government is committed to building at least 1.5 million new homes by 2031, and we will get there, in part, by removing unnecessary burdens and red tape that stands in the way. That’s why we acted, in February 2022, to improve the RSC process, helping proponents get their RSC filed with fewer submissions. Where submissions contain only minor deficiencies, ministry staff no longer reject the RSC and require a full resubmission, as it happened in the past. Instead, they will work directly with the proponent to obtain any missing or incomplete details on their application.
+1820
+In April 2022, the ministry also launched a new online system for RSC submissions within the ministry’s online application portal, reducing errors and omissions that were once common with older, manual submissions, helping RSCs get issued faster. And going forward, we will continue to look at further options to reduce record-of-site-condition requirements for certain redevelopment projects.
+This last part is critical. I think the last number of decades have brought forward environmental awareness for a number of different sites. One of the first projects I learned about was, say, the Love Canal. There was a lack of awareness as to what the consequences would be. We need to ensure that any measures taken in this space do not put human health and the environment at risk—full stop.
+But while that work continues, we have not let our foot off the gas when it comes to building housing. In the reducing red tape to build more homes act, we brought forward several new measures to cut red tape and support municipalities in the building more housing faster.
+We developed a use-it-or-lose-it policy that would allow municipalities to establish a time frame for when certain planning approval conditions are met, specifically for subdivision and site-plan-control approvals. We brought in new measures to increase student housing, which will benefit post-secondary students, relieving pressure in the market. And we’re giving municipalities the tools and supports they need to get shovels in the ground and build the housing Ontario needs, by providing municipalities with over $3 billion in funding through the Building Faster Fund, the Housing-Enabling Water Systems Fund and the Municipal Housing Infrastructure Program, including—I was very happy to announce—$15 million to support the town of Tecumseh just a few weeks ago.
+Obviously, mistakes can be made, and I’m hopeful for future collaboration when it comes to how these programs have been developed and the process involved. We’ll continue to move forward with our plans to build 1.5 million homes and critical infrastructure required to support them.
+While our government is firmly committed to continuing to remove unnecessary burden and red tape to help get homes built, Bill 201 is not the right way to go about making that change—a change to the regulation is. It would not achieve the change on its own that the member opposite wishes to achieve and not reduce the burden for anyone at the immediate time. It has the risk of increasing the burden for some applicants currently exempted from the RSC process today.
+But I certainly want to commend the member opposite for making a sincere effort to bring forward an approach that keeps the spirit alive of reducing the burden. This member should be applauded for bringing forward this bill, and I look forward to realizing the intent of this bill through future regulation.
+Thank you again for the opportunity to speak to it today.
+The Acting Speaker (M
+me
+Lucille Collard):
+Further debate?
+Ms. Jessica Bell:
+I would like to thank the member for Kanata–Carleton for introducing this bill, Bill 201, the Commercial to Residential Conversion Act, which will make it easier to convert commercial buildings to residential buildings that are higher than seven storeys by removing barriers such as the length of time it takes to get certain measures approved, as well as some of the expense.
+Are we surprised? Are we surprised that the Conservatives are opposing this measure? I’m personally not surprised. I listened to the member from Windsor–Tecumseh. It’s classic for the government to do this. They talk for their 11 minutes and 30 seconds about all the things that they’ve done, and then right at the last minute, you hear whether or not they’re going to support it or not. It’s just classic.
+Right at the end, I heard a no. I heard an, “Hmm, no.” So that is concerning.
+The context that we have right now is that office space in many towns and cities is underutilized. I think that’s fair to say. In the city of Toronto, I took a look before this debate and the vacancy rate has gone from 2% to 15%. It hasn’t recovered from the pandemic, because our workplaces have moved to a more hybrid work environment. We are seeing a continuation of high vacancy rates in commercial buildings.
+There are some benefits to encouraging the move from commercial to residential. I have had OREA and many organizations approach me and talk to me about some of the benefits, like they have with the Conservatives as well. Some of those benefits include that the building is already built, so it is quicker to convert commercial properties to residential properties than it would be to build a home from scratch. That is important.
+I do want to add some caveats, however, to this conversation. The first thing is that this is one measure of many measures that we would need to adopt to make it easier to convert commercial to residential. I know the member for Kanata–Carleton is not saying that this is the only thing that needs to happen—she was very clear about that—but I do want to emphasize to the government that this is one of many measures that we need to take.
+The reason why is that commercial buildings are typically built in a different way than residential. You’ll have situations where there’s a different number of elevators for floors compared to residential. You often have, in some cases, windows that don’t open, which is not going to work in a residential building, but it does work in many commercial buildings. You also have a floor space which isn’t conducive to the kind of family-friendly-sized or open-plan units that you typically see in a residential building. If you’re converting something from commercial to residential, sometimes you get really narrow units. There are some genuine issues and barriers that would need to be addressed for towns and cities to do a sensible job of converting some commercial properties to residential properties, which in some cases makes sense.
+The second caveat I want to raise is a caveat that some city councillors at the city of Toronto have raised with me, as well as former city councillors, as well as the Toronto Region Board of Trade. Their concern is this: Employment lands are key. The employment lands we’ve got—industry as well as commercial—are very important to our economy. When we’re thinking about how we are going to grow as a city and as a province, we need to factor in where we’re going to play, study, work and live. We do not want to have a situation where we are eviscerating all the places where we work in order to address a very real housing crisis; we need a balance.
+I am hopeful that this province respects the official plan work, the work that cities do to develop their official plans, to allocate where we work and where we live and where we play, so that we can get that balance and make sure we’re meeting our housing needs as well as our employment needs. The reason why I’m bringing this up is that when we’re converting commercial to residential, it’s a “Yes, and we need to proceed with caution.”
+I do want to spend a little bit of time talking about some of the comments that the member for Windsor–Tecumseh made, as well as overall what this government is doing, or more importantly not doing, to address the housing crisis. I guess we’re seeing an example tonight, right? The member for Kanata–Carleton introduced a practical measure and the government decided to vote it down. I think that’s pretty typical of all the issues that we see with our housing crisis right now. I will give you some examples of some of the issues that have come up in my office over the last few weeks.
+One of the issues that has come up is the issue of the Conservatives having no serious plan to address our city’s homelessness crisis. They have no serious plan. Our shelter system is full. I recently spoke to an individual called Jay. He is a member of the Toronto homelessness union. It’s a new union that’s set up of people who are experiencing homelessness or have experienced homelessness. He was very offended by the Premier’s recent comments, telling people who live in encampments they need to “get off their A-S-S” and get a job. He was also offended by comments that if someone was on disability, then we’ve got your back and we’re going to care for you.
+1830
+There are a few reasons why. The reason why he was offended is because Jay, who typically works in a kitchen—for the last six months, he’s been living in a tent, and he says, “I can literally not get a job, because I have no place to shower. I have no fixed address. I spend half my day trying to find a shelter space. I need to think about food and where I’m going to go. I have to go to various food banks. It is a full-time job.” That’s why he was offended, because, he said, “If there is shelter space, then I can get my life in order and it’s more likely for me to get a call back when I apply for jobs, so that I can get working again.” It was a real insight, and I hope this government is factoring that into the work that they are doing.
+The reason why I bring this up here is that at least in my riding, and I’m sure in many of your ridings, homelessness is the biggest issue that we’re experiencing right now. We have encampments in towns and cities. We have encampments in University–Rosedale. We’ve got encampments in Kensington. We’ve got encampments near Queen’s Park. Literally, people have nowhere to go, and it is very unfortunate that this government is not taking serious action to address the homelessness crisis.
+Just today, there was a report that was put out by Global News saying that the provincial government was not going to play ball and work with the federal government to access some of the $250 million that the federal government is earmarking to address homelessness and encampments. So my genuine question to you all is: Why would this government choose not to negotiate with the federal government to get access to some of that money to address the homelessness crisis? Why? It doesn’t make sense.
+When I go door-to-door—and I recently went door-to-door to the businesses in Kensington, the retail outlets. They are directly impacted by the encampments and by the homelessness crisis. They want solutions. They want permanent housing. They want people to find help. They know that just sending people to the emergency room or sending people to jail is not going to solve anything at all, and they also know the shelters are full. They want the city and the province to step up, especially the province, and the province fails to do that, and I find that very unfortunate.
+The other issue that we’re seeing right now is issues around the declining rates of home ownership. Why I think this relevant right now is because when we’re looking at converting commercial to residential, it’s less of an issue of dealing with the homelessness crisis and it’s more of an issue of how are we going to find more affordable options for people who want to buy a home, buy an apartment or find a more affordable place to rent? That’s where this fits in, in my view, and I think it’s important.
+When I look at home ownership rates in Ontario right now, they’re going down, because newcomers and young people cannot afford a home. They can’t afford the down payment. They can’t afford the carrying costs. Even with interest rates going down a little bit, they can’t make it work, and it is very unfortunate. We’re also seeing a big rise in investor ownership, which is crowding out people who just want one home, not six.
+Why I bring this up now is because over the last few months, the government has had the opportunity to move forward with measures to address our housing supply shortage issue. They’ve had the opportunity to do it. In fact, it apparently was in one of your most recent bills, but at the last minute, you didn’t have the courage to do it and you took some important measures out. Those measures include allowing fourplexes as of right in towns and cities across Ontario, so that there are more affordable rental options and home ownership options for people. You couldn’t do it, and why is an excellent question.
+And then the other matter that you chose not to move forward on, which I think is really unfortunate, is that this government continues to move forward with relaxing and easing density requirements in towns and cities, so we’re doubling down on low-density and expensive sprawl, and this government is refusing to make it easier and quicker to build apartments and condo buildings near transit stations, which is part of the solution. I’d like to see this government take the housing crisis seriously and move forward with some of those measures.
+I’d also like to see the government move forward with this measure. It makes sense, like I said. It’s not a silver bullet. It’s not going to solve all the challenges that need to be addressed to convert commercial to residential—there are many factors that need to be addressed—but it is one of them. It is one practical measure. As I mentioned earlier, it is important that we think about this in terms of “yes” and proceed with caution because we do not want to impact the ability of businesses to operate in downtown Toronto and other commercial centres. We want to make sure that they have got viable retail and rental options as well.
+That’s a summary of my comments tonight. I look forward to the vote. Thank you for introducing this bill.
+The Acting Speaker (M
+me
+Lucille Collard):
+Further debate?
+Mr. Adil Shamji:
+It is an honour to rise in this chamber to speak in favour of Bill 201, the Commercial to Residential Conversion Act. This bill is brilliant in its simplicity, taking a precise, surgical and cost-effective approach to making more homes more accessible to Ontarians. Here’s what it does: It cuts red tape by allowing non-industrial commercial properties over six storeys to be converted into residential homes without unnecessary, expensive reports and investigations. These are buildings that are already constructed, already serviced and entirely non-industrial. Why wouldn’t we fast-track their construction? No fuss, no muss, no delays, and absolute brilliance.
+Now, the whole idea is founded on the following premise: Because of this government’s stunning incompetence and fiscal recklessness, business confidence in Ontario is at an all-time low, meaning commercial real estate vacancy rates are higher than they have ever been before. At the same time, through six years of unambitious NIMBY legislation and policy chaos, home construction has stalled, and so rental vacancy is lower than it has ever been.
+So the solution? Convert commercial real estate into residential real estate. We take one problem that this government created and use it to solve another problem that this government created.
+This is an environmentally and financially sensible solution because the carbon cost and financial cost of converting is less than new construction. And by converting an already existing building to residential, this allows us to increase density without increasing disruption.
+This bill aligns with recommendation 4 of the Housing Affordability Task Force report, which this government refuses to implement, and it represents one of OREA’s major priorities for accelerating access to more affordable homes in Ontario. But because this government refuses to take housing seriously, because it refuses to operationalize the HATF recommendations, housing starts in Ontario are down 15% compared to a year ago at the same time that they’ve actually gone up in Alberta by 35%. We have lost 36,000 construction jobs in Ontario, while Alberta gained 17,000 and British Columbia gained 12,000. We face a mass exodus of young people from our province who can’t afford a home. Rent has gone up by 83% while home prices have gone up by 45% since 2018.
+This member’s bill could make a major dent in reversing these trends.
+The Ontario Real Estate Association supports this bill. The Ontario Society of Professional Engineers supports this bill. There is no reason that this bill should be voted down.
+In fact, today, John Michael McGrath wrote, “That is one of the most precisely targeted bills I’ve seen from someone outside the government benches who’s trying to make a substantive change in policy.”
+If this government is serious about wanting to make a substantive change in policy, then there is one way to vote for this bill: yes.
+Now, I know that this government says no all the time; in fact, I hear that the Premier says no to the Minister of Housing a fair amount, which must be very embarrassing for him.
+If this government votes Bill 201 down, then they will continue to have zero credibility with the home building sector and zero credibility with Ontarians who simply want and deserve an affordable place to come home.
+I encourage all members of the House to support this excellent piece of legislation.
+The Acting Speaker (M
+me
+Lucille Collard):
+I’m going to go back to the member for Kanata–Carleton with two minutes to respond.
+Mrs. Karen McCrimmon:
+Thank you, members, for your questions and your contributions this evening. We have a chance here to help achieve conversions of unused commercial buildings into desperately needed housing. We all agree that creating affordable housing in Ontario is one of our highest priorities.
+1840
+The limit of six storeys is arbitrary and has no impact on the environmental condition of the building site being assessed. A two-year delay is a completely unnecessary burden on those already making significant investments, and that can lead to making some projects financially untenable.
+Re-examining Ontario’s unused office space and creating homes in those underused buildings is a huge opportunity. We should be doing what we can to create housing there.
+I hope that every member supports revitalizing and recycling commercial real estate by removing an unnecessary regulation that is getting in the way. Thank you.
+The Acting Speaker (M
+me
+Lucille Collard):
+The time provided for private members’ public business has expired.
+MPP McCrimmon has moved second reading of Bill 201, An Act to amend the Environmental Protection Act with respect to change of use exemptions.
+Is it the pleasure of the House that the motion carry? I heard a no.
+All those in favour, please say “aye.”
+All those opposed, please say “nay.”
+In my opinion, the nays have it.
+A recorded vote being required, it will be deferred to the next instance of deferred votes.
+Second reading vote deferred.
+The Acting Speaker (M
+me
+Lucille Collard):
+We now have a late show. Pursuant to standing order 36, the question that this House do now adjourn is deemed to have been made.
+Adjournment Debate
+School transportation
+The Acting Speaker (M
+me
+Lucille Collard):
+The member for Ottawa West–Nepean has given notice of dissatisfaction with the answer to a question given by the Minister of Education. The member has up to five minutes to debate the matter, and the parliamentary assistant may reply for up to five minutes.
+The member for Ottawa West–Nepean.
+Ms. Chandra Pasma:
+I’m happy to have this opportunity to rise in the House to talk about the challenges that parents and kids across the province are facing with student transportation, because kids can’t learn if they can’t get to school. This government is failing so badly on the basics that we can’t even ensure kids across the province are getting to school every day.
+I want to break this down for people who are watching from home or who are watching this video later. Funding for student transportation comes from the government. There’s a dedicated stream under provincial education funding that is specifically for student transportation.
+Now we know that the government has cut funding overall over the past five years for every part of our education system. Per-student funding is down $1,500 per child, after accounting for inflation, since 2018. That’s why our whole education system is in crisis.
+This is also impacting student transportation. The government’s funding does not cover the actual costs of student transportation. This has been true for years under the Conservative government, but two years ago, they took this problem, opened a can of gasoline and poured it all over. They developed a new transportation funding formula that does not even remotely cover the actual costs of student transportation.
+For capital funding, they based the funding for a new school bus off what a school bus cost in 2020, but the cost of a school bus has risen 70% since then.
+For maintenance, the funding increased by 2% to 3%, but the costs of brakes and tires have increased by 50%.
+For operations, the government only covers half the cost of minivans, which are used to transport kids with disabilities and students who have to travel long distances, like students attending francophone schools.
+For salaries and wages, the government claims to be offering $23 an hour, but they only cover time when kids are actually on the bus, as if drivers are happy to work for free as they drive the bus from the lot to the first child’s house and then back to the lot after dropping the kids off at school. So operators need to use the compensation funding that they get to cover all the hours that drivers are working, which means that drivers are not earning $23 an hour. Keeping compensation low for work that is less than full-time and split into two shifts means that we have a driver recruitment and retention problem.
+Instead of admitting that they screwed this up and broke the funding formula, the government is trying to pretend they have increased funding. But the only way that they can make that claim is to conflate the old funding envelope and the new one. Previously, there were funds for driver retention bonuses and fuel escalator funds that were provided outside of the student transportation budget. Now, they’ve put it inside the student transportation budget and pretended that somehow that represents an increase to total funding, which just means that now they’re allocating the same pot of funding in different ways.
+So what does all of this mean for the actual student transportation every day? Well, school boards are left with several choices:
+You can cut student transportation, which is why we see more students walking, even when conditions are unsafe, even when they’re on rural roads with no sidewalks, crossing dangerous intersections.
+School boards can run a deficit in student transportation, and because boards are required to balance their budget every three years, it means they have to cut classroom resources, making a choice between getting kids to school and a quality education once they’re there.
+Or school boards can offer a contract to operators that doesn’t cover the operators’ costs, which leads to operators refusing to sign contracts, like we saw in Ottawa last year and in Renfrew this year, because just as a reminder, this government requires student transportation to be provided by private companies, and no private company is going to run a deficit. It’s not a sustainable business model.
+So it’s a choice between putting children in danger, taking resources out of the classroom, or driving away operators, which breaks the whole system. And who pays for all of this government’s incompetence? Our kids who can’t get to school safely—nearly 200 kids did not go to school at the beginning of the school year this year in Renfrew county. Our kids who don’t get the resources they need to succeed when they’re at school. Parents who are paying out of pocket to drive their kids to school instead or losing jobs or financial opportunities. Parents who don’t know from one day to the next whether or not the school bus will be running or will show up on time. Franco-Ontarians, for whom the transportation deficit means kids are more likely to go to an anglophone school that is closer, losing out on their culture, heritage and history.
+Instead of asking kids and their families to pay for this government’s incompetence, the minister should just fix the funding formula so every child can get to school every day.
+The Acting Speaker (M
+me
+Lucille Collard):
+Over to the parliamentary assistant to the Minister of Education.
+Mr. Billy Pang:
+Today I want to address an issue that profoundly impacts our students and their families: student transportation. As many of you know, transportation is not just a logistical concern, it’s a vital part of ensuring every child has access to education and the opportunity to succeed.
+Let me be clear: Our government is committed to increasing funding for student transportation to guarantee that all children can get to class safely and on time. This year, we allocated an impressive $1.4 billion toward student transportation, which includes an $80-million increase compared to last year. This funding is critical for our school boards as they navigate the complexities of transportation logistics.
+What does this mean for our communities? Every single school board received a minimum increase of 3% in their student transportation funding this year. In fact, some boards have received even more substantial increases. For example, the Renfrew County Catholic District School Board has seen a remarkable 15% increase. This influx of resources allows our boards to enhance their services and address the specific needs of their communities.
+Now let’s take a moment to reflect on a scale of this operation. Every school day, approximately 840,000 students rely on transportation services provided by 19,000 school buses and other school-purpose vehicles. These vehicles travel around 1.5 million kilometres daily to ensure that our children reach their schools. It’s not just about numbers, it’s about the daily lives of families who depend on reliable transportation to help their children thrive in their educational journeys.
+Our new funding formula, which was launched last year, is designed to support the growing needs of our schools. It specifically addresses several key areas:
+(1) Enrolment growth: The formula adapts to the increasing student populations in various districts, ensuring that funding reflects actual needs;
+(2) Rising operational costs: We recognize the need to accommodate costs associated with purchasing new vehicles, increasing wages for drivers and maintaining transportation services;
+(3) Sector feedback: We’ve taken feedback from school boards and transportation operators seriously, making necessary adjustments to the funding for contracted special-purpose vehicles and taxis.
+This approach not only ensures that our funding is responsive, but also empowers school boards to make decisions that best serve their students. We are committed to revisiting this framework annually, making sure it remains effective and equitable.
+Now, I want to address the situation in Renfrew county, where recent disruption in student transportation has caused challenges for families. As a parent myself, I fully empathize with the difficulties that disruption can create.
+Our priority has always been to provide predictability and stability for school boards. In Renfrew county, despite the operational challenges, boards have seen significant funding increases: 15% for the Catholic district school board and 11% for the district school board.
+While the operational aspects are ultimately managed at the local level, my ministry is closely monitoring the situation. We are actively engaging with local boards and transportation operators to facilitate a resolution. We believe that, with the additional funding, these entities will be able to reach agreements that ensure students are transported safely and reliably. Thank you for your time. I look forward to continuing our work to support our students and their families.
+The Acting Speaker (M
+me
+Lucille Collard):
+Thank you. There being no further matter to debate, pursuant to standing order 36(c), I deem the motion to adjourn to be carried.
+This House stands adjourned until 9 a.m. tomorrow, Wednesday, October 23.
+The House adjourned at 1852.
+Was this page helpful?
+Yes
+, I found this page helpful. An optional survey will open in a new tab.
+No
+, I didn’t find this page helpful. An optional survey will open in a new tab.
+Back to top
+Legislative Assembly of Ontario
+The Legislative Assembly of Ontario is made up of members of provincial Parliament (MPPs) who are elected by Ontarians to represent them and their constituencies. The Legislative Assembly's main responsibilities are to debate and pass legislation, to hold the government to account, and to approve government spending. The Legislative Assembly meets in the Legislative Building located in Queen's Park in Toronto.
+Site map
+About us
+Office of the Assembly
+Contact us
+Careers
+Ontario Legislature Internship Programme (OLIP) (opens another site)
+Accessibility
+What's happening
+Resources
+House documents
+Library and research
+Find an MPP
+FAQ
+Media centre
+Data resources
+Notices of hearings
+Copyright and privacy

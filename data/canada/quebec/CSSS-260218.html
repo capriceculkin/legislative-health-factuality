@@ -1,0 +1,2471 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="content-language" content="fr" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere"  rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen"  />
+<link href="/Images/favicon.ico" rel="shortcut icon" />
+
+<!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print"  />
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen"  />
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript"  >
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2026-08-29';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalAucuneActiviteType = "Aucune activité de cette catégorie n'est prévue aujourd'hui."
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.3.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-mDroite-m.min.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec
+        
+</title>
+        
+        <meta property="og:title" content="Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217" />
+
+    <script type="text/javascript" src="/scripts/Recherche.min.js"></script><style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+
+	<body id="TravauxJournalReviseNonRevise" class="impressionGrossie">
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/fr/travaux-parlementaires/commissions/csss-43-2/journal-debats/CSSS-260218.html" id="aspnetForm">
+<div>
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjEzMDQ2MTA2MQ9kFgJmD2QWAgIDEGRkFgICCA9kFgICAQ9kFgICBQ8QZBAVUhNUb3V0ZXMgbGVzIHNlc3Npb25zP1Nlc3Npb24gZW4gY291cnMgLSA0M2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg1IG1haSAyMDI2IC0gKT80M2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgzMCBzZXB0ZW1icmUgMjAyNSAtIDggYXZyaWwgMjAyNilENDNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDI5IG5vdmVtYnJlIDIwMjIgLSAxMCBzZXB0ZW1icmUgMjAyNSk+NDJlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTkgb2N0b2JyZSAyMDIxIC0gMjggYW/Du3QgMjAyMilCNDJlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDI3IG5vdmVtYnJlIDIwMTggLSAxMyBvY3RvYnJlIDIwMjEpOzQxZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyMCBtYWkgMjAxNCAtIDIzIGFvw7t0IDIwMTgpPTQwZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgzMCBvY3RvYnJlIDIwMTIgLSA1IG1hcnMgMjAxNCk+MzllIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjMgZsOpdnJpZXIgMjAxMSAtIDEgYW/Du3QgMjAxMilCMzllIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDEzIGphbnZpZXIgMjAwOSAtIDIyIGbDqXZyaWVyIDIwMTEpPDM4ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg4IG1haSAyMDA3IC0gNSBub3ZlbWJyZSAyMDA4KT4zN2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNCBtYXJzIDIwMDYgLSAyMSBmw6l2cmllciAyMDA3KTozN2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNCBqdWluIDIwMDMgLSAxMCBtYXJzIDIwMDYpOjM2ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIyIG1hcnMgMjAwMSAtIDEyIG1hcnMgMjAwMyk5MzZlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIgbWFycyAxOTk5IC0gOSBtYXJzIDIwMDEpPTM1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDI1IG1hcnMgMTk5NiAtIDIxIG9jdG9icmUgMTk5OCk/MzVlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDI5IG5vdmVtYnJlIDE5OTQgLSAxMyBtYXJzIDE5OTYpOjM0ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE3IG1hcnMgMTk5NCAtIDE3IGp1aW4gMTk5NCk6MzRlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTkgbWFycyAxOTkyIC0gMTAgbWFycyAxOTk0KT8zNGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjggbm92ZW1icmUgMTk4OSAtIDE4IG1hcnMgMTk5Mik5MzNlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBtYXJzIDE5ODggLSA5IGFvw7t0IDE5ODkpPzMzZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNiBkw6ljZW1icmUgMTk4NSAtIDggbWFycyAxOTg4KUAzMmUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgxNiBvY3RvYnJlIDE5ODQgLSAxMCBvY3RvYnJlIDE5ODUpOjMyZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDIzIG1hcnMgMTk4MyAtIDIwIGp1aW4gMTk4NCk9MzJlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoOSBub3ZlbWJyZSAxOTgxIC0gMTAgbWFycyAxOTgzKUEzMmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgzMCBzZXB0ZW1icmUgMTk4MSAtIDIgb2N0b2JyZSAxOTgxKTozMmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTkgbWFpIDE5ODEgLSAxOCBqdWluIDE5ODEpPTMxZSBsw6lnaXNsYXR1cmUsIDZlIHNlc3Npb24gKDUgbm92ZW1icmUgMTk4MCAtIDEyIG1hcnMgMTk4MSlAMzFlIGzDqWdpc2xhdHVyZSwgNWUgc2Vzc2lvbiAoMjQgb2N0b2JyZSAxOTgwIC0gMjQgb2N0b2JyZSAxOTgwKTkzMWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICg2IG1hcnMgMTk3OSAtIDE4IGp1aW4gMTk4MClCMzFlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjEgZsOpdnJpZXIgMTk3OCAtIDIwIGbDqXZyaWVyIDE5NzkpPjMxZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDggbWFycyAxOTc3IC0gMjIgZMOpY2VtYnJlIDE5NzcpRTMxZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNCBkw6ljZW1icmUgMTk3NiAtIDIzIGTDqWNlbWJyZSAxOTc2KT0zMGUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNiBtYXJzIDE5NzYgLSAxOCBvY3RvYnJlIDE5NzYpPzMwZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE4IG1hcnMgMTk3NSAtIDE5IGTDqWNlbWJyZSAxOTc1KT8zMGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNCBtYXJzIDE5NzQgLSAyOCBkw6ljZW1icmUgMTk3NClEMzBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIyIG5vdmVtYnJlIDE5NzMgLSAyMiBkw6ljZW1icmUgMTk3Myk/MjllIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTUgbWFycyAxOTczIC0gMjUgc2VwdGVtYnJlIDE5NzMpOTI5ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDcgbWFycyAxOTcyIC0gMTQgbWFycyAxOTczKUMyOWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMyBmw6l2cmllciAxOTcxIC0gMjQgZMOpY2VtYnJlIDE5NzEpPzI5ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg5IGp1aW4gMTk3MCAtIDE5IGTDqWNlbWJyZSAxOTcwKT4yOGUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgyNCBmw6l2cmllciAxOTcwIC0gMTIgbWFycyAxOTcwKUMyOGUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgyNSBmw6l2cmllciAxOTY5IC0gMjMgZMOpY2VtYnJlIDE5NjkpQzI4ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDIwIGbDqXZyaWVyIDE5NjggLSAxOCBkw6ljZW1icmUgMTk2OClAMjhlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjAgb2N0b2JyZSAxOTY3IC0gMjAgb2N0b2JyZSAxOTY3KUAyOGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMSBkw6ljZW1icmUgMTk2NiAtIDEyIGFvw7t0IDE5NjcpPjI3ZSBsw6lnaXNsYXR1cmUsIDZlIHNlc3Npb24gKDI1IGphbnZpZXIgMTk2NiAtIDE4IGF2cmlsIDE5NjYpQDI3ZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDIyIG9jdG9icmUgMTk2NSAtIDIzIG9jdG9icmUgMTk2NSk9MjdlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjEgamFudmllciAxOTY1IC0gNiBhb8O7dCAxOTY1KUAyN2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxNCBqYW52aWVyIDE5NjQgLSAzMSBqdWlsbGV0IDE5NjQpPDI3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIxIGFvw7t0IDE5NjMgLSAyMyBhb8O7dCAxOTYzKUEyN2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTUgamFudmllciAxOTYzIC0gMTEganVpbGxldCAxOTYzKT4yNmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMCBub3ZlbWJyZSAxOTYwIC0gMTAganVpbiAxOTYxKUUyNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjAgc2VwdGVtYnJlIDE5NjAgLSAyMiBzZXB0ZW1icmUgMTk2MCk+MjVlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTggbm92ZW1icmUgMTk1OSAtIDE4IG1hcnMgMTk2MCk9MjVlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTkgbm92ZW1icmUgMTk1OCAtIDUgbWFycyAxOTU5KUIyNWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMyBub3ZlbWJyZSAxOTU3IC0gMjEgZsOpdnJpZXIgMTk1OClDMjVlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE0IG5vdmVtYnJlIDE5NTYgLSAyMSBmw6l2cmllciAxOTU3KUIyNGUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNiBub3ZlbWJyZSAxOTU1IC0gMjMgZsOpdnJpZXIgMTk1NilBMjBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDcgb2N0b2JyZSAxOTM2IC0gMTIgbm92ZW1icmUgMTkzNik+MThlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTAgamFudmllciAxOTMzIC0gMTMgYXZyaWwgMTkzMylCMThlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDMgbm92ZW1icmUgMTkzMSAtIDE5IGbDqXZyaWVyIDE5MzIpPDE3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDggamFudmllciAxOTI5IC0gNCBhdnJpbCAxOTI5KT0xNmUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxMSBqYW52aWVyIDE5MjcgLSAxIGF2cmlsIDE5MjcpPDE2ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDcgamFudmllciAxOTI2IC0gMjQgbWFycyAxOTI2KUAxNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTcgZMOpY2VtYnJlIDE5MjMgLSAxNSBtYXJzIDE5MjQpQjE1ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDI0IG9jdG9icmUgMTkyMiAtIDI5IGTDqWNlbWJyZSAxOTIyKT0xNWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxMCBqYW52aWVyIDE5MjIgLSAyMSBtYXJzIDE5MjIpPTE1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDExIGphbnZpZXIgMTkyMSAtIDE5IG1hcnMgMTkyMSlEMTVlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDEwIGTDqWNlbWJyZSAxOTE5IC0gMTQgZsOpdnJpZXIgMTkyMCk9MTRlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjEgamFudmllciAxOTE5IC0gMTcgbWFycyAxOTE5KUExNGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICg0IGTDqWNlbWJyZSAxOTE3IC0gOSBmw6l2cmllciAxOTE4KUMxNGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNyBub3ZlbWJyZSAxOTE2IC0gMjIgZMOpY2VtYnJlIDE5MTYpPTEzZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDExIGphbnZpZXIgMTkxNiAtIDE2IG1hcnMgMTkxNik7MTNlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBqYW52aWVyIDE5MTUgLSA1IG1hcnMgMTkxNSlCMTNlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTEgbm92ZW1icmUgMTkxMyAtIDE5IGbDqXZyaWVyIDE5MTQpQzEzZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg1IG5vdmVtYnJlIDE5MTIgLSAyMSBkw6ljZW1icmUgMTkxMik8MTJlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoOSBqYW52aWVyIDE5MTIgLSAzIGF2cmlsIDE5MTIpPTEyZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDEwIGphbnZpZXIgMTkxMSAtIDI0IG1hcnMgMTkxMSk5MTJlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTUgbWFycyAxOTEwIC0gNCBqdWluIDE5MTApOTEyZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyIG1hcnMgMTkwOSAtIDI5IG1haSAxOTA5KToxMWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgzIG1hcnMgMTkwOCAtIDI1IGF2cmlsIDE5MDgpFVIBMAQxNjIxBDE2MTcEMTYxMQQxNjA3BDE1NzkEMTA3OQM3ODkDNDk5AzQ5MQM0ODkDNDg3AzQ4NQM0ODMDNDgxAzQ3OQM0NzcDNDc1AzQ3MwM0NzEDNDY5AzQ2NwM0NjUDNDYzAzQ2MQM0NTkDNDU3AzQ1NQM0NTMDNDUxAzQ0OQM0NDcDNDQ1AzQ0MwM0NDEDNDM5AzQzNwM0MzUDNDMzAzQzMQM0MjkDNDI3AzQyNQM0MjMDNDIxAzQxOQM0MTcDNDE1AzQxMwM0MTEDNDA5AzQwNwM0MDMDNDAxAzM5OQMzOTcDMzk1AzM5MwMzOTEDMzUxAzM0MwMzNDEDMzM1AzMzMQMzMjkDMzI1AzMyMwMzMjEDMzE5AzMxNwMzMTUDMzEzAzMxMQMzMDkDMzA3AzMwNQMzMDMDMzAxAzI5OQMyOTcDMjk1AzI5MxQrA1JnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkabVADji0w2THdjjsU/c2C0U0SaQ=" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusionData = 'typeActivite:\'9;11\', commission:\'\', mandat:\'\', mandatParent:\'\', estPageAccueil:\'true\'';var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';//]]>
+</script>
+
+<script src="/Scripts/Travaux.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusion = '/WebMethod/WebMethod.aspx/ObtenirIndicateurWebDiffusion';
+                                                                           var intervalleRafraichissementWebDiffusion = 60;//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B08191A9" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAG966KZwYFZEMIhgNbeQ4fxc3hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yP5J++CKenG+ic1PIaA5cTuL1134RC+RnzibeFXcPSMkirjG8og4fy2g9bI6NorM5K3aXyd+YwgKTVZuZwzdInb3sMEK8K8EnCeQkzFr+/RLvxPBAdO7j0VFemNI0qrFxSGYQ3iqRmRux+buuGhnzVY7jB7dHJwCIv8ngbmPGgPLujBTC+kP4kA+7KhxgVmvV5AheHVxIVrpDzljBaLS2bYKMFL9SoPHg7YnZGoSQYbC96mix2PM6mPVfuaAu2CCJfM4TAu5BVnX31Y0HHllueS87ErUi03NMo0hw7mxWyfT4Wv0wvqQZh4w3ykIvcMjsGFY5ybnihBy13K2K+tmuOs85eX2+hEhZ2vYUaE8BVLmvakhWjFT45S4k+tsa+fpSs4lbyX6yNqZ6z72mkN+uXbq6rMhqV0lkwDHk0NHAT+FCTZWSs07x5JPi066N3TA8r2W06Lr1lcPqDYyzfrmwaQGQ0psL1kP1GxKizeElEmecdwWtpPscZWtTpzZEnsfmzTqsCYzzzobfT8qdD7a/yPAypVkCmjXnJsda3SUW7qtzZGT+9Pc4mFOAq+/SX5/YRJ/K/ogEgmTY1DKUX4XxwaeYSR1/gThSYL8HvHZ/BXyQlkFwouIFKdfLNHGAWbjnoCvCU5+pJHtkl6m2WTUFVWJJA1MHBzQXG/f2gdX+bPdSgU/lArO4+wk4+DUCkKVOeGZp31cUQDQWmUDo2Su9MZmuSpA6pRzhnLkfV7xmjsWh9KQ+99mZMlQr7uUOHSboZ96a1A+LynNef/O7hu4b8K/qwysk0ivqUHKhoyAXpbbPoyn20EhaJbPgBEf3ZVcUKAehOEMbNchbHLxUU6Tby2GE3swtqAMtM9Fry5zPuv4s2htp1+4Q36YrsV6nkF5KbYkPbwAojZXFYBB3CBnXaLcA8rMefK0Y/7jpLorq+G3zWFkQ5HtZOokEDcDPi97PVKoXS0yltqZ5Mt5lUERLD0ZUxbspqy9ur6z14GkdnLsiW72+p8AC341YpjOF6yx34tM63Vq8Uhb3BcFtxuRpa9Z/2/NoNxOsUz7+Cxrjsc5oGnmEsM/D4EOnLIe/WslcimQBWL1FRHPFNiMvhdM0v4eAZR7NUE5tUcUKjzKUVe9yrlTuD7BkCKZ2iDxRJpz05DKHAeVGaY4lF6pQ80C00q+h3MqhJVAghw9aUxAP9AFqKPCv3SpPXmc+w5SYVVGfHISO1IQytQj+I+B5yTxyKDMamePfnz/uNjaSpU9JPJnmjae1Xh8FKcmg2idJphFrs2rSSYRoZTn2+cOD8w4uXzQjjSq+cSDSgaDEe7v2UjBmd+ZwDVApItvLzBJWHwjZB5xILY5bHbSTrcXHiVebPB9g6cu4OyM9Qs5qbyE84dYj4B2uxF3gcYOfMDoc/IM5xDi4UIFTQTW7H/NQ6Q6xAbuKSXYhAUdYa6kC0R+1fQ2GRiBPcJlTzg8NxJWsCbw6uucbfFDMLGnbdCRH+MJ2vwsmS8sru97GZmqUvbcHVLzytiWwmVJMxGxDYx3BYvanTW3eCivTHVUADoMWjvykFxDT4CYC59FxW5R+LQ+5YQRYaNU87G/tpDdG7FWLuikgjD4nQvKf3CUU6VYBceGVRXhuxTjI5KM0mwr/WKimhdzY8A+wjtd7aMChS5+OrgRzLvCqGmPpASCvMjFwhzzNbQIRw8L3/NFi18/kCZZw2UpxVoxwbRXaQXpnfKihg4oKRD6h/IK/nGDwv/kGpZjV82isGd3dAcv/ueAST3hCP86GZXGgNAxTvQghNtmUwi3qdsmkzpG6kDQmNjF8HEyhZeATYsYASiUoKMaqwsrpmofpInZdfVM8Qt1dp/EBcAAHbyNuUISQOWpWKTB/psFd8KeZh0ZHsoGQC6x3URnSZgoS0/dlVaU5w3pDNjnO8WiT1wNkzAklbI3/0P8OGPoyxOm889Q7znP6BhdVGBIvZkaEr2G/4QOQWC9vJ1rpH3X7bce5ChW68F6IqKPPbcgDlKF0/DnccJVDpVrjAQVSa8tk26+QeIKIHfPEFNh4D83b7JOlO17s6NcRRdnQh4CS9T6LrfhmAwa8aMvCy6BeNiYk5IPF8lnHDVfNs3InsR9ZiNQxCPs/GLIcLMwwcvL+T47+xzoOy/EIGp7k9Ex3NGCcNJapLgvmTepJXvTUKK8o43Uxx6bnZh4rvOSEFl1y0ae9T9E5j1Ej8KjAtJF6+QJ1bHt/jxVIp0MkJsBSeS9ENNitgEy6DgVUhH6Gbl9YQSK7JdqBfNSEaXgQkrrPpVv39xHWG7awjKWluncOURdTFJS5aBxFN49FE/YFX7j6EVcl3ggQ==" />
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien" style="margin-right:45px;">Suivez-nous</span>
+                    <span class="visuallyhidden"> sur les médias sociaux, Facebook, X, Youtube</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle" />
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher"/>
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;" tabindex="0">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var link = document.querySelector('a[onclick="LancerRechercheAvancee();return false;"]');
+
+        link.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                LancerRechercheAvancee();
+                event.preventDefault();
+            }
+        });
+    });
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere">
+	<a href="/fr/index.html" class="sanssouligne" title="Assemblée nationale du Québec - Retour à l&#39;accueil">
+    <img class="nepasafficher" width="88" height="58" title="Assemblée nationale du Québec - Retour à l'accueil" alt="Assemblée nationale du Québec - Retour à l'accueil" src='/images/transparent.gif' /></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class='menuHoverParent btnDeputes'><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes">
+                Députés</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnTravaux'>
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires">
+                    Travaux parlementaires</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnExprimez'>
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion">
+                    Exprimez votre opinion!</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnVideoAudio'>
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio">
+                    Vidéo</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="display: none">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours"
+                        title="Chargement en cours" />
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" tabindex="0">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href='/fr/calendrier-detaille.html'>
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup"></span>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br />
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br />
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br />
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br />
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br />
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br />
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br />
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href=''>
+                    Aujourd'hui</a></span>
+            </div>
+            <hr />
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="my-skinnable-select">
+                    <select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite">
+	<option selected="selected" value="*"></option>
+
+</select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br />
+            <a href='/fr/aide/aide-recherche.html#javascript'>
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class='' id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class='' id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class='' id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class='' id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class='' id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class='' id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class='' id="lienEducatives">
+                <a href="http://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class='' id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class='' id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/fr/index.html">Accueil</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/index.html">Travaux parlementaires</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/commissions/index.html">Travaux des commissions</a></span><span> &gt; </span><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation">
+
+
+	
+	<ul>
+		<li>
+			<h2><a href="/fr/travaux-parlementaires/index.html" class="selected">
+				Travaux parlementaires</a></h2>
+			<ul>
+				<li>
+					<a href="/fr/travaux-parlementaires/journaux-debats.html" class="">
+						Journal des débats </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/journaux-debats/index-jd/index.html" class="">
+								Index du Journal des débats</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/assemblee-nationale/index.html" class="">
+						Travaux de l'Assemblée</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/registre-des-votes/index.html" class="">
+								Registre des votes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/commissions/index.html" class="selected">
+						Travaux des commissions</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cap/index.html" class="">
+								Administration publique</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/capern/index.html" class="">
+								Agriculture, pêcheries, énergie et ressources naturelles</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cat/index.html" class="">
+								Aménagement du territoire</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/can/index.html" class="">
+								Assemblée nationale</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cce/index.html" class="">
+								Culture et éducation</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cet/index.html" class="">
+								Économie et travail</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cfp/index.html" class="">
+								Finances publiques</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/ci/index.html" class="">
+								Institutions</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/crc/index.html" class="">
+								Relations avec les citoyens</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/csss/index.html" class="">
+								Santé et services sociaux</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cte/index.html" class="">
+								Transports et environnement</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html" class="">
+								Mandats en cours</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/rapports-documents-reflexion/index.html" class="">
+								Rapports et documents de réflexion</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/rapport/index.html" class="">
+						Cheminement des projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/index.html" class="">
+						Projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/documents-deposes.html" class="">
+						Documents déposés </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/documents-deposes/depots-du-jour.html" class="">
+								Dépôts du jour </a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/calendrier-travaux.html" class="">
+						Calendrier hebdomadaire des travaux </a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+	
+
+<div class="clear"></div>
+
+<div class="ContenuNavigation SousNavigation rechercheContextuelle travauxParlementaires">
+    <div class="overlay">
+        <div class="loading"></div>
+    </div>
+	<h2>Recherche avancée dans la section Travaux parlementaires</h2>
+
+		<div class="conteneurMotCle" data-champ="MotsCles">
+            <label for="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux">Mots clés</label>
+			<input name="ctl00$ColGauche$RechercheTravaux$txtTrouverTravaux" type="text" id="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux" />	
+		</div>
+		
+	    <div class="floatLeft" data-champ="TypeDocument">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments">Type de documents</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxDocument">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeDocuments" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments" title="Certains documents déposés en commissions et à l’Assemblée sont numérisés en mode image. Leurs contenus ne sont donc pas disponibles à la recherche." class="BulleInfo">
+	<option selected="selected" value="-1">Tous les documents</option>
+	<option value="1|3">Documents d&#233;pos&#233;s</option>
+	<option value="9">Feuilletons et pr&#233;avis</option>
+	<option value="13">Journaux des d&#233;bats</option>
+	<option value="5">M&#233;moires</option>
+	<option value="7">Proc&#232;s-verbaux de l&#39;Assembl&#233;e</option>
+	<option value="11">Projets de loi</option>
+	<option value="15">Rapports et documents de consultation des commissions</option>
+
+</select>
+		    </div>
+        </div>
+
+    	<div class="floatLeft" data-champ="TypeTravaux">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">Type de travaux</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxType">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeTravaux" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">
+	<option value="0">Travaux de l&#39;Assembl&#233;e et des commissions</option>
+	<option value="-1">Travaux de l&#39;Assembl&#233;e</option>
+	<option value="-2">Travaux des commissions</option>
+	<option value="39">Commission de la culture et de l’&#233;ducation</option>
+	<option value="43">Commission de la sant&#233; et des services sociaux</option>
+	<option value="7">Commission de l&#39;administration publique</option>
+	<option value="37">Commission de l&#39;agriculture, des p&#234;cheries, de l&#39;&#233;nergie et des ressources naturelles</option>
+	<option value="13">Commission de l&#39;am&#233;nagement du territoire</option>
+	<option value="5">Commission de l&#39;Assembl&#233;e nationale</option>
+	<option value="21">Commission de l&#39;&#233;conomie et du travail</option>
+	<option value="23">Commission des finances publiques</option>
+	<option value="25">Commission des institutions</option>
+	<option value="41">Commission des relations avec les citoyens</option>
+	<option value="35">Commission des transports et de l&#39;environnement</option>
+	<option value="55">Sous-commission de la r&#233;forme parlementaire</option>
+
+</select>
+		    </div>
+		</div>
+    
+        <div class="champRecherche avancee" data-champ="Periode">
+            <label>Période</label>
+            <div class="champPeriode">
+		        <label class="libelleDe" for="ctl00_ColGauche_RechercheTravaux_txtDateDebut">De</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateDebut" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateDebut" class="champsDate choisirDate PeriodeDebut" />
+		        <label class="libelleA" for="ctl00_ColGauche_RechercheTravaux_txtDateFin" class="champRecherche avancee">À</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateFin" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateFin" title="
+       Si les champs &lt;b>De&lt;/b> et &lt;b>À&lt;/b> sont remplis, le résultat se situe entre les dates indiquées.&lt;br/>
+      Si seul le champ &lt;b>De&lt;/b> est rempli, le résultat se situe entre la date indiquée jusqu’à aujourd’hui.&lt;br/>
+      Si seul le champ &lt;b>À&lt;/b> est rempli, le résultat se situe avant la date indiquée.
+    " class="champsDate choisirDate BulleInfo PeriodeFin" />
+	        </div>
+            <div class="messageErreur cache">La date de début doit précéder la date de fin.</div>
+	    </div>
+
+        <div class="champRecherche avancee" data-champ="Legislature">
+            <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature" class="labelOnTop">Session</label>
+            <div class="my-skinnable-select">
+	            <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixSessionLegislature" id="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature">
+	<option value="0">Toutes les sessions</option>
+	<option selected="selected" value="1621" title="Session en cours - 43e législature, 3e session (5 mai 2026 - )">Session en cours - 43e l&#233;gislature, 3e session (5 mai 2026 - )</option>
+	<option value="1617" title="43e législature, 2e session (30 septembre 2025 - 8 avril 2026)">43e l&#233;gislature, 2e session (30 septembre 2025 - 8 avril 2026)</option>
+	<option value="1611" title="43e législature, 1re session (29 novembre 2022 - 10 septembre 2025)">43e l&#233;gislature, 1re session (29 novembre 2022 - 10 septembre 2025)</option>
+	<option value="1607" title="42e législature, 2e session (19 octobre 2021 - 28 août 2022)">42e l&#233;gislature, 2e session (19 octobre 2021 - 28 ao&#251;t 2022)</option>
+	<option value="1579" title="42e législature, 1re session (27 novembre 2018 - 13 octobre 2021)">42e l&#233;gislature, 1re session (27 novembre 2018 - 13 octobre 2021)</option>
+	<option value="1079" title="41e législature, 1re session (20 mai 2014 - 23 août 2018)">41e l&#233;gislature, 1re session (20 mai 2014 - 23 ao&#251;t 2018)</option>
+	<option value="789" title="40e législature, 1re session (30 octobre 2012 - 5 mars 2014)">40e l&#233;gislature, 1re session (30 octobre 2012 - 5 mars 2014)</option>
+	<option value="499" title="39e législature, 2e session (23 février 2011 - 1 août 2012)">39e l&#233;gislature, 2e session (23 f&#233;vrier 2011 - 1 ao&#251;t 2012)</option>
+	<option value="491" title="39e législature, 1re session (13 janvier 2009 - 22 février 2011)">39e l&#233;gislature, 1re session (13 janvier 2009 - 22 f&#233;vrier 2011)</option>
+	<option value="489" title="38e législature, 1re session (8 mai 2007 - 5 novembre 2008)">38e l&#233;gislature, 1re session (8 mai 2007 - 5 novembre 2008)</option>
+	<option value="487" title="37e législature, 2e session (14 mars 2006 - 21 février 2007)">37e l&#233;gislature, 2e session (14 mars 2006 - 21 f&#233;vrier 2007)</option>
+	<option value="485" title="37e législature, 1re session (4 juin 2003 - 10 mars 2006)">37e l&#233;gislature, 1re session (4 juin 2003 - 10 mars 2006)</option>
+	<option value="483" title="36e législature, 2e session (22 mars 2001 - 12 mars 2003)">36e l&#233;gislature, 2e session (22 mars 2001 - 12 mars 2003)</option>
+	<option value="481" title="36e législature, 1re session (2 mars 1999 - 9 mars 2001)">36e l&#233;gislature, 1re session (2 mars 1999 - 9 mars 2001)</option>
+	<option value="479" title="35e législature, 2e session (25 mars 1996 - 21 octobre 1998)">35e l&#233;gislature, 2e session (25 mars 1996 - 21 octobre 1998)</option>
+	<option value="477" title="35e législature, 1re session (29 novembre 1994 - 13 mars 1996)">35e l&#233;gislature, 1re session (29 novembre 1994 - 13 mars 1996)</option>
+	<option value="475" title="34e législature, 3e session (17 mars 1994 - 17 juin 1994)">34e l&#233;gislature, 3e session (17 mars 1994 - 17 juin 1994)</option>
+	<option value="473" title="34e législature, 2e session (19 mars 1992 - 10 mars 1994)">34e l&#233;gislature, 2e session (19 mars 1992 - 10 mars 1994)</option>
+	<option value="471" title="34e législature, 1re session (28 novembre 1989 - 18 mars 1992)">34e l&#233;gislature, 1re session (28 novembre 1989 - 18 mars 1992)</option>
+	<option value="469" title="33e législature, 2e session (8 mars 1988 - 9 août 1989)">33e l&#233;gislature, 2e session (8 mars 1988 - 9 ao&#251;t 1989)</option>
+	<option value="467" title="33e législature, 1re session (16 décembre 1985 - 8 mars 1988)">33e l&#233;gislature, 1re session (16 d&#233;cembre 1985 - 8 mars 1988)</option>
+	<option value="465" title="32e législature, 5e session (16 octobre 1984 - 10 octobre 1985)">32e l&#233;gislature, 5e session (16 octobre 1984 - 10 octobre 1985)</option>
+	<option value="463" title="32e législature, 4e session (23 mars 1983 - 20 juin 1984)">32e l&#233;gislature, 4e session (23 mars 1983 - 20 juin 1984)</option>
+	<option value="461" title="32e législature, 3e session (9 novembre 1981 - 10 mars 1983)">32e l&#233;gislature, 3e session (9 novembre 1981 - 10 mars 1983)</option>
+	<option value="459" title="32e législature, 2e session (30 septembre 1981 - 2 octobre 1981)">32e l&#233;gislature, 2e session (30 septembre 1981 - 2 octobre 1981)</option>
+	<option value="457" title="32e législature, 1re session (19 mai 1981 - 18 juin 1981)">32e l&#233;gislature, 1re session (19 mai 1981 - 18 juin 1981)</option>
+	<option value="455" title="31e législature, 6e session (5 novembre 1980 - 12 mars 1981)">31e l&#233;gislature, 6e session (5 novembre 1980 - 12 mars 1981)</option>
+	<option value="453" title="31e législature, 5e session (24 octobre 1980 - 24 octobre 1980)">31e l&#233;gislature, 5e session (24 octobre 1980 - 24 octobre 1980)</option>
+	<option value="451" title="31e législature, 4e session (6 mars 1979 - 18 juin 1980)">31e l&#233;gislature, 4e session (6 mars 1979 - 18 juin 1980)</option>
+	<option value="449" title="31e législature, 3e session (21 février 1978 - 20 février 1979)">31e l&#233;gislature, 3e session (21 f&#233;vrier 1978 - 20 f&#233;vrier 1979)</option>
+	<option value="447" title="31e législature, 2e session (8 mars 1977 - 22 décembre 1977)">31e l&#233;gislature, 2e session (8 mars 1977 - 22 d&#233;cembre 1977)</option>
+	<option value="445" title="31e législature, 1re session (14 décembre 1976 - 23 décembre 1976)">31e l&#233;gislature, 1re session (14 d&#233;cembre 1976 - 23 d&#233;cembre 1976)</option>
+	<option value="443" title="30e législature, 4e session (16 mars 1976 - 18 octobre 1976)">30e l&#233;gislature, 4e session (16 mars 1976 - 18 octobre 1976)</option>
+	<option value="441" title="30e législature, 3e session (18 mars 1975 - 19 décembre 1975)">30e l&#233;gislature, 3e session (18 mars 1975 - 19 d&#233;cembre 1975)</option>
+	<option value="439" title="30e législature, 2e session (14 mars 1974 - 28 décembre 1974)">30e l&#233;gislature, 2e session (14 mars 1974 - 28 d&#233;cembre 1974)</option>
+	<option value="437" title="30e législature, 1re session (22 novembre 1973 - 22 décembre 1973)">30e l&#233;gislature, 1re session (22 novembre 1973 - 22 d&#233;cembre 1973)</option>
+	<option value="435" title="29e législature, 4e session (15 mars 1973 - 25 septembre 1973)">29e l&#233;gislature, 4e session (15 mars 1973 - 25 septembre 1973)</option>
+	<option value="433" title="29e législature, 3e session (7 mars 1972 - 14 mars 1973)">29e l&#233;gislature, 3e session (7 mars 1972 - 14 mars 1973)</option>
+	<option value="431" title="29e législature, 2e session (23 février 1971 - 24 décembre 1971)">29e l&#233;gislature, 2e session (23 f&#233;vrier 1971 - 24 d&#233;cembre 1971)</option>
+	<option value="429" title="29e législature, 1re session (9 juin 1970 - 19 décembre 1970)">29e l&#233;gislature, 1re session (9 juin 1970 - 19 d&#233;cembre 1970)</option>
+	<option value="427" title="28e législature, 5e session (24 février 1970 - 12 mars 1970)">28e l&#233;gislature, 5e session (24 f&#233;vrier 1970 - 12 mars 1970)</option>
+	<option value="425" title="28e législature, 4e session (25 février 1969 - 23 décembre 1969)">28e l&#233;gislature, 4e session (25 f&#233;vrier 1969 - 23 d&#233;cembre 1969)</option>
+	<option value="423" title="28e législature, 3e session (20 février 1968 - 18 décembre 1968)">28e l&#233;gislature, 3e session (20 f&#233;vrier 1968 - 18 d&#233;cembre 1968)</option>
+	<option value="421" title="28e législature, 2e session (20 octobre 1967 - 20 octobre 1967)">28e l&#233;gislature, 2e session (20 octobre 1967 - 20 octobre 1967)</option>
+	<option value="419" title="28e législature, 1re session (1 décembre 1966 - 12 août 1967)">28e l&#233;gislature, 1re session (1 d&#233;cembre 1966 - 12 ao&#251;t 1967)</option>
+	<option value="417" title="27e législature, 6e session (25 janvier 1966 - 18 avril 1966)">27e l&#233;gislature, 6e session (25 janvier 1966 - 18 avril 1966)</option>
+	<option value="415" title="27e législature, 5e session (22 octobre 1965 - 23 octobre 1965)">27e l&#233;gislature, 5e session (22 octobre 1965 - 23 octobre 1965)</option>
+	<option value="413" title="27e législature, 4e session (21 janvier 1965 - 6 août 1965)">27e l&#233;gislature, 4e session (21 janvier 1965 - 6 ao&#251;t 1965)</option>
+	<option value="411" title="27e législature, 3e session (14 janvier 1964 - 31 juillet 1964)">27e l&#233;gislature, 3e session (14 janvier 1964 - 31 juillet 1964)</option>
+	<option value="409" title="27e législature, 2e session (21 août 1963 - 23 août 1963)">27e l&#233;gislature, 2e session (21 ao&#251;t 1963 - 23 ao&#251;t 1963)</option>
+	<option value="407" title="27e législature, 1re session (15 janvier 1963 - 11 juillet 1963)">27e l&#233;gislature, 1re session (15 janvier 1963 - 11 juillet 1963)</option>
+	<option value="403" title="26e législature, 2e session (10 novembre 1960 - 10 juin 1961)">26e l&#233;gislature, 2e session (10 novembre 1960 - 10 juin 1961)</option>
+	<option value="401" title="26e législature, 1re session (20 septembre 1960 - 22 septembre 1960)">26e l&#233;gislature, 1re session (20 septembre 1960 - 22 septembre 1960)</option>
+	<option value="399" title="25e législature, 4e session (18 novembre 1959 - 18 mars 1960)">25e l&#233;gislature, 4e session (18 novembre 1959 - 18 mars 1960)</option>
+	<option value="397" title="25e législature, 3e session (19 novembre 1958 - 5 mars 1959)">25e l&#233;gislature, 3e session (19 novembre 1958 - 5 mars 1959)</option>
+	<option value="395" title="25e législature, 2e session (13 novembre 1957 - 21 février 1958)">25e l&#233;gislature, 2e session (13 novembre 1957 - 21 f&#233;vrier 1958)</option>
+	<option value="393" title="25e législature, 1re session (14 novembre 1956 - 21 février 1957)">25e l&#233;gislature, 1re session (14 novembre 1956 - 21 f&#233;vrier 1957)</option>
+	<option value="391" title="24e législature, 4e session (16 novembre 1955 - 23 février 1956)">24e l&#233;gislature, 4e session (16 novembre 1955 - 23 f&#233;vrier 1956)</option>
+	<option value="351" title="20e législature, 1re session (7 octobre 1936 - 12 novembre 1936)">20e l&#233;gislature, 1re session (7 octobre 1936 - 12 novembre 1936)</option>
+	<option value="343" title="18e législature, 2e session (10 janvier 1933 - 13 avril 1933)">18e l&#233;gislature, 2e session (10 janvier 1933 - 13 avril 1933)</option>
+	<option value="341" title="18e législature, 1re session (3 novembre 1931 - 19 février 1932)">18e l&#233;gislature, 1re session (3 novembre 1931 - 19 f&#233;vrier 1932)</option>
+	<option value="335" title="17e législature, 2e session (8 janvier 1929 - 4 avril 1929)">17e l&#233;gislature, 2e session (8 janvier 1929 - 4 avril 1929)</option>
+	<option value="331" title="16e législature, 4e session (11 janvier 1927 - 1 avril 1927)">16e l&#233;gislature, 4e session (11 janvier 1927 - 1 avril 1927)</option>
+	<option value="329" title="16e législature, 3e session (7 janvier 1926 - 24 mars 1926)">16e l&#233;gislature, 3e session (7 janvier 1926 - 24 mars 1926)</option>
+	<option value="325" title="16e législature, 1re session (17 décembre 1923 - 15 mars 1924)">16e l&#233;gislature, 1re session (17 d&#233;cembre 1923 - 15 mars 1924)</option>
+	<option value="323" title="15e législature, 4e session (24 octobre 1922 - 29 décembre 1922)">15e l&#233;gislature, 4e session (24 octobre 1922 - 29 d&#233;cembre 1922)</option>
+	<option value="321" title="15e législature, 3e session (10 janvier 1922 - 21 mars 1922)">15e l&#233;gislature, 3e session (10 janvier 1922 - 21 mars 1922)</option>
+	<option value="319" title="15e législature, 2e session (11 janvier 1921 - 19 mars 1921)">15e l&#233;gislature, 2e session (11 janvier 1921 - 19 mars 1921)</option>
+	<option value="317" title="15e législature, 1re session (10 décembre 1919 - 14 février 1920)">15e l&#233;gislature, 1re session (10 d&#233;cembre 1919 - 14 f&#233;vrier 1920)</option>
+	<option value="315" title="14e législature, 3e session (21 janvier 1919 - 17 mars 1919)">14e l&#233;gislature, 3e session (21 janvier 1919 - 17 mars 1919)</option>
+	<option value="313" title="14e législature, 2e session (4 décembre 1917 - 9 février 1918)">14e l&#233;gislature, 2e session (4 d&#233;cembre 1917 - 9 f&#233;vrier 1918)</option>
+	<option value="311" title="14e législature, 1re session (7 novembre 1916 - 22 décembre 1916)">14e l&#233;gislature, 1re session (7 novembre 1916 - 22 d&#233;cembre 1916)</option>
+	<option value="309" title="13e législature, 4e session (11 janvier 1916 - 16 mars 1916)">13e l&#233;gislature, 4e session (11 janvier 1916 - 16 mars 1916)</option>
+	<option value="307" title="13e législature, 3e session (7 janvier 1915 - 5 mars 1915)">13e l&#233;gislature, 3e session (7 janvier 1915 - 5 mars 1915)</option>
+	<option value="305" title="13e législature, 2e session (11 novembre 1913 - 19 février 1914)">13e l&#233;gislature, 2e session (11 novembre 1913 - 19 f&#233;vrier 1914)</option>
+	<option value="303" title="13e législature, 1re session (5 novembre 1912 - 21 décembre 1912)">13e l&#233;gislature, 1re session (5 novembre 1912 - 21 d&#233;cembre 1912)</option>
+	<option value="301" title="12e législature, 4e session (9 janvier 1912 - 3 avril 1912)">12e l&#233;gislature, 4e session (9 janvier 1912 - 3 avril 1912)</option>
+	<option value="299" title="12e législature, 3e session (10 janvier 1911 - 24 mars 1911)">12e l&#233;gislature, 3e session (10 janvier 1911 - 24 mars 1911)</option>
+	<option value="297" title="12e législature, 2e session (15 mars 1910 - 4 juin 1910)">12e l&#233;gislature, 2e session (15 mars 1910 - 4 juin 1910)</option>
+	<option value="295" title="12e législature, 1re session (2 mars 1909 - 29 mai 1909)">12e l&#233;gislature, 1re session (2 mars 1909 - 29 mai 1909)</option>
+	<option value="293" title="11e législature, 4e session (3 mars 1908 - 25 avril 1908)">11e l&#233;gislature, 4e session (3 mars 1908 - 25 avril 1908)</option>
+
+</select>
+	        </div>
+        </div>
+
+		<div align="right" class="btnRechercheContextuelle">
+			<input type="button" onclick="RechercheTravaux()" value="Rechercher" class="btnSoumettre" />
+		</div>
+</div>
+
+
+<script type="text/javascript">
+    var idSessionLegislatureCourante = '1621'
+
+    $(document).ready(function () {
+        InitialiserRechercheTravauxParlementaires();
+        $("input.champMotCle, [data-champ] input, [data-champ] select]").keypress(function (e) {
+            if (e && e.keyCode == 13) {
+                RechercheTravaux();
+                return false;
+            }
+        });
+    })
+
+//<![CDATA[
+    String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); };
+
+    function RechercheTravaux() {
+        if (!ValiderPeriode())
+            return;
+
+        var motsCles = $('#ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux');
+
+        var queryString = "";
+        queryString = queryString + "SectionRecherche=9";
+        
+        if (motsCles.val() != "")
+            queryString = queryString + "&MotsCles=" + encodeURIComponent(htmlEscape(motsCles.val()));
+        
+        var typeTravaux = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux');
+        queryString = queryString + "&TypeTravaux=" + typeTravaux.val();
+            
+        var typeDocuments = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments');
+        queryString = queryString + "&TypeDocument=" + typeDocuments.val();
+
+        var dateDebut = $('#ctl00_ColGauche_RechercheTravaux_txtDateDebut');
+        var dateFin = $('#ctl00_ColGauche_RechercheTravaux_txtDateFin');
+        if (dateDebut.val() != "" || dateFin.val() != "")
+        {
+            queryString = queryString + "&PeriodeDebut=" + dateDebut.val();
+            queryString = queryString + "&PeriodeFin=" + dateFin.val();
+            queryString = queryString + "&Legislature=0";
+        }
+        else
+        {
+            var sessionLegislature = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature');
+            if (sessionLegislature.val() == "-1") {
+                sessionLegislature.get(0).selectedIndex = 1;
+            }
+            queryString = queryString + "&Legislature=" + sessionLegislature.val();
+        }
+
+        //Appel de la page de recherche.
+        window.location = '/fr/recherche/recherche-avancee.html?' + queryString;
+    }
+ //]]>
+</script>
+
+
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Imprimer la page" title="Imprimer la page"
+                        src='/Images/icones/partageImprimante.gif' width="16" height="16"/></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Taille du texte : régulière" title="Taille du texte : régulière" src='/Images/icones/retrecir.gif' width="16" height="16"/></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src='/Images/icones/agrandir.gif' width="16" height="16"/></a>
+                </li>
+                <li>
+                    <a href='/fr/fils-rss.html' class="nePasRediriger">
+                        <img alt="Fils RSS" title="Fils RSS"
+                        src='/Images/icones/partageRss.gif' width="16" height="16"/></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Partager</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                    <li>
+                        <a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-2%2fjournal-debats%2fCSSS-260218.html' class="nePasRediriger">
+                            <img alt="Partager par Facebook" title="Partager par Facebook"
+                            src='/Images/icones/partageFacebook.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://x.com/intent/tweet?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-2%2fjournal-debats%2fCSSS-260218.html' class="nePasRediriger">
+                            <img alt="Partager par X" title="Partager par X"
+                            src='/Images/icones/partageTwitter.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://www.linkedin.com/sharing/share-offsite/?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-2%2fjournal-debats%2fCSSS-260218.html' class="nePasRediriger">
+                            <img alt="Partager par LinkedIn" title="Partager par LinkedIn"
+                            src='/Images/icones/partageLinkedin.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='/fr/__envoyer-ami.html?lienurl=%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-2%2fjournal-debats%2fCSSS-260218.html' class="nePasRediriger">
+                            <img alt="Partager par courriel" title="Partager par courriel"
+                            src='/Images/icones/partageCourriel.gif' /></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/fr/document/19787.html">Diagramme de l'Assemblée</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="styleHyperlien">
+		            <span id="IconeEnDirect" class="icoEnDirect"> </span>		
+		            En direct sur le Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    <h1>
+	<span id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu"><a href="#ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"><img alt="Liens Ignorer la navigation" src="/WebResource.axd?d=4UaBqSIWkbOa0oKpfyVaroCfWw-gKpH7p94XAneRMXaNy_TmToGBBciOgGFLRbyIG0lHcoUothuOjD7lW_eFebb023o1&amp;t=638901627720898773" width="0" height="0" style="border-width:0px;" /></a><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span><a id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"></a></span></h1>
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+							
+	<h2>
+		Version préliminaire	
+	</h2>
+	
+	
+            <div class="boutonRetour">
+                <span>
+			        <a href='https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-2/journal-debats/index.html'>Retour à la liste des séances du Journal des débats</a>
+                </span>
+            </div>
+			<h2 class="titre2TravauxParl">
+				43<sup>e</sup> législature, 2<sup>e</sup> session
+				<br />
+				(30 septembre 2025 au 8 avril 2026)
+			</h2>
+		
+	
+	
+			<p>
+				<p>Cette version du Journal des débats est une version préliminaire&nbsp;: elle peut donc contenir des erreurs. La version définitive du Journal, en texte continu avec table des matières, est publiée dans un délai moyen de 2 ans suivant la date de la séance.</p>
+<p><a href="https://www.assnat.qc.ca/fr/lien/10078.html#JDD">Pour en savoir plus sur le Journal des débats et ses différentes versions</a></p>
+			</p>
+		
+	
+	
+			<h2>
+				Le
+				mercredi 18 février 2026
+				 -
+				 Vol.&nbsp;48 N°&nbsp;12
+			</h2>
+				
+			
+					<p>
+				
+					<h3>Étude détaillée du projet de loi n° 19, Loi visant notamment l’amélioration de l’accès aux services médicaux et la prise en charge médicale de la population</h3>
+					<br />
+				
+					</p>
+				
+			
+			<p><a href="#debut_journal">Aller directement au contenu du Journal des débats</a></p>
+			
+			
+					<div class="tableMatieresJournal">
+						<h3>Heures</h3>
+						<ul id="HeuresSegments">
+				
+					<li>
+						<h4>
+							<a href='#11h'>
+								11 h </a>
+						</h4>
+					</li>
+				
+					<li>
+						<h4>
+							<a href='#11h30'>
+								11 h 30</a>
+						</h4>
+					</li>
+				
+					<li>
+						<h4>
+							<a href='#12h'>
+								12 h </a>
+						</h4>
+					</li>
+				
+					<li>
+						<h4>
+							<a href='#12h30'>
+								12 h 30</a>
+						</h4>
+					</li>
+				
+					</ul></div>
+				
+			
+			
+			
+			<div class="hr">
+				<hr />
+			</div>
+			
+			<div class="clear">&nbsp;</div>
+			
+			<h2><a name="debut_journal" class="ancreNommee">Journal des débats</a></h2>
+			
+					<h4>
+						<a name='11h' class="ancreNommee">11 h </a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <i>(Onze heures seize minutes)</i>
+  </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Bonjour, tout le monde! Ayant
+constaté le quorum, je déclare la séance de la Commission de la santé et des
+services sociaux ouverte. </p>
+  <p> La commission est réunie afin de
+poursuivre l'étude détaillée du projet de loi n° 19, Loi visant notamment
+l'amélioration de l'accès aux services médicaux et la prise en charge médicale
+de la population. </p>
+  <p> Mme la secrétaire, y a-t-il des
+remplacements? </p>
+  <p>
+    <b> La Secrétaire : </b>Oui, M. le
+Président. Mme Abou-Khalil (Fabre) est remplacée par Mme Guillemette
+(Roberval) et Mme Caron (La Pinière) est remplacée par M. Kelley
+(Jacques-Cartier). </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Merci beaucoup. Lors de l'ajournement
+de nos travaux, hier, nous étions à l'étude de l'article 23, pour lequel
+le député de Nelligan avait mentionné qu'il aurait un amendement à nous
+déposer. Est-ce que votre amendement est prêt? </p>
+  <p>
+    <b> M. Derraji : </b>C'est bon, on
+peut... Oui. Merci, M. le Président. </p>
+  <p>
+    <b>Des voix :</b> ...</p>
+  <p>
+    <b> M. Derraji :</b> OK. On va vous l'envoyer,
+mais il est prêt, comme ça on va.... </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Ça va. Pour qu'on puisse le projeter
+à l'écran. </p>
+  <p>
+    <b> M. Derraji : </b>Oui, si ça ne
+vous dérange pas. </p>
+  <p>
+    <b> Des voix :</b> ...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Aussitôt que vous l'avez reçu, Mme la
+secrétaire.</p>
+  <p>
+    <b> Des voix : </b>...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Vous l'avez?</p>
+  <p>
+    <b>Une voix :</b> ...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Alors, l'amendement va être déposé sur Greffier.</p>
+  <p>
+    <b>Des voix :</b> ...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Alors, effectivement, je vais vous inviter à en faire la
+lecture, M. le député de Nelligan. </p>
+  <p>
+    <b> M. Derraji : </b>OK. Donc, merci,
+M. le Président, donc, à la lumière de nos échanges hier, par rapport aux
+vulnérables, aux personnes, les 180 000, je propose l'amendement
+suivant : Modifier le deuxième alinéa de l'article 23 du projet de
+loi par l'insertion, après «médecin omnipraticien», de «le cas échéant,
+l'infirmière praticienne spécialisée en soins de première ligne», donc IPSPL,
+par le remplacement de  «Il assure le suivi médical» par «Ils assurent le suivi
+médical ou la prise en charge». L'article modifié se lirait ainsi : </p>
+  <p> Le ministre de
+la Santé et des Services sociaux désigne jusqu'à 180 000 personnes assurées au
+sens de la Loi sur l'assurance maladie, chapitre A29, qui<a name="_Hlk223697364">,</a> à son avis, sont vulnérables, lorsqu'un médecin
+omnipraticien ou, le cas échéant, l'infirmière praticienne spécialisée en soins
+de première ligne, IPSPL, ajoute une personne ainsi désignée à la clientèle
+dont ils assurent le suivi médical ou la prise en charge. Cette personne est
+réputée avoir été inscrite, conformément au paragraphe 1 du premier alinéa
+de l'article le 11 de la Loi favorisant l'accès aux services de médecine de
+famille et de médecine spécialisée, chapitre A 2.2. Le présent article a
+effet depuis... Bon, voilà, c'est bon. Merci, M. le Président. Donc, juste pour
+expliquer, c'est un peu à la lumière de nos échanges, hier, avec Mme la
+ministre au niveau de l'importance, l'importance du suivi, l'importance du
+suivi médical, l'importance de la prise en charge et que, oui, c'est le
+médecin, mais aussi, démontrer, aussi, de l'ouverture... je pense qu'on est
+rendus là avec les IPS, leur rôle extrêmement important, surtout que le
+législateur leur a donné la possibilité de faire ces actes. Donc, pour moi, si
+on veut envoyer un message fort par rapport à la prise en charge au niveau de
+la première ligne, permettre aux IPS, les ajouter dans l'article, mais aussi
+que ces personnes vulnérables qu'on veut tous qu'ils sortent de... je dirais,
+de... bien, pas qu'ils sortent, mais qu'ils soient un peu pris en charge, moi,
+je propose l'amendement suivant. Voilà, M. le Président. </p>
+  <p>
+    <i>• (11 h 20) •</i>
+  </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Mme la ministre. </p>
+  <p>
+    <b> Mme Bélanger : </b>Oui, M. le
+Président. Bien, merci, M. le député, pour le dépôt de cet amendement qui va
+exactement dans le sens de l'esprit des discussions qu'on a, là, depuis nos
+séances de travail. Je proposerai, M. le Président, que juste avant qu'on
+puisse l'adopter, d'avoir un éclairage de la DAJ, puisqu'on vient tout juste de
+le lire, la Direction, là, des affaires juridiques, de notre côté qu'ils
+puissent le regarder. Alors...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> ...suspension de quelques minutes, Mme la ministre?</p>
+  <p>
+    <b>Mme Bélanger :</b> Soit...
+peut-être pas une suspension, je... on pourrait peut-être proposer... passer à
+l'autre article, ça ne sera pas très, très long de notre côté. Je veux juste
+m'assurer...</p>
+  <p>
+    <b>Une voix :</b> ...</p>
+  <p>
+    <b>Mme Bélanger :</b> Vous aimez
+mieux suspendre? OK. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Alors, on...</p>
+  <p>
+    <b> M. Derraji : </b>À moins que... à
+moins que ça va prendre beaucoup de temps. Faisons les articles si vous êtes
+sûrs que ça va prendre quelques minutes et... donc, on continue et on laisse
+le...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Bien, pour une question d'efficacité, messieurs les
+députés, je vous demanderais la permission de pouvoir... </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>...suspendre votre amendement et on
+suspend aussi l'article et on traiterait les autres, ça va? </p>
+  <p>
+    <b> M. Derraji :</b> Je n'ai pas
+d'enjeux. Collègues?</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Consentement?</p>
+  <p>
+    <b> M. Derraji :</b> Je n'ai pas
+de...</p>
+  <p>
+    <b>Des voix</b>
+    <b>: </b>Consentement.
+</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Merci beaucoup, très apprécié. Alors, article 24. Mme
+la ministre, vous allez en faire la lecture, s'il vous plaît. </p>
+  <p>
+    <b>19281 </b>
+    <b>  Mme Bélanger :</b>Alors,
+article 24 : «Les dispositions des articles 102 à 104 de la Loi
+visant principalement à instaurer la responsabilité collective quant à
+l'amélioration de l'accès aux services médicaux et à assurer la continuité de
+la prestation de ces services (2025, chapitre 25) ont effet depuis le
+25 octobre 2025.»</p>
+  <p> Commentaires : l'article 24 du
+projet de loi vise à donner un effet rétroactif aux articles 102 à 104 de
+la loi n° 25 portant sur la sollicitation des dons
+pour les établissements ou leur fondation comme s'ils n'avaient jamais cessé
+d'avoir effet depuis la sanction de cette loi, le 25 octobre 2025. Donc...
+</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Interventions? </p>
+  <p>
+    <b> M. Derraji : </b>Juste, si vous
+pouvez l'expliquer. Je sais qu'on vient corriger un peu une lacune constatée
+par les fondations lors de l'adoption du projet de loi n° 25. Juste nous
+rafraîchir la mémoire par rapport à... </p>
+  <p>
+    <b>Mme Bélanger :</b> Alors, en fait
+cet... les articles 102 à 104 vise à permettre que le nom, les coordonnées
+d'une personne puissent être utilisés afin de solliciter un don au bénéfice
+d'un établissement. Les fondations, là, souhaitent avoir accès à ces informations
+pour solliciter... les fondations d'établissements, là, pour solliciter les
+personnes qui ont reçu des services. Alors donc, ces dispositions étaient déjà
+présentes et en vigueur le 25 octobre 2025, donc dans la loi n° 25. Toutefois, le 12 décembre, le 12 décembre
+2025, cette entrée en vigueur a été privée de tout effet parce qu'on disait que
+ce soit reporté au 28 février. Alors, c'est pour ça qu'on dit que c'est
+rétroactif. On veut donc s'assurer que les fondations puissent avoir accès,
+là... C'est des pratiques qui sont faites dans le réseau depuis longtemps, qui
+sont toujours sécuritaires, bien sûr. Et donc, c'est vraiment de permettre
+qu'on puisse retourner jusqu'au 25 octobre pour que les fondations
+puissent continuer de solliciter les gens comme ils le font toujours. Sinon, il
+y aurait un vide, là, entre le 25 octobre jusqu'au 28 février. Alors,
+voilà. </p>
+  <p>
+    <b>Une voix :</b> ...</p>
+  <p>
+    <b> M. Derraji : </b>Non, c'est bon.
+Merci. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>M. le député de Saint-Henri—Sainte-Anne.</p>
+  <p>
+    <b> M. Cliche-Rivard : </b>C'est bon.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Alors, s'il n'y a pas d'autres interventions sur
+l'article 24 du projet de loi n° 19, est-ce que l'article 24 est
+adopté? </p>
+  <p> Adopté. Merci. </p>
+  <p> Mme la ministre, je vous invite à nous
+faire lecture de l'article 25. </p>
+  <p>
+    <b> Mme Bélanger : </b>Oui. Alors,
+«Les dispositions visées à l'un des paragraphes suivants ont effet dans la
+mesure qui y est prévue :</p>
+  <p> «1° les dispositions de l'article 178
+de la Loi visant principalement à instaurer la responsabilité collective quant
+à l'amélioration de l'accès aux services médicaux et à assurer la continuité de
+la prestation de ces services (2025, chapitre 25), à l'égard d'une
+personne qui, avant le 12 décembre 2025, a fait une divulgation ou a
+collaboré à une inspection ou à une enquête en application de cette loi;</p>
+  <p> «2° les dispositions des articles 179 et
+180 de cette loi, à l'égard des renseignements divulgués en application de
+l'article 177 de cette loi avant le 12 décembre 2025 ainsi qu'à
+l'égard de l'identité de la personne qui a fait une telle divulgation ou qui a
+collaboré à une inspection ou à une enquête en application de cette loi avant
+cette date;</p>
+  <p> «3° les dispositions des articles 135
+à 140 et du paragraphe 3° de l'article... 183 de cette loi, à l'égard
+d'une contravention à l'article 178 de cette loi, dans la mesure où il a
+effet en application du paragraphe 1° et où la contravention est commise après
+le (indiquer ici la date qui précède celle de la sanction de la présente loi).</p>
+  <p> «Le paragraphe 1° du premier alinéa a
+effet depuis le 25 octobre 2025.»</p>
+  <p> Alors, commentaires :
+l'article 25 vise à préserver l'effet de certaines dispositions de la loi n° 25 afin de maintenir la protection contre les
+représailles que prévoit... </p>
+  <p>
+    <b> Mme Bélanger : </b>...cette loi à
+l'égard d'une personne qui, de bonne foi, avant le 12 décembre dernier, a
+fait une divulgation ou a collaboré à une inspection ou à une enquête visant à
+un manquement à une disposition désormais abrogée de ce projet de loi. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Merci. Interventions? M. le député de
+Nelligan. </p>
+  <p>
+    <b> M. Derraji : </b>Ça a fait pas
+mal jaser, tout ça, l'automne dernier. Pouvez-vous juste réexpliquer le tout,
+s'il vous plaît, et le pourquoi de cet article, s'il vous plaît? </p>
+  <p>
+    <b> Mme Bélanger : </b>Oui, tout à
+fait. Alors, bien, en fait, il y a différentes dispositions, là, comme je viens
+de le mentionner, puis c'est beaucoup en lien avec soit la divulgation et
+puis... Donc, vous savez que, dans le réseau de la santé et services sociaux,
+par exemple, par rapport à la maltraitance, par rapport à des événements, des
+accidents, on favorise que les gens puissent faire une divulgation dans
+l'objectif de traiter ces informations puis de pouvoir tirer des conclusions et
+des améliorations. Donc, il y a une question ici de divulgation mais aussi une
+question de personnes qui participent, qui pourraient participer ou collaborer
+à des inspections, des enquêtes. Alors, ces éléments-là sont importants. Puis,
+pourquoi on amène cet... cet article, c'est... en fait, je pense que c'est
+encore l'effet rétroactif, si je ne me trompe pas, c'est bien ça, parce que
+l'article 25 vise à... à préserver, dans le fond, les personnes qui
+auraient et éviter qu'elles aient des représailles, là. </p>
+  <p>
+    <b> M. Derraji : </b>...rétroactif...</p>
+  <p>
+    <b> Mme Bélanger : </b>Et ce serait
+rétroactif, à ma compréhension, parce que là... Oui, c'est une très bonne
+question que vous posez. Ce serait rétroactif au 25 octobre 2025,
+mais je vais demander à Me Paquin de valider. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Consentement, s'il vous plaît, pour
+permettre à Me Paquin de s'exprimer. Consentement?</p>
+  <p>
+    <b> M. Derraji :</b> Oui,
+consentement.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Me Paquin, s'il vous plaît. </p>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>Oui, M.
+le Président. Mathieu Paquin, Direction des affaires juridiques, ministère de
+la Santé et des Services sociaux. Alors, exactement comme la... Mme la ministre
+l'a expliqué, on est avec une disposition qui rétroagit au
+25 octobre 2025. Il faut voir que, dans la version originale de la
+loi 25, il y avait le chapitre VIII qui prévoyait un certain nombre
+d'interdictions. Et accessoirement à ça, on avait des dispositions qui
+prévoyaient qu'une personne qui faisait la dénonciation, qui divulguait une telle...
+un tel manquement ou qui collaborait à une inspection ou une enquête concernant
+un tel manquement bénéficiait de certaine protection contre des mesures de
+représailles qui pourraient être prises contre elle ou/et visant à protéger son
+identité. Les dispositions au complet du chapitre VIII ont été abrogées et
+elles sont réputées n'avoir jamais eu... n'avoir jamais été en vigueur du fait
+de la loi 16. Par contre, factuellement, une personne aurait pu, entre le
+25 octobre et le 12 décembre, faire une telle dénonciation. Sans
+l'article 25, les mesures de protection de cette personne-là n'aurait pas
+d'effet, donc on pourrait techniquement... ou on l'exposerait à des
+représailles, alors qu'au moment où elle aurait fait sa dénonciation, sa
+divulgation, il y avait une loi qui était là pour la protéger.</p>
+  <p>
+    <i>• (11 h 30) •</i>
+  </p>
+  <p> Alors, ce que l'article 25 vise à
+faire ici, c'est de rétablir les mesures qui protègent cette personne-là, qui
+aurait fait une divulgation, une dénonciation qui aurait contribué à une
+inspection ou à une enquête. </p>
+  <p>
+    <b> M. Derraji : </b>Mais...</p>
+  <p>
+    <b>Une voix :</b> ...</p>
+  <p>
+    <b> M. Derraji :</b> Une question
+hypothétique : Est-ce que, selon vous, il y a... il y a... il y a eu
+quelque chose depuis l'adoption du projet de loi ou vous voulez juste qu'on se
+protège et... pas se protège, on protège le cas échéant, s'il y avait cette
+faille pendant ce moment, les gens qui seraient d'une manière directe ou
+indirecte impliqués? </p>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>Je n'ai
+pas eu connaissance personnellement, M. le Président, que des gens aient fait
+des divulgations, collaborés à des inspections ou des enquêtes, mais, étant
+donné que les dispositions visaient à ce que leur identité ne puisse pas être
+divulguée, ce serait normal, s'il y en avait eu, qu'on n'en ait pas entendu
+parler. Donc, dans un tel cas, je dirais qu'on vise plus à protéger, le cas
+échéant, si quelqu'un est dans cette situation-là qu'un cas qui... dont on a
+connaissance de l'existence. </p>
+  <p>
+    <b> M. Derraji : </b>D'où l'effet
+rétroactif de la protection. </p>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>Bien oui,
+M. le Président. La protection, elle est là parce qu'en fait initialement il
+existait au 25 octobre, puis elle a cessé d'exister au 25 octobre, le
+12 décembre. Ça fait que là, on la refait exister. </p>
+  <p>
+    <b> M. Derraji : </b>...entre le 25
+et le 12 décembre, il y avait cet espace où il n'y avait pas de
+protection. Juste pour que je puisse me situer. Désolé. </p>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>On va
+mettre des dates. M. le Président, si vous me permettez. Le 9 décembre... </p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+				
+					<h4>
+						<a name='11h30' class="ancreNommee">11 h 30</a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>...existait
+une protection depuis le 25 octobre. Le 12 décembre, il a arrêté,
+avec effet rétroactif, d'avoir cette protection-là et là on vient la redonner,
+mais c'est toujours pour la période comprise entre le 25 octobre 2025 et
+le 12 décembre 2025. </p>
+  <p>
+    <b> M. Derraji : </b>OK. C'est beau.
+C'est beau. Merci. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>M. le député de Saint-Henri—Sainte-Anne.</p>
+  <p>
+    <b> M. Cliche-Rivard :</b> Ça va,
+merci.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Ça vous va. Alors s'il n'y a pas d'autre intervention, est-ce
+que l'article 25 est adopté? </p>
+  <p>
+    <b>Des voix</b>
+    <b>: </b>Adopté. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Adopté. Article 26. Mme la
+ministre. </p>
+  <p>
+    <b> Mme Bélanger : </b>Article 26 :
+«Les dispositions de la présente loi entrent en vigueur le (indiquer ici la
+date de la sanction de la présente loi), à l'exception de celles des articles 5,
+7 et 9, qui entrent en vigueur à la date de l'entrée en vigueur,
+respectivement, de l'article 31 de la Loi visant principalement à
+instaurer la responsabilité collective quant à l'amélioration de l'accès aux
+services médicaux et à assurer la continuité de la prestation de ces services
+(2025, chapitre 25) et des articles 41 et... 56... excusez-moi, et
+des articles 41 et 58 de cette loi.»</p>
+  <p> L'article 26... Commentaires : l'article 26
+du projet de loi prévoit l'entrée en vigueur de ces dispositions. Les
+exceptions qu'il prévoit visent à ce que les modifications apportées par le
+projet de loi à un article de la loi n° 25 entrent en
+vigueur au même moment que l'article de cette loi visée par cette modification.
+Alors...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Merci beaucoup. Oui. Un instant. Mme
+la ministre. </p>
+  <p>
+    <b>Mme Bélanger :</b> Oui. M. le
+Président, en fait, questions de logistique et de légalité, là, dans nos
+travaux...</p>
+  <p>
+    <b> M. Derraji : </b>...réflexe au
+bon moment. </p>
+  <p>
+    <b> Mme Bélanger : </b>Exact. Alors,
+on ne devrait pas... On peut discuter de l'article, mais on ne devrait pas
+l'adopter tant qu'on n'a pas...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>...adopté le 23 avec son amendement. </p>
+  <p>
+    <b>Mme Bélanger :</b> Exact.
+Exactement. </p>
+  <p>
+    <b> Des voix : </b>...</p>
+  <p>
+    <b> Mme Bélanger : </b>Alors donc, on
+peut aller avec la discussion, M. le... mais, c'est comme vous souhaitez. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Bien, moi...</p>
+  <p>
+    <b> M. Derraji : </b>...on revient si
+vous êtes prêt.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Moi, c'est ce que je voulais vérifier
+avec votre équipe de légistes. Est-ce qu'ils ont eu suffisamment de temps pour
+regarder l'amendement? Si la réponse est non, on va discuter de 26 sans le
+voter. </p>
+  <p>
+    <b> Mme Bélanger : </b>En fait, je
+pense que je demanderais une suspension, M. le Président. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Excellent. Suspension, s'il vous
+plaît.</p>
+  <p>
+    <i>(Suspension de la séance à 11 h 35)</i>
+  </p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+				
+					<h4>
+						<a name='12h' class="ancreNommee">12 h </a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <i>(Reprise à 12 h 05)</i>
+  </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Alors on reprend nos travaux. Les
+légistes de Mme la ministre ont des petites modifications à faire suite aux
+discussions qu'il y a eu hors ondes. M. le député de Nelligan, vous aviez
+déposé un amendement à l'article 23. Donc, consentement pour revenir à l'article 23
+et consentement pour revenir à l'amendement. </p>
+  <p> Alors, M. le député de Nelligan, est-ce
+que vous acceptez de retirer votre amendement avec les discussions qu'on a eues
+hors caméra? </p>
+  <p>
+    <b> M. Derraji :</b> Oui. Merci, M.
+le Président. Après une bonne discussion avec Mme la ministre et mon collègue
+député de... </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Saint-Henri—Sainte-Anne. </p>
+  <p>
+    <b> M. Derraji :</b> ...Saint-Henri—Sainte-Anne.
+Oh mon Dieu! Saint-Henri—Sainte-Anne. Je vais retirer mon amendement. Je vais
+revenir avec un autre amendement ailleurs, mais je retire l'amendement pour le
+moment. Merci. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Merci. Oui, M. le député de Saint-Henri—Sainte-Anne.
+</p>
+  <p>
+    <b> M. Cliche-Rivard :</b> Je
+voudrais juste préciser que je comprends que le collègue le retire pour que l'obligation
+des 180 000 demeure auprès des médecins et non pas pour qu'elle soit
+partagée, cette obligation-là, entre les IPS et les médecins. Je pense que c'est
+ça, l'essence du retrait, puis c'est quand même important de le mentionner. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Bien, je vais demander à Mme la
+ministre de vous... de répondre spécifiquement avec ce que vous venez de
+mentionner. </p>
+  <p>
+    <b>Mme Bélanger :</b> Bien, en fait, M.
+le Président, le député de Saint-Henri—Sainte-Anne a tout à fait... c'est bien
+ça, Saint-Henri—Sainte-Anne, a tout à fait raison. En fait, vous savez que,
+dans l'entente que nous avons eue avec la FMOQ, je reviens avec ça, il y a 500 000
+personnes, au total, qui devraient être prises en charge de façon collective ou
+individuelle, dont 180 000 personnes vulnérables. Et donc ces objectifs
+visent les médecins, donc, principalement. </p>
+  <p> Alors, c'est pour ça qu'on... on propose
+de garder cet article tel quel, parce que la cible concerne les médecins de
+famille qui oeuvrent en première ligne. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Autres interventions sur 23? Non. S'il
+n'y a pas d'autre intervention sur l'article 23, est-ce que l'article 23
+est adopté? </p>
+  <p>
+    <b>Des voix :</b> Adopté. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Adopté. Merci. Après...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>...une petite vérification. On peut
+traiter l'article 26, alors, l'article 26 avait été lu par Mme la
+ministre avec son commentaire. Y a-t-il des interventions sur
+l'article 26? Pas d'intervention sur l'article 26? Alors, est-ce que
+l'article 26 du projet de loi n° 19 est adopté?</p>
+  <p>
+    <b>Des voix :</b> Adopté.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Adopté? Merci. Maintenant, je vais me... je me revire vers
+Me Paquin. Me Paquin, est-ce qu'on est prêt à... Non. OK, alors je vais
+suspendre, s'il vous plaît, quelques minutes pour permettre à l'équipe des
+légistes de finaliser les modifications qui ont été demandées. Et ça permettra
+aussi au député de Nelligan de prendre connaissance des différentes
+modifications.</p>
+  <p>
+    <i>(Suspension de la séance à 12 h 08)</i>
+  </p>
+  <p>
+    <i>(Reprise à 12 h 22)</i>
+  </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Alors, on reprend nos travaux. Nous
+avions suspendu parce qu'on devait travailler un amendement qui va être déposé
+par le député de Nelligan. Alors, M. le député de Nelligan, je vous cède la
+parole immédiatement. </p>
+  <p>
+    <b> M. Derraji : </b>Oui, merci, M.
+le Président. Je vais juste me... si vous me le permettez, un élément de
+contexte, premièrement, de remercier les collègues. Mon collègue député de
+Saint-Henri—Sainte-Anne, mais aussi Mme la ministre, ainsi que les légistes,
+parce que ça a été un travail collégial, et je tiens à... par respect par...
+ont eu été à le dire, que ça a été un travail de collégialité et de
+collaboration, cet amendement, et je remercie la ministre, aussi, et son
+équipe. </p>
+  <p> Donc, l'article 0.01 : Insérer,
+avant l'article 0.1 du projet de loi tel qu'amendé, ce qui suit : Loi
+sur le ministère de la Santé et des Services sociaux. 0.01 : La Loi sur le
+ministère de la Santé et des Services sociaux, chapitre M19.2 est modifié par
+l'insertion, après l'article 10.4, du suivant. </p>
+  <p> 10.5° L'exploitant d'un cabinet privé de
+professionnel qui a bénéficié d'un programme établi en vertu de
+l'article 10.4 ou d'une autre mesure de soutien offerte par le ministre ou
+par Santé Québec, doit, à l'égard de tout professionnel de la santé ou des
+services sociaux qui exerce sa profession, favoriser le plein exercice de cette
+profession. En ce qui concerne plus particulièrement les infirmières
+praticiennes spécialisées, l'exploitant doit également faciliter l'ajout de
+personnes à la clientèle dont elles assurent le suivi médical dans le cadre de
+leur prise en charge. Le premier alinéa n'a pas pour effet de limiter
+l'exercice d'une fonction conférée par la loi, non plus que l'exercice d'un
+droit, que des conditions de travail confèrent à l'employeur d'un professionnel
+visé à cet alinéa. </p>
+  <p> Commentaire : Cet amendement propose
+d'introduire, dans le projet de loi, un article introduisant à son tour, dans
+la Loi sur le ministère de la Santé et des Services sociaux, des dispositions
+ayant pour effet d'imposer à l'exploitant, à l'exploitant d'un milieu
+bénéficiant d'une mesure de soutien du ministre ou de Santé Québec, par
+exemple, un GMF, de favoriser le plein exercice des professionnels de la santé
+ou des services sociaux qui y pratiquent, dont les infirmières praticiennes
+spécialisées. Cette obligation n'a toutefois pas pour effet d'entraver
+l'exercice de fonctions que confie la loi ou des droits que prévoient les
+conditions de travail de ces professionnels. </p>
+  <p> Donc, M. le Président, l'idée derrière cet
+amendement, et c'est pour cela que je ne veux pas m'octroyer le bénéfice de
+tout cela, c'est... c'est une discussion avec les collègues. Le but, c'est...
+au départ, c'était les vulnérables, les 180 000. Après discussion avec les
+collègues et, notamment, la ministre et le collègue de Sainte-Marie—Sainte-Anne,
+le but, c'est que ça soit tous les patients en... qui sont en attente d'un
+rendez-vous ou d'une prise en charge, et le... la volonté du législateur, c'est
+ajouter les IPS, qui jouent un rôle extrêmement important, et je pense que
+c'est la meilleure place, et j'espère que dorénavant, on va avoir ce réflexe
+d'utiliser nos IPS qui font un... qui font un travail exceptionnel en matière
+de suivi médical, mais aussi en matière de prise en charge. La loi leur permet
+cela, alors, profitons de l'expertise de... de ces professionnelles. Alors,
+merci, M. le Président. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>OK, j'ai le député de
+Saint-Maurice—Sainte-Anne qui a demandé la parole. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Merci.
+Effectivement, je pense qu'on a un...un premier... un premier pas. Question,
+peut-être, là, à l'intérieur des GMF, l'inscription individuelle et collective
+va demeurer faite par le médecin ou si l'IPS, elle, va pouvoir directement
+inscrire?</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Mme la ministre ou... </p>
+  <p>
+    <b> Mme Bélanger : </b>Bien, en fait,
+quand on regarde le champ de pratique des IPS, puis l'amendement, là, dont on
+discute, cela voudrait dire que les IPS pourraient inscrire directement des
+patients. Donc, alors, c'est clair qu'elles travaillent au sein d'un GMF, il
+faut se souvenir qu'un GMF, c'est une entreprise privée, mais je pense que là,
+on vient marquer le fait qu'on doit faciliter l'ajout. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Cette
+inscription-là peut être autant individuelle que collective, pour l'IPS, ça ne
+change rien?</p>
+  <p>
+    <b>Mme Bélanger :</b> Oui.</p>
+  <p>
+    <b> M. Cliche-Rivard :</b> Parfait,
+elle peut le faire. Maintenant, ce qu'on envoie, là, comme message,
+effectivement, vous venez de dire que c'est sous la gestion, finalement... </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>...du
+médecin, mais là vous envoyez un message clair à l'effet que l'IPS joue son
+rôle plein et complet. </p>
+  <p>
+    <b> Mme Bélanger : </b>Tout à fait. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Donc, le
+ministère envoie le message aux médecins de ne pas limiter la... le plein
+exercice de l'IPS qui œuvre dans son cabinet. </p>
+  <p>
+    <b> Mme Bélanger : </b>C'est vraiment
+l'intention, je pense, des discussions que nous avons eues. Et puis donc tout
+ça pour s'assurer globalement d'une meilleure prise en charge, un meilleur
+suivi médical. Ces professionnels, certainement, là, ont la capacité d'être
+impliqués puis d'aller au plein, au maximum de leur champ de pratique
+professionnelle. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Et de leur
+responsabilité clinique. </p>
+  <p>
+    <b> Mme Bélanger : </b>Et de leurs responsabilités.
+</p>
+  <p>
+    <b> M. Cliche-Rivard : </b>De la même
+façon. Parce qu'elle en parle, là, dans leur mémoire de l'exercice de la
+profession mais aussi de la responsabilisation au niveau clinique. </p>
+  <p> On a discuté un petit peu plus tôt dans...
+dans le projet de loi des balises, là, de ce qui permettait, justement, d'aller
+faire l'inscription individuelle pour les IPS, la fameuse lettre d'entente,
+finalement, retirée, remise, pour nous rappeler, ça, c'est des discussions qui
+sont toujours en cours avec la FMOQ, peut-être juste nous... Parce que tel quel
+aujourd'hui, ce n'est pas réglé, là, ça, ça doit faire l'objet d'ententes à
+suivre avec la FMOQ. </p>
+  <p>
+    <b> Mme Bélanger : </b>Oui. Alors,
+quand... lorsque nous avons rencontré l'association des IPS qui sont venus ici
+sans consultations particulières, on se rappellera, M. le Président, qu'elles
+nous ont indiqué que cette lettre d'entente apportait certains enjeux. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>C'est ça. </p>
+  <p>
+    <b> Mme Bélanger : </b>La prise en
+charge à l'inscription. Donc, tous ces travaux doivent se faire dans le respect
+des lettres d'entente. Et donc il y a des travaux qui seront faits.</p>
+  <p> Il ne faut pas oublier aussi qu'il y a un
+cadre de référence pour la pratique IPS. Alors, ça, c'est du côté du ministère.
+On fait des travaux aussi pour s'assurer que le cadre de référence des IPS soit
+modernisé, amélioré, mis à jour naturellement. Alors donc, c'est ça, ce sont
+des travaux d'une part, faite par le ministère, l'autre part, mais c'est les
+lettres d'entente. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>En
+clinique IPS, donc en dehors du GMF, là, elles inscrivent directement de
+manière indépendante et autonome. </p>
+  <p>
+    <b> Mme Bélanger : </b>Oui. Votre
+question est très pertinente. On sait qu'il y a des IPS qui travaillent
+directement en clinique IPS. Au Québec, nous avons actuellement
+16 cliniques UPS qui relèvent de Santé Québec. Et les IPS qui travaillent
+donc en clinique IPS ont la possibilité de pouvoir inscrire directement des
+patients puis assurer leur prise en charge et le suivi. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Donc, il
+sera... il serait tout à fait judicieux, pertinent et utile d'espérer cet plein
+usage de la... de leur profession à l'intérieur du GMF, on s'entend. </p>
+  <p>
+    <i>• (12 h 30) •</i>
+  </p>
+  <p>
+    <b> Mme Bélanger : </b>Oui, meilleur
+travail d'interdisciplinarité. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Elles ont
+par ailleurs, tant qu'à être sur le sujet, là, mentionné... Elles font rapport
+à, je pense, c'est la lettre d'entente de 389 sur ce qu'accompagne le... le
+moyen financier, là, de l'intégration d'une IPS à l'intérieur d'un GMF versus
+ce qui ne suit pas directement en clinique IPS. Est-ce que vous aviez une
+réponse pour eux sur cet élément-là? </p>
+  <p>
+    <b> Mme Bélanger : </b>Je n'ai pas de
+réponse cet avant-midi à ça, là. Bien sûr, il faut que les discussions se... se
+poursuivent, là, dans le contexte de la... de la lettre d'entente
+spécifiquement, mais on a bien entendu leurs propos, là, d'avoir les ressources
+nécessaires pour qu'elles puissent aller à leur plein exercice, là. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Parfait.
+Parce qu'on est aussi dans les... le dernier article, là. Elles révélaient
+aussi qu'il y a un règlement, eu égard au diagnostic en santé mentale, qui est
+traité et entendu depuis cinq ans, là, puis que semble-t-il que tout ça bloque.
+Avez-vous une réponse à leur offrir, Mme la ministre? </p>
+  <p>
+    <b> Mme Bélanger : </b>OK. Peut-être,
+M. le Président, je laisserais Dr Bergeron répondre à cet élément, là,
+spécifique. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Consentement permettre au
+Dr Bergeron de prendre...</p>
+  <p>
+    <b>Une voix :</b> ...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Alors, Dr Bergeron, s'il vous plaît. </p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>Stéphane
+Bergeron, sous-ministre adjoint, ministère de la Santé et des Services sociaux,
+donc sous-ministre adjoint à santé physique et pharmaceutique.</p>
+  <p> Nous savons que le champ d'exercice
+professionnel est porté par l'Office des professions, par les professionnels.
+L'Office des professions, qui est sous la responsabilité du ministre Boulet,
+qui va aller en commission et en étude d'un projet de loi pour élargir les... les
+champs de pratique. Donc, je dirais que c'est... Nous y avons un grand intérêt,
+mais c'est porté par... par une autre commission, et on va voir dans cette
+autre commission. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>OK. Mais
+vous, Mme la ministre... </p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+				
+					<h4>
+						<a name='12h30' class="ancreNommee">12 h 30</a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <b> M. Cliche-Rivard : </b>...vous
+entendez la demande? </p>
+  <p>
+    <b> Mme Bélanger : </b>Bien, écoutez,
+je pense que, tu sais, globalement, là, pour les IPS au Québec, le gouvernement
+a investi beaucoup pour la formation des IPS, on s'est donné des cibles, près
+de 2000 IPS au Québec. C'est important, ces professionnels de la santé
+peuvent faire une très grande différence pour améliorer l'accès au système de
+santé. Alors, en toute cohérence, on va suivre l'évolution de cette pratique,
+bien sûr. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Une dernière
+question sur les IPS puis les cliniques IPS. Les comités d'usagers en clinique IPS
+peuvent exercer leurs fonctions en clinique IPS ou ils ne peuvent pas? </p>
+  <p>
+    <b> Mme Bélanger : </b>OK, oui.</p>
+  <p>
+    <b> M. Cliche-Rivard : </b>...posé la
+question, là, le RPCU, GMF versus clinique. </p>
+  <p>
+    <b> Mme Bélanger : </b>Oui. Je vais
+demander, si vous permettez, à monsieur... à Dr Bergeron. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Docteur Bergeron, s'il vous plaît. </p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>Merci,
+M. le Président. Si on se rappelle ce qui a été dit, notamment par le
+rassemblement du Comité provincial des usagers, c'est qu'il avait la
+possibilité d'intervenir auprès des établissements publics, donc les cliniques IPS
+sous... qui relèvent de Santé... de Santé Québec. Donc, ils ont une
+possibilité, effectivement, d'intervenir à ce niveau. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Et là, on
+vient de parler des IPS en GMF, est-ce que c'est la même lecture aussi à l'intérieur
+du GMF, là, le comité d'usagers perd juridiction. Parce que c'est ça, la
+question, à la recommandation six du RCPU... du RPCU, pardon. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Allez-y, Dr Bergeron.</p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>Donc,
+la réponse, c'est que puisque ce ne sont pas des usagers de l'établissement,
+mais des usagers du GMF, le rassemblement des usagers... des comités d'usagers
+n'ont pas juridiction là-dessus. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>C'est la
+réponse du statu quo et de ce que c'est maintenant. Là, Mme la ministre, puis
+là ce sera mon dernier point là-dessus, vous aviez une recommandation de la
+part des comités d'usagers pour l'étendre aux GMF, est-ce que vous en prenez
+acte? Est-ce que vous l'étudierez? </p>
+  <p>
+    <b> Mme Bélanger : </b>Bien, écoutez,
+je pense qu'on a pris acte de l'ensemble de leur mémoire, là, qu'ils nous ont
+déposés, et puis les travaux se poursuivent, dans le fond, peut-être que je
+peux conclure avec ça, là. Les travaux vont se poursuivre avec les IPS, comme
+je le disais, notamment avec le ministère, il y a les lettres d'entente, on a
+dit qu'il y avait aussi d'autres projets de loi. Notre souci, c'est de faire
+évoluer cette profession. Alors, on va tenir compte, naturellement, de
+plusieurs recommandations. Puis il faut voir aussi que, comme ministre de la
+Santé, je rencontre régulièrement les différentes associations, alors c'est
+très important. C'est une belle présentation qu'ils nous ont faite puis on va
+continuer de travailler avec eux. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Parce que
+la question concerne évidemment les IPS, mais évidemment les médecins aussi
+puis l'ensemble des autres services fournis en GMF. </p>
+  <p>
+    <b>Mme Bélanger :</b> Tout à fait.</p>
+  <p>
+    <b> M. Cliche-Rivard :</b> Tout à l'heure,
+docteur Bergeron parlait de suivre les crédits, là, finalement, ce sont des
+crédits du gouvernement en GMF aussi, là, ce sont les deniers publics de l'État
+qui sont utilisés à l'intérieur des GMF. Donc, moi, je fais le plaidoyer pour
+que les comités d'usagers aient tout autant juridiction puis qu'ils suivent l'argent
+tel qu'on l'a établi, nous, dans le système public québécois, là. </p>
+  <p>
+    <b> Mme Bélanger : </b>Mais là, on...
+vous faites référence à la LGSSSS, je crois, pour les comités d'usagers, vous
+me corrigerez. Alors, c'est.... ces comités-là ont été mis en place pour les
+établissements des GMF, donc ils sont... ils ne sont pas considérés comme des
+établissements sous juridiction de santé Québec, là, alors... Mais on
+continuera la discussion. </p>
+  <p>
+    <b> M. Cliche-Rivard :</b> Mais les
+cliniques IPS, oui, donc...</p>
+  <p>
+    <b>Mme Bélanger :</b> Les cliniques IPS,
+oui. Les cliniques IPS où les IPS sont des salariés, ça relève de Santé Québec,
+les... donc, les GMF, c'est autre chose, là. On est vraiment... on est dans le
+secteur privé. </p>
+  <p>
+    <b> M. Cliche-Rivard : </b>Merci
+beaucoup, Mme la ministre, de vos réponses. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Y a-t-il d'autres interventions? S'il
+n'y a pas d'autres interventions sur l'amendement qui a été déposé par le
+député de Nelligan, est-ce que l'amendement qui introduit... qui... l'article 0.1
+est adopté? </p>
+  <p>
+    <b>Des voix</b>
+    <b>: </b>Adopté. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Adopté. Alors, le nouvel article 0.1
+est donc adopté. </p>
+  <p> Maintenant, on doit adopter le préambule
+du projet de loi. Est-ce que le préambule du projet de loi est adopté? </p>
+  <p>
+    <b>Des voix :</b> Adopté. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Adopté. </p>
+  <p> Étant donné que le préambule a été
+accepté, nous en sommes à la fin de l'étude détaillée. Alors, est-ce que le
+titre du projet de loi est adopté? </p>
+  <p>
+    <b> Des voix : </b>Adopté. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Adopté. </p>
+  <p> Je propose que la commission... </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> ...recommande la renumérotation du projet de loi amendé.
+Cette motion est-elle adoptée? </p>
+  <p>
+    <b> Des voix : </b>Adopté. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Je propose que la commission adopte une motion
+d'ajustement des références. Cette motion est-elle adoptée?</p>
+  <p>
+    <b>Des voix :</b> Adopté. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Alors, je vais maintenant céder la parole au deuxième
+groupe d'opposition et député de Saint-Henri—Sainte-Anne.  </p>
+  <p>
+    <b> M. Cliche-Rivard :</b> Merci, M.
+le Président. Je vais être rapide parce qu'on fera nos remarques au salon rouge.
+C'est l'habitude que j'ai habituellement, là, plutôt de détailler le tout sur
+l'adoption. Donc, merci aux équipes. Merci à vous, M. le Président, d'avoir
+géré nos travaux de main de maître, encore une fois. Merci à la ministre et à
+son équipe pour l'ouverture. Merci aux collègues de l'opposition également, à
+l'ensemble des groupes qui sont venus témoigner ici, en commission, à
+l'ensemble des travailleurs, travailleuses aussi du domaine de la santé,
+évidemment, Puis je remercie tout le monde au secrétariat et à la technique.
+Merci beaucoup. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Je vais maintenant céder la parole au député de
+l'opposition officielle et député de Nelligan. </p>
+  <p>
+    <b> M. Derraji :</b> Merci, M. le
+Président. Premièrement, je vais remercier mon collègue député de
+Jacques-Cartier, qui était là depuis le début dans ce projet de loi. Merci pour
+la présence, l'aide... et ton aide parce que je viens d'hériter du dossier de
+la santé. Merci au député aussi leader de deuxième groupe d'opposition. Merci à
+Mme la ministre et ses équipes. Comme mon collègue de Saint-Henri—Sainte-Anne,
+je vais réserver mes... mes remarques finales sur le projet de loi au salon
+rouge, mais je salue l'ouverture de Mme la ministre et ses équipes par rapport
+à cette ouverture, par rapport à la prise en charge et surtout d'inclure les
+infirmières praticiennes spécialisées dans le cadre du projet de loi. </p>
+  <p> Merci particulier à vous, M. le Président,
+les gens qui vous accompagnent pour l'aide tout au long de cette commission.
+Dr Bergeron, merci. Me Paquin, et vos équipes qui vous accompagnent, merci
+pour votre présence. Et, mes chers collègues de la partie gouvernementale, ça a
+été un plaisir échanger avec vous, même si ça a été juste quelques... quelques
+heures, mais ça a été très apprécié. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Alors, M. le député de Jacques-Cartier. </p>
+  <p>
+    <b>M. Kelley</b>
+    <b>:</b> Merci, M.
+le Président. Très rapidement, je ne veux pas répéter qu'est-ce que tu as dit.
+Aussi merci à François Bégin, notre recherchiste au pair. Puis un grand merci à
+vous pour... vous avez bien guidé nous dans nos discussions. Merci, Mme la
+ministre, tous mes collègues, c'était un grand plaisir de siéger avec vous
+autres sur ce projet de loi. Merci, M. le Président. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Merci. Mme la ministre. </p>
+  <p>
+    <b>Mme Bélanger :</b> M. le
+Président, j'aimerais en profiter pour remercier le député de Jacques-Cartier,
+député de Nelligan, le député de Saint-Henri—Sainte-Anne et tous mes collègues
+députés aussi qui sont présents, qui écoutent nos travaux, donc, qui nous
+soutiennent dans ces travaux. Un grand merci, M. le Président, pour votre grand
+professionnalisme et votre main de maître pour présider ces travaux. Et j'en
+profite aussi pour remercier Dr Bergeron. Me Paquin, merci pour votre
+grande connaissance de l'ensemble des lois. Un grand, grand merci, Dr Bergeron
+aussi pour votre connaissance du milieu médical. Je veux remercier Étienne et
+Philippe aussi, là, qui sont à mon cabinet, le personnel aussi. Merci, tout le
+personnel qui est présent. </p>
+  <p>
+    <i>• (12 h 40) •</i>
+  </p>
+  <p> Puis, vous savez, je veux simplement
+terminer, en disant : On est ailleurs, on est ailleurs. On n'a pas fait
+ça, ce projet de loi qu'on a... que j'ai déposé puis qu'on vient d'adopter pour
+le statu quo, on le fait vraiment dans une perspective de changement. Je veux
+vous remercier. J'ai vraiment apprécié le ton puis aussi les échanges, ce qui
+fait qu'on ressort d'ici en ayant des éléments importants pour l'avenir de
+notre système de santé. Alors, un grand merci. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Alors, écoutez, moi, je veux simplement vous féliciter
+pour le travail qui a été accompli pour rendre à terme le projet de loi n° 19. Je veux souligner la qualité du travail qui est fait
+par le Dr Bergeron et M. Paquin, parce que... Me Paquin et toute son
+équipe, Étienne, votre autre collègue Philippe, parce que, entre autres,
+Dr Bergeron et Me Paquin, par leurs explications, facilitent la
+compréhension de ce qui est souvent un petit peu laborieux à bien saisir. Et on
+a deux personnes qui réussissent à vulgariser de façon extraordinaire les
+questions qui sont posées. Alors, bravo et merci à vous deux Et, Mme la
+ministre, vous avez une sagesse quand vous faites votre projet de loi. Et vous
+avez parlé du ton, vous avez une façon de répondre aux gens...</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>...de façon extrêmement respectueuse,
+et ça a été le cas des deux côtés, et c'est ce qui amène la collaboration. Ceci
+étant dit, la commission, ayant accompli son mandat, ajourne ses travaux sine
+die. Merci à tous. </p>
+  <p>
+    <i>(Fin de la séance à 12 h 42)</i>
+  </p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+					
+		
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+	
+		<h2>Document(s) associé(s) à la séance</h2>
+		<ul class="ListeLien">
+			
+			
+			
+					<li><a href='/fr/video-audio/archives-parlementaires/travaux-commissions/AudioVideo-112231.html'>Vidéo/Audio</a></li>
+					
+					
+				
+		</ul>
+	
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+						
+				
+					
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <div id="bInfolettre" style="margin-bottom: 25px;"><a class="btnInfolettre" href="https://l.communications.assnat.qc.ca/T/WF/24042/op0ace/Optin/fr-CA/Form.ofsys" target="_blank">Abonnez-vous à notre infolettre!</a></div>
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br />
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+
+    </ul>
+
+    <br />
+    <span class="NonVisible">
+        
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+    var boutonInfolettre = document.getElementById('bInfolettre');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+            boutonInfolettre.style.display = 'block';
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+            boutonInfolettre.style.display = 'none';
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+</body>
+</html>

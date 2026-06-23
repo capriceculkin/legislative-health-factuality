@@ -1,40 +1,48 @@
 import requests
-from bs4 import BeautifulSoup
+import urllib3
 import os
 import time
-import urllib3
+from datetime import date, timedelta
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-INDEX_URL = "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-3/journal-debats/index.html"
 OUTPUT_DIR = "data/canada/quebec"
-BASE = "https://www.assnat.qc.ca"
+BASE = "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions"
 
-def get_all_links():
-    resp = requests.get(INDEX_URL, timeout=15, verify=False)
-    soup = BeautifulSoup(resp.text, "lxml")
-    links = []
-    for a in soup.find_all("a", href=True):
-        href = a["href"]
-        if "journal-debats" in href and href.endswith(".html"):
-            full_url = href if href.startswith("http") else BASE + href
-            links.append(full_url)
-    return list(set(links))
+SESSION_CODES = ["csss-43-1", "csss-43-2", "csss-42-1", "csss-42-2", "csss-41-1"]
 
-def fetch_transcript(url):
-    resp = requests.get(url, timeout=15, verify=False)
-    if resp.status_code == 200:
-        soup = BeautifulSoup(resp.text, "lxml")
-        text = soup.get_text(separator="\n", strip=True)
-        filename = url.split("/")[-1].replace(".html", ".txt")
-        out_path = os.path.join(OUTPUT_DIR, filename)
-        with open(out_path, "w", encoding="utf-8") as f:
-            f.write(text)
-        print(f"Saved {filename}")
+START_DATE = date(2018, 1, 1)
+END_DATE = date(2026, 6, 23)
+
+def try_fetch(session_code, date_str):
+    url = f"{BASE}/{session_code}/journal-debats/CSSS-{date_str}.html"
+    try:
+        resp = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"}, verify=False)
+        if resp.status_code == 200 and len(resp.text) > 1000:
+            return resp.text, url
+    except requests.RequestException:
+        pass
+    return None, None
 
 if __name__ == "__main__":
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    links = get_all_links()
-    print(f"Found {len(links)} transcript links")
-    for link in links:
-        fetch_transcript(link)
-        time.sleep(1)
+    current = START_DATE
+    found_count = 0
+    checked = 0
+    while current <= END_DATE:
+        date_str = current.strftime("%y%m%d")
+        for session_code in SESSION_CODES:
+            html, url = try_fetch(session_code, date_str)
+            if html:
+                out_path = os.path.join(OUTPUT_DIR, f"CSSS-{date_str}.html")
+                with open(out_path, "w", encoding="utf-8") as f:
+                    f.write(html)
+                print(f"Saved {date_str} ({session_code})")
+                found_count += 1
+                break
+        checked += 1
+        if checked % 50 == 0:
+            print(f"...still checking, on {current.strftime('%Y-%m-%d')}, {found_count} found so far")
+        current += timedelta(days=1)
+        time.sleep(0.3)
+    print(f"Done. Found {found_count} committee transcripts.")

@@ -1,0 +1,2570 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="content-language" content="fr" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere"  rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen"  />
+<link href="/Images/favicon.ico" rel="shortcut icon" />
+
+<!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print"  />
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen"  />
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript"  >
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2026-08-29';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalAucuneActiviteType = "Aucune activité de cette catégorie n'est prévue aujourd'hui."
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.3.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-mDroite-m.min.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec
+        
+</title>
+        
+        <meta property="og:title" content="Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217" />
+
+    <script type="text/javascript" src="/scripts/Recherche.min.js"></script><style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+
+	<body id="TravauxJournalReviseNonRevise" class="impressionGrossie">
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-250606.html" id="aspnetForm">
+<div>
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjEzMDQ2MTA2MQ9kFgJmD2QWAgIDEGRkFgICCA9kFgICAQ9kFgICBQ8QZBAVUhNUb3V0ZXMgbGVzIHNlc3Npb25zP1Nlc3Npb24gZW4gY291cnMgLSA0M2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg1IG1haSAyMDI2IC0gKT80M2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgzMCBzZXB0ZW1icmUgMjAyNSAtIDggYXZyaWwgMjAyNilENDNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDI5IG5vdmVtYnJlIDIwMjIgLSAxMCBzZXB0ZW1icmUgMjAyNSk+NDJlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTkgb2N0b2JyZSAyMDIxIC0gMjggYW/Du3QgMjAyMilCNDJlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDI3IG5vdmVtYnJlIDIwMTggLSAxMyBvY3RvYnJlIDIwMjEpOzQxZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyMCBtYWkgMjAxNCAtIDIzIGFvw7t0IDIwMTgpPTQwZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgzMCBvY3RvYnJlIDIwMTIgLSA1IG1hcnMgMjAxNCk+MzllIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjMgZsOpdnJpZXIgMjAxMSAtIDEgYW/Du3QgMjAxMilCMzllIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDEzIGphbnZpZXIgMjAwOSAtIDIyIGbDqXZyaWVyIDIwMTEpPDM4ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg4IG1haSAyMDA3IC0gNSBub3ZlbWJyZSAyMDA4KT4zN2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNCBtYXJzIDIwMDYgLSAyMSBmw6l2cmllciAyMDA3KTozN2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNCBqdWluIDIwMDMgLSAxMCBtYXJzIDIwMDYpOjM2ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIyIG1hcnMgMjAwMSAtIDEyIG1hcnMgMjAwMyk5MzZlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIgbWFycyAxOTk5IC0gOSBtYXJzIDIwMDEpPTM1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDI1IG1hcnMgMTk5NiAtIDIxIG9jdG9icmUgMTk5OCk/MzVlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDI5IG5vdmVtYnJlIDE5OTQgLSAxMyBtYXJzIDE5OTYpOjM0ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE3IG1hcnMgMTk5NCAtIDE3IGp1aW4gMTk5NCk6MzRlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTkgbWFycyAxOTkyIC0gMTAgbWFycyAxOTk0KT8zNGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjggbm92ZW1icmUgMTk4OSAtIDE4IG1hcnMgMTk5Mik5MzNlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBtYXJzIDE5ODggLSA5IGFvw7t0IDE5ODkpPzMzZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNiBkw6ljZW1icmUgMTk4NSAtIDggbWFycyAxOTg4KUAzMmUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgxNiBvY3RvYnJlIDE5ODQgLSAxMCBvY3RvYnJlIDE5ODUpOjMyZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDIzIG1hcnMgMTk4MyAtIDIwIGp1aW4gMTk4NCk9MzJlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoOSBub3ZlbWJyZSAxOTgxIC0gMTAgbWFycyAxOTgzKUEzMmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgzMCBzZXB0ZW1icmUgMTk4MSAtIDIgb2N0b2JyZSAxOTgxKTozMmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTkgbWFpIDE5ODEgLSAxOCBqdWluIDE5ODEpPTMxZSBsw6lnaXNsYXR1cmUsIDZlIHNlc3Npb24gKDUgbm92ZW1icmUgMTk4MCAtIDEyIG1hcnMgMTk4MSlAMzFlIGzDqWdpc2xhdHVyZSwgNWUgc2Vzc2lvbiAoMjQgb2N0b2JyZSAxOTgwIC0gMjQgb2N0b2JyZSAxOTgwKTkzMWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICg2IG1hcnMgMTk3OSAtIDE4IGp1aW4gMTk4MClCMzFlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjEgZsOpdnJpZXIgMTk3OCAtIDIwIGbDqXZyaWVyIDE5NzkpPjMxZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDggbWFycyAxOTc3IC0gMjIgZMOpY2VtYnJlIDE5NzcpRTMxZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNCBkw6ljZW1icmUgMTk3NiAtIDIzIGTDqWNlbWJyZSAxOTc2KT0zMGUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNiBtYXJzIDE5NzYgLSAxOCBvY3RvYnJlIDE5NzYpPzMwZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE4IG1hcnMgMTk3NSAtIDE5IGTDqWNlbWJyZSAxOTc1KT8zMGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNCBtYXJzIDE5NzQgLSAyOCBkw6ljZW1icmUgMTk3NClEMzBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIyIG5vdmVtYnJlIDE5NzMgLSAyMiBkw6ljZW1icmUgMTk3Myk/MjllIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTUgbWFycyAxOTczIC0gMjUgc2VwdGVtYnJlIDE5NzMpOTI5ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDcgbWFycyAxOTcyIC0gMTQgbWFycyAxOTczKUMyOWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMyBmw6l2cmllciAxOTcxIC0gMjQgZMOpY2VtYnJlIDE5NzEpPzI5ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg5IGp1aW4gMTk3MCAtIDE5IGTDqWNlbWJyZSAxOTcwKT4yOGUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgyNCBmw6l2cmllciAxOTcwIC0gMTIgbWFycyAxOTcwKUMyOGUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgyNSBmw6l2cmllciAxOTY5IC0gMjMgZMOpY2VtYnJlIDE5NjkpQzI4ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDIwIGbDqXZyaWVyIDE5NjggLSAxOCBkw6ljZW1icmUgMTk2OClAMjhlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjAgb2N0b2JyZSAxOTY3IC0gMjAgb2N0b2JyZSAxOTY3KUAyOGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMSBkw6ljZW1icmUgMTk2NiAtIDEyIGFvw7t0IDE5NjcpPjI3ZSBsw6lnaXNsYXR1cmUsIDZlIHNlc3Npb24gKDI1IGphbnZpZXIgMTk2NiAtIDE4IGF2cmlsIDE5NjYpQDI3ZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDIyIG9jdG9icmUgMTk2NSAtIDIzIG9jdG9icmUgMTk2NSk9MjdlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjEgamFudmllciAxOTY1IC0gNiBhb8O7dCAxOTY1KUAyN2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxNCBqYW52aWVyIDE5NjQgLSAzMSBqdWlsbGV0IDE5NjQpPDI3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIxIGFvw7t0IDE5NjMgLSAyMyBhb8O7dCAxOTYzKUEyN2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTUgamFudmllciAxOTYzIC0gMTEganVpbGxldCAxOTYzKT4yNmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMCBub3ZlbWJyZSAxOTYwIC0gMTAganVpbiAxOTYxKUUyNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjAgc2VwdGVtYnJlIDE5NjAgLSAyMiBzZXB0ZW1icmUgMTk2MCk+MjVlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTggbm92ZW1icmUgMTk1OSAtIDE4IG1hcnMgMTk2MCk9MjVlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTkgbm92ZW1icmUgMTk1OCAtIDUgbWFycyAxOTU5KUIyNWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMyBub3ZlbWJyZSAxOTU3IC0gMjEgZsOpdnJpZXIgMTk1OClDMjVlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE0IG5vdmVtYnJlIDE5NTYgLSAyMSBmw6l2cmllciAxOTU3KUIyNGUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNiBub3ZlbWJyZSAxOTU1IC0gMjMgZsOpdnJpZXIgMTk1NilBMjBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDcgb2N0b2JyZSAxOTM2IC0gMTIgbm92ZW1icmUgMTkzNik+MThlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTAgamFudmllciAxOTMzIC0gMTMgYXZyaWwgMTkzMylCMThlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDMgbm92ZW1icmUgMTkzMSAtIDE5IGbDqXZyaWVyIDE5MzIpPDE3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDggamFudmllciAxOTI5IC0gNCBhdnJpbCAxOTI5KT0xNmUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxMSBqYW52aWVyIDE5MjcgLSAxIGF2cmlsIDE5MjcpPDE2ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDcgamFudmllciAxOTI2IC0gMjQgbWFycyAxOTI2KUAxNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTcgZMOpY2VtYnJlIDE5MjMgLSAxNSBtYXJzIDE5MjQpQjE1ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDI0IG9jdG9icmUgMTkyMiAtIDI5IGTDqWNlbWJyZSAxOTIyKT0xNWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxMCBqYW52aWVyIDE5MjIgLSAyMSBtYXJzIDE5MjIpPTE1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDExIGphbnZpZXIgMTkyMSAtIDE5IG1hcnMgMTkyMSlEMTVlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDEwIGTDqWNlbWJyZSAxOTE5IC0gMTQgZsOpdnJpZXIgMTkyMCk9MTRlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjEgamFudmllciAxOTE5IC0gMTcgbWFycyAxOTE5KUExNGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICg0IGTDqWNlbWJyZSAxOTE3IC0gOSBmw6l2cmllciAxOTE4KUMxNGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNyBub3ZlbWJyZSAxOTE2IC0gMjIgZMOpY2VtYnJlIDE5MTYpPTEzZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDExIGphbnZpZXIgMTkxNiAtIDE2IG1hcnMgMTkxNik7MTNlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBqYW52aWVyIDE5MTUgLSA1IG1hcnMgMTkxNSlCMTNlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTEgbm92ZW1icmUgMTkxMyAtIDE5IGbDqXZyaWVyIDE5MTQpQzEzZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg1IG5vdmVtYnJlIDE5MTIgLSAyMSBkw6ljZW1icmUgMTkxMik8MTJlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoOSBqYW52aWVyIDE5MTIgLSAzIGF2cmlsIDE5MTIpPTEyZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDEwIGphbnZpZXIgMTkxMSAtIDI0IG1hcnMgMTkxMSk5MTJlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTUgbWFycyAxOTEwIC0gNCBqdWluIDE5MTApOTEyZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyIG1hcnMgMTkwOSAtIDI5IG1haSAxOTA5KToxMWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgzIG1hcnMgMTkwOCAtIDI1IGF2cmlsIDE5MDgpFVIBMAQxNjIxBDE2MTcEMTYxMQQxNjA3BDE1NzkEMTA3OQM3ODkDNDk5AzQ5MQM0ODkDNDg3AzQ4NQM0ODMDNDgxAzQ3OQM0NzcDNDc1AzQ3MwM0NzEDNDY5AzQ2NwM0NjUDNDYzAzQ2MQM0NTkDNDU3AzQ1NQM0NTMDNDUxAzQ0OQM0NDcDNDQ1AzQ0MwM0NDEDNDM5AzQzNwM0MzUDNDMzAzQzMQM0MjkDNDI3AzQyNQM0MjMDNDIxAzQxOQM0MTcDNDE1AzQxMwM0MTEDNDA5AzQwNwM0MDMDNDAxAzM5OQMzOTcDMzk1AzM5MwMzOTEDMzUxAzM0MwMzNDEDMzM1AzMzMQMzMjkDMzI1AzMyMwMzMjEDMzE5AzMxNwMzMTUDMzEzAzMxMQMzMDkDMzA3AzMwNQMzMDMDMzAxAzI5OQMyOTcDMjk1AzI5MxQrA1JnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGRkabVADji0w2THdjjsU/c2C0U0SaQ=" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusionData = 'typeActivite:\'9;11\', commission:\'\', mandat:\'\', mandatParent:\'\', estPageAccueil:\'true\'';var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';//]]>
+</script>
+
+<script src="/Scripts/Travaux.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusion = '/WebMethod/WebMethod.aspx/ObtenirIndicateurWebDiffusion';
+                                                                           var intervalleRafraichissementWebDiffusion = 60;//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B08191A9" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAG966KZwYFZEMIhgNbeQ4fxc3hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yP5J++CKenG+ic1PIaA5cTuL1134RC+RnzibeFXcPSMkirjG8og4fy2g9bI6NorM5K3aXyd+YwgKTVZuZwzdInb3sMEK8K8EnCeQkzFr+/RLvxPBAdO7j0VFemNI0qrFxSGYQ3iqRmRux+buuGhnzVY7jB7dHJwCIv8ngbmPGgPLujBTC+kP4kA+7KhxgVmvV5AheHVxIVrpDzljBaLS2bYKMFL9SoPHg7YnZGoSQYbC96mix2PM6mPVfuaAu2CCJfM4TAu5BVnX31Y0HHllueS87ErUi03NMo0hw7mxWyfT4Wv0wvqQZh4w3ykIvcMjsGFY5ybnihBy13K2K+tmuOs85eX2+hEhZ2vYUaE8BVLmvakhWjFT45S4k+tsa+fpSs4lbyX6yNqZ6z72mkN+uXbq6rMhqV0lkwDHk0NHAT+FCTZWSs07x5JPi066N3TA8r2W06Lr1lcPqDYyzfrmwaQGQ0psL1kP1GxKizeElEmecdwWtpPscZWtTpzZEnsfmzTqsCYzzzobfT8qdD7a/yPAypVkCmjXnJsda3SUW7qtzZGT+9Pc4mFOAq+/SX5/YRJ/K/ogEgmTY1DKUX4XxwaeYSR1/gThSYL8HvHZ/BXyQlkFwouIFKdfLNHGAWbjnoCvCU5+pJHtkl6m2WTUFVWJJA1MHBzQXG/f2gdX+bPdSgU/lArO4+wk4+DUCkKVOeGZp31cUQDQWmUDo2Su9MZmuSpA6pRzhnLkfV7xmjsWh9KQ+99mZMlQr7uUOHSboZ96a1A+LynNef/O7hu4b8K/qwysk0ivqUHKhoyAXpbbPoyn20EhaJbPgBEf3ZVcUKAehOEMbNchbHLxUU6Tby2GE3swtqAMtM9Fry5zPuv4s2htp1+4Q36YrsV6nkF5KbYkPbwAojZXFYBB3CBnXaLcA8rMefK0Y/7jpLorq+G3zWFkQ5HtZOokEDcDPi97PVKoXS0yltqZ5Mt5lUERLD0ZUxbspqy9ur6z14GkdnLsiW72+p8AC341YpjOF6yx34tM63Vq8Uhb3BcFtxuRpa9Z/2/NoNxOsUz7+Cxrjsc5oGnmEsM/D4EOnLIe/WslcimQBWL1FRHPFNiMvhdM0v4eAZR7NUE5tUcUKjzKUVe9yrlTuD7BkCKZ2iDxRJpz05DKHAeVGaY4lF6pQ80C00q+h3MqhJVAghw9aUxAP9AFqKPCv3SpPXmc+w5SYVVGfHISO1IQytQj+I+B5yTxyKDMamePfnz/uNjaSpU9JPJnmjae1Xh8FKcmg2idJphFrs2rSSYRoZTn2+cOD8w4uXzQjjSq+cSDSgaDEe7v2UjBmd+ZwDVApItvLzBJWHwjZB5xILY5bHbSTrcXHiVebPB9g6cu4OyM9Qs5qbyE84dYj4B2uxF3gcYOfMDoc/IM5xDi4UIFTQTW7H/NQ6Q6xAbuKSXYhAUdYa6kC0R+1fQ2GRiBPcJlTzg8NxJWsCbw6uucbfFDMLGnbdCRH+MJ2vwsmS8sru97GZmqUvbcHVLzytiWwmVJMxGxDYx3BYvanTW3eCivTHVUADoMWjvykFxDT4CYC59FxW5R+LQ+5YQRYaNU87G/tpDdG7FWLuikgjD4nQvKf3CUU6VYBceGVRXhuxTjI5KM0mwr/WKimhdzY8A+wjtd7aMChS5+OrgRzLvCqGmPpASCvMjFwhzzNbQIRw8L3/NFi18/kCZZw2UpxVoxwbRXaQXpnfKihg4oKRD6h/IK/nGDwv/kGpZjV82isGd3dAcv/ueAST3hCP86GZXGgNAxTvQghNtmUwi3qdsmkzpG6kDQmNjF8HEyhZeATYsYASiUoKMaqwsrpmofpInZdfVM8Qt1dp/EBcAAHbyNuUISQOWpWKTB/psFd8KeZh0ZHsoGQC6x3URnSZgoS0/dlVaU5w3pDNjnO8WiT1wNkzAklbI3/0P8OGPoyxOm889Q7znP6BhdVGBIvZkaEr2G/4QOQWC9vJ1rpH3X7bce5ChW68F6IqKPPbcgDlKF0/DnccJVDpVrjAQVSa8tk26+QeIKIHfPEFNh4D83b7JOlO17s6NcRRdnQh4CS9T6LrfhmAwa8aMvCy6BeNiYk5IPF8lnHDVfNs3InsR9ZiNQxCPs/GLIcLMwwcvL+T47+xzoOy/EIGp7k9Ex3NGCcNJapLgvmTepJXvTUKK8o43Uxx6bnZh4rvOSEFl1y0ae9T9E5j1Ej8KjAtJF6+QJ1bHt/jxVIp0MkJsBSeS9ENNitgEy6DgVUhH6Gbl9YQSK7JdqBfNSEaXgQkrrPpVv39xHWG7awjKWluncOURdTFJS5aBxFN49FE/YFX7j6EVcl3ggQ==" />
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien" style="margin-right:45px;">Suivez-nous</span>
+                    <span class="visuallyhidden"> sur les médias sociaux, Facebook, X, Youtube</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle" />
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher"/>
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;" tabindex="0">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var link = document.querySelector('a[onclick="LancerRechercheAvancee();return false;"]');
+
+        link.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                LancerRechercheAvancee();
+                event.preventDefault();
+            }
+        });
+    });
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere">
+	<a href="/fr/index.html" class="sanssouligne" title="Assemblée nationale du Québec - Retour à l&#39;accueil">
+    <img class="nepasafficher" width="88" height="58" title="Assemblée nationale du Québec - Retour à l'accueil" alt="Assemblée nationale du Québec - Retour à l'accueil" src='/images/transparent.gif' /></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class='menuHoverParent btnDeputes'><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes">
+                Députés</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnTravaux'>
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires">
+                    Travaux parlementaires</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnExprimez'>
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion">
+                    Exprimez votre opinion!</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnVideoAudio'>
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio">
+                    Vidéo</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="display: none">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours"
+                        title="Chargement en cours" />
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" tabindex="0">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href='/fr/calendrier-detaille.html'>
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup"></span>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br />
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br />
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br />
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br />
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br />
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br />
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br />
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href=''>
+                    Aujourd'hui</a></span>
+            </div>
+            <hr />
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="my-skinnable-select">
+                    <select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite">
+	<option selected="selected" value="*"></option>
+
+</select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br />
+            <a href='/fr/aide/aide-recherche.html#javascript'>
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class='' id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class='' id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class='' id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class='' id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class='' id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class='' id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class='' id="lienEducatives">
+                <a href="http://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class='' id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class='' id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/fr/index.html">Accueil</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/index.html">Travaux parlementaires</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/commissions/index.html">Travaux des commissions</a></span><span> &gt; </span><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation">
+
+
+	
+	<ul>
+		<li>
+			<h2><a href="/fr/travaux-parlementaires/index.html" class="selected">
+				Travaux parlementaires</a></h2>
+			<ul>
+				<li>
+					<a href="/fr/travaux-parlementaires/journaux-debats.html" class="">
+						Journal des débats </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/journaux-debats/index-jd/index.html" class="">
+								Index du Journal des débats</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/assemblee-nationale/index.html" class="">
+						Travaux de l'Assemblée</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/registre-des-votes/index.html" class="">
+								Registre des votes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/commissions/index.html" class="selected">
+						Travaux des commissions</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cap/index.html" class="">
+								Administration publique</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/capern/index.html" class="">
+								Agriculture, pêcheries, énergie et ressources naturelles</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cat/index.html" class="">
+								Aménagement du territoire</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/can/index.html" class="">
+								Assemblée nationale</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cce/index.html" class="">
+								Culture et éducation</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cet/index.html" class="">
+								Économie et travail</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cfp/index.html" class="">
+								Finances publiques</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/ci/index.html" class="">
+								Institutions</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/crc/index.html" class="">
+								Relations avec les citoyens</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/csss/index.html" class="">
+								Santé et services sociaux</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cte/index.html" class="">
+								Transports et environnement</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html" class="">
+								Mandats en cours</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/rapports-documents-reflexion/index.html" class="">
+								Rapports et documents de réflexion</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/rapport/index.html" class="">
+						Cheminement des projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/index.html" class="">
+						Projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/documents-deposes.html" class="">
+						Documents déposés </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/documents-deposes/depots-du-jour.html" class="">
+								Dépôts du jour </a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/calendrier-travaux.html" class="">
+						Calendrier hebdomadaire des travaux </a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+	
+
+<div class="clear"></div>
+
+<div class="ContenuNavigation SousNavigation rechercheContextuelle travauxParlementaires">
+    <div class="overlay">
+        <div class="loading"></div>
+    </div>
+	<h2>Recherche avancée dans la section Travaux parlementaires</h2>
+
+		<div class="conteneurMotCle" data-champ="MotsCles">
+            <label for="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux">Mots clés</label>
+			<input name="ctl00$ColGauche$RechercheTravaux$txtTrouverTravaux" type="text" id="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux" />	
+		</div>
+		
+	    <div class="floatLeft" data-champ="TypeDocument">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments">Type de documents</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxDocument">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeDocuments" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments" title="Certains documents déposés en commissions et à l’Assemblée sont numérisés en mode image. Leurs contenus ne sont donc pas disponibles à la recherche." class="BulleInfo">
+	<option selected="selected" value="-1">Tous les documents</option>
+	<option value="1|3">Documents d&#233;pos&#233;s</option>
+	<option value="9">Feuilletons et pr&#233;avis</option>
+	<option value="13">Journaux des d&#233;bats</option>
+	<option value="5">M&#233;moires</option>
+	<option value="7">Proc&#232;s-verbaux de l&#39;Assembl&#233;e</option>
+	<option value="11">Projets de loi</option>
+	<option value="15">Rapports et documents de consultation des commissions</option>
+
+</select>
+		    </div>
+        </div>
+
+    	<div class="floatLeft" data-champ="TypeTravaux">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">Type de travaux</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxType">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeTravaux" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">
+	<option value="0">Travaux de l&#39;Assembl&#233;e et des commissions</option>
+	<option value="-1">Travaux de l&#39;Assembl&#233;e</option>
+	<option value="-2">Travaux des commissions</option>
+	<option value="39">Commission de la culture et de l’&#233;ducation</option>
+	<option value="43">Commission de la sant&#233; et des services sociaux</option>
+	<option value="7">Commission de l&#39;administration publique</option>
+	<option value="37">Commission de l&#39;agriculture, des p&#234;cheries, de l&#39;&#233;nergie et des ressources naturelles</option>
+	<option value="13">Commission de l&#39;am&#233;nagement du territoire</option>
+	<option value="5">Commission de l&#39;Assembl&#233;e nationale</option>
+	<option value="21">Commission de l&#39;&#233;conomie et du travail</option>
+	<option value="23">Commission des finances publiques</option>
+	<option value="25">Commission des institutions</option>
+	<option value="41">Commission des relations avec les citoyens</option>
+	<option value="35">Commission des transports et de l&#39;environnement</option>
+	<option value="55">Sous-commission de la r&#233;forme parlementaire</option>
+
+</select>
+		    </div>
+		</div>
+    
+        <div class="champRecherche avancee" data-champ="Periode">
+            <label>Période</label>
+            <div class="champPeriode">
+		        <label class="libelleDe" for="ctl00_ColGauche_RechercheTravaux_txtDateDebut">De</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateDebut" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateDebut" class="champsDate choisirDate PeriodeDebut" />
+		        <label class="libelleA" for="ctl00_ColGauche_RechercheTravaux_txtDateFin" class="champRecherche avancee">À</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateFin" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateFin" title="
+       Si les champs &lt;b>De&lt;/b> et &lt;b>À&lt;/b> sont remplis, le résultat se situe entre les dates indiquées.&lt;br/>
+      Si seul le champ &lt;b>De&lt;/b> est rempli, le résultat se situe entre la date indiquée jusqu’à aujourd’hui.&lt;br/>
+      Si seul le champ &lt;b>À&lt;/b> est rempli, le résultat se situe avant la date indiquée.
+    " class="champsDate choisirDate BulleInfo PeriodeFin" />
+	        </div>
+            <div class="messageErreur cache">La date de début doit précéder la date de fin.</div>
+	    </div>
+
+        <div class="champRecherche avancee" data-champ="Legislature">
+            <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature" class="labelOnTop">Session</label>
+            <div class="my-skinnable-select">
+	            <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixSessionLegislature" id="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature">
+	<option value="0">Toutes les sessions</option>
+	<option selected="selected" value="1621" title="Session en cours - 43e législature, 3e session (5 mai 2026 - )">Session en cours - 43e l&#233;gislature, 3e session (5 mai 2026 - )</option>
+	<option value="1617" title="43e législature, 2e session (30 septembre 2025 - 8 avril 2026)">43e l&#233;gislature, 2e session (30 septembre 2025 - 8 avril 2026)</option>
+	<option value="1611" title="43e législature, 1re session (29 novembre 2022 - 10 septembre 2025)">43e l&#233;gislature, 1re session (29 novembre 2022 - 10 septembre 2025)</option>
+	<option value="1607" title="42e législature, 2e session (19 octobre 2021 - 28 août 2022)">42e l&#233;gislature, 2e session (19 octobre 2021 - 28 ao&#251;t 2022)</option>
+	<option value="1579" title="42e législature, 1re session (27 novembre 2018 - 13 octobre 2021)">42e l&#233;gislature, 1re session (27 novembre 2018 - 13 octobre 2021)</option>
+	<option value="1079" title="41e législature, 1re session (20 mai 2014 - 23 août 2018)">41e l&#233;gislature, 1re session (20 mai 2014 - 23 ao&#251;t 2018)</option>
+	<option value="789" title="40e législature, 1re session (30 octobre 2012 - 5 mars 2014)">40e l&#233;gislature, 1re session (30 octobre 2012 - 5 mars 2014)</option>
+	<option value="499" title="39e législature, 2e session (23 février 2011 - 1 août 2012)">39e l&#233;gislature, 2e session (23 f&#233;vrier 2011 - 1 ao&#251;t 2012)</option>
+	<option value="491" title="39e législature, 1re session (13 janvier 2009 - 22 février 2011)">39e l&#233;gislature, 1re session (13 janvier 2009 - 22 f&#233;vrier 2011)</option>
+	<option value="489" title="38e législature, 1re session (8 mai 2007 - 5 novembre 2008)">38e l&#233;gislature, 1re session (8 mai 2007 - 5 novembre 2008)</option>
+	<option value="487" title="37e législature, 2e session (14 mars 2006 - 21 février 2007)">37e l&#233;gislature, 2e session (14 mars 2006 - 21 f&#233;vrier 2007)</option>
+	<option value="485" title="37e législature, 1re session (4 juin 2003 - 10 mars 2006)">37e l&#233;gislature, 1re session (4 juin 2003 - 10 mars 2006)</option>
+	<option value="483" title="36e législature, 2e session (22 mars 2001 - 12 mars 2003)">36e l&#233;gislature, 2e session (22 mars 2001 - 12 mars 2003)</option>
+	<option value="481" title="36e législature, 1re session (2 mars 1999 - 9 mars 2001)">36e l&#233;gislature, 1re session (2 mars 1999 - 9 mars 2001)</option>
+	<option value="479" title="35e législature, 2e session (25 mars 1996 - 21 octobre 1998)">35e l&#233;gislature, 2e session (25 mars 1996 - 21 octobre 1998)</option>
+	<option value="477" title="35e législature, 1re session (29 novembre 1994 - 13 mars 1996)">35e l&#233;gislature, 1re session (29 novembre 1994 - 13 mars 1996)</option>
+	<option value="475" title="34e législature, 3e session (17 mars 1994 - 17 juin 1994)">34e l&#233;gislature, 3e session (17 mars 1994 - 17 juin 1994)</option>
+	<option value="473" title="34e législature, 2e session (19 mars 1992 - 10 mars 1994)">34e l&#233;gislature, 2e session (19 mars 1992 - 10 mars 1994)</option>
+	<option value="471" title="34e législature, 1re session (28 novembre 1989 - 18 mars 1992)">34e l&#233;gislature, 1re session (28 novembre 1989 - 18 mars 1992)</option>
+	<option value="469" title="33e législature, 2e session (8 mars 1988 - 9 août 1989)">33e l&#233;gislature, 2e session (8 mars 1988 - 9 ao&#251;t 1989)</option>
+	<option value="467" title="33e législature, 1re session (16 décembre 1985 - 8 mars 1988)">33e l&#233;gislature, 1re session (16 d&#233;cembre 1985 - 8 mars 1988)</option>
+	<option value="465" title="32e législature, 5e session (16 octobre 1984 - 10 octobre 1985)">32e l&#233;gislature, 5e session (16 octobre 1984 - 10 octobre 1985)</option>
+	<option value="463" title="32e législature, 4e session (23 mars 1983 - 20 juin 1984)">32e l&#233;gislature, 4e session (23 mars 1983 - 20 juin 1984)</option>
+	<option value="461" title="32e législature, 3e session (9 novembre 1981 - 10 mars 1983)">32e l&#233;gislature, 3e session (9 novembre 1981 - 10 mars 1983)</option>
+	<option value="459" title="32e législature, 2e session (30 septembre 1981 - 2 octobre 1981)">32e l&#233;gislature, 2e session (30 septembre 1981 - 2 octobre 1981)</option>
+	<option value="457" title="32e législature, 1re session (19 mai 1981 - 18 juin 1981)">32e l&#233;gislature, 1re session (19 mai 1981 - 18 juin 1981)</option>
+	<option value="455" title="31e législature, 6e session (5 novembre 1980 - 12 mars 1981)">31e l&#233;gislature, 6e session (5 novembre 1980 - 12 mars 1981)</option>
+	<option value="453" title="31e législature, 5e session (24 octobre 1980 - 24 octobre 1980)">31e l&#233;gislature, 5e session (24 octobre 1980 - 24 octobre 1980)</option>
+	<option value="451" title="31e législature, 4e session (6 mars 1979 - 18 juin 1980)">31e l&#233;gislature, 4e session (6 mars 1979 - 18 juin 1980)</option>
+	<option value="449" title="31e législature, 3e session (21 février 1978 - 20 février 1979)">31e l&#233;gislature, 3e session (21 f&#233;vrier 1978 - 20 f&#233;vrier 1979)</option>
+	<option value="447" title="31e législature, 2e session (8 mars 1977 - 22 décembre 1977)">31e l&#233;gislature, 2e session (8 mars 1977 - 22 d&#233;cembre 1977)</option>
+	<option value="445" title="31e législature, 1re session (14 décembre 1976 - 23 décembre 1976)">31e l&#233;gislature, 1re session (14 d&#233;cembre 1976 - 23 d&#233;cembre 1976)</option>
+	<option value="443" title="30e législature, 4e session (16 mars 1976 - 18 octobre 1976)">30e l&#233;gislature, 4e session (16 mars 1976 - 18 octobre 1976)</option>
+	<option value="441" title="30e législature, 3e session (18 mars 1975 - 19 décembre 1975)">30e l&#233;gislature, 3e session (18 mars 1975 - 19 d&#233;cembre 1975)</option>
+	<option value="439" title="30e législature, 2e session (14 mars 1974 - 28 décembre 1974)">30e l&#233;gislature, 2e session (14 mars 1974 - 28 d&#233;cembre 1974)</option>
+	<option value="437" title="30e législature, 1re session (22 novembre 1973 - 22 décembre 1973)">30e l&#233;gislature, 1re session (22 novembre 1973 - 22 d&#233;cembre 1973)</option>
+	<option value="435" title="29e législature, 4e session (15 mars 1973 - 25 septembre 1973)">29e l&#233;gislature, 4e session (15 mars 1973 - 25 septembre 1973)</option>
+	<option value="433" title="29e législature, 3e session (7 mars 1972 - 14 mars 1973)">29e l&#233;gislature, 3e session (7 mars 1972 - 14 mars 1973)</option>
+	<option value="431" title="29e législature, 2e session (23 février 1971 - 24 décembre 1971)">29e l&#233;gislature, 2e session (23 f&#233;vrier 1971 - 24 d&#233;cembre 1971)</option>
+	<option value="429" title="29e législature, 1re session (9 juin 1970 - 19 décembre 1970)">29e l&#233;gislature, 1re session (9 juin 1970 - 19 d&#233;cembre 1970)</option>
+	<option value="427" title="28e législature, 5e session (24 février 1970 - 12 mars 1970)">28e l&#233;gislature, 5e session (24 f&#233;vrier 1970 - 12 mars 1970)</option>
+	<option value="425" title="28e législature, 4e session (25 février 1969 - 23 décembre 1969)">28e l&#233;gislature, 4e session (25 f&#233;vrier 1969 - 23 d&#233;cembre 1969)</option>
+	<option value="423" title="28e législature, 3e session (20 février 1968 - 18 décembre 1968)">28e l&#233;gislature, 3e session (20 f&#233;vrier 1968 - 18 d&#233;cembre 1968)</option>
+	<option value="421" title="28e législature, 2e session (20 octobre 1967 - 20 octobre 1967)">28e l&#233;gislature, 2e session (20 octobre 1967 - 20 octobre 1967)</option>
+	<option value="419" title="28e législature, 1re session (1 décembre 1966 - 12 août 1967)">28e l&#233;gislature, 1re session (1 d&#233;cembre 1966 - 12 ao&#251;t 1967)</option>
+	<option value="417" title="27e législature, 6e session (25 janvier 1966 - 18 avril 1966)">27e l&#233;gislature, 6e session (25 janvier 1966 - 18 avril 1966)</option>
+	<option value="415" title="27e législature, 5e session (22 octobre 1965 - 23 octobre 1965)">27e l&#233;gislature, 5e session (22 octobre 1965 - 23 octobre 1965)</option>
+	<option value="413" title="27e législature, 4e session (21 janvier 1965 - 6 août 1965)">27e l&#233;gislature, 4e session (21 janvier 1965 - 6 ao&#251;t 1965)</option>
+	<option value="411" title="27e législature, 3e session (14 janvier 1964 - 31 juillet 1964)">27e l&#233;gislature, 3e session (14 janvier 1964 - 31 juillet 1964)</option>
+	<option value="409" title="27e législature, 2e session (21 août 1963 - 23 août 1963)">27e l&#233;gislature, 2e session (21 ao&#251;t 1963 - 23 ao&#251;t 1963)</option>
+	<option value="407" title="27e législature, 1re session (15 janvier 1963 - 11 juillet 1963)">27e l&#233;gislature, 1re session (15 janvier 1963 - 11 juillet 1963)</option>
+	<option value="403" title="26e législature, 2e session (10 novembre 1960 - 10 juin 1961)">26e l&#233;gislature, 2e session (10 novembre 1960 - 10 juin 1961)</option>
+	<option value="401" title="26e législature, 1re session (20 septembre 1960 - 22 septembre 1960)">26e l&#233;gislature, 1re session (20 septembre 1960 - 22 septembre 1960)</option>
+	<option value="399" title="25e législature, 4e session (18 novembre 1959 - 18 mars 1960)">25e l&#233;gislature, 4e session (18 novembre 1959 - 18 mars 1960)</option>
+	<option value="397" title="25e législature, 3e session (19 novembre 1958 - 5 mars 1959)">25e l&#233;gislature, 3e session (19 novembre 1958 - 5 mars 1959)</option>
+	<option value="395" title="25e législature, 2e session (13 novembre 1957 - 21 février 1958)">25e l&#233;gislature, 2e session (13 novembre 1957 - 21 f&#233;vrier 1958)</option>
+	<option value="393" title="25e législature, 1re session (14 novembre 1956 - 21 février 1957)">25e l&#233;gislature, 1re session (14 novembre 1956 - 21 f&#233;vrier 1957)</option>
+	<option value="391" title="24e législature, 4e session (16 novembre 1955 - 23 février 1956)">24e l&#233;gislature, 4e session (16 novembre 1955 - 23 f&#233;vrier 1956)</option>
+	<option value="351" title="20e législature, 1re session (7 octobre 1936 - 12 novembre 1936)">20e l&#233;gislature, 1re session (7 octobre 1936 - 12 novembre 1936)</option>
+	<option value="343" title="18e législature, 2e session (10 janvier 1933 - 13 avril 1933)">18e l&#233;gislature, 2e session (10 janvier 1933 - 13 avril 1933)</option>
+	<option value="341" title="18e législature, 1re session (3 novembre 1931 - 19 février 1932)">18e l&#233;gislature, 1re session (3 novembre 1931 - 19 f&#233;vrier 1932)</option>
+	<option value="335" title="17e législature, 2e session (8 janvier 1929 - 4 avril 1929)">17e l&#233;gislature, 2e session (8 janvier 1929 - 4 avril 1929)</option>
+	<option value="331" title="16e législature, 4e session (11 janvier 1927 - 1 avril 1927)">16e l&#233;gislature, 4e session (11 janvier 1927 - 1 avril 1927)</option>
+	<option value="329" title="16e législature, 3e session (7 janvier 1926 - 24 mars 1926)">16e l&#233;gislature, 3e session (7 janvier 1926 - 24 mars 1926)</option>
+	<option value="325" title="16e législature, 1re session (17 décembre 1923 - 15 mars 1924)">16e l&#233;gislature, 1re session (17 d&#233;cembre 1923 - 15 mars 1924)</option>
+	<option value="323" title="15e législature, 4e session (24 octobre 1922 - 29 décembre 1922)">15e l&#233;gislature, 4e session (24 octobre 1922 - 29 d&#233;cembre 1922)</option>
+	<option value="321" title="15e législature, 3e session (10 janvier 1922 - 21 mars 1922)">15e l&#233;gislature, 3e session (10 janvier 1922 - 21 mars 1922)</option>
+	<option value="319" title="15e législature, 2e session (11 janvier 1921 - 19 mars 1921)">15e l&#233;gislature, 2e session (11 janvier 1921 - 19 mars 1921)</option>
+	<option value="317" title="15e législature, 1re session (10 décembre 1919 - 14 février 1920)">15e l&#233;gislature, 1re session (10 d&#233;cembre 1919 - 14 f&#233;vrier 1920)</option>
+	<option value="315" title="14e législature, 3e session (21 janvier 1919 - 17 mars 1919)">14e l&#233;gislature, 3e session (21 janvier 1919 - 17 mars 1919)</option>
+	<option value="313" title="14e législature, 2e session (4 décembre 1917 - 9 février 1918)">14e l&#233;gislature, 2e session (4 d&#233;cembre 1917 - 9 f&#233;vrier 1918)</option>
+	<option value="311" title="14e législature, 1re session (7 novembre 1916 - 22 décembre 1916)">14e l&#233;gislature, 1re session (7 novembre 1916 - 22 d&#233;cembre 1916)</option>
+	<option value="309" title="13e législature, 4e session (11 janvier 1916 - 16 mars 1916)">13e l&#233;gislature, 4e session (11 janvier 1916 - 16 mars 1916)</option>
+	<option value="307" title="13e législature, 3e session (7 janvier 1915 - 5 mars 1915)">13e l&#233;gislature, 3e session (7 janvier 1915 - 5 mars 1915)</option>
+	<option value="305" title="13e législature, 2e session (11 novembre 1913 - 19 février 1914)">13e l&#233;gislature, 2e session (11 novembre 1913 - 19 f&#233;vrier 1914)</option>
+	<option value="303" title="13e législature, 1re session (5 novembre 1912 - 21 décembre 1912)">13e l&#233;gislature, 1re session (5 novembre 1912 - 21 d&#233;cembre 1912)</option>
+	<option value="301" title="12e législature, 4e session (9 janvier 1912 - 3 avril 1912)">12e l&#233;gislature, 4e session (9 janvier 1912 - 3 avril 1912)</option>
+	<option value="299" title="12e législature, 3e session (10 janvier 1911 - 24 mars 1911)">12e l&#233;gislature, 3e session (10 janvier 1911 - 24 mars 1911)</option>
+	<option value="297" title="12e législature, 2e session (15 mars 1910 - 4 juin 1910)">12e l&#233;gislature, 2e session (15 mars 1910 - 4 juin 1910)</option>
+	<option value="295" title="12e législature, 1re session (2 mars 1909 - 29 mai 1909)">12e l&#233;gislature, 1re session (2 mars 1909 - 29 mai 1909)</option>
+	<option value="293" title="11e législature, 4e session (3 mars 1908 - 25 avril 1908)">11e l&#233;gislature, 4e session (3 mars 1908 - 25 avril 1908)</option>
+
+</select>
+	        </div>
+        </div>
+
+		<div align="right" class="btnRechercheContextuelle">
+			<input type="button" onclick="RechercheTravaux()" value="Rechercher" class="btnSoumettre" />
+		</div>
+</div>
+
+
+<script type="text/javascript">
+    var idSessionLegislatureCourante = '1621'
+
+    $(document).ready(function () {
+        InitialiserRechercheTravauxParlementaires();
+        $("input.champMotCle, [data-champ] input, [data-champ] select]").keypress(function (e) {
+            if (e && e.keyCode == 13) {
+                RechercheTravaux();
+                return false;
+            }
+        });
+    })
+
+//<![CDATA[
+    String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); };
+
+    function RechercheTravaux() {
+        if (!ValiderPeriode())
+            return;
+
+        var motsCles = $('#ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux');
+
+        var queryString = "";
+        queryString = queryString + "SectionRecherche=9";
+        
+        if (motsCles.val() != "")
+            queryString = queryString + "&MotsCles=" + encodeURIComponent(htmlEscape(motsCles.val()));
+        
+        var typeTravaux = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux');
+        queryString = queryString + "&TypeTravaux=" + typeTravaux.val();
+            
+        var typeDocuments = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments');
+        queryString = queryString + "&TypeDocument=" + typeDocuments.val();
+
+        var dateDebut = $('#ctl00_ColGauche_RechercheTravaux_txtDateDebut');
+        var dateFin = $('#ctl00_ColGauche_RechercheTravaux_txtDateFin');
+        if (dateDebut.val() != "" || dateFin.val() != "")
+        {
+            queryString = queryString + "&PeriodeDebut=" + dateDebut.val();
+            queryString = queryString + "&PeriodeFin=" + dateFin.val();
+            queryString = queryString + "&Legislature=0";
+        }
+        else
+        {
+            var sessionLegislature = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature');
+            if (sessionLegislature.val() == "-1") {
+                sessionLegislature.get(0).selectedIndex = 1;
+            }
+            queryString = queryString + "&Legislature=" + sessionLegislature.val();
+        }
+
+        //Appel de la page de recherche.
+        window.location = '/fr/recherche/recherche-avancee.html?' + queryString;
+    }
+ //]]>
+</script>
+
+
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Imprimer la page" title="Imprimer la page"
+                        src='/Images/icones/partageImprimante.gif' width="16" height="16"/></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Taille du texte : régulière" title="Taille du texte : régulière" src='/Images/icones/retrecir.gif' width="16" height="16"/></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src='/Images/icones/agrandir.gif' width="16" height="16"/></a>
+                </li>
+                <li>
+                    <a href='/fr/fils-rss.html' class="nePasRediriger">
+                        <img alt="Fils RSS" title="Fils RSS"
+                        src='/Images/icones/partageRss.gif' width="16" height="16"/></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Partager</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                    <li>
+                        <a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-250606.html' class="nePasRediriger">
+                            <img alt="Partager par Facebook" title="Partager par Facebook"
+                            src='/Images/icones/partageFacebook.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://x.com/intent/tweet?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-250606.html' class="nePasRediriger">
+                            <img alt="Partager par X" title="Partager par X"
+                            src='/Images/icones/partageTwitter.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://www.linkedin.com/sharing/share-offsite/?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-250606.html' class="nePasRediriger">
+                            <img alt="Partager par LinkedIn" title="Partager par LinkedIn"
+                            src='/Images/icones/partageLinkedin.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='/fr/__envoyer-ami.html?lienurl=%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-250606.html' class="nePasRediriger">
+                            <img alt="Partager par courriel" title="Partager par courriel"
+                            src='/Images/icones/partageCourriel.gif' /></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/fr/document/19787.html">Diagramme de l'Assemblée</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="styleHyperlien">
+		            <span id="IconeEnDirect" class="icoEnDirect"> </span>		
+		            En direct sur le Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    <h1>
+	<span id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu"><a href="#ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"><img alt="Liens Ignorer la navigation" src="/WebResource.axd?d=4UaBqSIWkbOa0oKpfyVaroCfWw-gKpH7p94XAneRMXaNy_TmToGBBciOgGFLRbyIG0lHcoUothuOjD7lW_eFebb023o1&amp;t=638901627720898773" width="0" height="0" style="border-width:0px;" /></a><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span><a id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"></a></span></h1>
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+							
+	<h2>
+		Version préliminaire	
+	</h2>
+	
+	
+            <div class="boutonRetour">
+                <span>
+			        <a href='https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/index.html'>Retour à la liste des séances du Journal des débats</a>
+                </span>
+            </div>
+			<h2 class="titre2TravauxParl">
+				43<sup>e</sup> législature, 1<sup>re</sup> session
+				<br />
+				(29 novembre 2022 au 10 septembre 2025)
+			</h2>
+		
+	
+	
+			<p>
+				<p>Cette version du Journal des débats est une version préliminaire&nbsp;: elle peut donc contenir des erreurs. La version définitive du Journal, en texte continu avec table des matières, est publiée dans un délai moyen de 2 ans suivant la date de la séance.</p>
+<p><a href="https://www.assnat.qc.ca/fr/lien/10078.html#JDD">Pour en savoir plus sur le Journal des débats et ses différentes versions</a></p>
+			</p>
+		
+	
+	
+			<h2>
+				Le
+				vendredi 6 juin 2025
+				 -
+				 Vol.&nbsp;47 N°&nbsp;100
+			</h2>
+				
+			
+					<p>
+				
+					<h3>Étude détaillée du projet de loi n° 106, Loi visant principalement à instaurer la responsabilité collective et l’imputabilité des médecins quant à l’amélioration de l’accès aux services médicaux</h3>
+					<br />
+				
+					</p>
+				
+			
+			<p><a href="#debut_journal">Aller directement au contenu du Journal des débats</a></p>
+			
+			
+					<div class="tableMatieresJournal">
+						<h3>Heures</h3>
+						<ul id="HeuresSegments">
+				
+					<li>
+						<h4>
+							<a href='#11h30'>
+								11 h 30</a>
+						</h4>
+					</li>
+				
+					<li>
+						<h4>
+							<a href='#12h'>
+								12 h </a>
+						</h4>
+					</li>
+				
+					<li>
+						<h4>
+							<a href='#12h30'>
+								12 h 30</a>
+						</h4>
+					</li>
+				
+					<li>
+						<h4>
+							<a href='#13h'>
+								13 h </a>
+						</h4>
+					</li>
+				
+					</ul></div>
+				
+			
+			
+			
+			<div class="hr">
+				<hr />
+			</div>
+			
+			<div class="clear">&nbsp;</div>
+			
+			<h2><a name="debut_journal" class="ancreNommee">Journal des débats</a></h2>
+			
+					<h4>
+						<a name='11h30' class="ancreNommee">11 h 30</a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <i>(Douze heures)</i>
+  </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Alors. Bonjour à tous. Ayant constaté
+le quorum, je déclare la séance de la Commission de la santé et des services
+sociaux ouverte. Je vous souhaite la bienvenue. Je demande à toutes les
+personnes dans la salle de bien vouloir éteindre la sonnerie de leurs appareils
+électroniques.</p>
+  <p> La commission est réunie afin de procéder
+à l'étude détaillée du projet de loi n° 106, Loi
+visant principalement à instaurer la responsabilité collective et
+l'imputabilité des médecins quant à l'amélioration de l'accès aux services
+médicaux.</p>
+  <p> Mme la secrétaire, y a-t-il des remplacements?</p>
+  <p>
+    <b>La Secrétaire</b>
+    <b>:</b> Oui, M.
+le Président. Mme Grondin (Argenteuil) est remplacée par Mme Jeannotte
+(Labelle) et M. Cliche-Rivard (Saint-Henri—Sainte-Anne), par
+M. Marissal (Rosemont). </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Merci. Nous allons maintenant entamer
+l'étude du projet de loi, et il a été convenu que nous allons maintenant
+procéder à une discussion générale sur les articles 1 à 4. Alors, je
+donnerai la parole à M...</p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+				
+					<h4>
+						<a name='12h' class="ancreNommee">12 h </a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>…pour qu'il nous en fasse lecture.
+Par la suite, on pourra demander à Me Paquin de nous donner une meilleure
+vision de tout ça. Et je tiens à signifier qu'il n'y a aucun… dans les
+discussions qu'on aura, aucun temps ne sera comptabilisé au niveau des
+discussions qui seront effectuées par les députés de l'opposition. On partira…
+Notre chronomètre sera à zéro lorsqu'on reviendra. Ça vous va? Alors, M. le
+ministre, je vous demande de nous faire lecture des articles.</p>
+  <p>
+    <b> M. Dubé : </b>Oui, très bien,
+puis j'apprécie cette collaboration-là parce ce qu'on… La raison, je l'ai
+expliquée aux gens qui nous écoutent, là, étant donné qu'on a peu de temps
+aujourd'hui, on est mieux de regarder ça globalement. Il y a un bloc des articles
+1 à 4 qu'il faut comprendre. Et, quand on reviendra, bien, on aura eu la chance
+peut-être de se refaire ensemble une espèce de débriefing technique, qu'on fait
+souvent en début de… en début de discussion. Puis je pense qu'aujourd'hui, si
+on pouvait déjà se mettre en bouche un peu quelques articles pour se préparer
+avant de prendre un petit congé pour l'été, un congé, on ne sait pas exactement
+ce que ça veut dire, mais un congé…</p>
+  <p> Alors, je vais y aller tout de suite avec
+l'article 1, puis on pourra passer au commentaire de Me Paquin tout de suite
+après. Alors, l'article 1 :</p>
+  <p> L'article 76 de la Loi sur la gouvernance
+du système de santé et de services sociaux est modifié par le remplacement du
+paragraphe 7° du deuxième alinéa par le paragraphe suivant :</p>
+  <p> «7° la mise en place, par Santé Québec,
+d'un mécanisme visant à permettre :</p>
+  <p> «a) à toute personne admissible, au sens
+du sixième alinéa de l'article 447, d'être affiliée à un milieu de pratique
+visé à cet article en vue de sa prise en charge conformément aux dispositions
+d'un règlement pris en vertu de l'article 21.1 de la Loi sur l'assurance
+maladie;</p>
+  <p> «b) à toute personne assurée au sens de la
+Loi sur l'assurance maladie de trouver un professionnel de la santé ou des
+services sociaux qui remplit les conditions suivantes:</p>
+  <p> «i. il appartient à une catégorie de
+professionnels identifiée par le ministre;</p>
+  <p> «ii. il exerce dans un lieu appartenant à
+une catégorie identifiée par le ministre et situé sur un territoire auquel
+s'applique la Loi sur les services de santé et les services sociaux pour les
+Inuit et les Naskapis ou la Loi sur les services de santé et les services
+sociaux pour les autochtones cris;</p>
+  <p> iii. il accepte d'en assurer le suivi
+médical en collaboration, le cas échéant, avec d'autres professionnels;».</p>
+  <p> Donc, je vais vous lire, comme on fait
+habituellement, le commentaire puis, après ça, passer à l'explication, si ça
+vous va. Alors, le commentaire qui suit cet article-là se lit comme suit :
+L'article 1 du projet de loi apporte les modifications de concordance à l'article
+76 de la Loi sur la gouvernance du système de santé et des services sociaux
+instituant le système national de dépôt de renseignements afin de tenir compte
+du processus d'affiliation introduit par l'article 2 du projet de loi.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Me Paquin, selon votre opinion, est-ce
+que ce serait préférable qu'on fasse la lecture des quatre articles pour que
+vous puissiez nous présenter l'interrelation entre les quatre? Consentement
+pour permettre à Me Paquin de s'exprimer? Vous pouvez y aller.</p>
+  <p>
+    <b>M. Paquin (Mathieu) :</b> Oui, M.
+le Président. Alors, Mathieu Paquin, Direction des affaires juridiques du
+ministère de la Santé et des Services sociaux.</p>
+  <p> Oui, effectivement, ce serait peut-être
+préférable, pour donner l'explication d'ensemble sur toutes les mesures, de
+procéder à la lecture des articles 1 à 4.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Alors, procédez, M. le ministre. </p>
+  <p>
+    <b> M. Dubé : </b>Puis on le voit, d'ailleurs,
+qu'on fait déjà référence à l'article 2. Je pense que c'est la bonne
+suggestion. Puis, encore une fois, pour les gens qui nous écoutent, là, parce
+qu'on a vraiment des Québécois… on a des fans qui nous écoutent puis qui
+veulent savoir ce qui se passe, bien, je tiens à rappeler que, quand on parle
+de la Loi sur la gouvernance du système de santé, on va citer souvent des
+articles qu'on doit modifier soit dans cette loi-là… Puis les gens s'en
+souviennent, quand on a fait le gros projet de loi, p.l. n° 15, 1 600
+articles et les amendements, c'est de cette loi-là à laquelle on réfère. Plus
+tard, on parlera beaucoup de modifier la loi de la… la LAM, qu'on appelle, la Loi
+sur l'assurance maladie ou la RAMQ, donc, mais, ce matin, ce qu'on parle
+surtout, c'est la loi…</p>
+  <p>
+    <b>M. Dubé :</b> ...la LGSSSS, donc la
+Loi sur la gouvernance du système de santé et de services sociaux, que nous
+avons travaillée tout le monde ensemble, là, pendant quelques heures. L'article 2,
+bon, l'article 2 se lit comme suit :</p>
+  <p> 2. L'article 447 de cette loi est
+modifié :</p>
+  <p> 1° par l'insertion, dans le premier paragraphe
+et après «territorial de médecine familiale», de «a principalement pour mission
+l'affiliation à un milieu de pratique de l'ensemble des personnes admissibles
+de son territoire. À cette fin,»;</p>
+  <p> 2° dans le deuxième alinéa :</p>
+  <p> a) par le remplacement de «lieu» par
+«milieu»;</p>
+  <p> b) par la suppression de «et prise en
+charge des diverses clientèles»;</p>
+  <p> 3° par l'insertion, après le deuxième
+alinéa, des suivants :</p>
+  <p> «Le département doit procéder
+trimestriellement à la répartition des personnes admissibles de son territoire
+qui sont inscrites au mécanisme visé au sous-paragraphe a<i></i>du paragraphe
+7° du premier alinéa de l'article 76. Il répartit ces personnes entre
+chacun des milieux de pratique suivants lorsqu'au moins un médecin appartenant
+au département y offre des services assurés :</p>
+  <p> «1° un cabinet privé de
+professionnel;</p>
+  <p> «2° un centre local de services
+communautaires;</p>
+  <p> «3° un autre milieu de pratique,
+lorsque les médecins qui y fournissent des services assurés bénéficient d'un
+programme établi en vertu de l'article 10.4 de la Loi sur le ministère de
+la Santé et des Services sociaux et visant à favoriser la pratique de la
+médecine de famille en groupe dans un milieu de pratique multidisciplinaire.</p>
+  <p> «Chacune des personnes réparties en
+application du troisième alinéa dans un milieu de pratique est dès lors
+affiliée à celui-ci.»;</p>
+  <p> 4° par le remplacement, dans le
+troisième alinéa, de «Il» par «Le département»;</p>
+  <p> 5° par l'ajout, à la fin, de l'alinéa
+suivant :</p>
+  <p> «Pour l'application du présent chapitre,
+on entend par :</p>
+  <p> «1° "une personne
+admissible" une personne titulaire d'une carte d'assurance maladie ou
+d'une carte d'admissibilité délivrée conformément à la Loi sur l'assurance
+maladie qui est valide, pourvu que cette personne ne soit pas un usager hébergé
+dans une installation maintenue par un établissement et à l'égard duquel une
+contribution peut être exigée en vertu de l'article 765;</p>
+  <p> 2° "service assuré" un
+service assuré au sens du paragraphe a<i></i>du premier alinéa de l'article 1
+de la Loi sur l'assurance maladie.»</p>
+  <p> Alors, je vais vous lire le commentaire, encore
+une fois : L'article 2 du projet de loi confie aux départements
+territoriaux de médecine familiale la mission de procéder à l'affiliation à un
+milieu de pratique de l'ensemble des personnes admissibles de son territoire.
+Pour ce faire, ces départements doivent procéder trimestriellement à
+l'affiliation des personnes qui se sont inscrites au mécanisme devant leur
+permettre d'être affiliées à un milieu de pratique en vue de leur prise en
+charge par celui-ci.</p>
+  <p> Cet article définit les milieux de
+pratiques auxquels sont susceptibles d'être affiliées les personnes admissibles
+comme étant un cabinet de... privé de professionnel, un centre local de
+services communautaire ou, autrement, un milieu de pratique où les médecins bénéficient
+d'un programme de l'ordre de celui applicable aux actuels groupes de médecine
+de famille qu'on appelle GMF. Toutefois, un milieu de pratique ne se qualifie
+au sens de cet article que dans la mesure où au moins un médecin appartenant au
+département, donc participant au régime d'assurance maladie, y fournit des
+services assurés.</p>
+  <p> Enfin, cet article définit une personne
+admissible comme étant une personne qui est titulaire d'une carte d'assurance
+maladie valide ou d'une carte d'admissibilité valide, à l'exclusion toutefois
+des usagers hébergés dans une installation maintenue par un établissement
+desquelles une contribution peut être exigée en vertu de l'article 765.</p>
+  <p> Est-ce que ça va?</p>
+  <p>
+    <i>• (12 h 10) •</i>
+  </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Ça va très bien.</p>
+  <p>
+    <b>M. Dubé :</b> O.K. Je vais aller à
+l'article 3. Article 3 : Cette loi est modifiée par l'insertion,
+après l'article 447 qu'on vient de lire, des suivants...</p>
+  <p>
+    <b>M. Dubé :</b> …la répartition des
+personnes admissibles entre les milieux de pratique à laquelle procède le
+Département territorial de médecine familiale doit être proportionnelle à la
+capacité de ces milieux à les prendre en charge conformément aux dispositions
+d'un règlement pris en vertu de l'article 21.1 de la Loi sur l'assurance
+maladie. La répartition des personnes admissibles doit favoriser leur
+affiliation à un milieu de pratique situé à proximité de leur lieu de
+résidence. Le ministre peut donner au département des directives concernant
+cette répartition. Ces directives lient le département. »</p>
+  <p> Je vais aller sur le commentaire.
+L'article 447.1 de la Loi sur la gouvernance du système de santé et de
+services sociaux que propose l'article trois du présent projet de loi prévoit
+les modalités par lesquelles les départements territoriaux de médecine
+familiale doivent procéder à la répartition des personnes admissibles parmi les
+milieux de pratique de leur territoire. Cette répartition doit donc être
+proportionnelle à la capacité de ces milieux de les prendre en charge et de
+favoriser l'affiliation d'une personne à un milieu de pratique situé à
+proximité de sa résidence. Il habilite également le ministre à donner aux
+départements territoriaux de médecine familiale des directives concernant la répartition
+des personnes admissibles. </p>
+  <p> Toujours sur l'article trois, cette
+modification est modifiée par… par l'insertion, pardon, après
+l'article 447 des suivants. Je vous lis maintenant 447.2 : « Le
+Département territorial de médecine familiale informe la Régie de l'assurance
+maladie du Québec de l'identité des personnes qu'il affilie à chaque milieu de
+pratique. »</p>
+  <p> Ça va assez bien. Donc, le commentaire.
+L'article 447.2 de la Loi sur la gouvernance du système de santé et des
+services sociaux que propose l'article trois du projet de loi prévoit
+l'obligation du département territorial d'informer la Régie de l'assurance
+maladie du Québec de l'identité des personnes qu'il affilie à chaque milieu
+afin de permettre à la régie de tenir le répertoire prévu à l'article 447.3
+de la Loi sur la gouvernance du système de santé et des services sociaux
+qu'édicte le projet de loi. </p>
+  <p> Et c'est ce que je vais vous lire dans
+quelques secondes, Le 447.3. Donc, on continue l'article trois : Cette loi
+est modifiée par l'insertion, après l'article 447, des suivants,
+447.3 : «La Régie de l'assurance maladie tient à jour un répertoire
+indiquant, pour chacun des milieux de pratique visés à l'article 447, les
+personnes qui y sont affiliées et leur niveau de vulnérabilité déterminé en
+application de l'article 38.0.2 de la loi de l'assurance maladie. Chacun
+des départements territoriaux de médecine familiale peut avoir accès aux
+renseignements qu'indique le répertoire concernant les milieux de pratique de
+son territoire, les personnes qui y sont affiliées et leur niveau de
+vulnérabilité. Le représentant d'un milieu de pratique visé à
+l'article 38.0.4 de cette loi peut avoir accès aux renseignements
+qu'indique le territoire concernant les personnes qui sont affiliées à ce milieu
+de pratique et leur niveau de vulnérabilité. »</p>
+  <p> Commentaires. L'article 447.3 de la
+Loi sur la gouvernance du système de santé et des services sociaux que propose
+l'article trois du projet de loi confie à la Régie de l'assurance maladie du
+Québec la responsabilité de tenir à jour un répertoire identifiant les
+personnes affiliées à chaque milieu de pratique ainsi que leur niveau de
+vulnérabilité. Il prévoit également que les départements territoriaux de
+médecine familiale et les représentants des milieux de pratique auront accès à
+ce répertoire dans la mesure pertinente à l'exercice de leurs fonctions. </p>
+  <p> Et si vous me permettez, je vais prendre
+une petite gorgée d'eau, M. le Président, en attendant le café.</p>
+  <p>
+    <b>Des voix :</b> …</p>
+  <p>
+    <b>M. Dubé :</b> S'il en reste, s'il
+en reste. Alors, j'ai fini 447.3. C'est correct…</p>
+  <p>
+    <b>M. Dubé :</b> ...on continue,
+toujours dans l'article 3, maintenant, le 447.4, toujours, qui vient
+modifier la LGSSS : «Une personne est désaffiliée d'un milieu de pratique
+dans les cas suivants :</p>
+  <p> «1° lorsqu'elle en fait la demande à la
+Régie de l'assurance maladie du Québec;</p>
+  <p> «2° lorsque la régie constate l'une des
+situations suivantes :</p>
+  <p> «a) cette personne s'est établie en dehors
+du territoire du département territorial de médecine familiale;</p>
+  <p> «b) cette personne cesse d'être une
+personne admissible au sens du sixième alinéa de l'article 447;</p>
+  <p> «3° sur instructions du département
+transmises à la régie :</p>
+  <p> «a) lorsque le milieu de pratique n'a plus
+la capacité de prendre en charge l'ensemble des personnes qui y sont affiliées;</p>
+  <p> «b) lorsqu'aucun des médecins de famille
+du milieu de pratique n'est en mesure d'établir et de maintenir avec cette
+personne une relation de confiance mutuelle;</p>
+  <p> «4° dans tout autre cas prévu par
+règlement du gouvernement.</p>
+  <p> «Un règlement du gouvernement peut prévoir
+des conditions et des modalités applicables à une désaffiliation en application
+du premier alinéa ainsi que, le cas échéant, les modalités suivant lesquelles
+une personne désaffiliée d'un milieu de pratique est affiliée à nouveau... à un
+nouveau milieu de pratique par un département.».</p>
+  <p> Le commentaire. L'article 447.4 de la
+Loi sur la gouvernance du système de santé et des services sociaux que propose
+l'article 3 du projet de loi prévoit les cas où une personne est désaffiliée
+d'un milieu de pratique et habilite le gouvernement à prévoir par règlement des
+cas additionnels de désaffiliation, de même que des conditions et des modalités
+applicables à une désaffiliation. Il habite également... Il habilite, pardon,
+également le gouvernement à prévoir dans un règlement les modalités suivant
+lesquelles une personne est affiliée à un nouveau milieu de pratique à la suite
+d'une désaffiliation. </p>
+  <p> L'article 3 se continue. «447.5. Le
+médecin de famille qui fournit des services assurés dans un milieu de pratique
+est responsable de la prise en charge des personnes qui y sont affiliées en
+application du quatrième alinéa de l'article 447 conformément aux
+dispositions de règlement pris en vertu de l'article 21.1 de la Loi sur
+l'assurance maladie.»</p>
+  <p> Et le commentaire est le suivant :
+L'article 447.5 de la Loi sur la gouvernance du système de santé et de services
+sociaux que propose l'article 3 du projet de loi prévoit la responsabilité
+du médecin fournissant des services assurés dans un milieu de pratique de
+prendre en charge des personnes qui sont affiliées à ce milieu. </p>
+  <p> Maintenant, on passe à
+l'article 4 : «Une personne assurée au sens de la Loi sur l'assurance
+maladie qui, à la date de l'entrée en vigueur de l'article 2 de la
+présente loi, est inscrite auprès d'un médecin de famille en application de
+l'Entente particulière relative aux services de médecine familiale, de prise en
+charge et de suivi de la clientèle conclue entre le ministère de la Santé et
+des Services sociaux et la Fédération des médecins omnipraticiens du Québec est
+réputée, à compter de cette date, à la fois :</p>
+  <p> «1° être affiliée, conformément à
+l'article 447 de la Loi sur la gouvernance du système de santé des
+services sociaux, modifié par l'article 2 de la présente loi, au milieu de
+pratiques correspondant au lieu de suivi habituel indiqué à son inscription;</p>
+  <p> «2° être associée au médecin auprès de qui
+elle est inscrite, celui-ci étant responsable au premier chef, dans ce milieu
+de pratique, d'assurer le suivi longitudinal de l'état de santé de cette
+personne et des soins qu'elle reçoit. </p>
+  <p> «Lorsque le domicile d'une personne
+assurée a été indiqué comme le lieu de suivi habituel à son inscription, cette
+personne est plutôt réputée ainsi affiliée au milieu de pratique au sein duquel
+le médecin auprès de qui elle est inscrite fournit des services assurés. Si ce
+médecin fournit de tels services dans plus d'un milieu de pratique, elle est
+alors réputée ainsi affiliée au milieu de pratique situé le plus près de son
+domicile.</p>
+  <p>
+    <i>• (12 h 20) •</i>
+  </p>
+  <p> «De plus, une personne assurée...</p>
+  <p>
+    <b> M. Dubé : </b>…au sein de la Loi
+sur l'assurance maladie, qui est la date d'entrée en vigueur de l'article 2 de
+la présente loi, est inscrite auprès d'un cabinet en application de la Lettre
+d'entente 393 concernant la clientèle en attente au guichet d'accès d'un
+médecin de famille conclue entre le ministre de la Santé et des Services
+sociaux et la Fédération des médecins omnipraticiens du Québec est réputée, à
+compter de cette date, être affiliée, conformément à l'article 447 de la Loi
+sur la gouvernance du système de santé et des services sociaux, modifié par
+l'article 2 de la présente loi, au milieu de pratique correspondant à ce
+cabinet.</p>
+  <p> Encore une fois, je vais vous lire le
+commentaire pour l'article 4. L'article 4 du projet de loi prévoit que les
+personnes actuellement inscrites auprès d'un médecin de famille sont réputées,
+à compter de l'entrée en vigueur des dispositions relatives aux processus
+d'affiliation, être affiliées au milieu de pratique correspondant à leur suivi
+habituel et associé auprès de leur médecin de famille. Dans l'hypothèse où ce
+milieu de suivi est le domicile de la personne inscrite, elle est dès lors
+affiliée au milieu de pratique au sein duquel pratique son médecin de famille ou,
+si ce médecin pratique dans plus d'un milieu de pratique, au lieu de… au milieu
+de pratique le plus près de son domicile parmi ceux où pratique son médecin de
+famille. Cet article prévoit également que les personnes faisant actuellement
+l'objet d'une inscription collective auprès d'un milieu de pratique, par
+exemple un groupe de médecine familiale, seront réputées, à compter de l'entrée
+en vigueur des dispositions relatives au processus d'affiliation, être
+affiliées à ce milieu de pratique.</p>
+  <p> Je pense que je peux arrêter là pour le
+moment, si vous permettez, M. le Président.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Merci beaucoup, M. le ministre. Bien,
+avant de poursuivre et de céder la parole à Me Paquin, je comprends qu'il y a
+consentement pour que la députée de Labelle remplace la députée de
+Marie-Victorin et que la députée d'Argenteuil reprenne sa fonction à titre de
+membre de la commission. Consentement? Merci. Alors, me Paquin, êtes-vous
+capable de nous faire un gâteau avec tout ça?</p>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>Je vais
+essayer, M. le Président, de faire un gâteau ou, à tout le moins, de faire un
+résumé, essentiellement, des différents articles qui ont été lus par M. le
+ministre.</p>
+  <p> Alors, essentiellement, ce qu'on a ici,
+c'est la mise en place de la base de la mécanique qui va permettre de procéder
+à l'affiliation de personnes auprès de différents milieux de pratique. La
+responsabilité de procéder à cette affiliation-là va incomber, dans les
+différents territoires de départements territoriaux de médecine familiale, aux
+départements territoriaux de médecine familiale. Ça, c'est la modification
+prévue à l'article 2 qui modifie l'article 447 de la LGSSSS qui fait ça. On
+vient vraiment prévoir que la principale mission du département va être de
+procéder à l'affiliation des personnes admissibles en milieu de pratique.</p>
+  <p> C'est là aussi qu'on vient définir quels
+sont ces milieux de pratique là. Ce sont des milieux de pratique dans lesquels
+il va y avoir au moins un médecin qui appartient au département. Il peut y
+avoir d'autres professionnels, mais, minimalement, il doit y avoir au moins un
+médecin qui appartient au département. Et les milieux vont être des cabinets
+privés, des centres locaux de services communautaires ou d'autres milieux que
+ces deux-là qui… dans lesquels les médecins vont bénéficier d'un programme
+établi en vertu de l'article 10.4 de la Loi sur le ministère de la Santé et des
+Services sociaux. Actuellement, ce programme-là, c'est le programme GMF. Le
+projet de loi va apporter certaines modifications à l'article 10.4, mais ça
+donne une idée assez générale des milieux qu'on vise ici. Et c'est aussi à cet
+article-là qu'on vient définir qui sont les personnes admissibles, donc les
+personnes qui peuvent être affiliées.</p>
+  <p> On comprend aussi, dans cet article-là,
+que le DTMF, pour affilier les gens, va partir des personnes qui sont en
+attente sur le mécanisme qu'on vient d'introduire à l'article 1 en modifiant
+l'article 76 de la LGSSSS. Ce mécanisme-là, actuellement, c'est le GAMF. On le
+modifie parce que, littéralement, le GAMF, actuellement, tel qui est prévu,
+c'est qu'on vient affilier ou plutôt associer des gens avec un professionnel,
+alors que, là, ici, ce qu'on veut faire, c'est affilier des gens à un milieu de
+pratique.</p>
+  <p> Par la suite, l'article 3, lui, introduit,
+dans la LGSSSS toujours, une série d'articles qui viennent préciser un peu
+comment se fait la répartition des personnes admissibles, le fait que cette
+répartition-là va emporter l'affiliation des personnes au milieu de pratique.
+On prévoit aussi la mécanique qui va permettre à la Régie de l'assurance
+maladie d'être informée de qui est affilié à quel milieu parce que, et, ça, on
+va le voir plus loin, quand on arrivera à un autre chapitre, entre autres,
+c'est ce qui va permettre à la…</p>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>...la
+régie de calculer la capitation qui est versée aux médecins. On a aussi des
+règles qui vont prévoir comment une personne peut être désaffiliée d'un milieu
+de pratique, parce qu'on les affilie et on les désaffilie et on s'habilite à
+prévoir par règlement comment on peut réaffilier des personnes à un milieu de
+pratique. </p>
+  <p> Et c'est aussi, finalement, dans ces
+articles-là qu'on prévoit la responsabilité pour le médecin qui fournit des
+services assurés dans un milieu de pratique, de faire la prise en charge. Les
+obligations précises de la prise en charge vont être prévues par un règlement
+pris en vertu de l'article 21.1 de la Loi sur l'assurance maladie. 21.1 est
+introduit par le projet de loi. Le règlement en question aussi est édicté par
+le projet de loi, donc on va voir plus tard, dans les articles du projet de
+loi, un peu quelles sont ces obligations-là, à l'article 17, pour être précis. </p>
+  <p> Et puis, finalement, l'article 4 est une
+disposition transitoire qui vient préserver, dans le fond, la situation des
+personnes qui sont actuellement inscrites auprès d'un médecin de famille, que
+ce soit une inscription individuelle ou une inscription collective, pour que
+ces personnes-là demeurent inscrites auprès du même médecin ou auprès du même
+milieu lorsqu'elles étaient inscrites collectivement, et qui vont prévoir, dans
+le cas des personnes inscrites individuellement, que ce médecin-là va continuer
+à être responsable de leur suivi longitudinal, là, ce qui correspond à ce qu'on
+appelle communément une association. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Oui, M. le député de Pontiac. </p>
+  <p>
+    <b> M. Fortin :</b>Oui. Merci. Merci, M. le Président. D'abord, bonjour, tout
+le monde. Juste, rapidement, M. le Président... avant de commencer, juste
+remercier la partie gouvernementale et les collègues pour l'accommodement
+d'hier. C'est très, très apprécié de la part de tous. </p>
+  <p> Sur la... Puis je pense qu'on a un enjeu,
+là, d'interprétation différente, là, de la part ministérielle puis de notre
+part. Puis c'est correct, on a souvent des enjeux d'interprétations différentes
+puis de conséquences différentes des projets de loi, là, on le voit depuis des
+semaines, entre autres, sur le projet de loi en énergie, là, le premier
+ministre a une vision très différente de certains autres collègues de ce que ça
+veut dire. Mais, ici, on a un enjeu. </p>
+  <p> Là, l'article 4, par exemple, qui est
+celui sur lequel le ministre se base pour dire : Personne ne va perdre son
+médecin, d'abord... d'abord et avant tout, là, quand on le lit, la première
+chose qu'on voit, c'est dispositions transitoires particulières. Dispositions
+transitoires, ça, ça veut dire, pour nous, puis corrigez-nous si ce n'est pas
+votre lecture ou si ce n'est pas comme ça que vous avez voulu le faire, mais
+c'est... quand on vient dire «dispositions transitoires», c'est essentiellement
+juste pour dire qu'on part de l'article 1 et 2, de la façon qu'ils sont en ce
+moment, on arrive au nouveau mode de fonctionnement, c'est-à-dire que c'est au
+DTMF à organiser tout ça puis à s'assurer de... avec la nouvelle mission
+principale, là, ce qui est indiqué à l'article 2.. Et, à ce moment-là, au
+moment de l'entrée en fonction ou l'entrée en vigueur de ces dispositions-là,
+bien, on fait passer les patients, essentiellement, là, qui avaient un médecin
+ou qui étaient affiliés à une clinique dans l'ancien système... on les fait
+passer de façon transitoire à la nouvelle liste, la nouvelle responsabilité
+dans le DTMF, mais ils ont encore leurs professionnels. Mais c'est une
+disposition transitoire, ce n'est pas un effet du projet de loi autant que,
+O.K., le jour de l'adoption, bien, tu es encore affilié à ton milieu. Est-ce
+qu'on se comprend? </p>
+  <p>
+    <b> M. Dubé : </b>Bien, je ne pense
+pas qu'on a la même interprétation, là, puis c'est peut-être là, sur, des fois,
+l'aspect, je vais dire légal, ou de la façon dont c'est écrit... Et c'est pour
+ça, peut-être, je ne sais pas, M. le Président, si... Parce que je comprends la
+préoccupation du député de Pontiac, d'ailleurs, il l'a déjà mentionnée, ça fait
+que je ne sais pas si...</p>
+  <p>
+    <b> M. Fortin :</b>Bien, je peux peut-être essayer de la mettre en... </p>
+  <p>
+    <b>M. Dubé :</b> C'est parce que
+vous... Juste pour bien comprendre votre question, c'est parce que vous
+dites : Le fait que c'est dans dispositions transitoires, est-ce que ça
+peut changer après? Est-ce que c'est... c'est-tu un peu ça qui vous préoccupe? </p>
+  <p>
+    <b> M. Fortin :</b>Me Paquin nous a fait un gâteau. Je vais essayer de... je
+vais essayer de faire le mien de la façon qu'on le voit, là, ces articles-là. </p>
+  <p>
+    <i>• (12 h 30) •</i>
+  </p>
+  <p>
+    <b> M. Dubé : </b>Non, mais c'est ça
+qu'on va essayer de comprendre ce matin. </p>
+  <p>
+    <b> M. Fortin :</b>O.K. L'article 2, il vient dire, essentiellement, qu'il y a
+une... que le département territorial de médecine familiale, là, a une nouvelle
+mission principale, c'est-à-dire de s'assurer de la répartition entre les GMF,
+les CLSC et les autres milieux des différents patients qui sont dans une
+région. Ça, c'est leur nouvelle... appelons ça nouvelle, là, mission, O.K.?
+L'article 4 vient dire... je prends par la suite, l'article 4 vient dire :
+Au moment de l'entrée en service de cette nouvelle... </p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+				
+					<h4>
+						<a name='12h30' class="ancreNommee">12 h 30</a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <b> M. Fortin :</b>
+...mission-là du DTMF, bien, tout le monde qui était affilié à un milieu est
+encore affilié à ce milieu-là. L'article 3, qui arrive, disons, par la
+suite dans le cheminement de tout ça, là, vient dire : O.K., voici les
+moments à partir desquels une personne est désaffiliée. Donc là, on a instauré
+un nouveau système, on a dit : Pendant la transition, la personne garde
+son milieu dans le nouveau système, puis l'article 3 vient dire : O.K.,
+mais voici des conditions dans lesquelles tu n'es plus affilié à ton... à ta
+clinique. Est-ce que ça, ça fait du sens? Est-ce qu'on a la même compréhension
+de tout ça, là? Parce que c'est un peu la... c'est la base de la base, là, mais
+juste être certain qu'on a la même base.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Me Paquin </p>
+  <p>
+    <b> M. Paquin (Mathieu) : </b>Oui, M.
+le Président. En fait, l'article 4 est effectivement une disposition
+transitoire, donc son principal effet est de dire : À l'entrée en vigueur,
+les gens qui sont inscrits auprès d'un médecin ou qui sont affiliés à un... ou,
+en fait, qui sont inscrits collectivement, ces gens-là vont rester au même
+endroit. Donc, cette disposition-là va régler cette situation-là. Par contre, l'effet,
+lui, va se faire sentir tant et aussi longtemps qu'essentiellement il n'y a pas
+de nouveauté qui va se créer.</p>
+  <p> Par la suite, pour ce qui est de savoir
+quel est le... comment on va appliquer les règles d'affiliation ou de
+désaffiliation, à ce niveau-là, il y a des règlements qui pourront être pris
+pour prévoir les modalités et encadrer un peu comment se fait la désaffiliation.
+</p>
+  <p>
+    <b> M. Fortin :</b>Oui, O.K. Bon, O.K. L'article 2 met en place le
+nouveau système puis l'article 4 dit : Vous gardez votre milieu jusqu'à
+tant, comme le dit Me Paquin, là, qu'il y ait des choses qui changent.
+Donc là, dans les choses qui changent, par exemple, votre GMF, il y a des
+médecins qui sont partis à la retraite, ils n'ont plus la capacité d'avoir la
+prise en charge du même nombre de patients. Là, vous n'êtes plus affilié parce
+qu'il n'est plus capable de vous avoir, ce GMF-là, par exemple. Vous vous
+établissez en dehors du territoire du DTMF. Ça, c'est l'article quatre 447.4,
+2a. Tu sais, donc là, il y a des conditions qui font en... ou des situations
+qui font en sorte que la personne, elle est désaffiliée de ce milieu-là. Donc,
+oui, la disposition transitoire, nous, on la voit de la même façon que le
+gouvernement. Au moment de l'adoption du projet de loi, tu ne perds pas
+automatiquement ton milieu, ta clinique ou ton médecin, mais si, par la suite,
+pour raison x, y, z, la clinique n'est plus capable de te prendre, tu changes
+de région, peu importe, là, tu deviens affilié. </p>
+  <p>
+    <b> M. Dubé : </b>Je vais juste
+préciser puis je vais laisser... je pense... je ne sais pas si c'est le Dr
+Bergeron, mais je voudrais faire un commentaire. De la façon dont je percevais
+votre question tout à l'heure, puis je suis content qu'on puisse discuter de ça
+avant de partir parce que c'est un élément important du projet de loi, ce n'est
+pas parce que c'est une mesure transitoire que la personne qui a son médecin de
+famille, elle ne peut pas le garder aussi longtemps. C'est juste dans les
+mesures dont vous venez de nommer que si elle changeait d'endroit, c'est que,
+là, il faut prévoir les règlements auxquels ça va s'appliquer. Mais je veux
+juste... Parce que, ce qui m'inquiétait de votre question, puis peut-être, ce n'est
+pas ça que vous vouliez dire, mais c'est peut-être parce que c'était une mesure
+transitoire qu'après quelque temps, ça ne s'appliquait plus. On se comprend. </p>
+  <p> Alors, quelqu'un qui a son... je vais le
+mettre en langage simple, quelqu'un qui a son médecin de famille va garder son
+médecin de famille, à moins qu'il y ait un changement, par exemple, de
+localisation. Mais cette personne-là, aujourd'hui, ce n'est pas parce que le
+projet de loi vient en place qu'elle va perdre son médecin de famille. Ça fait
+que ça, je pense que... puis ce n'est pas ça que vous avez dit, mais je pense
+que c'était... Encore une fois, aujourd'hui, ce qu'on veut peut-être, c'est
+rassurer certaines personnes. </p>
+  <p> Bon, maintenant... puis là, je vais passer
+la parole à Me Bergeron... à Dr Bergeron, c'est que, s'il y a des
+changements, puis je pense que c'est ça qu'il faut dire, s'il y a des
+changements qui se rapportent, soit à la GMF, des cas...</p>
+  <p>
+    <b> M. Fortin :</b>Le médecin prend sa retraite. </p>
+  <p>
+    <b> M. Dubé : </b>Le médecin prend sa
+retraite ou, etc., ou que la personne déménage, parce que ça arrive, là, c'est
+là qu'il faut prévoir qu'est-ce qui se passe. Et c'est là que rentre la
+réglementation. Mais je m'arrête là parce que je pense... Moi, j'avais peur que
+vous me dites : Le transitoire requestionne tout et ce n'est pas ça, puis
+je ne pense pas...</p>
+  <p>
+    <b>S</b>
+    <b>       M. Fortin : </b>Mais ce que vous nous dites, là, c'est : La personne garde
+sa clinique... </p>
+  <p>
+    <b> M. Dubé : </b>Elle garde son
+médecin. </p>
+  <p>
+    <b>S</b>
+    <b>       M. Fortin :</b>
+    <b></b>Son médecin et sa clinique jusqu'à ce qu'il y ait un
+changement à la clinique ou au lieu de résidence, par exemple, de cette
+personne. </p>
+  <p>
+    <b> M. Dubé : </b>Puis... c'est ça,
+puis là il faut définir c'est quoi, ces changements-là et qu'est-ce que... </p>
+  <p>
+    <b> M. Dubé : </b>...soit la loi
+prévoit ou ce que les règlements qu'on va faire prévoient aussi. Ça fait que
+c'est là, peut-être, que je peux laisser la parole à... </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>...pour permettre au Dr Bergeron de
+s'exprimer? Consentement. Alors, Dr Bergeron. </p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>Stéphane
+Bergeron, sous-ministre adjoint au ministère de la Santé, santé physique et
+pharmaceutique. Je pense que, M. le Président, ce que le député de Pontiac
+vient de mentionner représente... est un reflet fidèle de ce qu'il veut être
+traduit à l'intérieur du projet de loi, à savoir qu'il y a une clause, la clause 4,
+qui prévoit que l'on maintienne le milieu d'affiliation pour les inscrits
+collectifs, le lien qui s'appellerait dorénavant une association qui est
+maintenait l'inscription individuelle avec son médecin et que c'est maintenu.</p>
+  <p> Maintenant, il n'y a personne qui va
+questionner le fait que ça doit être reconsidéré, cela, à la faveur de
+changements. Évidemment, si on déménage, puis là c'est facile, si on déménage
+de la Gaspésie jusqu'en Abitibi on doit reconsidérer cela.</p>
+  <p>
+    <b>Une voix :</b> ...</p>
+  <p>
+    <b>M. Bergeron (Stéphane) :</b> Ou en
+Outaouais. Si les conditions du milieu changent puis qu'il y a plus la
+capacité, effectivement, il faut être requestionné. Nous avons entendu à
+plusieurs reprises dans le... les groupes que sont venus, les mémoires qui sont
+venues, de dire : Il faut faire attention que le seul changement d'un bord
+de rue à l'autre qui traverserait une ligne jaune n'entraîne pas un
+automatisme. Ça, je peux dire qu'il y a une sensibilité de la part du ministre,
+et je vais, non pas parler, mais dire : On en a discuté ensemble puis on
+est... on considère comment améliorer encore les choses pour que ce genre de
+situation là n'entraîne pas des conséquences que personne ne veut. Donc, il y a
+un souci réel de maintenir le plus possible, tant que c'est raisonnable, le lien
+entre l'usager, son milieu habituel de consultation, son professionnel
+habituel. Et le projet de loi ne veut pas ici rompre ces liens là, mais bien
+permettre, et non pas non plus avoir toute la rigidité, de dire : Bien,
+excusez, mais on vous en avait donné un, puis maintenant il est à
+500 kilomètres, puis c'est à vous de vous déplacer.</p>
+  <p> Donc, il nous faut trouver ensemble, puis
+on a on a discuté avec le ministre, la manière de faire pour que cette
+subtilité-là, cette nuance-là, soit adéquatement reflétée. Bien qu'elle anime
+notre pensée actuelle, on a compris des gens qui, à la lecture de ça, nous
+disent : Cette nuance-là, elle n'est pas parfaitement reflétée. </p>
+  <p>
+    <b> M. Fortin :</b>O.K. Mais là je ne veux pas prendre tout le temps, je sais
+que mes collègues ont des questions, alors je veux juste compléter là-dessus
+pour peut-être, là, bien le saisir, là. L'article 447, 2a, qui dit :
+«Une personne est désaffiliée d'un milieu de pratique dans les cas suivants, il
+n'y a pas de «peut», là, il n'y a pas de de condition, là, elle est désaffiliée
+lorsque la régie constate que cette personne s'est établie en dehors du
+territoire de département territorial de médecine familiale». Pour nous, de la
+façon qu'on lit l'article, là, c'est : Vous habitez à Sainte-Foy, vous
+déménagez à Saint-Romuald, vous êtes maintenant à l'extérieur du département
+territorial, alors vous êtes désaffilié de votre milieu de pratique. Vous
+perdez votre médecin, vous perdez votre clinique. Alors, ça, pour refléter ce
+que le ministre nous dit aujourd'hui, pour lequel il y a eu des discussions, ça
+va nécessiter un amendement. </p>
+  <p>
+    <b> M. Dubé : </b>Bien, moi, M. le
+député de Pontiac, si vous permettez que je réponde à ça, vous me connaissez
+assez, si on pense que ça prend un amendement pour clarifier quelque chose
+d'aussi évident, on va le faire. Puis c'est un peu ce que le docteur... Dr
+Bergeron, ce n'est pas à lui à décider nos amendements, ça revient à nous comme
+législateurs, mais c'est ce qu'il m'a recommandé... après... Je pense que c'est
+ça qu'il vient de dire poliment, là, après avoir écouté tout le monde, de
+dire : Bien, ça, c'est le genre de choses... est-ce qu'on le fait dans le
+règlement ou on le fait dans la loi? Moi, je n'ai aucun problème, mais pour ne
+pas inquiéter des gens parce que... puis je le dis avec tout le respect que je
+vous dois, parce que vous avez soulevé beaucoup ce point-là, puis je pense que
+ça inquiète des gens, puis c'est correct, c'est votre job de soulever ces
+points-là, vous l'avez bien fait. Ça fait que moi, je me dis, aujourd'hui,
+nous, on pensait que, quatrièmement, le règlement du gouvernement peut prévoir
+des conditions, ça peut aller des deux côtés, hein, pour une affiliation ou une
+désaffiliation. Moi, je vous le dis tout de suite, là, on a le temps, de toute façon,
+dans les prochaines semaines, si vous pensez qu'on peut faire cette... en tout
+cas, qu'on peut faire cette clarification... </p>
+  <p>
+    <b>M. Dubé :</b> …on va, c'est sûr
+qu'on va la faire. </p>
+  <p>
+    <i>• (12 h 40) •</i>
+  </p>
+  <p>
+    <b>M. Fortin :</b>
+Bien, je suis content d'entendre le docteur Bergeron… je ne veux pas mal vous
+citer, là, mais vous recommande un amendement là-dessus... </p>
+  <p>
+    <b>M. Dubé :</b> Après avoir écouté,
+Puis c'est exactement ça. Après avoir écouté tout le monde, bien, on se
+dit : Pourquoi… Pourquoi inquiéter si l'objectif c'est de… Puis parce que
+moi, j'aimais l'exemple que vous avez donné, tu sais, quelqu'un qui passe… Puis
+là je vais penser à mon comté, si vous permettez, là.  Moi, j'ai quelqu'un dans
+La Prairie, puis là il y a des différents RLS, puis tout ça, puis... </p>
+  <p>
+    <b>M. Fortin :</b>
+Le DTMF, c'est régional, par exemple. </p>
+  <p>
+    <b>M. Dubé :</b> Oui, non, mais dans
+La Prairie, ce n'est peut-être pas le bon exemple, mais je pense… pensons juste
+à Montréal par exemple, parce que Montréal, maintenant, traite… c'est un
+directeur territorial, ça fait qu'il faut… il faut vraiment penser, puis c'est
+d'ailleurs ce qu'on regardait, c'est comment on tient compte des grands
+centres. C'est pour ça, tantôt, je pensais à Montérégie, qu'est-ce qu'on fait
+quand c'est très grand, mais qu'est-ce qu'on fait aussi, je vais dire, dans les
+Laurentides, à Saint-Donat. Des fois, quelqu'un peut déménager de… de passer du
+nord des Laurentides au sud des Laurentides, puis tout d'un coup va dire :
+Moi, je n'aurais aucun problème à garder mon affiliation avec tel... Vous me
+suivez? Je pense que c'est ça le cas qui vous préoccupe, entre autres. Ça fait
+que, donc, on veut te donner un choix. </p>
+  <p> L'enjeu qu'il faut discuter. Puis ça, ça
+sera au… moi, je les appelle encore, je m'excuse, les DRMG, là, mais les… les
+DRMG, c'est nos directeurs médicaux de médecine générale, qui s'appellent
+maintenant des DTMF, là, donc des directeurs territoriaux de médecine
+familiale. Il faut juste être conscient, il faut juste être conscient que ces
+personnes-là ont quand même la responsabilité de leur territoire. Ça fait qu'un
+peu comme… de dire : Oui, on va… on va discuter avec eux autres cet été,
+parce que ça, c'est vraiment un enjeu de ces gens-là, de dire quel genre de
+règlement ou de modification qu'on peut faire qui va être correct pour tout le
+monde. </p>
+  <p>
+    <b>M. Fortin :</b>
+Correct. Parfait.</p>
+  <p>
+    <b>M. Dubé :</b> Ça vous va, ça?</p>
+  <p>
+    <b> M. Fortin :</b>Bien, regarde, on n'est pas dans la discussion sur des
+amendements. On a une discussion une générale. </p>
+  <p>
+    <b>M. Dubé :</b> Mais le principe, le
+principe. </p>
+  <p>
+    <b>M. Fortin :</b>
+C'est ça, nous, on en avait un, amendement de prêt, qu'On reverra en septembre,
+là, si on en a encore besoin. </p>
+  <p>
+    <b>M. Dubé :</b> Puis si… suggéré à
+l'avance, étant donné que la collaboration qu'on a, bien, on pourra le faire
+ensemble. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> M. le député des Îles. </p>
+  <p>
+    <b>M. Arseneau :</b> Merci, M. le
+Président. Donc, en clarification, moi aussi, quand j'ai vu la disposition
+transitoire, j'avais... j'avais un certain questionnement. Là, ma compréhension
+aujourd'hui, c'est de… C'est la suivante. Dites-moi si je suis dans l'erreur.
+Le principe du projet de loi, c'est que dorénavant on ait chaque Québécoise et
+chaque Québécois affilié à un milieu de pratique. Mais on prend acte de la
+situation actuelle où des individus sont inscrits à des médecins et seront
+maintenant associés à des médecins. Donc, la période de transition, c'est tant
+et aussi longtemps que le médecin n'aura pas pris sa retraite ou que le patient
+n'aura pas quitté la région ou quitté ce monde, donc la période de transition
+va demeurer pour ces gens-là, la période de transition peut être très, très
+longue. C'est bien ça? Mais l'objectif, c'est si on se projette dans
+40 ans, bien, il n'y a qu'une seule catégorie de patients, ce sont ceux
+qui sont affiliés à un milieu de pratique. C'est bien ça? </p>
+  <p>
+    <b>M. Dubé :</b> C'est ça, c'est ça.</p>
+  <p>
+    <b>M. Arseneau :</b> C'est bien ça.
+Donc, en attendant ce qu'on dit, on change le vocabulaire, mais je veux
+savoir : Est-ce qu'on change également l'approche? C'est-à-dire que les
+médecins qui… c'est-à-dire les patients qui étaient inscrits auprès d'un
+médecin, dorénavant on va dire qu'ils sont associés à un médecin, et ce
+médecin-là sera responsable au premier chef de s'occuper du suivi de la
+personne en question. Donc, il n'y aura pas vraiment de changement dans la
+prise en charge, alors que pour ce qui est des nouveaux inscrits ou affiliés,
+pardon, affiliés, j'essaie de me démêler dans le vocabulaire, les nouveaux
+affiliés un milieu de pratique, puis là, ils n'auront pas ce médecin-là qui est
+spécifiquement chargé du suivi. Ils n'auront pas de médecin associé. Est-ce que
+c'est ça qu'il faut comprendre? </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Dr Bergeron.</p>
+  <p>
+    <b>M. Bergeron (Stéphane) :</b> M. le
+Président, ici, je pense qu'il y a un point fort important à comprendre, parce
+que je crois que ce que M. le député mentionne est une perception d'une frange
+de… une frange importante, là, mais une perception que certains ont eue de la
+lecture qui n'est pas tout à fait le reflet de ce qui est à l'intérieur de ça.
+Et c'est pour ça que c'est important de comprendre ce qu'il en est… </p>
+  <p>
+    <b>M. Bergeron (Stéphane) :</b> ...il
+y a deux notions, cliniquement, là, à ceci dans le projet de loi. Et ce que M.
+le député a mentionné, ça, c'est tout à fait conforme, à savoir qu'il y a une
+affiliation à un milieu dans lequel il va y avoir au moins un médecin, mais
+plus qu'un médecin, et ensuite il y a le concept que l'on a actuellement de
+l'inscription individuelle, de dire : C'est mon médecin, moi, j'accepte de
+dire que tu es mon patient, puis c'est moi, ton médecin, ce qui va dorénavant
+s'appeler l'association. Et là il y a eu toutes sortes de pensées qu'on a lues,
+qui sont erronées, à dire : Bon, je n'aurai plus le droit d'associer un
+vert — hein, si on revient au code de couleurs — ou
+quelqu'un d'autre, ou... Et il n'y a absolument rien dans le projet de loi qui
+se substitue au jugement clinique et à la décision du professionnel.</p>
+  <p> Donc, peu importe que la personne que le système
+vous a référée... peu importe sa couleur qu'il vous a référée, si votre
+jugement clinique est : Moi, cette personne-là, compte tenu de mon
+jugement clinique, j'ai besoin et j'estime qu'elle a besoin d'un suivi régulier
+avec le médecin, donc d'avoir ce qui est actuellement considéré comme une
+inscription individuelle... dorénavant s'appeler une association, totalement
+libre de le faire. Il n'y a aucune interdiction à prendre un type de clientèle
+ou un autre ou de dire qu'on ne doit pas, à ceci. Donc ça, je pense que c'est
+important pour pour tous ceux qui s'intéressent à ce projet de loi, de
+comprendre que le projet de loi respecte le jugement clinique du professionnel
+dans son désir de dire : Peu importe que le système de référencement a
+indiqué, lui, à partir des bases de données qu'il avait, que ce patient-là est
+de telle ou telle catégorie, si moi, j'estime que j'ai besoin de m'identifier
+comme son professionnel, d'être associé, d'être inscrit individuel, c'est tout
+à fait libre, ouvert, et tout ça.</p>
+  <p> Donc, il y a et il y aura la possibilité
+de continuer, dans le futur, comme c'était jusqu'à maintenant, l'association,
+ce qui s'appelle actuellement l'inscription individuelle, «c'est mon médecin ou
+mon IPS».</p>
+  <p>
+    <b>M. Arseneau :</b> Très, très
+intéressant d'avoir cette version-là, parce que ma compréhension était
+effectivement que l'association allait peu à peu disparaître parce qu'on allait
+favoriser la prise en charge par le milieu de pratique et tous les
+professionnels qui y oeuvrent. Là, vous nous dites que ceux qui... Le point de
+départ, c'est : ceux qui avaient un médecin conservent le médecin comme
+responsable, au premier chef, du suivi. Ça, ça va demeurer. Mais, dans le cas
+où un médecin décide non pas d'inscrire, mais de s'associer, si je comprends
+bien, ou d'avoir un patient associé ou plusieurs, ils peuvent le faire, mais ça
+ne dépend pas du patient qui souhaiterait être associé à un médecin, mais bien
+du jugement clinique du médecin qui dit : Ce patient-là, je vais le suivre
+de plus près à l'intérieur de mon milieu de pratique, il va devenir mon patient
+associé ou je vais devenir son médecin associé. C'est bien comme ça qu'il faut
+comprendre la mécanique?</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b> Dr Bergeron.</p>
+  <p>
+    <b>M. Bergeron (Stéphane) :</b> Oui.
+M. le Président, je pense que la façon dont M. le député le décrit représente
+effectivement ce qui est à l'intérieur de ça. Donc, il y a un grand souci du
+respect du jugement clinique du professionnel en charge. Puis, une des choses
+que l'on peut voir, c'est dire : Pourquoi est-ce qu'on dit que le médecin
+a la possibilité et la responsabilité de coordonner? Il faut comprendre ce
+qu'est la capitation, puis je vais me permettre de parler un petit peu de la
+capitation puis de la nécessité de modifier la loi actuelle, et c'est ce que ça
+vient faire, pour permettre d'introduire ce concept de capitation là.</p>
+  <p>
+    <i>• (12 h 50) •</i>
+  </p>
+  <p> Dans la loi actuelle, la Loi sur
+l'assurance maladie, la façon dont c'est rédigé, pour que j'aie le droit de
+réclamer un montant, il faut que je fasse un service, que j'aie... alors que,
+dans le principe de la capitation, le principe est un petit peu différent de la
+capitation pure. On reçoit un montant, une capitation per capita, donc, par
+gens que l'on accepte de prendre en charge, peu importe qu'on le voie ou qu'on
+ne le voie pas, mais avec la...</p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>...de
+dire que, quand même, cette personne-là des besoins, peut-être que ce n'est pas
+le médecin qui doit intervenir pour cela, mais il doit y avoir une intervention
+d'équipe. Puis, à certains moments donnés, donc, pour des gens qui ont... peu
+importe le niveau de vulnérabilité, ça pourrait dire que je vais avoir besoin
+d'interagir 2 à 3 fois avec telle personne, mais qu'à un autre je n'ai pas
+besoin d'interagir, mais que sommairement, dans le principe de la capitation,
+où on prend une responsabilité d'un collectif de gens, on reçoit un montant
+forfaitaire régulier qui est indépendant des actes que l'on pose. Donc,
+d'associer la capitation à une médecine où on nous dit : Vous devez plus
+poser plus d'actes, ou autres, c'est un peu... c'est un peu... pour moi, quand
+je le lis, un peu a contrario du principe d'une capitation, qui est : on
+va donner un certain montant même qu'il y ait ou non des actes posés envers ça,
+en disant que c'est une responsabilité assumée, collective. Et parfois, comme
+médecin, je devrais intervenir, parfois pas. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>M. le député des Îles, compte tenu
+qu'il nous reste à peu près neuf minutes, je voudrais céder la parole ici au député
+de Rosemont, pour avoir eu un tour de roue des trois. </p>
+  <p>
+    <b> M. Arseneau : </b>...éventuellement.
+Merci beaucoup, docteur. </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Merci beaucoup. Merci de votre
+collaboration. M....</p>
+  <p>
+    <b> M. Marissal : </b>Oui, merci, M. le
+Président. Rebonjour à toute l'équipe, en particulier à Maître Paquin, avec qui
+on a beaucoup, beaucoup travaillé au projet de loi 15. Alors, ça me fait
+plaisir de vous revoir. Je voudrais vous remercier, M. le ministre et
+sous-ministre, d'avoir enrichi l'encyclopédie des acronymes et des termes. Il
+en manquait peut-être un ou deux. </p>
+  <p>
+    <b> M. Dubé : </b>... </p>
+  <p>
+    <b> M. Marissal : </b>Oui. Là,
+maintenant, il va falloir que je réassimile! Bon, alors, voilà. </p>
+  <p> Je suis content qu'on éclaircisse cette
+question-là, là, qui était pas mal sur toutes les lèvres, tu sais. Mais je ne
+suis pas sûr que je suis parfaitement rassuré. Parce que vous avez dit, M. le
+ministre, puis le sous-ministre a dit aussi : Il faut tenir compte d'un
+changement dans l'inscription... puis là, pardonnez si je n'ai pas encore
+assimilé tous les termes, là, de l'inscription d'un patient. Et vous avez même
+dit, tout à l'heure, M. le ministre : À moins que la personne change de
+localisation. </p>
+  <p> Alors, je vais prendre un exemple, pour
+faire vite, parce que je pense que personne ne veut étirer le plaisir
+aujourd'hui, là, d'autant qu'il sera infiniment plus long, ce soir et cette
+nuit. Mais un jeune homme, mettons, qui a un médecin de famille à Montréal,
+décide d'aller étudier à Rimouski, puis se dit : Bien, de toute façon, je
+vais revenir assez souvent à Montréal, puis je ne suis pas malade, j'ai besoin
+d'un médecin parce que je fais des sinusites une fois par année, puis, bon,
+j'ai un médecin. Un vert, une pastille verte. Cette personne s'en va à Rimouski,
+fait trois, quatre ans d'études, peut-être même, s'accroche les pieds, parce
+que c'est magnifique, Rimouski, puis il se trouve une job là. Moi, je pense que
+cette personne, si elle le désire, devrait garder son médecin. Est-ce... Est-ce
+que je comprends que cette personne pourra garder son médecin? Même si, quatre
+ans d'études, deux ans, ça fait comme cinq, six, sept ans, là, que maintenant
+cette personne est domiciliée de Rimouski. Mais elle a une très bonne relation
+avec ce médecin. Ça va très bien. Puis, en plus, bien, vous savez qu'il y a la
+télémédecine, hein, maintenant, je ne vous apprendrai pas ça, là. Ça fait que,
+des fois, il y a des trucs qui se règlent quand même pas mal vite, là. Puis
+c'est tant mieux, là. Alors, répondez d'abord à cette question-là, juste pour
+rassurer les gens, là : Est-ce que... Est-ce que le jeune homme en
+question perd son médecin? </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Dr Bergeron. </p>
+  <p>
+    <b> M. Marissal : </b>Allez-y, Dr
+Bergeron.</p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Vous pouvez y aller, Dr Bergeron.</p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>Merci,
+M. le Président. Ici... Puis, en fait, il y a... Il y a plusieurs experts,
+notamment notre groupe d'experts qui nous l'a... qui nous l'a mentionnée,
+l'importance de la continuité relationnelle, hein? Mais, dans ce même rapport
+là, de groupes d'experts, on... sans dire qu'il y a une opposition, il y a...
+il y a l'accès puis la continuité relationnelle. Puis il faut... il faut jouer
+avec la subtilité des deux. Parce que, si on revient à l'exemple, mais c'est
+toujours les exemples plus faciles, la continuité relationnelle, si mon milieu
+est à 1000 kilomètres d'où je suis, probablement qu'elle est... elle n'est
+pas optimale. Donc, à ce moment-là, il faut plus aller sur l'accès. </p>
+  <p> C'est ce que j'exprimais tout à l'heure
+lorsque l'on mentionnait que l'objectif du projet de loi, c'est de trouver le
+bon terrain, le bon milieu entre les deux. Évidemment, ce qu'on ne veut pas,
+c'est d'avoir, une fois pour toutes, dans votre vie... </p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>...dire :
+Voici, moi, je demeure à Rimouski. À ma naissance, je suis affilié et associé à
+un médecin de Rimouski, puis, après ça, peu importe ce qui arrive, c'est le
+milieu qui va me suivre à ma vie, à ma mort. Donc, il y a des conditions qui
+vont nécessiter qu'on le change. </p>
+  <p> On a exprimé tout à l'heure des... là,
+c'est l'opposé, c'est : bien, je franchis une petite ligne, je déménage de
+l'autre bord de la rue, puis je change tout d'un coup de camp, ça ne doit pas
+entraîner ça de façon automatique. C'est là qu'on dit, puis on ne discute pas
+d'amendement, puis, honnêtement, encore une fois, je reflète les discussions
+que nous avons eues avec le ministre, on a bien saisi cela, et le ministre a
+manifesté, encore là, l'ouverture à avoir les amendements pour faire... avoir
+la subtilité nécessaire et la flexibilité nécessaire. </p>
+  <p> Puis vous identifiez notamment des classes
+de situation qui ont fait l'objet de réflexion, également, les étudiants, hein,
+les travailleurs. Je peux très bien être quelqu'un dont mon domicile est
+identifié à Québec ou à Sainte-Foy, mais que, cinq jours par semaine, plutôt,
+je travaille... tu sais, qu'arrive-t-il aux travailleurs qui sont dans... ils
+ont un domicile et qui vont travailler pendant de longues périodes? Donc, ce
+sont... ça, quand on a mentionné que le ministre pouvait donner par règlement
+des indications sur comment traiter ces cas-là. Ce sont ces situations-là pour
+lesquelles il va falloir trouver la bonne ligne, mais toujours en ayant comme
+principe qu'il y a une très grande... très grande importance à garder le plus
+possible une continuité relationnelle, jusqu'à tant qu'elle ne nuise pas... que
+la distance ou la capacité de fréquenter son milieu et son médecin n'amène pas
+une réduction dans la capacité de voir et d'avoir les services. </p>
+  <p>
+    <b> M. Marissal : </b>Intéressant.
+Ça, c'est le patient qui décide ça, ou c'est le médecin, ou c'est le système
+qui décide ça, que... là, nous jugeons que... tu es à Rimouski, ton médecin est
+à Montréal, ça fait sept ans que tu vis Rimouski, ce n'est pas top, tu vas
+passer à Rimouski ou tu es sur une autre liste d'attente? </p>
+  <p>
+    <b> M. Dubé : </b>Dans le... En
+attendant, que Dr Bergeron regarde ça, je ne sais pas comment vous avez le
+temps de le regarder, mais je reviens au rapport d'experts dont il parlait, là,
+de Dr Groulx, Mme Bergeron, docteur Boulanger. Puis il y a une grande, grande
+section, puis c'est pour ça que je ne suis pas sûr qu'est-ce que ça traite
+exactement... mais d'où l'importance de la continuité, parce que, quand on leur
+a demandé ce rapport-là, c'était beaucoup pour préparer la politique de la
+première ligne qu'on va développer, qu'on va sortir au printemps... au
+«printemps», à l'automne, pardon, et c'est là qu'on s'est dit : Bien, il
+faut que ce projet de loi là arrive en même temps que ce rapport-là parce que
+ça s'inscrit dans la politique de première ligne. </p>
+  <p> Ça fait que c'est pour ça que la question
+de la continuité, en tout cas, selon ces experts-là, est devenue presque aussi
+importante que l'accès. Alors, si... </p>
+  <p>
+    <b> M. Marissal : </b>Je comprends
+bien. </p>
+  <p>
+    <b> M. Dubé : </b>Puis on aura la
+chance d'en reparler, mais... </p>
+  <p>
+    <b> M. Marissal : </b>Je pense qu'on
+vient de faire la démonstration qu'on a beaucoup de discussions à avoir. </p>
+  <p>
+    <b> M. Dubé : </b>On a beaucoup de
+lectures à faire encore. </p>
+  <p>
+    <b> M. Marissal : </b>Oui, puis
+j'apprécie l'échange, là, sur une base plus informelle que d'entamer le projet
+de loi maintenant... du travail... </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>...vous allez avoir la conclusion de
+l'échange. </p>
+  <p>
+    <b> M. Bergeron (Stéphane) : </b>Merci,
+M. le Président. À la question de M. le député, c'est qui?, en fait, ce doit
+être les deux. Puis j'explique. Déjà, ce qui était campé dans le projet de loi
+c'est le droit de l'usager, hein? L'usager peut demander. Ça, c'est prévu à
+l'intérieur de cela. </p>
+  <p> Maintenant... Puis pourquoi est-ce qu'on
+doit aussi prévoir une responsabilité ou une possibilité de l'autre côté? Il
+faut comprendre que le milieu d'affiliation, il doit répondre aux besoins du
+patient. Si je suis le travailleur social, le psychologue d'Amos puis que mon
+patient est rendu en... je ne connais pas bien l'écosystème, et autres, je ne
+suis pas sûr que c'est la bonne façon de répondre aux besoins de l'usager,
+également. Donc, la réponse, elle se trouve des deux côtés de la table, et il
+faut bien camper. </p>
+  <p>
+    <i>• (13 heures) •</i>
+  </p>
+  <p> Ce qui est clair, c'est qu'il faut
+permettre en tout temps à l'usager d'avoir cette possibilité-là, mais il faut
+également équiper, donner la possibilité au milieu d'affiliation de se prononcer
+pour dire : Là, je pense que je ne suis plus capable de bien répondre aux
+besoins de mon patient. </p>
+  <p>
+    <b> M. Marissal : </b>Ça me va pour
+maintenant... </p>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>Écoutez, vous me permettrez... </p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+				
+					<h4>
+						<a name='13h' class="ancreNommee">13 h </a> (version non révisée)
+					</h4>
+					<p><div>
+  <p>
+    <b> Le Président (M. Provençal) </b>
+    <b>:</b>…de saluer l'ensemble des collègues
+de la commission et du personnel, là, puis vous souhaiter un bel été. Même si,
+comme députés, on sait tous qu'on va continuer à donner des services à notre
+population, mais je vous souhaite quand même de prendre une pause santé pour
+bien récupérer.</p>
+  <p> Sur ce, la commission ajourne ses travaux
+sine die. Merci beaucoup.</p>
+  <p>
+    <i>(Fin de la séance à 13 h 01)</i>
+  </p>
+</div></p>
+					<div class="hr">
+						<hr />
+					</div>
+					<div class="clear">&nbsp;</div>
+					
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+					<div class="clear">&nbsp;</div>
+					
+		
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+	
+		<h2>Document(s) associé(s) à la séance</h2>
+		<ul class="ListeLien">
+			
+			
+			
+					<li><a href='/fr/video-audio/archives-parlementaires/travaux-commissions/AudioVideo-109685.html'>Vidéo/Audio</a></li>
+					
+					
+				
+		</ul>
+	
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+						
+				
+					
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <div id="bInfolettre" style="margin-bottom: 25px;"><a class="btnInfolettre" href="https://l.communications.assnat.qc.ca/T/WF/24042/op0ace/Optin/fr-CA/Form.ofsys" target="_blank">Abonnez-vous à notre infolettre!</a></div>
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br />
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+
+    </ul>
+
+    <br />
+    <span class="NonVisible">
+        
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+    var boutonInfolettre = document.getElementById('bInfolettre');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+            boutonInfolettre.style.display = 'block';
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+            boutonInfolettre.style.display = 'none';
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+</body>
+</html>

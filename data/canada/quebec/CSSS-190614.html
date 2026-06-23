@@ -1,0 +1,2597 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="content-language" content="fr" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere"  rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen"  />
+<link href="/Images/favicon.ico" rel="shortcut icon" />
+
+<!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print"  />
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen"  />
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript"  >
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2026-08-29';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalAucuneActiviteType = "Aucune activité de cette catégorie n'est prévue aujourd'hui."
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.3.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-mDroite-m.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        table {border:1px solid #000000;border-collapse:collapse;}
+        table td {border:1px solid #000000;padding:5px;}
+        table td[align="center"] {text-align:center;}
+        table td[align="right"] {text-align:right;}       
+       
+    </style>  
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec
+        
+</title>
+        
+        <meta property="og:title" content="Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217" />
+
+    <script type="text/javascript" src="/scripts/Recherche.min.js"></script><style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+
+    <body class="impressionGrossie">
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-190614.html" id="aspnetForm">
+<div>
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTA4Mzc3OTI4D2QWAmYPZBYCAgMQZGQWAgIID2QWAgIBD2QWAgIFDxBkEBVSE1RvdXRlcyBsZXMgc2Vzc2lvbnM/U2Vzc2lvbiBlbiBjb3VycyAtIDQzZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDUgbWFpIDIwMjYgLSApPzQzZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAyMDI1IC0gOCBhdnJpbCAyMDI2KUQ0M2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMjAyMiAtIDEwIHNlcHRlbWJyZSAyMDI1KT40MmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBvY3RvYnJlIDIwMjEgLSAyOCBhb8O7dCAyMDIyKUI0MmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjcgbm92ZW1icmUgMjAxOCAtIDEzIG9jdG9icmUgMjAyMSk7NDFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIwIG1haSAyMDE0IC0gMjMgYW/Du3QgMjAxOCk9NDBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDMwIG9jdG9icmUgMjAxMiAtIDUgbWFycyAyMDE0KT4zOWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMyBmw6l2cmllciAyMDExIC0gMSBhb8O7dCAyMDEyKUIzOWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTMgamFudmllciAyMDA5IC0gMjIgZsOpdnJpZXIgMjAxMSk8MzhlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDggbWFpIDIwMDcgLSA1IG5vdmVtYnJlIDIwMDgpPjM3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMjAwNiAtIDIxIGbDqXZyaWVyIDIwMDcpOjM3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg0IGp1aW4gMjAwMyAtIDEwIG1hcnMgMjAwNik6MzZlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjIgbWFycyAyMDAxIC0gMTIgbWFycyAyMDAzKTkzNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMiBtYXJzIDE5OTkgLSA5IG1hcnMgMjAwMSk9MzVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjUgbWFycyAxOTk2IC0gMjEgb2N0b2JyZSAxOTk4KT8zNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMTk5NCAtIDEzIG1hcnMgMTk5Nik6MzRlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTcgbWFycyAxOTk0IC0gMTcganVpbiAxOTk0KTozNGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBtYXJzIDE5OTIgLSAxMCBtYXJzIDE5OTQpPzM0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyOCBub3ZlbWJyZSAxOTg5IC0gMTggbWFycyAxOTkyKTkzM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICg4IG1hcnMgMTk4OCAtIDkgYW/Du3QgMTk4OSk/MzNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE2IGTDqWNlbWJyZSAxOTg1IC0gOCBtYXJzIDE5ODgpQDMyZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDE2IG9jdG9icmUgMTk4NCAtIDEwIG9jdG9icmUgMTk4NSk6MzJlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjMgbWFycyAxOTgzIC0gMjAganVpbiAxOTg0KT0zMmUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg5IG5vdmVtYnJlIDE5ODEgLSAxMCBtYXJzIDE5ODMpQTMyZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAxOTgxIC0gMiBvY3RvYnJlIDE5ODEpOjMyZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxOSBtYWkgMTk4MSAtIDE4IGp1aW4gMTk4MSk9MzFlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoNSBub3ZlbWJyZSAxOTgwIC0gMTIgbWFycyAxOTgxKUAzMWUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgyNCBvY3RvYnJlIDE5ODAgLSAyNCBvY3RvYnJlIDE5ODApOTMxZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDYgbWFycyAxOTc5IC0gMTgganVpbiAxOTgwKUIzMWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBmw6l2cmllciAxOTc4IC0gMjAgZsOpdnJpZXIgMTk3OSk+MzFlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBtYXJzIDE5NzcgLSAyMiBkw6ljZW1icmUgMTk3NylFMzFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE0IGTDqWNlbWJyZSAxOTc2IC0gMjMgZMOpY2VtYnJlIDE5NzYpPTMwZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG1hcnMgMTk3NiAtIDE4IG9jdG9icmUgMTk3Nik/MzBlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTggbWFycyAxOTc1IC0gMTkgZMOpY2VtYnJlIDE5NzUpPzMwZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMTk3NCAtIDI4IGTDqWNlbWJyZSAxOTc0KUQzMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjIgbm92ZW1icmUgMTk3MyAtIDIyIGTDqWNlbWJyZSAxOTczKT8yOWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNSBtYXJzIDE5NzMgLSAyNSBzZXB0ZW1icmUgMTk3Myk5MjllIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBtYXJzIDE5NzIgLSAxNCBtYXJzIDE5NzMpQzI5ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIzIGbDqXZyaWVyIDE5NzEgLSAyNCBkw6ljZW1icmUgMTk3MSk/MjllIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDkganVpbiAxOTcwIC0gMTkgZMOpY2VtYnJlIDE5NzApPjI4ZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDI0IGbDqXZyaWVyIDE5NzAgLSAxMiBtYXJzIDE5NzApQzI4ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDI1IGbDqXZyaWVyIDE5NjkgLSAyMyBkw6ljZW1icmUgMTk2OSlDMjhlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjAgZsOpdnJpZXIgMTk2OCAtIDE4IGTDqWNlbWJyZSAxOTY4KUAyOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMCBvY3RvYnJlIDE5NjcgLSAyMCBvY3RvYnJlIDE5NjcpQDI4ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxIGTDqWNlbWJyZSAxOTY2IC0gMTIgYW/Du3QgMTk2Nyk+MjdlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoMjUgamFudmllciAxOTY2IC0gMTggYXZyaWwgMTk2NilAMjdlIGzDqWdpc2xhdHVyZSwgNWUgc2Vzc2lvbiAoMjIgb2N0b2JyZSAxOTY1IC0gMjMgb2N0b2JyZSAxOTY1KT0yN2UgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5NjUgLSA2IGFvw7t0IDE5NjUpQDI3ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE0IGphbnZpZXIgMTk2NCAtIDMxIGp1aWxsZXQgMTk2NCk8MjdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjEgYW/Du3QgMTk2MyAtIDIzIGFvw7t0IDE5NjMpQTI3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNSBqYW52aWVyIDE5NjMgLSAxMSBqdWlsbGV0IDE5NjMpPjI2ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEwIG5vdmVtYnJlIDE5NjAgLSAxMCBqdWluIDE5NjEpRTI2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyMCBzZXB0ZW1icmUgMTk2MCAtIDIyIHNlcHRlbWJyZSAxOTYwKT4yNWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxOCBub3ZlbWJyZSAxOTU5IC0gMTggbWFycyAxOTYwKT0yNWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxOSBub3ZlbWJyZSAxOTU4IC0gNSBtYXJzIDE5NTkpQjI1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEzIG5vdmVtYnJlIDE5NTcgLSAyMSBmw6l2cmllciAxOTU4KUMyNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTQgbm92ZW1icmUgMTk1NiAtIDIxIGbDqXZyaWVyIDE5NTcpQjI0ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG5vdmVtYnJlIDE5NTUgLSAyMyBmw6l2cmllciAxOTU2KUEyMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNyBvY3RvYnJlIDE5MzYgLSAxMiBub3ZlbWJyZSAxOTM2KT4xOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMCBqYW52aWVyIDE5MzMgLSAxMyBhdnJpbCAxOTMzKUIxOGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMyBub3ZlbWJyZSAxOTMxIC0gMTkgZsOpdnJpZXIgMTkzMik8MTdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBqYW52aWVyIDE5MjkgLSA0IGF2cmlsIDE5MjkpPTE2ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDExIGphbnZpZXIgMTkyNyAtIDEgYXZyaWwgMTkyNyk8MTZlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBqYW52aWVyIDE5MjYgLSAyNCBtYXJzIDE5MjYpQDE2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNyBkw6ljZW1icmUgMTkyMyAtIDE1IG1hcnMgMTkyNClCMTVlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjQgb2N0b2JyZSAxOTIyIC0gMjkgZMOpY2VtYnJlIDE5MjIpPTE1ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDEwIGphbnZpZXIgMTkyMiAtIDIxIG1hcnMgMTkyMik9MTVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTEgamFudmllciAxOTIxIC0gMTkgbWFycyAxOTIxKUQxNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTAgZMOpY2VtYnJlIDE5MTkgLSAxNCBmw6l2cmllciAxOTIwKT0xNGUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5MTkgLSAxNyBtYXJzIDE5MTkpQTE0ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDQgZMOpY2VtYnJlIDE5MTcgLSA5IGbDqXZyaWVyIDE5MTgpQzE0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg3IG5vdmVtYnJlIDE5MTYgLSAyMiBkw6ljZW1icmUgMTkxNik9MTNlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTEgamFudmllciAxOTE2IC0gMTYgbWFycyAxOTE2KTsxM2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg3IGphbnZpZXIgMTkxNSAtIDUgbWFycyAxOTE1KUIxM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMSBub3ZlbWJyZSAxOTEzIC0gMTkgZsOpdnJpZXIgMTkxNClDMTNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDUgbm92ZW1icmUgMTkxMiAtIDIxIGTDqWNlbWJyZSAxOTEyKTwxMmUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICg5IGphbnZpZXIgMTkxMiAtIDMgYXZyaWwgMTkxMik9MTJlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTAgamFudmllciAxOTExIC0gMjQgbWFycyAxOTExKTkxMmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNSBtYXJzIDE5MTAgLSA0IGp1aW4gMTkxMCk5MTJlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIgbWFycyAxOTA5IC0gMjkgbWFpIDE5MDkpOjExZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDMgbWFycyAxOTA4IC0gMjUgYXZyaWwgMTkwOCkVUgEwBDE2MjEEMTYxNwQxNjExBDE2MDcEMTU3OQQxMDc5Azc4OQM0OTkDNDkxAzQ4OQM0ODcDNDg1AzQ4MwM0ODEDNDc5AzQ3NwM0NzUDNDczAzQ3MQM0NjkDNDY3AzQ2NQM0NjMDNDYxAzQ1OQM0NTcDNDU1AzQ1MwM0NTEDNDQ5AzQ0NwM0NDUDNDQzAzQ0MQM0MzkDNDM3AzQzNQM0MzMDNDMxAzQyOQM0MjcDNDI1AzQyMwM0MjEDNDE5AzQxNwM0MTUDNDEzAzQxMQM0MDkDNDA3AzQwMwM0MDEDMzk5AzM5NwMzOTUDMzkzAzM5MQMzNTEDMzQzAzM0MQMzMzUDMzMxAzMyOQMzMjUDMzIzAzMyMQMzMTkDMzE3AzMxNQMzMTMDMzExAzMwOQMzMDcDMzA1AzMwMwMzMDEDMjk5AzI5NwMyOTUDMjkzFCsDUmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZGSR1zJt3oVoyUEzSRMlQn2fv9BTPw==" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusionData = 'typeActivite:\'9;11\', commission:\'\', mandat:\'\', mandatParent:\'\', estPageAccueil:\'true\'';var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';//]]>
+</script>
+
+<script src="/Scripts/Travaux.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusion = '/WebMethod/WebMethod.aspx/ObtenirIndicateurWebDiffusion';
+                                                                           var intervalleRafraichissementWebDiffusion = 60;//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="87D7EEFC" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAG/gQ9Ee+qmQCeIhOmxubVt13hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yP5J++CKenG+ic1PIaA5cTuL1134RC+RnzibeFXcPSMkirjG8og4fy2g9bI6NorM5K3aXyd+YwgKTVZuZwzdInb3sMEK8K8EnCeQkzFr+/RLvxPBAdO7j0VFemNI0qrFxSGYQ3iqRmRux+buuGhnzVY7jB7dHJwCIv8ngbmPGgPLujBTC+kP4kA+7KhxgVmvV5AheHVxIVrpDzljBaLS2bYKMFL9SoPHg7YnZGoSQYbC96mix2PM6mPVfuaAu2CCJfM4TAu5BVnX31Y0HHllueS87ErUi03NMo0hw7mxWyfT4Wv0wvqQZh4w3ykIvcMjsGFY5ybnihBy13K2K+tmuOs85eX2+hEhZ2vYUaE8BVLmvakhWjFT45S4k+tsa+fpSs4lbyX6yNqZ6z72mkN+uXbq6rMhqV0lkwDHk0NHAT+FCTZWSs07x5JPi066N3TA8r2W06Lr1lcPqDYyzfrmwaQGQ0psL1kP1GxKizeElEmecdwWtpPscZWtTpzZEnsfmzTqsCYzzzobfT8qdD7a/yPAypVkCmjXnJsda3SUW7qtzZGT+9Pc4mFOAq+/SX5/YRJ/K/ogEgmTY1DKUX4XxwaeYSR1/gThSYL8HvHZ/BXyQlkFwouIFKdfLNHGAWbjnoCvCU5+pJHtkl6m2WTUFVWJJA1MHBzQXG/f2gdX+bPdSgU/lArO4+wk4+DUCkKVOeGZp31cUQDQWmUDo2Su9MZmuSpA6pRzhnLkfV7xmjsWh9KQ+99mZMlQr7uUOHSboZ96a1A+LynNef/O7hu4b8K/qwysk0ivqUHKhoyAXpbbPoyn20EhaJbPgBEf3ZVcUKAehOEMbNchbHLxUU6Tby2GE3swtqAMtM9Fry5zPuv4s2htp1+4Q36YrsV6nkF5KbYkPbwAojZXFYBB3CBnXaLcA8rMefK0Y/7jpLorq+G3zWFkQ5HtZOokEDcDPi97PVKoXS0yltqZ5Mt5lUERLD0ZUxbspqy9ur6z14GkdnLsiW72+p8AC341YpjOF6yx34tM63Vq8Uhb3BcFtxuRpa9Z/2/NoNxOsUz7+Cxrjsc5oGnmEsM/D4EOnLIe/WslcimQBWL1FRHPFNiMvhdM0v4eAZR7NUE5tUcUKjzKUVe9yrlTuD7BkCKZ2iDxRJpz05DKHAeVGaY4lF6pQ80C00q+h3MqhJVAghw9aUxAP9AFqKPCv3SpPXmc+w5SYVVGfHISO1IQytQj+I+B5yTxyKDMamePfnz/uNjaSpU9JPJnmjae1Xh8FKcmg2idJphFrs2rSSYRoZTn2+cOD8w4uXzQjjSq+cSDSgaDEe7v2UjBmd+ZwDVApItvLzBJWHwjZB5xILY5bHbSTrcXHiVebPB9g6cu4OyM9Qs5qbyE84dYj4B2uxF3gcYOfMDoc/IM5xDi4UIFTQTW7H/NQ6Q6xAbuKSXYhAUdYa6kC0R+1fQ2GRiBPcJlTzg8NxJWsCbw6uucbfFDMLGnbdCRH+MJ2vwsmS8sru97GZmqUvbcHVLzytiWwmVJMxGxDYx3BYvanTW3eCivTHVUADoMWjvykFxDT4CYC59FxW5R+LQ+5YQRYaNU87G/tpDdG7FWLuikgjD4nQvKf3CUU6VYBceGVRXhuxTjI5KM0mwr/WKimhdzY8A+wjtd7aMChS5+OrgRzLvCqGmPpASCvMjFwhzzNbQIRw8L3/NFi18/kCZZw2UpxVoxwbRXaQXpnfKihg4oKRD6h/IK/nGDwv/kGpZjV82isGd3dAcv/ueAST3hCP86GZXGgNAxTvQghNtmUwi3qdsmkzpG6kDQmNjF8HEyhZeATYsYASiUoKMaqwsrpmofpInZdfVM8Qt1dp/EBcAAHbyNuUISQOWpWKTB/psFd8KeZh0ZHsoGQC6x3URnSZgoS0/dlVaU5w3pDNjnO8WiT1wNkzAklbI3/0P8OGPoyxOm889Q7znP6BhdVGBIvZkaEr2G/4QOQWC9vJ1rpH3X7bce5ChW68F6IqKPPbcgDlKF0/DnccJVDpVrjAQVSa8tk26+QeIKIHfPEFNh4D83b7JOlO17s6NcRRdnQh4CS9T6LrfhmAwa8aMvCy6BeNiYk5IPF8lnHDVfNs3InsR9ZiNQxCPs/GLIcLMwwcvL+T47+xzoOy/EIGp7k9Ex3NGCcNJapLgvmTepJXvTUKK8o43Uxx6bnZh4rvOSEFl1y0ae9T9E5j1Ej8KjAtJF6+QJ1bHt/jxVIp0MkJsBSeS9ENNitgEy6DgVUhH6Gbl9YQSK7JdqBfNSEaXgQkrrPpVv39xHWG7awjKWluncOURdTEzt1ZpZ4HjwdL44nSgz8dWHkeDfA==" />
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien" style="margin-right:45px;">Suivez-nous</span>
+                    <span class="visuallyhidden"> sur les médias sociaux, Facebook, X, Youtube</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle" />
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher"/>
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;" tabindex="0">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var link = document.querySelector('a[onclick="LancerRechercheAvancee();return false;"]');
+
+        link.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                LancerRechercheAvancee();
+                event.preventDefault();
+            }
+        });
+    });
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere">
+	<a href="/fr/index.html" class="sanssouligne" title="Assemblée nationale du Québec - Retour à l&#39;accueil">
+    <img class="nepasafficher" width="88" height="58" title="Assemblée nationale du Québec - Retour à l'accueil" alt="Assemblée nationale du Québec - Retour à l'accueil" src='/images/transparent.gif' /></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class='menuHoverParent btnDeputes'><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes">
+                Députés</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnTravaux'>
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires">
+                    Travaux parlementaires</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnExprimez'>
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion">
+                    Exprimez votre opinion!</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnVideoAudio'>
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio">
+                    Vidéo</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="display: none">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours"
+                        title="Chargement en cours" />
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" tabindex="0">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href='/fr/calendrier-detaille.html'>
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup"></span>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br />
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br />
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br />
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br />
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br />
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br />
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br />
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href=''>
+                    Aujourd'hui</a></span>
+            </div>
+            <hr />
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="my-skinnable-select">
+                    <select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite">
+	<option selected="selected" value="*"></option>
+
+</select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br />
+            <a href='/fr/aide/aide-recherche.html#javascript'>
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class='' id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class='' id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class='' id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class='' id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class='' id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class='' id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class='' id="lienEducatives">
+                <a href="http://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class='' id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class='' id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/fr/index.html">Accueil</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/index.html">Travaux parlementaires</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/commissions/index.html">Travaux des commissions</a></span><span> &gt; </span><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation">
+
+
+	
+	<ul>
+		<li>
+			<h2><a href="/fr/travaux-parlementaires/index.html" class="selected">
+				Travaux parlementaires</a></h2>
+			<ul>
+				<li>
+					<a href="/fr/travaux-parlementaires/journaux-debats.html" class="">
+						Journal des débats </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/journaux-debats/index-jd/index.html" class="">
+								Index du Journal des débats</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/assemblee-nationale/index.html" class="">
+						Travaux de l'Assemblée</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/registre-des-votes/index.html" class="">
+								Registre des votes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/commissions/index.html" class="selected">
+						Travaux des commissions</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cap/index.html" class="">
+								Administration publique</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/capern/index.html" class="">
+								Agriculture, pêcheries, énergie et ressources naturelles</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cat/index.html" class="">
+								Aménagement du territoire</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/can/index.html" class="">
+								Assemblée nationale</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cce/index.html" class="">
+								Culture et éducation</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cet/index.html" class="">
+								Économie et travail</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cfp/index.html" class="">
+								Finances publiques</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/ci/index.html" class="">
+								Institutions</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/crc/index.html" class="">
+								Relations avec les citoyens</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/csss/index.html" class="">
+								Santé et services sociaux</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cte/index.html" class="">
+								Transports et environnement</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html" class="">
+								Mandats en cours</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/rapports-documents-reflexion/index.html" class="">
+								Rapports et documents de réflexion</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/rapport/index.html" class="">
+						Cheminement des projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/index.html" class="">
+						Projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/documents-deposes.html" class="">
+						Documents déposés </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/documents-deposes/depots-du-jour.html" class="">
+								Dépôts du jour </a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/calendrier-travaux.html" class="">
+						Calendrier hebdomadaire des travaux </a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+	
+
+<div class="clear"></div>
+
+<div class="ContenuNavigation SousNavigation rechercheContextuelle travauxParlementaires">
+    <div class="overlay">
+        <div class="loading"></div>
+    </div>
+	<h2>Recherche avancée dans la section Travaux parlementaires</h2>
+
+		<div class="conteneurMotCle" data-champ="MotsCles">
+            <label for="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux">Mots clés</label>
+			<input name="ctl00$ColGauche$RechercheTravaux$txtTrouverTravaux" type="text" id="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux" />	
+		</div>
+		
+	    <div class="floatLeft" data-champ="TypeDocument">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments">Type de documents</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxDocument">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeDocuments" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments" title="Certains documents déposés en commissions et à l’Assemblée sont numérisés en mode image. Leurs contenus ne sont donc pas disponibles à la recherche." class="BulleInfo">
+	<option selected="selected" value="-1">Tous les documents</option>
+	<option value="1|3">Documents d&#233;pos&#233;s</option>
+	<option value="9">Feuilletons et pr&#233;avis</option>
+	<option value="13">Journaux des d&#233;bats</option>
+	<option value="5">M&#233;moires</option>
+	<option value="7">Proc&#232;s-verbaux de l&#39;Assembl&#233;e</option>
+	<option value="11">Projets de loi</option>
+	<option value="15">Rapports et documents de consultation des commissions</option>
+
+</select>
+		    </div>
+        </div>
+
+    	<div class="floatLeft" data-champ="TypeTravaux">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">Type de travaux</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxType">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeTravaux" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">
+	<option value="0">Travaux de l&#39;Assembl&#233;e et des commissions</option>
+	<option value="-1">Travaux de l&#39;Assembl&#233;e</option>
+	<option value="-2">Travaux des commissions</option>
+	<option value="39">Commission de la culture et de l’&#233;ducation</option>
+	<option value="43">Commission de la sant&#233; et des services sociaux</option>
+	<option value="7">Commission de l&#39;administration publique</option>
+	<option value="37">Commission de l&#39;agriculture, des p&#234;cheries, de l&#39;&#233;nergie et des ressources naturelles</option>
+	<option value="13">Commission de l&#39;am&#233;nagement du territoire</option>
+	<option value="5">Commission de l&#39;Assembl&#233;e nationale</option>
+	<option value="21">Commission de l&#39;&#233;conomie et du travail</option>
+	<option value="23">Commission des finances publiques</option>
+	<option value="25">Commission des institutions</option>
+	<option value="41">Commission des relations avec les citoyens</option>
+	<option value="35">Commission des transports et de l&#39;environnement</option>
+	<option value="55">Sous-commission de la r&#233;forme parlementaire</option>
+
+</select>
+		    </div>
+		</div>
+    
+        <div class="champRecherche avancee" data-champ="Periode">
+            <label>Période</label>
+            <div class="champPeriode">
+		        <label class="libelleDe" for="ctl00_ColGauche_RechercheTravaux_txtDateDebut">De</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateDebut" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateDebut" class="champsDate choisirDate PeriodeDebut" />
+		        <label class="libelleA" for="ctl00_ColGauche_RechercheTravaux_txtDateFin" class="champRecherche avancee">À</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateFin" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateFin" title="
+       Si les champs &lt;b>De&lt;/b> et &lt;b>À&lt;/b> sont remplis, le résultat se situe entre les dates indiquées.&lt;br/>
+      Si seul le champ &lt;b>De&lt;/b> est rempli, le résultat se situe entre la date indiquée jusqu’à aujourd’hui.&lt;br/>
+      Si seul le champ &lt;b>À&lt;/b> est rempli, le résultat se situe avant la date indiquée.
+    " class="champsDate choisirDate BulleInfo PeriodeFin" />
+	        </div>
+            <div class="messageErreur cache">La date de début doit précéder la date de fin.</div>
+	    </div>
+
+        <div class="champRecherche avancee" data-champ="Legislature">
+            <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature" class="labelOnTop">Session</label>
+            <div class="my-skinnable-select">
+	            <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixSessionLegislature" id="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature">
+	<option value="0">Toutes les sessions</option>
+	<option selected="selected" value="1621" title="Session en cours - 43e législature, 3e session (5 mai 2026 - )">Session en cours - 43e l&#233;gislature, 3e session (5 mai 2026 - )</option>
+	<option value="1617" title="43e législature, 2e session (30 septembre 2025 - 8 avril 2026)">43e l&#233;gislature, 2e session (30 septembre 2025 - 8 avril 2026)</option>
+	<option value="1611" title="43e législature, 1re session (29 novembre 2022 - 10 septembre 2025)">43e l&#233;gislature, 1re session (29 novembre 2022 - 10 septembre 2025)</option>
+	<option value="1607" title="42e législature, 2e session (19 octobre 2021 - 28 août 2022)">42e l&#233;gislature, 2e session (19 octobre 2021 - 28 ao&#251;t 2022)</option>
+	<option value="1579" title="42e législature, 1re session (27 novembre 2018 - 13 octobre 2021)">42e l&#233;gislature, 1re session (27 novembre 2018 - 13 octobre 2021)</option>
+	<option value="1079" title="41e législature, 1re session (20 mai 2014 - 23 août 2018)">41e l&#233;gislature, 1re session (20 mai 2014 - 23 ao&#251;t 2018)</option>
+	<option value="789" title="40e législature, 1re session (30 octobre 2012 - 5 mars 2014)">40e l&#233;gislature, 1re session (30 octobre 2012 - 5 mars 2014)</option>
+	<option value="499" title="39e législature, 2e session (23 février 2011 - 1 août 2012)">39e l&#233;gislature, 2e session (23 f&#233;vrier 2011 - 1 ao&#251;t 2012)</option>
+	<option value="491" title="39e législature, 1re session (13 janvier 2009 - 22 février 2011)">39e l&#233;gislature, 1re session (13 janvier 2009 - 22 f&#233;vrier 2011)</option>
+	<option value="489" title="38e législature, 1re session (8 mai 2007 - 5 novembre 2008)">38e l&#233;gislature, 1re session (8 mai 2007 - 5 novembre 2008)</option>
+	<option value="487" title="37e législature, 2e session (14 mars 2006 - 21 février 2007)">37e l&#233;gislature, 2e session (14 mars 2006 - 21 f&#233;vrier 2007)</option>
+	<option value="485" title="37e législature, 1re session (4 juin 2003 - 10 mars 2006)">37e l&#233;gislature, 1re session (4 juin 2003 - 10 mars 2006)</option>
+	<option value="483" title="36e législature, 2e session (22 mars 2001 - 12 mars 2003)">36e l&#233;gislature, 2e session (22 mars 2001 - 12 mars 2003)</option>
+	<option value="481" title="36e législature, 1re session (2 mars 1999 - 9 mars 2001)">36e l&#233;gislature, 1re session (2 mars 1999 - 9 mars 2001)</option>
+	<option value="479" title="35e législature, 2e session (25 mars 1996 - 21 octobre 1998)">35e l&#233;gislature, 2e session (25 mars 1996 - 21 octobre 1998)</option>
+	<option value="477" title="35e législature, 1re session (29 novembre 1994 - 13 mars 1996)">35e l&#233;gislature, 1re session (29 novembre 1994 - 13 mars 1996)</option>
+	<option value="475" title="34e législature, 3e session (17 mars 1994 - 17 juin 1994)">34e l&#233;gislature, 3e session (17 mars 1994 - 17 juin 1994)</option>
+	<option value="473" title="34e législature, 2e session (19 mars 1992 - 10 mars 1994)">34e l&#233;gislature, 2e session (19 mars 1992 - 10 mars 1994)</option>
+	<option value="471" title="34e législature, 1re session (28 novembre 1989 - 18 mars 1992)">34e l&#233;gislature, 1re session (28 novembre 1989 - 18 mars 1992)</option>
+	<option value="469" title="33e législature, 2e session (8 mars 1988 - 9 août 1989)">33e l&#233;gislature, 2e session (8 mars 1988 - 9 ao&#251;t 1989)</option>
+	<option value="467" title="33e législature, 1re session (16 décembre 1985 - 8 mars 1988)">33e l&#233;gislature, 1re session (16 d&#233;cembre 1985 - 8 mars 1988)</option>
+	<option value="465" title="32e législature, 5e session (16 octobre 1984 - 10 octobre 1985)">32e l&#233;gislature, 5e session (16 octobre 1984 - 10 octobre 1985)</option>
+	<option value="463" title="32e législature, 4e session (23 mars 1983 - 20 juin 1984)">32e l&#233;gislature, 4e session (23 mars 1983 - 20 juin 1984)</option>
+	<option value="461" title="32e législature, 3e session (9 novembre 1981 - 10 mars 1983)">32e l&#233;gislature, 3e session (9 novembre 1981 - 10 mars 1983)</option>
+	<option value="459" title="32e législature, 2e session (30 septembre 1981 - 2 octobre 1981)">32e l&#233;gislature, 2e session (30 septembre 1981 - 2 octobre 1981)</option>
+	<option value="457" title="32e législature, 1re session (19 mai 1981 - 18 juin 1981)">32e l&#233;gislature, 1re session (19 mai 1981 - 18 juin 1981)</option>
+	<option value="455" title="31e législature, 6e session (5 novembre 1980 - 12 mars 1981)">31e l&#233;gislature, 6e session (5 novembre 1980 - 12 mars 1981)</option>
+	<option value="453" title="31e législature, 5e session (24 octobre 1980 - 24 octobre 1980)">31e l&#233;gislature, 5e session (24 octobre 1980 - 24 octobre 1980)</option>
+	<option value="451" title="31e législature, 4e session (6 mars 1979 - 18 juin 1980)">31e l&#233;gislature, 4e session (6 mars 1979 - 18 juin 1980)</option>
+	<option value="449" title="31e législature, 3e session (21 février 1978 - 20 février 1979)">31e l&#233;gislature, 3e session (21 f&#233;vrier 1978 - 20 f&#233;vrier 1979)</option>
+	<option value="447" title="31e législature, 2e session (8 mars 1977 - 22 décembre 1977)">31e l&#233;gislature, 2e session (8 mars 1977 - 22 d&#233;cembre 1977)</option>
+	<option value="445" title="31e législature, 1re session (14 décembre 1976 - 23 décembre 1976)">31e l&#233;gislature, 1re session (14 d&#233;cembre 1976 - 23 d&#233;cembre 1976)</option>
+	<option value="443" title="30e législature, 4e session (16 mars 1976 - 18 octobre 1976)">30e l&#233;gislature, 4e session (16 mars 1976 - 18 octobre 1976)</option>
+	<option value="441" title="30e législature, 3e session (18 mars 1975 - 19 décembre 1975)">30e l&#233;gislature, 3e session (18 mars 1975 - 19 d&#233;cembre 1975)</option>
+	<option value="439" title="30e législature, 2e session (14 mars 1974 - 28 décembre 1974)">30e l&#233;gislature, 2e session (14 mars 1974 - 28 d&#233;cembre 1974)</option>
+	<option value="437" title="30e législature, 1re session (22 novembre 1973 - 22 décembre 1973)">30e l&#233;gislature, 1re session (22 novembre 1973 - 22 d&#233;cembre 1973)</option>
+	<option value="435" title="29e législature, 4e session (15 mars 1973 - 25 septembre 1973)">29e l&#233;gislature, 4e session (15 mars 1973 - 25 septembre 1973)</option>
+	<option value="433" title="29e législature, 3e session (7 mars 1972 - 14 mars 1973)">29e l&#233;gislature, 3e session (7 mars 1972 - 14 mars 1973)</option>
+	<option value="431" title="29e législature, 2e session (23 février 1971 - 24 décembre 1971)">29e l&#233;gislature, 2e session (23 f&#233;vrier 1971 - 24 d&#233;cembre 1971)</option>
+	<option value="429" title="29e législature, 1re session (9 juin 1970 - 19 décembre 1970)">29e l&#233;gislature, 1re session (9 juin 1970 - 19 d&#233;cembre 1970)</option>
+	<option value="427" title="28e législature, 5e session (24 février 1970 - 12 mars 1970)">28e l&#233;gislature, 5e session (24 f&#233;vrier 1970 - 12 mars 1970)</option>
+	<option value="425" title="28e législature, 4e session (25 février 1969 - 23 décembre 1969)">28e l&#233;gislature, 4e session (25 f&#233;vrier 1969 - 23 d&#233;cembre 1969)</option>
+	<option value="423" title="28e législature, 3e session (20 février 1968 - 18 décembre 1968)">28e l&#233;gislature, 3e session (20 f&#233;vrier 1968 - 18 d&#233;cembre 1968)</option>
+	<option value="421" title="28e législature, 2e session (20 octobre 1967 - 20 octobre 1967)">28e l&#233;gislature, 2e session (20 octobre 1967 - 20 octobre 1967)</option>
+	<option value="419" title="28e législature, 1re session (1 décembre 1966 - 12 août 1967)">28e l&#233;gislature, 1re session (1 d&#233;cembre 1966 - 12 ao&#251;t 1967)</option>
+	<option value="417" title="27e législature, 6e session (25 janvier 1966 - 18 avril 1966)">27e l&#233;gislature, 6e session (25 janvier 1966 - 18 avril 1966)</option>
+	<option value="415" title="27e législature, 5e session (22 octobre 1965 - 23 octobre 1965)">27e l&#233;gislature, 5e session (22 octobre 1965 - 23 octobre 1965)</option>
+	<option value="413" title="27e législature, 4e session (21 janvier 1965 - 6 août 1965)">27e l&#233;gislature, 4e session (21 janvier 1965 - 6 ao&#251;t 1965)</option>
+	<option value="411" title="27e législature, 3e session (14 janvier 1964 - 31 juillet 1964)">27e l&#233;gislature, 3e session (14 janvier 1964 - 31 juillet 1964)</option>
+	<option value="409" title="27e législature, 2e session (21 août 1963 - 23 août 1963)">27e l&#233;gislature, 2e session (21 ao&#251;t 1963 - 23 ao&#251;t 1963)</option>
+	<option value="407" title="27e législature, 1re session (15 janvier 1963 - 11 juillet 1963)">27e l&#233;gislature, 1re session (15 janvier 1963 - 11 juillet 1963)</option>
+	<option value="403" title="26e législature, 2e session (10 novembre 1960 - 10 juin 1961)">26e l&#233;gislature, 2e session (10 novembre 1960 - 10 juin 1961)</option>
+	<option value="401" title="26e législature, 1re session (20 septembre 1960 - 22 septembre 1960)">26e l&#233;gislature, 1re session (20 septembre 1960 - 22 septembre 1960)</option>
+	<option value="399" title="25e législature, 4e session (18 novembre 1959 - 18 mars 1960)">25e l&#233;gislature, 4e session (18 novembre 1959 - 18 mars 1960)</option>
+	<option value="397" title="25e législature, 3e session (19 novembre 1958 - 5 mars 1959)">25e l&#233;gislature, 3e session (19 novembre 1958 - 5 mars 1959)</option>
+	<option value="395" title="25e législature, 2e session (13 novembre 1957 - 21 février 1958)">25e l&#233;gislature, 2e session (13 novembre 1957 - 21 f&#233;vrier 1958)</option>
+	<option value="393" title="25e législature, 1re session (14 novembre 1956 - 21 février 1957)">25e l&#233;gislature, 1re session (14 novembre 1956 - 21 f&#233;vrier 1957)</option>
+	<option value="391" title="24e législature, 4e session (16 novembre 1955 - 23 février 1956)">24e l&#233;gislature, 4e session (16 novembre 1955 - 23 f&#233;vrier 1956)</option>
+	<option value="351" title="20e législature, 1re session (7 octobre 1936 - 12 novembre 1936)">20e l&#233;gislature, 1re session (7 octobre 1936 - 12 novembre 1936)</option>
+	<option value="343" title="18e législature, 2e session (10 janvier 1933 - 13 avril 1933)">18e l&#233;gislature, 2e session (10 janvier 1933 - 13 avril 1933)</option>
+	<option value="341" title="18e législature, 1re session (3 novembre 1931 - 19 février 1932)">18e l&#233;gislature, 1re session (3 novembre 1931 - 19 f&#233;vrier 1932)</option>
+	<option value="335" title="17e législature, 2e session (8 janvier 1929 - 4 avril 1929)">17e l&#233;gislature, 2e session (8 janvier 1929 - 4 avril 1929)</option>
+	<option value="331" title="16e législature, 4e session (11 janvier 1927 - 1 avril 1927)">16e l&#233;gislature, 4e session (11 janvier 1927 - 1 avril 1927)</option>
+	<option value="329" title="16e législature, 3e session (7 janvier 1926 - 24 mars 1926)">16e l&#233;gislature, 3e session (7 janvier 1926 - 24 mars 1926)</option>
+	<option value="325" title="16e législature, 1re session (17 décembre 1923 - 15 mars 1924)">16e l&#233;gislature, 1re session (17 d&#233;cembre 1923 - 15 mars 1924)</option>
+	<option value="323" title="15e législature, 4e session (24 octobre 1922 - 29 décembre 1922)">15e l&#233;gislature, 4e session (24 octobre 1922 - 29 d&#233;cembre 1922)</option>
+	<option value="321" title="15e législature, 3e session (10 janvier 1922 - 21 mars 1922)">15e l&#233;gislature, 3e session (10 janvier 1922 - 21 mars 1922)</option>
+	<option value="319" title="15e législature, 2e session (11 janvier 1921 - 19 mars 1921)">15e l&#233;gislature, 2e session (11 janvier 1921 - 19 mars 1921)</option>
+	<option value="317" title="15e législature, 1re session (10 décembre 1919 - 14 février 1920)">15e l&#233;gislature, 1re session (10 d&#233;cembre 1919 - 14 f&#233;vrier 1920)</option>
+	<option value="315" title="14e législature, 3e session (21 janvier 1919 - 17 mars 1919)">14e l&#233;gislature, 3e session (21 janvier 1919 - 17 mars 1919)</option>
+	<option value="313" title="14e législature, 2e session (4 décembre 1917 - 9 février 1918)">14e l&#233;gislature, 2e session (4 d&#233;cembre 1917 - 9 f&#233;vrier 1918)</option>
+	<option value="311" title="14e législature, 1re session (7 novembre 1916 - 22 décembre 1916)">14e l&#233;gislature, 1re session (7 novembre 1916 - 22 d&#233;cembre 1916)</option>
+	<option value="309" title="13e législature, 4e session (11 janvier 1916 - 16 mars 1916)">13e l&#233;gislature, 4e session (11 janvier 1916 - 16 mars 1916)</option>
+	<option value="307" title="13e législature, 3e session (7 janvier 1915 - 5 mars 1915)">13e l&#233;gislature, 3e session (7 janvier 1915 - 5 mars 1915)</option>
+	<option value="305" title="13e législature, 2e session (11 novembre 1913 - 19 février 1914)">13e l&#233;gislature, 2e session (11 novembre 1913 - 19 f&#233;vrier 1914)</option>
+	<option value="303" title="13e législature, 1re session (5 novembre 1912 - 21 décembre 1912)">13e l&#233;gislature, 1re session (5 novembre 1912 - 21 d&#233;cembre 1912)</option>
+	<option value="301" title="12e législature, 4e session (9 janvier 1912 - 3 avril 1912)">12e l&#233;gislature, 4e session (9 janvier 1912 - 3 avril 1912)</option>
+	<option value="299" title="12e législature, 3e session (10 janvier 1911 - 24 mars 1911)">12e l&#233;gislature, 3e session (10 janvier 1911 - 24 mars 1911)</option>
+	<option value="297" title="12e législature, 2e session (15 mars 1910 - 4 juin 1910)">12e l&#233;gislature, 2e session (15 mars 1910 - 4 juin 1910)</option>
+	<option value="295" title="12e législature, 1re session (2 mars 1909 - 29 mai 1909)">12e l&#233;gislature, 1re session (2 mars 1909 - 29 mai 1909)</option>
+	<option value="293" title="11e législature, 4e session (3 mars 1908 - 25 avril 1908)">11e l&#233;gislature, 4e session (3 mars 1908 - 25 avril 1908)</option>
+
+</select>
+	        </div>
+        </div>
+
+		<div align="right" class="btnRechercheContextuelle">
+			<input type="button" onclick="RechercheTravaux()" value="Rechercher" class="btnSoumettre" />
+		</div>
+</div>
+
+
+<script type="text/javascript">
+    var idSessionLegislatureCourante = '1621'
+
+    $(document).ready(function () {
+        InitialiserRechercheTravauxParlementaires();
+        $("input.champMotCle, [data-champ] input, [data-champ] select]").keypress(function (e) {
+            if (e && e.keyCode == 13) {
+                RechercheTravaux();
+                return false;
+            }
+        });
+    })
+
+//<![CDATA[
+    String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); };
+
+    function RechercheTravaux() {
+        if (!ValiderPeriode())
+            return;
+
+        var motsCles = $('#ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux');
+
+        var queryString = "";
+        queryString = queryString + "SectionRecherche=9";
+        
+        if (motsCles.val() != "")
+            queryString = queryString + "&MotsCles=" + encodeURIComponent(htmlEscape(motsCles.val()));
+        
+        var typeTravaux = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux');
+        queryString = queryString + "&TypeTravaux=" + typeTravaux.val();
+            
+        var typeDocuments = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments');
+        queryString = queryString + "&TypeDocument=" + typeDocuments.val();
+
+        var dateDebut = $('#ctl00_ColGauche_RechercheTravaux_txtDateDebut');
+        var dateFin = $('#ctl00_ColGauche_RechercheTravaux_txtDateFin');
+        if (dateDebut.val() != "" || dateFin.val() != "")
+        {
+            queryString = queryString + "&PeriodeDebut=" + dateDebut.val();
+            queryString = queryString + "&PeriodeFin=" + dateFin.val();
+            queryString = queryString + "&Legislature=0";
+        }
+        else
+        {
+            var sessionLegislature = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature');
+            if (sessionLegislature.val() == "-1") {
+                sessionLegislature.get(0).selectedIndex = 1;
+            }
+            queryString = queryString + "&Legislature=" + sessionLegislature.val();
+        }
+
+        //Appel de la page de recherche.
+        window.location = '/fr/recherche/recherche-avancee.html?' + queryString;
+    }
+ //]]>
+</script>
+
+
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Imprimer la page" title="Imprimer la page"
+                        src='/Images/icones/partageImprimante.gif' width="16" height="16"/></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Taille du texte : régulière" title="Taille du texte : régulière" src='/Images/icones/retrecir.gif' width="16" height="16"/></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src='/Images/icones/agrandir.gif' width="16" height="16"/></a>
+                </li>
+                <li>
+                    <a href='/fr/fils-rss.html' class="nePasRediriger">
+                        <img alt="Fils RSS" title="Fils RSS"
+                        src='/Images/icones/partageRss.gif' width="16" height="16"/></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Partager</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                    <li>
+                        <a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-190614.html' class="nePasRediriger">
+                            <img alt="Partager par Facebook" title="Partager par Facebook"
+                            src='/Images/icones/partageFacebook.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://x.com/intent/tweet?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-190614.html' class="nePasRediriger">
+                            <img alt="Partager par X" title="Partager par X"
+                            src='/Images/icones/partageTwitter.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://www.linkedin.com/sharing/share-offsite/?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-190614.html' class="nePasRediriger">
+                            <img alt="Partager par LinkedIn" title="Partager par LinkedIn"
+                            src='/Images/icones/partageLinkedin.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='/fr/__envoyer-ami.html?lienurl=%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-190614.html' class="nePasRediriger">
+                            <img alt="Partager par courriel" title="Partager par courriel"
+                            src='/Images/icones/partageCourriel.gif' /></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/fr/document/19787.html">Diagramme de l'Assemblée</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="styleHyperlien">
+		            <span id="IconeEnDirect" class="icoEnDirect"> </span>		
+		            En direct sur le Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    <h1>
+	<span id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu"><a href="#ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"><img alt="Liens Ignorer la navigation" src="/WebResource.axd?d=4UaBqSIWkbOa0oKpfyVaroCfWw-gKpH7p94XAneRMXaNy_TmToGBBciOgGFLRbyIG0lHcoUothuOjD7lW_eFebb023o1&amp;t=638901627720898773" width="0" height="0" style="border-width:0px;" /></a><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span><a id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"></a></span></h1>
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+								
+    <h2>Version finale</h2>
+    
+	
+            <div class="boutonRetour">
+                <span>
+			        <a  href='https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/index.html'>Retour à la liste des séances du Journal des débats</a>
+			    </span>
+            </div>
+			<h2 class="titre2TravauxParl">
+				42<sup>e</sup> législature, 1<sup>re</sup> session
+				<br />
+				(27 novembre 2018 au 13 octobre 2021)
+			</h2>
+		
+	 
+	
+		
+			<h2>
+                Le vendredi 14 juin 2019 -  Vol.&nbsp;45 N°&nbsp;27
+            </h2>
+			
+			
+					<p>
+				
+					<h3>Étude détaillée du projet de loi n° 2, Loi resserrant l’encadrement du cannabis</h3>
+					<br />
+				
+					</p>
+				
+			
+			
+               
+                <p>
+				    <a href="#debut_journal">Aller directement au contenu du Journal des débats</a>
+			    </p>
+            
+			    <h3>Table des matières</h3>
+			    <div class="tableMatieresJournal">
+				    <p><TableDesMatieres><p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;margin-left: 0cm;margin-right: 0cm;margin-top: 12.0pt;text-align: left;">
+  <a href="#_Toc115959770">
+    <span>Étude détaillée (suite)</span>
+  </a>
+</p>
+<p align="center" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;text-align: center;">
+  <b>Intervenants</b>
+</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Luc
+Provençal, président</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+Lionel Carmant</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+André Fortin</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+Sylvain Lévesque</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+Donald Martel</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Mathieu
+Lévesque</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. François
+Tremblay</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">Mme
+Nancy Guillemette</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">Mme
+Kathleen Weil</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+Enrico Ciccone</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+Frantz Benjamin</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Ian
+Lafrenière</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          M.
+Sokun C. Cheang, ministère de la Santé et des Services sociaux</p>
+<p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Témoin
+interrogé par les membres de la commission</p></TableDesMatieres></p>
+			    </div>
+			
+                <h2>
+				    <a name="debut_journal" class="ancreNommee">Journal des débats</a>
+			    </h2>
+			<Contenu><p style="mso-style-link: &quot;text-align: justify">
+  <a name="Page00001"></a>
+  <i>(Douze heures vingt et une minutes)</i>
+</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> À l'ordre, s'il vous plaît! Ayant
+ constaté le quorum, je déclare la séance de la Commission de la santé et des
+ services sociaux ouverte. Je demande à toutes les personnes dans la salle de
+ bien vouloir éteindre la sonnerie de leurs appareils électroniques.</p>
+<p style="mso-style-link: &quot;text-align: justify">La commission est réunie afin de poursuivre l'étude
+ détaillée du projet de loi n° 2, Loi resserrant l'encadrement du cannabis.</p>
+<p style="mso-style-link: &quot;text-align: justify">Mme la secrétaire, y a-t-il des remplacements?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b> Oui, M. le
+ Président. Mme Lecours (Lotbinière-Frontenac) est remplacée par M. Martel
+ (Nicolet-Bécancour); Mme Picard (Soulanges), par M. Lafrenière
+ (Vachon); M. Thouin (Rousseau), par M. Lévesque (Chauveau);
+ Mme David
+ (Marguerite-Bourgeoys), par Mme Weil (Notre-Dame-de-Grâce); M. Zanetti
+ (Jean-Lesage), par M. Leduc (Hochelaga-Maisonneuve); M. Arseneau
+ (Îles-de-la-Madeleine), par M. Gaudreault (Jonquière).</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Merci, Mme la secrétaire.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc115959770"></a>
+  <a name="_Toc76478848"></a>
+  <a name="_Toc76455026">Étude détaillée (suite)</a>
+</p>
+<p style="mso-style-link: &quot;text-align: justify">Lors de l'ajournement de nos travaux, hier, le 13 juin 2019, nos discussions
+ portaient sur l'amendement introduisant l'article 7.1 du projet
+ de loi. Y a-t-il d'autres interventions sur cet amendement?</p>
+<p style="mso-style-link: &quot;text-align: justify">S'il n'y a pas d'autre intervention sur cet
+ amendement, nous allons procéder à la mise aux voix.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Fortin :</b> Par
+ appel nominal, s'il vous plaît, M. le Président.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Par appel nominal, oui. Alors, Mme la secrétaire, par
+ appel nominal concernant l'amendement de l'article qui introduit le 7.1 du
+ ministre.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b> Pour, contre,
+ abstention. M. Carmant (Taillon)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Carmant :</b> Pour.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b> M. Lévesque
+ (Chauveau)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Lévesque (Chauveau) :</b> Pour.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b>
+ M. Martel (Nicolet-Bécancour)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M.</b>
+  <b>Martel</b> <b>:</b> Pour.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b>
+ M. Lévesque (Chapleau)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Lévesque (Chapleau) :</b> Pour.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b>
+ M. Thouin (Rousseau)... M. Tremblay (Dubuc)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Tremblay :</b> Pour.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b> Mme
+ Guillemette (Roberval)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Mme Guillemette :</b> Pour.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b>
+ M. Fortin (Pontiac)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Fortin :</b>
+ Contre.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b> Mme Weil
+ (Notre-Dame-de-Grâce)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Mme Weil</b> <b>:</b> Contre.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <a name="Page00002"></a>
+  <b>La Secrétaire</b> <b>:</b>
+ M. Ciccone (Marquette)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Ciccone :</b>
+ Contre.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b>
+ M. Benjamin (Viau)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Benjamin :</b> Contre.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>La Secrétaire</b> <b>:</b>
+ M. Provençal (Beauce-Nord)?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Abstention. Donc, l'amendement introduisant
+ l'article 7.1 déposé par M. le ministre est accepté à majorité.</p>
+<p style="mso-style-link: &quot;text-align: justify">Nous revenons à l'article 7 principal mais
+ qui devient maintenant l'article 7 amendé. C'est ça? </p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Une voix</b> <b>:</b> Non.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Le
+ Président (M. Provençal) </b>
+  <b>:</b> Non? L'article 7, c'est
+ vrai, parce que 7.1, c'est un nouvel article. Alors, monsieur... Quelles
+ sont les personnes qui veulent intervenir concernant l'article 7?</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M. Fortin :</b>
+ Oui, si possible, M. le Président.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Allez-y, M. le député de Pontiac.</p>
+<p style="mso-style-link: &quot;text-align: justify">
+  <b>M.
+ Fortin :</b> Merci. Merci, M. le
+ Président. Alors, oui, écoutez, évidemment, là, on comprend, le ministre a
+ déposé l'amendement 7.1 qui fait en
+ sorte de spécifier, de préciser un peu ce qu'il y a dans l'article 7, là, et on
+ avait eu le débat, à savoir comment
+ on en débattait. Alors, c'est utile, effectivement, là, selon la suggestion, je
+ ne me souviens plus si c'est la vôtre,
+ celle du ministre ou celle de quelqu'un d'autre, mais d'avoir le 7.1 en tête
+ quand on discute de l'article 7, parce que le 7.1, effectivement, là, vient permettre de fumer du cannabis dans un
+ parc municipal à l'extérieur des endroits où il y a des infrastructures
+ pour enfant, ou des infrastructures sportives, ou autres.</p>
+<p style="mso-style-link: &quot;text-align: justify">Alors, j'ai fait la démonstration, là, un peu
+ tard hier soir, disons, M. le Président, que ce n'est pas parfait, la solution du ministre, hein? Et ce n'est pas
+ parfait, parce que, pour beaucoup de gens, ce ne sera pas nécessairement
+ accessible. Ce ne sera pas nécessairement
+ accessible de pouvoir consommer du cannabis de façon simple, de façon... près
+ de chez eux, disons, hein, sans
+ qu'ils se placent dans une situation où ils pourraient compromettre leur
+ sécurité, que ce soit en prenant leur voiture
+ pour consommer, que ce soit en prenant leur vélo, même,
+ que ce soit en se déplaçant, disons, sur de grandes distances, des fois, pour pouvoir fumer. Parce que
+ ce n'est pas clair jusqu'à maintenant, ce n'est pas clair, ce que les municipalités vont faire, comment elles vont s'organiser, où elles vont
+ permettre et ne pas permettre.</p>
+<p style="text-align: justify">Et ça, ce
+ n'est pas la réglementation ou la loi du ministre, là, qui est en cause
+ ici. Mais, si on maintient, disons, les dispositions actuelles qui
+ sont à l'article 16 de la loi n° 157,
+ c'est sûr qu'on n'a pas des enjeux comme ceux qu'on a
+ identifiés, regarde, parce que la réglementation ou la loi actuelle, elle,
+ permet la consommation sur la voie publique tant que la municipalité est d'accord
+ avec ça. </p>
+<p style="text-align: justify">Et c'est là
+ que beaucoup de municipalités, la mienne incluse, la ville de Gatineau
+ incluse, la ville de Montréal, Laval, Longueuil et plusieurs autres, si
+ je ne m'abuse, M. le Président, ont fait le choix... Longueuil aussi, n'est-ce
+ pas, M. le ministre? Oui? Longueuil, oui... ont fait le choix de
+ permettre aux citoyens d'âge légal de consommer sur le trottoir,
+ devant chez eux, pour éviter les situations
+ comme celles qui étaient décrites par la
+ députée de Notre-Dame-de-Grâce hier soir, où des femmes
+ pourraient compromettre leur sécurité ou pourraient être en
+ contravention de la loi en fumant devant chez eux plutôt que de prendre
+ l'option qui est de fumer dans un parc, tard le soir, par exemple.</p>
+<p style="text-align: justify">Et les parcs
+ municipaux, c'est vrai que ça ferme à des heures des fois assez strictes, hein?
+ On parlait... À Gatineau, on ferme à
+ 9 heures. Hier, on a fini nos travaux à 10 h 30 ici. Donc, après la
+ journée de travail, impossible pour quelqu'un... Et, même si c'est 11 heures, tu sais, 11 heures,
+ quand même, des fois... On a fini ici à 10 h 30
+ hier soir. Je suis certain que le ministre
+ est allé écouter quelques minutes du match de basket, donc, entre le troisième et
+ le quatrième quart, aurait pu décider de vouloir un produit récréatif, et
+ il aurait été trop tard, M. le Président. Il aurait été trop tard.</p>
+<p style="text-align: justify">Alors, il y a quand même
+ des limitations assez significatives à ce que le ministre suggère, et c'est
+ correct. Je pense que c'est ça
+ que le ministre veut, hein, qu'il y ait des restrictions assez limitatives.
+ Mais, en même temps, ça mène à des circonstances, à des événements
+ potentiellement malheureux comme ceux que mettait de l'avant la députée de Notre-Dame-de-Grâce. Alors, quand je regarde le
+ texte proposé par le ministre sur l'article 16, le ministre vient dire
+ qu'il est interdit de fumer du cannabis...
+ ou vient proposer qu'il serait interdit de fumer du cannabis dans tous les
+ lieux suivants. </p>
+<p style="text-align: justify">Et il y a des lieux, effectivement, là, qu'on
+ n'aura pas d'enjeu avec ça. Il y a des lieux qu'il maintient du projet de loi n° 157, entre autres, toute la
+ question des tentes, des chapiteaux, des autres installations. Et on a parlé
+ hier, dans le débat des fêtes et...
+ festivals, pour le dire correctement, mais ça va mieux quand il n'est pas
+ 10 heures le soir... Mais, quand on parlé des fêtes, des festivals,
+ essentiellement, le ministre nous dit, bien, à travers, encore là, 7.1, qu'il
+ ne voulait pas qu'il y ait de consommation dans les fêtes, festivals. </p>
+<p style="text-align: justify">La
+ proposition qui était devant lui, du député de Jonquière, faisait quand même en
+ sorte que, dans toutes les tentes, tous les chapiteaux, tous les
+ endroits abrités, là, comme ceux-là dans une fête ou un festival, il n'était
+ pas possible de consommer. Alors, vraiment,
+ il y avait quand même une limitation assez importante pour s'assurer que la
+ fumée, hein, parce <a name="Page00003"></a>que, là, on parle de fumer, on ne parle pas de consommer, que la
+ fumée ne soit pas à un endroit concentré. C'est un peu ça l'idée, de le prévenir dans les tentes, parce que
+ ça ressemble un peu à des lieux fermés, des fois, là, où la fumée peut
+ moins se disperser qu'ailleurs.</p>
+<p style="text-align: justify">Là, je veux
+ juste qu'on les passe un à la fois. Les abribus, là, vous avez fait, si je...
+ vous avez fait, M. le Président, mais
+ l'équipe ministérielle, l'équipe du ministre a fait des changements à l'alinéa
+ ou le paragraphe sur les abribus en enlevant les aires extérieures
+ utilisées pour l'attente d'un moyen de transport collectif. Pourquoi?</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b> Je passerais la parole
+ au juriste.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Alors, consentement pour que M. le juriste puisse
+ répondre? Consentement?</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Oui, consentement.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Merci.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b>
+ Sokun Cheang, au ministère de la Justice.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> On
+ commence à vous connaître.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b>
+ Oui. C'est juste... parce qu'on est d'avis que ce n'était pas nécessaire de le
+ reprendre, qu'est-ce qui est actuellement...
+ compte tenu qu'on a ajouté le paragraphe 6°, qui vise tous les autres lieux
+ extérieurs qui accueillent le public,
+ dont les aires extérieures pour... les aires extérieures pour l'attente d'un
+ moyen de transport collectif. Ça, ça serait couvert par le paragraphe 6°
+ de l'article 16 actuel. C'est juste que...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Parce qu'on est dehors essentiellement.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b>
+ Exactement ça. Exactement ça.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ O.K. Donc, un arrêt d'autobus, là, c'est considéré un lieu public extérieur.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b>
+ Tout à fait.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Ce n'est pas sur la
+ voie publique... Bien, ça peut être sur le trottoir, là, j'imagine. Donc, c'est
+ la voie publique, là.</p>
+<p style="text-align: justify">
+  <i>• (12 h 30) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Oui, exactement,
+ ça dépend... c'est ça, mais ça
+ devient extérieur quand il est public... parce que c'est une aire, ce n'est pas... À cause que, là, ici, on parle...
+ lieu extérieur qui accueille le public, donc à cause de ça, c'est couvert par ce paragraphe
+ 6° là, à condition qu'on... Nous sommes d'avis que ce n'était pas nécessaire,
+ à ce moment-là, de le garder
+ avec abribus, là.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> O.K.
+ Mais même les aires extérieures utilisées pour l'attente d'un moyen de
+ transport collectif qui sont sur un
+ terrain privé, là... Tu sais, l'arrêt d'autobus, là, qui est à côté de chez
+ moi, là, qui est sur le terrain du service de police, il n'y a pas de
+ trottoir, c'est vraiment... l'autobus te laisse, là, sur le terrain, tu attends
+ sur le terrain.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> C'est
+ couvert pareil. On parle d'aires extérieures qui accueillent le public, que ce
+ soit public... terrain d'une propriété
+ privée ou publique, dès que ça accueille le public, que le public ait accès sur
+ ce terrain-là, sur ce lieu-là, c'est couvert par le paragraphe 6° de
+ l'article 16 proposé par l'article 7 du projet de loi.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> O.K. Je
+ comprends. Pas de problème avec ça. Les tentes, chapiteaux, on l'a dit. Là,
+ vous incluez un paragraphe où il est inscrit : «Les terrasses et autres
+ aires extérieures exploitées dans le cadre d'une activité commerciale et qui sont aménagées pour permettre le repos, la
+ détente ou la consommation de produits.» Ça, c'est exactement
+ le même texte qu'on avait auparavant, il n'y a pas de changement? </p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b>
+ Non.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Mais vous pensez à quoi quand vous pensez à une activité commerciale? On fait
+ référence à quoi, exactement?</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Les
+ terrasses des restaurants, les terrasses de commerçants, c'est vraiment
+ ça, les terrasses de supermarchés qui proposent les lieux pour
+ pause-repas... </p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> De
+ repos. Quelqu'un qui attend à l'extérieur du supermarché avec ses sacs et tout
+ ça.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Tout à fait. C'est couvert par ça, oui.</p>
+<p style="text-align: justify">
+  <a name="Page00004"></a>
+  <b>M. Fortin :</b> O.K. C'est bon. «Les terrains sur lesquels sont situés
+ les lieux fermés assujettis à l'interdiction de fumer prévue au premier alinéa de l'article 12»... C'est
+ quoi, le premier alinéa de l'article 12? Je peux retourner voir, là,
+ mais...</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Bien, c'est tous les lieux fermés qu'on
+ avait... la liste des lieux fermés.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Ah oui! O.K. C'est bon. Donc, tous les terrains de ces
+ endroits-là.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> À l'exception des immeubles d'habitation et des
+ résidences pour personnes âgées. Ça, c'est
+ la même exception qu'actuellement on applique, le neuf mètres. Le neuf mètres
+ s'applique, compte tenu qu'il y
+ a des résidences privées... que ça ne
+ s'appliquait pas actuellement, donc là, on prévoit la même exception que les
+ terrains de ces immeubles d'habitation là ne sont pas... l'interdiction
+ ne s'applique pas à ces terrains-là. </p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> O.K. Donc, ce que vous me dites, là, à l'exception des
+ terrains des immeubles d'habitation comportant uniquement deux logements
+ ou plus, donc des condos, disons, là, il y a la restriction de neuf mètres
+ autour de la porte, mais c'est tout.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Non, actuellement, la restriction ne s'applique pas par rapport au terrain... sur le terrain d'un
+ immeuble comportant des... donc un immeuble de condominiums ne s'applique pas.
+ Avec la nouvelle mesure, elle ne s'applique pas non plus sur le terrain.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Mais le neuf mètres s'applique, lui?</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Le neuf mètres n'a jamais été
+ appliqué.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> O.K., mais il ne s'applique pas
+ plus.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Exactement... bien, c'est
+ ça, exactement.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Donc, quelqu'un peut fumer à l'extérieur, tant qu'il
+ n'est pas sur la voie publique, là, ce n'est pas un condo comme ici, sur
+ la rue Saint-Louis, mettons...</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Sur son terrain...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> ...ou D'Auteuil, pour ceux qui connaissent la rue
+ D'Auteuil, où on franchit le pas de la porte puis on est directement sur le trottoir, là. Ce n'est pas ça, là. Par exemple, un condo où il y aurait, je ne sais pas, une allée pour se rendre...</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Exemple, un terrain
+ privé...</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> On peut fumer tout de suite à l'extérieur, il n'y a
+ pas de restriction de neuf mètres.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Sous réserve du règlement de l'immeuble, du règlement
+ du syndicat, sous réserve... Sinon, il n'y a pas de restriction par
+ endroit.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> C'est bon. Je comprends. Tous les autres lieux extérieurs qui... le
+ public, notamment les parcs, les terrains de jeu et les terrains de sport... donc, ça, dans le fond, là, quand vous dites «notamment les parcs», c'est un peu là que vous êtes venus inclure les parcs municipaux, à 7.1...
+ vous êtes venus exclure, excusez-moi, les parcs municipaux tels que les municipalités décident de le faire. Donc, vous incluez les parcs dans les restrictions
+ puis ensuite, à 7.1, vous l'avez enlevé, si la municipalité en fait le
+ choix.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> On donne... La règle générale, c'est que c'est
+ inclus parce que c'est un lieu extérieur qui accueille le public. </p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> C'est inclus, donc c'est impossible de consommer. </p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> C'est interdit. C'est interdit de fumer.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Oui, excusez-moi.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> ...parce qu'on peut consommer, donc,
+ l'huile...</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Je devrais commencer à connaître le concept.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> ...tout ça, il n'y a pas de problème, c'est...
+ c'est la forme fumée qu'il faut vraiment
+ faire... c'est la forme fumée qui est interdite, là, parce que vous pouvez
+ consommer plus comestible, de l'huile, vous avez vu, on en a discuté.</p>
+<p style="text-align: justify">
+  <a name="Page00005"></a>Donc,
+ ici, la règle générale, c'est que c'est interdit, dans les parcs, tout ça,
+ c'est interdit. On a pris une exception qu'on avait étudiée hier, vous en avez... C'est par rapport à 7.1. Ça, c'est
+ la possibilité à la municipalité de le permettre dans son règlement
+ municipal. C'est ça, la seule exception, mais dans la loi, c'est
+ interdit dans tout lieu qui accueille le public... tout lieu extérieur
+ qui accueille le public.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> O.K.
+ Donc, c'est pour ça que vous dites «notamment», là, juste pour que les gens comprennent un
+ peu ce que la législation veut dire, mais ça inclut tout le reste qui n'est pas
+ là. O.K. </p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Le «notamment»
+ ici, on a mis l'emphase sur ces endroits-là où il y a des mineurs, que déjà c'est interdit actuellement. Actuellement, on
+ était dans les lieux extérieurs parce que c'est à cause qu'il y a des
+ mineurs. Là, on a repris ça parce que, dans
+ ces endroits-là, il y a une présence des mineurs. C'est juste qu'on a mis l'emphase sur ces
+ lieux-là, mais ça vise évidemment tous les lieux extérieurs qui accueillent le
+ public, là.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> C'est bon. Je comprends. Merci. Le ministre nous
+ l'a dit en tout début, je pense que c'était dans les premiers articles qu'on avait étudiés, et c'était
+ dans un échange avec le député d'Hochelaga-Maisonneuve, que lui voyait
+ plus la possibilité pour une municipalité,
+ comme il l'a fait un peu à 7.1, là, de permettre dans un parc plutôt qu'une
+ place. Nous, on parlait... Je pense
+ qu'on parlait du parc Émilie-Gamelin, là, à l'époque, là. Là, vous avez permis,
+ à travers 7.1, dans un parc, mais pas dans une place. Y a-tu une
+ différence, dans votre esprit, entre un parc puis une place? C'est quoi, la
+ différence dans votre tête?</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b>
+ M. le Président, on a fait des vérifications. Alors, par exemple,
+ Émilie-Gamelin, c'est effectivement un parc, mais la place du festival,
+ c'est comme sur la voie publique, là. Ça fait que c'est ce genre de place là où
+ ça ne sera pas permis.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Oui, M. le député de Marquette.</p>
+<p style="text-align: justify">
+  <b>M. Ciccone :</b> Merci, M. le Président. Justement, puis je pense
+ que c'est important de bien préciser, parce que le square Victoria, la place d'Armes, place du
+ Canada, ça, est-ce que c'est considéré comme des parcs? Il y a de la
+ verdure. Est-ce que c'est... Il peut y avoir un rassemblement. Est-ce que ça
+ entre dans les autres lieux ou dans les parcs?</p>
+<p style="text-align: justify">Est-ce que
+ les municipalités ont la prérogative, selon le nouvel article 7.1, de
+ décider de faire... de décider que ce soit un endroit où il est possible
+ de consommer? Où que ça rentre, ça, dans tout ça, place, parc, square? Je
+ pense, c'est important de préciser ici, là.</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b>
+ Bien, la place du festival, c'est vraiment facile puisque c'est sur la voie
+ publique, là. Mais dans... les choses sont surélevées, là, comme ce que
+ vous mentionnez, ça, je ne le sais pas. Peut-être, M. le juriste...</p>
+<p style="text-align: justify">
+  <b>M. Cheang
+ (Sokun C.) :</b> Oui. Bon, quand
+ on parle de parc municipal, ce qu'on vise, c'est au sens commun.
+ Donc, c'est vraiment à la discrétion de la
+ ville, comment qu'elle va faire l'appréciation, si elle considère comme...
+ Nous, on est allé vérifier hier par rapport place Pasteur ou parc Émilie-Gamelin. Là, sur le site de la ville de Montréal, il est indiqué la liste de ses
+ parcs, de ses grands parcs, puis place Pasteur n'est pas considérée comme parc
+ par la ville de Montréal, tandis que parc Émilie-Gamelin, c'est
+ considéré comme un parc. On a la liste.</p>
+<p style="text-align: justify">Donc, c'est vraiment...
+ Ça dépend plus à la discrétion de la municipalité, comment qu'elle va faire l'appréciation de l'endroit public, de la place publique. Place
+ Pasteur est plus considérée comme une place publique que comme un parc.
+ Donc, à ce moment-là, ça ne sera pas couvert. D'autres villes, d'autres municipalités,
+ ça va être vraiment à la discrétion, vraiment, de chaque municipalité de considérer
+ comment qu'ils vont faire l'appréciation. S'ils considèrent que ce n'est
+ pas un parc, donc, à ce moment-là, ce n'est pas couvert. Ce n'est pas possible,
+ à ce moment-là, qu'ils puissent permettre de fumer dans l'endroit.</p>
+<p style="text-align: justify">
+  <b>Mme Weil</b> <b>:</b> Comment vous
+ définissez «parc»?</p>
+<p style="text-align: justify">
+  <b>M. Cheang
+ (Sokun C.) :</b> Bien, comme je
+ vous dis, c'est vraiment plus à la municipalité. Souvent, un
+ parc, on retrouve des terrains de
+ jeu, on retrouve des modules pour les enfants. Et, des fois, ils ont juste
+ des... une aire de jeu, ce n'est pas un parc, mais c'est vraiment à
+ la...</p>
+<p style="text-align: justify">
+  <b>Mme Weil</b> <b>:</b> Excusez-moi. C'est juste parce que
+ vous utilisez deux expressions, «parc» et «parc municipal». Dans votre amendement,
+ vous utilisez le mot «parc municipal». On peut... Ça crée peut-être
+ une confusion par rapport à c'est quoi le sens de l'autre parc.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> M. le ministre.</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b> On met... On utilise le terme «municipal»
+ parce que les parcs provinciaux, comme j'ai
+ mentionné hier, sous notre législation, ça, c'est interdit.</p>
+<p style="text-align: justify">
+  <b>Mme Weil</b> <b>:</b> Mais vous ne
+ voulez pas définir «parc» dans la loi, là, dans l'alinéa 6°? Non, mais, je veux
+ dire...</p>
+<p style="text-align: justify">
+  <a name="Page00006"></a>
+  <b>M. Carmant :</b> Je pense
+ que... C'est parce que ça revient à la municipalité de décider. Tu sais, on
+ leur donne le pouvoir réglementaire de décider.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> M. le Président, est-ce que les... Là, je comprends que la ville de
+ Montréal a fait l'exercice. Ils ont délimité c'est quoi, les parcs, et c'est quoi, les places à l'intérieur de la
+ ville de Montréal. C'est ce que M. le juriste a dit, qu'il avait
+ consulté la liste, là, de la ville de Montréal.</p>
+<p style="text-align: justify">
+  <b>M. Cheang
+ (Sokun C.) :</b> Oui. Lorsqu'on a fait la vérification, là, sur le
+ site de la ville de Montréal, tout à fait.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Est-ce que vous pouvez le déposer à la commission? Je pense que ça
+ serait utile pour nous, là, juste de comprendre
+ au moins. Parce que je ne sais pas si toutes les villes ont fait cet
+ exercice-là. C'est vraiment... Puis je ne vous demanderai pas l'ensemble des villes, là, mais, si vous avez celui de
+ Montréal pas loin, parce que vous l'avez consulté hier, je pense que ça
+ serait utile, juste pour nous, de comprendre un peu c'est quoi, la différence
+ entre les parcs et les places.</p>
+<p style="text-align: justify">
+  <b>Mme Weil</b> <b>:</b>
+ Mais je rajouterais, excusez-moi, pendant que vous faites l'exercice,
+ honnêtement, quand on a deux
+ expressions... surtout que, dans le cas de l'amendement, ce n'est pas clair
+ pour quelqu'un qui lit la loi. Il y aura un parc... On ne sait pas c'est quoi, la distinction. Vous, vous le savez,
+ mais c'est... Il y a certainement une expression que vous... soit que vous dites «parcs municipaux»,
+ là, ici. C'est quoi, autrement? Ou bien vous listez des types de parc.
+ Ça pourrait être provinciaux, municipaux ou autres, quelque chose, mais
+ honnêtement, on... Ce n'est pas clair.</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b>
+ L'idée, c'est que... c'était un peu de laisser un peu la responsabilité
+ municipale aussi. Si on vient nous-mêmes définir, je pense que ça leur
+ coupe un peu l'herbe sous les pieds, là.</p>
+<p style="text-align: justify">
+  <i>• (12 h 40) •</i>
+</p>
+<p style="text-align: justify">
+  <b>Mme Weil</b> <b>:</b>
+ Oui, mais vous, vous avez déjà une interdiction. Alors donc, vous, comme le
+ gouvernement, nous, les législateurs,
+ on sait de quoi on parle quand on dit parc, mais ça ne peut pas être quelque
+ chose qui sera défini éventuellement, parce
+ que vous utilisez l'expression «parc municipal» dans votre amendement, mais
+ vous aviez quelque chose en tête... parce que la première fois que ce
+ mot a été utilisé, c'était juste «parc», j'imagine. Mais là, avec l'amendement,
+ c'est là que l'expression «parc municipal» est venue se rajouter?</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> ...on vise tous les lieux extérieurs que le
+ public... donc, ça vise tous les parcs, que ce soit un parc de la SEPAQ, tout ça. Là, par rapport à
+ l'exception, on parle du parc, un parc municipal. Donc, c'est un parc qui
+ appartient à la municipalité. Donc, ce sera
+ à la municipalité de... parce que, là, vous venez par rapport à place, là. Ici,
+ on vise vraiment un parc municipal pour faire la distinction que ce
+ n'est pas tous les parcs... que ce n'est pas possible, ça, dans un parc.</p>
+<p style="text-align: justify">Donc,
+ c'est la municipalité qui va identifier ses parcs, et c'est dans ces parcs-là
+ qu'elle pourra, à ce moment-là, permettre
+ de fumer du cannabis, là. C'est vraiment ça. Donc, pourquoi on a amené la
+ notion de parc municipal, c'est pour vraiment
+ limiter vraiment au parc qui appartient... qui est reconnu par la municipalité.
+ C'est vraiment ça. C'est le sens commun de parc municipal.</p>
+<p style="text-align: justify">
+  <b>Mme Weil</b> <b>:</b>
+ ...espace vert, essentiellement, c'est un espace vert avec...</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Bien, comme je vous dis, ça va appartenir à la
+ municipalité. Si c'est... et là ça dépend...</p>
+<p style="text-align: justify">
+  <b>Mme
+ Weil</b> <b>:</b> ...au-delà de la municipalité, là. Donc, dans une
+ municipalité, il y a peut-être des espaces verts qu'on va en faire un parc, hein? Parce que le concept de
+ parc municipal, c'est parce qu'on le voit à Montréal, il y a l'insigne de
+ la ville de Montréal. Ça veut dire qu'ils
+ sont responsables de tout ce qui se passe dans ce parc-là. Ils vont mettre des
+ fleurs, ils vont mettre des bancs, etc.
+ Sinon, il y a peut-être des espaces verts, vous, vous appelez ça parcs, mais c'est des
+ espaces verts libres un peu, ou qui appartiennent à la Couronne, ou qui
+ appartiennent à la province. On ne sait pas trop.</p>
+<p style="text-align: justify">Moi,
+ je ne suis pas spécialiste là-dedans, mais souvent on le voit tout de suite,
+ c'est des espaces verts. On en voit beaucoup
+ quand on sort de la ville. Vous parlez de ces espaces verts... parce qu'un
+ parc, il y a des balançoires ou il y a quelque
+ chose qui indique... quand on pense parc municipal, on sait ce que ça veut
+ dire. Mais un parc comme vous, vous le dites,
+ oui, il y a les parcs provinciaux. Ça, c'est quelque chose. Sinon, vous parlez
+ d'espaces verts, là? Bien, en tout cas...</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Je parle de parc... nous, nous parlons de parc
+ municipal, et c'est le sens commun qui...</p>
+<p style="text-align: justify">
+  <b>Le Président (M.
+ Provençal) </b>
+  <b>:</b> M. le député de Chauveau.</p>
+<p style="text-align: justify">
+  <b>M.
+ Lévesque (Chauveau) :</b> Oui, bien, M. le Président, ce qui est
+ intéressant, c'est qu'on a adopté 7.1, l'article 7.1, puis ce qui est facilitant pour le citoyen... je
+ comprends la préoccupation de notre collègue de Notre-Dame-de-Grâce. Ce qui est intéressant, je vais juste relire, que
+ dans chacun des parcs de la ville, la ville doit... la ville ou la municipalité
+ doit indiquer, au moyen d'affiches
+ installées à la vue des personnes qui fréquentent le parc, les lieux où il est
+ permis de fumer du cannabis. La confusion est peu probable, considérant
+ cet élément-là de la loi qu'on a adopté il y a quelques minutes.</p>
+<p style="text-align: justify">Alors,
+ c'est pour ça que c'est le fun de la clarifier grâce... avec 7.1, bien... Puis
+ ça a été bien qu'on a suspendu hier, en fait, l'article 7 pour voter
+ 7.1 au préalable. Ça permet de clarifier maintenant la question des parcs...</p>
+<p style="text-align: justify">
+  <a name="Page00007"></a>
+  <b>Mme
+ Weil</b> <b>:</b> Bien, je vais juste... un commentaire, je ferais :
+ applicabilité, compréhension des personnes. Je pense que, si c'est une définition large, parc, au-delà
+ des affiches, la compréhension, c'est que, ah, il y a une exception dans
+ les parcs. Mais, en tout cas, ça va prendre
+ beaucoup d'éducation, sensibilisation, information de la ville pour bien faire
+ cette distinction qu'il faut vraiment qu'il y ait des indications claires.
+ Alors, c'est tout, seul commentaire. </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Oui, M. le ministre.</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b> Juste pour aviser qu'on
+ a envoyé le lien à la secrétaire.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> C'est ça. </p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Un point
+ intéressant... parce que, là, dans le paragraphe 6°, là, on fait référence aux parcs, hein? Tu sais, on définit un peu les
+ lieux extérieurs qui accueillent le public. Donc, ce que... si j'ai bien
+ compris ce que le ministre veut faire, un parc, là, et le juriste vient
+ d'y faire référence, des fois, c'est un endroit où, justement, il y a un
+ terrain de jeux, justement, il y a de la
+ verdure, les gens y font des activités extérieures. Une place, c'est un peu
+ comme place des Festivals, hein? Tu
+ sais, c'est... soit ça fait partie de la voie publique, ou c'est un grand lieu
+ ouvert, ou... une place, là. Je pense qu'on peut... on regardera la
+ liste, là, mais je pense qu'on a une petite idée, là, c'est quoi.</p>
+<p style="text-align: justify">Puis,
+ après ça, je traiterai la question des parcs provinciaux puis tout ça, là, mais
+ dans les... ce que le ministre nous dit, c'est : Je suis prêt à faire, à permettre aux
+ municipalités de décider si, dans un parc municipal — parc municipal, on vient de le dire, où il y a des jeux d'enfants, où il y a des installations
+ sportives, et tout ça, ça, c'est un parc municipal — si, dans ces endroits-là,
+ ils veulent que les citoyens
+ fument du cannabis, ils pourront le faire. Mais dans une place, une place, là,
+ qui n'est pas nécessairement... qui n'est pas un endroit où il y a des terrains
+ de jeux, qui n'est pas un endroit où des enfants se trouvent majoritairement... souvent, qui est plus une place des
+ festivals, là. Si vous y allez sur l'heure du lunch, c'est des adultes,
+ hein, de façon majoritaire, très majoritaire.</p>
+<p style="text-align: justify">Bien, dans
+ cet endroit-là, la municipalité ne pourrait pas dire : Vous pouvez
+ consommer du cannabis. Est-ce que le ministre
+ ne pense pas qu'il y a plus de chances, en permettant les parcs municipaux
+ plutôt que les places, que, justement, son concept de consommation de
+ proximité devienne réalité?</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant :</b> Bien, ce qu'on voulait vraiment, c'est éviter la
+ consommation sur la voie publique, là. Ça, c'était clair pour nous.
+ Maintenant, encore une fois, la ville aura la possibilité de délimiter les
+ zones puis c'est sûr que...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Mais c'est à l'intérieur des parcs, cependant, pas à l'intérieur des places.</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b> Oui. Ça, c'est parce
+ que la place est vraiment trop près de la voie publique, en général.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> La place est près
+ de la voie publique. Un parc municipal, d'habitude, il y a une rue en bordure,
+ là. Je ne vois pas la différence. La seule différence que je vois, c'est
+ qu'il y a plus d'enfants dans un parc municipal.</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant :</b> Non, c'est ça, moi, je pense vraiment que sur les places, il
+ peut y avoir un mélange de personnes, tandis que, dans la région qui va
+ être délimitée par le parc, on trouvait que ça, c'était un meilleur endroit que
+ sur une place.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ O.K. Même si la municipalité pourrait délimiter l'espace, là, à l'intérieur de
+ la place.</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant :</b> Oui. Maintenant, reste à savoir, je ne sais pas si c'est
+ possible, si la ville peut changer de dénomination, là. Ça, je ne sais
+ pas, là, mais...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Qu'est-ce que vous voulez dire, si la ville peut changer de dénomination? Je me
+ pose la question, M. le Président.</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant :</b> Mais on ne sait pas si... Tu sais, comment ils choisissent
+ qu'est-ce qui est un parc, qu'est-ce qui est une place, ça, c'est...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Oui. Donc, si la ville de Montréal, demain matin, se dit : Bien, moi,
+ j'aimerais ça qu'à la place des Festivals, les gens puissent consommer, ils pourraient le classifier parc, là. Il y
+ a-tu une... Il n'y a pas de réglementation autour de ça?</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant :</b> Bien, nous, on fait confiance aux choix des villes.
+ Évidemment, je pense que la place des Festivals, ça, c'est un peu différent, parce que c'est vraiment... de la voie
+ publique, mais s'il y a d'autres endroits qui sont identifiés et séparés
+ clairement de la voie publique, ça, ça pourrait toujours... </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Je vais céder la parole au député de Vachon.</p>
+<p style="text-align: justify">
+  <b>M. Lafrenière :</b> Je suis sûr que mon collègue
+ de Viau a l'information lui aussi. Pour avoir travaillé à la ville de Montréal,
+ il y a définitivement une différence entre les places et les parcs et, même
+ pour l'application des règlements municipaux, il y a une différence déjà qui
+ existe, qui est concrète.</p>
+<p style="text-align: justify">
+  <a name="Page00008"></a>Je vais vous donner un exemple :
+ la place de la Paix, si vous connaissez le centre-ville de Montréal, Saint-Laurent,
+ tout près de Sainte-Catherine, ce n'est pas
+ un parc, c'est une place, c'est écrit, et il n'y a pas le droit d'avoir de la
+ consommation d'alcool du tout. Dans un parc,
+ si on l'accompagne d'un repas, on peut consommer de l'alcool à certaines
+ heures. Les parcs sont fermés de
+ 23 heures à sept heures, pas les places. Alors, c'est assez clair, puis
+ vous allez me dire que dans d'autres régions, ça peut être différent,
+ puis je vous comprends.</p>
+<p style="text-align: justify">Mais je veux juste
+ qu'on mette ça clair aussi, il y a deux choses : un, une place et un parc,
+ dans la réglementation municipale, la ville
+ de Montréal, c'est déjà clair, ils sont déjà identifiés, et moi, je trouve
+ qu'en mettant des affiches, on dit clairement
+ aux gens la consommation qui est permise ou pas, parce que c'est déjà ça
+ dans les parcs, hein, en passant. L'affiche qui dit que vous n'avez pas le droit d'être présent entre 23 heures
+ et sept heures est déjà mise là. Pour les places, c'est différent, et la
+ consommation d'alcool est affichée aussi.</p>
+<p style="text-align: justify">Alors,
+ c'est un bon point, étant donné, des fois... dans la terminologie, il ne faut
+ pas se perdre, hein, parce que les gens pourraient se dire :
+ Écoute, j'ai-tu le droit? J'ai-tu pas le droit? Absolument, et le fait de
+ rajouter une affiche, le fait qu'il y ait
+ déjà une réglementation municipale qui s'applique... Notre collègue, tout à
+ l'heure, disait : Dans l'applicabilité de cette réglementation, est-ce que ça va passer le test? Je vous dirais
+ qu'en matière d'alcool, c'est déjà le cas, il y a déjà une distinction
+ entre les places et les parcs. Merci.</p>
+<p style="text-align: justify">
+  <b>Le Président (M.
+ Provençal) </b>
+  <b>:</b> Merci, M. le député de
+ Vachon. M. le député de Viau.</p>
+<p style="text-align: justify">
+  <b>M. Benjamin :</b>
+ Merci, M. le Président. Donc, je remercie le collègue de Vachon, donc, pour ces
+ précisions, effectivement, qui sont tout à fait exactes.</p>
+<p style="text-align: justify">Un
+ élément que j'aimerais peut-être avoir un peu d'éclaircissement là-dessus,
+ peut-être... C'est peut-être M. le juriste qui pourrait peut-être nous renseigner. Il y a une différence aussi
+ qui... dans le jargon municipal, en tant que terrain municipal et parc municipal. Donc, comment est-ce que vous
+ avez apprécié, dans la préparation de ce projet de loi là, le concept plutôt
+ de terrain municipal, qui est beaucoup plus large, donc, que le parc municipal.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Bien, comme je vous le dis, ici, ça va dépendre
+ de la réglementation, comme le député, M.
+ Fortin, en a fait part aussi. Ça, vraiment, dépend ici est-ce que le terrain
+ peut être considéré... ça, c'est vraiment à la municipalité qui a un conseil municipal, qui va, à ce moment-là,
+ prendre un règlement, qui va identifier des parcs où c'est possible
+ qu'ils puissent fumer.</p>
+<p style="text-align: justify">Donc, à
+ ce moment-là, est-ce que le terrain... bien là, ça va être à la discrétion...
+ s'ils le considèrent comme un parc, parce
+ que c'est un terrain, à ce moment-là, oui... s'ils ne considèrent pas ça
+ comme un parc, mais ça ne serait pas possible à ce moment-là. Mais c'est
+ vraiment à la municipalité, à ce moment-là, de faire cette appréciation-là.</p>
+<p style="text-align: justify">
+  <i>• (12 h 50) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant :</b> Bien, je le rappelle encore, et le collègue de Vachon l'a
+ clairement précisé, c'est vrai, dans le règlement municipal, dans toutes les municipalités, c'est très clair, dans chaque règlement
+ municipal, on définit clairement ce que
+ c'est, un parc. Donc, même une
+ municipalité ne peut pas décider comme ça pour dire : Tel
+ terrain, soudainement, ça devient un parc. Il y a des conditions
+ précises que le règlement municipal stipule. </p>
+<p style="text-align: justify">En
+ fait, c'est en lien avec l'élément suivant : De plus en plus, M. le Président, on assiste à... et c'est correct, d'ailleurs,
+ c'est correct. D'ailleurs,
+ dans beaucoup de cas, c'est correct que des citoyens
+ s'accaparent, par exemple, des portions du territoire municipal
+ pour faire soit du verdissement, pour avoir une vie culturelle. Ce ne sont pas
+ des portions de territoire qui sont
+ des parcs. Je pense entre
+ autres à ce grand effort un peu
+ partout au Québec... il y
+ a même un programme,
+ je crois, au niveau du ministère de
+ l'Environnement, qui finance, qui soutient, par exemple, le verdissement, par
+ exemple, le verdissement des ruelles. Et la plupart de ces ruelles-là...
+ certaines peuvent être privées, mais la plupart de ces ruelles appartiennent à
+ la municipalité.</p>
+<p style="text-align: justify">Alors, qu'est-ce
+ que... j'aimerais peut-être entendre M. le juriste sur cet élément-là, cet
+ aspect-là.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Pardon, je n'ai pas saisi votre...</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b>
+ Les ruelles, il parle des ruelles.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Les ruelles, bien, ça, ça rentrait dans la voie
+ publique. Dans la définition de voie publique, hein, on fait la référence, là, au sens de la loi sur... attendez, au
+ sens de la Loi sur les compétences municipales, bien, ça comprend les
+ ruelles. Ça, c'est un endroit public, donc...</p>
+<p style="text-align: justify">
+  <b>M.
+ Benjamin :</b> Donc, à ce moment-là, l'amendement, donc, qu'a déjà apporté
+ M. le ministre, donc, permettra, à ce moment-là,
+ aux municipalités d'intervenir pour dire : Si, dans une ruelle, par
+ exemple... souvent, il y a des fêtes de ruelle, est-ce que c'est...
+ qu'en est-il? Je vois, le ministre opine par le négatif. Peut-être il peut
+ m'apporter un peu de précision.</p>
+<p style="text-align: justify">
+  <b>Le Président (M.
+ Provençal) </b>
+  <b>:</b> M. le ministre.</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b>
+ Il est interdit de fumer sur la voie publique, et la ruelle fait partie de la
+ voie publique.</p>
+<p style="text-align: justify">
+  <b>M.
+ Benjamin :</b> Voilà. Et je comprends, donc, par rapport à la question que
+ mon collègue de Pontiac avait posée hier, donc, ce serait, à ce moment-là, les inspecteurs du ministère de la
+ Santé qui interviendraient, à ce moment-là, dans les ruelles pour faire
+ respecter la loi. Est-ce que c'est ça?</p>
+<p style="text-align: justify">
+  <a name="Page00009"></a>
+  <b>M. Carmant :</b>
+ Je passe la parole au...</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> M. le juriste.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Pour des
+ infractions à la Loi encadrant le cannabis, c'est possible pour les inspecteurs
+ du ministère d'intervenir. Aussi il y a
+ cette possibilité pour la police d'intervenir pour faire respecter, pour
+ surveiller l'application de ces
+ dispositions-là. Et également, on a prévu donner le pouvoir à des municipalités
+ de nommer leurs propres inspecteurs ou de nommer leur police municipale
+ pour surveiller l'application. Donc, il y a trois...</p>
+<p style="text-align: justify">
+  <b>M.
+ Benjamin :</b> Bien, il me semble qu'à cette question M. le ministre nous
+ avait dit hier, c'est en termes... c'est en matière de possession que la
+ police intervient. C'est ce que j'ai entendu hier, c'est en matière de
+ possession. C'est ce que j'ai entendu.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Par
+ rapport à la possession, c'est... la possession, là, c'est réservé uniquement à
+ la police. Là, on est dans le
+ chapitre sur les lieux d'usage. Le chapitre qu'on a travaillé sur la
+ possession, ça, c'est vraiment seulement à la police à surveiller
+ l'application des mesures prévues.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Et on est sur les interdits de fumer.</p>
+<p style="text-align: justify">
+  <b>M.
+ Benjamin :</b> Oui. Alors, sur l'interdiction d'usage, pour l'appliquer
+ dans une ruelle, donc, je comprends qu'il y aurait une mesure d'ordonnance qui déléguerait le pouvoir aux
+ municipalités. À qui le pouvoir d'inspection dans une ruelle?</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Oui, allez-y.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Comme
+ pour le tabac, on a prévu une disposition permettant à des municipalités de
+ nommer des personnes pour agir en tant
+ qu'inspecteurs. Et, en plus, les amendes qui sont récoltées par rapport à ces
+ infractions-là sont conservées par les municipalités, et ça, c'est prévu
+ dans la loi.</p>
+<p style="text-align: justify">
+  <b>Le
+ Président (M. Provençal) </b>
+  <b>:</b> M. le député de Viau, si
+ vous me permettez, le député de Vachon aurait peut-être des précisions à
+ apporter.</p>
+<p style="text-align: justify">
+  <b>M. Lafrenière :</b> Un petit point, en
+ suivi à ce que mon collègue de Viau a dit, qui est exact, quand on parle de l'application des règlements, je pense que le plus
+ beau parallèle, puis je reviens encore avec l'alcool parce que c'est ce qu'on connaît comme psychotrope, les policiers ont
+ déjà ce pouvoir-là. Wt exemple, dans les ruelles, vous amenez un bon
+ point, les ruelles en verdissement, les
+ ruelles qui ont été modifiées, c'est la même chose. Bien que ce soit une belle
+ ruelle, les gens ne peuvent pas consommer de l'alcool, c'est la même
+ réglementation qui s'applique, et c'est déjà le cas avec les réglementations
+ municipales qui existent.</p>
+<p style="text-align: justify">Puis
+ l'exemple que vous avez donné, on le vit beaucoup à Montréal. Il y a plusieurs
+ ruelles qui ont été modifiées, alors
+ les gens peuvent le faire sur leur terrain privé et, lorsqu'ils vont dans la
+ ruelle qui est commune, c'est un lieu qui est public. Pour l'alcool, c'est l'exemple, je pense, qu'on peut se donner
+ en disant : Au moins, on est... il y a une très bonne similarité. Tantôt, on parlait d'applicabilité de
+ la réglementation. Ça existe déjà, c'est déjà fait et c'est déjà connu des
+ citoyens, alors on n'a pas besoin de refaire une nouvelle éducation, c'est déjà
+ connu en matière d'alcool.</p>
+<p style="text-align: justify">
+  <b>M.
+ Benjamin :</b> J'en profite pour référer mon collègue de Vachon au mémoire
+ de l'association des directeurs de police,
+ qui pose au moins une douzaine d'éléments, de questionnements, d'interrogations
+ sur l'applicabilité, et ça,
+ donc c'est... et l'enjeu pour différents corps policiers.</p>
+<p style="text-align: justify">Et je revois
+ encore, M. le Président, le nouveau directeur du SPVM qui était venu en
+ consultations particulières, donc qui
+ parlait, qui nous exposait, avec justesse d'ailleurs, et je crois que le
+ collègue de Vachon serait d'accord avec moi, sur la lourdeur du travail policier, donc... et demander
+ aux corps policiers, qu'il s'agisse du SPVM, ou à tout autre corps
+ policier, parmi, là, toutes les autres
+ tâches qu'ils ont... à ce moment-là, de leur donner des pouvoirs supplémentaires,
+ pouvoir de fouille, etc. Donc, c'est
+ un... l'enjeu de l'applicabilité, il est total, et puis nous ne sommes pas les
+ seuls à l'avoir présenté ici, autour de cette table.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Avant, le député de Vachon avait...</p>
+<p style="text-align: justify">
+  <b>M.
+ Lafrenière :</b> Je ne veux pas
+ partir de débat du tout, juste répondre à votre... mais je veux juste vous
+ rappeler que le cannabis était
+ illégal, puis les policiers, on intervenait déjà. Ce n'est pas une surprise,
+ là. Ça fait qu'il y a des policiers qui intervenaient déjà pour les possessions, un, et la lourdance, vous avez
+ raison, quand le règlement est arrivé, voilà un an, ça nous prenait une fiche pour comprendre ce que les
+ gens avaient le droit d'avoir parce qu'il y avait du liquide, du solide.
+ C'était très compliqué, vous avez raison.</p>
+<p style="text-align: justify">Mais je veux
+ juste vous rappeler, par exemple, que les policiers intervenaient déjà.
+ Possession, on intervenait déjà. C'était une réglementation municipale,
+ c'était encore plus simple pour les policiers. </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> M. le député de Pontiac.</p>
+<p style="text-align: justify">
+  <a name="Page00010"></a>
+  <b>M. Fortin :</b> J'aime ça quand le député de
+ Longueuil...</p>
+<p style="text-align: justify">
+  <b>Le Président (M.
+ Provençal) </b>
+  <b>:</b> Vachon.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> ...non, de Vachon, merci. Bien, c'est à Longueuil, ça, non? Oui, oui,
+ mais le député de Vachon
+ intervient.</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b>
+ ...</p>
+<p style="text-align: justify">
+  <b>Des voix</b> <b>:</b>
+ Ha! Ha! Ha!</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> J'ai hâte de vous voir en laisser une pousser, oui. Mais j'ai hâte...
+ j'aime ça quand le député de Vachon intervient,
+ parce que c'est vrai qu'il amène une perspective... je ne pense pas qu'il y ait
+ personne d'autre qui l'a autour de la table, mais, en même temps, il
+ amène un concept intéressant : les policiers intervenaient déjà.</p>
+<p style="text-align: justify">
+  <b>Mme Weil</b> <b>:</b>
+ Non, dans un contexte d'illégal, d'un produit illégal. C'est ça qui fait la
+ différence.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Oui, oui, absolument dans un contexte illégal... non, non, dans un
+ contexte d'illégalité, comme l'a dit le
+ député de Vachon, les policiers intervenaient déjà. Si les
+ policiers intervenaient déjà, c'est parce que le monde fumait déjà, M. le Président. Puis c'est notre point depuis le
+ début de ce projet de loi là, c'est que les gens fumaient déjà quand
+ c'était illégal, quand c'était un produit
+ qui n'était pas légal. Ils vont fumer encore quand il va y avoir une amende de
+ 100 $, M. le Président. Alors, c'est un point intéressant mais qui
+ fait un peu notre point, ce que le député de Vachon amène. </p>
+<p style="text-align: justify">Mais
+ là je vais jouer avec les minutes qui me restent, M. le Président, puis je vais
+ vous faire plaisir. Je vais vous faire plaisir,
+ je vais jouer au député de Nicolet-Bécancour qui nous ramène à la réalité
+ rurale. Parce que j'entends l'échange entre le député de Viau, un député montréalais, qui représente bien ses gens,
+ et le député de Vachon qui a travaillé longtemps à Montréal. Ça fait très montréalais comme point de
+ vue, puis c'est correct, il faut le faire, il y a des gens à Montréal qui
+ sont affectés par cette législation-là, mais en milieu rural...</p>
+<p style="text-align: justify">Bien,
+ on a parlé des ruelles, ça, c'est un exemple montréalais. Milieu rural, chez
+ nous, chez vous, M. le Président, on
+ parle de chemins privés, hein? Il y en a beaucoup des chemins privés dans ma
+ circonscription. Il y a toutes sortes d'enjeux avec des chemins privés, ce n'est pas toujours traité comme des chemins
+ municipaux, hein, quand on sait... Quand ils essaient de faire des travaux, quand les municipalités
+ veulent donner un petit coup de main, ils n'ont pas le droit de faire ça
+ parce que c'est un chemin privé.</p>
+<p style="text-align: justify">Alors
+ là, dans le contexte du projet de loi qui est devant nous, dans le contexte des
+ voies publiques, qu'est-ce qui se passe
+ avec les chemins privés, M. le ministre? Est-ce que c'est considéré une voie
+ publique au sens du troisième alinéa de l'article 66 de la Loi sur
+ les compétences municipales?</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b>
+ Je passe la parole au juriste.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Oui. C'est vraiment clair, quand on fait
+ référence à l'article 66 sur la Loi sur les compétences municipales, on
+ exclut tout ce qui est domaine privé.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Vous excluez tout ce qui est domaine privé.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> Je vais lire la définition.</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Oui.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Donc, c'est... «une voie publique inclut toute
+ route, chemin, rue, ruelle, place, pont, voie piétonnière ou cyclable, trottoir ou autre voie qui n'est pas du domaine
+ privé ainsi que tout ouvrage ou installation, y compris un fossé», tout
+ ça.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Alors, si ça appartient un peu à l'association des résidents de la
+ plage, je ne sais pas, moi, une plage, Plage-Bélisle chez nous, là, si
+ ça appartient à l'association des résidents, ce n'est pas une voie publique,
+ donc on peut consommer du cannabis.</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b> Exactement. Ce n'est pas couvert par... bien, ce
+ ne serait pas couvert par la voie publique, par la définition de voie
+ publique, mais ça pourrait être couvert par... je veux dire, qui n'accueille
+ pas le public, mais ce ne serait pas...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Oui, ça pourrait être couvert par le... oui, oui, je comprends. Mais ce
+ n'est pas couvert ici dans votre...</p>
+<p style="text-align: justify">
+  <b>M.
+ Cheang (Sokun C.) :</b> ...dans la définition de voie publique. </p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Dernière chose, M. le Président, je sais qu'il me
+ reste 30 secondes...</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Parce que je voudrais donner... avoir la conclusion.</p>
+<p style="text-align: justify">
+  <a name="Page00011"></a>
+  <b>M.
+ Fortin :</b> C'est bon. </p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b> ...</p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Non, mais c'est
+ juste... parce qu'on a parlé des ruelles, c'est la même chose, là, les ruelles
+ privées, c'est la même affaire. Je
+ reviens à l'exemple montréalais, tu sais, il n'y a pas de différence entre un
+ chemin privé puis une ruelle privée, c'est considéré de la même façon
+ dans...</p>
+<p style="text-align: justify">
+  <b>M. Cheang (Sokun C.) :</b>
+ Tout à fait, oui, tout à fait.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ O.K. Merci. C'est bon, M. le Président.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Votre question était très pertinente.</p>
+<p style="text-align: justify">
+  <b>M. Lévesque (Chauveau) :</b> M. le
+ Président, est-ce qu'on pourrait adopter l'article 7? Est-ce qu'on
+ pourrait demander le vote? En perspective que l'été s'en vient. </p>
+<p style="text-align: justify">
+  <b>M.
+ Fortin :</b> Bien, je n'ai pas
+ de problème. Moi, je n'ai pas de problème, mais le ministre
+ nous a demandé de reporter l'étude
+ sur l'article 7 parce que le
+ député d'Hochelaga-Maisonneuve
+ n'était pas là. Alors, je lui octroierais la même courtoisie, M. le
+ député.</p>
+<p style="text-align: justify">
+  <b>M. Carmant :</b> ...</p>
+<p style="text-align: justify">
+  <b>Des voix</b> <b>: </b>Ha, ha, ha! </p>
+<p style="text-align: justify">
+  <b>Le
+ Président (M. Provençal) </b>
+  <b>:</b> Alors, je me permets de
+ vous remercier de votre collaboration et de votre contribution à bonifier le projet
+ de loi et je vous souhaite une pause pleinement méritée.</p>
+<p style="text-align: justify">La commission ajourne ses travaux sine die. Merci
+ beaucoup.</p>
+<p style="text-align: justify">
+  <i>(Fin de la séance à 13 heures)</i>
+</p></Contenu>
+			
+			
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+		
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+	
+		<h2>Document(s) associé(s) à la séance</h2>
+		<ul class="ListeLien">
+			
+			
+					<li><a href='https://www.assnat.qc.ca/Media/Process.aspx?MediaId=ANQ.Vigie.Bll.DocumentGenerique_185025&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz'>Journal des débats (PDF)</a><span class='icoPDF'> </span></li>
+					<li><a href='/fr/video-audio/archives-parlementaires/travaux-commissions/AudioVideo-81103.html'>Vidéo/Audio</a></li>
+					
+					
+				
+		</ul>
+	
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+						
+				
+					
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <div id="bInfolettre" style="margin-bottom: 25px;"><a class="btnInfolettre" href="https://l.communications.assnat.qc.ca/T/WF/24042/op0ace/Optin/fr-CA/Form.ofsys" target="_blank">Abonnez-vous à notre infolettre!</a></div>
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br />
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+
+    </ul>
+
+    <br />
+    <span class="NonVisible">
+        
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+    var boutonInfolettre = document.getElementById('bInfolettre');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+            boutonInfolettre.style.display = 'block';
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+            boutonInfolettre.style.display = 'none';
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+</body>
+</html>

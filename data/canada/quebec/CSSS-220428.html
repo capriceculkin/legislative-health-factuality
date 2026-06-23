@@ -1,0 +1,2733 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="content-language" content="fr" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere"  rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen"  />
+<link href="/Images/favicon.ico" rel="shortcut icon" />
+
+<!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print"  />
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen"  />
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript"  >
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2026-08-29';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalAucuneActiviteType = "Aucune activité de cette catégorie n'est prévue aujourd'hui."
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.3.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-mDroite-m.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        table {border:1px solid #000000;border-collapse:collapse;}
+        table td {border:1px solid #000000;padding:5px;}
+        table td[align="center"] {text-align:center;}
+        table td[align="right"] {text-align:right;}       
+       
+    </style>  
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec
+        
+</title>
+        
+        <meta property="og:title" content="Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217" />
+
+    <script type="text/javascript" src="/scripts/Recherche.min.js"></script><style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+
+    <body class="impressionGrossie">
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/fr/travaux-parlementaires/commissions/csss-42-2/journal-debats/CSSS-220428.html" id="aspnetForm">
+<div>
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTA4Mzc3OTI4D2QWAmYPZBYCAgMQZGQWAgIID2QWAgIBD2QWAgIFDxBkEBVSE1RvdXRlcyBsZXMgc2Vzc2lvbnM/U2Vzc2lvbiBlbiBjb3VycyAtIDQzZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDUgbWFpIDIwMjYgLSApPzQzZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAyMDI1IC0gOCBhdnJpbCAyMDI2KUQ0M2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMjAyMiAtIDEwIHNlcHRlbWJyZSAyMDI1KT40MmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBvY3RvYnJlIDIwMjEgLSAyOCBhb8O7dCAyMDIyKUI0MmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjcgbm92ZW1icmUgMjAxOCAtIDEzIG9jdG9icmUgMjAyMSk7NDFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIwIG1haSAyMDE0IC0gMjMgYW/Du3QgMjAxOCk9NDBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDMwIG9jdG9icmUgMjAxMiAtIDUgbWFycyAyMDE0KT4zOWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMyBmw6l2cmllciAyMDExIC0gMSBhb8O7dCAyMDEyKUIzOWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTMgamFudmllciAyMDA5IC0gMjIgZsOpdnJpZXIgMjAxMSk8MzhlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDggbWFpIDIwMDcgLSA1IG5vdmVtYnJlIDIwMDgpPjM3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMjAwNiAtIDIxIGbDqXZyaWVyIDIwMDcpOjM3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg0IGp1aW4gMjAwMyAtIDEwIG1hcnMgMjAwNik6MzZlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjIgbWFycyAyMDAxIC0gMTIgbWFycyAyMDAzKTkzNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMiBtYXJzIDE5OTkgLSA5IG1hcnMgMjAwMSk9MzVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjUgbWFycyAxOTk2IC0gMjEgb2N0b2JyZSAxOTk4KT8zNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMTk5NCAtIDEzIG1hcnMgMTk5Nik6MzRlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTcgbWFycyAxOTk0IC0gMTcganVpbiAxOTk0KTozNGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBtYXJzIDE5OTIgLSAxMCBtYXJzIDE5OTQpPzM0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyOCBub3ZlbWJyZSAxOTg5IC0gMTggbWFycyAxOTkyKTkzM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICg4IG1hcnMgMTk4OCAtIDkgYW/Du3QgMTk4OSk/MzNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE2IGTDqWNlbWJyZSAxOTg1IC0gOCBtYXJzIDE5ODgpQDMyZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDE2IG9jdG9icmUgMTk4NCAtIDEwIG9jdG9icmUgMTk4NSk6MzJlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjMgbWFycyAxOTgzIC0gMjAganVpbiAxOTg0KT0zMmUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg5IG5vdmVtYnJlIDE5ODEgLSAxMCBtYXJzIDE5ODMpQTMyZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAxOTgxIC0gMiBvY3RvYnJlIDE5ODEpOjMyZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxOSBtYWkgMTk4MSAtIDE4IGp1aW4gMTk4MSk9MzFlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoNSBub3ZlbWJyZSAxOTgwIC0gMTIgbWFycyAxOTgxKUAzMWUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgyNCBvY3RvYnJlIDE5ODAgLSAyNCBvY3RvYnJlIDE5ODApOTMxZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDYgbWFycyAxOTc5IC0gMTgganVpbiAxOTgwKUIzMWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBmw6l2cmllciAxOTc4IC0gMjAgZsOpdnJpZXIgMTk3OSk+MzFlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBtYXJzIDE5NzcgLSAyMiBkw6ljZW1icmUgMTk3NylFMzFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE0IGTDqWNlbWJyZSAxOTc2IC0gMjMgZMOpY2VtYnJlIDE5NzYpPTMwZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG1hcnMgMTk3NiAtIDE4IG9jdG9icmUgMTk3Nik/MzBlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTggbWFycyAxOTc1IC0gMTkgZMOpY2VtYnJlIDE5NzUpPzMwZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMTk3NCAtIDI4IGTDqWNlbWJyZSAxOTc0KUQzMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjIgbm92ZW1icmUgMTk3MyAtIDIyIGTDqWNlbWJyZSAxOTczKT8yOWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNSBtYXJzIDE5NzMgLSAyNSBzZXB0ZW1icmUgMTk3Myk5MjllIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBtYXJzIDE5NzIgLSAxNCBtYXJzIDE5NzMpQzI5ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIzIGbDqXZyaWVyIDE5NzEgLSAyNCBkw6ljZW1icmUgMTk3MSk/MjllIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDkganVpbiAxOTcwIC0gMTkgZMOpY2VtYnJlIDE5NzApPjI4ZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDI0IGbDqXZyaWVyIDE5NzAgLSAxMiBtYXJzIDE5NzApQzI4ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDI1IGbDqXZyaWVyIDE5NjkgLSAyMyBkw6ljZW1icmUgMTk2OSlDMjhlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjAgZsOpdnJpZXIgMTk2OCAtIDE4IGTDqWNlbWJyZSAxOTY4KUAyOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMCBvY3RvYnJlIDE5NjcgLSAyMCBvY3RvYnJlIDE5NjcpQDI4ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxIGTDqWNlbWJyZSAxOTY2IC0gMTIgYW/Du3QgMTk2Nyk+MjdlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoMjUgamFudmllciAxOTY2IC0gMTggYXZyaWwgMTk2NilAMjdlIGzDqWdpc2xhdHVyZSwgNWUgc2Vzc2lvbiAoMjIgb2N0b2JyZSAxOTY1IC0gMjMgb2N0b2JyZSAxOTY1KT0yN2UgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5NjUgLSA2IGFvw7t0IDE5NjUpQDI3ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE0IGphbnZpZXIgMTk2NCAtIDMxIGp1aWxsZXQgMTk2NCk8MjdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjEgYW/Du3QgMTk2MyAtIDIzIGFvw7t0IDE5NjMpQTI3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNSBqYW52aWVyIDE5NjMgLSAxMSBqdWlsbGV0IDE5NjMpPjI2ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEwIG5vdmVtYnJlIDE5NjAgLSAxMCBqdWluIDE5NjEpRTI2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyMCBzZXB0ZW1icmUgMTk2MCAtIDIyIHNlcHRlbWJyZSAxOTYwKT4yNWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxOCBub3ZlbWJyZSAxOTU5IC0gMTggbWFycyAxOTYwKT0yNWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxOSBub3ZlbWJyZSAxOTU4IC0gNSBtYXJzIDE5NTkpQjI1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEzIG5vdmVtYnJlIDE5NTcgLSAyMSBmw6l2cmllciAxOTU4KUMyNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTQgbm92ZW1icmUgMTk1NiAtIDIxIGbDqXZyaWVyIDE5NTcpQjI0ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG5vdmVtYnJlIDE5NTUgLSAyMyBmw6l2cmllciAxOTU2KUEyMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNyBvY3RvYnJlIDE5MzYgLSAxMiBub3ZlbWJyZSAxOTM2KT4xOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMCBqYW52aWVyIDE5MzMgLSAxMyBhdnJpbCAxOTMzKUIxOGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMyBub3ZlbWJyZSAxOTMxIC0gMTkgZsOpdnJpZXIgMTkzMik8MTdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBqYW52aWVyIDE5MjkgLSA0IGF2cmlsIDE5MjkpPTE2ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDExIGphbnZpZXIgMTkyNyAtIDEgYXZyaWwgMTkyNyk8MTZlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBqYW52aWVyIDE5MjYgLSAyNCBtYXJzIDE5MjYpQDE2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNyBkw6ljZW1icmUgMTkyMyAtIDE1IG1hcnMgMTkyNClCMTVlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjQgb2N0b2JyZSAxOTIyIC0gMjkgZMOpY2VtYnJlIDE5MjIpPTE1ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDEwIGphbnZpZXIgMTkyMiAtIDIxIG1hcnMgMTkyMik9MTVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTEgamFudmllciAxOTIxIC0gMTkgbWFycyAxOTIxKUQxNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTAgZMOpY2VtYnJlIDE5MTkgLSAxNCBmw6l2cmllciAxOTIwKT0xNGUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5MTkgLSAxNyBtYXJzIDE5MTkpQTE0ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDQgZMOpY2VtYnJlIDE5MTcgLSA5IGbDqXZyaWVyIDE5MTgpQzE0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg3IG5vdmVtYnJlIDE5MTYgLSAyMiBkw6ljZW1icmUgMTkxNik9MTNlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTEgamFudmllciAxOTE2IC0gMTYgbWFycyAxOTE2KTsxM2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg3IGphbnZpZXIgMTkxNSAtIDUgbWFycyAxOTE1KUIxM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMSBub3ZlbWJyZSAxOTEzIC0gMTkgZsOpdnJpZXIgMTkxNClDMTNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDUgbm92ZW1icmUgMTkxMiAtIDIxIGTDqWNlbWJyZSAxOTEyKTwxMmUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICg5IGphbnZpZXIgMTkxMiAtIDMgYXZyaWwgMTkxMik9MTJlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTAgamFudmllciAxOTExIC0gMjQgbWFycyAxOTExKTkxMmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNSBtYXJzIDE5MTAgLSA0IGp1aW4gMTkxMCk5MTJlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIgbWFycyAxOTA5IC0gMjkgbWFpIDE5MDkpOjExZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDMgbWFycyAxOTA4IC0gMjUgYXZyaWwgMTkwOCkVUgEwBDE2MjEEMTYxNwQxNjExBDE2MDcEMTU3OQQxMDc5Azc4OQM0OTkDNDkxAzQ4OQM0ODcDNDg1AzQ4MwM0ODEDNDc5AzQ3NwM0NzUDNDczAzQ3MQM0NjkDNDY3AzQ2NQM0NjMDNDYxAzQ1OQM0NTcDNDU1AzQ1MwM0NTEDNDQ5AzQ0NwM0NDUDNDQzAzQ0MQM0MzkDNDM3AzQzNQM0MzMDNDMxAzQyOQM0MjcDNDI1AzQyMwM0MjEDNDE5AzQxNwM0MTUDNDEzAzQxMQM0MDkDNDA3AzQwMwM0MDEDMzk5AzM5NwMzOTUDMzkzAzM5MQMzNTEDMzQzAzM0MQMzMzUDMzMxAzMyOQMzMjUDMzIzAzMyMQMzMTkDMzE3AzMxNQMzMTMDMzExAzMwOQMzMDcDMzA1AzMwMwMzMDEDMjk5AzI5NwMyOTUDMjkzFCsDUmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZGSR1zJt3oVoyUEzSRMlQn2fv9BTPw==" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusionData = 'typeActivite:\'9;11\', commission:\'\', mandat:\'\', mandatParent:\'\', estPageAccueil:\'true\'';var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';//]]>
+</script>
+
+<script src="/Scripts/Travaux.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusion = '/WebMethod/WebMethod.aspx/ObtenirIndicateurWebDiffusion';
+                                                                           var intervalleRafraichissementWebDiffusion = 60;//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="87D7EEFC" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAG/gQ9Ee+qmQCeIhOmxubVt13hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yP5J++CKenG+ic1PIaA5cTuL1134RC+RnzibeFXcPSMkirjG8og4fy2g9bI6NorM5K3aXyd+YwgKTVZuZwzdInb3sMEK8K8EnCeQkzFr+/RLvxPBAdO7j0VFemNI0qrFxSGYQ3iqRmRux+buuGhnzVY7jB7dHJwCIv8ngbmPGgPLujBTC+kP4kA+7KhxgVmvV5AheHVxIVrpDzljBaLS2bYKMFL9SoPHg7YnZGoSQYbC96mix2PM6mPVfuaAu2CCJfM4TAu5BVnX31Y0HHllueS87ErUi03NMo0hw7mxWyfT4Wv0wvqQZh4w3ykIvcMjsGFY5ybnihBy13K2K+tmuOs85eX2+hEhZ2vYUaE8BVLmvakhWjFT45S4k+tsa+fpSs4lbyX6yNqZ6z72mkN+uXbq6rMhqV0lkwDHk0NHAT+FCTZWSs07x5JPi066N3TA8r2W06Lr1lcPqDYyzfrmwaQGQ0psL1kP1GxKizeElEmecdwWtpPscZWtTpzZEnsfmzTqsCYzzzobfT8qdD7a/yPAypVkCmjXnJsda3SUW7qtzZGT+9Pc4mFOAq+/SX5/YRJ/K/ogEgmTY1DKUX4XxwaeYSR1/gThSYL8HvHZ/BXyQlkFwouIFKdfLNHGAWbjnoCvCU5+pJHtkl6m2WTUFVWJJA1MHBzQXG/f2gdX+bPdSgU/lArO4+wk4+DUCkKVOeGZp31cUQDQWmUDo2Su9MZmuSpA6pRzhnLkfV7xmjsWh9KQ+99mZMlQr7uUOHSboZ96a1A+LynNef/O7hu4b8K/qwysk0ivqUHKhoyAXpbbPoyn20EhaJbPgBEf3ZVcUKAehOEMbNchbHLxUU6Tby2GE3swtqAMtM9Fry5zPuv4s2htp1+4Q36YrsV6nkF5KbYkPbwAojZXFYBB3CBnXaLcA8rMefK0Y/7jpLorq+G3zWFkQ5HtZOokEDcDPi97PVKoXS0yltqZ5Mt5lUERLD0ZUxbspqy9ur6z14GkdnLsiW72+p8AC341YpjOF6yx34tM63Vq8Uhb3BcFtxuRpa9Z/2/NoNxOsUz7+Cxrjsc5oGnmEsM/D4EOnLIe/WslcimQBWL1FRHPFNiMvhdM0v4eAZR7NUE5tUcUKjzKUVe9yrlTuD7BkCKZ2iDxRJpz05DKHAeVGaY4lF6pQ80C00q+h3MqhJVAghw9aUxAP9AFqKPCv3SpPXmc+w5SYVVGfHISO1IQytQj+I+B5yTxyKDMamePfnz/uNjaSpU9JPJnmjae1Xh8FKcmg2idJphFrs2rSSYRoZTn2+cOD8w4uXzQjjSq+cSDSgaDEe7v2UjBmd+ZwDVApItvLzBJWHwjZB5xILY5bHbSTrcXHiVebPB9g6cu4OyM9Qs5qbyE84dYj4B2uxF3gcYOfMDoc/IM5xDi4UIFTQTW7H/NQ6Q6xAbuKSXYhAUdYa6kC0R+1fQ2GRiBPcJlTzg8NxJWsCbw6uucbfFDMLGnbdCRH+MJ2vwsmS8sru97GZmqUvbcHVLzytiWwmVJMxGxDYx3BYvanTW3eCivTHVUADoMWjvykFxDT4CYC59FxW5R+LQ+5YQRYaNU87G/tpDdG7FWLuikgjD4nQvKf3CUU6VYBceGVRXhuxTjI5KM0mwr/WKimhdzY8A+wjtd7aMChS5+OrgRzLvCqGmPpASCvMjFwhzzNbQIRw8L3/NFi18/kCZZw2UpxVoxwbRXaQXpnfKihg4oKRD6h/IK/nGDwv/kGpZjV82isGd3dAcv/ueAST3hCP86GZXGgNAxTvQghNtmUwi3qdsmkzpG6kDQmNjF8HEyhZeATYsYASiUoKMaqwsrpmofpInZdfVM8Qt1dp/EBcAAHbyNuUISQOWpWKTB/psFd8KeZh0ZHsoGQC6x3URnSZgoS0/dlVaU5w3pDNjnO8WiT1wNkzAklbI3/0P8OGPoyxOm889Q7znP6BhdVGBIvZkaEr2G/4QOQWC9vJ1rpH3X7bce5ChW68F6IqKPPbcgDlKF0/DnccJVDpVrjAQVSa8tk26+QeIKIHfPEFNh4D83b7JOlO17s6NcRRdnQh4CS9T6LrfhmAwa8aMvCy6BeNiYk5IPF8lnHDVfNs3InsR9ZiNQxCPs/GLIcLMwwcvL+T47+xzoOy/EIGp7k9Ex3NGCcNJapLgvmTepJXvTUKK8o43Uxx6bnZh4rvOSEFl1y0ae9T9E5j1Ej8KjAtJF6+QJ1bHt/jxVIp0MkJsBSeS9ENNitgEy6DgVUhH6Gbl9YQSK7JdqBfNSEaXgQkrrPpVv39xHWG7awjKWluncOURdTEzt1ZpZ4HjwdL44nSgz8dWHkeDfA==" />
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien" style="margin-right:45px;">Suivez-nous</span>
+                    <span class="visuallyhidden"> sur les médias sociaux, Facebook, X, Youtube</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle" />
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher"/>
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;" tabindex="0">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var link = document.querySelector('a[onclick="LancerRechercheAvancee();return false;"]');
+
+        link.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                LancerRechercheAvancee();
+                event.preventDefault();
+            }
+        });
+    });
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere">
+	<a href="/fr/index.html" class="sanssouligne" title="Assemblée nationale du Québec - Retour à l&#39;accueil">
+    <img class="nepasafficher" width="88" height="58" title="Assemblée nationale du Québec - Retour à l'accueil" alt="Assemblée nationale du Québec - Retour à l'accueil" src='/images/transparent.gif' /></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class='menuHoverParent btnDeputes'><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes">
+                Députés</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnTravaux'>
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires">
+                    Travaux parlementaires</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnExprimez'>
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion">
+                    Exprimez votre opinion!</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnVideoAudio'>
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio">
+                    Vidéo</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="display: none">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours"
+                        title="Chargement en cours" />
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" tabindex="0">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href='/fr/calendrier-detaille.html'>
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup"></span>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br />
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br />
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br />
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br />
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br />
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br />
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br />
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href=''>
+                    Aujourd'hui</a></span>
+            </div>
+            <hr />
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="my-skinnable-select">
+                    <select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite">
+	<option selected="selected" value="*"></option>
+
+</select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br />
+            <a href='/fr/aide/aide-recherche.html#javascript'>
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class='' id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class='' id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class='' id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class='' id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class='' id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class='' id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class='' id="lienEducatives">
+                <a href="http://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class='' id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class='' id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/fr/index.html">Accueil</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/index.html">Travaux parlementaires</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/commissions/index.html">Travaux des commissions</a></span><span> &gt; </span><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation">
+
+
+	
+	<ul>
+		<li>
+			<h2><a href="/fr/travaux-parlementaires/index.html" class="selected">
+				Travaux parlementaires</a></h2>
+			<ul>
+				<li>
+					<a href="/fr/travaux-parlementaires/journaux-debats.html" class="">
+						Journal des débats </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/journaux-debats/index-jd/index.html" class="">
+								Index du Journal des débats</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/assemblee-nationale/index.html" class="">
+						Travaux de l'Assemblée</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/registre-des-votes/index.html" class="">
+								Registre des votes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/commissions/index.html" class="selected">
+						Travaux des commissions</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cap/index.html" class="">
+								Administration publique</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/capern/index.html" class="">
+								Agriculture, pêcheries, énergie et ressources naturelles</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cat/index.html" class="">
+								Aménagement du territoire</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/can/index.html" class="">
+								Assemblée nationale</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cce/index.html" class="">
+								Culture et éducation</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cet/index.html" class="">
+								Économie et travail</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cfp/index.html" class="">
+								Finances publiques</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/ci/index.html" class="">
+								Institutions</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/crc/index.html" class="">
+								Relations avec les citoyens</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/csss/index.html" class="">
+								Santé et services sociaux</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cte/index.html" class="">
+								Transports et environnement</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html" class="">
+								Mandats en cours</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/rapports-documents-reflexion/index.html" class="">
+								Rapports et documents de réflexion</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/rapport/index.html" class="">
+						Cheminement des projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/index.html" class="">
+						Projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/documents-deposes.html" class="">
+						Documents déposés </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/documents-deposes/depots-du-jour.html" class="">
+								Dépôts du jour </a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/calendrier-travaux.html" class="">
+						Calendrier hebdomadaire des travaux </a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+	
+
+<div class="clear"></div>
+
+<div class="ContenuNavigation SousNavigation rechercheContextuelle travauxParlementaires">
+    <div class="overlay">
+        <div class="loading"></div>
+    </div>
+	<h2>Recherche avancée dans la section Travaux parlementaires</h2>
+
+		<div class="conteneurMotCle" data-champ="MotsCles">
+            <label for="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux">Mots clés</label>
+			<input name="ctl00$ColGauche$RechercheTravaux$txtTrouverTravaux" type="text" id="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux" />	
+		</div>
+		
+	    <div class="floatLeft" data-champ="TypeDocument">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments">Type de documents</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxDocument">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeDocuments" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments" title="Certains documents déposés en commissions et à l’Assemblée sont numérisés en mode image. Leurs contenus ne sont donc pas disponibles à la recherche." class="BulleInfo">
+	<option selected="selected" value="-1">Tous les documents</option>
+	<option value="1|3">Documents d&#233;pos&#233;s</option>
+	<option value="9">Feuilletons et pr&#233;avis</option>
+	<option value="13">Journaux des d&#233;bats</option>
+	<option value="5">M&#233;moires</option>
+	<option value="7">Proc&#232;s-verbaux de l&#39;Assembl&#233;e</option>
+	<option value="11">Projets de loi</option>
+	<option value="15">Rapports et documents de consultation des commissions</option>
+
+</select>
+		    </div>
+        </div>
+
+    	<div class="floatLeft" data-champ="TypeTravaux">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">Type de travaux</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxType">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeTravaux" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">
+	<option value="0">Travaux de l&#39;Assembl&#233;e et des commissions</option>
+	<option value="-1">Travaux de l&#39;Assembl&#233;e</option>
+	<option value="-2">Travaux des commissions</option>
+	<option value="39">Commission de la culture et de l’&#233;ducation</option>
+	<option value="43">Commission de la sant&#233; et des services sociaux</option>
+	<option value="7">Commission de l&#39;administration publique</option>
+	<option value="37">Commission de l&#39;agriculture, des p&#234;cheries, de l&#39;&#233;nergie et des ressources naturelles</option>
+	<option value="13">Commission de l&#39;am&#233;nagement du territoire</option>
+	<option value="5">Commission de l&#39;Assembl&#233;e nationale</option>
+	<option value="21">Commission de l&#39;&#233;conomie et du travail</option>
+	<option value="23">Commission des finances publiques</option>
+	<option value="25">Commission des institutions</option>
+	<option value="41">Commission des relations avec les citoyens</option>
+	<option value="35">Commission des transports et de l&#39;environnement</option>
+	<option value="55">Sous-commission de la r&#233;forme parlementaire</option>
+
+</select>
+		    </div>
+		</div>
+    
+        <div class="champRecherche avancee" data-champ="Periode">
+            <label>Période</label>
+            <div class="champPeriode">
+		        <label class="libelleDe" for="ctl00_ColGauche_RechercheTravaux_txtDateDebut">De</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateDebut" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateDebut" class="champsDate choisirDate PeriodeDebut" />
+		        <label class="libelleA" for="ctl00_ColGauche_RechercheTravaux_txtDateFin" class="champRecherche avancee">À</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateFin" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateFin" title="
+       Si les champs &lt;b>De&lt;/b> et &lt;b>À&lt;/b> sont remplis, le résultat se situe entre les dates indiquées.&lt;br/>
+      Si seul le champ &lt;b>De&lt;/b> est rempli, le résultat se situe entre la date indiquée jusqu’à aujourd’hui.&lt;br/>
+      Si seul le champ &lt;b>À&lt;/b> est rempli, le résultat se situe avant la date indiquée.
+    " class="champsDate choisirDate BulleInfo PeriodeFin" />
+	        </div>
+            <div class="messageErreur cache">La date de début doit précéder la date de fin.</div>
+	    </div>
+
+        <div class="champRecherche avancee" data-champ="Legislature">
+            <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature" class="labelOnTop">Session</label>
+            <div class="my-skinnable-select">
+	            <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixSessionLegislature" id="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature">
+	<option value="0">Toutes les sessions</option>
+	<option selected="selected" value="1621" title="Session en cours - 43e législature, 3e session (5 mai 2026 - )">Session en cours - 43e l&#233;gislature, 3e session (5 mai 2026 - )</option>
+	<option value="1617" title="43e législature, 2e session (30 septembre 2025 - 8 avril 2026)">43e l&#233;gislature, 2e session (30 septembre 2025 - 8 avril 2026)</option>
+	<option value="1611" title="43e législature, 1re session (29 novembre 2022 - 10 septembre 2025)">43e l&#233;gislature, 1re session (29 novembre 2022 - 10 septembre 2025)</option>
+	<option value="1607" title="42e législature, 2e session (19 octobre 2021 - 28 août 2022)">42e l&#233;gislature, 2e session (19 octobre 2021 - 28 ao&#251;t 2022)</option>
+	<option value="1579" title="42e législature, 1re session (27 novembre 2018 - 13 octobre 2021)">42e l&#233;gislature, 1re session (27 novembre 2018 - 13 octobre 2021)</option>
+	<option value="1079" title="41e législature, 1re session (20 mai 2014 - 23 août 2018)">41e l&#233;gislature, 1re session (20 mai 2014 - 23 ao&#251;t 2018)</option>
+	<option value="789" title="40e législature, 1re session (30 octobre 2012 - 5 mars 2014)">40e l&#233;gislature, 1re session (30 octobre 2012 - 5 mars 2014)</option>
+	<option value="499" title="39e législature, 2e session (23 février 2011 - 1 août 2012)">39e l&#233;gislature, 2e session (23 f&#233;vrier 2011 - 1 ao&#251;t 2012)</option>
+	<option value="491" title="39e législature, 1re session (13 janvier 2009 - 22 février 2011)">39e l&#233;gislature, 1re session (13 janvier 2009 - 22 f&#233;vrier 2011)</option>
+	<option value="489" title="38e législature, 1re session (8 mai 2007 - 5 novembre 2008)">38e l&#233;gislature, 1re session (8 mai 2007 - 5 novembre 2008)</option>
+	<option value="487" title="37e législature, 2e session (14 mars 2006 - 21 février 2007)">37e l&#233;gislature, 2e session (14 mars 2006 - 21 f&#233;vrier 2007)</option>
+	<option value="485" title="37e législature, 1re session (4 juin 2003 - 10 mars 2006)">37e l&#233;gislature, 1re session (4 juin 2003 - 10 mars 2006)</option>
+	<option value="483" title="36e législature, 2e session (22 mars 2001 - 12 mars 2003)">36e l&#233;gislature, 2e session (22 mars 2001 - 12 mars 2003)</option>
+	<option value="481" title="36e législature, 1re session (2 mars 1999 - 9 mars 2001)">36e l&#233;gislature, 1re session (2 mars 1999 - 9 mars 2001)</option>
+	<option value="479" title="35e législature, 2e session (25 mars 1996 - 21 octobre 1998)">35e l&#233;gislature, 2e session (25 mars 1996 - 21 octobre 1998)</option>
+	<option value="477" title="35e législature, 1re session (29 novembre 1994 - 13 mars 1996)">35e l&#233;gislature, 1re session (29 novembre 1994 - 13 mars 1996)</option>
+	<option value="475" title="34e législature, 3e session (17 mars 1994 - 17 juin 1994)">34e l&#233;gislature, 3e session (17 mars 1994 - 17 juin 1994)</option>
+	<option value="473" title="34e législature, 2e session (19 mars 1992 - 10 mars 1994)">34e l&#233;gislature, 2e session (19 mars 1992 - 10 mars 1994)</option>
+	<option value="471" title="34e législature, 1re session (28 novembre 1989 - 18 mars 1992)">34e l&#233;gislature, 1re session (28 novembre 1989 - 18 mars 1992)</option>
+	<option value="469" title="33e législature, 2e session (8 mars 1988 - 9 août 1989)">33e l&#233;gislature, 2e session (8 mars 1988 - 9 ao&#251;t 1989)</option>
+	<option value="467" title="33e législature, 1re session (16 décembre 1985 - 8 mars 1988)">33e l&#233;gislature, 1re session (16 d&#233;cembre 1985 - 8 mars 1988)</option>
+	<option value="465" title="32e législature, 5e session (16 octobre 1984 - 10 octobre 1985)">32e l&#233;gislature, 5e session (16 octobre 1984 - 10 octobre 1985)</option>
+	<option value="463" title="32e législature, 4e session (23 mars 1983 - 20 juin 1984)">32e l&#233;gislature, 4e session (23 mars 1983 - 20 juin 1984)</option>
+	<option value="461" title="32e législature, 3e session (9 novembre 1981 - 10 mars 1983)">32e l&#233;gislature, 3e session (9 novembre 1981 - 10 mars 1983)</option>
+	<option value="459" title="32e législature, 2e session (30 septembre 1981 - 2 octobre 1981)">32e l&#233;gislature, 2e session (30 septembre 1981 - 2 octobre 1981)</option>
+	<option value="457" title="32e législature, 1re session (19 mai 1981 - 18 juin 1981)">32e l&#233;gislature, 1re session (19 mai 1981 - 18 juin 1981)</option>
+	<option value="455" title="31e législature, 6e session (5 novembre 1980 - 12 mars 1981)">31e l&#233;gislature, 6e session (5 novembre 1980 - 12 mars 1981)</option>
+	<option value="453" title="31e législature, 5e session (24 octobre 1980 - 24 octobre 1980)">31e l&#233;gislature, 5e session (24 octobre 1980 - 24 octobre 1980)</option>
+	<option value="451" title="31e législature, 4e session (6 mars 1979 - 18 juin 1980)">31e l&#233;gislature, 4e session (6 mars 1979 - 18 juin 1980)</option>
+	<option value="449" title="31e législature, 3e session (21 février 1978 - 20 février 1979)">31e l&#233;gislature, 3e session (21 f&#233;vrier 1978 - 20 f&#233;vrier 1979)</option>
+	<option value="447" title="31e législature, 2e session (8 mars 1977 - 22 décembre 1977)">31e l&#233;gislature, 2e session (8 mars 1977 - 22 d&#233;cembre 1977)</option>
+	<option value="445" title="31e législature, 1re session (14 décembre 1976 - 23 décembre 1976)">31e l&#233;gislature, 1re session (14 d&#233;cembre 1976 - 23 d&#233;cembre 1976)</option>
+	<option value="443" title="30e législature, 4e session (16 mars 1976 - 18 octobre 1976)">30e l&#233;gislature, 4e session (16 mars 1976 - 18 octobre 1976)</option>
+	<option value="441" title="30e législature, 3e session (18 mars 1975 - 19 décembre 1975)">30e l&#233;gislature, 3e session (18 mars 1975 - 19 d&#233;cembre 1975)</option>
+	<option value="439" title="30e législature, 2e session (14 mars 1974 - 28 décembre 1974)">30e l&#233;gislature, 2e session (14 mars 1974 - 28 d&#233;cembre 1974)</option>
+	<option value="437" title="30e législature, 1re session (22 novembre 1973 - 22 décembre 1973)">30e l&#233;gislature, 1re session (22 novembre 1973 - 22 d&#233;cembre 1973)</option>
+	<option value="435" title="29e législature, 4e session (15 mars 1973 - 25 septembre 1973)">29e l&#233;gislature, 4e session (15 mars 1973 - 25 septembre 1973)</option>
+	<option value="433" title="29e législature, 3e session (7 mars 1972 - 14 mars 1973)">29e l&#233;gislature, 3e session (7 mars 1972 - 14 mars 1973)</option>
+	<option value="431" title="29e législature, 2e session (23 février 1971 - 24 décembre 1971)">29e l&#233;gislature, 2e session (23 f&#233;vrier 1971 - 24 d&#233;cembre 1971)</option>
+	<option value="429" title="29e législature, 1re session (9 juin 1970 - 19 décembre 1970)">29e l&#233;gislature, 1re session (9 juin 1970 - 19 d&#233;cembre 1970)</option>
+	<option value="427" title="28e législature, 5e session (24 février 1970 - 12 mars 1970)">28e l&#233;gislature, 5e session (24 f&#233;vrier 1970 - 12 mars 1970)</option>
+	<option value="425" title="28e législature, 4e session (25 février 1969 - 23 décembre 1969)">28e l&#233;gislature, 4e session (25 f&#233;vrier 1969 - 23 d&#233;cembre 1969)</option>
+	<option value="423" title="28e législature, 3e session (20 février 1968 - 18 décembre 1968)">28e l&#233;gislature, 3e session (20 f&#233;vrier 1968 - 18 d&#233;cembre 1968)</option>
+	<option value="421" title="28e législature, 2e session (20 octobre 1967 - 20 octobre 1967)">28e l&#233;gislature, 2e session (20 octobre 1967 - 20 octobre 1967)</option>
+	<option value="419" title="28e législature, 1re session (1 décembre 1966 - 12 août 1967)">28e l&#233;gislature, 1re session (1 d&#233;cembre 1966 - 12 ao&#251;t 1967)</option>
+	<option value="417" title="27e législature, 6e session (25 janvier 1966 - 18 avril 1966)">27e l&#233;gislature, 6e session (25 janvier 1966 - 18 avril 1966)</option>
+	<option value="415" title="27e législature, 5e session (22 octobre 1965 - 23 octobre 1965)">27e l&#233;gislature, 5e session (22 octobre 1965 - 23 octobre 1965)</option>
+	<option value="413" title="27e législature, 4e session (21 janvier 1965 - 6 août 1965)">27e l&#233;gislature, 4e session (21 janvier 1965 - 6 ao&#251;t 1965)</option>
+	<option value="411" title="27e législature, 3e session (14 janvier 1964 - 31 juillet 1964)">27e l&#233;gislature, 3e session (14 janvier 1964 - 31 juillet 1964)</option>
+	<option value="409" title="27e législature, 2e session (21 août 1963 - 23 août 1963)">27e l&#233;gislature, 2e session (21 ao&#251;t 1963 - 23 ao&#251;t 1963)</option>
+	<option value="407" title="27e législature, 1re session (15 janvier 1963 - 11 juillet 1963)">27e l&#233;gislature, 1re session (15 janvier 1963 - 11 juillet 1963)</option>
+	<option value="403" title="26e législature, 2e session (10 novembre 1960 - 10 juin 1961)">26e l&#233;gislature, 2e session (10 novembre 1960 - 10 juin 1961)</option>
+	<option value="401" title="26e législature, 1re session (20 septembre 1960 - 22 septembre 1960)">26e l&#233;gislature, 1re session (20 septembre 1960 - 22 septembre 1960)</option>
+	<option value="399" title="25e législature, 4e session (18 novembre 1959 - 18 mars 1960)">25e l&#233;gislature, 4e session (18 novembre 1959 - 18 mars 1960)</option>
+	<option value="397" title="25e législature, 3e session (19 novembre 1958 - 5 mars 1959)">25e l&#233;gislature, 3e session (19 novembre 1958 - 5 mars 1959)</option>
+	<option value="395" title="25e législature, 2e session (13 novembre 1957 - 21 février 1958)">25e l&#233;gislature, 2e session (13 novembre 1957 - 21 f&#233;vrier 1958)</option>
+	<option value="393" title="25e législature, 1re session (14 novembre 1956 - 21 février 1957)">25e l&#233;gislature, 1re session (14 novembre 1956 - 21 f&#233;vrier 1957)</option>
+	<option value="391" title="24e législature, 4e session (16 novembre 1955 - 23 février 1956)">24e l&#233;gislature, 4e session (16 novembre 1955 - 23 f&#233;vrier 1956)</option>
+	<option value="351" title="20e législature, 1re session (7 octobre 1936 - 12 novembre 1936)">20e l&#233;gislature, 1re session (7 octobre 1936 - 12 novembre 1936)</option>
+	<option value="343" title="18e législature, 2e session (10 janvier 1933 - 13 avril 1933)">18e l&#233;gislature, 2e session (10 janvier 1933 - 13 avril 1933)</option>
+	<option value="341" title="18e législature, 1re session (3 novembre 1931 - 19 février 1932)">18e l&#233;gislature, 1re session (3 novembre 1931 - 19 f&#233;vrier 1932)</option>
+	<option value="335" title="17e législature, 2e session (8 janvier 1929 - 4 avril 1929)">17e l&#233;gislature, 2e session (8 janvier 1929 - 4 avril 1929)</option>
+	<option value="331" title="16e législature, 4e session (11 janvier 1927 - 1 avril 1927)">16e l&#233;gislature, 4e session (11 janvier 1927 - 1 avril 1927)</option>
+	<option value="329" title="16e législature, 3e session (7 janvier 1926 - 24 mars 1926)">16e l&#233;gislature, 3e session (7 janvier 1926 - 24 mars 1926)</option>
+	<option value="325" title="16e législature, 1re session (17 décembre 1923 - 15 mars 1924)">16e l&#233;gislature, 1re session (17 d&#233;cembre 1923 - 15 mars 1924)</option>
+	<option value="323" title="15e législature, 4e session (24 octobre 1922 - 29 décembre 1922)">15e l&#233;gislature, 4e session (24 octobre 1922 - 29 d&#233;cembre 1922)</option>
+	<option value="321" title="15e législature, 3e session (10 janvier 1922 - 21 mars 1922)">15e l&#233;gislature, 3e session (10 janvier 1922 - 21 mars 1922)</option>
+	<option value="319" title="15e législature, 2e session (11 janvier 1921 - 19 mars 1921)">15e l&#233;gislature, 2e session (11 janvier 1921 - 19 mars 1921)</option>
+	<option value="317" title="15e législature, 1re session (10 décembre 1919 - 14 février 1920)">15e l&#233;gislature, 1re session (10 d&#233;cembre 1919 - 14 f&#233;vrier 1920)</option>
+	<option value="315" title="14e législature, 3e session (21 janvier 1919 - 17 mars 1919)">14e l&#233;gislature, 3e session (21 janvier 1919 - 17 mars 1919)</option>
+	<option value="313" title="14e législature, 2e session (4 décembre 1917 - 9 février 1918)">14e l&#233;gislature, 2e session (4 d&#233;cembre 1917 - 9 f&#233;vrier 1918)</option>
+	<option value="311" title="14e législature, 1re session (7 novembre 1916 - 22 décembre 1916)">14e l&#233;gislature, 1re session (7 novembre 1916 - 22 d&#233;cembre 1916)</option>
+	<option value="309" title="13e législature, 4e session (11 janvier 1916 - 16 mars 1916)">13e l&#233;gislature, 4e session (11 janvier 1916 - 16 mars 1916)</option>
+	<option value="307" title="13e législature, 3e session (7 janvier 1915 - 5 mars 1915)">13e l&#233;gislature, 3e session (7 janvier 1915 - 5 mars 1915)</option>
+	<option value="305" title="13e législature, 2e session (11 novembre 1913 - 19 février 1914)">13e l&#233;gislature, 2e session (11 novembre 1913 - 19 f&#233;vrier 1914)</option>
+	<option value="303" title="13e législature, 1re session (5 novembre 1912 - 21 décembre 1912)">13e l&#233;gislature, 1re session (5 novembre 1912 - 21 d&#233;cembre 1912)</option>
+	<option value="301" title="12e législature, 4e session (9 janvier 1912 - 3 avril 1912)">12e l&#233;gislature, 4e session (9 janvier 1912 - 3 avril 1912)</option>
+	<option value="299" title="12e législature, 3e session (10 janvier 1911 - 24 mars 1911)">12e l&#233;gislature, 3e session (10 janvier 1911 - 24 mars 1911)</option>
+	<option value="297" title="12e législature, 2e session (15 mars 1910 - 4 juin 1910)">12e l&#233;gislature, 2e session (15 mars 1910 - 4 juin 1910)</option>
+	<option value="295" title="12e législature, 1re session (2 mars 1909 - 29 mai 1909)">12e l&#233;gislature, 1re session (2 mars 1909 - 29 mai 1909)</option>
+	<option value="293" title="11e législature, 4e session (3 mars 1908 - 25 avril 1908)">11e l&#233;gislature, 4e session (3 mars 1908 - 25 avril 1908)</option>
+
+</select>
+	        </div>
+        </div>
+
+		<div align="right" class="btnRechercheContextuelle">
+			<input type="button" onclick="RechercheTravaux()" value="Rechercher" class="btnSoumettre" />
+		</div>
+</div>
+
+
+<script type="text/javascript">
+    var idSessionLegislatureCourante = '1621'
+
+    $(document).ready(function () {
+        InitialiserRechercheTravauxParlementaires();
+        $("input.champMotCle, [data-champ] input, [data-champ] select]").keypress(function (e) {
+            if (e && e.keyCode == 13) {
+                RechercheTravaux();
+                return false;
+            }
+        });
+    })
+
+//<![CDATA[
+    String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); };
+
+    function RechercheTravaux() {
+        if (!ValiderPeriode())
+            return;
+
+        var motsCles = $('#ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux');
+
+        var queryString = "";
+        queryString = queryString + "SectionRecherche=9";
+        
+        if (motsCles.val() != "")
+            queryString = queryString + "&MotsCles=" + encodeURIComponent(htmlEscape(motsCles.val()));
+        
+        var typeTravaux = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux');
+        queryString = queryString + "&TypeTravaux=" + typeTravaux.val();
+            
+        var typeDocuments = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments');
+        queryString = queryString + "&TypeDocument=" + typeDocuments.val();
+
+        var dateDebut = $('#ctl00_ColGauche_RechercheTravaux_txtDateDebut');
+        var dateFin = $('#ctl00_ColGauche_RechercheTravaux_txtDateFin');
+        if (dateDebut.val() != "" || dateFin.val() != "")
+        {
+            queryString = queryString + "&PeriodeDebut=" + dateDebut.val();
+            queryString = queryString + "&PeriodeFin=" + dateFin.val();
+            queryString = queryString + "&Legislature=0";
+        }
+        else
+        {
+            var sessionLegislature = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature');
+            if (sessionLegislature.val() == "-1") {
+                sessionLegislature.get(0).selectedIndex = 1;
+            }
+            queryString = queryString + "&Legislature=" + sessionLegislature.val();
+        }
+
+        //Appel de la page de recherche.
+        window.location = '/fr/recherche/recherche-avancee.html?' + queryString;
+    }
+ //]]>
+</script>
+
+
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Imprimer la page" title="Imprimer la page"
+                        src='/Images/icones/partageImprimante.gif' width="16" height="16"/></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Taille du texte : régulière" title="Taille du texte : régulière" src='/Images/icones/retrecir.gif' width="16" height="16"/></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src='/Images/icones/agrandir.gif' width="16" height="16"/></a>
+                </li>
+                <li>
+                    <a href='/fr/fils-rss.html' class="nePasRediriger">
+                        <img alt="Fils RSS" title="Fils RSS"
+                        src='/Images/icones/partageRss.gif' width="16" height="16"/></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Partager</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                    <li>
+                        <a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-2%2fjournal-debats%2fCSSS-220428.html' class="nePasRediriger">
+                            <img alt="Partager par Facebook" title="Partager par Facebook"
+                            src='/Images/icones/partageFacebook.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://x.com/intent/tweet?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-2%2fjournal-debats%2fCSSS-220428.html' class="nePasRediriger">
+                            <img alt="Partager par X" title="Partager par X"
+                            src='/Images/icones/partageTwitter.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://www.linkedin.com/sharing/share-offsite/?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-2%2fjournal-debats%2fCSSS-220428.html' class="nePasRediriger">
+                            <img alt="Partager par LinkedIn" title="Partager par LinkedIn"
+                            src='/Images/icones/partageLinkedin.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='/fr/__envoyer-ami.html?lienurl=%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-2%2fjournal-debats%2fCSSS-220428.html' class="nePasRediriger">
+                            <img alt="Partager par courriel" title="Partager par courriel"
+                            src='/Images/icones/partageCourriel.gif' /></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/fr/document/19787.html">Diagramme de l'Assemblée</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="styleHyperlien">
+		            <span id="IconeEnDirect" class="icoEnDirect"> </span>		
+		            En direct sur le Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    <h1>
+	<span id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu"><a href="#ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"><img alt="Liens Ignorer la navigation" src="/WebResource.axd?d=4UaBqSIWkbOa0oKpfyVaroCfWw-gKpH7p94XAneRMXaNy_TmToGBBciOgGFLRbyIG0lHcoUothuOjD7lW_eFebb023o1&amp;t=638901627720898773" width="0" height="0" style="border-width:0px;" /></a><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span><a id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"></a></span></h1>
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+								
+    <h2>Version finale</h2>
+    
+	
+            <div class="boutonRetour">
+                <span>
+			        <a  href='https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-2/journal-debats/index.html'>Retour à la liste des séances du Journal des débats</a>
+			    </span>
+            </div>
+			<h2 class="titre2TravauxParl">
+				42<sup>e</sup> législature, 2<sup>e</sup> session
+				<br />
+				(19 octobre 2021 au 28 août 2022)
+			</h2>
+		
+	 
+	
+		
+			<h2>
+                Le jeudi 28 avril 2022 -  Vol.&nbsp;46 N°&nbsp;31
+            </h2>
+			
+			
+					<p>
+				
+					<h3>Étude des crédits budgétaires du ministère de la Santé et des Services sociaux, volet Santé, accessibilité aux soins et santé publique</h3>
+					<br />
+				
+					</p>
+				
+			
+			
+               
+                <p>
+				    <a href="#debut_journal">Aller directement au contenu du Journal des débats</a>
+			    </p>
+            
+			    <h3>Table des matières</h3>
+			    <div class="tableMatieresJournal">
+				    <p><TableDesMatieres><p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;margin-left: 0cm;margin-right: 0cm;margin-top: 12.0pt;text-align: left;">
+  <a href="#_Toc191367093">
+    <span>Santé, Accessibilité aux
+soins et Santé publique</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc191367094">
+    <span>Discussion générale
+(suite)</span>
+  </a>
+</p>
+<p align="center" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;text-align: center;">
+  <b>Intervenants</b>
+</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Luc
+Provençal, président</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+Christian Dubé </p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Monsef
+Derraji </p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M.
+Vincent Marissal </p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Joël
+Arseneau </p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Mme
+Lucie Opatrny, ministère de la Santé et des Services sociaux </p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          M.
+Luc Boileau, idem</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          M.
+Daniel Paré, idem</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          M.
+Daniel Desharnais, idem</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          M.
+Marco Thibault, Régie de l'assurance maladie du Québec </p>
+<p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Témoins
+interrogés par les membres de la commission</p></TableDesMatieres></p>
+			    </div>
+			
+                <h2>
+				    <a name="debut_journal" class="ancreNommee">Journal des débats</a>
+			    </h2>
+			<Contenu><p style="text-align: justify">
+  <a name="Page00001"></a>
+  <i>(Onze heures quarante-cinq minutes)</i>
+</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>À l'ordre, s'il vous plaît! Ayant
+ constaté le quorum, je déclare la séance de la Commission de la santé et des
+ services sociaux ouverte. </p>
+<p style="text-align: justify">La commission est réunie afin de poursuivre
+ l'étude du volet Santé, Accessibilité aux soins et Santé publique des crédits
+ budgétaires du portefeuille Santé et Services sociaux pour l'exercice financier 2022-2023.</p>
+<p style="text-align: justify">Mme la secrétaire, y a-t-il des remplacements?</p>
+<p style="text-align: justify">
+  <b>La Secrétaire</b> <b>:</b> Non, M. le
+ Président.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc191367093"></a>
+  <a name="_Toc187046692"></a>
+  <a name="_Toc187046648">Santé, Accessibilité aux soins et Santé publique</a>
+</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>Merci beaucoup. Nous allons procéder
+ à une discussion d'ordre général par blocs d'environ 20 minutes, incluant
+ les questions et les réponses. La mise aux voix de ces crédits sera effectuée à
+ la fin du temps alloué au portefeuille, soit le jeudi 5 mai.</p>
+<p style="text-align: justify">Puisque nous avons débuté nos travaux à
+ 11 h 46 et qu'une période d'une heure doit être consacrée, je vous propose ce qui suit. Dans un premier temps,
+ j'aurais besoin d'un consentement pour retirer le temps du gouvernement.
+ Consentement?</p>
+<p style="text-align: justify">
+  <b>Des voix : </b>...</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>Pour retirer le temps du gouvernement.
+ Et, deuxièmement, ça me prend un consentement pour aller au-delà de l'heure
+ prévue, c'est-à-dire que, pour respecter notre bloc d'une heure, on devrait
+ aller à peu près jusqu'à 12 h 36, là, pour donner le temps complet.
+ Consentement? Merci beaucoup.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc191367094"></a>
+  <a name="_Toc187046693"></a>
+  <a name="_Toc187046649">Discussion générale (suite)</a>
+</p>
+<p style="text-align: justify">Je suis maintenant prêt à reconnaître une
+ première intervention de l'opposition officielle pour un premier bloc
+ d'échange. M. le député de Nelligan, la parole est à vous pour... (panne de
+ son).</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Oui. Merci, M. le
+ Président. Et, encore une fois, bonjour à tout le monde, bonjour à l'équipe qui
+ accompagne le ministre. Et je tiens à remercier tout le monde pour les échanges
+ d'hier.</p>
+<p style="text-align: justify">Première question, M. le ministre, on va aller
+ aux chirurgies oncologiques, et j'ai besoin de clarifications. Je sais que vous êtes bien épaulé et bien équipé,
+ vous êtes bien accompagné. J'aimerais bien savoir le nombre de patients qui dépassent le délai de 55 jours en termes
+ de chirurgies oncologiques, si votre équipe peut nous confirmer le nombre
+ que j'ai en face de moi, surtout qu'on s'est donné des cibles en 2012.</p>
+<p style="text-align: justify">
+  <b>M.
+ Dubé : </b>M. le Président, oui, ça va? Est-ce que
+ Dre Opatrny peut répondre à cette question-là? Parce que, moi, ce
+ n'est pas des chiffres que j'ai personnellement ici, là. Alors, peut-être...</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>Consentement? Et vous allez vous
+ nommer et donner votre titre.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Peut-être juste lui donner
+ le temps de trouver l'information puis...</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny (Lucie) : </b>J'ai les
+ chiffres devant moi.</p>
+<p style="text-align: justify">
+  <b>Le
+ Président (M. Provençal) </b>
+  <b>: </b>Alors, pourriez-vous vous nommer puis donner votre
+ fonction, s'il vous plaît? Merci beaucoup.</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny
+ (Lucie) : </b>Lucie Opatrny, sous-ministre adjointe, Direction
+ générale des affaires universitaires, médicales, infirmières et
+ pharmaceutiques. Ce que... Pour les chirurgies oncologiques, nous suivons...
+ l'indicateur, c'est les chirurgies à l'intérieur de 56 jours. Globalement,
+ le résultat pour l'année 2021-2022, c'est que 80,1 % des patients sont... ont leur chirurgie oncologique
+ dans ce délai-là. Il y a aussi des délais qui sont suivis par siège tumoral, mais, globalement, le pourcentage s'élève
+ à 90,1 %, qui est... Et l'année avant pandémie, c'était 91,9 %. Alors
+ c'est assez comparable.</p>
+<p style="text-align: justify">
+  <b>M.
+ Derraji : </b>...je vais la répéter : Le nombre de patients
+ qui dépassent les délais de 55 jours en date d'aujourd'hui.</p>
+<p style="text-align: justify">
+  <a name="Page00002"></a>
+  <b>Mme Opatrny (Lucie) : </b>Je ne
+ voudrais pas utiliser votre temps pour chercher cette donnée-là, que j'ai
+ certainement quelque part ici. Est-ce que je peux vous revenir avec le nombre
+ de patients?</p>
+<p style="text-align: justify">
+  <i>• (11 h 50) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Oui,
+ pas de problème. Parce qu'en fait j'ai un document. Je ne sais pas, c'est
+ sur...</p>
+<p style="text-align: justify">
+  <b>Une voix :</b>
+ ...</p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b>
+ J'ai la liste du 26 février 2022. Je veux juste vérifier avec vous ces
+ chiffres, parce que, moi, ça m'alarme, mais je voulais vérifier avec vous parce
+ que vous êtes les personnes qui peuvent nous confirmer s'il s'agit des bons
+ chiffres. Les chiffres que j'ai, c'est 391 patients qui dépassent le délai
+ de 55 jours. Vous le savez, que chaque
+ heure compte. 100 % dans les 56 jours. 90 patients dans les
+ 28 jours. Ça, c'est les cibles du ministère. Ce que j'ai, ce qui
+ est alarmant, c'est l'Outaouais, où on est à 45 %. C'est uniquement la
+ Gaspésie et les Îles-de-la-Madeleine qu'ils sont à... 90 % sont à
+ l'intérieur de 28 jours. Ce que j'ai, le reste, c'est soit du 0 %, Nord-du-Québec,
+ 45 %, Abitibi-Témiscamingue. J'ai du 80 %, 76 % en Montérégie,
+ 65 %, l'ensemble du Québec.</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny
+ (Lucie) :</b> ...que nous avons... Le dernier chiffre, c'était février
+ 2022, où il y a 383 chirurgies oncologiques en attente de plus que
+ 56 jours.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>O.K.
+ Donc, vous confirmez ces chiffres.</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny
+ (Lucie) : </b>Oui. </p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>C'est
+ qu'il y a 391 patients qui dépassent les délais de 55 jours.</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny
+ (Lucie) : </b>383.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Oui,
+ ce n'est pas grave. O.K. Mais, O.K., c'est quoi, votre interprétation à ce
+ dépassement de 57 jours? On s'entend que c'est des chirurgies quand
+ même... C'est très lourd, c'est très urgent. Chaque heure compte. Comment vous
+ interprétez ce retard?</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny
+ (Lucie) : </b>C'est sûr que notre cible, c'est zéro patient qui attend
+ plus que 56 jours, parce que, comme vous dites, chaque patient... Et c'est
+ essentiel qu'on les fait. </p>
+<p style="text-align: justify">Maintenant, que... ce
+ qu'on fait aussi, c'est une analyse par siège tumoral, parce qu'il y a quand
+ même quelques cancers où c'est encore... le temps, par exemple, de moins que
+ 28 jours est encore plus urgent, et d'autres qui peuvent attendre, même, plus que 56 jours. Alors, quand nous
+ allons... quand nous faisons l'analyse par siège tumoral... Et comment
+ c'est priorisé dans les établissements, c'est que... Par exemple, le cancer du
+ sein, nous sommes à 95,3 % de
+ chirurgies réalisées à moins que 56 jours, pour le colorectal,
+ 94,8 %. Ça, ça diminue, par exemple, pour la thyroïde, à
+ 71,6 jours, où il y a quand même une compréhension que, pour beaucoup de
+ sous-types de cancers de thyroïde, c'est quand même acceptable ou... je ne veux
+ pas dire acceptable, mais on peut dépasser le 56 jours.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Oui.
+ Je comprends, Dre Opartny. Ma question : Est-ce que, dans la liste,
+ vu ce qu'on vit, il y a une priorisation? Est-ce que je peux dire qu'il y a une
+ priorisation? Parce que, si on dit qu'il y a urgence pour les... en bas de
+ 28 jours, là, on s'entend, on n'est pas à la cible. Ma question, c'est que
+ je ne veux pas vous dire que... Là, la cible n'est pas respectée du tout. Je
+ pense qu'à la lumière de ce que j'ai maintenant... Ce qu'on veut, c'est
+ 100 % dans les 56 jours. On n'est pas à 100 % dans le
+ 56 jours. C'est que vous, vous avez une autre interprétation, c'est que
+ vous dites que j'ai des cancers en bas de 28 jours, je vais commencer avec
+ ceux de 28 jours et je peux laisser ceux à 56 jours, parce que je fais
+ une sorte de priorisation. Est-ce que c'est ça, la lecture que je peux...</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny
+ (Lucie) : </b>Il y a deux éléments. Premièrement, nous priorisons quand
+ même les chirurgies oncologiques, parce que les résultats de 56 jours sont
+ comparables, cette année, que même une année prépandémie. Évidemment, on veut
+ aller vers le 100 %. Alors, de un, les résultats sont pareils que dans une
+ année prépandémie. </p>
+<p style="text-align: justify">Ceci dit, quand il
+ faut faire des choix, parce qu'il y a quand même d'autres urgences que
+ simplement oncologiques, il y a des chirurgies cardiaques, il y a des
+ chirurgies vasculaires, etc., à l'intérieur des listes d'attente d'oncologie,
+ il y a une sous-priorisation pour voir comment minimiser les impacts sur les
+ patients.</p>
+<p style="text-align: justify">
+  <b>M. Derraji :
+ </b>...partager cette sous-priorisation? Sur quoi elle est basée, cette
+ sous-priorisation, à l'intérieur des chirurgies oncologiques?</p>
+<p style="text-align: justify">Et ma deuxième
+ question. On s'éloigne des cibles de 2012. Les cibles de 2012, c'est 90 %
+ des patients dans les 28 jours. Je ne vois aucune région en bas de... à
+ l'intérieur de 28 jours, sauf la Gaspésie et Îles-de-la-Madeleine, la
+ seule région. Les autres, j'ai le pourcentage, je pense qu'on parle du même
+ tableau, on n'atteint pas les cibles de 90 %. 56 jours, on n'atteint
+ pas la cible, parce que, vous l'avez très bien dit, c'est zéro. Ça veut dire
+ atteindre 100 %. Donc, on est loin des cibles. On a une liste d'attente en
+ chirurgie oncologique.</p>
+<p style="text-align: justify">Maintenant, par rapport aux patients, c'est
+ quoi, le message? Est-ce qu'il y a quelque chose que vous faites pour les rassurer? Est-ce que c'est... Quand même,
+ attendre pour une chirurgie oncologique, c'est très, très lourd pour un
+ patient, c'est très, très lourd. Est-ce qu'ils sont au courant de cette liste,
+ de cette sous-priorisation?</p>
+<p style="text-align: justify">
+  <a name="Page00003"></a>
+  <b>Mme Opatrny (Lucie) :
+ </b>Pour une approche... Pour la priorisation... Puis vous avez tout à fait
+ raison qu'on fait tout dans notre possible pour avoir un processus
+ d'amélioration continue. Alors, le fait que nous sommes à un même stade où on était en prépandémie ne veut pas
+ dire qu'on ne devrait pas continuer à optimiser et à réduire les délais, absolument.
+ Maintenant, en termes d'approche pour les différents types de cancer, ça, dans
+ tous les établissements, il y a des comités qui regardent sur une base clinique
+ pour prioriser tous les types de chirurgie oncologique, comme autres, pour voir comment jumeler le besoin
+ clinique au délai. Mais effectivement il faut aller vers... rapidement, le plus
+ possible vers le 100 % à l'intérieur de 56 jours et également
+ regarder pour optimiser les délais à l'intérieur de 28 jours.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Oui. J'ai posé
+ deux questions. La première : Est-ce qu'on peut recevoir la
+ sous-priorisation, s'il vous plaît? Est-ce que vous allez le...</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny (Lucie) : </b>Oui.
+ Alors, on peut vous envoyer un tableau où on a tous les sièges tumoraux et le
+ pourcentage de chirurgies qui sont réalisées à l'intérieur de 56 jours, et
+ ce n'est pas pareil pour chaque siège tumoral.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Oui. Ça veut dire
+ que chaque tumeur a une liste de priorisation par état de gravité. On ne parle
+ pas de la... soupçonnée ou confirmée. Parce que c'est ça, la cible, c'était
+ pour... un cancer soupçonné ou confirmé doit être opéré dans un délai de
+ 28 jours. Ça veut dire que le ministère lui-même a mis de côté ses propres
+ cibles de 2012, et là il y a un autre mode de fonctionnement.</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny
+ (Lucie) : </b>C'est que la direction d'oncologie, avec avec le
+ réseau, dit, sur une base scientifique, quels sont ceux qui ne peuvent
+ pas attendre. Par exemple, si on dit que, hors délai, c'est plus qu'un an,
+ c'est sûr que d'avoir une fistule pour faire la dialyse, ça ne peut pas
+ attendre un an. Alors, même quand on dit : Hors délai, en chirurgie, est
+ plus qu'un an, ce n'est pas vrai quand on regarde des sous-catégories cliniques.
+ Alors, également, il y a des sous-catégories d'oncologie qui ne sont pas toutes
+ pareilles. Alors, ce serait illogique de ne pas prendre en considération cette
+ science-là quand les établissements font leurs programmes opératoires. Alors,
+ par exemple, on ne peut pas penser que l'ovaire et... ou le sein et la prostate
+ sont nécessairement pareils sur une base biologique.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Je
+ comprends. On parle, encore une fois, de cancers soupçonnés ou confirmés. C'est
+ ça, la cible.</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny (Lucie) : </b>Oui. </p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>O.K.
+ C'est parce que, là, c'est comme... il y a un changement de règles. Là, on en
+ parle... La cible, elle était : «90 % de la clientèle
+ requérant un chirurgien oncologique pour un cancer soupçonné ou confirmé doit
+ être opérée dans un délai de 28 jours,
+ et 100 % de cette clientèle doit être opérée dans un délai de
+ 56 jours.» On n'est pas là, là. On n'est pas ni dans les
+ 56 jours ni dans le 28 jours. Ça, c'est hors délai. </p>
+<p style="text-align: justify">Là, ma
+ question. Sur la liste qui dépasse les 56 jours, c'est eux qui
+ m'intéressent de manière prioritaire aujourd'hui, les 380, vous avez dit, moi,
+ j'ai 391, on ne va pas s'obstiner, mais c'est 300, aux alentours de 300, vous
+ avez la garantie, aujourd'hui, qu'il n'y a pas de menace par rapport à
+ leur état de santé, malgré la sous-priorisation.</p>
+<p style="text-align: justify">
+  <b>Mme Opatrny (Lucie) : </b>Étant donné
+ que je ne suis pas le médecin de ces 300 personnes-là, je ne peux pas
+ m'avancer sur une phrase pareille. Ce que je peux dire, c'est qu'on vise
+ toujours de faire... Puis on est à 90 %. Et là ils sont quand même suivis
+ par des groupes cliniques, parce que des fois ils vont recevoir, après leur
+ diagnostic, la radiothérapie ou la
+ chimiothérapie avant de procéder à leur chirurgie. Alors, il y a ça qui peut
+ aussi rentrer dans un délai. Mais ce
+ que je vous dis, c'est qu'à l'intérieur de 90 % de chirurgies qui sont
+ faites ce n'est pas que... toutes les sous-catégories de cancers qui ont les mêmes chiffres.
+ Globalement, on est à 90 %, mais, quand on regarde une sous-catégorie, il
+ y en a qui sont beaucoup plus que 90 % et il y en a quelques-unes qui sont
+ moins que 90 % réalisées à l'intérieur de 56 jours.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Je comprends vos
+ arguments. Je me mets dans la place d'un patient qui souffre d'un cancer et que
+ lui ne comprend pas, probablement, notre discours aujourd'hui. Je comprends les
+ arguments scientifiques, surtout la priorisation par rapport aux types de
+ cancers et le type d'urgence. Maintenant, est-ce qu'il y a quelque chose à
+ faire? Parce que, là, sur la table, le ministre a un enjeu, il y a
+ 380 patients qui dépassent 57, 56 jours. C'est là où il faut
+ répondre. J'ai 380 patients où le délai n'est plus respecté. Je comprends
+ vos arguments, mais c'est à eux qu'on doit parler aujourd'hui, M. le ministre.
+ Ces gens attendent. Ils n'ont pas, probablement... je formule cette hypothèse,
+ probablement pas le niveau de dire que mon cancer n'est pas urgent versus un
+ autre. Lui, il veut juste s'opérer, il veut juste avoir une opération. Il veut
+ avoir sa date de chirurgie. Donc...</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>...je sens beaucoup
+ d'empathie de la part du député puis je respecte ça parce que...</p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b> ...</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> J'ai dit : Je sens
+ beaucoup d'empathie de la part du...</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>C'est juste que... </p>
+<p style="text-align: justify">
+  <i>• (12 heures) •</i>
+</p>
+<p style="text-align: justify">
+  <a name="Page00004"></a>
+  <b>M.
+ Dubé :</b> Parce que... Non, mais votre question est pertinente. Moi, ce
+ qui me... Puis, juste, peut-être, pour être complémentaire avec la
+ Dre Opatrny, il y a eu, effectivement, là, quand je regarde nos
+ statistiques, là... Puis, comme vous savez, on a de plus en plus... Il y a eu,
+ dans la dernière vague, une augmentation des cas. Le 380 quelques cas dont vous
+ parlez, il est monté jusqu'à 600 cas qui étaient plus que 56 jours.
+ Mais, depuis ce temps-là, il y a eu une amélioration. Alors, je pense qu'il
+ faut comprendre qu'on est passés d'un pic à... il y a eu une baisse. Ça, c'est
+ la bonne nouvelle. Mais c'est encore aux alentours de 10 % qui restent.</p>
+<p style="text-align: justify">Moi, ce que
+ j'aimerais vous fournir, puis ça, je le ferai avec Dre Opatrny... Je pense que
+ ce serait bon de voir comment a évolué, dans les deux... dans les quatre ou
+ cinq dernières années, hors pandémie, hein, je pense que c'est ça qui est
+ important... de dire, hors pandémie, c'était quoi, la règle du 28 jours,
+ et c'était quoi, la règle du 56 jours. Ça, je pense qu'on pourrait fournir
+ les deux. Puis je pense que ce que les Québécois veulent se faire rassurer,
+ surtout avec le programme de rattrapage des chirurgies qu'on a, comme du
+ dépistage, c'est comment on va être capables d'atteindre le plus rapidement nos
+ cibles. Alors, moi, je m'engage à regarder les deux délais, celui de
+ 28 jours, celui de 56 jours. Puis ça, je pense que ça rassurerait
+ tout le monde, parce que vous avez raison d'être préoccupé par ça. </p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>...ma
+ question, c'est vraiment au nom de ces 380 personnes. C'est très bien de
+ voir par rapport au recul sur les dernières années, mais engagez-vous à
+ respecter les cibles, parce que j'en suis sûr, que...</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Mais
+ l'engagement, M. le député...</p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b>
+ ...Dre Opatrny fait des miracles. Je pense, on peut lui demander de faire un
+ miracle par rapport à ces personnes.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b>
+ ...mais qui n'est pas encore assez grand. Moi, d'être... Parce que moi, je
+ regarde une statistique, là, les 0-56 jours se sont tenus à l'intérieur de
+ 90 % depuis quatre ans : 91,9 %, 91,9 %, 90,6 % puis
+ 90,1 %. La pire année, c'est 90,1 % en dedans de 56 jours, et
+ ça, c'est dans la pire année, où on a eu notre cinquième et sixième vague. Ça fait
+ que...</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>...moi,
+ j'ai 65 %. </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Non,
+ mais je vais vous les fournir. C'est pour ça que je disais, M. le député... Et,
+ quand on est à 383 ou... on est revenus déjà à notre moyenne des quatre
+ dernières années. Ça fait qu'on a réussi à passer à travers la cinquième et sixième vague. Je vais vous envoyer
+ ces statistiques-là pour voir comment était le 56 jours, comment était
+ le 28 jours. Mais, Dre Opatrny a raison, notre objectif, c'est zéro.
+ Ce n'est pas 90 %, c'est 100 %. Mais...</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Je
+ comprends votre argument, M. le ministre, et je comprends les statistiques. Je
+ pense qu'on a un point en commun, on adore les chiffres et les statistiques.
+ Mais là on parle des vies humaines, on parle de patients qui souffrent, et surtout pour des cancers. Hier,
+ on a parlé du délestage et des autres chirurgies. Aujourd'hui, vraiment,
+ moi, ce que je veux, surtout dans un contexte pandémique, la pandémie en a
+ rajouté, donc, juste prendre en considération qu'on...</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b>
+ ...M. le député. </p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>C'est
+ bon. Merci. </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Tout
+ à fait d'accord avec lui. O.K. </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>...à la prochaine
+ intervention. Alors, M. le député de Rosemont, vous avez
+ 8 min 3 s.</p>
+<p style="text-align: justify">
+  <b>M. Marissal :
+ </b>Oui. Merci, M. le Président. Oui, ça va être rapide, là, puis, pour ne pas
+ perdre de temps, j'aurais deux questions que je lance. Il va rester du temps à
+ la fin pour les réponses. Sinon, je prendrai les réponses par écrit. Combien y
+ a-t-il de médecins qui se sont désaffiliés du régime dans les cinq dernières
+ années? Question un. Question deux : Combien de cliniques privées ont été
+ ouvertes dans les cinq dernières années, qui sont toujours ouvertes,
+ évidemment, selon leurs spécialités? Je vous lance ça comme ça. M. le
+ ministre...</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>...deuxième
+ question, M. le député? Je veux juste bien comprendre.</p>
+<p style="text-align: justify">
+  <b>M. Marissal :
+ </b>Combien de cliniques privées ont été ouvertes depuis cinq ans? Combien sont
+ toujours...</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Cliniques
+ privées de chirurgie?</p>
+<p style="text-align: justify">
+  <b>M. Marissal :
+ </b>Selon... J'ai rajouté : Selon leurs spécialités, et qui sont toujours
+ ouvertes.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>O.K.
+ </p>
+<p style="text-align: justify">
+  <a name="Page00005"></a>
+  <b>M. Marissal : </b>C'est
+ bon? Bon, ne prenez pas ça mal, là, M. le ministre, ma première question n'est
+ pas pour vous. Je vous vois souvent. Je vois
+ moins souvent le Dr Boileau. Dr Boileau... Ça vous va, M. le
+ Président, que j'y aille comme ça? Merci. </p>
+<p style="text-align: justify">Votre... je pense que je peux dire ça comme ça,
+ votre vis-à-vis américain, hier, a fait une déclaration qui a fait grand bruit.
+ Vous l'avez certainement entendu, il a dit, et je cite : «The United
+ States is certainly, right now, in this country, out of the pandemic phase»,
+ qu'on pourrait traduire par : Les États-Unis sont assurément, à ce
+ stade-ci, hors de la phase pandémique.
+ Est-ce que vous partagez... Lui, il parle pour les États-Unis, évidemment, là.
+ Vous, vous parlez pour le Québec. Est-ce qu'on peut partager ce constat
+ ici?</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> ...vous renommer, s'il vous plaît, avec votre fonction,
+ s'il vous plaît.</p>
+<p style="text-align: justify">
+  <b>M. Boileau
+ (Luc) : </b>Donc, je me présente, Luc Boileau. Je suis le
+ directeur national de la santé publique par intérim. </p>
+<p style="text-align: justify">Donc, M. le
+ Président, pour répondre à la question, moi, je ne considère pas que nous
+ sommes en dehors de la pandémie actuellement. Le paysage est en voie
+ d'amélioration substantielle, et nous en sommes très heureux, mais, au moment
+ où on se parle, nous sommes toujours en activité pandémique. Là, je vous parle
+ pour le Québec, là. Aux États-Unis, là, ils ont d'autres données, là, mais...</p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>Bien sûr. Vous en avez
+ déjà assez avec le Québec, on ne se mêlera pas des...</p>
+<p style="text-align: justify">
+  <b>M. Boileau (Luc) :</b> Oui, mais, si on
+ veut élargir le mandat, là, c'est correct.</p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>Ça ne relève pas
+ d'ici, je pense. Bien, ça me permet de parler de la vaccination, parce que le
+ ministre prend souvent le mérite, avec raison, et avec son équipe, de la
+ vaccination, phase I, phase II, je voudrais dire première dose,
+ deuxième dose et, en quelque sorte, troisième dose, quoique, là, il y a déjà eu
+ du mou, mais, en ce moment, les chiffres qu'on a ne sont pas vargeux, je
+ dirais, en termes de vaccination, là, notamment, de rappel de troisième dose.
+ Il y a de l'hésitation. Qu'est-ce... C'est quoi, le plan? On est encore en
+ pandémie, vous le dites, Dr Boileau, et je le pense. On nous dit : Ce
+ n'est pas parfait, mais le vaccin, ça reste quand même la meilleure protection.
+ Moi-même, pour avoir eu la COVID récemment, j'étais heureux d'avoir eu deux
+ doses. J'aurais préféré en avoir eu trois,
+ là, mais, en tout cas, ça, je n'ai pas eu le temps. Alors, c'est quoi, le plan?
+ Parce qu'en ce moment, en ce moment, on dirait, là, qu'on est dans un
+ cul-de-sac, que ça n'avance plus.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> ...la chance d'avoir
+ M. Paré... </p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>Bien, allons-y donc. </p>
+<p style="text-align: justify">
+  <b>M.
+ Dubé : </b>...je
+ pense que je vais vous donner la chance de lui poser... qu'il réponde
+ directement à vos questions, pour maximiser votre temps.</p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>Oui. </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>...et la fonction, s'il vous plaît. </p>
+<p style="text-align: justify">
+  <b>M. Paré
+ (Daniel) : </b>Oui. Bonjour, M. le Président. Daniel Paré,
+ sous-ministre associé au ministère de la Santé et des Services sociaux.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> Merci beaucoup.</p>
+<p style="text-align: justify">
+  <b>M. Paré (Daniel) :</b> Ça fait qu'en
+ réponse à la question, effectivement, la première et la deuxième dose, si on
+ peut dire ça ainsi, là, on a des taux en haut de 90 %. Lorsqu'on est
+ arrivés dans la troisième dose, puis je pense que vous répondez un peu, là,
+ déjà, à la question...</p>
+<p style="text-align: justify">
+  <b>Des voix : </b>... </p>
+<p style="text-align: justify">
+  <b>M. Paré (Daniel) : </b>Peut-être que...
+ Là, c'est mieux? </p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>C'est mieux, oui.
+ Merci.</p>
+<p style="text-align: justify">
+  <b>M. Paré (Daniel) :</b> Ça fait que,
+ quand on parle de la troisième dose, un des facteurs, maintenant, qu'il faut
+ prendre en considération, c'est justement les gens qui ont fait la maladie. Et,
+ on le sait, lors de la cinquième vague, on a
+ quand même plusieurs millions de Québécois, là, qui ont fait la maladie, et ça,
+ c'est un intrant qui vient jouer dans nos
+ chiffres. Ça fait que, quand on regarde au niveau de la vaccination, troisième
+ dose, on le voit, que nos personnes âgées ont des taux très élevés. Les gens
+ plus jeunes qui ont fait la maladie dans le temps des fêtes, principalement,
+ etc., ça fait qu'eux, en faisant la
+ maladie, on mettait un délai supplémentaire. Donc, c'est pour ça qu'on peut
+ voir un différentiel entre les
+ premières et les deuxièmes doses, même enjeu pour la quatrième dose. On le voit
+ même avec nos personnes âgées. <a name="Page00006"></a>On a plus d'un
+ demi-million de quatrièmes doses de données, mais il y en a plusieurs qui ont
+ fait la maladie dans la cinquième et dans la sixième vague, et c'est ce qui
+ fait qu'il peut y avoir un délai au niveau de la vaccination.</p>
+<p style="text-align: justify">Au niveau des actions qu'on fait, on demeure
+ avec des sites, là, des sites de vaccination partout. On a ciblé beaucoup les
+ personnes âgées. C'est ce que le Comité d'immunisation du Québec nous demande,
+ vraiment, dire... Dans les discussions qu'on a, on leur parle régulièrement,
+ disons, à toutes les semaines, puis ils sont aussi directs que ça, de dire : M. Paré, fixez sur nos
+ 60 ans et plus, pour la quatrième dose, pour les gens, justement, qui...
+ avec les intervalles de 12 semaines après avoir fait la maladie.
+ Donc, c'est un des éléments qui est fait.</p>
+<p style="text-align: justify">Puis, juste pour donner un dernier point
+ d'information, je regardais, ce matin, la prise de rendez-vous, en termes
+ d'accès, parce que ça, c'est quelque chose qu'on a vraiment, entre guillemets,
+ une pogne dessus, au niveau de l'accès,
+ bien, quelqu'un qui appelle ce matin pour prendre un rendez-vous sur Clic
+ Santé, dans toutes les régions du Québec, a un rendez-vous en dedans de
+ trois, quatre jours. Ça fait que vous voyez qu'en termes d'accès il n'y a pas
+ d'enjeu à ce niveau-là.</p>
+<p style="text-align: justify">
+  <b>M.
+ Marissal : </b>Je rebondis vers le ministre. Êtes-vous satisfait,
+ en ce moment, du taux de vaccination, et du rythme, et de la cadence?</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Bien, la capacité de
+ vaccination est là sans problème, mais je vous dirais qu'on va augmenter les publicités, les communications, parce que ce que
+ vient de dire M. Paré, c'est que les gens doivent... Il y a eu beaucoup
+ de changements. Rappelez-vous, avant la troisième dose, on disait
+ 12 semaines. Ça a été changé à la dernière minute, en décembre. Il y a
+ encore, je pense, un peu de confusion dans la population, c'est quoi, le délai
+ après la maladie. Puis je pense que, là... On en a discuté, d'ailleurs, souvent
+ avec le Dr Boileau, et vous allez voir des communications très précises
+ là-dessus dans les prochains jours pour, justement, préciser ça, M. le député.</p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>...confusion dans le
+ message ou confusion à la réception du message?</p>
+<p style="text-align: justify">
+  <b>M.
+ Dubé : </b>Bien, je dirais, si vous permettez, puis, je pense,
+ je l'ai déjà mentionné, particulièrement en décembre, on est passés de
+ 12 semaines de délai à six... à huit semaines...</p>
+<p style="text-align: justify">
+  <b>Une voix :</b> ...</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> Six mois, c'est ça que
+ j'allais dire...</p>
+<p style="text-align: justify">
+  <b>M.
+ Marissal : </b>Je pose la question autrement : Êtes-vous
+ satisfait de la clarté du message tel qu'il a été envoyé vers la
+ population?</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>En ce moment, oui. Il y a
+ eu manque de...</p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>Mais, antérieurement,
+ non.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Antérieurement, ça a été
+ long avant d'avoir le bon changement. Je suis d'accord.</p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>Il me reste une
+ minute, M. le ministre. Je suis désolé, là, ce n'est pas moi qui contrôle le temps ici, mais il me reste une minute, puis je
+ veux absolument vous entendre. On n'est pas médecins ni l'un ni l'autre, là,
+ mais on a des petites notions d'anatomie,
+ là. D'après moi, les dents, les gencives, la bouche, là, ça fait partie du
+ corps humain. Je pense qu'on va être d'accord là-dessus.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>... </p>
+<p style="text-align: justify">
+  <b>M. Marissal : </b>Bon, peu importent les
+ pourparlers qu'il pourrait y avoir avec le fédéral, parce que le fédéral ira en
+ cette direction, est-ce qu'on peut compter sur vous pour que nous ayons enfin
+ une couverture dentaire digne de ce nom, publique, au Québec? Ce qui devait
+ être le cas à l'origine de la RAMQ, rappelons-le, quand même.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Bien, écoutez, on a déjà
+ quand même une couverture que je dirais intéressante...</p>
+<p style="text-align: justify">
+  <b>M. Marissal :</b> Minimaliste.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> ...là, puis
+ particulièrement... mais vous me demandez de l'avoir universelle. Alors, il
+ faut faire attention, là, comment on la définit de façon universelle. Mais
+ c'est sûr qu'il y a encore des inégalités au niveau, peut-être, de certaines... Puis je pense qu'on est en train de le
+ regarder. On a des discussions assez, comment je vais dire, complexes
+ avec une des associations de chirurgiens dentistes. Ça fait sept ans qu'on n'a
+ pas renouvelé l'entente. C'est l'entente qui est la plus difficile à
+ renouveler, moi, depuis, même, au temps ou j'étais au Trésor. Alors, je pense qu'il y a des éléments, mais on va s'assurer, on
+ va s'assurer, M. le député, qu'on a des projets pour avoir des cliniques
+ dentaires. On a annoncé des cliniques dentaires, par exemple, en Gaspésie, dans
+ des endroits difficiles, mais...</p>
+<p style="text-align: justify">
+  <i>• (12 h 10) •</i>
+</p>
+<p style="text-align: justify">
+  <a name="Page00007"></a>
+  <b>Le Président (M.
+ Provençal) </b>
+  <b>: </b>M. le
+ ministre, je m'excuse de vous interrompre, mais le temps de cette intervention
+ est terminé. Je dois maintenant recéder la parole au député de Nelligan pour
+ 15 min 57 s.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>O.K. Merci, monsieur...</p>
+<p style="text-align: justify">
+  <b>M.
+ Dubé : </b>...question que le député a posée sur les
+ médecins, pour lui donner l'information, là, et pour les cliniques
+ privées. D'accord?</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Excellent. </p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Je peux commencer? </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>Oui, oui. Excusez-moi, M. le député.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Merci, M. le Président.
+ M. le ministre, je vais vous ramener sur un autre sujet. Vous avez reçu, le
+ 17 avril dernier, une lettre signée par 500 médecins appuyant la demande
+ de la coalition pour la qualité des services de santé et des services sociaux
+ d'intervenir auprès de votre collègue pour clairement exclure la santé et les
+ services sociaux du projet de loi n° 96. Aujourd'hui, il y a un sondage où
+ 70 % des Québécois et Québécoises ayant une opinion partagée sur la
+ position de la coalition, la coalition pour la qualité des services sociaux et
+ de la santé, sur le projet de loi n° 96, qui doit être modifié pour
+ protéger la communication entre le client et le personnel du réseau...</p>
+<p style="text-align: justify">Ma première question : Est-ce que vous
+ comptez rencontrer les 500 médecins? Je l'ai, la lettre signée par
+ 500 médecins. On parle d'oncologie. J'ai des oncologues, j'ai des médecins
+ de famille, j'ai des psychiatres, des chefs de... des dentistes, des médecins
+ de famille, médecine interne. J'ai toute la liste. C'est une liste de
+ plusieurs, plusieurs personnes. Et ce n'est pas la première fois que j'entends
+ parler de ce problème. C'est un vrai problème. Je ne l'ai jamais évoqué. Je
+ pense que les crédits, c'est le moment nécessaire pour avoir une réelle
+ discussion de fond. Je le dis souvent, vous êtes quelqu'un de très pragmatique.
+ C'est un réel problème et un réel enjeu. Un, ma première question : Est-ce
+ que vous acceptez de rencontrer ces médecins qui vous demandent aujourd'hui
+ d'agir?</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> Bon, premièrement, M. le
+ député, là, je veux juste être sûr que je comprends bien votre question, parce
+ que j'ai peut-être manqué le début, puis peut-être que je demanderais à M.
+ Desharnais de pouvoir compléter ma réponse. Mais, si on parle de... Puis là je
+ ne me souviens pas exactement de la lettre à laquelle vous faites référence. Si
+ vous me dites qu'il y a 500 médecins qui ont signé une lettre...</p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b> «...à vous, par la
+ présente, à titre de médecins professionnels affiliés — là,
+ j'ai plusieurs, il y a le CUSM, il y a...
+ juif, l'hôpital juif — pour
+ vous exprimer nos sincères préoccupations concernant l'impact négatif que
+ le projet de loi n° 96, dans sa forme
+ actuelle, aurait sur l'efficacité des communications et des soins que nous
+ prodiguons à nos patients.»</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> Je ne veux pas vous faire
+ prendre trop de temps. Je voulais juste m'assurer que j'avais bien compris le
+ début de votre question. Bon, il y a eu énormément de discussions durant le
+ p.l. n° 96. Comme vous savez, la discussion a eu lieu pendant plus de
+ 120 heures. Le premier ministre l'a annoncé, je pense, hier clairement,
+ qu'il n'y aurait pas de changement, avec la loi actuelle, pour servir la
+ communauté anglophone dans leur langue. Alors,
+ je pense que... Je vous résume, monsieur, parce que je sais que vous n'avez pas
+ beaucoup de temps, mais, si je fais erreur... En tout cas, moi, j'ai
+ entendu, hier, le premier ministre qui a fait cette... hier ou avant-hier, là,
+ peut-être que je me trompe, mais les journées passent tellement vite quand on a
+ du plaisir. </p>
+<p style="text-align: justify">Alors, peut-être, M. Desharnais, je veux
+ juste m'assurer que c'est là qu'on s'en va. Et, comme vous le savez, M. le
+ député, on vient de nommer un nouveau comité, puis peut-être que j'aimerais ça,
+ Daniel, que vous parliez de ce comité-là qui
+ vient d'entrer en fonction. Je pense qu'on a signé toute la documentation des
+ nouveaux membres qui vont s'assurer de ça. Mais peut-être, Daniel,
+ quelques mots là-dessus.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Si vous pouviez vous nommer...</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> Est-ce que ça va,
+ monsieur...</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> ...avec votre titre. Merci. M. le député?</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b> Est-ce que ça va, M. le
+ député?</p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b> Oui, oui. Bien oui!
+ Avec plaisir.</p>
+<p style="text-align: justify">
+  <b>M. Desharnais (Daniel) :</b> Oui.
+ Bonjour. Daniel Desharnais, sous-ministre adjoint à la coordination réseau et
+ ministérielle et aux affaires institutionnelles. </p>
+<p style="text-align: justify">Comme l'a
+ indiqué M. le ministre, l'article 15 de la LSSSS prévoit que «toute
+ personne d'expression anglaise a le droit de recevoir en langue anglaise
+ des services de santé et des services sociaux, compte tenu de l'organisation et
+ <a name="Page00008"></a>des ressources humaines, matérielles et financières des
+ établissements qui dispensent ces services et dans la mesure où le prévoit un programme d'accès». Les
+ programmes d'accès, on était en processus, et ils seront adoptés prochainement.
+ Le projet de loi n° 96 ne vient pas modifier l'article 15 de la
+ LSSSS. Donc, cette obligation légale là qui est prévue à la loi sur la
+ santé et services sociaux est maintenue. </p>
+<p style="text-align: justify">Et, comme le ministre
+ l'a indiqué, on a procédé à une modification réglementaire sur la composition
+ du comité provincial de langue anglaise qui
+ est venue changer un peu la composition pour élargir, pour avoir une meilleure
+ représentation régionale et notamment aussi une représentation des communautés
+ autochtones.</p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b>
+ O.K. Mais je vais répéter ma question. Les gens veulent vous rencontrer, M. le
+ ministre. Moi, on m'a dit qu'ils n'ont pas eu de réponse. Si ça a été fait,
+ moi, je pense que ce serait important. D'ailleurs, c'est une coalition pour la
+ santé. Moi, je peux vous accompagner, M. le ministre, aucun problème.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b>
+ ...bienvenu, M. le député.</p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b>
+ Ils veulent vous rencontrer. Et c'est vous, le ministre de la Santé, ce n'est
+ pas le ministre de la Justice, qui pilote ce
+ projet de loi. Quand je lis la lettre... «Pour nos équipes de professionnels,
+ une communication claire est au coeur même des soins de santé. La
+ capacité pour le patient et leur famille de communiquer avec leurs fournisseurs
+ de soins de santé dans une langue qu'ils et elles comprennent aisément est
+ nécessaire pour un diagnostic précis et une mise en oeuvre efficace du
+ traitement.» Ce sont les professionnels de santé qui lèvent aujourd'hui un
+ drapeau à leur ministre de la Santé, qui veulent que leur ministre de la Santé
+ les écoute.</p>
+<p style="text-align: justify">Moi, les échos que
+ j'ai, que... Il y a de l'écoute, et là ils veulent vous rencontrer. Je sais que
+ ce n'est pas votre projet de loi, je ne vous juge pas, mais, si vous voulez
+ qu'on fasse un front commun, ça va me faire un grand plaisir, parce qu'il s'agit
+ des soins de santé pour les patients. Et ces professionnels comptent beaucoup
+ sur vous. C'est pour cela qu'ils vous
+ adressent cette lettre. Donc, je ne sais pas si vous êtes disponible les
+ prochains jours, M. le ministre. Du moment que votre sous-ministre vient
+ de confirmer que la loi va être respectée, moi, je pense, ce serait bien de
+ leur parler et leur dire c'est quoi, vos préoccupations.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Je ne veux pas prendre trop de temps, M. le Président, là...</p>
+<p style="text-align: justify">
+  <b>M. Derraji :
+ </b>Non, non, j'ai le temps, j'ai le temps, j'ai le temps. </p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b>
+ ...mais, premièrement, je vais m'assurer, avec Mme Savoie, que je peux
+ avoir accès à la lettre, parce que, premièrement, j'aime toujours répondre à
+ toutes les lettres que je reçois. Donc, je vais vous dire...</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Je peux déposer toutes
+ les lettres que j'ai reçues. Je n'ai aucun problème. Si jamais vous ne les...</p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b>
+ Parfait. Puis je vais m'assurer... Parce que je ne me souviens pas de cette
+ lettre-là. Mais ce que j'aimerais, profiter de la tribune qu'on a aujourd'hui,
+ c'est de dire... Puis ce que je comprends, c'est non seulement l'engagement du
+ premier ministre qu'il n'y aura pas de changement, mais qu'ils vont être
+ spécifiés, dans la dernière version de 96, que les gens pourront continuer
+ d'avoir accès. Il n'y aura pas de changement comme tel. Mais, pour rencontrer des gens, pour moi, c'est un autre
+ enjeu. Puis je peux le faire. Je vais juste prendre connaissance de la lettre
+ puis je vais m'en...</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>...et je vous le dis, M.
+ le ministre, je ne vais pas faire... Je ne fais pas de lobbying pour aucun
+ groupe, mais c'est un organisme qui... </p>
+<p style="text-align: justify">
+  <i>• (12 h 20) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Mais, juste pour être certain, là, vous allez être d'accord, on m'explique,
+ en ce moment, là, que le gouvernement a accepté un amendement des oppositions
+ afin de l'écrire noir sur blanc, pour réitérer le tout, dans le p.l. n° 96, qu'il n'y aura pas de changement. Donc, je
+ pense que...</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>O.K. Donc, au niveau des services
+ de la santé, c'est qu'il y a un avant le 96, il y a un après le 96,
+ c'est que, dans le réseau de la santé et services sociaux, aujourd'hui, vous
+ confirmez, c'est zéro impact.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Pas d'impact, puis même que le programme qui est renouvelé va être
+ renouvelé sous l'égide du nouveau comité qui vient d'être nommé. Il y a un
+ nouveau comité qui a été nommé...</p>
+<p style="text-align: justify">
+  <b>M. Derraji :
+ </b>...comité?</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Il y a à peu près une douzaine de personnes. Un des grands changements
+ qu'on a faits dans ce comité-là au cours du
+ dernier mois, c'était d'avoir plus de représentants de régions, d'avoir un
+ représentant autochtone. C'était un
+ changement qui était demandé par les gens du milieu pour qu'on ait une
+ meilleure représentation du réseau de la santé. On a fait les
+ nominations de ces personnes-là très récemment. Ça a été... Et eux vont avoir
+ comme premier mandat de renouveler ce mandat-là dont M. Desharnais parlait
+ il y a quelques minutes.</p>
+<p style="text-align: justify">
+  <a name="Page00009"></a>
+  <b>M. Derraji : </b>O.K.
+ Donc, aujourd'hui, votre message pour les Québécois d'expression anglaise, peu
+ importe ce qu'on dit sur le 96, en ce qui concerne ce que vous, vous contrôlez,
+ parce que je ne parle pas des autres ministères, ce que vous, vous contrôlez en
+ tant que ministre de la Santé et Services sociaux : Il n'y a aucun impact
+ du 96 sur ce que vous, vous contrôlez, services, recrutement, langue d'usage
+ pour les Québécois d'expression anglaise, services, santé mentale, quand il
+ s'agit d'un service de santé mentale.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Ce que j'aimerais
+ faire, parce que, là, vous mettez plusieurs points... Puis c'est pour ça que je
+ veux prendre connaissance du détail... Moi, quand j'entends... Ce qui est
+ important, c'est l'accès aux soins, parce que l'accès aux soins, c'est ça qui
+ est important en ce moment, c'est ça qu'il y a dans la LSSSS. Pour les autres,
+ quand vous dites : Le recrutement,
+ etc., là, je ne suis pas sûr que je suis capable de vous dire le oui de la même
+ façon. Alors, je veux juste regarder.
+ Mais je pense que ce qui est important pour les Québécois de langue anglaise,
+ c'est d'avoir... qu'il n'y ait pas de changement dans l'accès aux soins, et ça,
+ je suis capable de vous dire ça aujourd'hui, on va s'assurer...</p>
+<p style="text-align: justify">Mais maintenant ce que je vous disais, M. le
+ député... Excusez-moi, je ne veux pas vous interrompre, mais c'est pour ça
+ qu'on a mis ce comité-là en place, pour être capables de sentir, sur le
+ terrain, est-ce qu'il y a des endroits où,
+ par exemple, quand ce n'est pas respecté, qu'on peut le savoir pour être
+ capables d'agir dans une région ou l'autre. Mais c'est comme ça qu'on va
+ travailler, si je ne me trompe pas, Daniel.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Merci, M. le
+ ministre. Mais, quand on parle accès aux soins, c'est aussi l'accompagnement de
+ ces personnes. Donc, prenons le cas de quelqu'un qui souffre...</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>...de façon globale. </p>
+<p style="text-align: justify">
+  <b>M. Derraji :</b> ...santé mentale,
+ par exemple.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Pardon?</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Prenons le cas de
+ la santé mentale. Pour un Québécois d'expression... de langue et d'expression
+ anglaises, c'est très important, avoir ce service. On ne peut pas lui dire
+ qu'on va leur offrir ce service avec une autre langue qu'il ne comprend pas, surtout pour des cas très spécifiques.
+ Aujourd'hui, vous, vous voyez l'enjeu. Moi, j'en suis sûr, que vous êtes au courant de l'enjeu. Ce n'est
+ pas la première fois qu'on vous parle. Je m'adresse aujourd'hui à vous
+ en tant que ministre de la Santé qui doit veiller sur l'accès à la santé, peu
+ importe la langue de ces personnes, surtout ceux qui parlent en anglais. C'est
+ eux, aujourd'hui, qui lèvent le drapeau. Ils veulent savoir, de leur ministre
+ de la Santé, pas du ministre de la Justice,
+ que... je comprends ce qu'il fait dans le 96, mais pour... de leur ministre de
+ la Santé, qu'il va veiller sur l'accès des soins de la santé pour eux.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>...il vous reste de temps,
+ là, mais je vais... </p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>J'ai du temps. Je pense
+ que oui. Oui, j'ai... </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>O.K. Bien, je vais lire
+ quelque chose. Je vais lire l'article 15 de la loi sur la santé, puis
+ après ça je vais vous dire qu'il n'y a pas de changement. Ça, c'est la loi
+ comme elle se lit, oublions 96, là : «Toute personne d'expression anglaise
+ a le droit de recevoir en langue anglaise des services de santé et des services
+ sociaux, compte tenu de l'organisation et
+ des ressources humaines, matérielles et financières des établissements qui
+ dispensent ces services et dans la mesure où le prévoit un programme
+ d'accès...» Il n'y aura aucun changement à l'article 15. Ce que je vous dis, c'est qu'en plus, maintenant, avec le comité
+ qui est en place, qui est dans toutes les régions, le premier mandat qu'on va donner à ces gens-là, c'est non seulement de
+ renouveler les mandats d'accès, mais de s'assurer qu'ils sont appliqués
+ dans toutes les régions du Québec.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>O.K. C'est excellent.
+ C'est excellent. Je vous remercie. La seule chose que je vais faire avec vous
+ comme suivi, j'aimerais bien qu'on rencontre les membres de la coalition, si ça
+ ne vous dérange pas.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Laissez-moi prendre
+ connaissance de la lettre, comme j'ai dit, puis...</p>
+<p style="text-align: justify">
+  <b>M.
+ Derraji : </b>Si on ne la trouve pas, je peux vous la renvoyer.
+ Aucun problème, O.K.? Je vais passer à un autre...</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>...</p>
+<p style="text-align: justify">
+  <b>M.
+ Derraji : </b>Oui. M. le ministre, vous avez choisi, je dirais,
+ une nouvelle façon de gérer la pandémie, de vivre avec le virus. Là,
+ maintenant, ma question est très simple : C'est quoi, pour vous, vivre
+ avec le virus?</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Écoutez, c'est une belle
+ question. Je pense qu'on vit avec le virus depuis deux ans. Je pense que c'est
+ de... Si j'avais... C'est une bonne question, puis ma première réponse, c'est
+ d'apprendre un certain retour à la normalité.
+ Moi, je pense que la journée qui... On est, en ce moment... Je regarde l'impact
+ personnel de la pandémie. C'est encore,
+ en ce moment, de porter un masque, hein, c'est encore de faire attention parce
+ que... Même si on est triplement ou <a name="Page00010"></a>quadruplement vaccinés, c'est de continuer à faire
+ attention, je pense, que... que les écoles soient ouvertes, que l'économie soit
+ repartie, qu'on soit capables d'avoir une certaine normalité, qu'on puisse voir
+ des amis, qu'on puisse voir nos familles. Je pense qu'on est capables de
+ vivre avec le virus, mais il faut toujours avoir en tête deux choses, c'est
+ qu'il y a des personnes qui sont plus
+ vulnérables que d'autres et c'est ces personnes-là qu'on doit peut-être mieux
+ protéger, pour certains, parce que d'autres peuvent prendre plus de
+ risques. Ça, c'est mon premier point.</p>
+<p style="text-align: justify">Mon deuxième point.
+ Qu'est-ce que ça veut dire, vivre avec le virus? On a vu qu'on avait un système
+ de réseau... un réseau de la santé qui était très fragile. Les Québécois ont
+ fait beaucoup de sacrifices, mais le réseau a fait beaucoup de sacrifices
+ aussi. Je pense que le meilleur retour à la normalité qu'on peut espérer...
+ Puis j'espère que la tendance des derniers
+ jours va nous montrer qu'on a atteint un plateau dans la sixième vague, puis on
+ va suivre de très près avec le Dr
+ Boileau. Mon deuxième point, ce serait qu'on puisse retourner à la normale le
+ plus rapidement possible aussi dans le réseau de la santé.</p>
+<p style="text-align: justify">Alors,
+ moi, c'est ça que ça veut dire, apprendre à vivre avec le virus, autant pour
+ les individus que pour un retour à une certaine normalité dans notre
+ réseau.</p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Est-ce
+ que je peux me permettre d'ajouter quelque chose dans votre liste? </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Bien,
+ vous avez le droit... </p>
+<p style="text-align: justify">
+  <b>M. Derraji : </b>Ce
+ que vous avez dit fait du sens, mais j'aimerais bien vous ajouter quelque
+ chose : Agir d'une manière concrète sur l'aération dans les milieux clos.
+ On voit ce qui se passe en Belgique. Moi, j'en suis sûr, que Dr Boileau
+ est au courant. C'est un homme rigoureux et au courant. Il y a un plan pour
+ agir au niveau de l'aération dans les milieux clos, pas uniquement l'aération
+ au niveau des écoles. Il y a beaucoup de gens qui voient que l'eau, elle était l'élément déclencheur d'attaquer le
+ choléra, mais, pour le virus, surtout le mode de transmission par aérosols, il
+ y a des évidences qu'on doit agir sur les milieux clos, et, en date
+ d'aujourd'hui, je n'ai pas vu une réelle volonté, à moins si je me
+ trompe, d'agir sur les milieux clos. J'ai vu les crédits, j'ai vu un peu du
+ budget, on a posé la question pour l'année
+ prochaine, et il y a zéro pour l'année prochaine en termes d'agir sur
+ l'aération au niveau des milieux clos. Je pense que ce que vous avez dit
+ répond quand même à la question, mais j'aurais aimé entendre qu'on doit agir en
+ tant que gouvernement sur les milieux clos.</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>M.
+ le député, deux choses. Je ne sais pas comment il reste de temps, mais je... </p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>: </b>20 secondes.
+ </p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Rapidement. M. Paiement, qui s'occupe des approvisionnements, a fait
+ un travail incroyable pour s'assurer que l'aération était correcte dans tout le
+ réseau de la santé. Est-ce que je peux résumer ça comme ça?</p>
+<p style="text-align: justify">
+  <b>Une voix : </b>...
+ </p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>O.K. </p>
+<p style="text-align: justify">
+  <b>M. Derraji :
+ </b>...pour la santé. </p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Non, non, mais... Non, mais moi, là, je m'occupe... </p>
+<p style="text-align: justify">
+  <b>M. Derraji :
+ </b>Prenez le leadership ailleurs. Infiltrez vos autres collègues. Dites-leur
+ d'agir sur l'aération.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Oui. </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>Merci. Et là, M. le
+ ministre, je vais vous demander de donner les deux réponses qui avaient
+ été formulées par le député de Rosemont, que vous vous êtes engagé à nous
+ donner.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Très bien. Rapidement, M.
+ Marissal... Oui. M. Thibault, Marco, s'il vous plaît, pouvez-vous donner
+ la réponse pour le nombre de médecins qui se seraient désaffiliés du réseau?
+ C'est quoi, dans la dernière année...</p>
+<p style="text-align: justify">
+  <b>Des voix : </b>...
+ </p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>...cinq dernières années? Est-ce que vous avez le... </p>
+<p style="text-align: justify">
+  <b>M. Thibault
+ (Marco) : </b>Oui. </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Oui.
+ </p>
+<p style="text-align: justify">
+  <b>M. Thibault (Marco) : </b>Bonjour.
+ Marco Thibault, président-directeur général de la Régie de l'assurance maladie du Québec. </p>
+<p style="text-align: justify">
+  <i>• (12 h 30) •</i>
+</p>
+<p style="text-align: justify">
+  <a name="Page00011"></a>
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>: </b>Merci.
+ </p>
+<p style="text-align: justify">
+  <b>M. Thibault (Marco) : </b>2017,
+ 371 médecins non participants sur 19 774 médecins; mars 2018,
+ 410 sur 20 182; mars 2019, 447 sur 20 468; mars 2021, 479 sur
+ 21 556. Et les données les plus récentes que j'ai, c'est au 15 mars,
+ pour cette année, 517 sur 21 790.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>... </p>
+<p style="text-align: justify">
+  <b>M. Thibault
+ (Marco) : </b>C'est le nombre de médecins non participants par année.
+ Donc, ce n'est pas... On n'additionne pas. C'est... Dans une année, il y en a
+ 517 sur l'ensemble des gens.</p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>: </b>Et
+ deuxième question...</p>
+<p style="text-align: justify">
+  <b>M. Thibault
+ (Marco) : </b>Ce n'est pas 517, plus 479, plus 468. </p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>: </b>On
+ est limités dans le temps. Deuxième question.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>...Daniel, puis on... Allez-y.</p>
+<p style="text-align: justify">
+  <b>M. Paré
+ (Daniel) : </b>Sur les...</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Cliniques. </p>
+<p style="text-align: justify">
+  <b>M. Paré
+ (Daniel) : </b>Oui, excusez-moi. Sur les cliniques spécialisées, il
+ faudrait revenir, parce qu'il va falloir consulter les registres, puis on
+ pourra revenir à la commission par écrit.</p>
+<p style="text-align: justify">
+  <b>Des voix : </b>...
+ </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>: </b>Maintenant, je vais
+ donner la parole au député des Îles-de-la-Madeleine pour les
+ 7 min 50 s suivantes.</p>
+<p style="text-align: justify">
+  <b>M. Arseneau :
+ </b>Merci beaucoup, M. le Président. Alors, on a peu de temps. J'aimerais poser
+ un certain nombre de questions en rafale, avec des réponses tout aussi courtes,
+ si vous le pouvez, que seront mes questions. Je voulais revenir aujourd'hui sur
+ les 28 000 infirmières qui manqueront au réseau sur les cinq
+ prochaines années. On parle de 5 340 présentement. Nous, on pense que les
+ conditions de travail y font pour beaucoup dans la désaffection des infirmières pour leur métier dans le réseau
+ privé... dans le réseau public, pardon, certaines allant au privé, bien
+ entendu.</p>
+<p style="text-align: justify">Alors, ma question au
+ ministre : Qu'en est-il de l'implantation des projets ratios, qui
+ pourraient, justement, améliorer les
+ conditions de travail et les conditions sécuritaires pour les infirmières?
+ Est-ce que le gouvernement peut nous
+ confirmer qu'il a l'intention d'aller de l'avant, oui ou non? On sait que
+ demain commencera une grande mobilisation de différents groupes qui veulent s'assurer que le gouvernement mette
+ dans sa besace, là, une loi sur des ratios sécuritaires dans les soins
+ de santé.</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Deux choses. La première, c'est que, ma collègue la présidente du Conseil
+ du trésor, qui va conduire les négociations, et avec la responsable des
+ négociations, Édith Lapointe, l'approche qu'on veut prendre dans la prochaine négociation, ce n'est pas
+ uniquement un ratio d'infirmières mais un ratio d'équipes de soins. Ce que
+ ça veut dire : Sur un même plancher, il peut y avoir des infirmières et
+ d'autres professionnels, comme par exemple des
+ préposés aux bénéficiaires. Parce que je pense que l'enjeu a toujours
+ été : Avant de s'engager à des ratios, il faut avoir le personnel
+ nécessaire pour être capables de respecter les ratios.</p>
+<p style="text-align: justify">Alors,
+ moi, je vous dirais que l'engagement qui a été pris par la responsable des
+ négociations, c'est de s'assurer,
+ conjointement avec les demandes qui sont faites de la part du personnel, de
+ regarder comment des ratios des équipes de soins pourraient être faits, mais
+ toujours sous la réserve qu'il faut avoir le personnel pour le faire. Alors...
+ Mais je pense que ça va être un élément important des négociations qui vont
+ commencer à l'automne prochain.</p>
+<p style="text-align: justify">
+  <b>M. Arseneau :
+ </b>Vous parlez de négociations. Est-ce que l'objectif, c'est, comme le veulent
+ les gens qui se manifestent aujourd'hui, l'adoption d'une loi sur des ratios
+ sécuritaires?</p>
+<p style="text-align: justify">
+  <b>M. Dubé :
+ </b>Bien, comme je vous dis, puis je ne vais pas jouer sur les mots, pour qu'on
+ se comprenne bien, ce serait de se tirer dans le pied de prendre un engagement
+ de ratio pour un certain nombre de personnes alors que ces personnes-là ne sont
+ pas dans le réseau présentement. C'est... Alors, il faut trouver... La vision
+ qu'on veut avoir, vous l'avez eue hier, là,
+ grâce à Mme Doyon. On a maintenant le nombre de personnes qu'il nous manque, le
+ nombre de personnes qu'on peut engager à chaque année. Alors, il va
+ falloir trouver, avec le Conseil du trésor et avec nos objectifs, la façon de
+ voir cet objectif-là, d'avoir une équipe de soins qui est nécessaire pour
+ donner le bon soin aux patients, mais tout en tenant compte de l'évolution du
+ nombre de personnel qu'on va avoir. </p>
+<p style="text-align: justify">
+  <a name="Page00012"></a>
+  <b>M.
+ Arseneau : </b>Est-ce qu'il n'y a pas ici un certain principe de la
+ saucisse Hygrade que moins les conditions de
+ travail seront bonnes, moins les infirmières vont être là, puis qu'à l'inverse,
+ si on adoptait des ratios et des politiques pour retenir les gens et les
+ attirer, on pourrait en avoir davantage dans le réseau?</p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Mais,
+ M. le député, vous avez absolument raison. Et c'est pour ça que le ratio
+ d'équipes de soins, pour nous, c'est un des
+ éléments, la gestion des horaires, locale, d'engager des nouvelles... Il y a
+ une foule... Vous les avez, on en a discuté hier. Mais le principe de la
+ saucisse Hygrade, je ne veux pas référer à ça pour les infirmières, là. Je ne voudrais pas être dans le club des mal cités.
+ C'est vous qui l'avez cité. Mais je voudrais dire qu'on est tous à la même
+ place, que plus on va avoir de personnel,
+ plus on va être capables d'avoir un ratio d'équipes de soins qui peut être
+ acceptable et intéressant pour améliorer la qualité de travail sur
+ place. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau :
+ </b>On a le droit d'utiliser des métaphores. Je pense que les gens comprennent.
+ </p>
+<p style="text-align: justify">Je vais changer de
+ sujet. Une dizaine de points de service de CLSC sont toujours fermés dans la
+ région du Saguenay—Lac-Saint-Jean, depuis plusieurs mois, dans plusieurs cas. Est-ce qu'ils vont rouvrir
+ avant la fin du présent mandat, M. le ministre? </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Bien,
+ écoutez, je n'aime pas ça répondre ça, mais ils sont fermés présentement parce
+ qu'il manque de personnel. C'est la
+ quadrature du cercle qu'on discute, là. Puis, vous l'avez vu, à chaque fois
+ qu'on rattrape le personnel nécessaire, on rouvre des endroits. Puis le
+ plus bel exemple, c'est Senneterre. J'ai la députée ici, qui est à côté de moi,
+ qui connaît... Mais vous comprenez ce que je veux dire, c'est que...
+ L'engagement qu'on peut prendre aujourd'hui,
+ c'est qu'à chaque fois qu'on ramène dans le réseau... Puis on en a ramené, du
+ personnel dans le réseau, là, depuis
+ six mois, malgré la pandémie. À chaque fois, je vais vous dire : Bien, par
+ région, par CLSC, quand on est capables de le faire, comme on l'a fait à
+ Senneterre, bien, on va réouvrir quand on a le personnel pour le faire. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau :
+ </b>Bien, c'est ça, on a vu qu'à Senneterre il y avait eu une mobilisation, il
+ y avait eu des efforts de faits, beaucoup
+ par la communauté, et qu'on avait trouvé des solutions, et tout ça. Nous, ce
+ dont on veut s'assurer, c'est qu'on y travaille en permanence et qu'on
+ soit toujours alertes là-dessus, puis ce qui m'amène à une autre question sur l'Abitibi, justement, qui travaille à
+ développer des solutions et qui souhaite obtenir un statut particulier, pour ce
+ qui est des professionnels en soins,
+ pour leur permettre de meilleures conditions de travail. Est-ce que vous êtes ouvert
+ à cette proposition-là? </p>
+<p style="text-align: justify">
+  <b>M. Dubé :</b>
+ Bon, il faut faire attention, là. Puis comment on définit un statut
+ particulier? Parce que j'ai compris un peu la demande, là, qui a été faite,
+ mais est-ce qu'on compare ça au statut particulier du Grand Nord versus un statut particulier comme la Côte-Nord?
+ Je ne veux pas faire le débat de ça aujourd'hui parce que ça fera partie des
+ négociations de la convention, mais j'ai bien expliqué aussi, M. le député,
+ que, quand on veut faire des primes spéciales, puis je l'ai expliqué à votre
+ collègue en Chambre ce matin, il faut s'assurer aussi... au député de Pontiac,
+ il faut s'assurer aussi que ça fait partie de nos négociations, parce qu'on ne
+ veut pas faire de primes par décrets. On veut
+ maintenant que les primes, si les primes spécifiques sont par région... qu'il
+ faut que ça fasse partie de la convention.</p>
+<p style="text-align: justify">
+  <b>M. Arseneau :
+ </b>Est-ce que vous êtes ouvert à l'idée d'une approche
+ régionalisée avec des solutions à géométrie variable pour l'Abitibi,
+ pour la Côte-Nord, pour les Îles-de-la-Madeleine, et ainsi de suite? </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>On
+ l'a déjà fait pour des régions en particulier. C'est juste que, quand vous
+ dites un statut spécial, il faut faire attention, parce que ça a toutes sortes
+ d'autres impacts qu'uniquement ce qui se rapporte à la santé. C'est un petit
+ peu pour ça que je suis prudent. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau :
+ </b>Parfait. Il y a une autre région qui se sent un peu mal-aimée et
+ abandonnée, c'est la région des Laurentides, l'hôpital de Saint-Jérôme, qui a
+ le pire délai de prise en charge au Québec, là, actuellement, 278 minutes
+ pour la prise en charge en urgence, région des Laurentides qui accuse un retard
+ dans les investissements pour des projets de
+ modernisation qu'ils réclament depuis au-delà de quatre ans, mais qui, pour...
+ le gouvernement s'était engagé...
+ envers lesquels le gouvernement s'était engagé. Et ça semble, selon les propos
+ de la coalition, ne pas avancer très, très bien. Est-ce que le ministre
+ estime qu'il a livré la marchandise pour les gens des Laurentides? </p>
+<p style="text-align: justify">
+  <b>M. Dubé : </b>Bien,
+ écoutez, il y a eu... puis là je ne ferai pas de petite politique, il y a eu un
+ désinvestissement majeur dans les Laurentides avant l'arrivée de notre
+ gouvernement. On a pris énormément d'engagements, là. Il y a plusieurs députés
+ qui suivent ça de près. On a demandé à M. Desbiens, qui est responsable au
+ niveau du capital, de nous donner des projets. Il y a des projets qui sont en
+ finalisation en ce moment. </p>
+<p style="text-align: justify">Et la dernière chose
+ que je dirais là-dessus, qui va nous permettre de réaliser nos engagements, là,
+ je parle de Saint-Jérôme, Saint-Eustache, et il y en a plusieurs, c'est d'avoir
+ eu un rehaussement du PQI. Rappelez-vous qu'on vient de passer un autre ajout
+ de 7 milliards au PQI cette année, qui est maintenant à
+ 142 milliards, qui nous permet, justement,
+ de faire des projets qui devaient être retardés parce qu'il n'y avait pas les
+ fonds nécessaires. Et Saint-Jérôme, entre autres, et Saint-Eustache font
+ partie de ces projets-là. Donc, on va respecter nos engagements, M. le
+ Président. </p>
+<p style="text-align: justify">
+  <a name="Page00013"></a>
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Alors, M. le
+ ministre, je dois vous dire que le temps est terminé. </p>
+<p style="text-align: justify">Compte tenu de l'heure, la commission ajourne
+ ses travaux au jeudi 5 mai, à 11 h 15, où elle entreprendra l'étude du volet Santé et Services sociaux des
+ crédits budgétaires du portefeuille Santé et Services sociaux. Merci à tous.
+ Bon retour.</p>
+<p style="text-align: justify">
+  <i>(Fin de la séance à 12 h 38)</i>
+</p></Contenu>
+			
+			
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+		
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+	
+		<h2>Document(s) associé(s) à la séance</h2>
+		<ul class="ListeLien">
+			
+			
+					<li><a href='https://www.assnat.qc.ca/Media/Process.aspx?MediaId=ANQ.Vigie.Bll.DocumentGenerique_208381&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz'>Journal des débats (PDF)</a><span class='icoPDF'> </span></li>
+					<li><a href='/fr/video-audio/archives-parlementaires/travaux-commissions/AudioVideo-94843.html'>Vidéo/Audio</a></li>
+					
+					
+				
+		</ul>
+	
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+						
+				
+					
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <div id="bInfolettre" style="margin-bottom: 25px;"><a class="btnInfolettre" href="https://l.communications.assnat.qc.ca/T/WF/24042/op0ace/Optin/fr-CA/Form.ofsys" target="_blank">Abonnez-vous à notre infolettre!</a></div>
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br />
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+
+    </ul>
+
+    <br />
+    <span class="NonVisible">
+        
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+    var boutonInfolettre = document.getElementById('bInfolettre');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+            boutonInfolettre.style.display = 'block';
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+            boutonInfolettre.style.display = 'none';
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+</body>
+</html>

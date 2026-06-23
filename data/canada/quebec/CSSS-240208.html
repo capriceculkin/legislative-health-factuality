@@ -1,0 +1,3169 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="content-language" content="fr" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere"  rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen"  />
+<link href="/Images/favicon.ico" rel="shortcut icon" />
+
+<!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print"  />
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen"  />
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript"  >
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2026-08-29';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalAucuneActiviteType = "Aucune activité de cette catégorie n'est prévue aujourd'hui."
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.3.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-mDroite-m.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        table {border:1px solid #000000;border-collapse:collapse;}
+        table td {border:1px solid #000000;padding:5px;}
+        table td[align="center"] {text-align:center;}
+        table td[align="right"] {text-align:right;}       
+       
+    </style>  
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec
+        
+</title>
+        
+        <meta property="og:title" content="Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217" />
+
+    <script type="text/javascript" src="/scripts/Recherche.min.js"></script><style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+
+    <body class="impressionGrossie">
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-240208.html" id="aspnetForm">
+<div>
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTA4Mzc3OTI4D2QWAmYPZBYCAgMQZGQWAgIID2QWAgIBD2QWAgIFDxBkEBVSE1RvdXRlcyBsZXMgc2Vzc2lvbnM/U2Vzc2lvbiBlbiBjb3VycyAtIDQzZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDUgbWFpIDIwMjYgLSApPzQzZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAyMDI1IC0gOCBhdnJpbCAyMDI2KUQ0M2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMjAyMiAtIDEwIHNlcHRlbWJyZSAyMDI1KT40MmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBvY3RvYnJlIDIwMjEgLSAyOCBhb8O7dCAyMDIyKUI0MmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjcgbm92ZW1icmUgMjAxOCAtIDEzIG9jdG9icmUgMjAyMSk7NDFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIwIG1haSAyMDE0IC0gMjMgYW/Du3QgMjAxOCk9NDBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDMwIG9jdG9icmUgMjAxMiAtIDUgbWFycyAyMDE0KT4zOWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMyBmw6l2cmllciAyMDExIC0gMSBhb8O7dCAyMDEyKUIzOWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTMgamFudmllciAyMDA5IC0gMjIgZsOpdnJpZXIgMjAxMSk8MzhlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDggbWFpIDIwMDcgLSA1IG5vdmVtYnJlIDIwMDgpPjM3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMjAwNiAtIDIxIGbDqXZyaWVyIDIwMDcpOjM3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg0IGp1aW4gMjAwMyAtIDEwIG1hcnMgMjAwNik6MzZlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjIgbWFycyAyMDAxIC0gMTIgbWFycyAyMDAzKTkzNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMiBtYXJzIDE5OTkgLSA5IG1hcnMgMjAwMSk9MzVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjUgbWFycyAxOTk2IC0gMjEgb2N0b2JyZSAxOTk4KT8zNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMTk5NCAtIDEzIG1hcnMgMTk5Nik6MzRlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTcgbWFycyAxOTk0IC0gMTcganVpbiAxOTk0KTozNGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBtYXJzIDE5OTIgLSAxMCBtYXJzIDE5OTQpPzM0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyOCBub3ZlbWJyZSAxOTg5IC0gMTggbWFycyAxOTkyKTkzM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICg4IG1hcnMgMTk4OCAtIDkgYW/Du3QgMTk4OSk/MzNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE2IGTDqWNlbWJyZSAxOTg1IC0gOCBtYXJzIDE5ODgpQDMyZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDE2IG9jdG9icmUgMTk4NCAtIDEwIG9jdG9icmUgMTk4NSk6MzJlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjMgbWFycyAxOTgzIC0gMjAganVpbiAxOTg0KT0zMmUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg5IG5vdmVtYnJlIDE5ODEgLSAxMCBtYXJzIDE5ODMpQTMyZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAxOTgxIC0gMiBvY3RvYnJlIDE5ODEpOjMyZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxOSBtYWkgMTk4MSAtIDE4IGp1aW4gMTk4MSk9MzFlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoNSBub3ZlbWJyZSAxOTgwIC0gMTIgbWFycyAxOTgxKUAzMWUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgyNCBvY3RvYnJlIDE5ODAgLSAyNCBvY3RvYnJlIDE5ODApOTMxZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDYgbWFycyAxOTc5IC0gMTgganVpbiAxOTgwKUIzMWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBmw6l2cmllciAxOTc4IC0gMjAgZsOpdnJpZXIgMTk3OSk+MzFlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBtYXJzIDE5NzcgLSAyMiBkw6ljZW1icmUgMTk3NylFMzFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE0IGTDqWNlbWJyZSAxOTc2IC0gMjMgZMOpY2VtYnJlIDE5NzYpPTMwZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG1hcnMgMTk3NiAtIDE4IG9jdG9icmUgMTk3Nik/MzBlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTggbWFycyAxOTc1IC0gMTkgZMOpY2VtYnJlIDE5NzUpPzMwZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMTk3NCAtIDI4IGTDqWNlbWJyZSAxOTc0KUQzMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjIgbm92ZW1icmUgMTk3MyAtIDIyIGTDqWNlbWJyZSAxOTczKT8yOWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNSBtYXJzIDE5NzMgLSAyNSBzZXB0ZW1icmUgMTk3Myk5MjllIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBtYXJzIDE5NzIgLSAxNCBtYXJzIDE5NzMpQzI5ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIzIGbDqXZyaWVyIDE5NzEgLSAyNCBkw6ljZW1icmUgMTk3MSk/MjllIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDkganVpbiAxOTcwIC0gMTkgZMOpY2VtYnJlIDE5NzApPjI4ZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDI0IGbDqXZyaWVyIDE5NzAgLSAxMiBtYXJzIDE5NzApQzI4ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDI1IGbDqXZyaWVyIDE5NjkgLSAyMyBkw6ljZW1icmUgMTk2OSlDMjhlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjAgZsOpdnJpZXIgMTk2OCAtIDE4IGTDqWNlbWJyZSAxOTY4KUAyOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMCBvY3RvYnJlIDE5NjcgLSAyMCBvY3RvYnJlIDE5NjcpQDI4ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxIGTDqWNlbWJyZSAxOTY2IC0gMTIgYW/Du3QgMTk2Nyk+MjdlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoMjUgamFudmllciAxOTY2IC0gMTggYXZyaWwgMTk2NilAMjdlIGzDqWdpc2xhdHVyZSwgNWUgc2Vzc2lvbiAoMjIgb2N0b2JyZSAxOTY1IC0gMjMgb2N0b2JyZSAxOTY1KT0yN2UgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5NjUgLSA2IGFvw7t0IDE5NjUpQDI3ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE0IGphbnZpZXIgMTk2NCAtIDMxIGp1aWxsZXQgMTk2NCk8MjdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjEgYW/Du3QgMTk2MyAtIDIzIGFvw7t0IDE5NjMpQTI3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNSBqYW52aWVyIDE5NjMgLSAxMSBqdWlsbGV0IDE5NjMpPjI2ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEwIG5vdmVtYnJlIDE5NjAgLSAxMCBqdWluIDE5NjEpRTI2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyMCBzZXB0ZW1icmUgMTk2MCAtIDIyIHNlcHRlbWJyZSAxOTYwKT4yNWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxOCBub3ZlbWJyZSAxOTU5IC0gMTggbWFycyAxOTYwKT0yNWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxOSBub3ZlbWJyZSAxOTU4IC0gNSBtYXJzIDE5NTkpQjI1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEzIG5vdmVtYnJlIDE5NTcgLSAyMSBmw6l2cmllciAxOTU4KUMyNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTQgbm92ZW1icmUgMTk1NiAtIDIxIGbDqXZyaWVyIDE5NTcpQjI0ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG5vdmVtYnJlIDE5NTUgLSAyMyBmw6l2cmllciAxOTU2KUEyMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNyBvY3RvYnJlIDE5MzYgLSAxMiBub3ZlbWJyZSAxOTM2KT4xOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMCBqYW52aWVyIDE5MzMgLSAxMyBhdnJpbCAxOTMzKUIxOGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMyBub3ZlbWJyZSAxOTMxIC0gMTkgZsOpdnJpZXIgMTkzMik8MTdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBqYW52aWVyIDE5MjkgLSA0IGF2cmlsIDE5MjkpPTE2ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDExIGphbnZpZXIgMTkyNyAtIDEgYXZyaWwgMTkyNyk8MTZlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBqYW52aWVyIDE5MjYgLSAyNCBtYXJzIDE5MjYpQDE2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNyBkw6ljZW1icmUgMTkyMyAtIDE1IG1hcnMgMTkyNClCMTVlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjQgb2N0b2JyZSAxOTIyIC0gMjkgZMOpY2VtYnJlIDE5MjIpPTE1ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDEwIGphbnZpZXIgMTkyMiAtIDIxIG1hcnMgMTkyMik9MTVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTEgamFudmllciAxOTIxIC0gMTkgbWFycyAxOTIxKUQxNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTAgZMOpY2VtYnJlIDE5MTkgLSAxNCBmw6l2cmllciAxOTIwKT0xNGUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5MTkgLSAxNyBtYXJzIDE5MTkpQTE0ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDQgZMOpY2VtYnJlIDE5MTcgLSA5IGbDqXZyaWVyIDE5MTgpQzE0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg3IG5vdmVtYnJlIDE5MTYgLSAyMiBkw6ljZW1icmUgMTkxNik9MTNlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTEgamFudmllciAxOTE2IC0gMTYgbWFycyAxOTE2KTsxM2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg3IGphbnZpZXIgMTkxNSAtIDUgbWFycyAxOTE1KUIxM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMSBub3ZlbWJyZSAxOTEzIC0gMTkgZsOpdnJpZXIgMTkxNClDMTNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDUgbm92ZW1icmUgMTkxMiAtIDIxIGTDqWNlbWJyZSAxOTEyKTwxMmUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICg5IGphbnZpZXIgMTkxMiAtIDMgYXZyaWwgMTkxMik9MTJlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTAgamFudmllciAxOTExIC0gMjQgbWFycyAxOTExKTkxMmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNSBtYXJzIDE5MTAgLSA0IGp1aW4gMTkxMCk5MTJlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIgbWFycyAxOTA5IC0gMjkgbWFpIDE5MDkpOjExZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDMgbWFycyAxOTA4IC0gMjUgYXZyaWwgMTkwOCkVUgEwBDE2MjEEMTYxNwQxNjExBDE2MDcEMTU3OQQxMDc5Azc4OQM0OTkDNDkxAzQ4OQM0ODcDNDg1AzQ4MwM0ODEDNDc5AzQ3NwM0NzUDNDczAzQ3MQM0NjkDNDY3AzQ2NQM0NjMDNDYxAzQ1OQM0NTcDNDU1AzQ1MwM0NTEDNDQ5AzQ0NwM0NDUDNDQzAzQ0MQM0MzkDNDM3AzQzNQM0MzMDNDMxAzQyOQM0MjcDNDI1AzQyMwM0MjEDNDE5AzQxNwM0MTUDNDEzAzQxMQM0MDkDNDA3AzQwMwM0MDEDMzk5AzM5NwMzOTUDMzkzAzM5MQMzNTEDMzQzAzM0MQMzMzUDMzMxAzMyOQMzMjUDMzIzAzMyMQMzMTkDMzE3AzMxNQMzMTMDMzExAzMwOQMzMDcDMzA1AzMwMwMzMDEDMjk5AzI5NwMyOTUDMjkzFCsDUmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZGSR1zJt3oVoyUEzSRMlQn2fv9BTPw==" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusionData = 'typeActivite:\'9;11\', commission:\'\', mandat:\'\', mandatParent:\'\', estPageAccueil:\'true\'';var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';//]]>
+</script>
+
+<script src="/Scripts/Travaux.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusion = '/WebMethod/WebMethod.aspx/ObtenirIndicateurWebDiffusion';
+                                                                           var intervalleRafraichissementWebDiffusion = 60;//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="87D7EEFC" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAG/gQ9Ee+qmQCeIhOmxubVt13hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yP5J++CKenG+ic1PIaA5cTuL1134RC+RnzibeFXcPSMkirjG8og4fy2g9bI6NorM5K3aXyd+YwgKTVZuZwzdInb3sMEK8K8EnCeQkzFr+/RLvxPBAdO7j0VFemNI0qrFxSGYQ3iqRmRux+buuGhnzVY7jB7dHJwCIv8ngbmPGgPLujBTC+kP4kA+7KhxgVmvV5AheHVxIVrpDzljBaLS2bYKMFL9SoPHg7YnZGoSQYbC96mix2PM6mPVfuaAu2CCJfM4TAu5BVnX31Y0HHllueS87ErUi03NMo0hw7mxWyfT4Wv0wvqQZh4w3ykIvcMjsGFY5ybnihBy13K2K+tmuOs85eX2+hEhZ2vYUaE8BVLmvakhWjFT45S4k+tsa+fpSs4lbyX6yNqZ6z72mkN+uXbq6rMhqV0lkwDHk0NHAT+FCTZWSs07x5JPi066N3TA8r2W06Lr1lcPqDYyzfrmwaQGQ0psL1kP1GxKizeElEmecdwWtpPscZWtTpzZEnsfmzTqsCYzzzobfT8qdD7a/yPAypVkCmjXnJsda3SUW7qtzZGT+9Pc4mFOAq+/SX5/YRJ/K/ogEgmTY1DKUX4XxwaeYSR1/gThSYL8HvHZ/BXyQlkFwouIFKdfLNHGAWbjnoCvCU5+pJHtkl6m2WTUFVWJJA1MHBzQXG/f2gdX+bPdSgU/lArO4+wk4+DUCkKVOeGZp31cUQDQWmUDo2Su9MZmuSpA6pRzhnLkfV7xmjsWh9KQ+99mZMlQr7uUOHSboZ96a1A+LynNef/O7hu4b8K/qwysk0ivqUHKhoyAXpbbPoyn20EhaJbPgBEf3ZVcUKAehOEMbNchbHLxUU6Tby2GE3swtqAMtM9Fry5zPuv4s2htp1+4Q36YrsV6nkF5KbYkPbwAojZXFYBB3CBnXaLcA8rMefK0Y/7jpLorq+G3zWFkQ5HtZOokEDcDPi97PVKoXS0yltqZ5Mt5lUERLD0ZUxbspqy9ur6z14GkdnLsiW72+p8AC341YpjOF6yx34tM63Vq8Uhb3BcFtxuRpa9Z/2/NoNxOsUz7+Cxrjsc5oGnmEsM/D4EOnLIe/WslcimQBWL1FRHPFNiMvhdM0v4eAZR7NUE5tUcUKjzKUVe9yrlTuD7BkCKZ2iDxRJpz05DKHAeVGaY4lF6pQ80C00q+h3MqhJVAghw9aUxAP9AFqKPCv3SpPXmc+w5SYVVGfHISO1IQytQj+I+B5yTxyKDMamePfnz/uNjaSpU9JPJnmjae1Xh8FKcmg2idJphFrs2rSSYRoZTn2+cOD8w4uXzQjjSq+cSDSgaDEe7v2UjBmd+ZwDVApItvLzBJWHwjZB5xILY5bHbSTrcXHiVebPB9g6cu4OyM9Qs5qbyE84dYj4B2uxF3gcYOfMDoc/IM5xDi4UIFTQTW7H/NQ6Q6xAbuKSXYhAUdYa6kC0R+1fQ2GRiBPcJlTzg8NxJWsCbw6uucbfFDMLGnbdCRH+MJ2vwsmS8sru97GZmqUvbcHVLzytiWwmVJMxGxDYx3BYvanTW3eCivTHVUADoMWjvykFxDT4CYC59FxW5R+LQ+5YQRYaNU87G/tpDdG7FWLuikgjD4nQvKf3CUU6VYBceGVRXhuxTjI5KM0mwr/WKimhdzY8A+wjtd7aMChS5+OrgRzLvCqGmPpASCvMjFwhzzNbQIRw8L3/NFi18/kCZZw2UpxVoxwbRXaQXpnfKihg4oKRD6h/IK/nGDwv/kGpZjV82isGd3dAcv/ueAST3hCP86GZXGgNAxTvQghNtmUwi3qdsmkzpG6kDQmNjF8HEyhZeATYsYASiUoKMaqwsrpmofpInZdfVM8Qt1dp/EBcAAHbyNuUISQOWpWKTB/psFd8KeZh0ZHsoGQC6x3URnSZgoS0/dlVaU5w3pDNjnO8WiT1wNkzAklbI3/0P8OGPoyxOm889Q7znP6BhdVGBIvZkaEr2G/4QOQWC9vJ1rpH3X7bce5ChW68F6IqKPPbcgDlKF0/DnccJVDpVrjAQVSa8tk26+QeIKIHfPEFNh4D83b7JOlO17s6NcRRdnQh4CS9T6LrfhmAwa8aMvCy6BeNiYk5IPF8lnHDVfNs3InsR9ZiNQxCPs/GLIcLMwwcvL+T47+xzoOy/EIGp7k9Ex3NGCcNJapLgvmTepJXvTUKK8o43Uxx6bnZh4rvOSEFl1y0ae9T9E5j1Ej8KjAtJF6+QJ1bHt/jxVIp0MkJsBSeS9ENNitgEy6DgVUhH6Gbl9YQSK7JdqBfNSEaXgQkrrPpVv39xHWG7awjKWluncOURdTEzt1ZpZ4HjwdL44nSgz8dWHkeDfA==" />
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien" style="margin-right:45px;">Suivez-nous</span>
+                    <span class="visuallyhidden"> sur les médias sociaux, Facebook, X, Youtube</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle" />
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher"/>
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;" tabindex="0">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var link = document.querySelector('a[onclick="LancerRechercheAvancee();return false;"]');
+
+        link.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                LancerRechercheAvancee();
+                event.preventDefault();
+            }
+        });
+    });
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere">
+	<a href="/fr/index.html" class="sanssouligne" title="Assemblée nationale du Québec - Retour à l&#39;accueil">
+    <img class="nepasafficher" width="88" height="58" title="Assemblée nationale du Québec - Retour à l'accueil" alt="Assemblée nationale du Québec - Retour à l'accueil" src='/images/transparent.gif' /></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class='menuHoverParent btnDeputes'><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes">
+                Députés</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnTravaux'>
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires">
+                    Travaux parlementaires</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnExprimez'>
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion">
+                    Exprimez votre opinion!</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnVideoAudio'>
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio">
+                    Vidéo</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="display: none">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours"
+                        title="Chargement en cours" />
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" tabindex="0">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href='/fr/calendrier-detaille.html'>
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup"></span>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br />
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br />
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br />
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br />
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br />
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br />
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br />
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href=''>
+                    Aujourd'hui</a></span>
+            </div>
+            <hr />
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="my-skinnable-select">
+                    <select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite">
+	<option selected="selected" value="*"></option>
+
+</select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br />
+            <a href='/fr/aide/aide-recherche.html#javascript'>
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class='' id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class='' id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class='' id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class='' id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class='' id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class='' id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class='' id="lienEducatives">
+                <a href="http://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class='' id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class='' id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/fr/index.html">Accueil</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/index.html">Travaux parlementaires</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/commissions/index.html">Travaux des commissions</a></span><span> &gt; </span><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation">
+
+
+	
+	<ul>
+		<li>
+			<h2><a href="/fr/travaux-parlementaires/index.html" class="selected">
+				Travaux parlementaires</a></h2>
+			<ul>
+				<li>
+					<a href="/fr/travaux-parlementaires/journaux-debats.html" class="">
+						Journal des débats </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/journaux-debats/index-jd/index.html" class="">
+								Index du Journal des débats</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/assemblee-nationale/index.html" class="">
+						Travaux de l'Assemblée</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/registre-des-votes/index.html" class="">
+								Registre des votes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/commissions/index.html" class="selected">
+						Travaux des commissions</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cap/index.html" class="">
+								Administration publique</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/capern/index.html" class="">
+								Agriculture, pêcheries, énergie et ressources naturelles</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cat/index.html" class="">
+								Aménagement du territoire</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/can/index.html" class="">
+								Assemblée nationale</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cce/index.html" class="">
+								Culture et éducation</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cet/index.html" class="">
+								Économie et travail</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cfp/index.html" class="">
+								Finances publiques</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/ci/index.html" class="">
+								Institutions</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/crc/index.html" class="">
+								Relations avec les citoyens</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/csss/index.html" class="">
+								Santé et services sociaux</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cte/index.html" class="">
+								Transports et environnement</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html" class="">
+								Mandats en cours</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/rapports-documents-reflexion/index.html" class="">
+								Rapports et documents de réflexion</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/rapport/index.html" class="">
+						Cheminement des projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/index.html" class="">
+						Projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/documents-deposes.html" class="">
+						Documents déposés </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/documents-deposes/depots-du-jour.html" class="">
+								Dépôts du jour </a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/calendrier-travaux.html" class="">
+						Calendrier hebdomadaire des travaux </a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+	
+
+<div class="clear"></div>
+
+<div class="ContenuNavigation SousNavigation rechercheContextuelle travauxParlementaires">
+    <div class="overlay">
+        <div class="loading"></div>
+    </div>
+	<h2>Recherche avancée dans la section Travaux parlementaires</h2>
+
+		<div class="conteneurMotCle" data-champ="MotsCles">
+            <label for="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux">Mots clés</label>
+			<input name="ctl00$ColGauche$RechercheTravaux$txtTrouverTravaux" type="text" id="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux" />	
+		</div>
+		
+	    <div class="floatLeft" data-champ="TypeDocument">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments">Type de documents</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxDocument">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeDocuments" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments" title="Certains documents déposés en commissions et à l’Assemblée sont numérisés en mode image. Leurs contenus ne sont donc pas disponibles à la recherche." class="BulleInfo">
+	<option selected="selected" value="-1">Tous les documents</option>
+	<option value="1|3">Documents d&#233;pos&#233;s</option>
+	<option value="9">Feuilletons et pr&#233;avis</option>
+	<option value="13">Journaux des d&#233;bats</option>
+	<option value="5">M&#233;moires</option>
+	<option value="7">Proc&#232;s-verbaux de l&#39;Assembl&#233;e</option>
+	<option value="11">Projets de loi</option>
+	<option value="15">Rapports et documents de consultation des commissions</option>
+
+</select>
+		    </div>
+        </div>
+
+    	<div class="floatLeft" data-champ="TypeTravaux">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">Type de travaux</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxType">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeTravaux" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">
+	<option value="0">Travaux de l&#39;Assembl&#233;e et des commissions</option>
+	<option value="-1">Travaux de l&#39;Assembl&#233;e</option>
+	<option value="-2">Travaux des commissions</option>
+	<option value="39">Commission de la culture et de l’&#233;ducation</option>
+	<option value="43">Commission de la sant&#233; et des services sociaux</option>
+	<option value="7">Commission de l&#39;administration publique</option>
+	<option value="37">Commission de l&#39;agriculture, des p&#234;cheries, de l&#39;&#233;nergie et des ressources naturelles</option>
+	<option value="13">Commission de l&#39;am&#233;nagement du territoire</option>
+	<option value="5">Commission de l&#39;Assembl&#233;e nationale</option>
+	<option value="21">Commission de l&#39;&#233;conomie et du travail</option>
+	<option value="23">Commission des finances publiques</option>
+	<option value="25">Commission des institutions</option>
+	<option value="41">Commission des relations avec les citoyens</option>
+	<option value="35">Commission des transports et de l&#39;environnement</option>
+	<option value="55">Sous-commission de la r&#233;forme parlementaire</option>
+
+</select>
+		    </div>
+		</div>
+    
+        <div class="champRecherche avancee" data-champ="Periode">
+            <label>Période</label>
+            <div class="champPeriode">
+		        <label class="libelleDe" for="ctl00_ColGauche_RechercheTravaux_txtDateDebut">De</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateDebut" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateDebut" class="champsDate choisirDate PeriodeDebut" />
+		        <label class="libelleA" for="ctl00_ColGauche_RechercheTravaux_txtDateFin" class="champRecherche avancee">À</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateFin" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateFin" title="
+       Si les champs &lt;b>De&lt;/b> et &lt;b>À&lt;/b> sont remplis, le résultat se situe entre les dates indiquées.&lt;br/>
+      Si seul le champ &lt;b>De&lt;/b> est rempli, le résultat se situe entre la date indiquée jusqu’à aujourd’hui.&lt;br/>
+      Si seul le champ &lt;b>À&lt;/b> est rempli, le résultat se situe avant la date indiquée.
+    " class="champsDate choisirDate BulleInfo PeriodeFin" />
+	        </div>
+            <div class="messageErreur cache">La date de début doit précéder la date de fin.</div>
+	    </div>
+
+        <div class="champRecherche avancee" data-champ="Legislature">
+            <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature" class="labelOnTop">Session</label>
+            <div class="my-skinnable-select">
+	            <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixSessionLegislature" id="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature">
+	<option value="0">Toutes les sessions</option>
+	<option selected="selected" value="1621" title="Session en cours - 43e législature, 3e session (5 mai 2026 - )">Session en cours - 43e l&#233;gislature, 3e session (5 mai 2026 - )</option>
+	<option value="1617" title="43e législature, 2e session (30 septembre 2025 - 8 avril 2026)">43e l&#233;gislature, 2e session (30 septembre 2025 - 8 avril 2026)</option>
+	<option value="1611" title="43e législature, 1re session (29 novembre 2022 - 10 septembre 2025)">43e l&#233;gislature, 1re session (29 novembre 2022 - 10 septembre 2025)</option>
+	<option value="1607" title="42e législature, 2e session (19 octobre 2021 - 28 août 2022)">42e l&#233;gislature, 2e session (19 octobre 2021 - 28 ao&#251;t 2022)</option>
+	<option value="1579" title="42e législature, 1re session (27 novembre 2018 - 13 octobre 2021)">42e l&#233;gislature, 1re session (27 novembre 2018 - 13 octobre 2021)</option>
+	<option value="1079" title="41e législature, 1re session (20 mai 2014 - 23 août 2018)">41e l&#233;gislature, 1re session (20 mai 2014 - 23 ao&#251;t 2018)</option>
+	<option value="789" title="40e législature, 1re session (30 octobre 2012 - 5 mars 2014)">40e l&#233;gislature, 1re session (30 octobre 2012 - 5 mars 2014)</option>
+	<option value="499" title="39e législature, 2e session (23 février 2011 - 1 août 2012)">39e l&#233;gislature, 2e session (23 f&#233;vrier 2011 - 1 ao&#251;t 2012)</option>
+	<option value="491" title="39e législature, 1re session (13 janvier 2009 - 22 février 2011)">39e l&#233;gislature, 1re session (13 janvier 2009 - 22 f&#233;vrier 2011)</option>
+	<option value="489" title="38e législature, 1re session (8 mai 2007 - 5 novembre 2008)">38e l&#233;gislature, 1re session (8 mai 2007 - 5 novembre 2008)</option>
+	<option value="487" title="37e législature, 2e session (14 mars 2006 - 21 février 2007)">37e l&#233;gislature, 2e session (14 mars 2006 - 21 f&#233;vrier 2007)</option>
+	<option value="485" title="37e législature, 1re session (4 juin 2003 - 10 mars 2006)">37e l&#233;gislature, 1re session (4 juin 2003 - 10 mars 2006)</option>
+	<option value="483" title="36e législature, 2e session (22 mars 2001 - 12 mars 2003)">36e l&#233;gislature, 2e session (22 mars 2001 - 12 mars 2003)</option>
+	<option value="481" title="36e législature, 1re session (2 mars 1999 - 9 mars 2001)">36e l&#233;gislature, 1re session (2 mars 1999 - 9 mars 2001)</option>
+	<option value="479" title="35e législature, 2e session (25 mars 1996 - 21 octobre 1998)">35e l&#233;gislature, 2e session (25 mars 1996 - 21 octobre 1998)</option>
+	<option value="477" title="35e législature, 1re session (29 novembre 1994 - 13 mars 1996)">35e l&#233;gislature, 1re session (29 novembre 1994 - 13 mars 1996)</option>
+	<option value="475" title="34e législature, 3e session (17 mars 1994 - 17 juin 1994)">34e l&#233;gislature, 3e session (17 mars 1994 - 17 juin 1994)</option>
+	<option value="473" title="34e législature, 2e session (19 mars 1992 - 10 mars 1994)">34e l&#233;gislature, 2e session (19 mars 1992 - 10 mars 1994)</option>
+	<option value="471" title="34e législature, 1re session (28 novembre 1989 - 18 mars 1992)">34e l&#233;gislature, 1re session (28 novembre 1989 - 18 mars 1992)</option>
+	<option value="469" title="33e législature, 2e session (8 mars 1988 - 9 août 1989)">33e l&#233;gislature, 2e session (8 mars 1988 - 9 ao&#251;t 1989)</option>
+	<option value="467" title="33e législature, 1re session (16 décembre 1985 - 8 mars 1988)">33e l&#233;gislature, 1re session (16 d&#233;cembre 1985 - 8 mars 1988)</option>
+	<option value="465" title="32e législature, 5e session (16 octobre 1984 - 10 octobre 1985)">32e l&#233;gislature, 5e session (16 octobre 1984 - 10 octobre 1985)</option>
+	<option value="463" title="32e législature, 4e session (23 mars 1983 - 20 juin 1984)">32e l&#233;gislature, 4e session (23 mars 1983 - 20 juin 1984)</option>
+	<option value="461" title="32e législature, 3e session (9 novembre 1981 - 10 mars 1983)">32e l&#233;gislature, 3e session (9 novembre 1981 - 10 mars 1983)</option>
+	<option value="459" title="32e législature, 2e session (30 septembre 1981 - 2 octobre 1981)">32e l&#233;gislature, 2e session (30 septembre 1981 - 2 octobre 1981)</option>
+	<option value="457" title="32e législature, 1re session (19 mai 1981 - 18 juin 1981)">32e l&#233;gislature, 1re session (19 mai 1981 - 18 juin 1981)</option>
+	<option value="455" title="31e législature, 6e session (5 novembre 1980 - 12 mars 1981)">31e l&#233;gislature, 6e session (5 novembre 1980 - 12 mars 1981)</option>
+	<option value="453" title="31e législature, 5e session (24 octobre 1980 - 24 octobre 1980)">31e l&#233;gislature, 5e session (24 octobre 1980 - 24 octobre 1980)</option>
+	<option value="451" title="31e législature, 4e session (6 mars 1979 - 18 juin 1980)">31e l&#233;gislature, 4e session (6 mars 1979 - 18 juin 1980)</option>
+	<option value="449" title="31e législature, 3e session (21 février 1978 - 20 février 1979)">31e l&#233;gislature, 3e session (21 f&#233;vrier 1978 - 20 f&#233;vrier 1979)</option>
+	<option value="447" title="31e législature, 2e session (8 mars 1977 - 22 décembre 1977)">31e l&#233;gislature, 2e session (8 mars 1977 - 22 d&#233;cembre 1977)</option>
+	<option value="445" title="31e législature, 1re session (14 décembre 1976 - 23 décembre 1976)">31e l&#233;gislature, 1re session (14 d&#233;cembre 1976 - 23 d&#233;cembre 1976)</option>
+	<option value="443" title="30e législature, 4e session (16 mars 1976 - 18 octobre 1976)">30e l&#233;gislature, 4e session (16 mars 1976 - 18 octobre 1976)</option>
+	<option value="441" title="30e législature, 3e session (18 mars 1975 - 19 décembre 1975)">30e l&#233;gislature, 3e session (18 mars 1975 - 19 d&#233;cembre 1975)</option>
+	<option value="439" title="30e législature, 2e session (14 mars 1974 - 28 décembre 1974)">30e l&#233;gislature, 2e session (14 mars 1974 - 28 d&#233;cembre 1974)</option>
+	<option value="437" title="30e législature, 1re session (22 novembre 1973 - 22 décembre 1973)">30e l&#233;gislature, 1re session (22 novembre 1973 - 22 d&#233;cembre 1973)</option>
+	<option value="435" title="29e législature, 4e session (15 mars 1973 - 25 septembre 1973)">29e l&#233;gislature, 4e session (15 mars 1973 - 25 septembre 1973)</option>
+	<option value="433" title="29e législature, 3e session (7 mars 1972 - 14 mars 1973)">29e l&#233;gislature, 3e session (7 mars 1972 - 14 mars 1973)</option>
+	<option value="431" title="29e législature, 2e session (23 février 1971 - 24 décembre 1971)">29e l&#233;gislature, 2e session (23 f&#233;vrier 1971 - 24 d&#233;cembre 1971)</option>
+	<option value="429" title="29e législature, 1re session (9 juin 1970 - 19 décembre 1970)">29e l&#233;gislature, 1re session (9 juin 1970 - 19 d&#233;cembre 1970)</option>
+	<option value="427" title="28e législature, 5e session (24 février 1970 - 12 mars 1970)">28e l&#233;gislature, 5e session (24 f&#233;vrier 1970 - 12 mars 1970)</option>
+	<option value="425" title="28e législature, 4e session (25 février 1969 - 23 décembre 1969)">28e l&#233;gislature, 4e session (25 f&#233;vrier 1969 - 23 d&#233;cembre 1969)</option>
+	<option value="423" title="28e législature, 3e session (20 février 1968 - 18 décembre 1968)">28e l&#233;gislature, 3e session (20 f&#233;vrier 1968 - 18 d&#233;cembre 1968)</option>
+	<option value="421" title="28e législature, 2e session (20 octobre 1967 - 20 octobre 1967)">28e l&#233;gislature, 2e session (20 octobre 1967 - 20 octobre 1967)</option>
+	<option value="419" title="28e législature, 1re session (1 décembre 1966 - 12 août 1967)">28e l&#233;gislature, 1re session (1 d&#233;cembre 1966 - 12 ao&#251;t 1967)</option>
+	<option value="417" title="27e législature, 6e session (25 janvier 1966 - 18 avril 1966)">27e l&#233;gislature, 6e session (25 janvier 1966 - 18 avril 1966)</option>
+	<option value="415" title="27e législature, 5e session (22 octobre 1965 - 23 octobre 1965)">27e l&#233;gislature, 5e session (22 octobre 1965 - 23 octobre 1965)</option>
+	<option value="413" title="27e législature, 4e session (21 janvier 1965 - 6 août 1965)">27e l&#233;gislature, 4e session (21 janvier 1965 - 6 ao&#251;t 1965)</option>
+	<option value="411" title="27e législature, 3e session (14 janvier 1964 - 31 juillet 1964)">27e l&#233;gislature, 3e session (14 janvier 1964 - 31 juillet 1964)</option>
+	<option value="409" title="27e législature, 2e session (21 août 1963 - 23 août 1963)">27e l&#233;gislature, 2e session (21 ao&#251;t 1963 - 23 ao&#251;t 1963)</option>
+	<option value="407" title="27e législature, 1re session (15 janvier 1963 - 11 juillet 1963)">27e l&#233;gislature, 1re session (15 janvier 1963 - 11 juillet 1963)</option>
+	<option value="403" title="26e législature, 2e session (10 novembre 1960 - 10 juin 1961)">26e l&#233;gislature, 2e session (10 novembre 1960 - 10 juin 1961)</option>
+	<option value="401" title="26e législature, 1re session (20 septembre 1960 - 22 septembre 1960)">26e l&#233;gislature, 1re session (20 septembre 1960 - 22 septembre 1960)</option>
+	<option value="399" title="25e législature, 4e session (18 novembre 1959 - 18 mars 1960)">25e l&#233;gislature, 4e session (18 novembre 1959 - 18 mars 1960)</option>
+	<option value="397" title="25e législature, 3e session (19 novembre 1958 - 5 mars 1959)">25e l&#233;gislature, 3e session (19 novembre 1958 - 5 mars 1959)</option>
+	<option value="395" title="25e législature, 2e session (13 novembre 1957 - 21 février 1958)">25e l&#233;gislature, 2e session (13 novembre 1957 - 21 f&#233;vrier 1958)</option>
+	<option value="393" title="25e législature, 1re session (14 novembre 1956 - 21 février 1957)">25e l&#233;gislature, 1re session (14 novembre 1956 - 21 f&#233;vrier 1957)</option>
+	<option value="391" title="24e législature, 4e session (16 novembre 1955 - 23 février 1956)">24e l&#233;gislature, 4e session (16 novembre 1955 - 23 f&#233;vrier 1956)</option>
+	<option value="351" title="20e législature, 1re session (7 octobre 1936 - 12 novembre 1936)">20e l&#233;gislature, 1re session (7 octobre 1936 - 12 novembre 1936)</option>
+	<option value="343" title="18e législature, 2e session (10 janvier 1933 - 13 avril 1933)">18e l&#233;gislature, 2e session (10 janvier 1933 - 13 avril 1933)</option>
+	<option value="341" title="18e législature, 1re session (3 novembre 1931 - 19 février 1932)">18e l&#233;gislature, 1re session (3 novembre 1931 - 19 f&#233;vrier 1932)</option>
+	<option value="335" title="17e législature, 2e session (8 janvier 1929 - 4 avril 1929)">17e l&#233;gislature, 2e session (8 janvier 1929 - 4 avril 1929)</option>
+	<option value="331" title="16e législature, 4e session (11 janvier 1927 - 1 avril 1927)">16e l&#233;gislature, 4e session (11 janvier 1927 - 1 avril 1927)</option>
+	<option value="329" title="16e législature, 3e session (7 janvier 1926 - 24 mars 1926)">16e l&#233;gislature, 3e session (7 janvier 1926 - 24 mars 1926)</option>
+	<option value="325" title="16e législature, 1re session (17 décembre 1923 - 15 mars 1924)">16e l&#233;gislature, 1re session (17 d&#233;cembre 1923 - 15 mars 1924)</option>
+	<option value="323" title="15e législature, 4e session (24 octobre 1922 - 29 décembre 1922)">15e l&#233;gislature, 4e session (24 octobre 1922 - 29 d&#233;cembre 1922)</option>
+	<option value="321" title="15e législature, 3e session (10 janvier 1922 - 21 mars 1922)">15e l&#233;gislature, 3e session (10 janvier 1922 - 21 mars 1922)</option>
+	<option value="319" title="15e législature, 2e session (11 janvier 1921 - 19 mars 1921)">15e l&#233;gislature, 2e session (11 janvier 1921 - 19 mars 1921)</option>
+	<option value="317" title="15e législature, 1re session (10 décembre 1919 - 14 février 1920)">15e l&#233;gislature, 1re session (10 d&#233;cembre 1919 - 14 f&#233;vrier 1920)</option>
+	<option value="315" title="14e législature, 3e session (21 janvier 1919 - 17 mars 1919)">14e l&#233;gislature, 3e session (21 janvier 1919 - 17 mars 1919)</option>
+	<option value="313" title="14e législature, 2e session (4 décembre 1917 - 9 février 1918)">14e l&#233;gislature, 2e session (4 d&#233;cembre 1917 - 9 f&#233;vrier 1918)</option>
+	<option value="311" title="14e législature, 1re session (7 novembre 1916 - 22 décembre 1916)">14e l&#233;gislature, 1re session (7 novembre 1916 - 22 d&#233;cembre 1916)</option>
+	<option value="309" title="13e législature, 4e session (11 janvier 1916 - 16 mars 1916)">13e l&#233;gislature, 4e session (11 janvier 1916 - 16 mars 1916)</option>
+	<option value="307" title="13e législature, 3e session (7 janvier 1915 - 5 mars 1915)">13e l&#233;gislature, 3e session (7 janvier 1915 - 5 mars 1915)</option>
+	<option value="305" title="13e législature, 2e session (11 novembre 1913 - 19 février 1914)">13e l&#233;gislature, 2e session (11 novembre 1913 - 19 f&#233;vrier 1914)</option>
+	<option value="303" title="13e législature, 1re session (5 novembre 1912 - 21 décembre 1912)">13e l&#233;gislature, 1re session (5 novembre 1912 - 21 d&#233;cembre 1912)</option>
+	<option value="301" title="12e législature, 4e session (9 janvier 1912 - 3 avril 1912)">12e l&#233;gislature, 4e session (9 janvier 1912 - 3 avril 1912)</option>
+	<option value="299" title="12e législature, 3e session (10 janvier 1911 - 24 mars 1911)">12e l&#233;gislature, 3e session (10 janvier 1911 - 24 mars 1911)</option>
+	<option value="297" title="12e législature, 2e session (15 mars 1910 - 4 juin 1910)">12e l&#233;gislature, 2e session (15 mars 1910 - 4 juin 1910)</option>
+	<option value="295" title="12e législature, 1re session (2 mars 1909 - 29 mai 1909)">12e l&#233;gislature, 1re session (2 mars 1909 - 29 mai 1909)</option>
+	<option value="293" title="11e législature, 4e session (3 mars 1908 - 25 avril 1908)">11e l&#233;gislature, 4e session (3 mars 1908 - 25 avril 1908)</option>
+
+</select>
+	        </div>
+        </div>
+
+		<div align="right" class="btnRechercheContextuelle">
+			<input type="button" onclick="RechercheTravaux()" value="Rechercher" class="btnSoumettre" />
+		</div>
+</div>
+
+
+<script type="text/javascript">
+    var idSessionLegislatureCourante = '1621'
+
+    $(document).ready(function () {
+        InitialiserRechercheTravauxParlementaires();
+        $("input.champMotCle, [data-champ] input, [data-champ] select]").keypress(function (e) {
+            if (e && e.keyCode == 13) {
+                RechercheTravaux();
+                return false;
+            }
+        });
+    })
+
+//<![CDATA[
+    String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); };
+
+    function RechercheTravaux() {
+        if (!ValiderPeriode())
+            return;
+
+        var motsCles = $('#ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux');
+
+        var queryString = "";
+        queryString = queryString + "SectionRecherche=9";
+        
+        if (motsCles.val() != "")
+            queryString = queryString + "&MotsCles=" + encodeURIComponent(htmlEscape(motsCles.val()));
+        
+        var typeTravaux = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux');
+        queryString = queryString + "&TypeTravaux=" + typeTravaux.val();
+            
+        var typeDocuments = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments');
+        queryString = queryString + "&TypeDocument=" + typeDocuments.val();
+
+        var dateDebut = $('#ctl00_ColGauche_RechercheTravaux_txtDateDebut');
+        var dateFin = $('#ctl00_ColGauche_RechercheTravaux_txtDateFin');
+        if (dateDebut.val() != "" || dateFin.val() != "")
+        {
+            queryString = queryString + "&PeriodeDebut=" + dateDebut.val();
+            queryString = queryString + "&PeriodeFin=" + dateFin.val();
+            queryString = queryString + "&Legislature=0";
+        }
+        else
+        {
+            var sessionLegislature = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature');
+            if (sessionLegislature.val() == "-1") {
+                sessionLegislature.get(0).selectedIndex = 1;
+            }
+            queryString = queryString + "&Legislature=" + sessionLegislature.val();
+        }
+
+        //Appel de la page de recherche.
+        window.location = '/fr/recherche/recherche-avancee.html?' + queryString;
+    }
+ //]]>
+</script>
+
+
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Imprimer la page" title="Imprimer la page"
+                        src='/Images/icones/partageImprimante.gif' width="16" height="16"/></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Taille du texte : régulière" title="Taille du texte : régulière" src='/Images/icones/retrecir.gif' width="16" height="16"/></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src='/Images/icones/agrandir.gif' width="16" height="16"/></a>
+                </li>
+                <li>
+                    <a href='/fr/fils-rss.html' class="nePasRediriger">
+                        <img alt="Fils RSS" title="Fils RSS"
+                        src='/Images/icones/partageRss.gif' width="16" height="16"/></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Partager</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                    <li>
+                        <a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-240208.html' class="nePasRediriger">
+                            <img alt="Partager par Facebook" title="Partager par Facebook"
+                            src='/Images/icones/partageFacebook.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://x.com/intent/tweet?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-240208.html' class="nePasRediriger">
+                            <img alt="Partager par X" title="Partager par X"
+                            src='/Images/icones/partageTwitter.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://www.linkedin.com/sharing/share-offsite/?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-240208.html' class="nePasRediriger">
+                            <img alt="Partager par LinkedIn" title="Partager par LinkedIn"
+                            src='/Images/icones/partageLinkedin.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='/fr/__envoyer-ami.html?lienurl=%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-43-1%2fjournal-debats%2fCSSS-240208.html' class="nePasRediriger">
+                            <img alt="Partager par courriel" title="Partager par courriel"
+                            src='/Images/icones/partageCourriel.gif' /></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/fr/document/19787.html">Diagramme de l'Assemblée</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="styleHyperlien">
+		            <span id="IconeEnDirect" class="icoEnDirect"> </span>		
+		            En direct sur le Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    <h1>
+	<span id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu"><a href="#ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"><img alt="Liens Ignorer la navigation" src="/WebResource.axd?d=4UaBqSIWkbOa0oKpfyVaroCfWw-gKpH7p94XAneRMXaNy_TmToGBBciOgGFLRbyIG0lHcoUothuOjD7lW_eFebb023o1&amp;t=638901627720898773" width="0" height="0" style="border-width:0px;" /></a><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span><a id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"></a></span></h1>
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+								
+    <h2>Version finale</h2>
+    
+	
+            <div class="boutonRetour">
+                <span>
+			        <a  href='https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/index.html'>Retour à la liste des séances du Journal des débats</a>
+			    </span>
+            </div>
+			<h2 class="titre2TravauxParl">
+				43<sup>e</sup> législature, 1<sup>re</sup> session
+				<br />
+				(29 novembre 2022 au 10 septembre 2025)
+			</h2>
+		
+	 
+	
+		
+			<h2>
+                Le jeudi 8 février 2024 -  Vol.&nbsp;47 N°&nbsp;67
+            </h2>
+			
+			
+					<p>
+				
+					<h3>Consultations particulières et auditions publiques sur le projet de loi n° 37, Loi sur le commissaire au bien-être et aux droits des enfants</h3>
+					<br />
+				
+					</p>
+				
+			
+			
+               
+                <p>
+				    <a href="#debut_journal">Aller directement au contenu du Journal des débats</a>
+			    </p>
+            
+			    <h3>Table des matières</h3>
+			    <div class="tableMatieresJournal">
+				    <p><TableDesMatieres><p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;margin-left: 0cm;margin-right: 0cm;margin-top: 12.0pt;text-align: left;">
+  <a href="#_Toc226549739">
+    <span>Auditions (suite)</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc226549740">
+    <span>Bureau du coroner</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc226549741">
+    <span>Regroupement des Auberges
+du coeur du Québec (RACQ)</span>
+  </a>
+  <span>
+    <span>
+      <br />
+      <br />
+    </span>
+  </span>
+</p>
+<p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;margin-left: 0cm;margin-right: 0cm;margin-top: 12.0pt;text-align: left;">
+  <a href="#_Toc226549742">
+    <span>Mémoires déposés</span>
+  </a>
+</p>
+<p align="center" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;text-align: center;">
+  <b>Intervenants</b>
+</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">Mme Catherine
+Blouin, présidente suppléante</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Lionel
+Carmant</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">Mme Brigitte
+B. Garceau</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Guillaume
+Cliche-Rivard</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Joël
+Arseneau</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">Mme Marilyne
+Picard</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          M.
+Reno Bernier, Coroner en chef</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          M.
+Paul-André Perron, bureau du coroner</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Mme
+Géhane Kamel, idem</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Mme
+Stéphanie Gamache, idem</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Mme
+Paule Dalphond, RACQ</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Mme
+Grace Tabaka, idem</p>
+<p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;text-align: left;">*          Témoins
+interrogés par les membres de la commission</p></TableDesMatieres></p>
+			    </div>
+			
+                <h2>
+				    <a name="debut_journal" class="ancreNommee">Journal des débats</a>
+			    </h2>
+			<Contenu><p style="text-align: justify">
+  <a name="Page00001"></a>
+  <i>(Onze heures trente-trois minutes)</i>
+</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>À
+ l'ordre, s'il vous plaît. Ayant constaté le quorum, je déclare la séance de la Commission
+ de la santé et des services sociaux ouverte. Je vous souhaite la bienvenue et
+ je demande à toutes les personnes présentes dans la salle de bien vouloir
+ éteindre la sonnerie de leurs appareils électroniques.</p>
+<p style="text-align: justify">La commission est réunie afin de poursuivre les
+ consultations particulières et auditions publiques sur le projet de loi n° 37, Loi sur le commissaire au bien-être et aux droits
+ des enfants. </p>
+<p style="text-align: justify">Mme la secrétaire, est-ce qu'il y a des
+ remplacements?</p>
+<p style="text-align: justify">
+  <b>La
+ Secrétaire : </b>Oui, Mme la Présidente. Alors, M. Chassin (Saint-Jérôme) est remplacé par Mme Picard (Soulanges); Mme Caron (La Pinière) est
+ remplacée par Mme Garceau (Robert-Baldwin); M. Morin (Acadie) est
+ remplacé par Mme Prass (D'Arcy-McGee); et M. Marissal
+ (Rosemont) est remplacé par M. Cliche-Rivard (Saint-Henri—Sainte-Anne).</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Merci.
+ Alors, ce matin, nous entendrons les témoins suivants, soit le Bureau du
+ coroner et le Regroupement des Auberges du coeur du Québec.</p>
+<p style="text-align: justify">Comme la séance commence avec un peu de retard,
+ est-ce qu'il y a consentement pour qu'on poursuive nos travaux jusqu'à
+ 13 heures?</p>
+<p style="text-align: justify">
+  <b>Des voix : </b>Consentement.</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Parfait.
+ Et là je comprends aussi qu'il y a le consentement pour que M. le ministre cède
+ un peu de temps de parole aux oppositions.</p>
+<p style="text-align: justify">
+  <b>Des voix : </b>Consentement.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc226549739"></a>
+  <a name="_Toc224050587">Auditions (suite)</a>
+</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Parfait.
+ Merci beaucoup. Donc, je souhaite officiellement la bienvenue aux représentants
+ du Bureau du coroner. Je vous rappelle que vous disposez de 10 minutes
+ pour votre exposé, puis nous procéderons à la période d'échange avec les
+ membres de la commission. Alors, je vous invite à vous présenter et à commencer
+ votre exposé.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc226549740"></a>
+  <a name="_Toc224050588">Bureau du coroner</a>
+</p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Alors,
+ bonjour, Mme la Présidente, M. le ministre, Mmes et MM. les députés membres de la commission. Je suis accompagné aujourd'hui
+ de Me Géhane Kamel, qui est coroner à temps plein, chargée
+ notamment du Comité d'examen des décès
+ d'enfants et du comité d'examen des décès autochtones. Je suis également
+ accompagné de Me Stéphanie Gamache, coroner à temps plein, qui est chargée
+ notamment du Comité d'examen des décès liés à la violence conjugale. On a aussi
+ Paul-André Perron qui nous... qui nous appuie, qui est conseiller stratégique
+ au Bureau du coroner.</p>
+<p style="text-align: justify">Donc, je vous remercie d'abord pour l'invitation
+ que vous nous avez offerte de venir échanger avec vous, là, concernant le
+ projet de loi n° 37 sur le Commissaire au bien-être et aux droits des
+ enfants.</p>
+<p style="text-align: justify">Je vous propose de débuter par une mise en
+ contexte qui va rappeler le rôle du Bureau du coroner puis d'enchaîner ensuite
+ avec nos commentaires sur le projet de loi, puis ça va nous faire plaisir après
+ aussi d'échanger avec vous sur... pour répondre à vos questions.</p>
+<p style="text-align: justify">Donc, la mission et les activités du Bureau du
+ coroner sont appuyées par la Loi sur les coroners. Les coroners, c'est des
+ officiers publics, hein, qui sont nommés par le gouvernement. Ils desservent
+ chacun un territoire précis de manière à
+ couvrir l'ensemble du Québec 24 heures sur 24, sept jours sur sept. Il y a
+ neuf coroners actuellement nommés à temps plein, il y a également une
+ centaine d'autres coroners qui exercent leurs fonctions à temps partiel en plus de leurs carrières respectives. Puis, dans
+ toutes les régions du Québec, le Bureau
+ du coroner, lui, son travail,
+ c'est de soutenir ces coroners-là. La mission du coroner, c'est de rechercher
+ de façon indépendante et impartiale les causes probables, les circonstances des
+ décès qui sont obscurs, violents ou qui surviennent par suite de négligence
+ dans un objectif de protéger la vie, d'acquérir une meilleure connaissance des
+ phénomènes de mortalité et de faciliter la reconnaissance et l'exercice des
+ droits. Pour faire ça, bien, le coroner réalise des investigations ou des
+ enquêtes et il va rédiger un rapport qui va résumer ses conclusions. Ce
+ rapport-là, il contient l'identité du défunt, la date et le lieu du décès, les
+ causes probables et les circonstances du décès. C'est un rapport qui est public
+ puis qui peut être remis à toute personne qui en fait la demande.</p>
+<p style="text-align: justify">
+  <a name="Page00002"></a>Les
+ coroners sur le terrain vont intervenir à la suite de signalements qui leur
+ sont faits dans certaines situations qui sont prévues par la loi. À
+ titre d'exemple, le médecin et l'infirmière praticienne spécialisée qui
+ constatent un décès dont ils ne peuvent établir les causes probables ou qui
+ leur apparaît être survenu par suite de négligence ou dans des circonstances
+ obscures ou violentes, bien, ils doivent en aviser un coroner. Le coroner doit
+ aussi être avisé si le décès survient dans certains lieux, par exemple un
+ centre de la petite enfance, un service de garde en milieu familial, une
+ famille d'accueil ou un centre de réadaptation au sens de la Loi sur les
+ services de santé et les services sociaux pour les autochtones cris. </p>
+<p style="text-align: justify">Chaque année, les coroners vont investiguer
+ environ 8 % des décès qui ont lieu au Québec, donc c'est grosso modo 6 000 quelques... 6 000 quelques
+ investigations sur un total de 78 000 décès en 2022. Annuellement, on
+ va intervenir au Bureau du coroner dans environ 170 décès d'enfants
+ qui ont moins de 18 ans. Principalement, c'est des décès accidentels, des morts naturelles dont la cause
+ était inconnue au moment du décès et des décès subits, là, de
+ nourrissons pendant leur sommeil ou des suicides d'adolescents. On compte entre
+ cinq et 10 homicides d'enfant par année, la moitié en contexte de violence
+ conjugale. Les avis obligatoires pour des décès dans certains milieux, comme je
+ vous ai mentionné tout à l'heure, là, garderie, famille d'accueil, centre
+ jeunesse, ça représente environ... moins de 10 cas par année en tout. </p>
+<p style="text-align: justify">Par ailleurs, les coroners ont aussi un rôle
+ important de prévention des décès, là, notamment par la possibilité qu'ils ont de faire des recommandations dans leur
+ rapport. Ces recommandations-là vont donner souvent lieu à des
+ changements sociaux. Puis, dans le cadre de ce rôle de prévention, le coroner a
+ également mis en place au Bureau du coroner trois comités d'examen de certains types de
+ décès. Le but de ces comités d'examen là, bien, c'est de regrouper autour d'une même table des experts pour
+ comprendre les phénomènes puis identifier des mesures de prévention des
+ décès.</p>
+<p style="text-align: justify">Le premier comité permanent qu'on a mis en
+ place, ça concerne les décès d'enfants âgés de moins de 18 ans. C'est un
+ comité qui regroupe des pédiatres, des policiers, des représentants du Directeur
+ des poursuites criminelles et pénales, du directeur de la protection de la
+ jeunesse, de l'Institut national de santé publique du Québec, du Laboratoire de
+ sciences judiciaires et de médecine légale ainsi que du Bureau du coroner. Ce
+ comité-là va procéder à l'étude des cas pour
+ lesquels le coroner a terminé son investigation ou son enquête pour notamment
+ identifier les principaux constats, les enjeux systémiques liés au décès
+ d'enfants, dépister des phénomènes de mortalité chez les enfants et faire des
+ recommandations qui visent la prévention.</p>
+<p style="text-align: justify">Le deuxième comité concerne la mortalité dans
+ les Premières Nations et chez les Inuits. C'est un comité qui ne vise pas
+ uniquement les enfants, mais qui est en lien avec les grands enjeux qui ont été
+ mis en lumière par la commission Viens, puis il a pour objectif de mieux
+ comprendre la réalité autochtone pour nous permettre notamment d'adapter nos
+ services et d'appliquer la Loi sur les coroners avec une plus grande
+ sensibilité de leur réalité.</p>
+<p style="text-align: justify">
+  <i>• (11 h 40) •</i>
+</p>
+<p style="text-align: justify">Le troisième comité, lui, concerne les décès
+ liés à la violence conjugale. Il vise à rassembler les compétences des personnes
+ représentant plusieurs organisations avec une expertise reconnue sur la
+ problématique de la violence conjugale encore là pour mieux la comprendre puis
+ pour mieux la prévenir. Les travaux de ce comité-là ont des retombés en matière de décès en contexte de
+ violence conjugale. Pour cette raison-là, l'action 45 de la Stratégie
+ gouvernementale intégrée pour contrer la violence sexuelle, la violence
+ conjugale et Rebâtir la confiance 2022-2027 prévoit la poursuite en
+ continu des activités de ce comité. </p>
+<p style="text-align: justify">Maintenant, concernant le projet de loi, la
+ protection de la vie humaine, c'est au coeur du mandat du coroner, et les décès d'enfants, c'est une préoccupation
+ constante pour notre équipe. Dans ce contexte-là, nous, on est d'avis
+ que l'arrivée d'un nouveau Commissaire au bien-être et aux droits des enfants,
+ c'est une bonne nouvelle. On salue cette initiative
+ qui répond à l'une des recommandations phares de la commission Laurent. Après
+ analyse, nous comprenons que le commissaire aura comme fonction
+ principale de promouvoir le bien-être des enfants, de faire entendre leur voix,
+ de les accompagner dans la défense de leurs droits, d'assurer une veille et de
+ coopérer avec l'ensemble des instances. Nous sommes d'avis que ces fonctions
+ vont permettre sûrement de contribuer à la protection des enfants et aussi à la
+ prévention des décès. </p>
+<p style="text-align: justify">Le Bureau du coroner, nous, on va être très
+ ouverts à partager avec le futur commissaire l'expertise qu'on a développée,
+ notamment dans le cadre de nos comités d'examen, plus précisément le Comité
+ d'examen des décès d'enfants. Puis on a même
+ l'intention d'offrir au nouveau commissaire, si les parlementaires décident
+ d'adopter le projet de loi,
+ évidemment, mais de lui offrir de le mettre dans la boucle, de le consulter
+ dans l'élaboration des recommandations de nos coroners qui concernent la
+ prévention des décès d'enfants. On pense qu'il pourrait avoir une valeur
+ ajoutée dans ce processus. </p>
+<p style="text-align: justify">On salue
+ également, au Bureau du coroner, la création du poste de commissaire associé pour
+ les enfants autochtones, notamment pour la reconnaissance de leurs
+ particularités culturelles. Là aussi, si le commissaire le juge pertinent,
+ bien, nous pourrons partager avec lui l'expérience acquise, notamment dans le
+ cadre des travaux de notre comité d'examen des décès autochtones. </p>
+<p style="text-align: justify">Par ailleurs, on constate qu'il y a deux
+ dispositions du projet de loi qui concernent spécifiquement la Loi sur les
+ coroners, c'est le paragraphe 7° de l'article 5 du projet de loi,
+ d'abord, qui prévoit que le commissaire doit effectuer
+ une veille de tous les décès d'enfants pour lesquels il y a une investigation
+ ou une enquête qui a été effectuée en vertu de la Loi sur les coroners.
+ Il y a aussi l'article 29 du projet de loi qui prévoit une modification à
+ l'article 99 de la Loi sur les coroners pour préciser que le coroner ou le
+ coroner en chef doit transmettre au commissaire une copie de tout rapport
+ d'investigation concernant le décès d'une personne de moins de 18 ans.</p>
+<p style="text-align: justify">On est d'accord avec ces modifications
+ législatives puis on ne voit pas d'un enjeu ou d'un impact significatif sur le
+ travail du Bureau du coroner. On va être en mesure d'identifier dans nos
+ systèmes les décès d'enfants de moins <a name="Page00003"></a>de 18 ans puis on va pouvoir transmettre au
+ commissaire une copie des rapports d'investigation. On le fait déjà,
+ d'ailleurs, la transmission d'informations, aux différents partenaires, comme
+ la Santé publique. Par ailleurs, on comprend que le mandat du commissaire va se
+ faire en complémentarité avec celui du Bureau du coroner. Donc, si le commissaire
+ en exprime le besoin, on pourrait également collaborer à sa veille des décès
+ au-delà de la simple transmission des rapports d'investigation des coroners,
+ donc, pour assurer une concertation au niveau de la prévention. </p>
+<p style="text-align: justify">Donc, en
+ terminant, je me permets de mentionner que les coroners, ce sont des hommes et
+ des femmes de coeur qui travaillent jour après jour pour accompagner les
+ familles éprouvées par le deuil dans toutes les régions du Québec. Nous avons
+ la noble fonction d'écrire la dernière histoire du défunt, de lui donner une
+ voix et d'aider les familles à trouver un sens à leur épreuve pour que les
+ décès ne soient pas survenus en vain. Je peux... je vous dis que je suis
+ particulièrement fier de faire partie de cette équipe puis d'avoir le privilège
+ de la diriger. Puis nous sommes confiants que le nouveau commissaire va être
+ animé par la même passion du service public, puis on va être prêts à l'appuyer
+ advenant l'adoption du projet de loi. Alors, je vous remercie de votre
+ attention. </p>
+<p style="text-align: justify">
+  <b>La Présidente
+ (Mme Blouin) : </b>Merci beaucoup pour votre exposé. Alors, on va
+ débuter la période d'échange avec M. le ministre pour une durée de
+ 12 min 30 s. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Merci beaucoup, Mme la
+ Présidente. M. Bernier, content de vous revoir. </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Moi de même, M.
+ le ministre. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Merci. Mme Kamel, Mme
+ Gamache, M. Perron, merci d'être là également.</p>
+<p style="text-align: justify">Bien écoutez, M. Bernier, moi, ma première
+ question, c'était comment vous voyez votre collaboration avec le... avec le
+ nouveau commissaire, mais ce que j'entends, c'est... c'est excellent. Et même
+ si vous allez plus loin, là, que ce qu'on avait proposé, qui est de le
+ consulter puis de discuter avec lui dans les recommandations... Pouvez-vous
+ élaborer un peu plus là-dessus? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Oui, tout à
+ fait. Bien, nous, on pense que tout ce qu'on peut faire pour prévenir les décès
+ au Québec, c'est une bonne chose, hein? Le Bureau du coroner, il n'a pas le
+ monopole de la prévention, hein, des décès. On travaille en équipe. Puis le Commissaire
+ au bien-être et aux droits des enfants va être un expert dans ce domaine-là.
+ Donc, nous, la question de la collaboration, ce n'est même pas un enjeu. C'est
+ certain qu'on va le faire. Puis, à titre d'exemple, on fait déjà des
+ transmissions d'informations contenues dans les rapports à la Santé publique,
+ notamment. On envoie également nos rapports à des chercheurs, à des organismes
+ de prévention. Donc, pour nous, ce ne sera pas compliqué de rajouter le
+ commissaire aux droits dans nos... dans nos échanges.</p>
+<p style="text-align: justify">En ce qui
+ concerne les recommandations, c'est que nos coroners doivent élaborer des
+ recommandations lorsqu'ils l'estiment indiqué, puis on veut s'assurer
+ que leurs recommandations soient... soient réalistes puis applicables. Puis on
+ a déjà des liens, notamment avec le ministère de la Santé, en santé mentale, on
+ vient tout juste, là, d'établir un lien avec vous pour pouvoir vous consulter
+ avant de sortir des recommandations publiquement pour s'assurer qu'elles sont
+ réalistes. Bon, on voudrait faire la même affaire quand ça concerne les droits
+ des enfants, travailler en équipe. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Excellent! Très, très
+ bien. Juste dans le rapport de la commission, en fait, ils demandaient une
+ veille de tous les décès. J'étais hésitant à le faire puisque je me demandais
+ pourquoi on aurait besoin de transmettre au commissaire les décès d'enfants
+ malades, par exemple, qui sont... qui ont une cause bien définie de leur décès.
+ Vous, dans vos discussions avec la Santé
+ publique, parce que je vois que, finalement, c'est 8 %, là, des décès qui
+ sont... qui sont relevés par le coroner, est-ce que... est-ce que, selon vous,
+ vous verriez un avantage à faire le suivi de tous les décès au Québec pour ce
+ commissaire-là? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Bien, nous,
+ on... C'est sûr que la juridiction du Bureau du coroner, c'est les décès qui
+ sont signalés au Bureau du coroner. Par contre, on a des liens avec la... avec
+ la Santé publique, avec toute l'équipe du ministère de la Santé pour le
+ Registre des événements démographiques, qui couvre tous les décès. Quand...
+ Dans notre comité d'examen des décès, là, on s'associe à des gens du ministère
+ de la Santé pour ne pas être limités juste... justement
+ ne pas être limités juste aux rapports des coroners. Donc, je pense que, via
+ des mécanismes comme celui-là, on est capables d'avoir une vue
+ d'ensemble plus large que seulement les cas de décès signalés au coroner. Donc,
+ je ne vois pas un enjeu, tout dépendant vers où le... jusqu'où va vouloir aller
+ le commissaire, là. Ça va être possible de le faire avec les moyens qu'on a
+ déjà. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>OK, je ne connaissais
+ pas ce registre. Et donc, là, tous les décès sont inclus. </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Oui. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Une des choses qui nous
+ ont été soulevées par les ex-placés de la DPJ, c'était une... comment on
+ pourrait identifier les phénomènes... les phénomènes... les décès chez les
+ personnes qui sont plus en état de vulnérabilité.
+ Est-ce que, dans vos rapports, il y a des indicateurs qui vont nous permettre
+ d'identifier population vulnérable, que
+ ce soit situation de handicap, situation de pauvreté? Est-ce que vous avez...
+ Que pouvez-vous nous dire là-dessus, là, sur les marqueurs de
+ vulnérabilité dans les cas de décès? </p>
+<p style="text-align: justify">
+  <a name="Page00004"></a>
+  <b>M. Bernier
+ (Reno) : </b>Oui. Bien, c'est sûr qu'on pourrait rajouter des cotes
+ lorsqu'on fait la... lorsqu'on dresse les rapports puis que nos coroners
+ investiguent. Je vous laisserais peut-être la... en complémentaire, peut-être
+ un de mes collègues, là, qui connaît davantage, là, l'ensemble des critères que
+ nous utilisons, peut-être M. Perron, là, qui pourrait vous donner plus de
+ détails là-dessus, parce qu'on a déjà certains indicateurs et on peut toujours
+ en ajouter. Alors, M. Perron, si vous voulez compléter. </p>
+<p style="text-align: justify">
+  <b>M. Perron (Paul-André) : </b>Oui, M. le
+ ministre, ce qui figure dans le rapport de coroner va être gouverné par la
+ notion de pertinence par rapport aux causes et circonstances du décès. Comme,
+ par exemple, imaginons deux cas différents, c'est... on pourrait avoir, par
+ exemple, quelqu'un qui est en vulnérabilité puis qui est suivi par la DPJ, mais
+ la petite famille qui se promène sur le trottoir, puis est fauchée par un
+ chauffeur ivre qui tue le parent et ses enfants.
+ Alors, le fait que l'enfant est suivi par la DPJ ne sera probablement pas nommé
+ dans le rapport du coroner, parce que ça pourrait être très stigmatisant
+ et ça n'a pas de lien avec le décès. Donc, c'est une source où on peut trouver
+ beaucoup de choses à partir du moment où c'est en lien avec le décès, mais ce
+ ne sera pas un portrait intégral de toute la condition socioéconomique puis
+ toutes les facettes de la vulnérabilité possible et imaginable d'une personne
+ décédée, mais c'est déjà quand même un bon commencement. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>OK. Et avez-vous une
+ base de données avec ces indicateurs-là? Comment... comment vous fonctionnez
+ exactement? </p>
+<p style="text-align: justify">
+  <i>• (11 h 50) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M. Perron (Paul-André) : </b>Dans notre
+ banque de données, on a plus des notions de base, comme on a l'âge, le sexe, on a la cause de décès codifiée selon les
+ règles de la classification
+ internationale des maladies, mais on
+ n'a pas d'indicateur vraiment de la
+ trajectoire, là... par exemple, la trajectoire sociojudiciaire ou les éléments
+ de vulnérabilité, comme, par exemple,
+ le handicap physique ou des choses comme ça, ça, on ne l'a pas. C'est sûr qu'on
+ a le code postal qui permet d'avoir des données écologiques sur l'indice
+ de défavorisation, mais ça, c'est une donnée écologique, ce n'est pas associé à
+ l'individu, c'est associé au milieu où il réside. On peut faire quand même un
+ petit peu de choses avec ça, mais c'est... </p>
+<p style="text-align: justify">Ce qu'il faut
+ savoir aussi, c'est que, dans notre loi, il y a un régime d'accès particulier
+ qui permet de consulter, à des fins
+ de recherche, les archives du coroner. Ça, ça veut dire tous les documents afférents
+ qui ont été réunis par le coroner à l'occasion de son investigation,
+ rapport de police, dossier médical, rapport d'autopsie, ainsi de suite.
+ Évidemment, ce sont les dossiers confidentiels, mais la confidentialité peut
+ être levée par le coroner en chef à des fins de recherche si on veut fouiller pour aller chercher des
+ détails plus spécifiques. Il faut garder à l'esprit que le rapport du coroner
+ est un document public, donc le coroner, il va faire attention à ce qu'il écrit
+ dans son rapport parce que tout le monde peut le lire. On trouve beaucoup plus
+ dans l'ensemble du dossier que dans le rapport d'investigation en lui-même. </p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant : </b>Tout à fait. Et c'est tout à fait approprié.
+ Quelle ouverture y aurait-il pour avoir... parce qu'on ne veut pas non
+ plus... Quelle ouverture y aurait-il pour ajouter des... certains de ces
+ indicateurs, que l'on veut, que peut-être le commissaire va juger pertinents? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Bien, nous, on
+ pense que... Dans le fond, comme on l'a dit, on est prêts à collaborer. Et puis
+ on est habitués à faire ça. Puis on serait très ouverts de s'asseoir avec le
+ commissaire, lorsqu'il va être nommé, puis de regarder avec lui s'il y a des
+ éléments complémentaires qui auraient... qui pourraient y avoir un intérêt,
+ qu'on puisse mettre dans nos systèmes pour le futur, là, dans le fond. Oui, on
+ est ouverts à ça. Mais c'est plus sur le terrain, je pense, que ça va... ça va
+ devoir être précisé, rendu là, avec le commissaire.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Tout à fait d'accord.
+ Un autre point aussi, dans le document, c'était que, justement, parmi les
+ situations où il y avait enquête, c'était dans les décès en lien avec les
+ centres jeunesse. Mais vous dites que cette information-là n'est en général pas
+ partagée?</p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>M. Perron? </p>
+<p style="text-align: justify">
+  <b>M. Perron (Paul-André) : </b>Oui. Les
+ décès en centre jeunesse, c'est rarissime, il y en a, quoi, entre zéro et deux
+ par année. Ça n'a pas toujours été le cas, on a beaucoup avancé au Québec,
+ parce qu'autrefois, il y a 20, 30 ans, beaucoup
+ de suicides de jeunes adolescents... en fait, ils étaient des suicides en
+ centre jeunesse, mais c'est un phénomène qui a presque disparu. Donc, des suicides... des décès en centre
+ jeunesse rapportés au coroner, c'est souvent zéro, des fois un ou deux,
+ mais c'est vraiment très, très rare, là. Mais, habituellement, ça, on peut les
+ identifier parce que le coroner va souvent avoir mentionné ça, parce que, la
+ plupart du temps, ça va avoir un lien avec le... les causes et circonstances du
+ décès. </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Et évidemment,
+ on est capables de les identifier, donc le commissaire pourrait savoir lesquels
+ ont eu lieu, dans quel... en quel endroit, dans quel contexte. On est capables
+ de le faire, ça. Mais il n'y en a pas beaucoup. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>OK. Bien, parlez-moi de
+ cette diminution, au fil des ans, des suicides en centre jeunesse. Ça
+ m'intéresse. Il faudrait qu'on étudie quelles interventions ont été faites, là.
+ </p>
+<p style="text-align: justify">
+  <a name="Page00005"></a>
+  <b>M. Bernier
+ (Reno) : </b>M. Perron? </p>
+<p style="text-align: justify">
+  <b>M. Perron (Paul-André) : </b>Bien, je
+ pense que ça s'inscrit dans la baisse générale du taux de suicide au Québec,
+ hein? Depuis une trentaine d'années, le taux de suicide à Québec a beaucoup
+ baissé. On a fait beaucoup de... la prévention a donné beaucoup de résultats.
+ Et la tranche d'âge chez laquelle le suicide a le plus baissé, c'est dans les
+ tranches d'âge les plus jeunes, hein? Dans les années 90, le suicide chez
+ les jeunes au Québec était très, très élevé, puis maintenant c'est la tranche
+ d'âge où le suicide le plus bas parmi toutes les autres. Alors, je pense que ça
+ s'inscrit là-dedans. </p>
+<p style="text-align: justify">Et il faut dire aussi que les suicides dans les
+ centres jeunesse ont fait l'objet d'investigations, de beaucoup de
+ recommandations dans le passé, et que j'imagine que des efforts de prévention
+ particuliers ont été portés. Mais là je ne pourrais pas vous donner de détails,
+ parce que je n'ai pas... je n'ai pas à l'esprit, là, tous ces rapports-là, mais
+ ça s'inscrit, en général, dans le... dans les tendances macroscopiques de
+ baisse du taux de suicide au Québec. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>D'accord. Merci. Je
+ vais faire sortir l'information. Peut-être quelques mots sur... au niveau du
+ volet autochtone. Est-ce qu'il y aurait des particularités pour lesquelles vous
+ aurez tendance à nous... à faire des suggestions quant au suivi ou les...
+ surtout, évidemment, chez nos jeunes autochtones? Je sais que c'est... je sais
+ que, par exemple, le suicide est un enjeu, et puis, comme vous le savez, le
+ taux excessif, là, de signalements à la protection de la jeunesse aussi.</p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Bien, je vais...
+ je vais vous donner une première partie de la réponse, puis ensuite, si vous me
+ le permettez, Me Géhane Kamel, qui s'occupe du comité autochtone, pourrait
+ compléter. </p>
+<p style="text-align: justify">D'abord, nous, là, on est très favorables au
+ fait qu'il y ait une... qu'il y ait un commissaire ou un commissaire adjoint,
+ là, qui soit dédié aux affaires autochtones. Nous, on va collaborer avec lui,
+ peu importe la forme que ça va prendre, puis on va lui... on pourra lui
+ partager les travaux qui ont été faits par le comité d'examen des décès
+ autochtones, justement. Et puis, pour vous en dire davantage, là, sur ces
+ travaux-là, je passerais la parole à ma collègue Me Kamel. </p>
+<p style="text-align: justify">
+  <b>Mme Kamel (Géhane) : </b>Bonjour, M. le
+ ministre. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Bonjour. </p>
+<p style="text-align: justify">
+  <b>Mme Kamel (Géhane) : </b>En fait, en ce
+ qui concerne les décès chez les communautés autochtones, notre préoccupation
+ actuellement est davantage de s'assurer que les relations que nous avons avec
+ eux... ils se sentent interpelés pour prendre les orientations dans le futur.
+ Ça fait qu'on n'a pas posé de diagnostic comme tel. On sait que, dans le Grand
+ Nord quand on a fait notre tournée, on est allés deux années de suite, là, le Bureau
+ du coroner, on s'est déplacés, on le sait qu'il y a un taux accru, chez les
+ Inuits, de suicide. On ne s'est pas concentrés là-dessus. </p>
+<p style="text-align: justify">En fait, notre approche a été différente.
+ C'est-à-dire qu'on a plutôt amené le bureau à établir des ponts avec eux en ne
+ trouvant pas de solution préétablie. Ce qui est important pour nous, c'est
+ d'avoir des agents de liaison, c'est ce qu'on essaie de faire avec les
+ communautés inuites et ainsi que les 11 nations au Québec, d'établir des
+ agents de liaison pour lesquelles ils nous permettront d'entrer tranquillement
+ vers des communautés pour établir des solutions qui soient durables avec... Ça
+ fait que c'est plus dans cet esprit-là que d'avoir un portrait bien fixe sur le
+ taux de mortalité chez les autochtones. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>C'est ça. Peut-être un
+ petit moment, juste pour vous parler, comment ça se passe avec les agents de
+ liaison? Parce que, justement, nous, on essaie de voir comment on va établir un
+ beau partenariat, là, avec le commissaire des Premières Nations. Vous, votre
+ expérience avec les agents de liaison? Brièvement. </p>
+<p style="text-align: justify">
+  <b>Mme Kamel
+ (Géhane) : </b>Très brièvement, ça dépend de l'implication de la
+ personne elle-même. Ça fait qu'on a
+ eu un très beau succès du côté de Kuujjuaq, et malheureusement la personne s'est retirée
+ parce qu'évidemment les décès qui étaient rapportés... les gens se
+ connaissent dans la région. Ça fait qu'il nous faut établir une personne qui
+ arrive à prendre une certaine distance pour être capable de faire le suivi. Et
+ je vous donnerais un autre exemple de très belle réussite, c'est à Manawan, on
+ a un agent de liaison qui peut faire le pont entre nous et les familles quand
+ on n'arrive pas les rejoindre. Puis ça, pour nous, c'est un grand succès. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Merci beaucoup. </p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Merci
+ beaucoup. Merci, M. le ministre. Alors, je cède maintenant la parole à la
+ députée de Robert-Baldwin. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Merci. Merci beaucoup
+ d'être là. Très, très intéressant. Et vous jouez un rôle tellement important en
+ termes de notre société et vos interventions, surtout auprès des familles suite
+ à un décès d'un enfant. </p>
+<p style="text-align: justify">J'aimerais réviser
+ avec vous tout cet aspect de vos recommandations et le suivi que vous faites au
+ niveau des recommandations. Je trouve très intéressant ce que vous dites concernant
+ que vous formulez des recommandations qui conduisent à des changements sociaux
+ significatifs. Ça, c'est quand même très important. Et surtout concernant <a name="Page00006"></a>le groupe trois dans votre rapport, concernant, là, les
+ décès liés à la violence conjugale et aussi les décès en contexte de... en
+ violence sexuelle et aussi liés... s'il y a eu des décès, centres jeunesse,
+ familles d'accueil. Et, évidemment, ça, ça nous touche tous. </p>
+<p style="text-align: justify">Je voulais comprendre
+ un peu le suivi. Je sais qu'en particulier... parce que je suis aussi
+ porte-parole en condition féminine, donc vous allez me permettre un peu... le
+ rapport du coroner du mois de novembre 2022, parce que je l'ai... je l'ai
+ trouvé... Malheureusement, évidemment, il y a eu 16 décès, mais c'est la
+ façon... votre méthode d'étude, d'avoir
+ révisé chaque cas avec une prise... Vous aviez révisé là aussi les
+ interventions avant le décès. Il y avait eu quand même une enquête ou
+ une révision, s'il y avait eu un signalement à la DPJ, s'il y avait eu une
+ plainte à la police, s'il y avait eu, là,
+ une intervention de quelque nature que ce soit des services sociaux avec la
+ famille, si les gens étaient en séparation, divorce et s'il y avait de
+ la violence, et tout. Et vous avez fait plusieurs recommandations. Je pense qu'il y en avait 25, recommandations,
+ incluant une recommandation que je voyais extrêmement importante compte
+ tenu du contexte, et ça, c'était la formation, la formation de tous les
+ professionnels liés... liés à la jeunesse : les juges, les intervenants,
+ les intervenantes en protection de la jeunesse. Et je voulais savoir...
+ incluant le contrôle coercitif. Donc, je voulais savoir, de votre côté,
+ qu'est-ce qui se passe après le dépôt de rapport. Premièrement, ce rapport-là,
+ il a été remis dans les mains de qui et le suivi qui a été fait par la suite? </p>
+<p style="text-align: justify">
+  <i>• (12 heures) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M. Bernier
+ (Reno) : </b>Parfait. Bien, merci pour la question. C'est vraiment... vous
+ avez raison que les recommandations, c'est très important pour nous autres.
+ C'est... je vous dirais que c'est une des parties les plus importantes du
+ travail du coroner parce que ça permet d'éclairer les décideurs, puis
+ d'améliorer les choses, puis de changer les choses pour le mieux en termes de
+ prévention. Donc, on fait... on fait plusieurs recommandations à chaque année, là. Il y en a qui sont dans les
+ rapports des investigations des coroners puis il y en a aussi suite à des
+ enquêtes publiques ou suite à des comités d'examen. Je vais vous passer la
+ parole dans quelques instants... à Me Stéphanie Gamache, là, qui coordonne, justement, le Comité d'examen des décès liés
+ à la violence conjugale, là, qui va... qui va pouvoir vous en parler.
+ Puis nos recommandations, bien, nous, une fois qu'elles sont... qu'elles sont
+ émises, bien, on les communique aux
+ destinataires concernés, donc il y a une communication officielle, là, du Bureau du coroner, c'est moi qui signe la lettre, là, dans le fond, qui est
+ envoyée au destinataire. Puis on s'attend que le destinataire va nous revenir
+ pour... lorsqu'il aura fini son analyse, là, parce que, parfois, c'est des
+ grands changements, donc ça nécessite un certain... un certain temps avant que
+ le destinataire puisse nous revenir. Puis ensuite, bien, on va faire des
+ relances puis on va suivre ça de façon assez serrée, là, dans les... dans les
+ mois, les années suivantes. </p>
+<p style="text-align: justify">Et puis au niveau des
+ recommandations, il y en a beaucoup, là, on en a parlé tout à l'heure,
+ rapidement, mais tu sais, toute la... les clôtures autour des piscines, les
+ programmes de formation pour la natation, et puis il y a justement... on en
+ parlait, là, tantôt, là, du Comité d'examen des décès liés à la violence
+ conjugale, là. Il y a deux ans, là, on
+ avait... le comité avait comparu lors d'un projet de loi qui concernait la Loi sur la protection de la jeunesse puis
+ il avait recommandé que les... les enfants
+ qui sont... qui font partie d'un contexte où il y a de la violence conjugale,
+ ce soit un cas de dénonciation puis de signalement à la protection de la
+ jeunesse. Ça, ça découle, là, de recommandations des coroners, puis ça, ça a été
+ accepté, puis ça a été mis en place.</p>
+<p style="text-align: justify">Donc, je laisserais
+ peut-être la parole à ma collègue Stéphanie Gamache pour vous en dire un petit
+ peu plus sur les recommandations qui découlent du Comité en question. </p>
+<p style="text-align: justify">
+  <b>Une voix :</b>
+ Merci.</p>
+<p style="text-align: justify">
+  <b>Mme Gamache (Stéphanie) : </b>Oui, bonjour. Merci, Me
+ Bernier. Bonjour, Mme la Présidente, Mme la députée, M. le ministre et tous les autres députés.
+ Effectivement, en fait, notre comité a vu le jour, là, à la fin de décembre
+ 2017. Vous avez spécifiquement fait
+ référence au deuxième rapport annuel de ce comité, qui s'est concentré sur 11
+ événements dans lesquels, malheureusement, il y a eu 16 décès d'enfants.
+ L'approche, en fait, qui a été prise par le comité est vraiment d'avoir regardé
+ des événements contemporains, initialement, là, dans les premiers... dans le
+ premier cycle du... des travaux du comité. Et puis, parce qu'il y avait eu une
+ surreprésentation des décès d'enfants, on a choisi, dans le deuxième cycle des
+ travaux, de vraiment se concentrer sur des événements où des enfants sont
+ décédés. </p>
+<p style="text-align: justify">Les...
+ on a développé des... une grille d'analyse, en fait, qui est la... à la base de
+ tous les travaux du comité, parce que
+ c'est important de comprendre que ce comité-là, en fait, ne refait pas les
+ investigations des coroners, donc, travaille à partir de dossiers de coroners qui sont déjà terminés. Donc, c'est le
+ rapport et, évidemment, les annexes qui sont regardés. Tous les membres sont tenus à une entente de
+ confidentialité, mais, en utilisant la grille d'analyse, il y a plusieurs
+ éléments, des facteurs de risque, qui sont
+ identifiés. Et donc, c'est sur la base de ces informations-là que les 25
+ recommandations ont été formulées dans le
+ cadre du deuxième rapport annuel. Le prochain rapport annuel va avoir une
+ section spécifique en lien avec le suivi de ces recommandations-là. Il y
+ a eu un accueil très favorable aux destinataires, qui ont reçu, tous, le
+ rapport au moment de sa diffusion. Et... et donc, comme je vous disais, les
+ réponses sont favorables pour, justement, la protection des enfants et
+ s'assurer de prévenir des décès dans un contexte de violence conjugale. </p>
+<p style="text-align: justify">Puis je pourrais
+ juste, peut-être, rajouter que c'est, effectivement, la formation auprès des
+ intervenants, des professionnels, des gens de la magistrature, des avocats qui sont
+ impliqués dans... dans les dossiers d'enfants qui sont exposés à la violence
+ conjugale... bien, la formation, c'est central et ça faisait partie,
+ effectivement, de plusieurs des recommandations qu'on a faites. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau :
+ </b>Oui, et c'est juste que j'ai trouvé l'analyse tellement révélateur et aussi
+ pertinente. Donc, je voulais savoir, en termes de destinataires, est-ce que
+ vous avez... est-ce qu'une liste est disponible pour savoir quels destinataires
+ ont reçu ce rapport? Est-ce que c'est public? </p>
+<p style="text-align: justify">
+  <a name="Page00007"></a>
+  <b>Mme Gamache
+ (Stéphanie) : </b>Bien, en fait, tous les destinataires sont nommés dans
+ le rapport, donc tous les destinataires sont nommés, et donc tous les
+ destinataires ont reçu le rapport. Et, comme je vous disais, il y a eu un suivi
+ au niveau des réponses qui nous ont été fournies. Le Coroner en chef parlait du
+ suivi qui est effectué dans les rapports de coroners. Effectivement, notre...
+ notre entité, étant une entité administrative, n'est pas soumise aux
+ dispositions de la loi, mais on fait un suivi rigoureux, justement pour, à
+ chaque année, faire... faire état des réponses qui sont reçues. Puis, comme je
+ vous indiquais, dans le prochain rapport annuel, là, qui va... qui va sortir
+ cette année, il y aura un suivi de ces recommandations-là.</p>
+<p style="text-align: justify">
+  <b>Mme Garceau :</b> OK, très bien. Et donc je présume, avec le
+ commissaire du bien-être et des droits, il va y avoir cette collaboration, également, en tant que... la
+ transmission de ces rapports au commissaire, pour que le commissaire ou
+ la commissaire puisse faire un suivi également? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Oui, puis dans
+ le fond, ce qu'on... ce qu'on veut faire, là, c'est en amont et en aval. Dans
+ le fond, on veut impliquer le commissaire. Donc, autour de la table, là, il
+ pourrait y avoir un représentant du commissaire parce qu'il pourrait amener une
+ expertise complémentaire, puis, après ça, bien, dans le suivi des recommandations, c'est certain qu'on est... on est
+ pas mal certains que le commissaire va avoir beaucoup d'intérêt à ce que
+ ce suivi-là soit fait auprès de toutes les parties prenantes. Donc, on va le
+ mettre dans la boucle. </p>
+<p style="text-align: justify">
+  <b>Mme
+ Garceau : </b>Merci. Juste une dernière question, parce qu'on a
+ eu certaines interventions, surtout le collectif, hier, des ex-placés de la DPJ qui avaient quand
+ même une préoccupation au niveau d'itinérance, suicide, et dans le
+ groupe, là, au-delà de 18 ans. Et donc,
+ compte tenu de la définition des jeunes que nous avons au projet de loi
+ actuellement, qui... </p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Je suis
+ désolée, c'est ce qui conclut cette portion de l'échange. On est serrés dans
+ l'horaire, désolée. On va poursuivre avec le député de Saint-Henri—Sainte-Anne.
+ </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Merci beaucoup.
+ Merci, Mme la Présidente. Merci pour votre excellente présentation. Je vais
+ vous poser une question spécifique sur l'article qui modifie l'article 99 sur
+ la Loi du coroner. On voit que le coroner ou le Coroner en chef va transmettre
+ une copie du rapport d'investigation. Ce rapport là, par contre, il ne contient
+ pas, si je me permets, les éléments de preuve, là, comme un rapport médical, ou
+ les témoignages d'enquête, ou... C'est vraiment le rapport final? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Bien, en fait,
+ effectivement, c'est le rapport final, une fois que l'investigation est
+ terminée, le rapport signé par le coroner qui a fait l'investigation. Par
+ ailleurs, les annexes ne sont pas communiquées lors de cet envoi-là, mais il y
+ a un régime d'accès, là, qui est encadré par la Loi sur les coroners
+ spécifiquement pour les annexes puis il y a des cas législatifs, là, où les
+ demandeurs peuvent y avoir accès ou pas, là, aux annexes. Puis vous avez nommé,
+ là, rapport médical, etc. </p>
+<p style="text-align: justify">
+  <b>M.
+ Cliche-Rivard : </b>Est ce que vous auriez... Auriez-vous une
+ ouverture à ce qu'on élargisse un petit peu le 99 pour donner au commissaire plus qu'accès seulement
+ au... au rapport d'investigation, mais, finalement, accès aux dossiers? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Je ne suis pas
+ certain que ce serait nécessaire. Puis là les légistes pourront le regarder
+ davantage, là, mais... Parce qu'on a déjà, dans notre loi, la possibilité de
+ donner les annexes à des organismes publics qui en ont besoin pour faire leur
+ mission, là. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Donc, vous
+ dites : Ça ne serait pas nécessaire parce qu'il y a un autre mécanisme qui
+ le donne, mais vous n'êtes pas fermés non plus... vous n'êtes pas fermés à
+ cette proposition-là? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Non, on n'est
+ pas fermés... </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Parfait. </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>...pour plus de
+ précisions. Mais, honnêtement, je pense qu'on a le mécanisme, déjà, qui est
+ nécessaire dans notre loi. </p>
+<p style="text-align: justify">
+  <b>M.
+ Cliche-Rivard : </b>Puis dans les annexes dont vous mentionnez, c'est
+ l'ensemble du dossier, c'est les rapports, c'est les documents, ou... </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Bien, vous allez
+ avoir essentiellement... Tu sais, ça peut être... c'est tout dépendant de la
+ situation. Mais tu as le dossier médical ou les extraits du dossier médical, tu
+ as les rapports de police, rapports d'autopsie, rapports de toxicologie, etc. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Parfait. </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Donc, c'est
+ essentiellement des documents comme ceux-là. </p>
+<p style="text-align: justify">
+  <a name="Page00008"></a>
+  <b>M. Cliche-Rivard :
+ </b>Puis, dans son rôle d'officier public, là, ce que je comprends, c'est que
+ le commissaire aurait une capacité de faire cette demande-là au Coroner en chef?</p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Oui. </p>
+<p style="text-align: justify">
+  <b>M.
+ Cliche-Rivard : </b>Parfait. Je vous ramène à l'autre article, 5,
+ alinéa 7°, où, là, justement, il y a des
+ discussions. Le ministre parlait de la
+ Commissaire Laurent, qui parlait d'élargir, là, au-delà des simples décès ou
+ des décès qui sont en lien avec le coroner. J'aimerais ça vous entendre
+ sur la distinction, parce que, là, le projet de loi parle d'une veille ou d'une
+ vigie, là, j'oublie le terme exact. Ça, ce n'est pas la même chose qu'une
+ investigation, finalement, là. C'est complètement différent du travail que vous
+ faites.</p>
+<p style="text-align: justify">
+  <b>M. Bernier
+ (Reno) : </b>Oui, bien, en fait, on a deux volets à notre
+ travail. Le premier travail, c'est les investigations, hein, puis les
+ enquêtes. Bien, ça, c'est concernant un individu X, là, très... puis là on fait
+ une investigation. Quand on a terminé, on
+ rédige un rapport, puis ce rapport-là est public. Donc, ça, c'est le volet
+ d'investigation. Ça n'a pas rapport avec ce qui est... ce qui est
+ envisagé pour le Commissaire. Donc, nous, on comprend que ça ne touche pas à
+ ça, ce qu'on veut faire faire au
+ commissaire. Le commissaire, ce qu'on comprend, c'est l'autre bout, c'est la
+ veille des rapports une fois qu'ils sont terminés. Et là on tombe dans
+ le volet, probablement, que nous, on peut dire de la prévention des décès, et
+ puis ça non plus, on ne voit pas d'enjeu à ce qu'il fasse une veille, le
+ commissaire, là. Comme on l'a dit tout à l'heure, là, le Bureau du coroner, il
+ n'a pas le monopole de la prévention, là. Plus qu'on va avoir de gens qui vont
+ travailler ensemble pour prévenir des décès, mieux ça va être. </p>
+<p style="text-align: justify">
+  <i>• (12 h 10) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Donc, d'élargir
+ sa veille au-delà de ce qui concerne le coroner, ça peut être une bonne idée
+ aussi? </p>
+<p style="text-align: justify">
+  <b>La
+ Présidente (Mme Blouin) : </b>On a terminé, M. le député. Merci beaucoup,
+ désolée. On enchaîne avec M. le député des Îles-de-la-Madeleine. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Oui, merci beaucoup,
+ Mme la Présidente. Merci pour votre présentation. Est-ce que vous voulez
+ répondre à la question de mon collègue?</p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Oui, bien, c'est
+ ça, c'est que ce qu'on disait tout à l'heure, là, dans une <a name="_Hlk219987648">réponse </a>à la question du ministre, sur quelque chose
+ qui ressemblait à la même question, c'est qu'on est capables d'aller chercher
+ les autres décès autrement, là, il y a... il y a le Registre des événements
+ démographiques qui existe, puis l'Institut de la statistique, le ministère de
+ la Santé, qui ont aussi d'autres... d'autres informations que celles du
+ coroner. Ça fait qu'on comprend que le commissaire pourrait également y avoir
+ accès. Ceci étant dit, nous, notre juridiction, c'est les décès, là, qui sont
+ signalés au coroner. </p>
+<p style="text-align: justify">
+  <b>M.
+ Arseneau : </b>D'accord. Mais justement, moi, ma question, qui
+ est plus générale, est-ce qu'il est possible qu'on en échappe, des cas
+ qui ne sont pas signalés ou qui ne vous sont pas rapportés? Est-ce qu'on a
+ besoin d'une vigie? </p>
+<p style="text-align: justify">On a laissé entendre, dans certains mémoires,
+ dans certaines présentations, qu'on n'avait peut-être pas le portrait complet,
+ là. Je réfère, par exemple, à l'un des mémoires présentés par les
+ ex-commissaires-experts de la commission,
+ qui nous disent qu'on connaît le nombre de décès totaux, là, pour 2022,
+ 78 400, le chiffre que vous ramenez dans votre propre mémoire, mais on ne sait pas le nombre de décès
+ d'enfants. Puis je regardais dans votre mémoire, puis je ne le vois pas
+ non plus. Je sais que vous avez investigué sur 170 décès. Est-ce que...
+ est-ce qu'il nous manque de la donnée? Puis je sais que ce n'est pas
+ nécessairement votre rôle, mais je... est-ce qu'on devrait travailler
+ là-dessus? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Je vais... je
+ vais vous dire, là, il y a beaucoup de données qui existent au Québec, il y en a déjà beaucoup, beaucoup. Elle n'est peut-être
+ pas optimisée puis elle n'est peut-être pas suffisamment utilisée,
+ mais... Les détails, je vais laisser Paul-André, M. Perron, vous donner
+ deux, trois informations plus précises, mais il y a déjà beaucoup de choses,
+ là, qui existent. </p>
+<p style="text-align: justify">
+  <b>M. Perron (Paul-André) : </b>Oui, il y a
+ environ, on va dire que c'est une approximation, là, environ entre 500 et 600
+ décès d'enfants par année au Québec. Chaque décès...</p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Oui, le chiffre,
+ excusez-moi, c'est combien? </p>
+<p style="text-align: justify">
+  <b>M. Perron (Paul-André) : </b>C'est entre
+ 500 et... entre 500 et 600. Je n'ai pas le chiffre... 500 et 600, je n'ai
+ pas le chiffre précis, parce que les tableaux publiés par l'ISQ coupent à
+ 19 ans, donc il y en a un peu plus que ce qui intéressera le commissaire,
+ mais c'est un bon ordre de grandeur, là. </p>
+<p style="text-align: justify">La plupart de ces décès-là, une grosse partie,
+ là, plus de la moitié, c'est des décès dans la première année de vie, c'est des
+ décès, essentiellement, après l'accouchement, les morts naturelles, ou dans la
+ période critique à la première année de vie. </p>
+<p style="text-align: justify">Chaque décès
+ au Québec fait l'objet d'un formulaire qui s'appelle SP-3, qui indique les
+ causes de décès, l'âge de la personne
+ décédée, le sexe, son adresse, ainsi de suite, et c'est colligé dans le
+ Registre des événements démographiques. </p>
+<p style="text-align: justify">
+  <a name="Page00009"></a>La donnée, elle existe, il
+ y a une petite... il y a des petites manoeuvres à faire pour y accéder, mais,
+ si on veut avoir un regard 365 sur tous les décès au Québec, la donnée,
+ elle existe, et des gens compétents pour les exploiter, il y en a beaucoup, particulièrement à l'INSPQ, là,
+ j'ai beaucoup de collègues, là, qui sont vraiment des experts là-dedans.
+ </p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Parce qu'on avait
+ évoqué que la donnée n'était pas... n'était pas connue, bon, là, vous nous
+ donnez un ordre de grandeur, puis qu'on disait, effectivement, qu'entre zéro et
+ un an c'était très clair, mais, après ça, que
+ c'était un... ça l'était un peu moins. Mais, en fait, je ramène l'idée qu'on
+ nous disait qu'il y a peut-être des phénomènes qui nous échappent sur la
+ consommation de médicaments, et ainsi de suite. Est-ce que votre sentiment,
+ c'est qu'on... c'est qu'il est possible d'aller plus loin puis d'avoir une
+ meilleure compréhension de... des décès chez les jeunes? </p>
+<p style="text-align: justify">
+  <b>M. Bernier (Reno) : </b>Bien, c'est
+ toujours... c'est toujours possible, là, de forer davantage, évidemment, là, plus qu'on va recueillir de l'information, plus on
+ va pouvoir préciser. Puis, c'est... il ne faut pas se le cacher, il y a
+ des cas qui nous... qui échappent, là, qui ne sont pas nécessairement portés
+ à... signalés au coroner ou bien qui ne sont pas nécessairement suffisamment
+ documentés, oui, c'est possible, mais... mais il faut d'abord utiliser au
+ maximum ce qu'on a déjà comme info. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Merci beaucoup. </p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Je dois
+ mettre fin, malgré toute la pertinence du propos. Un immense merci à vous pour
+ votre contribution aux travaux de cette commission. </p>
+<p style="text-align: justify">Alors, je suspends quelques instants, le temps
+ de permettre à nos prochains invités de s'installer. </p>
+<p style="text-align: justify">
+  <i>(Suspension de la séance à 12 h 14)</i>
+</p>
+<p style="text-align: justify">
+  <i>(Reprise à 12 h 15</i>
+  <i>)</i>
+</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Je
+ souhaite maintenant la bienvenue aux représentantes du Regroupement des
+ Auberges du coeur du Québec. Alors, je vous rappelle que vous disposez de
+ 10 minutes pour votre exposé, après quoi suivra une séance de discussion
+ avec les membres de la commission. Alors, je vous invite tout de suite à vous
+ présenter et à débuter votre exposé. </p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc226549741"></a>
+  <a name="_Toc224051124">Regroupement des
+ Auberges du coeur du Québec (RACQ)</a>
+</p>
+<p style="text-align: justify">
+  <b>Mme
+ Dalphond (Paule) : </b>Parfait, merci. Alors, Paule Dalphond, je suis
+ directrice générale du Regroupement des Auberges du coeur du Québec. Je
+ suis accompagnée de ma collègue Grace Tabaka, qui est directrice à la défense
+ des droits des jeunes au Regroupement des Auberges du coeur. </p>
+<p style="text-align: justify">Alors, le Regroupement des Auberges du coeur,
+ vous savez, c'est 32 membres, 32 Auberges du coeur, mais je dirais
+ 34 maisons, quand même, on a deux membres qui possèdent deux lieux
+ d'hébergement. C'est un service qui existe
+ depuis 1987, le regroupement, mais les maisons ont plus de 40 ans,
+ certaines. C'est un service 24 heures par jour, sept jours par semaine, plus de
+ 3 500 jeunes par année qui gravitent autour des Auberges, soit en
+ hébergement ou au niveau du post-hébergement. C'est quand même
+ 193 places en appartements supervisés et 379 places en hébergement. </p>
+<p style="text-align: justify">Le mandat du Regroupement des Auberges, bien
+ sûr, est de regrouper ses membres et d'être là pour les appuyer, défendre
+ l'existence et l'autonomie des ressources communautaires d'hébergement pour les
+ jeunes. Ensuite, le Regroupement agit aussi comme porte-parole auprès des
+ jeunes en situation d'itinérance ou de vulnérabilité auprès des instances
+ politiques, administratives. Un autre aspect central de notre mission, c'est de
+ favoriser les échanges entre les maisons d'hébergement jeunesse, partenaires de
+ la communauté, de chacune des Auberges du coeur, mais aussi, au-delà des
+ membres des Auberges du coeur, il y a 48 ressources d'hébergement
+ communautaire jeunesse, et on est aussi un lien pour les autres qui ne sont pas
+ membres du regroupement. On a à coeur de promouvoir, bien sûr, le développement
+ des ressources additionnelles du même type. </p>
+<p style="text-align: justify">Vous comprendrez qu'on a une clientèle qui
+ s'adresse de 12 à 35 ans. Donc, on a des auberges qui hébergent des jeunes
+ mineurs de 12 à 17 ans. On a des membres qui hébergent des jeunes mineurs,
+ majeurs avec un maximum de tranche d'âge de sept ans entre les deux, parce
+ qu'on ne voulait pas avoir des jeunes de 16 ans en contact avec des jeunes
+ de 28-29 ans. On trouvait que c'est un peu non approprié. Donc, dans nos
+ critères d'adhésion, c'est le maximum, c'est
+ de sept ans de tranche d'âge. La majorité, c'est du 16-23 ans. On a des
+ auberges qui hébergent des jeunes majeurs du 18-30 ou du 18-25. C'est à
+ peu près le tiers des membres, là, répartis sur les 32 auberges. Alors, je
+ vais inviter ma collègue à vous parler plus précisément du projet de loi n° 37
+ et de nos interrogations et... voilà. </p>
+<p style="text-align: justify">
+  <i>• (12 h 20) •</i>
+</p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Parfait. Donc,
+ bonjour à vous. Notre mémoire porte particulièrement sur certaines
+ responsabilités du commissaire dans le cadre de ses fonctions, notamment sa
+ responsabilité de mettre en place des moyens pour recueillir les préoccupations
+ et les opinions des enfants, entre autres à ce qui... ce qui a trait aux enjeux
+ de la société. </p>
+<p style="text-align: justify">Tout d'abord,
+ nous soutenons fortement l'idée de reconnaître la voix des enfants. C'est
+ d'ailleurs le battement du coeur du Regroupement des Auberges du coeur.
+ Nous souhaitons et nous prônons que les besoins des jeunes enfants <a name="Page00010"></a>et adultes soient
+ entendus et pris en compte. Cependant, nous sommes préoccupés par la mise en
+ oeuvre de cette démarche. Il est
+ important de garantir la représentativité des enfants de tous les milieux pour
+ que cette démarche soit véritablement inclusive et de ne pas en échapper
+ certains. </p>
+<p style="text-align: justify">Notre deuxième préoccupation se porte sur la
+ fonction, la responsabilité du Commissaire, qui est de soutenir les enfants dans l'exercice de leurs droits en les
+ dirigeant vers des ressources appropriées et en les accompagnant,
+ lorsque nécessaire, dans les démarches.
+ C'est d'un regard admiratif que cette responsabilité soit... figure dans les
+ fonctions du commissaire. Mais l'inquiétude repose sur la capacité du
+ commissaire à avoir une large connaissance des ressources disponibles et
+ surtout la portée de son pouvoir dans le processus de redirection étant donné
+ les difficultés d'accès aux services. Donc, nous pensons que l'effectivité de
+ cette responsabilité repose sur une collaboration étroite entre les acteurs...
+ avec les acteurs et actrices du secteur jeunesse et une réelle reconnaissance
+ de leur expertise pour s'assurer une adéquation entre les ressources suggérées
+ et les besoins réels des jeunes enfants et adultes. Enfin, recevoir les jeunes
+ qui échappent au filet social est le rythme cardiaque des Auberges du coeur.</p>
+<p style="text-align: justify">Donc, le projet de loi, il s'intitule Loi sur le
+ commissaire au bien-être et aux droits des enfants. Nous comprenons que
+ l'esprit derrière la loi se porte sur les enfants, mais il y a une fenêtre, qui
+ est une fenêtre ouverte, dans l'alinéa 9°, qui permet au commissaire de prendre
+ en charge aussi ou de soutenir aussi des jeunes adultes, soit des personnes
+ âgées d'au moins 18 ans ou de plus de 25 ans qui ont déjà été prises
+ en charge par le directeur de la protection de la jeunesse ou qui ont déjà fait
+ l'objet d'une mesure de garde ou surveillance en vertu de la Loi sur le système
+ de justice pénale pour adolescents. </p>
+<p style="text-align: justify">À ce stade, au-delà d'une inquiétude, c'est plutôt
+ une crainte que nous exprimons face à cette définition restrictive du jeune
+ adulte, parce que la réalité qu'il y a des jeunes qui auraient dû être pris en
+ charge par le DPJ, par le... justement, le système de la protection de la
+ jeunesse, mais qui ne l'ont pas été tout simplement parce qu'il n'y a pas eu de
+ signalement, peut-être, ou il y a eu une erreur de jugement au moment de
+ l'évaluation, mais, dans tous les cas, ces jeunes ont les mêmes besoins et
+ vivent la même réalité que les autres jeunes. Donc, nous pensons réellement que
+ ces jeunes ont tout aussi besoin d'être sous la responsabilité du commissaire
+ et d'être soutenus. C'est un peu ça le point de notre mémoire. </p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Merci
+ beaucoup à tous les deux. Alors, on va débuter la période d'échange avec M. le
+ ministre. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Super. Merci beaucoup,
+ Mme Dalphond, d'être... de vous être déplacée, Mme Tabaka aussi. Très
+ heureux de vous voir. Moi, j'aimerais savoir comment ça se passe de... ce que
+ vous faites, Mme Tabaka. Parce que moi, je pense à L'Entre-Temps, là, où
+ je suis, là, à la maison, l'Auberge du coeur près de... dans mon comté. Je n'ai
+ jamais rencontré quelqu'un qui jouait votre rôle, là. Donc, qu'est-ce que vous
+ faites exactement? Je trouve que c'est tellement une bonne idée, là. </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Bien, merci.
+ Justement, mon rôle, c'est de faire ce pont entre les besoins des jeunes et les
+ personnes qui doivent prendre des décisions. Donc, je reporte les besoins des
+ jeunes en les... les faisant valoir à travers des mémoires, en observant un peu
+ les projets de loi pour voir quelles sont les décisions qui sont prises,
+ quelles sont les politiques qui sont prises et surtout quel est l'impact sur la
+ réalité des jeunes. Donc, mon travail, c'est de veiller à ce que les besoins
+ des jeunes soient pris en compte par les politiques et que les politiques
+ puissent être écrites en faveur des jeunes, notamment les jeunes des auberges,
+ les jeunes en situation de vulnérabilité, mais dans certaines situations, tous
+ les jeunes. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Et faites-vous des
+ tournées des auberges pour rencontrer les jeunes? </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Effectivement,
+ tournées des auberges pour rencontrer les jeunes et comprendre la réalité de
+ ces jeunes-là en... Des fois, c'est des tournées physiques, des fois, ce sont
+ des sondages, mais pour toutes les questions qui touchent les jeunes au
+ quotidien, oui. </p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant : </b>Ah! bravo! Bravo! Puis d'ailleurs... Bien, je
+ pense qu'on a tous entendu hier avec les ex. On parlait initialement d'avoir un comité consultatif, mais
+ on se rend compte que, si on veut avoir une représentation
+ significative, comme vous dites, là, de la
+ population et de tous les jeunes, incluant les jeunes vulnérables, il va nous
+ falloir des comités régionaux, et
+ qui, eux, pourraient envoyer un représentant national, là. Vous, est-ce que
+ vous... vous organisez ce type de concertation?
+ Vous nous avez parlé de la Grande Consultation Jeunesse. Qu'est-ce que...
+ qu'est-ce que c'est, exactement? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Bien, la
+ Grande Consultation Jeunesse, hein, c'est que... c'est Interjeunes qui la
+ porte. C'est donc les organismes communautaires jeunesse qui sont membres
+ d'Interjeunes qui invitent leurs jeunes à venir débattre, exprimer leurs
+ opinions. Ça se fait toujours à Québec, c'est une fois par année. La prochaine
+ est en avril. Il y a deux moments précis,
+ dont une est portée par la Coalition Interjeunes, qui est la Grande
+ Consultation Jeunesse, mais il y a aussi la Journée des jeunes des
+ Auberges du coeur, qu'on va tenir en mars prochain ici même, aussi à Québec,
+ qui est un moment privilégié pour nous, parce que, tu sais, nous, au
+ regroupement, on ne les côtoie pas tant, hein? On a l'écho des directions, des
+ inters, mais des journées comme ça, annuelles, sont un moment privilégié, pour
+ nous, de rencontrer les jeunes et de les entendre sur leur réalité. Alors, il y
+ a deux événements par année, la Journée des jeunes des Auberges du coeur et la
+ GCJ, la Grande Consultation Jeunesse, portée par la Coalition Interjeunes.</p>
+<p style="text-align: justify">
+  <a name="Page00011"></a>
+  <b>M. Carmant : </b>Et
+ ça, c'est des jeunes de toutes les régions du Québec?</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>De toutes les
+ régions du Québec, oui. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Bien, je vais y aller
+ cette année. </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Bien, on va
+ vous inviter, M. Carmant, aux deux événements. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Bien oui, absolument.
+ Bien oui.</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Oui. Vous
+ tous, d'ailleurs...</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Absolument. On a hâte
+ de voir ça.</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Bon, bien,
+ alors c'est noté, nous vou<a name="_Hlk220057612">s inviterons </a>tous.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Super! Et comment vous
+ jugeriez la représentation de nos populations les plus vulnérables dans ces...
+ dans ces journées-là? Est-ce que... est-ce qu'ils ont la chance de... Ma
+ question, c'est : Comment on va les chercher, tu sais?</p>
+<p style="text-align: justify">
+  <b>Mme
+ Dalphond (Paule) : </b>Bien, c'est... bien, c'est... c'est un enjeu très
+ difficile d'aller chercher les jeunes, effectivement, en situation de
+ vulnérabilité. Tu sais, on a fait des reportages journalistiques, cette année,
+ avec les jeunes, ils sont comme un peu
+ craintifs. Ils ont l'impression qu'il ne faut pas qu'ils dévoilent leur vie,
+ leur histoire. Ils sont toujours un
+ peu craintifs, donc on doit vraiment créer un climat de confiance. Et souvent,
+ quand on réussit à faire ça... parce que le jeune, il est accompagné de
+ son intervenant, puis il y a un lien de confiance avec l'intervenant. Alors,
+ c'est plus l'intervenant qui va lui dire : Jusqu'où tu as envie d'aller?
+ Puis on va t'accompagner dans ça.</p>
+<p style="text-align: justify">Et on a beaucoup de jeunes qui disent :
+ Moi, je suis prêt à parler à un journaliste, mais je ne veux pas lui dire mon
+ nom, je ne veux... je ne veux pas qu'il sache mon nom. Parce qu'ils ont... ils
+ ont tous le réflexe de dire... Même si le milieu familial a été hypertoxique,
+ ils n'ont pas envie d'identifier le milieu familial, ça fait que c'est souvent
+ un facteur de protection.</p>
+<p style="text-align: justify">Ça fait que, pour être capable de consulter ces
+ jeunes-là, on va avoir besoin de l'équipe d'intervention qui accompagne, au
+ «day-to-day», ces jeunes-là, si on veut être capable de les sensibiliser.</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant : </b>OK. Puis, une fois que vous avez conclu ces
+ journées-là, j'imagine qu'il y a un rapport qui sort.</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Oui, oui.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Qu'est-ce... qu'est-ce
+ que... qu'est-ce qu'on fait avec? Qu'est-ce que notre gouvernement fait avec,
+ actuellement?</p>
+<p style="text-align: justify">
+  <b>Mme
+ Dalphond (Paule) : </b>Bien, notre... notre rapport, il est... La Grande
+ Consultation Jeunesse, elle est financée par le Secrétariat à la
+ jeunesse, et le rapport est remis au Secrétariat à la jeunesse, est remis...
+ Maintenant, c'est M. Lacombe qui est notre ministre délégué. Mais, avant,
+ on envoyait aussi copie du rapport au premier ministre, de la Grande Consultation Jeunesse, parce que c'est
+ lui qui avait la prérogative du dossier Jeunesse. Et c'est un peu la
+ même chose, là, pour la Journée des jeunes. Il y a un rapport qui est remis au
+ Secrétariat à la jeunesse. On en fait même une vidéo. Il y a des vox pop qui se
+ fait, les jeunes sont sollicités, il y a des oeuvres murales... collectives qui
+ sont faites. Donc les jeunes laissent leur trace autant écrite que visuelle.</p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant : </b>Et avez-vous un suivi de... des recommandations?
+ Comment... comment ça se passe jusqu'à présent?</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>C'est plus
+ difficile.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Puis qu'est-ce que...
+ Comment... comment le commissaire pourrait améliorer ce processus-là?</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>C'est plus
+ difficile au niveau des suivis de ces recommandations-là des jeunes. Peut-être
+ que ça serait une place importante, pour le commissaire, d'assister à ces
+ journées de consultation jeunesse, qu'il pourrait aussi entendre ce qui... ce
+ qui en ressort. Mais cette place-là, elle est vraiment réservée aux jeunes. Les
+ intervenants n'interviennent pas. Quand on invite des gens de l'externe, ils
+ n'interviennent pas. C'est les jeunes, c'est la place aux jeunes.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>OK. Vous allez me
+ bâillonner quand je vais venir?</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Oui! Mais on
+ peut vous inviter à prendre parole et à les encourager, ces jeunes-là. Mais
+ après ça, quand on les consulte...</p>
+<p style="text-align: justify">
+  <a name="Page00012"></a>
+  <b>M. Carmant : </b>Non,
+ non, je blaguais. Ne vous inquiétez pas. Et, vous, comment vous voyez votre
+ relation avec le commissaire?</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Bien, pour
+ nous... On l'a dit, hein? C'est... On a souligné ce... Le commissaire, on est
+ fiers qu'il y ait cette... ce projet de loi là, mais, on le rappelle... Tu
+ sais, nous, le bémol, il est vraiment sur le concept du 18-25, qui... passé par
+ le système de la protection de la jeunesse, parce qu'on le dit : Il y a
+ plein de jeunes que nous, on côtoie, qui ont passé dans les mailles du filet et
+ qui auraient peut-être eu juste un signalement, mais le signalement n'a pas
+ donné de suite, mais qui aurait eu lieu... place à un placement ou à... peu
+ importe. Nous, ces jeunes-là, on les a, là, dans nos auberges et, souvent, on
+ se dit : Il y a quelque chose à quelque part qui manque, là. On est là, on a beau créer le filet social, mais
+ jusqu'où on peut aller accompagner ces jeunes-là qui ont vécu, je pense,
+ des traumatismes très grands mais qui n'ont pas passés par la protection de la
+ jeunesse?</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Oui. Vous n'êtes pas la
+ première qui nous le dit, puis je pense qu'on est tous d'accord qu'on va
+ élargir à «vulnérable», là. Il y en a qui nous ont proposé certaines listes,
+ là, mais moi, je suis toujours hésitant à mettre des listes, parce qu'ensuite
+ ça veut dire qu'il y a des gens qui sont refusés </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Ça devient
+ restrictif.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>C'est ça. Donc, je
+ pense que le commissaire pourra prendre les décisions sur qui... qui est
+ vulnérable. Mme la Présidente, je pense que je passerais la parole...</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Bien
+ sûr.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>...si vous me
+ permettez.</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Mme la
+ députée de Soulanges.</p>
+<p style="text-align: justify">
+  <i>• (12 h 30) •</i>
+</p>
+<p style="text-align: justify">
+  <b>Mme Picard : </b>Merci, Mme la
+ Présidente. Bonjour à vous deux. Merci pour votre visite en commission
+ parlementaire. Je ne sais pas si vous avez visionné les autres personnes...
+ groupes qui sont venus ici, en commission. Il
+ y en a plusieurs qui nous ont parlé que certains jeunes ne connaissaient pas ou
+ très peu leurs droits. Certains même... Certains même se disaient en
+ quelque sorte avoir des lésions de droits. Est-ce que c'est quelque chose que
+ vous avez remarqué dans vos Auberges du coeur? Est-ce que c'est quelque chose
+ que vous pouvez nous partager? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Quand ils
+ arrivent, les jeunes, effectivement, connaissent très peu leurs droits. C'est
+ un des mandats des membres des auberges d'informer les jeunes le plus possible
+ sur leurs droits et aussi leurs responsabilités, mais c'est un mandat qu'on se
+ donne, là, très, très fortement. </p>
+<p style="text-align: justify">Et
+ d'ailleurs, là, on a une application mobile qui s'appelle Des outils pour
+ l'autonomie, qui va... la version 2.0 va sortir, et on a travaillé
+ avec justement des organismes au niveau des droits des jeunes pour bonifier
+ cette application mobile là. Elle n'est pas tout à fait sortie, le 2.0, mais
+ c'est une super application mobile, et on l'a faite, cette année... elle est...
+ d'abord été financée par le Secrétariat à la jeunesse, et on a continué avec le
+ MSSS pour un financement de trois ans pour bonifier et élargir les volets que
+ cette application-là pourrait faire, puis on va recontinuer, là, à bonifier
+ cette application-là avec le Secrétariat à la jeunesse, mais c'est un outil. </p>
+<p style="text-align: justify">Mais effectivement les jeunes connaissent très,
+ très peu leurs droits quand ils arrivent chez nous, là, dans les auberges, et,
+ en plus de connaître peu leurs droits, sont aussi très craintifs par rapport à
+ toute cette machine-là qui est... au niveau
+ de la justice, ils sont très, très, très craintifs. Ça fait que, tu sais, il y
+ a comme tout un apprentissage de désamorcer
+ cette crainte-là puis de dire : Bien... Bien, tu as des droits, puis on va
+ t'accompagner dans ce processus-là. </p>
+<p style="text-align: justify">
+  <b>Mme
+ Picard : </b>Est-ce que cette application-là est disponible
+ pour tous les jeunes ou seulement que les membres? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Bien sûr,
+ pour tout le monde... </p>
+<p style="text-align: justify">
+  <b>Mme Picard : </b>OK. Super. </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>...pour tout
+ le monde. Elle est disponible dans l'App Store et le Google Play. Vous pouvez
+ tous la télécharger. Elle s'appelle Des outils pour l'autonomie, c'est OPA, et
+ bientôt la version 2.0 va sortir, ça va vous inviter à télécharger la
+ nouvelle version, puis il va y avoir bonification de cette application-là. </p>
+<p style="text-align: justify">
+  <b>Mme
+ Picard : </b>Merci. Je vais la partager à tout le monde. Merci.
+ Je n'ai pas d'autre question, Mme la Présidente. </p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Parfait.
+ Alors, on enchaîne avec M. le ministre.</p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>Oui, et je vais vous le
+ poser à vous parce qu'on a peut-être un peu de temps, mais c'est quoi...
+ comment... est-ce que vous voyez un profil pour le commissaire? Est-ce qu'il y
+ a un type de profil que vous privilégieriez? </p>
+<p style="text-align: justify">
+  <a name="Page00013"></a>
+  <b>Mme Dalphond
+ (Paule) : </b>Bien, c'est sûr et certain que je pense que le commissaire
+ aura, en tout cas, à côtoyer autant, je pense, le milieu institutionnel, mais
+ le milieu communautaire, puis je pense que c'est essentiel qu'il ait cette
+ ouverture-là, parce que, je le dis toujours, le communautaire est le filet
+ social de ces jeunes-là. Tu sais, nous, les jeunes qu'on a dans les auberges,
+ en grande partie, ont passé par les centres jeunesse, une très grande partie.
+ Donc, on travaille à la prévention à l'itinérance, hein, ça fait qu'on est
+ aussi peut-être un avant centre jeunesse ou une porte de sortie à ne pas aller
+ en centre jeunesse quand on parle... avec les auberges mineurs, on travaille
+ beaucoup à la prévention. </p>
+<p style="text-align: justify">Donc, le jeune qui va passer dans une auberge du
+ coeur à 14, 15 ans va savoir qu'il y a un réseau, qu'il y a quelque chose
+ à quelque part qui peut le soutenir, en tout cas, du moins, jusqu'à
+ 30 ans. Beaucoup moins à risque d'itinérance.
+ Puis souvent on va faire que le jeune ne passera pas dans les centres jeunesse.
+ Il n'y aura pas de signalement, il n'y aura pas de placement, on va
+ travailler plus avec la famille qu'avec le jeune plus souvent qu'autrement,
+ mais ça reste qu'on est en prévention. </p>
+<p style="text-align: justify">Mais, tu sais, des jeunes au niveau majeur,
+ souvent, sont des jeunes qui sortent... Je n'aime pas ça, le dire, là, je trouve ça plate, là, mais le «bonne fête, bye»,
+ là, qui... les jeunes, à la sortie des centres jeunesse, bien, ils arrivent
+ chez nous, vont vivre une période un peu
+ de... d'euphorie, là, de liberté, mais, une fois qu'on n'a plus de sous, puis
+ que son chum est tanné de nous prêter son divan, puis qu'il commence à
+ faire froid, ils vont se retrouver dans une ressource d'hébergement
+ communautaire jeunesse. </p>
+<p style="text-align: justify">Et je pense
+ que c'est essentiel que le commissaire ait cette vue d'ensemble là de
+ dire : Les organismes communautaires jeunesse, c'est le filet
+ social de nos jeunes vulnérables, ils sont essentiels. </p>
+<p style="text-align: justify">
+  <b>M.
+ Carmant : </b>J'aime beaucoup ce point-là, là, d'éviter les
+ centres jeunesse. Est-ce que les écoles sont souvent en contact avec vous?
+ Parce que...</p>
+<p style="text-align: justify">
+  <b>Mme
+ Dalphond (Paule) : </b>Oui, oui, oui. Au niveau des auberges mineurs,
+ la... même les auberges vont faire de la prévention, vont contacter, vont aller dans les écoles, vont rencontrer
+ les jeunes, beaucoup. Donc, ils sont... ils deviennent de plus en plus,
+ là, associés aux écoles. Vous avez un collègue, là, qui est un ancien
+ directeur, là, M. Provençal, qui est un ancien directeur d'école, et M. Provençal faisait beaucoup le pont avec
+ l'ADOberge, là, qui est Chaudière-Appalaches
+ et Saint-Georges de Beauce, faisait beaucoup le pont avec les familles en
+ disant : Peut-être que l'auberge pourrait vous accompagner. Donc, oui, il
+ y a beaucoup de travail qui se fait à l'intérieur des écoles. </p>
+<p style="text-align: justify">
+  <b>M. Carmant : </b>OK. Et parlez-moi un
+ petit peu des jeunes qui sont dans vos centres. Est-ce que... Est-ce que c'est
+ très varié ou est-ce qu'il y a... vous avez de tout? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>On assiste à
+ un phénomène assez, je vous dirais... bon, la crise du logement, on n'y échappe
+ pas, mais, présentement, on assiste à un phénomène où on a les jeunes avec des
+ problématiques très lourdes en santé mentale, beaucoup, beaucoup médicamentés,
+ là, qui arrivent avec un ziploc de pilules, puis ils n'ont plus d'identité, ils
+ s'appellent... Jonathan puis je suis psycho-maniaco-dépressif, hein, c'est
+ comme ça qu'ils se présentent. C'est triste, mais c'est comme ça qu'ils se
+ présentent. </p>
+<p style="text-align: justify">Alors, ça, c'est un travail à désamorcer, mais
+ on a aussi une autre clientèle qui commence à se pointer vers nos ressources,
+ qui sont les jeunes étudiants, puis ils n'ont pas d'endroit pour se loger,
+ beaucoup d'immigrants qui sont aux études,
+ qui n'ont pas de famille, pas de tissu social au Québec, qui sont sans
+ logement. Ça fait qu'on assiste un peu à ce phénomène-là à cause de la
+ crise du logement. On a des jeunes qui travaillent, mais qui travaillent à
+ 17 $ de l'heure, ils sont incapables de se loger. Avant, on pouvait penser
+ à la colocation. Maintenant, ça n'existe plus, de la colocation. Quand tu as
+ des revenus de 16 $ et 17 $ de l'heure, c'est impensable. </p>
+<p style="text-align: justify">
+  <b>La
+ Présidente (Mme Blouin) : </b>Merci. Merci beaucoup. Merci, M. le ministre. On
+ va poursuivre avec Mme la députée de Robert-Baldwin. </p>
+<p style="text-align: justify">
+  <b>Mme
+ Garceau : </b>Oui. Merci beaucoup, Mme la Présidente. Merci à
+ vous deux d'être ici. Vous faites un travail tellement important auprès
+ de nos jeunes. Et j'ai été vraiment interpelée par ce que vous disiez au niveau
+ du manque d'accès aux services. Et, dans votre rapport, je vais y retourner,
+ mais j'aimerais premièrement, parce que vous avez mentionné que, peut-être il y
+ en a, des jeunes, que la protection de la jeunesse a manqués... Pouvez-vous
+ peut-être élaborer là-dessus, s'il vous plaît? Dans quel sens? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Il y a plein
+ de jeunes qui sont chez nous... qu'il y a eu un signalement à la DPJ, mais le
+ signalement n'a pas donné suite, n'a pas eu écho, bon. On le sait, ils sont à
+ peu près, comme tout le monde, un peu débordés. </p>
+<p style="text-align: justify">Donc, ces jeunes-là, qui... La réalité qu'on vit
+ souvent dans les auberges, c'est qu'un jeune de 14, 15, 16 ans n'est pas
+ la priorité, ce n'est pas le premier dossier. La protection de la jeunesse va
+ peut-être prioriser les plus jeunes, mais les jeunes, à 14, 15 ans, ne
+ sont pas priorisés, malheureusement, et souvent ils vont passer dans les
+ mailles du filet. Et c'est une période qui
+ est très difficile, l'adolescence, le début de la... d'une certaine maturité,
+ il y a révolte, il y a beaucoup de conflits familiaux qui éclatent à 13,
+ 14, 15 ans, et l'école va faire un signalement, mais ça n'aboutit pas, il
+ n'y a pas... Ça fait que le jeune va se retrouver à la rue à 16 ans,
+ souvent, le parent va le mettre carrément dehors, et il va se retrouver dans
+ les Auberges du coeur, temporairement, parce qu'un jeune mineur, bien sûr, il y
+ a la loi, <a name="Page00014"></a>toute la Loi de la protection de la jeunesse,
+ hein, on ne peut pas l'héberger jusqu'à un an. Donc, c'est des courts séjours.
+ On va travailler avec la famille, un retour à la famille, il va pouvoir
+ revenir, bref, c'est un travail qui est assez difficile. Mais souvent ces
+ signalements-là, de ces âges-là... puis il n'y a pas de suite. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Oui, puis c'est quand
+ même assez préoccupant, là, parce qu'on parle... on ne parle pas des 30 et 35,
+ on parle des 13, 14, 15 ans. </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>14, 15, 16,
+ oui. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Et donc, de votre
+ côté, est-ce qu'il y a des interventions avec la protection de la jeunesse? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Oui, il y a
+ souvent... il peut arriver qu'il y ait des signalements, il peut arriver qu'on
+ fasse des signalements, il peut arriver qu'on fasse pression. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Puis qu'est-ce qui se
+ passe? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>On n'a plus
+ de pouvoir, rendu là. On n'a plus de pouvoir, rendu là. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>OK. Donc, ça, juste en
+ soi, là, très préoccupant. J'espère que, M. le ministre, vous le prenez en
+ note. Et je voulais juste... parce que, lorsque vous parlez, dans votre
+ rapport, concernant des trous dans le système, c'est ça? Ça fait partie de ça? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Oui. Exact.
+ Exact. C'est ces jeunes-là qui sont échappés. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Échappés par... </p>
+<p style="text-align: justify">
+  <i>• (12 h 40) •</i>
+</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) :</b> Échappés par
+ le système. Échappés par le système. Il y a même des jeunes qu'il n'y aura pas
+ eu de signalement parce qu'il y a une certaine, je dirais, une certaine façade
+ de la famille, mais qui vivent peut-être du harcèlement psychologique énorme à
+ la maison. Mais il n'y aura pas eu de signalement jamais. Ça ne paraît pas
+ beaucoup, le jeune, à l'école, fonctionne borderline, mais il fonctionne. Il
+ est toujours un peu à la limite. Et ce jeune-là, souvent, vers 17 ans,
+ lui-même va décider de quitter la maison. Et, rendu à 17 ans, avec la... même
+ s'il serait encore sous la Loi de la protection de la jeunesse, bien, il va
+ avoir... il va développer une certaine autonomie. On va travailler avec le
+ jeune pour qu'il puisse avoir... se dégager de l'autorité parentale pour qu'il
+ puisse rentrer, je dirais, dans le monde adulte, même avant son âge de
+ 18 ans, pour justement ne pas... à le retourner dans ce milieu familial
+ là. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Parlez-moi un peu en
+ termes des difficultés d'accès aux services. On parle de quoi? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Écoutez, un
+ jeune qui a besoin d'un psychiatre, de... Tu sais, on a beau avoir le projet
+ des aires ouvertes, c'est beau, mais le besoin qu'on décrit depuis tant
+ d'années, c'est des soins au niveau psychologique pour les jeunes. Ce n'est pas
+ une infirmière, ce n'est pas un médecin, c'est au niveau psychologique. Et ça,
+ c'est de plus en plus difficile à obtenir. Et souvent, quand on fait une
+ démarche avec un jeune, puis je prendrais
+ une jeune fille, mais jeune fille qui aurait... qui ferait dénonciation, on va
+ travailler avec un CALACS. Mais même un CALACS, le jeune, il est sur une
+ liste d'attente. </p>
+<p style="text-align: justify">Quand on
+ reçoit le téléphone, souvent, le jeune, il va faire : «By the way», ça ne
+ me tente plus de lui raconter, ça ne me tente plus, je ne suis plus...
+ Mais, au moment où il nous en a parlé, il était prêt à faire cette démarche-là.
+ Mais le délai d'attente, bien, c'est la même chose pour les services en
+ psychologie, en psychiatrie, au moment où il est prêt, c'est là qu'on aurait
+ besoin du service. Et, si on a un retour d'appel trois mois, quatre mois, cinq
+ mois, six mois plus tard, ou bien on a perdu le jeune, ou bien on le contacte
+ puis on lui dit : Écoute, on a eu un appel, il y aurait une place pour
+ toi... Heille! ça ne me tente plus de le raconter, là, je pense, j'essaie de
+ faire un ménage, là, puis je vais le mettre en arrière. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>On parle, je présume,
+ de jeunes victimes, victimes de violence, d'agression sexuelle? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Et des
+ problématiques en santé mentale lourdes. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Oui. </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Comme je vous
+ disais, ils arrivent avec un ziploc de pilules. C'est... c'est énorme. C'est
+ terrible. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Vous avez mentionné la
+ définition des jeunes, elle est restrictive. Je suis d'accord avec vous
+ là-dessus. On a eu le collectif des ex-placés de la DPJ qui nous avait parlé de
+ peut-être aller un petit peu plus loin en termes
+ de l'âge, d'aller de peut-être 25 ans à 30 ans, à 35 ans. Est-ce
+ que vous êtes d'accord avec ce genre de suggestion? </p>
+<p style="text-align: justify">
+  <a name="Page00015"></a>
+  <b>Mme Dalphond
+ (Paule) : </b>Bien, moi, je pense que oui. Tu sais, nous, les jeunes, on
+ les héberge, là, jusqu'à 30 ans. On
+ s'est même donné l'ouverture d'aller jusqu'à 35 ans. On ne le fait pas
+ beaucoup parce qu'il y a des ressources, mais il y a des régions où il
+ n'y a pas de ressources. Et un jeune de 32 ans cognerait à la porte de
+ l'auberge du coeur à Rimouski, puis, s'il y a de la place, ils vont le prendre,
+ même si, eux, le mandat s'arrête à 30 ans, ils vont le prendre jusqu'à 32 ans.
+ Mais, nous, pour nous, la jeunesse, c'est au moins jusqu'à 30 ans. Le Secrétariat
+ à la jeunesse vise un peu plus que le 25 ans aussi, les centres... les
+ CJE, hein, vont jusqu'à 35 ans, on dit que c'est un carrefour
+ jeunesse-emploi, ça fait que... Pour nous, le 25 ans, il devrait être un
+ peu plus extensionné. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>OK. Et en termes de
+ votre... Comment voyez-vous le rôle du commissaire? Surtout avec les jeunes
+ dont vous avez décrit, où la protection de la jeunesse n'a pas considéré... ou
+ ne les a pas pris en charge, est-ce qu'il y a un rôle à jouer là-dedans,
+ d'après vous? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Bien,
+ peut-être que Grace veut le dire, mais moi, je pense qu'il doit être proche du terrain, pas... pas dans un bureau, là. Il faut
+ qu'il... il faut qu'il aille consulter. Il faut qu'il aille proche de cette
+ clientèle-là, c'est sûr et certain. Ce sont des jeunes vulnérables, difficiles
+ d'approche, comme je l'ai dit tantôt, mais il y a moyen d'aller les rencontrer
+ puis de se servir de leur expérience pour bonifier l'offre de services. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>En termes de défense
+ des droits de ces jeunes, et il y avait la question de ma collègue concernant que plusieurs jeunes qui arrivent ne
+ connaissent pas leurs droits, est-ce que vous avez des... une suggestion,
+ proposition à faire à ce sujet? Comment est-ce qu'on peut les aider? </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) :</b> D'ailleurs,
+ justement, je pense que c'est quelque chose qui pourrait rentrer dans les fonctions du commissaire, qu'il y ait un volet
+ d'information et de sensibilisation. On parle de soutien,
+ d'accompagnement vers les ressources. De manière concrète, ça ressemblerait à
+ quoi? Une jeune fille fait une dénonciation, appelle le commissaire : Je
+ ne sais pas quoi faire. Le commissaire dit : OK, je te renvoie vers le
+ CALACS. Concrètement, ça... il n'y a pas un impact pertinent dans la réalité. </p>
+<p style="text-align: justify">Mais, comme disait Paule, le commissaire qui
+ connaît, qui comprend la réalité du jeune parce qu'il est sur le terrain est capable de dire : OK, nous avons
+ un volet d'information, voici ce que tu dois savoir par rapport à tes
+ droits, voici comment ça se passe et ensuite quelles ressources... je peux
+ contacter. Ensemble, on va t'accompagner dans ta démarche jusqu'au bout. </p>
+<p style="text-align: justify">Donc, oui, il y a un volet d'information qui est
+ pertinent. Dans les auberges, on donne des activités financées par le SAJ, où on donne des cours, des ateliers
+ sur ces notions-là. Mais ça reste quand même qu'il faudrait que ce soit
+ élargi. Donc, je pense que, si ça rentre dans les fonctions du commissaire, ça
+ aurait un impact plus important. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>Le manque de
+ ressources dont vous parlez, est-ce que vous faites des revendications en
+ termes de c'est avec qui? </p>
+<p style="text-align: justify">
+  <b>Mme
+ Dalphond (Paule) : </b>Écoutez, ça fait des années qu'on le porte et
+ qu'on le crie haut et fort. Ça fait des années. </p>
+<p style="text-align: justify">
+  <b>Mme Garceau : </b>On va se dire les
+ vraies choses : C'est avec qui? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Juste des
+ ressources d'hébergement communautaires jeunesse, il en manque déjà en partant.
+ Des jeunes itinérants, il y en a de plus en plus. Avant, l'itinérance, c'était
+ un monsieur de 50 ans puis qui prenait un coup sur le coin de la rue.
+ Maintenant, ce n'est plus ça, le portrait de l'itinérance. L'itinérance
+ jeunesse était une itinérance cachée. Elle est de moins en moins cachée. </p>
+<p style="text-align: justify">Donc, des ressources d'hébergement comme les
+ Auberges du coeur, il en manque puis il en manque énormément. À toutes les fois
+ qu'on m'appelle pour me dire qu'on va ouvrir une ressource d'hébergement, je
+ fais comme : Le noeud de la guerre, c'est le financement, hein?</p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) :</b>
+ Merci... </p>
+<p style="text-align: justify">
+  <b>Mme
+ Dalphond (Paule) :</b> Je prends
+ l'exemple de Sorel, qui a eu 190 000 $ de financement pour faire
+ fonctionner un six lits, on s'entend que ça ne marche pas, ça ne tient pas la
+ route. </p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Merci
+ beaucoup. Merci, Mme la députée. On va procéder tout de suite aux échanges avec
+ le député des Îles-de-la-Madeleine, s'il vous plaît. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Merci beaucoup. Et je
+ remercie mon collègue de m'avoir donné son autre temps parole. Merci pour votre présentation, pour la passion et
+ l'engagement, là, envers les jeunes. Je vous trouve humbles dans votre
+ mémoire, parce que vous ne nous décrivez pas à quel point votre rôle est
+ fondamental et extraordinaire dans le sens où c'est évidemment un organisme,
+ enfin, une série d'organisations qui contribuent justement, là, à pallier les
+ failles, peut-être, de notre filet social. On parle de 32 auberges,
+ 370 lits. Vous faites de l'animation, de l'accompagnement et aussi un
+ suivi. J'ai remarqué en regardant votre site Web, vous faites du suivi
+ post-hébergement, vous avez des projets d'hébergement également. Alors,
+ chapeau! Bravo! </p>
+<p style="text-align: justify">
+  <a name="Page00016"></a>Quelle
+ est votre relation... Avez-vous une relation avec les organisations, là,
+ institutionnelles? Quand on... Vous parliez tout à l'heure de la DPJ. Je
+ ne sais pas, vous n'avez pas parlé de la CDPDJ. Est-ce que vous avez des liens
+ avec eux à l'occasion? Et quel est votre point de vue sur le soutien qu'on
+ offre aux jeunes que vous hébergez et que vous accompagnez? </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Je vais
+ commencer par la CDPDJ, justement, parce que je suis... je représente le regroupement sur la table jeunesse de la
+ commission des droits de la personne et de la jeunesse, et c'est un bon
+ partenariat, parce que, justement, c'est une
+ table où on peut discuter des enjeux que nous voyons sur le terrain, des enjeux
+ de jeunesse, et où on est sûr d'avoir, bien, déjà une écoute. Et,
+ ensemble, on travaille sur des recommandations et comment la commission peut
+ nous accompagner en ce sens. Donc, nous avons quand même des partenariats
+ institutionnels. Et même je pense qu'avec le Secrétariat à la jeunesse on peut
+ parler aussi de la direction et protection de la jeunesse...</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Au niveau du
+ PQJ, le PQJ, on a de très bonnes relations aussi avec PQJ. Je vous dirais que chacune des auberges entretient des
+ liens étroits avec ces groupes-là, surtout les auberges mineurs. Comme
+ dans n'importe quoi, dans n'importe quelle région, il y en a que ça va très
+ bien, il y en a que ça va moins bien. </p>
+<p style="text-align: justify">
+  <b>M.
+ Arseneau : </b>D'accord. Et ça m'amène à vous poser la question
+ sur le projet de loi en tant que tel. À l'article 11, on dit que le
+ commissaire coopère avec différentes organisations institutionnelles, la Commission
+ des droits de la personne et des droits de
+ la jeunesse, Protecteur du citoyen, ainsi de suite. On ne mentionne pas le milieu
+ communautaire. </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Exact. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Est-ce qu'il y a une
+ faille dans le projet de loi où on devrait s'assurer que le commissaire fasse
+ affaire avec des gens qui, comme vous, sont sur le terrain, en contact avec les
+ gens? </p>
+<p style="text-align: justify">
+  <i>• (12 h 50) •</i>
+</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Exact, oui.</p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Bon, d'accord. On note
+ et on proposera, vraisemblablement des amendements au projet de loi. Je vous confirme en terminant que nous
+ serons... enfin, on avait été invités à la Grande Consultation Jeunesse, là,
+ ça se passe le 9 et 10 avril ici, à
+ Québec. On sera présents avec beaucoup de plaisir, puis bravo pour votre
+ travail au quotidien! </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Merci. Puis
+ on vous invitera aussi pour la journée des jeunes des Auberges du coeur du
+ Québec qui va être en mars ici, à Québec. </p>
+<p style="text-align: justify">
+  <b>M. Arseneau : </b>Merci beaucoup. Merci.
+ </p>
+<p style="text-align: justify">
+  <b>La
+ Présidente (Mme Blouin) : </b>Merci beaucoup, M. le député. Alors, on termine
+ avec M. le député de Saint-Henri—Sainte-Anne.
+ </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Merci beaucoup.
+ Merci pour votre excellent travail. D'ailleurs, j'ai la chance dans le
+ sud-ouest de Montréal, dans Ville-Émard, d'avoir l'Auberge du coeur, là, sur le
+ boulevard Monk. Donc, on est... </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>...du
+ Sud-Ouest. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>...très chanceux
+ de les avoir et on les salue, d'ailleurs. Donc, voilà. </p>
+<p style="text-align: justify">Petite question pour vous, vous parliez de
+ connaissance et promotion des droits, évidemment, pour que les jeunes connaissent leurs droits. Est-ce que vous
+ pensez qu'il y aurait un impact positif si on venait, comme Mme Laurent le demandait, à créer la fameuse
+ charte des droits de l'enfant? Est-ce que vous pensez que ce serait important? </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Bien sûr. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Donc, pour vous,
+ de voir que ce n'est pas dans le projet de loi actuel, c'est un petit peu une
+ déception?</p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Je ne dirais
+ pas une déception, parce qu'il y a beaucoup de points sur lesquels nous sommes
+ vraiment d'accord, mais, oui, je pense que ça ferait une différence, le fait
+ que les droits des enfants soient encadrés,
+ parce qu'on connaît les droits des enfants de façon générale, il y a l'ONU, il
+ y a la charte, de façon générale, qui protège les personnes, mais avoir
+ une charte spécifique aux droits des enfants pour effectivement montrer un
+ intérêt de plus à la protection des enfants... Donc, oui, nous partageons cette
+ recommandation.</p>
+<p style="text-align: justify">
+  <b>M.
+ Cliche-Rivard : </b>Il y avait des recommandations un petit peu
+ similaires quant au fait qu'on pourrait intégrer, là, dans notre droit, la convention internationale
+ relative aux droits de l'enfant. Est-ce que vous partagez la même appréciation?
+ </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Je partage,
+ effectivement, oui. </p>
+<p style="text-align: justify">
+  <a name="Page00017"></a>
+  <b>M. Cliche-Rivard :
+ </b>Donc, vous pensez que c'est quelque chose qu'on aurait enfin l'occasion de
+ faire? </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Effectivement.
+ Effectivement.</p>
+<p style="text-align: justify">
+  <b>Mme
+ Dalphond (Paule) : </b>Bien, je pense que ça pourrait être un beau rôle
+ pour le commissaire, effectivement. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>De le... de le
+ travailler, de le...</p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>De le
+ travailler avec tous les partenaires, je pense que ce serait un beau... un beau
+ défi puis un beau mandat. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Bon. Mme Laurent
+ parlait aussi de transférer, vous le savez, tous les pouvoirs de la CDPDJ au
+ commissaire. Est-ce que vous, vous avez une position ferme là-dessus? </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Non,
+ honnêtement non, parce que je pense qu'il y a un travail de collaboration qui peut très bien se faire entre la Commission des
+ droits de la personne et le commissaire. Donc, à ce niveau, je ne
+ partage pas complètement cet avis. Je pense, au contraire, à un travail de
+ collaboration. Et, honnêtement, il y a tellement de problèmes que je pense que
+ le commissaire tout seul ne pourra pas gérer tout ça. </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) : </b>Non, c'est
+ ça. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Quand vous
+ dites : Tellement de problèmes, spécifiquement, peut-être juste démêler ça
+ pour nous. Qu'est-ce que vous voulez dire? </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>Bon, je veux
+ dire qu'il y a beaucoup de questions sur lesquelles se pencher que je pense qu'il est plus judicieux qu'il y ait
+ plusieurs organes qui peuvent accompagner. On parlait d'accessibilité. Si
+ tout est centralisé, on va faire face à une difficulté d'accessibilité. On va
+ retomber dans les problèmes de longs délais. </p>
+<p style="text-align: justify">
+  <b>Mme Dalphond (Paule) :</b> Exact. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Donc, on laisse
+ au commissaire ce nouveau travail là, on laisse à la commission... Est-ce qu'on
+ renforce les pouvoirs de la commission? Est-ce qu'on aide la commission
+ davantage? Est-ce que vous sentez qu'il y a un besoin d'accompagnement, de
+ financement? </p>
+<p style="text-align: justify">
+  <b>Mme Tabaka (Grace) : </b>À ce niveau, je
+ ne peux pas me prononcer. Je n'ai pas vraiment regardé, mais je pense que les
+ deux organes ont leur place. </p>
+<p style="text-align: justify">
+  <b>M. Cliche-Rivard : </b>Merci beaucoup. </p>
+<p style="text-align: justify">
+  <b>La Présidente (Mme Blouin) : </b>Merci
+ beaucoup. Merci à vous pour votre contribution à nos travaux.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc226549742"></a>
+  <a name="_Toc224051403">Mémoires déposés</a>
+</p>
+<p style="text-align: justify">Avant de conclure les auditions, je procède au
+ dépôt des mémoires des organismes et des personnes qui n'ont pas été entendus
+ lors des auditions publiques. Merci à tous. </p>
+<p style="text-align: justify">La commission, ayant accompli son mandat,
+ ajourne ses travaux sine die. Merci beaucoup. </p>
+<p style="text-align: justify">
+  <i>(Fin de la séance à 12 h 54)</i>
+</p></Contenu>
+			
+			
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+		
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+	
+		<h2>Document(s) associé(s) à la séance</h2>
+		<ul class="ListeLien">
+			
+			
+					<li><a href='https://www.assnat.qc.ca/Media/Process.aspx?MediaId=ANQ.Vigie.Bll.DocumentGenerique_220185&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz'>Journal des débats (PDF)</a><span class='icoPDF'> </span></li>
+					<li><a href='/fr/video-audio/archives-parlementaires/travaux-commissions/AudioVideo-102881.html'>Vidéo/Audio</a></li>
+					
+					
+				
+		</ul>
+	
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+						
+				
+					
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <div id="bInfolettre" style="margin-bottom: 25px;"><a class="btnInfolettre" href="https://l.communications.assnat.qc.ca/T/WF/24042/op0ace/Optin/fr-CA/Form.ofsys" target="_blank">Abonnez-vous à notre infolettre!</a></div>
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br />
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+
+    </ul>
+
+    <br />
+    <span class="NonVisible">
+        
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+    var boutonInfolettre = document.getElementById('bInfolettre');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+            boutonInfolettre.style.display = 'block';
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+            boutonInfolettre.style.display = 'none';
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+</body>
+</html>

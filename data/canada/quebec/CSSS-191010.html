@@ -1,0 +1,2719 @@
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+
+    <!-- Enonces d'inclusion de fichiers JS et CSS -->
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta http-equiv="content-language" content="fr" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link type="text/css" href="/styles/ResetCSS.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/AssNat.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Reguliere.css" title="Reguliere"  rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Moyenne.css" title="Moyenne" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/Grande.css" title="Grande" rel="alternate stylesheet" media="screen" />
+<link type="text/css" href="/styles/infoBulle.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jScrollPane.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.treeview.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/styles/jquery.skinned-select.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/jquery.datePicker.min.css" rel="stylesheet" media="screen"  />
+<link type="text/css" href="/styles/Calendrier.min.css" rel="stylesheet" media="screen"  />
+<link href="/Images/favicon.ico" rel="shortcut icon" />
+
+<!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally = false; (function () { (function (e, r) { var t = document.createElement("link"); t.rel = "preconnect"; t.as = "script"; var n = document.createElement("link"); n.rel = "dns-prefetch"; n.as = "script"; var i = document.createElement("link"); i.rel = "preload"; i.as = "script"; var o = document.createElement("script"); o.id = "spcloader"; o.type = "text/javascript"; o["async"] = true; o.charset = "utf-8"; var a = "https://sdk.privacy-center.org/" + e + "/loader.js?target_type=notice&target=" + r; if (window.didomiConfig && window.didomiConfig.user) { var c = window.didomiConfig.user; var s = c.country; var d = c.region; if (s) { a = a + "&country=" + s; if (d) { a = a + "&region=" + d } } } t.href = "https://sdk.privacy-center.org/"; n.href = "https://sdk.privacy-center.org/"; i.href = a; o.src = a; var p = document.getElementsByTagName("script")[0]; p.parentNode.insertBefore(t, p); p.parentNode.insertBefore(n, p); p.parentNode.insertBefore(i, p); p.parentNode.insertBefore(o, p) })("196da249-e5c8-4975-84d3-4b76bf16efd6", "UgnH3adf") })();</script>
+
+
+<!-- Feuilles de styles specifiques IE -->
+
+<!--[if lte IE 6]>
+    <link type="text/css" href="/styles/CorrectionsIE6.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 7]>
+    <link type="text/css" href="/styles/CorrectionsIE7.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+
+<!--[if IE 8]>
+    <link type="text/css" href="/styles/CorrectionsIE8.min.css" rel="stylesheet" media="screen"  />
+<![endif]-->
+<link type="text/css" href="/styles/Impression.min.css" rel="stylesheet" media="print"  />
+
+<link type="text/css" href="/styles/Tableau.min.css" rel="stylesheet" media="screen"  />
+
+<script type="text/javascript" src="/scripts/jquery.js?version=1.2.6"></script>
+
+<script type="text/javascript" src="/scripts/jquery-ui.js?version=1.5.2"></script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5X47H2N');</script> 
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript"  >
+//<![CDATA[
+// Libellé du calendrier
+$.dpText = {
+	TEXT_PREV_YEAR		:	'Année précédente',
+	TEXT_PREV_MONTH		:	'Mois précédent',
+	TEXT_NEXT_YEAR		:	'Année suivante',
+	TEXT_NEXT_MONTH		:	'Mois suivant',
+	TEXT_CLOSE			:	'[x] Fermer',
+	TEXT_CHOOSE_DATE	:	'Choisir une date'
+}
+
+var _contenuLoading = '<img style="width: 16px;height: 16px;" src="/Images/lightbox/loading.gif" />&nbsp; Chargement en cours...';
+
+var _nbAnneeArchiveActivite = '3';
+// Voir Calendrier.js pour _dtSetStartDate
+var _dtSetEndDate = '2026-08-29';
+var intNombreAnneeArchiveActivite = 3;
+var langueCourante = 'fr';
+
+_initCalendrierTypeActiviteJSON = eval([{"NomTypeActivite":"Autres activités","Categorie":"D","Name":null,"Description":null},{"NomTypeActivite":"Conférences et points de presse","Categorie":"C","Name":null,"Description":null},{"NomTypeActivite":"Séances de l'Assemblée","Categorie":"A","Name":null,"Description":null},{"NomTypeActivite":"Séances des commissions","Categorie":"B","Name":null,"Description":null}]);name 
+_urlGetCalendrierDataJSON = '/WebMethod/Calendrier.aspx/GetCalendrier?langue=fr';
+_documentURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Thumbnail&token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&MediaId=";
+_imageThumbnailURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=AlbumThumbnail&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageOriginaleURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_imageThumbnailDrapeauURL = "https://www.assnat.qc.ca/Media/Process.aspx?process=ThumbnailDrapeau&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=";
+_lienContenuURL = "/fr/deputes/index";
+_extensionPagesDuSite = "html";
+_lienPatronUrlCommuniquePresse = '/fr/actualites-salle-presse/communiques/';
+_lienPatronUrlTranscription = '/fr/actualites-salle-presse/conferences-points-presse/';
+_lienPatronUrlEnDirect = '/fr/video-audio/index';
+_lienJournalDebat ='/fr/travaux-parlementaires/{0}.html';
+_lienJournalDebatCom ='/fr/travaux-parlementaires/commissions/{0}/journal-debats/index';
+_lienJournalDebatChmbr ='/fr/travaux-parlementaires/{0}';
+_listeObjetMetierPatronUrl = "DocumentGenerique:/fr/document/{0}.html|Commission:/fr/travaux-parlementaires/commissions/{0}/index.html|Mandat:/fr/travaux-parlementaires/mandats/{0}/index.html|Lien:/fr/lien/{0}.html|CommuniquePresse:/fr/actualites-salle-presse/communiques/{0}.html|Actualite:/fr/actualites-salle-presse/nouvelle/{0}.html|ConferencePointPresse:/fr/actualites-salle-presse/conferences-points-presse/{0}.html|Consultation:/fr/travaux-parlementaires/consultations/{0}.html|SeanceAssemblee:/fr/travaux-parlementaires/assemblee-nationale/{0}/index.html|ProjetLoi:/fr/travaux-parlementaires/projets-loi/projet-loi-{0}.html|VideoAudio:/fr/video-audio/{0}.html|Journal:/fr/travaux-parlementaires/{0}.html|SyndicationRSS:/fr/rss/{0}.html|Petition:/fr/exprimez-votre-opinion/petition/{0}/index.html|TermeEncyclopedique:/fr/patrimoine/lexique/{0}.html|SectionDelegation:/fr/diplomatie/{0}/{1}/index.html|Vote:/fr/travaux-parlementaires/registre-des-votes/{0}/index.html|Depute:/fr/deputes/{0}/index.html|Texte:/fr/{0}.html|Individu:/fr/patrimoine/anciens-parlementaires/{0}.html|";
+_lienAideSoutienTechnique = '/fr/aide/aide-recherche.html#javascript';
+
+var _urlGetCalendrierObtenirActiviteEnOndes = '/WebMethod/Calendrier.aspx/ObtenirActiviteEnOndes';
+var intervalleRafraichissementWebDiffusion = '60';
+var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';
+var libelleDateDebutDu = 'Du';
+var libelleDateDebutVers = 'Vers';
+var libelleDateFinJusqua = 'jusqu\'à';
+var libelleDateFinAu = 'au';
+var libelleHeureFinA = 'à'
+var libelleDebutApresPeriodeCourante = 'début : après la période des affaires courantes de l\'Assemblée';
+var bulleAidePeriodeAffaireCourante = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"><img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après la période des affaires courantes de l\'Assemblée"></span></span>';
+var bulleAideApresAvisTravauxCommissions = '<span class="btnInfoBulle sansControle"><a href="javascript:void(0)" class="sanssouligne"> <img src="http://www.assnat.qc.ca/Images/btnInfoBulle.gif" title="Afficher l\'aide" alt="Afficher l\'aide"></a><span title="Début : après les avis touchant les travaux des commissions"></span></span>'
+var libelleActiviteReporteeDateUlterieure = 'Activité reportée à une date ultérieure';
+
+var libelleCalAPartirDe = 'À partir de';
+var libelleCalEnCours = 'En cours';
+var libelleCalDebut = 'Début';
+
+var libelleDuree = 'Durée :';
+
+    var libelleAucunVideo = "La recherche n’a donné aucun résultat.";
+    var libelleAucuneAutreActiviteEnDirect = "Aucune autre activité en direct."
+
+var libelleNombreResultat = 'Nombre de résultats&nbsp;';
+var libelleMotsCles = 'Mots clés';
+var libelleCategorie = 'Catégorie';
+var libelleSession = 'Session';
+var libelleDateOuPeriode = 'Date ou période&nbsp;: ';
+var libelleAPartirDu = 'À partir du';
+var libelleJusquAu = "Jusqu'au";
+
+
+
+var arrCalendrierLblGeneral = {
+                                "lblCalOuvrir": "Ouvrir",
+                                "lblCalFermerEntete": "Fermer"       
+                            };
+var arrCalLblJoursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var arrCalLblMoisAnnee = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+var arrCalLblMoisAnneeAbr = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+var lblCalAucuneActivite = "Aucune activité au calendrier aujourd'hui.";
+var lblCalAucuneActiviteType = "Aucune activité de cette catégorie n'est prévue aujourd'hui."
+var lblCalDifficulteTechnique = "Le calendrier n'est pas accessible en ce moment. Veuillez réessayer dans quelques minutes.";
+var lblCalActPrivee = "Activité privée"; 
+var lblCalActSurInvitation = "Sur invitation";
+var lblCalActAnnulee = "Activité annulée"; 
+var lblCalEnDirect = "En direct";
+var lblCalTranscription = "Transcription";
+var lblCalCommunique = "Communiqué";
+var lblCalToutesActivites = "Toutes les activités";
+var lblCalVideo = "Vidéo";
+var lblCalAudio = "Audio";
+
+// Libellés du date picker
+
+    Date.dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    Date.abbrDayNames = ['DIM', 'LUN', 'MAR', 'MER', 'JEU', 'VEN', 'SAM'];
+    Date.monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+    Date.abbrMonthNames = ['JA', 'FE', 'MR', 'AR', 'MA', 'JN', 'JL', 'AU', 'SE', 'OC', 'NO', 'DE'];
+	Date.firstDayOfWeek = 7;
+
+
+// Libellés pour treeview - overrider dans les pages au besoin
+var lblOuvrirTout = 'Afficher tout le contenu';
+var lblFermerTout = 'Masquer tout le contenu';
+
+// Libelles pour paginateur
+var _lblPaginationPage = 'Page';
+var _lblPaginationDe = 'de';
+
+// URL drapeau generique 
+var _urlDrapeauGenerique = '/Images/Temp/icoDrapeaux.gif'
+
+// Pour visionneuse: libelle 'Image' utilise dans slimbox2.js
+var lblVisionneuseTermeImage = "Image {x} de {y}"; 
+
+// Libelle pour le bouton Fermer de la visionneuse
+var libelleCloseLink = "Fermer";
+
+// Libellés pour fermer les bulles d'aide
+var lblBulleAideFermer = "[x] Fermer";
+
+var urlBoutonCalendrier = '/Images/btnCalendrier.gif';
+
+
+var urlObtenirVisionneusePhotos = '/Gabarits/InfrastructuresAvecVisionneuse.aspx/ObtenirVisionneusePhotos';
+var lblAlbumPhotos = 'Album de photos';
+var lblAgrandir = 'Agrandir';
+
+// Le script d'effet ne fonctionne pas sous Internet Explorer, ce script distingue ie des autres fureteurs 
+ if ($.browser.msie) {
+    }
+    else {
+        document.write("<script type='text\/javascript' src='\/scripts/jquery.easing.min.js?version=1.3'><\/script>")
+    }
+//]]>
+ 
+    var valEtatDeputeAncienDeputes = "AncienDeputes";
+
+    var urlObtenirTypeTravauxParSessionLegislature = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParSessionLegislature';
+    var urlObtenirTypeTravauxParPeriode = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeTravauxParPeriode';
+    var urlObtenirTypeDocumentParTypeTravaux = '/Gabarits/RechercheAvancee.aspx/ObtenirTypeDocumentParTypeTravaux';
+    var urlObtenirSousCategorieVideoParCategorieVideo = '/Gabarits/RechercheAvancee.aspx/ObtenirSousCategorieVideoParCategorieVideo';
+    
+    var idsSectionRechercheTravauxParlementaires = ['9',
+                                                        '27',
+                                                        '29',
+                                                        '31',
+                                                        '33'];
+
+    var idCategorieDocumentJournauxDebats = '13'
+
+    var msgFormatDateInvalide = "Veuillez saisir une date valide selon le format aaaa-mm-jj.";
+    var msgPeriodeInvalide = "La date de début doit précéder la date de fin.";
+    var msgPeriodeDebutFutur = "La date doit être antérieure ou égale à la date du jour.";
+
+    $(document).ready(function(){
+        $("a").each(function(i, e) {
+            var href = $(e).attr('href');
+            if(href && href.search(/^http:/) == 0){
+                $(e).attr('href', "https:" + href.substring(5));
+            }
+        })
+
+        $("img").each(function (i, e) {
+            var src = $(e).attr('src');
+            if (src && src.search(/^http:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(5));
+            }
+            if (src && src.search(/^https+:/) == 0) {
+                $(e).attr('src', "https:" + src.substring(src.indexOf(":") + 1));
+            }
+        })
+    });
+</script>
+
+<!-- Gestion des cookies. Documentation : http://stilbuero.de/jquery/cookie/ -->
+<script type="text/javascript" src="/scripts/jquery.cookie.min.js"></script>
+
+<!-- Corrige les problème de z-index d'Internet Explorer. Doc: http://brandonaaron.net/jquery/plugins/bgiframe/docs/ -->
+<script type="text/javascript" src="/scripts/jquery.bgiframe.min.js"></script>
+
+<!-- Permet la gestion de l'objet date. -->
+<script type="text/javascript" src="/scripts/date.min.js"></script>
+
+<!-- Génère des paneaux (Tabs) à partir d'une liste (ul li). info et doc: http://docs.jquery.com/UI/Tabs-->
+<script type="text/javascript" src="/scripts/ui.tabs.js"></script>
+
+<!-- Génère l'affichage dynamique d'un liste (ul li). info et doc: http://bassistance.de/jquery-plugins/jquery-plugin-treeview/ -->
+<script type="text/javascript" src="/scripts/jquery.treeview.pack.min.js"></script>
+
+<!-- Permet de modifier la feuille de style. info et doc:http://kelvinluck.com/article/switch-stylesheets-with-jquery -->
+<script type="text/javascript" src="/scripts/StyleSwitcher.min.js"></script>
+
+<!-- Permet de modifier l'apparence des selects. info et doc:http://www.lotsofcode.com/javascript-and-ajax/jquery-select-box-skin.htm -->
+<script type="text/javascript" src="/scripts/jquery.skinned-select.min.js"></script>
+
+<!-- Permet de créer des masques sur les formulaires info et doc:http://digitalbush.com/projects/masked-input-plugin/ -->
+<script type="text/javascript" src="/scripts/jquery.maskedinput-1.3.js"></script>
+
+<!-- Permet de générer un calendrier. docs et info : http://kelvinluck.com/assets/jquery/datePicker/v2/demo/datePickerLocalised.html -->
+<script type="text/javascript" src="/scripts/jquery.datePicker.js"></script>
+
+<!-- Permet de gérer les bulles d'aide en popup -->
+<script type="text/javascript" src="/scripts/BulleAide.min.js"></script>
+
+<!-- Permet de modifier l'apparence des scrollbars. info et doc: http://www.kelvinluck.com/assets/jquery/jScrollPane/jScrollPane.html -->
+<script type="text/javascript" src="/scripts/jScrollPane.min.js"></script>
+
+<!-- Permet d'utiliser des PNG transparent dans IE 6 et 5.5. info et doc: http://jquery.andreaseberhard.de/pngFix/ -->
+<script type="text/javascript" src="/scripts/jquery.pngFix.min.js"></script>
+
+<!-- Permet de trier et de paginer des tableaux. docs et info : http://tablesorter.com -->
+<script type="text/javascript" src="/scripts/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery.tablesorter.pager.min.js"></script>
+
+<script type="text/javascript" src="/scripts/jquery.uilock.min.js"></script>
+
+<!-- script general -->
+<script type="text/javascript" src="/scripts/AssNat.min.js"></script>
+
+<script type="text/javascript" src="/Scripts/moment.min.js"></script>
+
+<!-- evenements et gestion du calendrier -->
+<script type="text/javascript" src="/scripts/Calendrier.min.js"></script>
+
+<!-- sert uniquement pour débugger les objets JSON. -->
+<script type="text/javascript" src="/scripts/json.min.js"></script>
+
+
+
+
+
+
+    <!-- Placeholder: permet d'ajouter des enonces specifiques dans le HEAD -->
+    
+
+    <!-- Feuille de style pour le layout de la page -->
+    
+	<link href="/styles/GabGauche-mCentre-mDroite-m.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        table {border:1px solid #000000;border-collapse:collapse;}
+        table td {border:1px solid #000000;padding:5px;}
+        table td[align="center"] {text-align:center;}
+        table td[align="right"] {text-align:right;}       
+       
+    </style>  
+
+
+    <!-- Placeholder: remplace automatiquement selon rubrique -->
+    <title>
+	
+            Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec
+        
+</title>
+        
+        <meta property="og:title" content="Journal des débats de la Commission de la santé et des services sociaux - Assemblée nationale du Québec" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19205" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19207" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19209" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19211" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19213" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19215" />
+<meta property="og:image" content="https://www.assnat.qc.ca/Media/Process.aspx?process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz&amp;asset=ANQ.Vigie.Bll.Image_19217" />
+
+    <script type="text/javascript" src="/scripts/Recherche.min.js"></script><style type="text/css">
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_1 { text-decoration:none; }
+	.ctl00_SousNavigationPlaceHolder_SousNavigation_Menu1_2 {  }
+
+</style></head>
+
+<!-- Placeholder: permet de specifier un tag body personnalise (default: <body>) -->
+
+    <body class="impressionGrossie">
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X47H2N" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form method="post" action="/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-191010.html" id="aspnetForm">
+<div>
+<input type="hidden" name="versionProgrammationEnCache" id="versionProgrammationEnCache" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTA4Mzc3OTI4D2QWAmYPZBYCAgMQZGQWAgIID2QWAgIBD2QWAgIFDxBkEBVSE1RvdXRlcyBsZXMgc2Vzc2lvbnM/U2Vzc2lvbiBlbiBjb3VycyAtIDQzZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDUgbWFpIDIwMjYgLSApPzQzZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAyMDI1IC0gOCBhdnJpbCAyMDI2KUQ0M2UgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMjAyMiAtIDEwIHNlcHRlbWJyZSAyMDI1KT40MmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBvY3RvYnJlIDIwMjEgLSAyOCBhb8O7dCAyMDIyKUI0MmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjcgbm92ZW1icmUgMjAxOCAtIDEzIG9jdG9icmUgMjAyMSk7NDFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIwIG1haSAyMDE0IC0gMjMgYW/Du3QgMjAxOCk9NDBlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDMwIG9jdG9icmUgMjAxMiAtIDUgbWFycyAyMDE0KT4zOWUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMyBmw6l2cmllciAyMDExIC0gMSBhb8O7dCAyMDEyKUIzOWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTMgamFudmllciAyMDA5IC0gMjIgZsOpdnJpZXIgMjAxMSk8MzhlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDggbWFpIDIwMDcgLSA1IG5vdmVtYnJlIDIwMDgpPjM3ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMjAwNiAtIDIxIGbDqXZyaWVyIDIwMDcpOjM3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg0IGp1aW4gMjAwMyAtIDEwIG1hcnMgMjAwNik6MzZlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjIgbWFycyAyMDAxIC0gMTIgbWFycyAyMDAzKTkzNmUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMiBtYXJzIDE5OTkgLSA5IG1hcnMgMjAwMSk9MzVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjUgbWFycyAxOTk2IC0gMjEgb2N0b2JyZSAxOTk4KT8zNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjkgbm92ZW1icmUgMTk5NCAtIDEzIG1hcnMgMTk5Nik6MzRlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTcgbWFycyAxOTk0IC0gMTcganVpbiAxOTk0KTozNGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxOSBtYXJzIDE5OTIgLSAxMCBtYXJzIDE5OTQpPzM0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyOCBub3ZlbWJyZSAxOTg5IC0gMTggbWFycyAxOTkyKTkzM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICg4IG1hcnMgMTk4OCAtIDkgYW/Du3QgMTk4OSk/MzNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE2IGTDqWNlbWJyZSAxOTg1IC0gOCBtYXJzIDE5ODgpQDMyZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDE2IG9jdG9icmUgMTk4NCAtIDEwIG9jdG9icmUgMTk4NSk6MzJlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjMgbWFycyAxOTgzIC0gMjAganVpbiAxOTg0KT0zMmUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg5IG5vdmVtYnJlIDE5ODEgLSAxMCBtYXJzIDE5ODMpQTMyZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDMwIHNlcHRlbWJyZSAxOTgxIC0gMiBvY3RvYnJlIDE5ODEpOjMyZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxOSBtYWkgMTk4MSAtIDE4IGp1aW4gMTk4MSk9MzFlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoNSBub3ZlbWJyZSAxOTgwIC0gMTIgbWFycyAxOTgxKUAzMWUgbMOpZ2lzbGF0dXJlLCA1ZSBzZXNzaW9uICgyNCBvY3RvYnJlIDE5ODAgLSAyNCBvY3RvYnJlIDE5ODApOTMxZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDYgbWFycyAxOTc5IC0gMTgganVpbiAxOTgwKUIzMWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBmw6l2cmllciAxOTc4IC0gMjAgZsOpdnJpZXIgMTk3OSk+MzFlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBtYXJzIDE5NzcgLSAyMiBkw6ljZW1icmUgMTk3NylFMzFlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDE0IGTDqWNlbWJyZSAxOTc2IC0gMjMgZMOpY2VtYnJlIDE5NzYpPTMwZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG1hcnMgMTk3NiAtIDE4IG9jdG9icmUgMTk3Nik/MzBlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTggbWFycyAxOTc1IC0gMTkgZMOpY2VtYnJlIDE5NzUpPzMwZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDE0IG1hcnMgMTk3NCAtIDI4IGTDqWNlbWJyZSAxOTc0KUQzMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMjIgbm92ZW1icmUgMTk3MyAtIDIyIGTDqWNlbWJyZSAxOTczKT8yOWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxNSBtYXJzIDE5NzMgLSAyNSBzZXB0ZW1icmUgMTk3Myk5MjllIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBtYXJzIDE5NzIgLSAxNCBtYXJzIDE5NzMpQzI5ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDIzIGbDqXZyaWVyIDE5NzEgLSAyNCBkw6ljZW1icmUgMTk3MSk/MjllIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDkganVpbiAxOTcwIC0gMTkgZMOpY2VtYnJlIDE5NzApPjI4ZSBsw6lnaXNsYXR1cmUsIDVlIHNlc3Npb24gKDI0IGbDqXZyaWVyIDE5NzAgLSAxMiBtYXJzIDE5NzApQzI4ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDI1IGbDqXZyaWVyIDE5NjkgLSAyMyBkw6ljZW1icmUgMTk2OSlDMjhlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMjAgZsOpdnJpZXIgMTk2OCAtIDE4IGTDqWNlbWJyZSAxOTY4KUAyOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgyMCBvY3RvYnJlIDE5NjcgLSAyMCBvY3RvYnJlIDE5NjcpQDI4ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxIGTDqWNlbWJyZSAxOTY2IC0gMTIgYW/Du3QgMTk2Nyk+MjdlIGzDqWdpc2xhdHVyZSwgNmUgc2Vzc2lvbiAoMjUgamFudmllciAxOTY2IC0gMTggYXZyaWwgMTk2NilAMjdlIGzDqWdpc2xhdHVyZSwgNWUgc2Vzc2lvbiAoMjIgb2N0b2JyZSAxOTY1IC0gMjMgb2N0b2JyZSAxOTY1KT0yN2UgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5NjUgLSA2IGFvw7t0IDE5NjUpQDI3ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDE0IGphbnZpZXIgMTk2NCAtIDMxIGp1aWxsZXQgMTk2NCk8MjdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMjEgYW/Du3QgMTk2MyAtIDIzIGFvw7t0IDE5NjMpQTI3ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNSBqYW52aWVyIDE5NjMgLSAxMSBqdWlsbGV0IDE5NjMpPjI2ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEwIG5vdmVtYnJlIDE5NjAgLSAxMCBqdWluIDE5NjEpRTI2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgyMCBzZXB0ZW1icmUgMTk2MCAtIDIyIHNlcHRlbWJyZSAxOTYwKT4yNWUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICgxOCBub3ZlbWJyZSAxOTU5IC0gMTggbWFycyAxOTYwKT0yNWUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgxOSBub3ZlbWJyZSAxOTU4IC0gNSBtYXJzIDE5NTkpQjI1ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDEzIG5vdmVtYnJlIDE5NTcgLSAyMSBmw6l2cmllciAxOTU4KUMyNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTQgbm92ZW1icmUgMTk1NiAtIDIxIGbDqXZyaWVyIDE5NTcpQjI0ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDE2IG5vdmVtYnJlIDE5NTUgLSAyMyBmw6l2cmllciAxOTU2KUEyMGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoNyBvY3RvYnJlIDE5MzYgLSAxMiBub3ZlbWJyZSAxOTM2KT4xOGUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMCBqYW52aWVyIDE5MzMgLSAxMyBhdnJpbCAxOTMzKUIxOGUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMyBub3ZlbWJyZSAxOTMxIC0gMTkgZsOpdnJpZXIgMTkzMik8MTdlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoOCBqYW52aWVyIDE5MjkgLSA0IGF2cmlsIDE5MjkpPTE2ZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDExIGphbnZpZXIgMTkyNyAtIDEgYXZyaWwgMTkyNyk8MTZlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoNyBqYW52aWVyIDE5MjYgLSAyNCBtYXJzIDE5MjYpQDE2ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICgxNyBkw6ljZW1icmUgMTkyMyAtIDE1IG1hcnMgMTkyNClCMTVlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMjQgb2N0b2JyZSAxOTIyIC0gMjkgZMOpY2VtYnJlIDE5MjIpPTE1ZSBsw6lnaXNsYXR1cmUsIDNlIHNlc3Npb24gKDEwIGphbnZpZXIgMTkyMiAtIDIxIG1hcnMgMTkyMik9MTVlIGzDqWdpc2xhdHVyZSwgMmUgc2Vzc2lvbiAoMTEgamFudmllciAxOTIxIC0gMTkgbWFycyAxOTIxKUQxNWUgbMOpZ2lzbGF0dXJlLCAxcmUgc2Vzc2lvbiAoMTAgZMOpY2VtYnJlIDE5MTkgLSAxNCBmw6l2cmllciAxOTIwKT0xNGUgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICgyMSBqYW52aWVyIDE5MTkgLSAxNyBtYXJzIDE5MTkpQTE0ZSBsw6lnaXNsYXR1cmUsIDJlIHNlc3Npb24gKDQgZMOpY2VtYnJlIDE5MTcgLSA5IGbDqXZyaWVyIDE5MTgpQzE0ZSBsw6lnaXNsYXR1cmUsIDFyZSBzZXNzaW9uICg3IG5vdmVtYnJlIDE5MTYgLSAyMiBkw6ljZW1icmUgMTkxNik9MTNlIGzDqWdpc2xhdHVyZSwgNGUgc2Vzc2lvbiAoMTEgamFudmllciAxOTE2IC0gMTYgbWFycyAxOTE2KTsxM2UgbMOpZ2lzbGF0dXJlLCAzZSBzZXNzaW9uICg3IGphbnZpZXIgMTkxNSAtIDUgbWFycyAxOTE1KUIxM2UgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxMSBub3ZlbWJyZSAxOTEzIC0gMTkgZsOpdnJpZXIgMTkxNClDMTNlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDUgbm92ZW1icmUgMTkxMiAtIDIxIGTDqWNlbWJyZSAxOTEyKTwxMmUgbMOpZ2lzbGF0dXJlLCA0ZSBzZXNzaW9uICg5IGphbnZpZXIgMTkxMiAtIDMgYXZyaWwgMTkxMik9MTJlIGzDqWdpc2xhdHVyZSwgM2Ugc2Vzc2lvbiAoMTAgamFudmllciAxOTExIC0gMjQgbWFycyAxOTExKTkxMmUgbMOpZ2lzbGF0dXJlLCAyZSBzZXNzaW9uICgxNSBtYXJzIDE5MTAgLSA0IGp1aW4gMTkxMCk5MTJlIGzDqWdpc2xhdHVyZSwgMXJlIHNlc3Npb24gKDIgbWFycyAxOTA5IC0gMjkgbWFpIDE5MDkpOjExZSBsw6lnaXNsYXR1cmUsIDRlIHNlc3Npb24gKDMgbWFycyAxOTA4IC0gMjUgYXZyaWwgMTkwOCkVUgEwBDE2MjEEMTYxNwQxNjExBDE2MDcEMTU3OQQxMDc5Azc4OQM0OTkDNDkxAzQ4OQM0ODcDNDg1AzQ4MwM0ODEDNDc5AzQ3NwM0NzUDNDczAzQ3MQM0NjkDNDY3AzQ2NQM0NjMDNDYxAzQ1OQM0NTcDNDU1AzQ1MwM0NTEDNDQ5AzQ0NwM0NDUDNDQzAzQ0MQM0MzkDNDM3AzQzNQM0MzMDNDMxAzQyOQM0MjcDNDI1AzQyMwM0MjEDNDE5AzQxNwM0MTUDNDEzAzQxMQM0MDkDNDA3AzQwMwM0MDEDMzk5AzM5NwMzOTUDMzkzAzM5MQMzNTEDMzQzAzM0MQMzMzUDMzMxAzMyOQMzMjUDMzIzAzMyMQMzMTkDMzE3AzMxNQMzMTMDMzExAzMwOQMzMDcDMzA1AzMwMwMzMDEDMjk5AzI5NwMyOTUDMjkzFCsDUmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZGSR1zJt3oVoyUEzSRMlQn2fv9BTPw==" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusionData = 'typeActivite:\'9;11\', commission:\'\', mandat:\'\', mandatParent:\'\', estPageAccueil:\'true\'';var urlPageVideoAudio = '/fr/video-audio/index.html?activite={0}';//]]>
+</script>
+
+<script src="/Scripts/Travaux.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var urlObtenirIndicateurWebDiffusion = '/WebMethod/WebMethod.aspx/ObtenirIndicateurWebDiffusion';
+                                                                           var intervalleRafraichissementWebDiffusion = 60;//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="87D7EEFC" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAG/gQ9Ee+qmQCeIhOmxubVt13hH/puXvwl4FGZa6rYP8j7zfnYlPDIamE8E+dcJv2yP5J++CKenG+ic1PIaA5cTuL1134RC+RnzibeFXcPSMkirjG8og4fy2g9bI6NorM5K3aXyd+YwgKTVZuZwzdInb3sMEK8K8EnCeQkzFr+/RLvxPBAdO7j0VFemNI0qrFxSGYQ3iqRmRux+buuGhnzVY7jB7dHJwCIv8ngbmPGgPLujBTC+kP4kA+7KhxgVmvV5AheHVxIVrpDzljBaLS2bYKMFL9SoPHg7YnZGoSQYbC96mix2PM6mPVfuaAu2CCJfM4TAu5BVnX31Y0HHllueS87ErUi03NMo0hw7mxWyfT4Wv0wvqQZh4w3ykIvcMjsGFY5ybnihBy13K2K+tmuOs85eX2+hEhZ2vYUaE8BVLmvakhWjFT45S4k+tsa+fpSs4lbyX6yNqZ6z72mkN+uXbq6rMhqV0lkwDHk0NHAT+FCTZWSs07x5JPi066N3TA8r2W06Lr1lcPqDYyzfrmwaQGQ0psL1kP1GxKizeElEmecdwWtpPscZWtTpzZEnsfmzTqsCYzzzobfT8qdD7a/yPAypVkCmjXnJsda3SUW7qtzZGT+9Pc4mFOAq+/SX5/YRJ/K/ogEgmTY1DKUX4XxwaeYSR1/gThSYL8HvHZ/BXyQlkFwouIFKdfLNHGAWbjnoCvCU5+pJHtkl6m2WTUFVWJJA1MHBzQXG/f2gdX+bPdSgU/lArO4+wk4+DUCkKVOeGZp31cUQDQWmUDo2Su9MZmuSpA6pRzhnLkfV7xmjsWh9KQ+99mZMlQr7uUOHSboZ96a1A+LynNef/O7hu4b8K/qwysk0ivqUHKhoyAXpbbPoyn20EhaJbPgBEf3ZVcUKAehOEMbNchbHLxUU6Tby2GE3swtqAMtM9Fry5zPuv4s2htp1+4Q36YrsV6nkF5KbYkPbwAojZXFYBB3CBnXaLcA8rMefK0Y/7jpLorq+G3zWFkQ5HtZOokEDcDPi97PVKoXS0yltqZ5Mt5lUERLD0ZUxbspqy9ur6z14GkdnLsiW72+p8AC341YpjOF6yx34tM63Vq8Uhb3BcFtxuRpa9Z/2/NoNxOsUz7+Cxrjsc5oGnmEsM/D4EOnLIe/WslcimQBWL1FRHPFNiMvhdM0v4eAZR7NUE5tUcUKjzKUVe9yrlTuD7BkCKZ2iDxRJpz05DKHAeVGaY4lF6pQ80C00q+h3MqhJVAghw9aUxAP9AFqKPCv3SpPXmc+w5SYVVGfHISO1IQytQj+I+B5yTxyKDMamePfnz/uNjaSpU9JPJnmjae1Xh8FKcmg2idJphFrs2rSSYRoZTn2+cOD8w4uXzQjjSq+cSDSgaDEe7v2UjBmd+ZwDVApItvLzBJWHwjZB5xILY5bHbSTrcXHiVebPB9g6cu4OyM9Qs5qbyE84dYj4B2uxF3gcYOfMDoc/IM5xDi4UIFTQTW7H/NQ6Q6xAbuKSXYhAUdYa6kC0R+1fQ2GRiBPcJlTzg8NxJWsCbw6uucbfFDMLGnbdCRH+MJ2vwsmS8sru97GZmqUvbcHVLzytiWwmVJMxGxDYx3BYvanTW3eCivTHVUADoMWjvykFxDT4CYC59FxW5R+LQ+5YQRYaNU87G/tpDdG7FWLuikgjD4nQvKf3CUU6VYBceGVRXhuxTjI5KM0mwr/WKimhdzY8A+wjtd7aMChS5+OrgRzLvCqGmPpASCvMjFwhzzNbQIRw8L3/NFi18/kCZZw2UpxVoxwbRXaQXpnfKihg4oKRD6h/IK/nGDwv/kGpZjV82isGd3dAcv/ueAST3hCP86GZXGgNAxTvQghNtmUwi3qdsmkzpG6kDQmNjF8HEyhZeATYsYASiUoKMaqwsrpmofpInZdfVM8Qt1dp/EBcAAHbyNuUISQOWpWKTB/psFd8KeZh0ZHsoGQC6x3URnSZgoS0/dlVaU5w3pDNjnO8WiT1wNkzAklbI3/0P8OGPoyxOm889Q7znP6BhdVGBIvZkaEr2G/4QOQWC9vJ1rpH3X7bce5ChW68F6IqKPPbcgDlKF0/DnccJVDpVrjAQVSa8tk26+QeIKIHfPEFNh4D83b7JOlO17s6NcRRdnQh4CS9T6LrfhmAwa8aMvCy6BeNiYk5IPF8lnHDVfNs3InsR9ZiNQxCPs/GLIcLMwwcvL+T47+xzoOy/EIGp7k9Ex3NGCcNJapLgvmTepJXvTUKK8o43Uxx6bnZh4rvOSEFl1y0ae9T9E5j1Ej8KjAtJF6+QJ1bHt/jxVIp0MkJsBSeS9ENNitgEy6DgVUhH6Gbl9YQSK7JdqBfNSEaXgQkrrPpVv39xHWG7awjKWluncOURdTEzt1ZpZ4HjwdL44nSgz8dWHkeDfA==" />
+</div>
+    <div id="Wrap">
+
+        <!-- Utilitaires: impression, agrandir texte, recherche, etc -->
+        
+
+
+<script type="text/javascript">
+    var motCleDefaut = 'Rechercher';
+</script>
+
+<a name="haut"></a>
+<div id="enteteUtilitaire">
+    <div id="skip" class="skiplinks">
+        <a href="#ancreContenuPrincipal">Atteindre le contenu</a>
+        <a href="#ancreSousNavigation">Atteindre la navigation secondaire</a>               
+    </div>
+    <div class="listeUtilitaires listeUtilitaires2">
+        <ul>
+            <li class="Premier">
+                <a class="sanssouligne nePasRediriger icoMobile" href="https://m.assnat.qc.ca">
+                    <span class="styleHyperlien">Mobile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/fr/accueil/mediassociaux.html" class="sanssouligne icoMediasSociauxEntete">
+                    <span class="styleHyperlien" style="margin-right:45px;">Suivez-nous</span>
+                    <span class="visuallyhidden"> sur les médias sociaux, Facebook, X, Youtube</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="listeUtilitaires">
+        <ul>
+            <li><a id="A2" href="https://www.assnat.qc.ca/carrieres">Carrières</a></li>
+            <li><a href="/fr/nous-joindre.html" id="ctl00_Utilitaires_A1">Nous joindre</a></li>
+            <li>
+                <div class="outilRecherche">
+                    <label for="ctl00_Utilitaires_motCle" class="nepasafficher">Saisir un mot clé pour faire une recherche générale</label>
+                    <input type="text" id="ctl00_Utilitaires_motCle" class="outilRechercheMotCle" />
+                    <input onclick="RechercherMotCle();return false;" type="image" src="/Images/btnRecherche_of.gif" class="btnRechercheGlobal" title="Rechercher" alt="Rechercher"/>
+                </div>
+            </li>
+            <li>
+                <a onclick="LancerRechercheAvancee();return false;" tabindex="0">Recherche avancée</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function RechercherMotCle() {
+        var mot = $('#ctl00_Utilitaires_motCle');
+        if (mot.val() != "")
+        {
+            window.location = '/fr/recherche/recherche-avancee.html?SectionRecherche=-1&MotsCles=' + encodeURIComponent(htmlEscape(mot.val()));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var link = document.querySelector('a[onclick="LancerRechercheAvancee();return false;"]');
+
+        link.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                LancerRechercheAvancee();
+                event.preventDefault();
+            }
+        });
+    });
+
+    function LancerRechercheAvancee() {
+        var urlRechercheAvancee = '/fr/recherche/recherche-avancee.html';
+        window.location = urlRechercheAvancee + "?EstNouvelleRecherche=true";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Banniere: image d'entete -->
+        
+<div id="Banniere">
+	<a href="/fr/index.html" class="sanssouligne" title="Assemblée nationale du Québec - Retour à l&#39;accueil">
+    <img class="nepasafficher" width="88" height="58" title="Assemblée nationale du Québec - Retour à l'accueil" alt="Assemblée nationale du Québec - Retour à l'accueil" src='/images/transparent.gif' /></a>
+</div>
+
+
+        <!-- NavigationPrincipale: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleConteneur">
+    <div id="NavPrincipaleNiveau1">
+        <ul>
+            <li class="btnAccueil">
+                <a href="/fr/index.html" id="ctl00_NavigationPrincipale_hrfAcceuil">
+                    Accueil</a></li>
+            <li aria-haspopup="true" class='menuHoverParent btnDeputes'><a href="/fr/deputes/index.html" id="ctl00_NavigationPrincipale_hrfDeputes">
+                Députés</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10006.html">La présidente</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Liste des députés en fonction</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11861.html">Les députés depuis 1764</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10002.html#listeDeputes">Coordonnées des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10042.html">La fonction de député</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10014.html">Fonctions parlementaires des députés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10020.html">Composition des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10028.html">Membres du Bureau de l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10052.html">Indemnités et allocations</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/deputes/cerclefemmes/index.html">Cercle des femmes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12661.html">Cercle des jeunes parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10965.html">Cercle des ex-parlementaires de l’Assemblée nationale du Québec</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12603.html">Fondation Jean-Charles-Bonenfant </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12605.html">Fondation des parlementaires québécois Cultures à partager </a></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnTravaux'>
+                <a href="/fr/travaux-parlementaires/index.html" id="ctl00_NavigationPrincipale_hrfTravauxParlementaires">
+                    Travaux parlementaires</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12119.html">Calendrier hebdomadaire des travaux</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12213.html">Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11867.html">Index du Journal des débats</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Règlement et autres règles de procédure de l'Assemblée nationale</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10114.html#procedure">Propos non parlementaires</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10044.html">Assister aux travaux</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Travaux de l'Assemblée</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10118.html">Toutes les séances</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10192.html">Projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12215.html">Cheminement des projets de loi</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12779.html">Registre des votes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Travaux des commissions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des commissions</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11185.html">Mandats en cours</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10198.html">Documents déposés</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10140.html">Rapports et documents de réflexion</a></li>
+</ul>
+</li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnExprimez'>
+                <a href="/fr/exprimez-votre-opinion/index.html" id="ctl00_NavigationPrincipale_hrfExprimezVotreOpinion">
+                    Exprimez votre opinion!</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10999.html">Pétitions</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11001.html">Signer une pétition électronique</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11003.html">Consulter une pétition présentée à l'Assemblée</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10108.html">Lancer une pétition</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/exprimez-votre-opinion/petition/cheminement-petition">Suivre le cheminement d'une pétition</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10901.html">Consultations publiques</a></strong> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10901.html#CommentParticiper">Comment participer à une consultation</a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/10126.html">Liste des consultations publiques</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10997.html">Commenter un sujet à l'étude</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://www.assnat.qc.ca/fr/lien/10110.html">Présenter un projet de loi d'intérêt privé</a></strong></li>
+</ul>
+                        
+                </div>
+            </li>
+            <li aria-haspopup="true" class='menuHoverParent btnVideoAudio'>
+                <a href="/fr/video-audio/index.html" id="ctl00_NavigationPrincipale_hrfVideoAudio">
+                    Vidéo</a>
+                <div class='menuHoverEnfant'>
+                    
+                            <ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12541.html"><strong>En direct et webdiffusions à venir</strong></a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12543.html"><strong>Archives des travaux et activités parlementaires</strong></a> 
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12545.html">Travaux de l'Assemblée </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12559.html">Travaux des commissions</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12547.html">Activités de presse </a></li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12549.html">Activités spéciales et institutionnelles</a> </li>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12551.html">Députés</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12553.html"><strong>Le Canal de l'Assemblée</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12555.html"><strong>Émissions et capsules promotionnelles</strong></a></li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/12561.html"><strong>Espace jeunesse</strong></a> </li>
+</ul>
+<ul>
+<li><a href="https://www.assnat.qc.ca/fr/lien/11183.html"><strong>Commander un extrait</strong></a> </li>
+</ul>
+                        
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- PlaceHolder: permet de masquer le calendrier sommaire (defaut: s'affiche) -->
+        
+				
+
+<script type="text/javascript">
+</script>
+
+<div class="calendrier calSommaire" id="Calendrier">
+    <div class="titreCalendrier" id="TitreCalendrier">
+        <ul>
+            <li class="btnCalendrier" id="btnCalendrier">
+                <a href="javascript:void(0)" id="ctl00_CalendrierSommaire_CalendrierSommaire1_LienCalendrier">
+                    Calendrier
+                    <p class="libelleOuvrirFermer">
+                    Ouvrir</p></a>
+            </li>
+        </ul>
+    </div>
+    <div class="contenuCalendrier" id="ContenuCalendrier">
+        <div class="contenuCalendrierInterne" style="display: none">
+            <div class="overlayCalendrier">
+                <p class="contenuOverlay">
+                    <img src="/Images/lightbox/loading.gif" alt="Chargement en cours"
+                        title="Chargement en cours" />
+                </p>
+            </div>
+            <div class="blocAssembleeEnDirect">
+                <ul class="listeIconesHorizontale">
+                    <li id="IconeEnDirectCalendrier" class="icoEnDirectInactif"><span id="spnEnDirectCalendrier" tabindex="0">
+                        En direct</span></li>
+                    <li><a class="anchorCalendrierDetaille" href='/fr/calendrier-detaille.html'>
+                        Calendrier détaillé</a></li>
+                </ul>
+            </div>
+            <div class="blocNavigateurDates">
+                <div>
+                    <p id="ConteneurCalendrierPopup">
+                        <span class="calendrierPopup"></span>
+                    </p>
+                    <h2 id="TitreDateDuJour">_date_du_jour
+                    </h2>
+                </div>
+                <ul>
+                    <li class="versGauche"><a href="#" class="dateNavigateur fleche" id="dateNavGauche"><img alt="Semaine précédente" title="Semaine précédente"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavDi" title="_dimanche" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">DIM</span><br />
+                        <span class="libelleDate">6</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavLu" title="_lundi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">LUN</span><br />
+                        <span class="libelleDate">7</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMa" title="_mardi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MAR</span><br />
+                        <span class="libelleDate">8</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavMe" title="_mercredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">MER</span><br />
+                        <span class="libelleDate">9</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavJe" title="_jeudi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">JEU</span><br />
+                        <span class="libelleDate">10</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavVe" title="_vendredi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">VEN</span><br />
+                        <span class="libelleDate">11</span></a></li>
+                        
+                    <li><a class="dateNavigateur" id="dateNavSa" title="_samedi" href="#">
+                        <span class="overlayJour overlayJourSommaire"></span>
+                        <span class="libelleJournee">SAM</span><br />
+                        <span class="libelleDate">12</span></a></li>
+                        
+                    <li class="versDroite"><a href="#" class="dateNavigateur fleche" id="dateNavDroite">
+                        <img alt="Semaine suivante" title="Semaine suivante"
+                        src='/Images/transparent.gif' width="15" height="25"/></a></li>
+                </ul>
+                <span class="aujourdhui"><a class="aujourdhuiLien" href=''>
+                    Aujourd'hui</a></span>
+            </div>
+            <hr />
+            <div class="blocEnCours" style="display: none">
+                <div class="blocEnCoursTitre">
+                    <h3 id="HeureEnCours" class="heure">_heure_en_cours
+                    </h3>
+                    <h3>
+                        En cours</h3>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocActivitesDuJour">
+                <h3><label for="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite">Activités du jour</label></h3>
+                <div class="my-skinnable-select">
+                    <select name="ctl00$CalendrierSommaire$CalendrierSommaire1$selectFiltreCategorieActivite" id="ctl00_CalendrierSommaire_CalendrierSommaire1_selectFiltreCategorieActivite" class="selectFiltreCategorieActivite">
+	<option selected="selected" value="*"></option>
+
+</select>
+                </div>
+                <div class="boiteDefilante">
+                </div>
+            </div>
+            <div class="blocExpositions" style="display: none">
+                <h3>
+                    Exposition(s)</h3>
+                <div id="listeExpositions">
+                </div>
+            </div>
+            <div class="blocSurLesTours" id="BlocSurLesTours" style="display: none">
+                <h3>
+                    Drapeau(x) sur l'hôtel du Parlement</h3>
+                <div id="listeDrapeaux">
+                </div>
+            </div>
+        </div>
+        <p id="calendrierNoJs">
+            L'utilisation du calendrier requiert que Javascript soit activé dans votre navigateur.<br />
+            <a href='/fr/aide/aide-recherche.html#javascript'>
+                Pour plus de renseignements</a>
+        </p>
+    </div>
+</div>
+
+			
+
+        <!-- NavigationPrincipaleNiveau2: menu horizontal -->
+        
+
+<div id="NavigationPrincipaleNiveau2Conteneur">
+    <div id="NavPrincipaleNiveau2">
+        <ul>
+            <li class='' id="lienABC"><a href="/fr/abc-assemblee/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfABCDeLassemblee">
+                L'ABC de l'Assemblée</a></li>
+            <li class='' id="lienVisiteurs"><a href="/fr/visiteurs/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfVisiteurs">
+                Visiteurs</a></li>
+            <li class='' id="lienRestaurants"><a href="/fr/visiteurs/restaurants/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfRestaurants">
+                Restaurants</a></li>
+            <li class='' id="lienActualites"><a href="/fr/actualites-salle-presse/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfActualiteEtSalleDePresse">
+                Actualités et salle de presse</a></li>
+            <li class='' id="lienBibliotheque">
+                <a href="/fr/bibliotheque/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfBibliotheque">
+                    Bibliothèque</a></li>
+            <li class='' id="lienPublications">
+                <a href="/fr/publications/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfPublications">
+                    Publications</a></li>
+            <li class='' id="lienEducatives">
+                <a href="http://www.paricilademocratie.com" id="ctl00_NavigationPrincipaleNiveau2_hrfActivitesEducatives">
+                    Éducation</a></li>
+            <li class='' id="lienInternational">
+                <a href="/fr/diplomatie/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfInternational">
+                    Diplomatie</a></li>
+            <li class='' id="lienHistoire"><a href="/fr/patrimoine/index.html" id="ctl00_NavigationPrincipaleNiveau2_hrfHistoire">
+                Histoire</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- FilAriane: affiche le fil d'ariane -->
+        
+				
+<div id="FilAriane" class="FilAriane">
+<span id="ctl00_FilAriane_FilAriane1_SiteMapPath1"><span><a href="/fr/index.html">Accueil</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/index.html">Travaux parlementaires</a></span><span> &gt; </span><span><a href="/fr/travaux-parlementaires/commissions/index.html">Travaux des commissions</a></span><span> &gt; </span><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span></span>
+</div>
+			
+
+        
+            
+
+        <!-- Ancre pour le "skiplink atteindreSousNavigation" -->
+        <div id="divAncreSousNavigation" class="skipLinks">
+            <a name="ancreSousNavigation" id="ancreSousNavigation"></a>
+        </div>
+
+        <div class="ColGauche colonne">
+
+            <!-- PlaceHolder: permet de masquer la navigation secondaire (defaut: s'affiche) -->
+            
+                    
+<div id="SousNavigation" class="ContenuNavigation SousNavigation">
+
+
+	
+	<ul>
+		<li>
+			<h2><a href="/fr/travaux-parlementaires/index.html" class="selected">
+				Travaux parlementaires</a></h2>
+			<ul>
+				<li>
+					<a href="/fr/travaux-parlementaires/journaux-debats.html" class="">
+						Journal des débats </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/journaux-debats/index-jd/index.html" class="">
+								Index du Journal des débats</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/assemblee-nationale/index.html" class="">
+						Travaux de l'Assemblée</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/registre-des-votes/index.html" class="">
+								Registre des votes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/commissions/index.html" class="selected">
+						Travaux des commissions</a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cap/index.html" class="">
+								Administration publique</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/capern/index.html" class="">
+								Agriculture, pêcheries, énergie et ressources naturelles</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cat/index.html" class="">
+								Aménagement du territoire</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/can/index.html" class="">
+								Assemblée nationale</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cce/index.html" class="">
+								Culture et éducation</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cet/index.html" class="">
+								Économie et travail</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cfp/index.html" class="">
+								Finances publiques</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/ci/index.html" class="">
+								Institutions</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/crc/index.html" class="">
+								Relations avec les citoyens</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/csss/index.html" class="">
+								Santé et services sociaux</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/cte/index.html" class="">
+								Transports et environnement</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/mandats-encours-commissions.html" class="">
+								Mandats en cours</a>
+						</li>
+						<li>
+							<a href="/fr/travaux-parlementaires/commissions/rapports-documents-reflexion/index.html" class="">
+								Rapports et documents de réflexion</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/rapport/index.html" class="">
+						Cheminement des projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/projets-loi/index.html" class="">
+						Projets de loi</a>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/documents-deposes.html" class="">
+						Documents déposés </a>
+					<ul>
+						<li>
+							<a href="/fr/travaux-parlementaires/documents-deposes/depots-du-jour.html" class="">
+								Dépôts du jour </a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/fr/travaux-parlementaires/calendrier-travaux.html" class="">
+						Calendrier hebdomadaire des travaux </a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	
+  <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript">
+
+</script>        
+				
+
+            <!-- PlaceHolder: permet d'ajouter du contenu sous la navigation secondaire (defaut: vide) -->
+            
+	
+
+<div class="clear"></div>
+
+<div class="ContenuNavigation SousNavigation rechercheContextuelle travauxParlementaires">
+    <div class="overlay">
+        <div class="loading"></div>
+    </div>
+	<h2>Recherche avancée dans la section Travaux parlementaires</h2>
+
+		<div class="conteneurMotCle" data-champ="MotsCles">
+            <label for="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux">Mots clés</label>
+			<input name="ctl00$ColGauche$RechercheTravaux$txtTrouverTravaux" type="text" id="ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux" />	
+		</div>
+		
+	    <div class="floatLeft" data-champ="TypeDocument">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments">Type de documents</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxDocument">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeDocuments" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments" title="Certains documents déposés en commissions et à l’Assemblée sont numérisés en mode image. Leurs contenus ne sont donc pas disponibles à la recherche." class="BulleInfo">
+	<option selected="selected" value="-1">Tous les documents</option>
+	<option value="1|3">Documents d&#233;pos&#233;s</option>
+	<option value="9">Feuilletons et pr&#233;avis</option>
+	<option value="13">Journaux des d&#233;bats</option>
+	<option value="5">M&#233;moires</option>
+	<option value="7">Proc&#232;s-verbaux de l&#39;Assembl&#233;e</option>
+	<option value="11">Projets de loi</option>
+	<option value="15">Rapports et documents de consultation des commissions</option>
+
+</select>
+		    </div>
+        </div>
+
+    	<div class="floatLeft" data-champ="TypeTravaux">
+	        <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">Type de travaux</label>
+		    <div class="my-skinnable-select" id="CriteresTravauxType">
+			    <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixTypeTravaux" id="ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux">
+	<option value="0">Travaux de l&#39;Assembl&#233;e et des commissions</option>
+	<option value="-1">Travaux de l&#39;Assembl&#233;e</option>
+	<option value="-2">Travaux des commissions</option>
+	<option value="39">Commission de la culture et de l’&#233;ducation</option>
+	<option value="43">Commission de la sant&#233; et des services sociaux</option>
+	<option value="7">Commission de l&#39;administration publique</option>
+	<option value="37">Commission de l&#39;agriculture, des p&#234;cheries, de l&#39;&#233;nergie et des ressources naturelles</option>
+	<option value="13">Commission de l&#39;am&#233;nagement du territoire</option>
+	<option value="5">Commission de l&#39;Assembl&#233;e nationale</option>
+	<option value="21">Commission de l&#39;&#233;conomie et du travail</option>
+	<option value="23">Commission des finances publiques</option>
+	<option value="25">Commission des institutions</option>
+	<option value="41">Commission des relations avec les citoyens</option>
+	<option value="35">Commission des transports et de l&#39;environnement</option>
+	<option value="55">Sous-commission de la r&#233;forme parlementaire</option>
+
+</select>
+		    </div>
+		</div>
+    
+        <div class="champRecherche avancee" data-champ="Periode">
+            <label>Période</label>
+            <div class="champPeriode">
+		        <label class="libelleDe" for="ctl00_ColGauche_RechercheTravaux_txtDateDebut">De</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateDebut" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateDebut" class="champsDate choisirDate PeriodeDebut" />
+		        <label class="libelleA" for="ctl00_ColGauche_RechercheTravaux_txtDateFin" class="champRecherche avancee">À</label>
+		        <input name="ctl00$ColGauche$RechercheTravaux$txtDateFin" type="text" id="ctl00_ColGauche_RechercheTravaux_txtDateFin" title="
+       Si les champs &lt;b>De&lt;/b> et &lt;b>À&lt;/b> sont remplis, le résultat se situe entre les dates indiquées.&lt;br/>
+      Si seul le champ &lt;b>De&lt;/b> est rempli, le résultat se situe entre la date indiquée jusqu’à aujourd’hui.&lt;br/>
+      Si seul le champ &lt;b>À&lt;/b> est rempli, le résultat se situe avant la date indiquée.
+    " class="champsDate choisirDate BulleInfo PeriodeFin" />
+	        </div>
+            <div class="messageErreur cache">La date de début doit précéder la date de fin.</div>
+	    </div>
+
+        <div class="champRecherche avancee" data-champ="Legislature">
+            <label for="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature" class="labelOnTop">Session</label>
+            <div class="my-skinnable-select">
+	            <select name="ctl00$ColGauche$RechercheTravaux$ddlChoixSessionLegislature" id="ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature">
+	<option value="0">Toutes les sessions</option>
+	<option selected="selected" value="1621" title="Session en cours - 43e législature, 3e session (5 mai 2026 - )">Session en cours - 43e l&#233;gislature, 3e session (5 mai 2026 - )</option>
+	<option value="1617" title="43e législature, 2e session (30 septembre 2025 - 8 avril 2026)">43e l&#233;gislature, 2e session (30 septembre 2025 - 8 avril 2026)</option>
+	<option value="1611" title="43e législature, 1re session (29 novembre 2022 - 10 septembre 2025)">43e l&#233;gislature, 1re session (29 novembre 2022 - 10 septembre 2025)</option>
+	<option value="1607" title="42e législature, 2e session (19 octobre 2021 - 28 août 2022)">42e l&#233;gislature, 2e session (19 octobre 2021 - 28 ao&#251;t 2022)</option>
+	<option value="1579" title="42e législature, 1re session (27 novembre 2018 - 13 octobre 2021)">42e l&#233;gislature, 1re session (27 novembre 2018 - 13 octobre 2021)</option>
+	<option value="1079" title="41e législature, 1re session (20 mai 2014 - 23 août 2018)">41e l&#233;gislature, 1re session (20 mai 2014 - 23 ao&#251;t 2018)</option>
+	<option value="789" title="40e législature, 1re session (30 octobre 2012 - 5 mars 2014)">40e l&#233;gislature, 1re session (30 octobre 2012 - 5 mars 2014)</option>
+	<option value="499" title="39e législature, 2e session (23 février 2011 - 1 août 2012)">39e l&#233;gislature, 2e session (23 f&#233;vrier 2011 - 1 ao&#251;t 2012)</option>
+	<option value="491" title="39e législature, 1re session (13 janvier 2009 - 22 février 2011)">39e l&#233;gislature, 1re session (13 janvier 2009 - 22 f&#233;vrier 2011)</option>
+	<option value="489" title="38e législature, 1re session (8 mai 2007 - 5 novembre 2008)">38e l&#233;gislature, 1re session (8 mai 2007 - 5 novembre 2008)</option>
+	<option value="487" title="37e législature, 2e session (14 mars 2006 - 21 février 2007)">37e l&#233;gislature, 2e session (14 mars 2006 - 21 f&#233;vrier 2007)</option>
+	<option value="485" title="37e législature, 1re session (4 juin 2003 - 10 mars 2006)">37e l&#233;gislature, 1re session (4 juin 2003 - 10 mars 2006)</option>
+	<option value="483" title="36e législature, 2e session (22 mars 2001 - 12 mars 2003)">36e l&#233;gislature, 2e session (22 mars 2001 - 12 mars 2003)</option>
+	<option value="481" title="36e législature, 1re session (2 mars 1999 - 9 mars 2001)">36e l&#233;gislature, 1re session (2 mars 1999 - 9 mars 2001)</option>
+	<option value="479" title="35e législature, 2e session (25 mars 1996 - 21 octobre 1998)">35e l&#233;gislature, 2e session (25 mars 1996 - 21 octobre 1998)</option>
+	<option value="477" title="35e législature, 1re session (29 novembre 1994 - 13 mars 1996)">35e l&#233;gislature, 1re session (29 novembre 1994 - 13 mars 1996)</option>
+	<option value="475" title="34e législature, 3e session (17 mars 1994 - 17 juin 1994)">34e l&#233;gislature, 3e session (17 mars 1994 - 17 juin 1994)</option>
+	<option value="473" title="34e législature, 2e session (19 mars 1992 - 10 mars 1994)">34e l&#233;gislature, 2e session (19 mars 1992 - 10 mars 1994)</option>
+	<option value="471" title="34e législature, 1re session (28 novembre 1989 - 18 mars 1992)">34e l&#233;gislature, 1re session (28 novembre 1989 - 18 mars 1992)</option>
+	<option value="469" title="33e législature, 2e session (8 mars 1988 - 9 août 1989)">33e l&#233;gislature, 2e session (8 mars 1988 - 9 ao&#251;t 1989)</option>
+	<option value="467" title="33e législature, 1re session (16 décembre 1985 - 8 mars 1988)">33e l&#233;gislature, 1re session (16 d&#233;cembre 1985 - 8 mars 1988)</option>
+	<option value="465" title="32e législature, 5e session (16 octobre 1984 - 10 octobre 1985)">32e l&#233;gislature, 5e session (16 octobre 1984 - 10 octobre 1985)</option>
+	<option value="463" title="32e législature, 4e session (23 mars 1983 - 20 juin 1984)">32e l&#233;gislature, 4e session (23 mars 1983 - 20 juin 1984)</option>
+	<option value="461" title="32e législature, 3e session (9 novembre 1981 - 10 mars 1983)">32e l&#233;gislature, 3e session (9 novembre 1981 - 10 mars 1983)</option>
+	<option value="459" title="32e législature, 2e session (30 septembre 1981 - 2 octobre 1981)">32e l&#233;gislature, 2e session (30 septembre 1981 - 2 octobre 1981)</option>
+	<option value="457" title="32e législature, 1re session (19 mai 1981 - 18 juin 1981)">32e l&#233;gislature, 1re session (19 mai 1981 - 18 juin 1981)</option>
+	<option value="455" title="31e législature, 6e session (5 novembre 1980 - 12 mars 1981)">31e l&#233;gislature, 6e session (5 novembre 1980 - 12 mars 1981)</option>
+	<option value="453" title="31e législature, 5e session (24 octobre 1980 - 24 octobre 1980)">31e l&#233;gislature, 5e session (24 octobre 1980 - 24 octobre 1980)</option>
+	<option value="451" title="31e législature, 4e session (6 mars 1979 - 18 juin 1980)">31e l&#233;gislature, 4e session (6 mars 1979 - 18 juin 1980)</option>
+	<option value="449" title="31e législature, 3e session (21 février 1978 - 20 février 1979)">31e l&#233;gislature, 3e session (21 f&#233;vrier 1978 - 20 f&#233;vrier 1979)</option>
+	<option value="447" title="31e législature, 2e session (8 mars 1977 - 22 décembre 1977)">31e l&#233;gislature, 2e session (8 mars 1977 - 22 d&#233;cembre 1977)</option>
+	<option value="445" title="31e législature, 1re session (14 décembre 1976 - 23 décembre 1976)">31e l&#233;gislature, 1re session (14 d&#233;cembre 1976 - 23 d&#233;cembre 1976)</option>
+	<option value="443" title="30e législature, 4e session (16 mars 1976 - 18 octobre 1976)">30e l&#233;gislature, 4e session (16 mars 1976 - 18 octobre 1976)</option>
+	<option value="441" title="30e législature, 3e session (18 mars 1975 - 19 décembre 1975)">30e l&#233;gislature, 3e session (18 mars 1975 - 19 d&#233;cembre 1975)</option>
+	<option value="439" title="30e législature, 2e session (14 mars 1974 - 28 décembre 1974)">30e l&#233;gislature, 2e session (14 mars 1974 - 28 d&#233;cembre 1974)</option>
+	<option value="437" title="30e législature, 1re session (22 novembre 1973 - 22 décembre 1973)">30e l&#233;gislature, 1re session (22 novembre 1973 - 22 d&#233;cembre 1973)</option>
+	<option value="435" title="29e législature, 4e session (15 mars 1973 - 25 septembre 1973)">29e l&#233;gislature, 4e session (15 mars 1973 - 25 septembre 1973)</option>
+	<option value="433" title="29e législature, 3e session (7 mars 1972 - 14 mars 1973)">29e l&#233;gislature, 3e session (7 mars 1972 - 14 mars 1973)</option>
+	<option value="431" title="29e législature, 2e session (23 février 1971 - 24 décembre 1971)">29e l&#233;gislature, 2e session (23 f&#233;vrier 1971 - 24 d&#233;cembre 1971)</option>
+	<option value="429" title="29e législature, 1re session (9 juin 1970 - 19 décembre 1970)">29e l&#233;gislature, 1re session (9 juin 1970 - 19 d&#233;cembre 1970)</option>
+	<option value="427" title="28e législature, 5e session (24 février 1970 - 12 mars 1970)">28e l&#233;gislature, 5e session (24 f&#233;vrier 1970 - 12 mars 1970)</option>
+	<option value="425" title="28e législature, 4e session (25 février 1969 - 23 décembre 1969)">28e l&#233;gislature, 4e session (25 f&#233;vrier 1969 - 23 d&#233;cembre 1969)</option>
+	<option value="423" title="28e législature, 3e session (20 février 1968 - 18 décembre 1968)">28e l&#233;gislature, 3e session (20 f&#233;vrier 1968 - 18 d&#233;cembre 1968)</option>
+	<option value="421" title="28e législature, 2e session (20 octobre 1967 - 20 octobre 1967)">28e l&#233;gislature, 2e session (20 octobre 1967 - 20 octobre 1967)</option>
+	<option value="419" title="28e législature, 1re session (1 décembre 1966 - 12 août 1967)">28e l&#233;gislature, 1re session (1 d&#233;cembre 1966 - 12 ao&#251;t 1967)</option>
+	<option value="417" title="27e législature, 6e session (25 janvier 1966 - 18 avril 1966)">27e l&#233;gislature, 6e session (25 janvier 1966 - 18 avril 1966)</option>
+	<option value="415" title="27e législature, 5e session (22 octobre 1965 - 23 octobre 1965)">27e l&#233;gislature, 5e session (22 octobre 1965 - 23 octobre 1965)</option>
+	<option value="413" title="27e législature, 4e session (21 janvier 1965 - 6 août 1965)">27e l&#233;gislature, 4e session (21 janvier 1965 - 6 ao&#251;t 1965)</option>
+	<option value="411" title="27e législature, 3e session (14 janvier 1964 - 31 juillet 1964)">27e l&#233;gislature, 3e session (14 janvier 1964 - 31 juillet 1964)</option>
+	<option value="409" title="27e législature, 2e session (21 août 1963 - 23 août 1963)">27e l&#233;gislature, 2e session (21 ao&#251;t 1963 - 23 ao&#251;t 1963)</option>
+	<option value="407" title="27e législature, 1re session (15 janvier 1963 - 11 juillet 1963)">27e l&#233;gislature, 1re session (15 janvier 1963 - 11 juillet 1963)</option>
+	<option value="403" title="26e législature, 2e session (10 novembre 1960 - 10 juin 1961)">26e l&#233;gislature, 2e session (10 novembre 1960 - 10 juin 1961)</option>
+	<option value="401" title="26e législature, 1re session (20 septembre 1960 - 22 septembre 1960)">26e l&#233;gislature, 1re session (20 septembre 1960 - 22 septembre 1960)</option>
+	<option value="399" title="25e législature, 4e session (18 novembre 1959 - 18 mars 1960)">25e l&#233;gislature, 4e session (18 novembre 1959 - 18 mars 1960)</option>
+	<option value="397" title="25e législature, 3e session (19 novembre 1958 - 5 mars 1959)">25e l&#233;gislature, 3e session (19 novembre 1958 - 5 mars 1959)</option>
+	<option value="395" title="25e législature, 2e session (13 novembre 1957 - 21 février 1958)">25e l&#233;gislature, 2e session (13 novembre 1957 - 21 f&#233;vrier 1958)</option>
+	<option value="393" title="25e législature, 1re session (14 novembre 1956 - 21 février 1957)">25e l&#233;gislature, 1re session (14 novembre 1956 - 21 f&#233;vrier 1957)</option>
+	<option value="391" title="24e législature, 4e session (16 novembre 1955 - 23 février 1956)">24e l&#233;gislature, 4e session (16 novembre 1955 - 23 f&#233;vrier 1956)</option>
+	<option value="351" title="20e législature, 1re session (7 octobre 1936 - 12 novembre 1936)">20e l&#233;gislature, 1re session (7 octobre 1936 - 12 novembre 1936)</option>
+	<option value="343" title="18e législature, 2e session (10 janvier 1933 - 13 avril 1933)">18e l&#233;gislature, 2e session (10 janvier 1933 - 13 avril 1933)</option>
+	<option value="341" title="18e législature, 1re session (3 novembre 1931 - 19 février 1932)">18e l&#233;gislature, 1re session (3 novembre 1931 - 19 f&#233;vrier 1932)</option>
+	<option value="335" title="17e législature, 2e session (8 janvier 1929 - 4 avril 1929)">17e l&#233;gislature, 2e session (8 janvier 1929 - 4 avril 1929)</option>
+	<option value="331" title="16e législature, 4e session (11 janvier 1927 - 1 avril 1927)">16e l&#233;gislature, 4e session (11 janvier 1927 - 1 avril 1927)</option>
+	<option value="329" title="16e législature, 3e session (7 janvier 1926 - 24 mars 1926)">16e l&#233;gislature, 3e session (7 janvier 1926 - 24 mars 1926)</option>
+	<option value="325" title="16e législature, 1re session (17 décembre 1923 - 15 mars 1924)">16e l&#233;gislature, 1re session (17 d&#233;cembre 1923 - 15 mars 1924)</option>
+	<option value="323" title="15e législature, 4e session (24 octobre 1922 - 29 décembre 1922)">15e l&#233;gislature, 4e session (24 octobre 1922 - 29 d&#233;cembre 1922)</option>
+	<option value="321" title="15e législature, 3e session (10 janvier 1922 - 21 mars 1922)">15e l&#233;gislature, 3e session (10 janvier 1922 - 21 mars 1922)</option>
+	<option value="319" title="15e législature, 2e session (11 janvier 1921 - 19 mars 1921)">15e l&#233;gislature, 2e session (11 janvier 1921 - 19 mars 1921)</option>
+	<option value="317" title="15e législature, 1re session (10 décembre 1919 - 14 février 1920)">15e l&#233;gislature, 1re session (10 d&#233;cembre 1919 - 14 f&#233;vrier 1920)</option>
+	<option value="315" title="14e législature, 3e session (21 janvier 1919 - 17 mars 1919)">14e l&#233;gislature, 3e session (21 janvier 1919 - 17 mars 1919)</option>
+	<option value="313" title="14e législature, 2e session (4 décembre 1917 - 9 février 1918)">14e l&#233;gislature, 2e session (4 d&#233;cembre 1917 - 9 f&#233;vrier 1918)</option>
+	<option value="311" title="14e législature, 1re session (7 novembre 1916 - 22 décembre 1916)">14e l&#233;gislature, 1re session (7 novembre 1916 - 22 d&#233;cembre 1916)</option>
+	<option value="309" title="13e législature, 4e session (11 janvier 1916 - 16 mars 1916)">13e l&#233;gislature, 4e session (11 janvier 1916 - 16 mars 1916)</option>
+	<option value="307" title="13e législature, 3e session (7 janvier 1915 - 5 mars 1915)">13e l&#233;gislature, 3e session (7 janvier 1915 - 5 mars 1915)</option>
+	<option value="305" title="13e législature, 2e session (11 novembre 1913 - 19 février 1914)">13e l&#233;gislature, 2e session (11 novembre 1913 - 19 f&#233;vrier 1914)</option>
+	<option value="303" title="13e législature, 1re session (5 novembre 1912 - 21 décembre 1912)">13e l&#233;gislature, 1re session (5 novembre 1912 - 21 d&#233;cembre 1912)</option>
+	<option value="301" title="12e législature, 4e session (9 janvier 1912 - 3 avril 1912)">12e l&#233;gislature, 4e session (9 janvier 1912 - 3 avril 1912)</option>
+	<option value="299" title="12e législature, 3e session (10 janvier 1911 - 24 mars 1911)">12e l&#233;gislature, 3e session (10 janvier 1911 - 24 mars 1911)</option>
+	<option value="297" title="12e législature, 2e session (15 mars 1910 - 4 juin 1910)">12e l&#233;gislature, 2e session (15 mars 1910 - 4 juin 1910)</option>
+	<option value="295" title="12e législature, 1re session (2 mars 1909 - 29 mai 1909)">12e l&#233;gislature, 1re session (2 mars 1909 - 29 mai 1909)</option>
+	<option value="293" title="11e législature, 4e session (3 mars 1908 - 25 avril 1908)">11e l&#233;gislature, 4e session (3 mars 1908 - 25 avril 1908)</option>
+
+</select>
+	        </div>
+        </div>
+
+		<div align="right" class="btnRechercheContextuelle">
+			<input type="button" onclick="RechercheTravaux()" value="Rechercher" class="btnSoumettre" />
+		</div>
+</div>
+
+
+<script type="text/javascript">
+    var idSessionLegislatureCourante = '1621'
+
+    $(document).ready(function () {
+        InitialiserRechercheTravauxParlementaires();
+        $("input.champMotCle, [data-champ] input, [data-champ] select]").keypress(function (e) {
+            if (e && e.keyCode == 13) {
+                RechercheTravaux();
+                return false;
+            }
+        });
+    })
+
+//<![CDATA[
+    String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); };
+
+    function RechercheTravaux() {
+        if (!ValiderPeriode())
+            return;
+
+        var motsCles = $('#ctl00_ColGauche_RechercheTravaux_txtTrouverTravaux');
+
+        var queryString = "";
+        queryString = queryString + "SectionRecherche=9";
+        
+        if (motsCles.val() != "")
+            queryString = queryString + "&MotsCles=" + encodeURIComponent(htmlEscape(motsCles.val()));
+        
+        var typeTravaux = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeTravaux');
+        queryString = queryString + "&TypeTravaux=" + typeTravaux.val();
+            
+        var typeDocuments = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixTypeDocuments');
+        queryString = queryString + "&TypeDocument=" + typeDocuments.val();
+
+        var dateDebut = $('#ctl00_ColGauche_RechercheTravaux_txtDateDebut');
+        var dateFin = $('#ctl00_ColGauche_RechercheTravaux_txtDateFin');
+        if (dateDebut.val() != "" || dateFin.val() != "")
+        {
+            queryString = queryString + "&PeriodeDebut=" + dateDebut.val();
+            queryString = queryString + "&PeriodeFin=" + dateFin.val();
+            queryString = queryString + "&Legislature=0";
+        }
+        else
+        {
+            var sessionLegislature = $('#ctl00_ColGauche_RechercheTravaux_ddlChoixSessionLegislature');
+            if (sessionLegislature.val() == "-1") {
+                sessionLegislature.get(0).selectedIndex = 1;
+            }
+            queryString = queryString + "&Legislature=" + sessionLegislature.val();
+        }
+
+        //Appel de la page de recherche.
+        window.location = '/fr/recherche/recherche-avancee.html?' + queryString;
+    }
+ //]]>
+</script>
+
+
+
+        </div>
+
+        <div class="ColCentre colonne Contenu">
+
+            <!-- PlaceHolder: permet d'afficher une accroche (defaut: vide) -->
+            
+
+            <!-- PlaceHolder: conteneur pour tout le contenu excepte la navigation -->
+            
+	            				
+					<!-- PlaceHolder: permet de masquer les utilitaires d'Assemblee (defaut: s'affiche) -->
+					
+						
+
+<div class="utilitairesAssemblee" id="utilitairesAssemblee">
+    <div id="ColIconesUtilitairesAssemblee">
+        <div id="ColOutilsUtilitairesAssemblee">
+            <ul class="utilitairesAssemblee listeSansPuces">
+                <li>
+                    <a href="javascript:ImprimerBase()">
+			            <img alt="Imprimer la page" title="Imprimer la page"
+                        src='/Images/icones/partageImprimante.gif' width="16" height="16"/></a>
+                </li>
+                <li class="styleswitch">
+                    <a href="#Reguliere" rel="Reguliere" class="styleswitch Reguliere">
+                        <img alt="Taille du texte : régulière" title="Taille du texte : régulière" src='/Images/icones/retrecir.gif' width="16" height="16"/></a>
+                    <a href="#Grande" rel="Grande" title="Taille du texte : très grande" class="styleswitch Grande">
+                        <img alt="Taille du texte : très grande" title="Taille du texte : très grande" src='/Images/icones/agrandir.gif' width="16" height="16"/></a>
+                </li>
+                <li>
+                    <a href='/fr/fils-rss.html' class="nePasRediriger">
+                        <img alt="Fils RSS" title="Fils RSS"
+                        src='/Images/icones/partageRss.gif' width="16" height="16"/></a>
+                </li>
+            </ul>
+        </div>
+  
+            
+        <div id="ColPartageUtilitairesAssemblee">
+            <div class="boutonPartager">
+                <a href="#">Partager</a>
+            </div>
+            <ul class="utilitairesAssemblee listeSansPuces" style="z-index:999;">
+                <div class="fleche"></div>
+                    <li>
+                        <a target="_blank" href='https://www.facebook.com/sharer/sharer.php?u=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-191010.html' class="nePasRediriger">
+                            <img alt="Partager par Facebook" title="Partager par Facebook"
+                            src='/Images/icones/partageFacebook.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://x.com/intent/tweet?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-191010.html' class="nePasRediriger">
+                            <img alt="Partager par X" title="Partager par X"
+                            src='/Images/icones/partageTwitter.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='https://www.linkedin.com/sharing/share-offsite/?url=http://www.assnat.qc.ca%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-191010.html' class="nePasRediriger">
+                            <img alt="Partager par LinkedIn" title="Partager par LinkedIn"
+                            src='/Images/icones/partageLinkedin.gif' /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href='/fr/__envoyer-ami.html?lienurl=%2ffr%2ftravaux-parlementaires%2fcommissions%2fcsss-42-1%2fjournal-debats%2fCSSS-191010.html' class="nePasRediriger">
+                            <img alt="Partager par courriel" title="Partager par courriel"
+                            src='/Images/icones/partageCourriel.gif' /></a>
+                    </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div id="ColLiensUtilitairesAssemblee">
+        <ul class="listeIconesHorizontale listeIconesHorizontaleUtilitaires listeSansPuces">
+            <!-- Icone "Diagramme de l'Assemblée" -->
+		    
+			    <li class="icoDiagramme">
+                    <a href="/fr/document/19787.html">Diagramme de l'Assemblée</a>
+                </li>
+		    
+
+            <li id="IndicateurEnDirectPage">
+                <span id="spnEnDirect" class="styleHyperlien">
+		            <span id="IconeEnDirect" class="icoEnDirect"> </span>		
+		            En direct sur le Web
+	            </span>
+            </li>
+            <!-- Section "Vidéo et audio" -->
+            
+        </ul>
+    </div>
+</div>        
+					
+
+                    <!-- Ancre pour le "skiplink atteindreContenu" -->
+                    <div id="divAncreContenuPrincipal" class="skipLinks">
+                        <a name="ancreContenuPrincipal" id="ancreContenuPrincipal"></a>
+                    </div>
+
+                    <!-- Note sur les titres H1: dans ce gabarit, il y a 2 emplacements possibles pour le H1. Le cas
+						 le plus usuel est généré par défaut. Si necessaire, overrider dans la page ASPX -->
+			
+					<!-- PlaceHolder: permet d'afficher le titre sur les 2 colonnes. Cas plus rare. (default: vide) -->
+					
+
+					<!-- PlaceHolder: permet d'afficher le texte en dessus des colonnes -->
+					
+					
+					<div class="conteneurColonnesImbriquees">		
+                        <div class="colonneImbriquee imbGauche">
+
+							<!-- PlaceHolder: permet d'afficher le titre sur 1 colonne. Cas usuel. (default: s'affiche) -->
+							
+    <h1>
+	<span id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu"><a href="#ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"><img alt="Liens Ignorer la navigation" src="/WebResource.axd?d=4UaBqSIWkbOa0oKpfyVaroCfWw-gKpH7p94XAneRMXaNy_TmToGBBciOgGFLRbyIG0lHcoUothuOjD7lW_eFebb023o1&amp;t=638901627720898773" width="0" height="0" style="border-width:0px;" /></a><span>Journal des d&#233;bats de la Commission de la sant&#233; et des services sociaux</span><a id="ctl00_ColCentre_TitreSurUneColonne_SiteMapPathTitreContenu_SkipLink"></a></span></h1>
+
+
+							<!-- PlaceHolder: contenu principal de la page (defaut: vide) -->
+								
+    <h2>Version finale</h2>
+    
+	
+            <div class="boutonRetour">
+                <span>
+			        <a  href='https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/index.html'>Retour à la liste des séances du Journal des débats</a>
+			    </span>
+            </div>
+			<h2 class="titre2TravauxParl">
+				42<sup>e</sup> législature, 1<sup>re</sup> session
+				<br />
+				(27 novembre 2018 au 13 octobre 2021)
+			</h2>
+		
+	 
+	
+		
+			<h2>
+                Le jeudi 10 octobre 2019 -  Vol.&nbsp;45 N°&nbsp;33
+            </h2>
+			
+			
+					<p>
+				
+					<h3>Étude détaillée du projet de loi n° 28, Loi permettant la mise en place de certaines mesures en matière de santé et de services sociaux liées au statut géographique particulier de la région sociosanitaire de la Mauricie et du Centre-du-Québec</h3>
+					<br />
+				
+					</p>
+				
+			
+			
+               
+                <p>
+				    <a href="#debut_journal">Aller directement au contenu du Journal des débats</a>
+			    </p>
+            
+			    <h3>Table des matières</h3>
+			    <div class="tableMatieresJournal">
+				    <p><TableDesMatieres><p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;margin-left: 0cm;margin-right: 0cm;margin-top: 12.0pt;text-align: left;">
+  <a href="#_Toc146282145">
+    <span>Remarques préliminaires</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc146282146">
+    <span>Mme Danielle McCann</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc146282147">
+    <span>M. Enrico Ciccone</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc146282148">
+    <span>M. Sol Zanetti</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc146282149">
+    <span>M. Sylvain Gaudreault</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc146282150">
+    <span>M. Eric Lefebvre</span>
+  </a>
+</p>
+<p align="left" style="line-height: 12.0pt;margin-bottom: .0001pt;margin-left: 21.55pt;margin-right: 0cm;margin-top: 0cm;text-align: left;">
+  <a href="#_Toc146282151">
+    <span>M. André Fortin</span>
+  </a>
+  <span>
+    <span>
+      <br />
+      <br />
+    </span>
+  </span>
+</p>
+<p align="left" style="line-height: 12.0pt;margin: 0cm;margin-bottom: .0001pt;margin-left: 0cm;margin-right: 0cm;margin-top: 12.0pt;text-align: left;">
+  <a href="#_Toc146282152">
+    <span>Étude détaillée</span>
+  </a>
+</p>
+<p align="left" style="line-height: normal;margin: 0cm;margin-bottom: .0001pt;text-align: left;">M. Luc
+Provençal, président</p></TableDesMatieres></p>
+			    </div>
+			
+                <h2>
+				    <a name="debut_journal" class="ancreNommee">Journal des débats</a>
+			    </h2>
+			<Contenu><p style="text-align: justify">
+  <a name="Page00001"></a>
+  <i>(Onze
+ heures cinquante-quatre minutes)</i>
+</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Bon matin à tous. Ayant constaté le quorum, je déclare la séance de la
+ Commission de la santé et des
+ services sociaux ouverte. Je demande
+ à toutes les personnes dans la salle de bien vouloir éteindre la sonnerie
+ de leurs appareils électroniques.</p>
+<p style="text-align: justify">La
+ Commission est réunie afin de procéder à l'étude détaillée du projet de loi
+ n° 28, Loi permettant la mise en place de certaines mesures en matière de santé et de services sociaux liées au
+ statut géographique particulier de la région sociosanitaire de la
+ Mauricie et du Centre-du-Québec.</p>
+<p style="text-align: justify">Mme la secrétaire, y
+ a-t-il des remplacements?</p>
+<p style="text-align: justify">
+  <b>La
+ Secrétaire</b> <b>:</b> Oui, M. le Président. Mme Guillemette
+ (Roberval) est remplacée par M. Lefebvre (Arthabaska); M. Thouin (Rousseau), par M. Schneeberger (Drummond—Bois-Francs); M. Arseneau (Îles-de-la-Madeleine), par M. Gaudreault
+ (Jonquière).</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282145"></a>
+  <a name="_Toc102135829"></a>
+  <a name="_Toc101885122">Remarques préliminaires</a>
+</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Merci beaucoup. Nous débutons avec les remarques préliminaires. Alors,
+ Mme la ministre de la Santé et des Services sociaux, vous disposez de
+ 20 minutes.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282146"></a>
+  <a name="_Toc102135830"></a>
+  <a name="_Toc101885123">Mme Danielle McCann</a>
+</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Oui, merci. Merci, M. le Président. Alors, je veux saluer, évidemment, mes
+ collègues députés et l'ensemble des personnes
+ qui sont ici présentes pour l'étude
+ du projet de loi n° 28, l'étude détaillée. Alors, c'est pour cette raison, évidemment, qu'on est réunis
+ aujourd'hui.</p>
+<p style="text-align: justify">Et
+ le projet de loi n° 28, ça vise la mise en place de certaines mesures
+ liées au statut géographique particulier de la région sociosanitaire de
+ la Mauricie et du Centre-du-Québec. Il faut nous rappeler, M. le Président, que
+ le projet de loi n° 28 a été présenté
+ le 7 juin dernier. Nous avons reçu 10 mémoires, et sept groupes ont
+ été entendus lors des consultations particulières
+ tenues le 13 août. Je tiens à nouveau à remercier, au nom du gouvernement et en mon nom, les groupes
+ qui sont venus
+ présenter les points de vue de différents intervenants et partenaires du réseau
+ de la santé et des services sociaux. Nous
+ avons été à l'écoute. On a apprécié la qualité des réflexions et des échanges
+ concernant les mesures proposées par le projet de loi.</p>
+<p style="text-align: justify">L'étude détaillée en commission parlementaire, c'est
+ l'occasion d'examiner plus en détail les articles du projet de loi dans le
+ respect des principes et des intentions qui l'animent. Alors, permettez-moi à
+ nouveau, M. le Président, de rappeler les intentions
+ derrière ce projet de loi.</p>
+<p style="text-align: justify">Le
+ gouvernement propose des mesures liées au statut géographique particulier de la région
+ sociosanitaire de la Mauricie et du
+ Centre-du-Québec. Le territoire de la région sociosanitaire desservie par le
+ Centre intégré universitaire de santé
+ et de services sociaux de la Mauricie-et-du-Centre-du-Québec couvre
+ actuellement le territoire de l'ensemble de deux régions administratives, soit celle de la Mauricie et celle du
+ Centre-du-Québec. Il s'agit de la seule région sociosanitaire où l'on
+ observe cette situation au Québec.</p>
+<p style="text-align: justify">Nous
+ l'avons bien entendu lors des auditions : le Centre-du-Québec désire que
+ des actions soient posées afin que le caractère distinct de leur région soit
+ formellement reconnu. De plus, nous avons pu constater qu'un très fort
+ consensus se dégage en faveur des
+ mesures législatives proposées par le projet de loi n° 28. J'insiste, M.
+ le Président, sur les principes à la
+ base de cette proposition législative, soit la proximité, la responsabilisation
+ et la décentralisation. Ainsi, par ces principes, le projet de loi donne
+ au CIUSS de la Mauricie et du Centre-du-Québec des leviers additionnels afin
+ d'offrir des soins accessibles et adaptés aux besoins de la population de son
+ territoire.</p>
+<p style="text-align: justify">Rappelons
+ quelles sont les deux principales mesures législatives qui contribueraient à
+ répondre à la préoccupation des groupes entendus relativement à la
+ reconnaissance du caractère distinctif des régions administratives de la
+ Mauricie et du Centre-du-Québec. La première
+ est de prévoir que le président-directeur général d'un centre intégré de santé
+ et de services sociaux peut être
+ assisté par deux présidents-directeurs généraux adjoints lorsqu'un tel centre
+ se trouve dans une région sociosanitaire dont le territoire correspond à
+ l'ensemble du territoire de deux régions administratives du Québec. La deuxième
+ est de prévoir la possibilité de mettre sur pied deux forums de la population
+ plutôt qu'un.</p>
+<p style="text-align: justify">L'ajout
+ d'un poste de haut dirigeant, au plan organisationnel, permettrait d'avoir une
+ personne de la haute direction significative
+ pour les milieux communautaire, médical, municipal et politique dans chacune
+ des régions administratives. Ainsi
+ cela favoriserait la gestion de proximité ainsi que la concertation des
+ milieux. De même, le déploiement d'un forum additionnel fournirait une occasion de plus aux citoyens, élus, usagers
+ et travailleurs du réseau de la santé et des services sociaux de
+ s'exprimer et d'échanger sur les divers enjeux de leurs milieux respectifs.</p>
+<p style="text-align: justify">
+  <a name="Page00002"></a>Je
+ demeure convaincue que les mesures proposées vont améliorer la situation et
+ permettre une meilleure prise en compte des
+ particularités des deux régions administratives qui composent la région
+ sociosanitaire de la Mauricie et du Centre-du-Québec.</p>
+<p style="text-align: justify">Alors,
+ M. le Président, je tiens à préciser qu'un large consensus s'est également
+ dégagé des échanges quant au souhait de
+ ne pas refaire une réforme des structures. Ce qui importe au cours des
+ prochaines années, c'est de travailler tous ensemble afin d'améliorer
+ l'accessibilité à des soins et des services de qualité, pour le bénéfice de la
+ population québécoise.</p>
+<p style="text-align: justify">Lors des auditions
+ particulières, des préoccupations ont été soulevées quant au financement des
+ organismes communautaires. Bien que cet
+ enjeu ne soit pas abordé directement par le projet de loi, permettez-moi, M. le
+ Président, de rappeler que, dans le
+ cadre des mesures issues du budget 2019‑2020, le gouvernement a annoncé un
+ rehaussement significatif du
+ Programme de soutien aux organismes communautaires, le PSOC. Ce rehaussement
+ vise à soutenir encore davantage la
+ mission globale des organismes communautaires. Ainsi, grâce à cet
+ investissement, et avec la participation du CIUSSS de la Mauricie et
+ du-Centre-du-Québec, le financement des organismes communautaires sera
+ rééquilibré.</p>
+<p style="text-align: justify"> Je
+ vous rappelle, M. le Président, l'importance de soutenir ce projet de loi en
+ vue de son adoption, laquelle permettra à l'établissement de déployer les mesures qui assureront une meilleure
+ prise en compte des différentes réalités de la région et la
+ reconnaissance du caractère distinct du Centre-du-Québec.</p>
+<p style="text-align: justify"> En
+ terminant, M. le Président, je vous réitère mon engagement face à ce projet de
+ loi, ainsi que mon ouverture lors des échanges que nous aurons dans le
+ cadre de l'étude détaillée. Merci, M. le Président.</p>
+<p style="text-align: justify">
+  <i>• (12 heures) •</i>
+</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Merci, Mme la ministre. J'invite maintenant le porte-parole de
+ l'opposition officielle et député de Marquette à faire ses remarques
+ préliminaires pour une durée maximale de 20 minutes.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282147"></a>
+  <a name="_Toc102135831"></a>
+  <a name="_Toc101955485">M. Enrico Ciccone</a>
+</p>
+<p style="text-align: justify">
+  <b>M. Ciccone :</b> Merci, M. le Président. Je veux juste prendre... je veux juste
+ remplacer le porte-parole officiel pour quelques minutes, le temps qu'il
+ revienne avec nous, le député de Pontiac. Merci beaucoup.</p>
+<p style="text-align: justify">Bonjour,
+ chers collègues. Je suis content d'être ici aujourd'hui pour, justement,
+ étudier article par article le projet de
+ loi n° 28, qui... On a rencontré des groupes, des groupes qui sont venus
+ nous entretenir, justement, sur la réalité de leur région. Maintenant,
+ est-ce que ces gens étaient en faveur? Oui, ils étaient en faveur. Je pense
+ qu'on a vu un côté positif à l'ajout d'un
+ P.D.G.A. Cependant, j'ai cru comprendre et sentir qu'on se contentait,
+ justement, d'un P.D.G.A., parce que, un,
+ on... Il faut le dire clairement, que la promesse de la CAQ était vraiment un
+ centre intégré de services sociaux. Notamment, avec virulence, les députés de Drummond—Bois-Francs et d'Arthabaska aussi l'ont demandé,
+ l'ont promis également en campagne,
+ et ça, c'est important de le mentionner, alors que le gouvernement actuel, de
+ la CAQ, avait promis de remplir leur
+ engagement à 100 %, ce qui n'est définitivement pas le cas présentement
+ avec, justement, ce projet de loi n° 28 là. Alors, c'était, pour
+ moi, important, M. le Président, de le mentionner.</p>
+<p style="text-align: justify"> Maintenant,
+ l'intérêt, ce qui... Est-ce qu'on aurait pu vraiment le faire différemment que
+ de déposer un projet de loi? Je pense
+ que oui. Je pense qu'on aurait pu le faire d'une autre façon. Juste de rajouter
+ des directeurs, si on avait besoin de plus
+ de personnel administratif pour voir au bien-être des gens du Centre-du-Québec
+ et de la Mauricie, bien sûr, on aurait pu le faire, on n'était pas
+ obligés de faire un projet de loi. La question : Est-ce que ça va amener
+ plus de services? Moi, j'ai énormément de questions. Et j'ai lu votre projet de
+ loi, Mme la ministre, puis j'ai hâte de vous poser des questions, justement, à
+ savoir : Qu'est-ce que ça va amener? Est-ce que ça va libérer, justement...
+ Est-ce que ça va libérer, justement, un
+ fardeau? Plusieurs groupes sont venus nous parler en disant qu'il y avait des
+ dirigeants qui devaient s'occuper de six ou sept, même, départements, qui étaient
+ six, sept établissements. Ça, ça va amener, justement, de nouvelles
+ charges de travail aussi. Est-ce qu'on vient
+ libérer cette charge de travail là? C'est des questions qu'on va vous poser. Je
+ comprends qu'il faut être actif, il
+ faut démontrer de l'intérêt à notre système de santé... mais voir la
+ pertinence, si c'est vraiment la bonne
+ chose à faire ou si c'est juste, vraiment, donner un petit peu de bonbon aux
+ Québécois. C'est les questions que je vais m'attendre à être répondu.</p>
+<p style="text-align: justify">Et
+ également je veux juste mentionner que les groupes qui sont venus nous voir, en
+ terminant, avant de laisser la parole
+ à mon... au réel porte-parole de cette opposition officielle, est-ce que les...
+ C'est important de mentionner, également, que les groupes s'attendaient
+ vraiment à plus que ça, s'attendaient à plus que ça, s'attendaient à un CISSS.
+ Ce n'est pas arrivé. Maintenant, il s'agit
+ de savoir comment on va être capables de ficeler le tout pour que ça soit
+ vraiment efficace, parce que je tiens
+ à rappeler, M. le Président, qu'il y a une pénurie de main-d'oeuvre ici, au
+ Québec, et ça risque, justement, de... ça risque de ne pas régler
+ entièrement le problème du Centre-du-Québec. Merci beaucoup, M. le Président.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Merci, M. le député de Marquette. Je voudrais juste faire une petite...
+ une explication. C'est que je dois maintenant céder la parole à la deuxième
+ opposition et à la troisième opposition, mais par la suite, dans les remarques préliminaires, tous les députés qui font
+ partie peuvent avoir le droit de parole. Donc, M. le député de Pontiac aura son
+ droit de parole, il n'y aura pas de problème à ça.</p>
+<p style="text-align: justify">Alors, merci, M. le
+ député. J'invite maintenant le porte-parole du deuxième groupe d'opposition et
+ député de Jean-Lesage à faire ses remarques préliminaires pour une durée
+ maximale de 20 minutes.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282148"></a>
+  <a name="_Toc102135832"></a>
+  <a name="_Toc101955486">M. Sol Zanetti</a>
+</p>
+<p style="text-align: justify">
+  <b>M. Zanetti :</b>
+ 20 minutes. O.K. Merci. Bon, ça ne prendra pas 20 minutes, mais je vais un peu vous télégraphier à
+ l'avance, là, les discussions que je veux
+ avoir avec vous sur cette affaire-là, pour que simplement... bien, qu'on soit
+ plus prêts puis que ça aille plus vite.</p>
+<p style="text-align: justify">
+  <a name="Page00003"></a>Essentiellement, nous, on trouve que
+ ce projet de loi là, bon, il est relativement timide, mais il va dans une bonne
+ direction, puis il semble être bien
+ accueilli par le milieu. On voudrait savoir pourquoi... Quel est le choix qui
+ vous a motivés à opter pour cette
+ formule-là plutôt que ce qui avait été promis en campagne électorale? On comprend que les gens du milieu ont été
+ très ébranlés par... dans la dernière réforme structurelle, qui a entraîné des
+ pertes de services, une centralisation vraiment...
+ une diminution grande de la prise que les citoyens avaient aussi sur leur
+ système et organisation de santé. On se demande aussi si... Est-ce qu'il
+ n'y aurait pas quelque chose qu'on pourrait faire, disons, à l'échelle du
+ Québec, qui favoriserait un peu une
+ décentralisation? Je comprends que, là, c'est un programme qui... un projet de
+ loi qui est très, disons, limité à une région en particulier.</p>
+<p style="text-align: justify">Aussi, par rapport au
+ forum citoyen, c'est intéressant de faire de la consultation, évidemment. Le
+ projet de loi reste plutôt indéfini sur ce
+ sujet-là. Pour nous, ce qui est vraiment important, c'est que les citoyennes et
+ citoyens sentent qu'ils ont une prise sur la forme que prend l'administration
+ des soins de santé en fonction de leur région mais qu'ils ne sont pas juste consultés, tu sais, puis parle,
+ parle, jase, jase, là, mais qu'ils ont une vraie prise, c'est-à-dire qu'il y a
+ des... On veut savoir quel pouvoir
+ véritablement, ici, on donne entre les mains de la population dans le cadre de
+ ce projet de loi là, pour être sûrs
+ que ça donne quelque chose, que ce ne soit pas juste une espèce d'impression
+ d'«on va vous consulter» mais que, finalement, des fois, hein, ça ne
+ donne pas de gros résultats.</p>
+<p style="text-align: justify">Alors,
+ essentiellement, ça va être le sens de nos questionnements là-dessus, des
+ sujets qu'on va aborder plus en profondeur. Et je ne prendrai pas plus
+ de notre temps sur ce sujet. Merci.</p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Merci, M. le député.
+ J'invite maintenant le porte-parole du troisième groupe d'opposition et député
+ de Jonquière à faire ses remarques préliminaires pour un maximal de
+ 20 minutes.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282149"></a>
+  <a name="_Toc102135833"></a>
+  <a name="_Toc101955487">M. Sylvain Gaudreault</a>
+</p>
+<p style="text-align: justify">
+  <b>M. Gaudreault :</b>
+ Merci, M. le Président. Je vais voir, peut-être que je vais prendre mon
+ 20 minutes.</p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Libre à vous.</p>
+<p style="text-align: justify">
+  <b>M. Gaudreault :</b>
+ Oui, on verra au bout du 19 minutes. Écoutez, nous, c'est clair, on s'est
+ opposés au principe de ce projet de loi là tout simplement parce que...
+ bien, «tout simplement», c'est assez complexe, là, mais ça ne répond pas à une promesse électorale de la Coalition
+ avenir Québec dans la région Centre-du-Québec. Ça ne répond pas à ça. Et moi,
+ je me souviens d'avoir suivi la
+ campagne électorale dans le Centre-du-Québec l'année passée, et les candidats
+ de la CAQ qui sont devenus députés aujourd'hui dans cette région-là
+ brandissaient haut et fort, faisaient des effets de toge pour
+ dire : On va vous obtenir un CISSS pour
+ le Centre-du-Québec, hein? C'était l'autonomie du Centre-du-Québec. Après le
+ CISSS, quasiment l'indépendance du
+ Centre-du-Québec. C'était fort, là, c'était un engagement fort, fort et phare,
+ pour les candidats du
+ Centre-du-Québec. On ne le saura jamais jusqu'à quel point, mais il y a des
+ gens qui ont voté à cause de ça pour des candidats de la Coalition avenir Québec. Et, une fois rendus au pouvoir,
+ bien là, on recule. Alors, c'est un autre recul sur un engagement
+ électoral de la part de la Coalition avenir Québec et du gouvernement.</p>
+<p style="text-align: justify">On essaie de faire passer quelque chose de dilué,
+ d'édulcoré comme étant le respect d'un engagement, ce qui est faux. Quand on met du Sucaryl dans un café, là, ce
+ n'est pas du sucre. Bon, bien, le projet de loi n° 28, c'est le Sucaryl du
+ gouvernement, c'est le Sucaryl du
+ Centre-du-Québec. Ce n'est pas ce qui a été promis de la part de la Coalition
+ avenir Québec pour les gens du Centre-du-Québec.</p>
+<p style="text-align: justify">
+  <i>• (12 h 10) •</i>
+</p>
+<p style="text-align: justify">Puis qu'on arrête de
+ dire que c'est la meilleure invention depuis le pain tranché, en matière de
+ décentralisation. Il y a beaucoup de
+ confusion sur ce qu'est de la décentralisation. Je serais prêt à reconnaître
+ que c'est l'ombre du début d'une déconcentration,
+ d'une déconcentration, d'une gestion
+ ministérielle un petit peu déconcentrée en nommant deux P.D.G. adjoints,
+ un petit peu déconcentrée. Mais c'est tout le contraire de la décentralisation.
+ Je veux dire, il y a des limites, là, à faire dire le contraire
+ à un mot par rapport à sa définition réelle. Et la décentralisation, bien,
+ c'est la capacité des gens de pouvoir
+ changer les choses à partir du pouvoir qui leur est remis entre les mains, à
+ cette même population locale. Moi, c'est
+ pour ça que je suis un indépendantiste, parce que c'est une décentralisation,
+ pour les gens du Québec, pour assumer entièrement
+ nos pouvoirs. Bon, bien, si on le prend à une autre échelle, à l'échelle
+ régionale, en matière de santé, ce qui est proposé dans le projet de loi
+ n° 28 n'est pas de la décentralisation. C'est minimalement le tout début,
+ du bout des lèvres, du bout des doigts, avec le bout d'un crayon, de la
+ déconcentration, mais ce n'est pas de la décentralisation.</p>
+<p style="text-align: justify">Et,
+ l'idée du forum citoyen ne nous convainc pas que c'est un outil de
+ décentralisation, parce qu'on ne sait pas trop c'est quoi. Au mieux, il va y
+ avoir un peu de consultation à travers ça, ça va permettre de donner
+ l'impression à des citoyens d'avoir
+ une emprise, mais ce n'est pas du pouvoir réel. Moi, je veux du pouvoir réel,
+ puis ce n'est pas ça que nous amène le projet de loi n° 28, en plus de
+ contredire un engagement électoral qui était important dans cette région-là
+ l'année passée, lors de la campagne
+ électorale. Donc, face à ça, on peut bien essayer de dire : Bon, bien, y
+ aurait-tu une pogne à quelque part
+ pour que je sois d'accord avec le principe du projet de loi?, mais j'ai reviré
+ ça de tous bords tous côtés, la réponse, c'est non. Parce que ça ne
+ correspond pas à un engagement qui est important.</p>
+<p style="text-align: justify">Puis j'essaie de
+ comprendre pourquoi on aurait 17 régions administratives au Québec, mais,
+ pour deux régions administratives, la
+ Mauricie puis le Centre-du-Québec, il y aurait une façon de fonctionner
+ différemment dans le système de
+ santé. Ça ne marche pas. On a 17 régions administratives, dont une région
+ qui a quand même une croissance économique, démographique importante, qui s'appelle Centre-du-Québec. Je ne vois pas
+ pourquoi cette région-là ne pourrait pas avoir les mêmes réseaux, les mêmes services, la même structure que les autres
+ régions. Je ne comprends pas ça. Ça ne marche pas. Alors, pour cette
+ raison-là, nous, c'est sûr qu'on est aussi contre ce projet de loi n° 28.</p>
+<p style="text-align: justify">
+  <a name="Page00004"></a>L'autre
+ élément, c'est qu'indirectement, ou sans le dire ouvertement, ou de façon
+ paradoxale ou absurde, ce projet de loi vient renforcer une réforme qu'on a par
+ ailleurs contestée, de l'ancien gouvernement libéral, du prédécesseur de
+ la ministre, le député de La Pinière, qui
+ était... qui est venue enlever des pouvoirs dans les régions, qui est venue
+ concentrer les pouvoirs autour de lui en nommant des CISSS et des CIUSSS
+ dans un certain nombre de régions. Alors, le projet de loi n° 28 ne vient rien changer de ça. Même, il vient renforcer
+ cette réforme, pourtant décriée, du ministre précédent en ajoutant une couche de bureaucratie. On ne viendra
+ pas me faire accroire que d'ajouter deux P.D.G. adjoints, ce n'est pas
+ de la bureaucratie.</p>
+<p style="text-align: justify">Moi, j'ai beaucoup de respect pour les gens puis
+ pour les membres de la fonction publique, mais, si on avait ce réel respect là jusqu'au bout, on leur aurait
+ donné une structure à part pour Centre-du-Québec, tant qu'à ça. Si on ne
+ veut pas remettre en question
+ fondamentalement la réforme du député de La Pinière quand il était ministre,
+ bien, au moins qu'on donne une vraie
+ structure à la région Centre-du-Québec, pas une apparence de demi-structure.
+ Et, je veux dire, on fait juste, au
+ fond, créer une illusion d'un pouvoir plus proche de la part des citoyens, et
+ c'est une illusion. Donc, c'est faux. Il n'y a pas plus de pouvoir.</p>
+<p style="text-align: justify">Donc, que ce
+ soit via le futur forum de citoyen, que ce soit via d'autres portes d'entrée,
+ il y aura toujours un blocage au niveau du nouveau P.D.G. adjoint parce
+ qu'il va y avoir un boss au-dessus de lui qui, lui, va avoir une vision des deux régions ensemble, alors que, pourtant, elles
+ ont des réalités différentes. La région de la Mauricie, ça va jusqu'à La Tuque,
+ là, on est loin de Drummondville.
+ Puis la réalité de Drummondville est différente de celle de La Tuque. On le vit
+ déjà, nous, au Saguenay—Lac-Saint-Jean. La réalité de Saguenay, par
+ exemple, par rapport à celle de La Doré ou de Saint-Thomas-Didyme, dans le haut du lac, c'est complètement différent.
+ Ça fait que, là, la ministre vient créer un problème de cette nature en mettant
+ ensemble deux régions puis en créant une
+ nouvelle structure qui s'appelle des P.D.G. adjoints. Alors, on ne règle pas le
+ problème de base. En plus, ça vient
+ contredire un engagement important des candidats de la CAQ qui sont devenus
+ députés, pendant la campagne... un de leurs engagements pendant la campagne
+ électorale.</p>
+<p style="text-align: justify">Ça fait qu'à
+ plein de niveaux, peu importe comment on le prend, ce projet de loi là, ça ne
+ marche pas, puis c'est un bricolage qu'on essaie de faire passer comme
+ une réalisation d'un engagement, alors que ce n'est pas ça.</p>
+<p style="text-align: justify">Donc, comment
+ allons-nous nous comporter dans cette commission parlementaire? On va faire
+ notre travail sérieusement, comme toujours. On va voir comment on peut
+ essayer d'améliorer les choses, mais, tu sais, à moins de faire un amendement qui viendrait abolir les deux P.D.G.
+ adjoints pour créer deux CIUSSS... mais je sais tout de suite qu'il y aurait une demande, un appel au règlement, puis
+ ils auraient raison de le faire, parce que je viendrais contredire le principe
+ d'un projet de loi qui n'a pas d'allure. Ça fait que, là, tu sais,
+ qu'est-ce qu'il nous reste? On va voir, on va poser des questions. On va
+ essayer au moins d'aller chercher le maximum d'informations pour les citoyens
+ et les citoyennes du Centre-du-Québec, sur cette question-là. On va essayer de
+ voir au moins, à travers le forum citoyen, là, comment les citoyens du
+ Centre-du-Québec et ceux de la Mauricie aussi peuvent avoir un petit peu plus
+ d'écoute, un petit peu plus d'influence. Ça
+ va être ça, on... Mais ça va rester à la marge. J'avise tout de suite les citoyens
+ et les citoyennes, là, ça va rester à la marge, parce que le problème
+ fondamental, c'est le projet de loi en lui-même. Alors, c'est ce qu'on va faire,
+ puis on verra le résultat. Alors, voilà, point.</p>
+<p style="text-align: justify">
+  <b>Le
+ Président (M. Provençal) </b>
+  <b>:</b>
+ Merci, M. le député. Y-a-t-il d'autres membres qui souhaitent faire des
+ remarques préliminaires? M. le député d'Arthabaska.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282150"></a>
+  <a name="_Toc102135834"></a>
+  <a name="_Toc101955488">M. Eric Lefebvre</a>
+</p>
+<p style="text-align: justify">
+  <b>M. Lefebvre :</b>
+ Merci beaucoup, M. le Président. Écoutez, très heureux d'être ici aujourd'hui.
+ Et, oui, c'était une promesse qu'on a
+ faite, les députés du Centre-du-Québec. Et le CIUSSS-MCQ, comme vous l'avez
+ dit, regroupe la région du
+ Centre-du-Québec et la région de la Mauricie. Mais ce qu'il faut savoir
+ aujourd'hui ici, c'est c'était quoi, l'objectif. Est-ce que c'était de créer un CIUSSS ou de trouver une
+ solution à une problématique? Et ce qu'a dit le député de Jonquière est important : la réalité de Drummondville et de
+ La Tuque n'est pas la même réalité. Donc, on parle de la région de la Mauricie
+ et du Centre-du-Québec, et l'objectif, c'était de trouver une solution à ça.</p>
+<p style="text-align: justify">Et moi, je
+ suis très, très fier du projet de loi que la ministre dépose aujourd'hui, parce
+ qu'on est arrivés avec un modèle
+ hybride, que j'appelle, un modèle hybride qui vient justement pallier aux
+ lacunes qu'on avait observées avant la campagne électorale. Et mon député de
+ Drummond—Bois-Francs
+ est député de la région Centre-du-Québec depuis belle lurette, et moi, je suis là depuis trois ans
+ maintenant, et avoir trouvé une solution comme celle-là me réjouit et réjouit
+ les gens de la région, également, du Centre-du-Québec, mais également,
+ aussi, la région de la Mauricie. Alors, d'avoir réussi à trouver une alternative avec ce modèle hybride là,
+ pour moi, me convient et convient également aux gens de la région. On va avoir
+ quelqu'un, un P.D.G.A., qui va avoir un bureau à Drummondville, qui va avoir
+ également un pied-à-terre du côté de
+ l'Hôtel-Dieu d'Arthabaska, et ça, ça rassure les gens, avec les deux forums,
+ des forums qui vont avoir lieu dans la région Centre-du-Québec et la
+ Mauricie, pour la proximité avec nos citoyens.</p>
+<p style="text-align: justify"> Alors, si on
+ me dit qu'on ne répond pas à notre engagement électoral, je dois vous avouer,
+ M. le Président, que la réponse, pour
+ moi, est fausse. C'est juste que le véhicule pour lequel on a choisi n'est pas
+ le même véhicule, mais on a trouvé un
+ véhicule hybride qui répond en partie, en grande partie aux inquiétudes des
+ gens de la région Centre-du-Québec. Et
+ on était très fiers du travail qui a été fait, autant avec les gens du
+ ministère, autant avec les gens du CIUSSS-MCQ, pour trouver ce modèle
+ hybride là qui répond aux préoccupations des gens de notre population.</p>
+<p style="text-align: justify">Alors, très
+ heureux d'être ici aujourd'hui avec vous pour poursuivre cette étude-là, et
+ j'en profite pour remercier la
+ ministre de la Santé pour son ouverture face à ce projet de loi là, pour
+ remplir honnêtement l'engagement que nous avons pris en campagne
+ électorale, pour donner une autonomie au Centre-du-Québec et à la Mauricie.</p>
+<p style="text-align: justify">
+  <a name="Page00005"></a>
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Merci, M. le député.</p>
+<p style="text-align: justify">
+  <b>M. Ciccone :</b>
+ Question de règlement, M. le Président.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Oui.</p>
+<p style="text-align: justify">
+  <b>M. Ciccone :</b>
+ Je veux évoquer l'article 213.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> 200...</p>
+<p style="text-align: justify">
+  <b>M. Ciccone :</b>
+ 213. J'aimerais poser une question, justement, au député d'Arthabaska.</p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Je veux juste
+ valider une chose, parce que...</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b>
+ ...</p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Non, non, non... Je
+ vais suspendre pour faire une validation.</p>
+<p style="text-align: justify">
+  <i>(Suspension de la séance à 12 h 20)</i>
+</p>
+<p style="text-align: justify">
+  <i>(Reprise à 12 h 25)</i>
+</p>
+<p style="text-align: justify">
+  <b>Le
+ Président (M. Provençal) </b>
+  <b>:</b>
+ Nous avons eu une intervention du
+ député de Marquette, qui soulevait l'article 213, pour lequel il voulait poser une question à la
+ suite d'une intervention. Cependant, je veux rappeler au député de Marquette
+ que nous sommes à une étape où on a... Nous
+ sommes présentement à des remarques préliminaires. Donc, compte tenu qu'on
+ est dans une notion de remarques, ce n'est
+ pas une notion d'échange. Et, n'ayant pas d'échange, on ne peut faire un débat,
+ donc un questionnement.</p>
+<p style="text-align: justify">Alors, je reviens à la question : Y a-t-il
+ d'autres membres qui souhaitent faire des remarques préliminaires? M. le
+ député de Pontiac.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282151"></a>
+  <a name="_Toc102135835"></a>
+  <a name="_Toc101955489">M. André Fortin</a>
+</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Je vous remercie, M. le Président. Merci de me donner la chance d'effectuer
+ certaines remarques préliminaires. Je
+ m'excuse de mon retard, M. le
+ Président, mais il y avait un autre dossier pressant Mauricie—Centre-du-Québec duquel on devait débattre.</p>
+<p style="text-align: justify">Je salue la
+ ministre, je salue votre équipe, les députés qui sont ici. Je vous remercie
+ d'être avec nous. J'avais d'ailleurs lancé,
+ M. le Président, je ne sais pas si vous étiez en Chambre à ce moment-là, lancé
+ l'invitation aux députés du Centre-du-Québec de se joindre à nous pour la commission parlementaire. Je suis heureux
+ qu'ils sont ici. J'espère qu'ils vont être ici tout au long des travaux. Je vois le député de Drummond—Bois-Francs, le député d'Arthabaska, la députée de
+ Thetford Mines, mais je ne connais pas le nom du comté...</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b> ...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> ...Lotbinière-Frontenac, merci. On dit «Thetford», hein,
+ maintenant, on m'a dit? Oui c'est ça. O.K.</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b> ...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Qui n'est pas au Centre-du-Québec, mais il y a
+ une partie de sa circonscription dans le Centre-du-Québec, si je ne m'abuse.
+ Non? Pas du tout? Bien, bienvenue quand même en commission parlementaire. C'est
+ la vôtre, vous êtes habituée d'être ici.</p>
+<p style="text-align: justify">
+  <b>Des voix</b> <b>:</b> Ha, ha, ha!</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b> Ce sont des
+ voisins.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Oui, oui. Bien, on aurait peut-être aimé le
+ ministre de l'Agriculture aussi, mais on comprend qu'il a d'autres chats à fouetter de ses journées. Ce
+ n'est pas grave, M. le Président. Je ne souligne pas son absence, il n'est pas
+ membre de la commission, il ne remplace pas personne, donc je pense que je suis
+ dans les règles encore.</p>
+<p style="text-align: justify">Mais je trouve ça le fun d'avoir les deux
+ députés de la place ici, parce qu'ils ont fait beaucoup d'interventions au fil du temps sur ce dossier-là, et le député
+ d'Arthabaska vient de le faire encore une fois, en soulignant un peu leur
+ intention, disons, leur objectif en
+ faisant la promesse d'un CISSS pour le Centre-du-Québec. Parce que c'était ça,
+ la promesse. La promesse, ce n'était
+ pas l'objectif. La promesse... Je comprends l'objectif. Il nous dit
+ aujourd'hui, là : Bien, notre objectif, c'était de trouver une solution à, disons, l'inefficience... ou le fait
+ que le CIUSSS de la Mauricie-et-Centre-du-Québec ne <a name="Page00006"></a>prenait pas assez en compte la réalité du
+ Centre-du-Québec, mais ce n'était pas ça, la promesse. Ça, c'est l'objectif. La
+ promesse de la Coalition avenir Québec, et
+ vous m'avez entendu le dire, M. le Président, la promesse de la Coalition
+ avenir Québec, c'était un CISSS pour le Centre-du-Québec.</p>
+<p style="text-align: justify">Quand, en
+ 2018, les députés ont cogné aux portes, quand ils sont allés voir les gens de
+ leur communauté, leurs voisins, leurs
+ amis, leurs militants, les gens de la population de leur région, ils leur ont
+ dit : Votez pour nous, nous, on va faire un CISSS au Centre-du-Québec. C'était ça, la promesse. Je comprends que
+ l'objectif était peut-être différent, mais la façon de procéder pour réaliser
+ cet objectif-là, c'était de créer un CISSS au Centre-du-Québec. Et aujourd'hui
+ ce n'est plus ça. Alors, quand on
+ parle d'engagement rompu, quand on parle de promesse brisée, la promesse,
+ c'était un CISSS au Centre-du-Québec. Aujourd'hui, on ne parle plus
+ pantoute de ça.</p>
+<p style="text-align: justify">Et, si les députés contestent mon interprétation
+ des choses, je pense que pas mal tout le monde dans la région a compris la même chose que moi. Je me souviens de
+ l'article à la veille de l'élection, le 21 septembre 2018, alors en pleine
+ campagne, alors ce n'était pas juste aux
+ portes que les députés disaient ça, c'était aussi auprès des médias de la
+ région, je ne peux pas le
+ nommer : <i>Le député d'Arthabaska milite pour un CISSS régional
+ Centre-du-Québec</i>. «Le candidat de la CAQ le martèle[...] :
+ "Le Centre-du-Québec devra avoir son propre centre intégré de santé et de
+ services sociaux." [...]La région — je le cite — Centre-du-Québec est la seule à ne pas avoir
+ sa propre administration régionale. Un gouvernement de la CAQ — on en a un, M. le Président, un gouvernement
+ de la CAQ — va créer
+ un CISSS Centre-du-Québec...» Fin de la citation.</p>
+<p style="text-align: justify">
+  <i>• (12 h 30) •</i>
+</p>
+<p style="text-align: justify">C'était pas mal clair. Ça m'apparaît clair. Si
+ j'étais électeur dans sa circonscription, j'aurais fort probablement compris
+ qu'au lendemain de l'élection la solution mise de l'avant pour remplir
+ l'objectif, l'objectif du député, c'était qu'il
+ y ait un CISSS—Centre-du-Québec, pas un CIUSSS—Mauricie-Centre-du-Québec avec un P.D.G.A. Ça,
+ c'est sorti d'on ne sait pas trop où.
+ Probablement une vision, une idée qui a été présentée par le CIUSSS—Mauricie-Centre-du-Québec, et les députés on dit : Bon, O.K., ça va
+ faire la job. Je spécule, je ne veux pas leur prêter d'intention, mais on nous
+ a dit que c'était une idée qui a été proposée par le CIUSSS—Mauricie-Centre-du-Québec.
+ Ce n'était pas leur idée.</p>
+<p style="text-align: justify">L'idée des députés de la Coalition avenir
+ Québec, c'était de dire : On va créer un CISSS—Centre-du-Québec. Parce qu'ils nous ont parlé de la création du
+ CIUSSS—Mauricie-Centre-du-Québec
+ en mars 2017, quand les députés avaient posé la question au gouvernement de l'époque, le député d'Arthabaska
+ s'était indigné, avait dit : Le gouvernement a barré la porte à double tour, en disant essentiellement
+ qu'«on ignore nos revendications en reconnaissance régionale», encore une
+ fois les mots du député d'Arthabaska. Et je
+ suis content qu'il soit ici. Il n'est pas obligé de l'être, il prend la
+ chaleur, et c'est tout à son honneur.
+ Mais, en même temps, les mots qu'il a prononcés, ce sont les siens.
+ Aujourd'hui, il ne dira plus ça au monde du Centre-du-Québec, je pense.
+ Je pense que ce qu'il va leur dire, c'est : Bien, on va mettre un
+ P.D.G.A., il va y avoir un forum citoyen où
+ vous pourrez fort probablement venir nous dire les préoccupations que vous
+ avez. Mais, quand on parle de
+ promesses rompues, là, on parle exactement de ça. On parle de dire aux gens une
+ chose, puis de faire d'autre chose.</p>
+<p style="text-align: justify">Ce n'est même
+ pas qu'on a essayé de faire un CISSS au Centre-du-Québec. Moi, je n'ai jamais
+ entendu, là, la ministre de la Santé
+ nous dire : On va faire un CISSS au Centre-du-Québec. J'ai entendu le
+ premier ministre dire ça, j'ai entendu les députés qui sont ici dire ça, le député de Drummond—Bois-Francs, le député d'Arthabaska, j'ai entendu
+ le ministre de l'Agriculture dire ça.
+ Mais on dirait qu'une fois arrivés au pouvoir, une fois arrivés au
+ gouvernement, c'était autre chose, c'était autre chose. «La reconnaissance
+ régionale est à la base de mes priorités!» La reconnaissance régionale
+ n'est plus exactement là où elle était, disons, M. le Président.</p>
+<p style="text-align: justify">Je veux juste
+ que les gens qui ont milité, les gens qui ont cogné aux portes pour le député
+ d'Arthabaska, pour le député de
+ Drummond—Bois-Francs,
+ là, les gens qui ont dit : Moi, j'embarque avec la Coalition avenir
+ Québec parce qu'ils me proposent ça, qui ont promis ça à leurs voisins, à leurs
+ amis, qui ont fait le tour du quartier en disant : Bien, votez pour
+ nous autres, nous autres on va faire ça...
+ Je me sentirais peut-être petit dans leurs souliers aujourd'hui, parce que
+ c'est la promesse qu'ils ont promise
+ au Centre-du-Québec et la promesse qui, en 12 mois, est complètement
+ tombée. En fait, ça a pris moins de 12 mois parce que le projet de loi a
+ été présenté plus tôt. L'idée avait été faite plus tôt. La fameuse rencontre
+ avec le CIUSSS—Mauricie-Centre-du-Québec où on en est arrivés à
+ ce compromis-là est arrivée plus tôt. Alors, ça a pris quelques mois à
+ peine pour que les députés changent d'idée.</p>
+<p style="text-align: justify">Moi, j'ai
+ hâte de savoir comment ils en sont arrivés à ça. Ça va faire partie des
+ questions que je vais discuter avec la ministre. Comment ils sont
+ arrivés à ça? Parce que ce que le CIUSSS nous a dit quand ils sont venus en
+ commission parlementaire... Ils se sont
+ assis au bout de la table, là-bas, et ils ont dit... en fait, je pense que
+ c'était peut-être dans l'autre salle,
+ mais, en fait, ils étaient assis au bout de la table et ils disaient :
+ Bien, ça coûtait trop cher. Bien, je veux bien que ça coûtait trop cher, mais c'était leur engagement.
+ Est-ce qu'ils n'avaient pas chiffré cet engagement-là avant de le prendre? Il
+ me semble que, pendant une campagne électorale, et les collègues qui sont
+ autour de la table vont en témoigner, probablement le député de Jonquière sait exactement comment ça
+ fonctionne, tout le monde le sait ici, quand on prend un engagement, on le
+ valide. On le valide avec le parti, on le valide avec les gens qui font
+ l'évaluation des coûts, on dit : Je peux-tu prendre cet engagement-là, ça
+ coûte combien? On va le mettre dans notre cahier d'engagements. C'est comme si
+ les députés Centre-du-Québec n'avaient pas
+ pris ça en compte, ils avaient dit : Bien, on va le promettre, on verra
+ combien ça coûte après. Ou, s'ils l'ont fait, ils se sont fait
+ dire : Bien là, on n'a plus d'argent, on veut faire d'autre chose avec
+ l'argent.</p>
+<p style="text-align: justify">C'est-tu une
+ mauvaise chose de faire autre chose avec l'argent? Peut-être pas, peut-être
+ pas. C'est-tu même une mauvaise chose de prendre l'argent qui va être
+ octroyé au P.D.G.A.? Parce que, là, ça va coûter quelque chose quand même, la mesure qu'ils vont mettre de l'avant. Ça
+ va coûter quelque chose... je pense qu'on nous a dit que ça coûtait un point quelques millions, là, si je me souviens
+ bien. Je vais retourner dans mes notes avant qu'on arrive à l'article où je
+ pourrai poser la question. Mais est-ce que le P.D.G.A., c'est la
+ meilleure chose à faire ou est-ce qu'on est mieux d'engager un <a name="Page00007"></a>inhalothérapeute? On est-tu
+ mieux d'engager un travailleur social? On est-tu mieux d'engager un
+ psychothérapeute, des infirmières? Je ne sais pas. J'ai hâte d'avoir la
+ réponse de la ministre là-dessus, à savoir si c'est la meilleure chose pour améliorer des soins de service au
+ Centre-du-Québec. Parce que clairement les députés de la CAQ nous disent :
+ Bien, la meilleure chose, pour
+ améliorer les soins, ce n'est plus ce qu'on promettait, ce n'est plus d'avoir
+ un CISSS juste pour nous autres. O.K.
+ Bien, c'est quoi, la meilleure affaire? Est-ce que c'est ça ou est-ce que,
+ ce million quelques là, on est mieux d'avoir des services directs à
+ la population? J'ai hâte d'entendre la perspective de la ministre sur cet
+ enjeu-là. </p>
+<p style="text-align: justify">Je
+ vais donner un petit répit aux députés du Centre-du-Québec, là, mais je veux
+ venir sur la question du forum. Moi, je
+ me demande si ça mérite, si ça nécessite un projet de loi, l'intervention qu'on
+ a aujourd'hui. Je comprends que la promesse était grosse de même, là, puis c'est dur de dire : Bien, on va
+ ramener ça à ça, mais on va essayer de la grossir un petit peu, tu sais, peut-être qu'on a besoin d'un projet de loi
+ pour ça, hein, peut-être que... on est partis de là peut-être pour que ça n'ait
+ pas l'air gros de même, là, ah! on va mettre un projet de loi autour, ça va
+ peut-être paraître un peu plus gros, un peu plus frappant. Mais on a-tu besoin
+ d'un projet de loi pour ça, un projet de loi pour ajouter un P.D.G.A., ajouter quelqu'un
+ qui se réfère au P.D.G.? Peut-être
+ qu'on a besoin d'un projet de loi, mais c'est parce qu'on a choisi de nommer un P.D.G.A. Si on aurait choisi de nommer
+ quelqu'un d'autre, je ne sais pas, moi, un autre directeur de service,
+ directeur Mauricie, directeur Centre-du-Québec,
+ on n'aurait pas besoin de le faire. Alors, est-ce qu'on choisit le bon véhicule
+ pour nommer un P.D.G.A.? Peut-être,
+ je les vois hocher de la tête, mais est-ce que c'est vraiment la bonne
+ utilisation, disons, du temps de commission, je me demande, pour ajouter un employé? On n'a pas encore une définition
+ de tâches précise, là, parce que ça n'existe pas ailleurs, un P.D.G.A. d'une région, hein? Il y a des P.D.G.A. pour
+ l'ensemble du CISSS dans toutes les autres régions, mais il n'y a pas vraiment deux P.D.G.A. attitrés à des
+ régions particulières. Alors, c'est-tu la meilleure chose à faire? J'ai hâte
+ d'entendre la ministre là-dessus.</p>
+<p style="text-align: justify">Mais,
+ sur la question du forum, ça, on s'entend tous, on n'a pas besoin d'un projet
+ de loi pour faire ça, là, la question du
+ forum. Il y en a, des forums, il y en a, des forums, sur l'île de Montréal, on
+ a sorti l'exemple un peu plus tôt, il y a un forum, si je ne me trompe pas, c'est au Centre-Sud, même, où il y a un
+ forum citoyen un peu comme ça, si je ne me trompe pas. Je pense que c'est le Centre-Sud, mais il y a
+ un des CIUSSS à Montréal... M. le Président, je sais que vous avez relu tous nos échanges en commission parlementaire
+ avant qu'on commence, donc vous savez exactement de quel CIUSSS il s'agit, vous
+ pourrez nous le dire tantôt. Moi, je pense que c'est le Centre-Sud, j'ai
+ peut-être tort, mais il y en a un. Ça se fait, il en existe, des forums.</p>
+<p style="text-align: justify">Alors
+ là, on met ça dans une loi, ils peuvent faire un forum. Bien, merci beaucoup,
+ ils ont déjà le droit de le faire. S'ils choisissent de ne pas le faire,
+ c'est bien à eux.</p>
+<p style="text-align: justify">Là,
+ s'il y en a un, de quoi ça va avoir l'air? Quand est-ce que les citoyens vont
+ pouvoir prendre la parole? Qu'est-ce qu'ils vont pouvoir dire? Qui va les
+ écouter? Est-ce qu'on va vraiment prendre en compte leurs points de vue? J'ai
+ hâte de voir la réaction du CIUSSS—Centre-du-Québec... Mauricie—Centre-du-Québec là-dessus. J'ai même fait le
+ lapsus, M. le Président, j'ai dit
+ «CIUSSS—Centre-du-Québec»,
+ comme s'il y en avait un qui s'en venait. J'ai quasiment acheté le discours
+ des députés de la Coalition avenir Québec, je me suis pris moi-même dans leur
+ discours. C'est vrai qu'ils sont bons
+ vendeurs. Mais est-ce que le CIUSSS de la Mauricie—Centre-du-Québec va écouter les citoyens? Est-ce
+ qu'ils vont prendre ce qu'ils
+ entendent dans le forum et les traduire en politiques publiques, les traduire
+ en programmes, les traduire en services sur le terrain? J'en doute, M.
+ le Président.</p>
+<p style="text-align: justify">J'ai des doutes
+ là-dessus, parce qu'aujourd'hui, là, aujourd'hui, on parle d'une question dans
+ le même CIUSSS, Mauricie—Centre-du-Québec, où il y a
+ 7 000 personnes qui ont signé une pétition. 7 000! 7 000
+ personnes, toutes du même comté, du comté de Champlain, qui ont signé
+ une pétition. Vous savez, il y a juste 58 000 électeurs dans le comté
+ de Champlain, là, il y en a 7 000 qui
+ ont signé une pétition, je ne sais pas si on va avoir une écoute. Alors, je me
+ demande si le citoyen tout seul, qui
+ va au forum, qui dit : Bien, j'ai une idée, parce qu'il manque de quoi
+ dans le réseau de la santé en Mauricie—Centre-du-Québec, est-ce qu'il va
+ être écouté par les dirigeants. Quand il y a 7 000 personnes qui
+ signent une pétition... Et, à date, la
+ réponse gouvernementale, ce n'est pas : Ah! bien, on va vous écouter, on
+ va régler votre enjeu. À date, la réponse du gouvernement c'est :
+ On va de l'avant. Bien, quand il y a une personne qui se pointe au forum, qu'est-ce qui va se passer avec ses
+ préoccupations? Moi, j'ai hâte de voir ça. J'ai hâte de savoir c'est quoi, le
+ mécanisme de suivi de ce fameux forum
+ là, si on introduit le concept par un projet de loi, concept que, selon nous,
+ on n'a pas besoin de faire, on n'a
+ pas besoin d'introduire, mais on se demande s'il y a une attention particulière
+ pour tous ces gens-là, pour tous ces gens qui vont venir se pointer à ce
+ forum-là.</p>
+<p style="text-align: justify">Je
+ veux savoir aussi en quoi ça va être différent. Mais là je télégraphie toutes
+ mes questions, un peu comme le député de Jean-Lesage l'a fait tantôt, là, mais
+ je veux savoir en quoi ça va être différent de la rencontre que, dans mon comté,
+ le CISSS de l'Outaouais a tenue avec les
+ citoyens du Pontiac, hein? Le CISSS de l'Outaouais, chez nous, là, se promène.
+ À chaque quelques mois, ils vont voir les
+ citoyens dans chaque région, il fait probablement la même chose à Gatineau pour
+ le député de Chapleau, va voir ses citoyens et dit : Bon, bien, venez nous
+ dire qu'est-ce que vous pensez du réseau de la santé, venez nous dire ce qui manque, venez nous dire...
+ Et ça arrive partout, ça, ça arrive partout en ce moment, ça se produit déjà.
+ Alors, je veux savoir ce que le forum va
+ ajouter, qu'est-ce qui va être différent, qu'est-ce qui va être différent de ce
+ qui se fait en ce moment.</p>
+<p style="text-align: justify">Mais, M. le
+ Président, et je vais terminer mon intervention là-dessus, là, c'était une
+ promesse...</p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> Votre remarque
+ préliminaire.</p>
+<p style="text-align: justify">
+  <i>• (12 h 40) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Oui, bien sûr. Ma remarque préliminaire, vous avez clarifié qu'est-ce
+ qu'une intervention. Ma remarque préliminaire là-dessus.</p>
+<p style="text-align: justify">L'enjeu
+ principal, ici, c'est l'engagement rompu. L'enjeu principal, c'est qu'on a dit
+ aux citoyens, on a dit aux citoyens de la
+ région des deux députés en face de moi, et ils l'ont fait eux-mêmes, à travers
+ les médias, au porte-à-porte, dans les <a name="Page00008"></a>radios, peu
+ importe la façon qu'on interpelle les citoyens en campagne électorale, on leur
+ a dit : Vous aurez, avec un gouvernement
+ de la CAQ, un centre intégré unique au Centre-du-Québec. C'est la promesse qui
+ a été faite. Un peu comme la promesse
+ du député de Chapleau de dire : Vous aurez un hôpital en fonction en 2023!
+ Tic, toc, M. le député de Chapleau. Mais, bon...</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b> Ça s'en vient.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Ça s'en vient, oui, oui. Je vous attends, je vous
+ attends, oui, je vous attends impatiemment, mais ça s'en vient.</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b> On revient au
+ Centre-du-Québec.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Oui, oui, on revient au Centre-du-Québec, mais ce
+ que je veux dire, c'est qu'il y a un peu un... excusez mon anglicisme,
+ mais il y a un peu un pattern ici, là, hein, un pattern de promesses
+ inatteignables, peut-être, rompues, certainement.</p>
+<p style="text-align: justify">On voudra
+ voir, on voudra voir, on voudra entendre, et c'est pour ça que je suis content
+ qu'ils soient ici, les députés du
+ Centre-du-Québec... nous dire pourquoi, pourquoi, selon eux, c'est la meilleure
+ solution. Pourquoi ce qu'ils avaient promis aux gens, ça ne vaut plus grand-chose? Pourquoi, ce qu'ils avaient promis
+ aux gens, là, ils l'ont pris, ils ont pris le papier, ils ont fait une petite boule, ils l'ont garroché
+ dans la poubelle? Pourquoi la solution qui est mise de l'avant... parce que
+ ce n'est pas la leur, c'est celle du CISSS,
+ c'est celle du CIUSSS, c'est ce qu'ils nous ont dit, pourquoi c'est la
+ meilleure solution pour les services aux citoyens dans le
+ Centre-du-Québec? Merci, M. le Président.</p>
+<p style="text-align: justify">
+  <b>Le
+ Président (M. Provençal) </b>
+  <b>:</b>
+ Merci, M. le député. Y a-t-il d'autres membres qui souhaitent faire des interventions?
+ Pas des interventions, des remarques préliminaires? Y a-t-il dépôt de... Non,
+ non. Non, je ne vous cède pas la parole, M.
+ le député, parce que je veux vous rappeler qu'on ne peut fractionner le temps.
+ Ça va? Il y a même... c'est l'article... il y a eu des décisions rendues en lien avec l'article 244, alors vous
+ pourrez me valider si vous avez des doutes sur moi, il n'y a pas de
+ problème.</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b> C'est sûr que je
+ vais vérifier, M. le Président.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Je comprends qu'il n'y a pas de motion préliminaire.</p>
+<p style="font-weight:bold;text-align: center;">
+  <a name="_Toc146282152"></a>
+  <a name="_Toc102135836"></a>
+  <a name="_Toc102034110">Étude détaillée</a>
+</p>
+<p style="text-align: justify"> S'il n'y a
+ pas de motion préliminaire, nous allons immédiatement débuter l'étude article
+ par article. Je prends en considération l'article 1 du projet de
+ loi. Mme la ministre, la parole est à vous. Je vous invite à nous faire la
+ lecture de l'article 1 et à nous donner vos explications.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b> Oui, merci, M. le
+ Président.</p>
+<p style="text-align: justify">Alors :
+ L'article 33 de la Loi modifiant l'organisation et la gouvernance du
+ réseau de la santé et des services sociaux notamment par l'abolition des
+ agences régionales est modifié :</p>
+<p style="text-align: justify">1° par l'insertion, après le deuxième alinéa, du
+ suivant :</p>
+<p style="text-align: justify">«Le
+ président-directeur général peut être assisté par deux présidents-directeurs
+ généraux adjoints lorsque le centre intégré de santé et de services
+ sociaux pour lequel il exerce ses fonctions se trouve dans une région
+ sociosanitaire dont le territoire correspond
+ à l'ensemble du territoire de deux régions administratives du Québec. Les
+ premier et deuxième alinéas s'appliquent à la nomination de chacun de
+ ces présidents-directeurs généraux adjoints.»;</p>
+<p style="text-align: justify">2° par
+ l'insertion, dans le troisième alinéa et après «le président-directeur général
+ adjoint», partout où cela se trouve, de «ou, s'il y en a deux, celui
+ désigné par le ministre — ou
+ la ministre.»</p>
+<p style="text-align: justify">Merci, M. le Président.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Avez-vous des commentaires, s'il vous plaît, Mme la
+ ministre?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Ah! oui. Alors, M. le Président, l'article 1 du projet de loi, il vise à
+ permettre la nomination par le
+ gouvernement de deux présidents-directeurs généraux adjoints pour un centre
+ intégré de santé et de services sociaux, mais uniquement dans un cas bien
+ précis. Alors, cette nomination-là va n'être possible que s'il y a un tel
+ centre qui se trouve dans une région
+ sociosanitaire dont le territoire correspond à l'ensemble du territoire de deux
+ régions administratives du Québec.
+ Les règles relatives à la nomination du P.D.G. adjoint qui son prévues aux
+ premier et deuxième alinéas de l'article 33 vont s'appliquer à la nomination de chacun des P.D.G. adjoints. Ça
+ signifie que les deux P.D.G. adjoints seront nommés par le gouvernement, sur recommandation de la
+ ministre de la Santé et des Services sociaux, à partir d'une liste de noms
+ fournie par les membres du conseil d'administration.</p>
+<p style="text-align: justify">Alors, les
+ modifications apportées au troisième alinéa de l'article 33, qui deviendra
+ le quatrième alinéa de cet article, sont
+ requises afin de préciser les règles applicables pour remplacer le P.D.G.
+ lui-même, ou elle-même, en cas d'absence ou d'empêchement de celui-ci ou pour combler le poste de P.D.G., en cas de
+ vacance alors que deux P.D.G. adjoints exercent leurs fonctions au sein
+ de l'établissement. Dans ces situations, c'est la ministre qui va désigner lequel
+ des deux P.D.G. <a name="Page00009"></a>adjoints
+ assumera les fonctions du P.D.G. Dans le cas d'une vacance au poste de P.D.G.,
+ la désignation de la ministre sera effective jusqu'à ce que le gouvernement
+ procède, conformément à la loi, à la nomination du nouveau P.D.G. du centre
+ intégré de santé et de services sociaux.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Merci, Mme la ministre. M. le député de Pontiac, je vous
+ cède la parole.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> Merci, M. le Président. La ministre pourra
+ peut-être clarifier, corriger, valider, là, un peu d'information qu'on a, mais
+ il me semble que, pendant qu'on a fait la consultation, les gens du CIUSSS nous
+ avaient dit que le poste de P.D.G.A., en ce moment, n'était pas comblé.
+ Est-ce que ça a été fait depuis?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b> Je pense que ça
+ été fait récemment, là, je vais valider, je sais que c'était en processus.</p>
+<p style="text-align: justify">
+  <b>Une voix</b> <b>:</b></p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b> Ah! c'est en
+ processus actif, oui.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :
+ </b>C'est en processus encore? Parce
+ qu'on nous avait dit que ça faisait déjà un certain temps, qu'on était tout près d'embaucher quelqu'un, que le processus
+ était quand même assez simple, là. Donc, ce que je comprends, c'est qu'en
+ ce moment il n'y en a aucun, P.D.G.A.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b> Mais il fallait...</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Bien, il y a un poste, mais il n'y a pas de...</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Il y a un poste, effectivement, mais il fallait attendre une certaine période,
+ justement, pour combler le poste de P.D.G. avant. Le poste de P.D.G.
+ devait être comblé avant toute chose, et par la suite le poste de P.D.G.A.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :
+ </b>Bien, oui... Dans la façon que ça
+ a été fait, là... Parce que, de toute évidence, le P.D.G.A. passe au P.D.G.,
+ donc il y a un poste de P.D.G.A., je comprends. Mais vous n'avez pas affiché un
+ deuxième poste déjà?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b> Non.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> O.K. Puisque vous avez affiché le poste de
+ P.D.G.A., comme vous en affichez partout au Québec, là, est-ce que ce P.D.G.A. là... Est-ce que c'est
+ possible d'avoir la description de poste qui était affichée? Parce que je veux
+ savoir, là... J'essaie de comprendre la différence entre les établissements où
+ il y a un P.D.G.A. et les établissements où il
+ y a deux P.D.G.A. La description de tâches est nécessairement différente.
+ J'essaie de comprendre ce que vous avez en tête, alors c'est-tu possible
+ d'avoir la description de tâches d'un P.D.G.A.?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b> Bon, M. le
+ Président, je vais faire tout de suite une correction.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Oui.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Le P.D.G.A. a été nommé le 29 août, le P.D.G.A. du CIUSSS—Mauricie-Centre-du-Québec. Le P.D.G. avait
+ été nommé auparavant, je pense, c'est au début de l'été. Alors, c'est
+ certainement possible de donner la description de tâches du P.D.G.A., M. le
+ Président.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> O.K. Mais vous pouvez me la dire, là, on
+ pourra... la ministre pourra déposer le document, mais la ministre, elle peut aussi nous expliquer un peu ça
+ fait quoi, un P.D.G.A., là, en ce moment, dans un des établissements de santé. On veut juste comprendre comment ça va être
+ différent une fois qu'il va y en avoir deux en Mauricie—Centre-du-Québec si le projet de loi est
+ adopté.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Oui. Effectivement, dans ces grands établissements, il faut qu'il y ait un
+ P.D.G.A. pour assumer certaines fonctions. Le P.D.G. voit à certaines d'entre
+ elles. Mais je vais vous donner des exemples de fonctions qui peuvent
+ être assumées par un P.D.G.A., qui a un ensemble d'équipes, hein, des cadres
+ supérieurs, sous lui ou sous elle. Alors, ça
+ peut être les partenariats, missions universitaires, la performance, les
+ ressources humaines, les communications, les affaires juridiques, le Programme de soutien aux organismes
+ communautaires, les finances, les immos, la logistique, les services techniques, les ressources informationnelles.
+ Alors, ce sont des ensembles de dossiers, de responsabilités que se partagent
+ habituellement un P.D.G. puis un P.D.G.A., alors, dans un établissement de
+ santé et de services sociaux.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> C'est large, là. Ce que je comprends de la
+ ministre, c'est que c'est pas mal large. Le P.D.G. peut déléguer un peu
+ n'importe quoi qu'il veut au P.D.G.A. C'est à peu près ça?</p>
+<p style="text-align: justify">
+  <i>• (12 h 50) •</i>
+</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Oui. Et on peut même donner un peu plus d'informations sur ce qui a été affiché
+ au niveau, là, du poste de P.D.G.A. au niveau de Mauricie—Centre-du-Québec.
+ Donc, il relève directement du P.D.G., le remplace <a name="Page00010"></a>en son
+ absence, très important, le représente au besoin, il planifie et gère également
+ des services. Le P.D.G.A. aura, en collaboration avec le P.D.G., à s'assurer
+ que les soins et services offerts aux clientèles du CIUSSS soient de grande qualité, qu'ils soient aussi accessibles que
+ sécuritaires. Il est appelé à oeuvrer dans un contexte d'intégration de
+ services et de pratiques empreint d'une grande complexité. Il participe
+ à une saine gestion de finances publiques, dans le respect des différentes règles et normes applicables. Il a le
+ devoir de composer avec un cadre légal vaste et diversifié, avec l'obligation
+ de bienveillance pour la clientèle et le personnel, de performance dans
+ l'utilisation des ressources et de transparence.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> O.K. Ça, c'est le poste du P.D.G.A. en ce moment. Que ce soit en
+ Outaouais, que ce soit au Saguenay—Lac-Saint-Jean, que ce soit ailleurs, là, le
+ P.D.G.A., ça fait ça. Quand vous allez... Si le projet de loi est adopté,
+ vous allez afficher un poste de P.D.G.A. Centre-du-Québec. Ça va être quoi, la
+ différence?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ M. le Président, la différence, ça va être qu'il va y avoir un partage de
+ dossiers spécifiques. Quand je mentionne au député de Pontiac la liste
+ des dossiers qui peuvent être pris par un P.D.G.A., il va y avoir un partage, entre les deux, des dossiers mais en plus, pour le
+ deuxième P.D.G.A., un rôle très important au niveau du Centre-du-Québec. Alors, il y aura certains dossiers qui sont pour
+ l'ensemble du CIUSS, mais il va y avoir aussi... D'abord, le centre
+ administratif va être créé à Drummondville. Et le P.D.G.A. va avoir son
+ bureau sur place, à Drummondville, avec une petite équipe et il va voir à l'ensemble des services du
+ Centre-du-Québec, mais en même temps voir à certains services pour l'ensemble
+ de la Mauricie et le Centre-du-Québec. Et
+ l'autre P.D.G.A., qui va être en Mauricie, va voir à certains dossiers pour
+ l'ensemble du CIUSS mais également certains dossiers pour la Mauricie.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Donc, ce P.D.G.A. là, que vous avez embauché en... que vous avez nommé à la fin
+ août, là, lui va se voir redirigé pour la
+ Mauricie, avec, je comprends là, comme vous le dîtes, un peu un parapluie sur
+ tous les dossiers de la région, de la
+ grande région là, des deux régions administratives? Mais lui va s'occuper de la...
+ également va avoir une tâche
+ spécifique Mauricie? J'essaie de comprendre c'est quoi, ces tâches spécifiques
+ là Mauricie ou Centre-du-Québec, selon le P.D.G.A.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Bien, justement, si on prend le P.D.G.A. qui pourrait, hein, être nommé pour la
+ région du Centre-du-Québec, son bureau va
+ être à Drummondville. Et il va voir vraiment... avoir une préoccupation
+ particulière pour les services qui se
+ donnent au Centre-du-Québec. On va aussi déconcentrer certains hauts dirigeants
+ du CIUSS, notamment, là, je remarque
+ ici, là, les cadres supérieurs, là, qui vont être davantage présents au
+ Centre-du-Québec, la directrice générale adjointe des programmes de santé physique généraux et spécialisés qui va
+ être localisée au Centre-du-Québec. Le bureau de la direction du soutien à
+ l'autonomie de la personne âgée, situé à Nicolet, va consolider des expertises.
+ Puis moi, j'ai eu l'occasion d'ailleurs d'aller dans ce secteur-là, qui
+ développe des expertises très intéressantes pour les aînés. Alors, il y aura aussi une déconcentration de certains
+ cadres supérieurs. Il va y avoir également création d'une équipe pour le
+ nouveau P.D.G.A... avoir une équipe
+ administrative autour de lui, deux techniciens en administration pour que,
+ vraiment, on puisse avoir un bureau situé au Centre-du-Québec, qui va
+ s'occuper davantage des dossiers du Centre-du-Québec.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> C'est quoi, l'avantage de ce bureau-là, pour le citoyen,
+ là, pour le citoyen qui, lui, dit : Je veux tel service à
+ tel établissement dans ma communauté dans le Centre-du-Québec, là? Là, vous
+ venez de me dire : Il va y avoir un centre
+ administratif à Drummondville, le P.D.G.A. va avoir une équipe avec des techniciens administratifs. Ça ne donne pas grand service, ça, des techniciens
+ administratifs. Vous venez de me dire : Le bureau de l'autonomie pour les
+ personnes âgées, c'est ça?</p>
+<p style="text-align: justify">
+  <b>Mme McCann : </b>Oui.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Qui est déjà à Nicolet, si je comprends bien?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Oui.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b>
+ Il va y avoir des services ou des... va consolider son expertise. Je me demande
+ si ça donne des services à la population,
+ là. Puis il va y avoir la D.G.A. pour la santé physique qui va être en place à
+ Drummondville aussi. Mais, pour la
+ population qui se dit : Moi, je veux un service supplémentaire, ça donne-tu
+ quelque chose, ça, des techniciens en
+ administration puis d'avoir la D.G.A. qui se... pour toute la région, là, qui
+ se déplace de Trois-Rivières à Drummondville?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Bien, des services, je vais en parler à mon collègue, certainement, M. le
+ Président. Mais je vais dire d'entrée de jeu que l'important, quand on
+ est dans une organisation que moi, j'ai connue aussi, hein, des grandes organisations comme ça, c'est d'être les oreilles
+ et les yeux aussi de la communauté. Alors, ce bureau-là est important,
+ l'ensemble des cadres qui vont être
+ au Centre-du-Québec, très important, pour vraiment être à l'affût, entendre les
+ commentaires, les besoins, et des élus également, des élus, des maires,
+ des mairesses, très important d'être à l'affût. </p>
+<p style="text-align: justify">Les
+ services, bien, je vais rappeler à mon collègue,
+ M. le Président, qu'on investit, cette année, 280 millions
+ en maintien à domicile. Le Centre-du-Québec va avoir une part de cette allocation,
+ certainement.</p>
+<p style="text-align: justify">
+  <b>M. Fortin :</b> ...le
+ projet de loi, là, ça, ça... — je donne l'occasion à la ministre de prendre
+ son souffle, là — mais ça
+ ne change pas avec le projet de loi, là. Le
+ 280 millions, là, il y en a qui allait déjà au Centre-du-Québec puis il
+ n'y en aura pas plus qui va aller au Centre-du-Québec à cause du projet
+ de loi qui est devant nous.</p>
+<p style="text-align: justify">
+  <a name="Page00011"></a>
+  <b>Mme McCann :</b> M. le
+ Président, je pense
+ que c'est quand même important
+ de le rappeler, qu'on ajoute des services de toute façon, là, au Centre-du-Québec puis en Mauricie, comme on le
+ fait à travers l'ensemble du Québec. Mais ce qu'on fait de plus, c'est qu'on donne vraiment des
+ cadres, des gestionnaires qui sont là pour justement s'assurer que ces services
+ sont bien organisés puis qu'on entend les
+ préoccupations des citoyens. Ça, c'est majeur dans une organisation de santé et
+ de services sociaux. Alors, la gestion de
+ proximité, c'est ce qui est aussi fondamental dans ces grandes organisations.
+ C'est ce qu'on fait au Centre-du-Québec.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Je vais interrompre l'échange et je céderais la parole au député de
+ Jonquière, qui aurait aussi une intervention.</p>
+<p style="text-align: justify">
+  <b>M. Gaudreault :</b>
+ Oui, sur l'article 1. D'abord, je veux juste reconnaître que, visiblement,
+ j'ai convaincu la ministre, parce que
+ je l'ai entendue dire deux fois «déconcentration» au lieu de «décentralisation»,
+ alors c'est bien, ça commence à percoler,
+ comme on dit, là. Les nuances sont importantes. Oui, c'est ça, je reconnais ça.
+ Il faut continuer, Mme la ministre, on va y arriver.</p>
+<p style="text-align: justify">Je
+ veux juste être sûr de bien comprendre, là, le P.D.G. adjoint Centre-du-Québec,
+ il va être situé dans un bureau à
+ quelque part au Centre-du-Québec, à Drummondville. Puis là je veux juste être
+ sûr, là, parce qu'il y a un bout qui m'a manqué, il est-tu nommé au
+ moment où on se parle, ou pas? Il n'est pas nommé.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Le deuxième n'est pas nommé, parce qu'il faut que la loi soit adoptée.</p>
+<p style="text-align: justify">
+  <b>M. Gaudreault :</b>
+ Parce que la loi n'est pas adoptée, oui, O.K. Mais le premier P.D.G.A. est
+ nommé, et lui, il est en Mauricie, c'est ça?</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Lui, pour le moment, on peut présumer... on ne peut pas... Il faut faire le
+ processus. Lui a été nommé et déjà travaille
+ pour l'ensemble de la région. Alors, évidemment, si le projet de loi est
+ adopté, on va réorganiser. Il y aura un deuxième P.D.G.A., et là il y
+ aura une réorganisation.</p>
+<p style="text-align: justify">
+  <b>M. Gaudreault :</b>
+ Mais le premier P.D.G.A. qui est déjà nommé, lui, il va être dédié à la
+ Mauricie de la même manière qu'il y en aura un, si le projet de loi est adopté,
+ qui sera à Drummondville, pour le Centre-du-Québec. Ce que je veux dire,
+ c'est que celui qui est déjà nommé, il
+ n'aura pas un rôle de P.D.G.A. pour l'ensemble des deux régions fusionnées. Il
+ va avoir un rôle miroir à celui pour le Centre-du-Québec, mais juste
+ pour la Mauricie.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b> M. le Président, deux chose, il y a deux niveaux.
+ Chacun des P.D.G.A. va avoir des dossiers pour l'ensemble de Mauricie—Centre-du-Québec, mais chacun va avoir une responsabilité additionnelle,
+ importante pour chacune des régions
+ administratives. Donc, le deuxième P.D.G.A. va être responsable du
+ Centre-du-Québec, et le premier P.D.G.A. va être responsable pour la
+ Mauricie. Il y aura réorganisation.</p>
+<p style="text-align: justify">
+  <b>M. Gaudreault :</b>
+ Mais en plus d'avoir chacun, les deux P.D.G.A., des responsabilités pour
+ l'ensemble du CIUSSS au grand
+ complet. Ça veut dire qu'il pourrait y avoir monsieur X qui est P.D.G.A. pour
+ la Mauricie, responsable de la Mauricie, mais en plus, disons,
+ responsable — je
+ dis n'importe quoi, là, pour les fins de la discussion — mettons,
+ des ressources humaines pour l'ensemble du
+ CIUSSS, et madame Y qui va être P.D.G.A. pour Centre-du-Québec, elle va
+ avoir une attention particulière pour Centre-du-Québec, mais en plus elle
+ pourrait avoir les ressources matérielles pour l'ensemble du CIUSSS,
+ mettons.</p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Oui. Parce qu'il y a énormément de responsabilités dont il faut s'occuper et,
+ effectivement, il faut partager les tâches dans ce sens-là. Mais il y aura ce
+ niveau très important de voir aux réalités du Centre-du-Québec, pour le
+ deuxième P.D.G.A., et pour la Mauricie, pour le premier.</p>
+<p style="text-align: justify">
+  <b>Le Président
+ (M. Provençal) </b>
+  <b>:</b> M. le député.</p>
+<p style="text-align: justify">
+  <i>• (13 heures) •</i>
+</p>
+<p style="text-align: justify">
+  <b>M. Gaudreault :</b>
+ Bien, moi, je trouve que c'est quand même une information importante, parce
+ qu'à mon point de vue, dans l'esprit de ce que je disais en remarques
+ préliminaires, dans le même esprit, ça dilue encore plus le rôle du P.D.G.A. dédié à une région. Si, en plus de son
+ rôle dédié à une région, on lui donne ressources informationnelles, ou
+ ressources matérielles, ou ressources humaines, peu importe, là, dans la
+ redéfinition de tâches, pour moi, ça fait un P.D.G.A.,
+ mettons, Centre-du-Québec moins, moins, pas un P.D.G.A. Centre-du-Québec plus, plus. Ça fait un P.D.G.A. Centre-du-Québec moins, moins parce
+ qu'en plus de traiter, mettons, Centre-du-Québec, il va avoir en plus d'autres responsabilités pour l'ensemble du territoire
+ du CIUSSS. Ça, c'est peut-être moi qui ai mal compris, mais, pour moi, ça,
+ c'est une nouveauté, là, et ça dilue, à mon sens, encore plus le recul du
+ gouvernement sur sa promesse. </p>
+<p style="text-align: justify">
+  <b>Mme McCann :</b>
+ Mais, sinon... </p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Je vous laisse terminer votre... pour répondre au député de Jonquière,
+ et par la suite, compte tenu de l'heure, on ajourne nos travaux. Si vous
+ voulez...</p>
+<p style="text-align: justify">
+  <a name="Page00012"></a>
+  <b>Mme McCann :</b>
+ Merci, M. le Président. Parce qu'évidemment, sinon, l'alternative, c'est de
+ recréer finances, ressources humaines, toute
+ la structure Centre-du-Québec, toute la structure Mauricie, et on aura
+ l'occasion de parler de ce que ça a comme impact.</p>
+<p style="text-align: justify">
+  <b>Le Président (M. Provençal) </b>
+  <b>:</b> Merci. Compte tenu de l'heure, la commission ajourne ses travaux
+ sine die. </p>
+<p style="text-align: justify">
+  <i>(Fin de la séance à 13 h 01)</i>
+</p></Contenu>
+			
+			
+<div class="retourHaut"><a href="#haut">Haut de la page</a></div>
+		
+
+							
+						</div>
+						
+						<div class="colonneImbriquee imbDroite">
+						
+							<!-- PlaceHolder: contenu secondaire de la page (defaut: vide) -->
+							
+	
+		<h2>Document(s) associé(s) à la séance</h2>
+		<ul class="ListeLien">
+			
+			
+					<li><a href='https://www.assnat.qc.ca/Media/Process.aspx?MediaId=ANQ.Vigie.Bll.DocumentGenerique_192901&amp;process=Original&amp;token=ZyMoxNwUn8ikQ+TRKYwPCjWrKwg+vIv9rjij7p3xLGTZDmLVSmJLoqe/vG7/YWzz'>Journal des débats (PDF)</a><span class='icoPDF'> </span></li>
+					<li><a href='/fr/video-audio/archives-parlementaires/travaux-commissions/AudioVideo-82699.html'>Vidéo/Audio</a></li>
+					
+					
+				
+		</ul>
+	
+						</div>
+
+					</div>
+
+					<!-- PlaceHolder: permet d'afficher du texte en dessous des colonnes -->
+					
+
+					<!-- PlaceHolder: contenu en complement de la page -->
+					
+						
+				
+					
+
+				
+        </div>
+
+        <!-- N'est plus utilisee a cause des utilitaire d'assemblee qui doivent spanner col centre + col droite -->
+        <div class="ColDroite colonne"></div>
+
+        <div class="clear" id="ClearPiedPage"></div>
+
+        <!-- Bandeau lorsque la langue est différente que français -->
+        
+
+        <!-- PiedDePage: affiche le contenu du pied de page -->
+        
+
+<div id="PiedDePage" class="PiedDePage">
+    <div id="bInfolettre" style="margin-bottom: 25px;"><a class="btnInfolettre" href="https://l.communications.assnat.qc.ca/T/WF/24042/op0ace/Optin/fr-CA/Form.ofsys" target="_blank">Abonnez-vous à notre infolettre!</a></div>
+    <ul>
+        <li class="Premier">
+            <a href="/fr/fils-rss.html" class="sanssouligne icoFilsRss">
+                <span class="styleHyperlien">Fils RSS</span>
+            </a>
+        </li>
+        
+        <li><a href="/fr/liens-interet.html">Liens d'intérêt</a></li>
+        <li><a href="/fr/aide/index.html">Aide</a></li>
+        <li><a href="/fr/plan-site.html">Plan du site</a></li>
+        
+        <li><a href="/fr/propos-site/accessibilite.html">Accessibilité</a></li>
+        <li><a href="/fr/abc-assemblee/acces-information/index.html">Accès à l'information</a></li>
+    </ul>
+    <br />
+    <ul>
+        
+        <li class="Premier"><a href="/fr/propos-site/index.html">À propos du site</a> </li>
+        <li><a href="/fr/propos-site/droits-propriete-intellectuelle.html">Conditions d'utilisation</a></li>
+        <li><a href="/fr/propos-site/politique-confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="https://m.assnat.qc.ca">Mobile</a></li>
+    
+        
+
+    </ul>
+
+    <br />
+    <span class="NonVisible">
+        
+    </span>
+</div>
+
+
+<script type="text/javascript">
+
+    //Forcer l'affichage du popup Didomi dans la langue de la page affichée au lieu du langage du fureteur de l'utilisateur
+    var langage = $('html').attr('lang');
+    var boutonInfolettre = document.getElementById('bInfolettre');
+
+    $(document).ready(function(){
+        if (langage == 'fr') {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['fr'],
+                    default: 'fr'
+                }
+            };
+            boutonInfolettre.style.display = 'block';
+        } else {
+            window.didomiConfig = {
+                languages: {
+                    enabled: ['en'],
+                    default: 'en'
+                }
+            };
+            boutonInfolettre.style.display = 'none';
+        }
+    })
+    
+</script>
+
+    </div>
+</form>
+
+
+	            				
+    
+</body>
+</html>

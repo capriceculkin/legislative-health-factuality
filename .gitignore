@@ -1,3 +1,8 @@
 .env
 venv/
 data/us/voteview/house_votes_1985_present.csv
+data/canada/ontario/
+data/canada/quebec/
+data/us/congressional_record/
+data/us/congressional_record_fulltext/
+data/us/voteview/

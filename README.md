@@ -107,21 +107,61 @@ Scripts in `scripts/archive/` are superseded earlier versions kept for the docum
 
 ## Environment Setup
 
-```
+**Step 1: Clone the repo and create a virtual environment**
+git clone https://github.com/capriceculkin/legislative-health-factuality.git
+cd legislative-health-factuality
 python3 -m venv venv
 source venv/bin/activate
+
+
+**Step 2: Install dependencies** 
 pip install requests python-dotenv beautifulsoup4 lxml playwright playwright-stealth
 python -m playwright install chromium
-```
 
-Create a `.env` file in the project root with your API keys:
+**Step 3: Get your API keys**
+
+You need two API keys before running any scripts.
+
+Congress.gov key: covers Congressional Record, bill metadata, and policy area classification. Go to api.data.gov/signup, fill out the short form with your name, email, and a brief description of your use case. The key arrives by email instantly and works across every Congress.gov endpoint used in this project.
+
+LegiScan key: covers federal health bill search. Go to legiscan.com/legiscan and click Get Your Free API Key. When registering, describe the intended use as academic research on legislative health policy, non-commercial, with derivative works externally published. Important: do not create multiple keys for the same project or LegiScan will suspend all of them.
+
+
+**Step 4: Create your .env file**
+
+In the project root, create a file called `.env` and add your keys exactly like this, with no spaces around the equals sign:
 
 ```
 LEGISCAN_KEY=your_key_here
 CONGRESS_KEY=your_key_here
 ```
 
+
+This file is already listed in `.gitignore` and will never be committed to the repository.
+
+**Step 5: Run scripts in this order**
+
+Each script depends on the output of the one before it, so order matters.
+
+1. `voteview_pull.py` downloads the full historical House vote data from UCLA
+2. `extract_unique_bills.py` builds the unique bill list from those vote records
+3. `fetch_policy_areas.py` fetches the official CRS policy area for each bill, takes several hours to complete
+4. `retry_blank_policy_areas.py` cleans up any bills that came back blank due to transient API failures
+5. `match_by_policy_area.py` produces the final matched health bill dataset
+6. `congressional_record_pull.py` pulls Congressional Record daily issue metadata
+7. `congressional_record_fulltext_pull.py` fetches the actual speech text for health-related articles
+8. `ontario_hansard_pull.py` crawls the Ontario Hansard backward to 1985
+9. `quebec_cheminement_pull.py` pulls Quebec bill stage data from the Cheminement
+10. `politifact_pull.py` scrapes PolitiFact health claims for the calibration set
+
 ---
+
+
+
+
+
+
+
 
 ## AI Tool Usage
 

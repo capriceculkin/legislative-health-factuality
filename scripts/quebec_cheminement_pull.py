@@ -34,17 +34,46 @@ def get_bill_links(page, session_code):
     page.goto(url, timeout=30000)
     page.wait_for_timeout(3000)
 
-    # Grabbing every link that points to an individual bill page
-    anchors = page.query_selector_all("a")
-    bill_links = []
-    for a in anchors:
-        href = a.get_attribute("href")
-        if href and f"projet-loi-" in href and f"-{session_code}.html" in href:
-            full_url = BASE + href if not href.startswith("http") else href
-            bill_links.append(full_url)
+    all_bill_links = []
 
-    print(f"Session {session_code}: found {len(bill_links)} bills")
-    return bill_links
+    while True:
+        # Grabbing every link that points to an individual bill page on this page
+        anchors = page.query_selector_all("a")
+        for a in anchors:
+            href = a.get_attribute("href")
+            if href and f"projet-loi-" in href and f"-{session_code}.html" in href:
+                full_url = BASE + href if not href.startswith("http") else href
+                if full_url not in [b["url"] for b in all_bill_links]:
+                    all_bill_links.append({"url": full_url})
+
+        # Check if there is a next page button and click it
+        next_btn = page.query_selector("a:has-text('Page suivante')")
+        if next_btn:
+            href = next_btn.get_attribute("href")
+            if href and href != "#":
+                next_btn.click()
+                page.wait_for_timeout(2000)
+            else:
+                # JS pagination, click and wait for DOM update
+                next_btn.click()
+                page.wait_for_timeout(2000)
+                # Check if we got new links
+                new_anchors = page.query_selector_all("a")
+                new_links = []
+                for a in new_anchors:
+                    href = a.get_attribute("href")
+                    if href and f"projet-loi-" in href and f"-{session_code}.html" in href:
+                        full_url = BASE + href if not href.startswith("http") else href
+                        new_links.append(full_url)
+                # If no new links appeared stop paginating
+                existing = [b["url"] for b in all_bill_links]
+                if all(l in existing for l in new_links):
+                    break
+        else:
+            break
+
+    print(f"Session {session_code}: found {len(all_bill_links)} bills")
+    return all_bill_links
 
 def get_bill_stages(page, bill_url):
     # Loading an individual bill's cheminement page
@@ -99,7 +128,7 @@ if __name__ == "__main__":
 
             for bill_url in bill_links:
                 # Pulling stage links for each individual bill
-                bill_data = get_bill_stages(page, bill_url)
+                bill_data = get_bill_stages(page, bill_url["url"])
                 session_bills.append(bill_data)
                 print(f"  {bill_data['title'][:60]} -> {len(bill_data['assembly_debates'])} assembly, {len(bill_data['committee_debates'])} committee links")
                 # Being polite to the server

@@ -109,14 +109,15 @@ if __name__ == "__main__":
     # Classify each unique bill number using the passage text as a proxy
     # Building a representative text for each bill from its passages
     bill_texts = {}
-    for p in passages:
-        bn = p["bill_number"]
-        if bn not in bill_texts:
-            bill_texts[bn] = p["passage"]
-        else:
-            # Concatenate up to a few passages for richer signal
-            if len(bill_texts[bn]) < 2000:
-                bill_texts[bn] += " " + p["passage"]
+bill_passage_counts = {}
+for p in passages:
+    bn = p["scoped_bill_id"]
+    if bn not in bill_texts:
+        bill_texts[bn] = p["passage"]
+        bill_passage_counts[bn] = 1
+    elif bill_passage_counts[bn] < 5:  # cap at 5 passages per bill
+        bill_texts[bn] += " " + p["passage"]
+        bill_passage_counts[bn] += 1
 
     bill_list = list(bill_texts.keys())
     texts_to_classify = [bill_texts[b] for b in bill_list]
@@ -128,7 +129,7 @@ if __name__ == "__main__":
     print(f"Classified {len(health_bills_ontario)} Ontario bills as health-related")
 
     # Filter passages to only health-related bills
-    health_passages = [p for p in passages if p["bill_number"] in health_bills_ontario]
+    health_passages = [p for p in passages if p["scoped_bill_id"] in health_bills_ontario]
     print(f"Filtered to {len(health_passages)} health-related passages")
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:

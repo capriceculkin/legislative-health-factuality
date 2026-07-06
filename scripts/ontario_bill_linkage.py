@@ -1,11 +1,11 @@
 # ontario_bill_linkage.py
 # Scans Ontario Hansard transcripts for explicit bill number references
-# and tags each passage with the bill number it mentions.
-# This is the bill-linkage step needed before health-relevant passages
-# can be filtered from the raw sitting-day transcripts.
+# and tags each passage with the bill number AND the session year it came from.
+# This is critical because Ontario bill numbers reset every session, meaning
+# Bill 2 in 1985 and Bill 2 in 2010 are completely unrelated pieces of legislation.
+# By storing the year alongside the bill number (e.g. "1985_2"), each bill
+# reference becomes unique across the full 40-year dataset.
 # Output: data/canada/ontario_bill_passages.json
-# Each entry contains the date, the bill number referenced, and the
-# surrounding text passage for use in factuality scoring later.
 
 import os
 import re
@@ -14,23 +14,30 @@ import json
 INPUT_DIR = "data/canada/ontario"
 OUTPUT_PATH = "data/canada/ontario_bill_passages.json"
 
-# Patterns for Ontario bill number references in English Hansard text
-# Ontario uses "Bill 123" or "Bill No. 123" consistently
 BILL_PATTERN = re.compile(r'\bBill\s+(?:No\.?\s+)?(\d+)\b', re.IGNORECASE)
 
-# How many characters of context to capture around each bill mention
 CONTEXT_WINDOW = 500
 
+def extract_year(date_str):
+    # Date filenames are formatted as YYYY-MM-DD
+    return date_str[:4]
+
 def extract_passages(text, date):
+    year = extract_year(date)
     passages = []
     for match in BILL_PATTERN.finditer(text):
         bill_number = match.group(1)
+        # Scoping the bill number to the year it appeared
+        # so 1985 Bill 2 and 2010 Bill 2 are treated as different bills
+        scoped_id = f"{year}_{bill_number}"
         start = max(0, match.start() - CONTEXT_WINDOW)
         end = min(len(text), match.end() + CONTEXT_WINDOW)
         passage = text[start:end].strip()
         passages.append({
             "date": date,
+            "year": year,
             "bill_number": bill_number,
+            "scoped_bill_id": scoped_id,
             "passage": passage,
         })
     return passages
@@ -56,5 +63,5 @@ if __name__ == "__main__":
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(all_passages, f, indent=2, ensure_ascii=False)
 
-    print(f"Done. {len(all_passages)} bill passages extracted from {total} sitting days.")
+    print(f"Done. {len(all_passages)} passages extracted from {total} sitting days.")
     print(f"Saved to {OUTPUT_PATH}")

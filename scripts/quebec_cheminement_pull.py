@@ -48,7 +48,7 @@ def get_bill_links(page, session_code):
 
         # Check if there is a next page button and click it
         next_btn = page.query_selector("a:has-text('Page suivante')")
-        if next_btn:
+        if next_btn and next_btn.is_visible():
             href = next_btn.get_attribute("href")
             if href and href != "#":
                 next_btn.click()

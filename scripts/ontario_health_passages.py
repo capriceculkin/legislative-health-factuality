@@ -93,50 +93,54 @@ def train_classifier():
     return vectorizer, clf
 
 if __name__ == "__main__":
-    # Train the classifier
     vectorizer, clf = train_classifier()
 
-    # Load all Ontario passages
     print("Loading Ontario passages...")
     with open(PASSAGES_PATH) as f:
         passages = json.load(f)
     print(f"Loaded {len(passages)} passages")
 
-    # Get unique bill numbers from passages
-    unique_bills = list(set(p["bill_number"] for p in passages))
-    print(f"Found {len(unique_bills)} unique Ontario bill numbers")
-
-    # Classify each unique bill number using the passage text as a proxy
-    # Building a representative text for each bill from its passages
+    # Building representative text per bill, scoped to session year
     bill_texts = {}
-bill_passage_counts = {}
-for p in passages:
-    bn = p["scoped_bill_id"]
-    if bn not in bill_texts:
-        bill_texts[bn] = p["passage"]
-        bill_passage_counts[bn] = 1
-    elif bill_passage_counts[bn] < 5:  # cap at 5 passages per bill
-        bill_texts[bn] += " " + p["passage"]
-        bill_passage_counts[bn] += 1
+    bill_passage_counts = {}
+    for p in passages:
+        bn = p["scoped_bill_id"]
+        if bn not in bill_texts:
+            bill_texts[bn] = p["passage"]
+            bill_passage_counts[bn] = 1
+        elif bill_passage_counts[bn] < 5:
+            bill_texts[bn] += " " + p["passage"]
+            bill_passage_counts[bn] += 1
 
     bill_list = list(bill_texts.keys())
+    print(f"Found {len(bill_list)} unique Ontario bill numbers")
+
+    # Truncating to keep vectorizer from hanging
+    bill_texts = {k: v[:3000] for k, v in bill_texts.items()}
     texts_to_classify = [bill_texts[b] for b in bill_list]
 
     X_ontario = vectorizer.transform(texts_to_classify)
     predictions = clf.predict(X_ontario)
 
+    # Building the set of health-related scoped bill IDs
     health_bills_ontario = set(bill_list[i] for i in range(len(bill_list)) if predictions[i] == 1)
     print(f"Classified {len(health_bills_ontario)} Ontario bills as health-related")
 
-    # Filter passages to only health-related bills
-    health_passages = [p for p in passages if p["scoped_bill_id"] in health_bills_ontario]
-    print(f"Filtered to {len(health_passages)} health-related passages")
-
+    # Writing health passages to output file incrementally
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(health_passages, f, indent=2, ensure_ascii=False)
-    print(f"Saved to {OUTPUT_PATH}")
+        f.write("[\n")
+        first = True
+        count = 0
+        for p in passages:
+            if p["scoped_bill_id"] in health_bills_ontario:
+                if not first:
+                    f.write(",\n")
+                f.write(json.dumps(p, ensure_ascii=False))
+                first = False
+                count += 1
+        f.write("\n]")
 
-    # Print sample
-    print("\nSample health-related Ontario bill numbers found:")
+    print(f"Saved {count} health passages to {OUTPUT_PATH}")
+    print("\nSample health-related Ontario bill IDs:")
     for b in sorted(health_bills_ontario)[:20]:
-        print(f"  Bill {b}")
+        print(f"  {b}")

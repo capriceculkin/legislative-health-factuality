@@ -9,6 +9,7 @@
 
 import json
 import os
+import unicodedata
 
 INPUT_PATH = "data/canada/quebec_bills/cheminement_all_sessions.json"
 OUTPUT_PATH = "data/canada/quebec_bills/quebec_health_bills.json"
@@ -23,22 +24,48 @@ HEALTH_KEYWORDS = [
     "protection jeunesse", "deficience", "nutrition", "tabac", "cannabis",
     "vaccination", "epidemie", "pandemie", "maternite", "perinatal",
     "therapeutique", "psychiatrique", "depression", "COVID", "vaccin", "COVID-19", "coronavirus",
-    "docteur"
+    "docteur", "medecins", "acces aux services", "systeme de sante","services de sante",
+    "services medicaux","soins de fin de vie",
+    "professions de sante", "aide medicale","sante publique" "sante mentale",
+    "sante et services sociaux", "renseignements de sante", "surveillance sanitaire",
+    "hebergement", "centre de sante","centre d'hebergement", "soins de longue duree",
+    "autonomie", "assistance personnelle", "maltraitance", "vulnerabilite",
+    "ainees","infirmiers", "sage-femme", "douleur", "maladie", "soin",
 ]
 
 
 EXCLUSION_KEYWORDS = [
-    "mesures fiscales",
-    "harmonisation",
-    "discours sur le budget",
-    "point sur la situation",
+    "mesures fiscales","harmonisation", "discours sur le budget", "point sur la situation",
+    "sports de combat","permis d'alcool","infractions en matiere de boissons",
+    "conventions collectives","partenariat entre le gouvernement","municipalites",
+    "loteries", "concours publicitaires", "appareils d'amusement", "code municipal",
+    "loi electorale","regime de retraite des enseignants", "regime de retraite des employes",
+    "mise en oeuvre de certaines mesures du partenariat", "valeurs fondamentales",
+    "alienations relatives", "maison robert","charte des droits","environnement sain",
+    "droit fondamental", "valeurs fondamentales","alienations relatives",
+    "maison robert", "charte des droits et libertes", "environnement sain",
+    "partenariat 2020-2024", "partenariat 2024", "placement syndical",
+    "industrie de la construction", "stationnement payant","hebergement touristique",
+    "promotion internationale", "pratiques de commerce", "societe des alcools",
+    "droits des locataires", "locataires aines", "ville de montreal metropole",
+    "ville de quebec capitale","eeyou istchee", "gouvernement regional",
+    "nation crie", "organisation gouvernementale en matiere d'economie",
+    "transactions d'emprunt", "instruments financiers",
+    "securite des barrages", "vehicules zero emission",
+    "communautes urbaines", "greve ou de lock-out", "permis d'alcool et d'autres",
+    "commissions scolaires", "office des ressources humaines","remuneration des dirigeants",
+    "immeuble situe",
 ]
 
+
+def normalize(text):
+    return unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode('utf-8').lower()
+
 def is_health_by_title(title):
-    title_lower = title.lower()
-    if any(ex.lower() in title_lower for ex in EXCLUSION_KEYWORDS):
+    normalized_title = normalize(title)
+    if any(normalize(ex) in normalized_title for ex in EXCLUSION_KEYWORDS):
         return False
-    return any(kw.lower() in title_lower for kw in HEALTH_KEYWORDS)
+    return any(normalize(kw) in normalized_title for kw in HEALTH_KEYWORDS)
 
 def is_health_by_committee(bill):
     for link in bill.get("committee_debates", []):

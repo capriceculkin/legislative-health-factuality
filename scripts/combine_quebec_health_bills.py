@@ -20,12 +20,11 @@ def parse_session_from_filename(filename):
     return ""
 
 def parse_bill_number_from_filename(filename):
-    # Filename pattern: {legislature}-{session}_{year-range}_{bill_number}-F.pdf
-    # e.g. 34-2_1992-1994_015-F.pdf -> bill 15
-    # e.g. 33-1_1985-1988_092(1986)-F.pdf -> bill 92
-    match = re.search(r"_(\d+)[\(\-][FA]", filename)
+    # Pattern: 33-1_1985-1988_092(1986)-F.pdf or 34-3_1994_017-F.pdf
+    # Bill number is the last numeric segment before -F or -A
+    match = re.search(r"_(\d{2,3})\(?", filename)
     if match:
-        return str(int(match.group(1)))  # strip leading zeros
+        return str(int(match.group(1)))
     return ""
 
 if __name__ == "__main__":
@@ -39,11 +38,11 @@ if __name__ == "__main__":
     print(f"Pre-1994 bills: {len(pre1994)}")
     for bill in pre1994:
         filename = bill.get("filename", "")
-        session = parse_session_from_filename(filename)
-        bill_number = parse_bill_number_from_filename(filename)
-        key = f"{session}_{bill_number}"
+        key = filename  # use full filename as unique key
         if key not in seen:
             seen.add(key)
+            session = parse_session_from_filename(filename)
+            bill_number = parse_bill_number_from_filename(filename)
             combined.append({
                 "source": "bibliotheque_pre1994",
                 "session": session,

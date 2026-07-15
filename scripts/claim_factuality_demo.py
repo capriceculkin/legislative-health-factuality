@@ -60,6 +60,11 @@ HEDGE_MARKERS = {
     "sometimes", "generally", "typically", "allegedly", "reportedly",
 }
 
+# Manually reconstructed from interleaved two-column PDF text (candidate 6
+# of the automated scan). Pending column-aware re-extraction of the corpus,
+# Stage 1 uses this verified sentence rather than a scrambled automatic pick.
+DEMO_SENTENCE = "S. 3546 would require mandatory adverse event reporting of serious events for dietary supplements reported to the FDA."
+
 
 def stage1_find_claim_sentence():
     """
@@ -107,7 +112,11 @@ def stage1_find_claim_sentence():
     if not candidates:
         raise SystemExit("No candidate sentence found, check the entity table.")
 
-    sentence, entities = candidates[0]
+    sentence = DEMO_SENTENCE
+    entities = [e for e in ENTITY_TO_DBPEDIA if e in sentence.lower()]
+    print("NOTE: automated candidates are column-interleaved (two-column PDF");
+    print("layout), so a manually reconstructed sentence is used pending")
+    print("column-aware re-extraction. Original fragments visible in scan.\n")
     print("SELECTED SENTENCE:")
     print(f'  "{sentence}"\n')
     return sentence, entities

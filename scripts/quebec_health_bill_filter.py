@@ -18,43 +18,57 @@ HEALTH_KEYWORDS = [
     "sante", "soins", "medical", "medicament", "pharmacie",
     "assurance maladie", "services sociaux", "infirmier", "infirmiere",
     "hopital", "clinique", "medecin", "chirurgie", "dentaire",
-    "readaptation", "handicap", "mental", "toxicomanie", "alcool", "sage-femme", "obstetrique", "ambulance",
+    "readaptation", "handicap", "mental", "toxicomanie", "alcool",
+    "sage-femme", "obstetrique", "ambulance",
     "RAMQ", "regime assurance maladie", "etablissement sante", "centre hospitalier",
     "CLSC", "CHSLD", "residence aines", "bien-etre", "aines", "vieillissement",
     "protection jeunesse", "deficience", "nutrition", "tabac", "cannabis",
     "vaccination", "epidemie", "pandemie", "maternite", "perinatal",
-    "therapeutique", "psychiatrique", "depression", "COVID", "vaccin", "COVID-19", "coronavirus",
-    "docteur", "medecins", "acces aux services", "systeme de sante","services de sante",
-    "services medicaux","soins de fin de vie",
-    "professions de sante", "aide medicale","sante publique" "sante mentale",
+    "therapeutique", "psychiatrique", "depression", "COVID", "vaccin",
+    "COVID-19", "coronavirus",
+    "docteur", "medecins", "acces aux services", "systeme de sante",
+    "services de sante", "services medicaux", "soins de fin de vie",
+    "professions de sante", "aide medicale", "sante publique", "sante mentale",
     "sante et services sociaux", "renseignements de sante", "surveillance sanitaire",
-    "hebergement", "centre de sante","centre d'hebergement", "soins de longue duree",
+    "hebergement", "centre de sante", "centre d'hebergement", "soins de longue duree",
     "autonomie", "assistance personnelle", "maltraitance", "vulnerabilite",
-    "ainees","infirmiers", "sage-femme", "douleur", "maladie", "soin",
+    "ainees", "infirmiers", "douleur", "maladie", "soin",
+    # Joanie additions (July 16 review)
+    "aide medicale a mourir",
+    "sites d'injection supervisee", "consommation supervisee",
+    "procreation assistee",
 ]
 
-
 EXCLUSION_KEYWORDS = [
-    "mesures fiscales","harmonisation", "discours sur le budget", "point sur la situation",
-    "sports de combat","permis d'alcool","infractions en matiere de boissons",
-    "conventions collectives","partenariat entre le gouvernement","municipalites",
+    "mesures fiscales", "harmonisation", "discours sur le budget", "point sur la situation",
+    "sports de combat", "permis d'alcool", "infractions en matiere de boissons",
+    "conventions collectives", "partenariat entre le gouvernement", "municipalites",
     "loteries", "concours publicitaires", "appareils d'amusement", "code municipal",
-    "loi electorale","regime de retraite des enseignants", "regime de retraite des employes",
+    "loi electorale", "regime de retraite des enseignants", "regime de retraite des employes",
     "mise en oeuvre de certaines mesures du partenariat", "valeurs fondamentales",
-    "alienations relatives", "maison robert","charte des droits","environnement sain",
-    "droit fondamental", "valeurs fondamentales","alienations relatives",
-    "maison robert", "charte des droits et libertes", "environnement sain",
+    "alienations relatives", "maison robert", "charte des droits", "environnement sain",
+    "droit fondamental", "charte des droits et libertes",
     "partenariat 2020-2024", "partenariat 2024", "placement syndical",
-    "industrie de la construction", "stationnement payant","hebergement touristique",
+    "industrie de la construction", "stationnement payant", "hebergement touristique",
     "promotion internationale", "pratiques de commerce", "societe des alcools",
     "droits des locataires", "locataires aines", "ville de montreal metropole",
-    "ville de quebec capitale","eeyou istchee", "gouvernement regional",
+    "ville de quebec capitale", "eeyou istchee", "gouvernement regional",
     "nation crie", "organisation gouvernementale en matiere d'economie",
     "transactions d'emprunt", "instruments financiers",
     "securite des barrages", "vehicules zero emission",
     "communautes urbaines", "greve ou de lock-out", "permis d'alcool et d'autres",
-    "commissions scolaires", "office des ressources humaines","remuneration des dirigeants",
+    "commissions scolaires", "office des ressources humaines", "remuneration des dirigeants",
     "immeuble situe",
+    # Joanie exclusions (July 16 review)
+    "veterinaire",                       # vet care, explicitly out
+    "sante financiere",                  # "financial health" of pension funds
+    "regimes de retraite", "regime de retraite",  # retirement bills generally
+    "sante et la securite du travail", "sante et de securite du travail",  # workplace safety
+    "services de garde",                 # childcare, not health per Joanie
+    "securite routiere",                 # road safety
+    "eleves en classe",                  # school-safety bills
+    "constituant en corporation",        # hospital-as-corporation bills (Wales Home etc.)
+    "(prive)",                           # private bills, excluded per Joanie
 ]
 
 

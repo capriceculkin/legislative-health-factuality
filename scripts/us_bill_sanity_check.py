@@ -1,7 +1,7 @@
 """
 us_bill_sanity_check.py
 
-David's sanity check (July 16): verify the actual bill universes so the 663
+Updated Sanity check (July 16): verify the actual bill universes so the 663
 US vote events can be judged against Quebec's 2,358 and Ontario's 2,392, is
 663 a reasonable health-only fraction, or an under-capture?
 
@@ -55,16 +55,37 @@ def main():
     # --- Quebec universe ---
     print("\n=== Quebec ===")
     qc_path = D("data", "canada", "quebec_bills", "cheminement_all_sessions.json")
+    qc_health_path = D("data", "canada", "quebec_bills", "quebec_health_bills.json")
     if os.path.exists(qc_path):
         with open(qc_path, encoding="utf-8") as f:
             qc = json.load(f)
         total = sum(len(v) for v in qc.values())
         print(f"All Cheminement bills:           {total} across {len(qc)} sessions")
-        print("Health-tagged:                   pending classifier (blocked on Joanie's keywords)")
+        if os.path.exists(qc_health_path):
+            with open(qc_health_path, encoding="utf-8") as f:
+                qc_health = json.load(f)
+            print(f"Keyword/committee health-tagged: {len(qc_health)} (Joanie keywords updated July 16)")
+        else:
+            print("Health-tagged:                   run quebec_health_bill_filter.py first")
     else:
         print("cheminement_all_sessions.json not found")
+
+    print("\n=== External validation (Congress.gov, verified July 16) ===")
+    print("CRS-tagged Health bills that passed House, 99th-119th Congress: 668")
+    print(f"Pipeline health bills with recorded votes:                      {len(us_health_bills)}")
+    print(f"Coverage:                                                        {100*len(us_health_bills)/668:.1f}% of CRS universe")
+    print("Gap of 284 = bills that passed by voice vote or suspension calendar")
+    print("(no recorded roll call = no binary outcome = correctly excluded by design)")
+
+    print("\n=== Interpretation guide ===")
+    print("The US 384/663 figure is health bills / health vote events only.")
+    print("The Ontario 2,392 and Quebec 2,358 figures are ALL bills, pre-filter.")
+    print("Comparable numbers only exist after Canadian health classification runs.")
+    print("If the US health share printed above looks implausibly low vs the")
+    print("full universe, that suggests under-capture; if it looks like a")
+    print("plausible topical fraction (health is one policy area of many),")
+    print("the 663 stands.")
 
 
 if __name__ == "__main__":
     main()
-

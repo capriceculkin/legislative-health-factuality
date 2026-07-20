@@ -1,201 +1,112 @@
 """
-check_completeness.py
-
-Reusable audit script for the legislative-health-factuality project.
-Run this any time to get a real count of how many bills, per jurisdiction,
-have all four required pieces of the chain present:
-
-  1. bill exists
-  2. bill is identified as health-related
-  3. speech text is linked to that bill
-  4. a date is attached at the speech level (not just the bill level)
-
-Drop this in the repo root, next to the data/ and scripts/ folders, and run:
-
-    python3 check_completeness.py
-
-It will print a summary table and write a detailed CSV per jurisdiction
-to data/completeness_reports/ so you can see exactly which bills are
-missing which piece.
+check_completeness.py - rewritten July 2026 to match real data structures.
 """
-
-import os
-import json
-import csv
+import os, re, json, csv
 from datetime import datetime
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORT_DIR = os.path.join(REPO_ROOT, "data", "completeness_reports")
 os.makedirs(REPORT_DIR, exist_ok=True)
 
+def load_json(p):
+    if not os.path.exists(p): return None
+    with open(p, encoding="utf-8") as f: return json.load(f)
 
-def load_json(path):
-    if not os.path.exists(path):
-        return None
-    with open(path, "r") as f:
-        return json.load(f)
-
-
-def load_csv(path):
-    if not os.path.exists(path):
-        return []
-    with open(path, "r", newline="") as f:
-        return list(csv.DictReader(f))
-
+def load_csv(p):
+    if not os.path.exists(p): return []
+    with open(p, newline="", encoding="utf-8") as f: return list(csv.DictReader(f))
 
 def audit_us():
-    """
-    US House: bills come from health_bills_final_matched.csv (the 384
-    confirmed health bills). Speech comes from
-    data/us/congressional_record_fulltext/. A bill is complete if it has
-    a matched speech file with a real date.
-    """
-    bills_path = os.path.join(REPO_ROOT, "data", "us", "health_bills_final_matched.csv")
-    speech_dir = os.path.join(REPO_ROOT, "data", "us", "congressional_record_speeches")
-
-    bills = load_csv(bills_path)
-    speech_files = set(os.listdir(speech_dir)) if os.path.isdir(speech_dir) else set()
-
+    bills = load_csv(os.path.join(REPO_ROOT,"data","us","health_bills_final_matched.csv"))
+    sd = os.path.join(REPO_ROOT,"data","us","congressional_record_speeches")
+    sfiles = set(f.replace(".txt","") for f in os.listdir(sd) if f.endswith(".txt") and "_notes" not in f) if os.path.isdir(sd) else set()
     rows = []
-    for bill in bills:
-        bill_id = bill.get("bill_number") or bill.get("bill_id") or "UNKNOWN"
-        congress = bill.get("congress", "")
-        vote_date = bill.get("vote_date") or bill.get("date", "")
-
-        has_bill = bool(bill_id and bill_id != "UNKNOWN")
-        has_health_tag = bool(bill.get("policy_area", "").strip().lower() == "health")
-        # crude match: check if any speech filename references this bill/date
-        matched_speech = f"{vote_date}.txt" in speech_files
-        has_date = bool(vote_date)
-
-        rows.append({
-            "jurisdiction": "US House",
-            "bill_id": bill_id,
-            "has_bill": has_bill,
-            "has_health_tag": has_health_tag,
-            "has_speech": matched_speech,
-            "has_date": has_date,
-            "complete": all([has_bill, has_health_tag, matched_speech, has_date]),
+    for b in bills:
+        bid = b.get("bill_number") or b.get("bill_id") or "UNKNOWN"
+        vd  = b.get("date") or b.get("vote_date") or ""
+        rows.append({"jurisdiction":"US House","bill_id":bid,
+            "has_bill": bid!="UNKNOWN",
+            "has_health_tag": b.get("policy_area","").strip().lower()=="health",
+            "has_speech": vd in sfiles,
+            "has_date": bool(vd),
+            "has_vote": True,
+            "complete": bid!="UNKNOWN" and b.get("policy_area","").strip().lower()=="health" and vd in sfiles and bool(vd),
         })
     return rows
 
+ERA_MAP = {33:1985,34:1985,35:1989,36:1993,37:1997,38:2001,39:2005,40:2009,41:2013,42:2017,43:2021}
 
-def audit_canada(subregion):
-    """
-    Ontario or Quebec: bills come from cheminement-style JSON (Quebec) or
-    an equivalent bill index (Ontario, once built). Speech comes from raw
-    Hansard/Journal des débats transcripts organized by date.
-
-    Since bill identification hasn't happened yet for either, this will
-    mostly report gaps right now. Re-run this after each identification
-    pass to watch the numbers close.
-    """
-    region_dir = os.path.join(REPO_ROOT, "data", "canada", subregion)
-    bill_index_path = os.path.join(region_dir, f"{subregion}_bill_index.json")
-    bills = load_json(bill_index_path)
-
-    transcript_files = set(os.listdir(region_dir)) if os.path.isdir(region_dir) else set()
-
+def audit_ontario():
+    bi = load_json(os.path.join(REPO_ROOT,"data","canada","ontario","ontario_bill_index.json")) or {}
+    vr = load_json(os.path.join(REPO_ROOT,"data","canada","ontario","ontario_fsob_votes.json")) or {}
+    sd = os.path.join(REPO_ROOT,"data","canada","ontario")
+    sfiles = set(f.replace(".txt","") for f in os.listdir(sd) if f.endswith(".txt") and "_notes" not in f) if os.path.isdir(sd) else set()
+    with_vote = set()
+    for sv in vr.values():
+        for r in sv.get("records",[]):
+            era = ERA_MAP.get(r.get("parliament"),1985)
+            with_vote.add(f"{era}-Bill{r.get('bill_number')}")
     rows = []
-    if not bills:
-        # No bill index yet at all, report the gap explicitly rather than
-        # silently skipping this jurisdiction.
-        rows.append({
-            "jurisdiction": subregion.capitalize(),
-            "bill_id": "NO_BILL_INDEX_YET",
-            "has_bill": False,
-            "has_health_tag": False,
-            "has_speech": False,
-            "has_date": False,
-            "complete": False,
-        })
-        return rows
-
-    for session, bill_list in bills.items():
-        for bill in bill_list:
-            bill_id = bill.get("bill_number") or bill.get("id") or "UNKNOWN"
-            has_bill = bool(bill_id and bill_id != "UNKNOWN")
-            has_health_tag = bool(bill.get("health_tag", False))
-            bill_date = bill.get("date", "")
-            has_date = bool(bill_date)
-            matched_speech = any(bill_date in fname for fname in transcript_files) if bill_date else False
-
-            rows.append({
-                "jurisdiction": subregion.capitalize(),
-                "bill_id": bill_id,
-                "has_bill": has_bill,
-                "has_health_tag": has_health_tag,
-                "has_speech": matched_speech,
-                "has_date": has_date,
-                "complete": all([has_bill, has_health_tag, matched_speech, has_date]),
-            })
+    for key, entry in bi.items():
+        dates = entry.get("dates",[])
+        ht = bool(entry.get("health_tag"))
+        hs = any(d in sfiles for d in dates)
+        hd = bool(dates)
+        hv = key in with_vote
+        rows.append({"jurisdiction":"Ontario","bill_id":key,
+            "has_bill":True,"has_health_tag":ht,"has_speech":hs,
+            "has_date":hd,"has_vote":hv,"complete":all([ht,hs,hd,hv])})
     return rows
 
+def audit_quebec():
+    hb = load_json(os.path.join(REPO_ROOT,"data","canada","quebec_bills","quebec_health_bills.json")) or []
+    ad = os.path.join(REPO_ROOT,"data","canada","quebec_assembly")
+    af = set(f.replace(".txt","") for f in os.listdir(ad) if f.endswith(".txt")) if os.path.isdir(ad) else set()
+    rows = []
+    for bill in hb:
+        title = bill.get("title","")
+        m = re.search(r"[Pp]rojet de loi n[^\d]*(\d+)", title)
+        num = m.group(1) if m else "UNKNOWN"
+        debates = bill.get("assembly_debates",[])
+        hs = any(re.search(r"/(\d{8})/",d.get("url","")) and re.search(r"/(\d{8})/",d.get("url","")).group(1) in af for d in debates)
+        rows.append({"jurisdiction":"Quebec","bill_id":f"QC-Bill{num}",
+            "has_bill":num!="UNKNOWN","has_health_tag":True,"has_speech":hs,
+            "has_date":bool(debates),"has_vote":False,
+            "complete":num!="UNKNOWN" and hs and bool(debates)})
+    return rows
 
 def write_report(rows, name):
-    if not rows:
-        return
-    path = os.path.join(REPORT_DIR, f"{name}_completeness.csv")
-    with open(path, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
-        writer.writeheader()
-        writer.writerows(rows)
-    return path
-
+    if not rows: return None
+    p = os.path.join(REPORT_DIR, f"{name}_completeness.csv")
+    with open(p,"w",newline="",encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        w.writeheader(); w.writerows(rows)
+    return p
 
 def print_summary(all_rows):
-    print("\n=== Completeness Summary ===")
-    print(f"Run at: {datetime.now().isoformat(timespec='seconds')}\n")
-
-    by_jurisdiction = {}
+    print(f"\n=== Completeness Summary ===\nRun at: {datetime.now().isoformat(timespec='seconds')}\n")
+    by_j = {}
     for row in all_rows:
         j = row["jurisdiction"]
-        by_jurisdiction.setdefault(j, {"total": 0, "complete": 0, "missing_bill": 0,
-                                       "missing_tag": 0, "missing_speech": 0, "missing_date": 0})
-        stats = by_jurisdiction[j]
-        stats["total"] += 1
-        if row["complete"]:
-            stats["complete"] += 1
-        if not row["has_bill"]:
-            stats["missing_bill"] += 1
-        if not row["has_health_tag"]:
-            stats["missing_tag"] += 1
-        if not row["has_speech"]:
-            stats["missing_speech"] += 1
-        if not row["has_date"]:
-            stats["missing_date"] += 1
-
-    header = f"{'Jurisdiction':<15}{'Total':<8}{'Complete':<10}{'Missing Bill':<14}{'Missing Tag':<13}{'Missing Speech':<16}{'Missing Date':<13}"
-    print(header)
-    print("-" * len(header))
-    for j, stats in by_jurisdiction.items():
-        print(f"{j:<15}{stats['total']:<8}{stats['complete']:<10}{stats['missing_bill']:<14}"
-              f"{stats['missing_tag']:<13}{stats['missing_speech']:<16}{stats['missing_date']:<13}")
+        by_j.setdefault(j,{"total":0,"complete":0,"no_tag":0,"no_speech":0,"no_date":0,"no_vote":0})
+        s = by_j[j]; s["total"] += 1
+        if row["complete"]: s["complete"] += 1
+        if not row["has_health_tag"]: s["no_tag"] += 1
+        if not row["has_speech"]: s["no_speech"] += 1
+        if not row["has_date"]: s["no_date"] += 1
+        if not row.get("has_vote",True): s["no_vote"] += 1
+    hdr = f"{'Jurisdiction':<15}{'Total':<8}{'Complete':<10}{'No Tag':<10}{'No Speech':<12}{'No Date':<10}{'No Vote':<10}"
+    print(hdr); print("-"*len(hdr))
+    for j,s in by_j.items():
+        print(f"{j:<15}{s['total']:<8}{s['complete']:<10}{s['no_tag']:<10}{s['no_speech']:<12}{s['no_date']:<10}{s['no_vote']:<10}")
     print()
-
 
 def main():
     all_rows = []
-
-    us_rows = audit_us()
-    all_rows.extend(us_rows)
-    us_report_path = write_report(us_rows, "us_house")
-
-    ontario_rows = audit_canada("ontario")
-    all_rows.extend(ontario_rows)
-    ontario_report_path = write_report(ontario_rows, "ontario")
-
-    quebec_rows = audit_canada("quebec")
-    all_rows.extend(quebec_rows)
-    quebec_report_path = write_report(quebec_rows, "quebec")
-
+    for fn, name in [(audit_us,"us_house"),(audit_ontario,"ontario"),(audit_quebec,"quebec")]:
+        rows = fn(); all_rows.extend(rows); write_report(rows, name)
     print_summary(all_rows)
-
-    print("Detailed reports written to:")
-    for path in [us_report_path, ontario_report_path, quebec_report_path]:
-        if path:
-            print(f"  {path}")
-
+    print("Detailed CSVs in data/completeness_reports/")
 
 if __name__ == "__main__":
     main()

@@ -38,7 +38,11 @@ VOTE_LINE_PATTERN = re.compile(
 )
 
 # Sanction = passed in French
-ASSENT_PATTERN = re.compile(r"Sanction\n(.{5,150}\d{4})", re.IGNORECASE)
+ASSENT_PATTERN = re.compile(
+    r"Date de la sanction\s*[:\xa0]+\s*(\d+ \w+ \d{4})"
+    r"|Date of assent\s*[:\xa0]+\s*([A-Z][a-z]+ \d+, \d{4})",
+    re.IGNORECASE
+)
 def parse_vote_outcome(page_text, bill_url):
     """Extract adoption vote tally and outcome from rendered page text."""
     result = {
@@ -79,6 +83,9 @@ def parse_vote_outcome(page_text, bill_url):
             result["vote_abstention"] = int(last[2])
             if result["outcome"] is None:
                 result["outcome"] = "passed" if result["vote_for"] > result["vote_against"] else "failed"
+            # if no vote found and no assent, bill likely died in session
+            if result["outcome"] is None:
+                result["outcome"] = "died_in_session"
 
     return result
 
@@ -109,8 +116,20 @@ def main():
 
             try:
                 page.goto(url, timeout=30000, wait_until="networkidle")
-                page.wait_for_timeout(2000)
+                try:
+                    page.wait_for_selector(
+                        ":text('Date de la sanction'), :text('Date of assent')",
+                        timeout=10000
+                    )
+                except:
+                    pass
+                page.wait_for_timeout(1000)
                 text = page.inner_text("body")
+                
+                text = page.inner_text("body")
+                if "sanction" not in text.lower() or "Date de la sanction" not in text:
+                 # fallback to full page content
+                    text = page.content()  # gets raw HTML
 
                 result = parse_vote_outcome(text, url)
                 result["title"] = bill.get("title", "")

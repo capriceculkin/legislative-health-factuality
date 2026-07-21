@@ -1,0 +1,801 @@
+{
+  "34-2-Bill15": {
+    "bill_number": "15",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940617",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-1-Bill120": {
+    "bill_number": "120",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921218",
+    "context": "file-level match",
+    "total_hits": 33
+  },
+  "33-2-Bill34": {
+    "bill_number": "34",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890524",
+    "context": "file-level match",
+    "total_hits": 28
+  },
+  "34-1-Bill125": {
+    "bill_number": "125",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921125",
+    "context": "file-level match",
+    "total_hits": 37
+  },
+  "34-2-Bill35": {
+    "bill_number": "35",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940613",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "34-2-Bill136": {
+    "bill_number": "136",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931206",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "34-1-Bill291": {
+    "bill_number": "291",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911203",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "34-3-Bill17": {
+    "bill_number": "17",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940614",
+    "context": "file-level match",
+    "total_hits": 5
+  },
+  "34-1-Bill415": {
+    "bill_number": "415",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19920312",
+    "context": "file-level match",
+    "total_hits": 2
+  },
+  "34-1-Bill170": {
+    "bill_number": "170",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19920311",
+    "context": "file-level match",
+    "total_hits": 13
+  },
+  "33-2-Bill139": {
+    "bill_number": "139",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890620",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "33-2-Bill145": {
+    "bill_number": "145",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "33-2-Bill65": {
+    "bill_number": "65",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19881222",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "34-1-Bill12": {
+    "bill_number": "12",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921221",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "33-2-Bill137": {
+    "bill_number": "137",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19891215",
+    "context": "file-level match",
+    "total_hits": 10
+  },
+  "34-2-Bill106": {
+    "bill_number": "106",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931209",
+    "context": "file-level match",
+    "total_hits": 12
+  },
+  "33-2-Bill92": {
+    "bill_number": "92",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890615",
+    "context": "file-level match",
+    "total_hits": 8
+  },
+  "34-2-Bill42": {
+    "bill_number": "42",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931123",
+    "context": "file-level match",
+    "total_hits": 10
+  },
+  "34-2-Bill38": {
+    "bill_number": "38",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931214",
+    "context": "file-level match",
+    "total_hits": 11
+  },
+  "34-1-Bill184": {
+    "bill_number": "184",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911211",
+    "context": "file-level match",
+    "total_hits": 4
+  },
+  "34-3-Bill15": {
+    "bill_number": "15",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940617",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-2-Bill105": {
+    "bill_number": "105",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931117",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-1-Bill89": {
+    "bill_number": "89",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911217",
+    "context": "file-level match",
+    "total_hits": 17
+  },
+  "33-2-Bill60": {
+    "bill_number": "60",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890404",
+    "context": "file-level match",
+    "total_hits": 5
+  },
+  "34-2-Bill70": {
+    "bill_number": "70",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931104",
+    "context": "file-level match",
+    "total_hits": 5
+  },
+  "33-2-Bill37": {
+    "bill_number": "37",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 32
+  },
+  "33-2-Bill156": {
+    "bill_number": "156",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "34-2-Bill140": {
+    "bill_number": "140",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940617",
+    "context": "file-level match",
+    "total_hits": 10
+  },
+  "34-2-Bill68": {
+    "bill_number": "68",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931214",
+    "context": "file-level match",
+    "total_hits": 10
+  },
+  "33-2-Bill50": {
+    "bill_number": "50",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "34-1-Bill4": {
+    "bill_number": "4",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921202",
+    "context": "file-level match",
+    "total_hits": 9
+  },
+  "33-2-Bill245": {
+    "bill_number": "245",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 5
+  },
+  "34-2-Bill292": {
+    "bill_number": "292",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931206",
+    "context": "file-level match",
+    "total_hits": 4
+  },
+  "33-2-Bill224": {
+    "bill_number": "224",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19891219",
+    "context": "file-level match",
+    "total_hits": 8
+  },
+  "34-3-Bill13": {
+    "bill_number": "13",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940616",
+    "context": "file-level match",
+    "total_hits": 2
+  },
+  "33-2-Bill282": {
+    "bill_number": "282",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 5
+  },
+  "33-2-Bill61": {
+    "bill_number": "61",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "34-1-Bill99": {
+    "bill_number": "99",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910619",
+    "context": "file-level match",
+    "total_hits": 11
+  },
+  "34-1-Bill413": {
+    "bill_number": "413",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19920312",
+    "context": "file-level match",
+    "total_hits": 2
+  },
+  "34-1-Bill100": {
+    "bill_number": "100",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910514",
+    "context": "file-level match",
+    "total_hits": 26
+  },
+  "33-2-Bill42": {
+    "bill_number": "42",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19891212",
+    "context": "file-level match",
+    "total_hits": 13
+  },
+  "34-3-Bill8": {
+    "bill_number": "8",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940614",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "34-1-Bill75": {
+    "bill_number": "75",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921217",
+    "context": "file-level match",
+    "total_hits": 18
+  },
+  "34-2-Bill59": {
+    "bill_number": "59",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921217",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "33-2-Bill62": {
+    "bill_number": "62",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-1-Bill83": {
+    "bill_number": "83",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911112",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-3-Bill34": {
+    "bill_number": "34",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940617",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "34-3-Bill31": {
+    "bill_number": "31",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940617",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "33-2-Bill74": {
+    "bill_number": "74",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890615",
+    "context": "file-level match",
+    "total_hits": 5
+  },
+  "34-1-Bill151": {
+    "bill_number": "151",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910617",
+    "context": "file-level match",
+    "total_hits": 5
+  },
+  "34-2-Bill100": {
+    "bill_number": "100",
+    "session": "34-2",
+    "title": "",
+    "outcome": null,
+    "vote_date": null
+  },
+  "34-2-Bill79": {
+    "bill_number": "79",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19930331",
+    "context": "file-level match",
+    "total_hits": 2
+  },
+  "34-3-Bill16": {
+    "bill_number": "16",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940526",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "34-3-Bill11": {
+    "bill_number": "11",
+    "session": "34-3",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940331",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "34-2-Bill2": {
+    "bill_number": "2",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940607",
+    "context": "file-level match",
+    "total_hits": 8
+  },
+  "34-1-Bill411": {
+    "bill_number": "411",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911206",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "33-2-Bill267": {
+    "bill_number": "267",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "34-1-Bill191": {
+    "bill_number": "191",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911211",
+    "context": "file-level match",
+    "total_hits": 11
+  },
+  "34-1-Bill160": {
+    "bill_number": "160",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911031",
+    "context": "file-level match",
+    "total_hits": 22
+  },
+  "34-1-Bill154": {
+    "bill_number": "154",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910521",
+    "context": "file-level match",
+    "total_hits": 2
+  },
+  "34-2-Bill192": {
+    "bill_number": "192",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940526",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "33-2-Bill151": {
+    "bill_number": "151",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890605",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "34-2-Bill58": {
+    "bill_number": "58",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19930611",
+    "context": "file-level match",
+    "total_hits": 1
+  },
+  "34-1-Bill145": {
+    "bill_number": "145",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921216",
+    "context": "file-level match",
+    "total_hits": 23
+  },
+  "33-2-Bill136": {
+    "bill_number": "136",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890621",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-1-Bill135": {
+    "bill_number": "135",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910430",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "34-2-Bill90": {
+    "bill_number": "90",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931216",
+    "context": "file-level match",
+    "total_hits": 10
+  },
+  "34-2-Bill152": {
+    "bill_number": "152",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19940607",
+    "context": "file-level match",
+    "total_hits": 4
+  },
+  "34-1-Bill33": {
+    "bill_number": "33",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19900314",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "33-2-Bill6": {
+    "bill_number": "6",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19891214",
+    "context": "file-level match",
+    "total_hits": 11
+  },
+  "33-2-Bill10": {
+    "bill_number": "10",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19891219",
+    "context": "file-level match",
+    "total_hits": 10
+  },
+  "34-1-Bill134": {
+    "bill_number": "134",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910430",
+    "context": "file-level match",
+    "total_hits": 11
+  },
+  "34-2-Bill112": {
+    "bill_number": "112",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931216",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "34-1-Bill108": {
+    "bill_number": "108",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19921214",
+    "context": "file-level match",
+    "total_hits": 23
+  },
+  "34-2-Bill91": {
+    "bill_number": "91",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19931111",
+    "context": "file-level match",
+    "total_hits": 11
+  },
+  "34-1-Bill97": {
+    "bill_number": "97",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910312",
+    "context": "file-level match",
+    "total_hits": 12
+  },
+  "34-1-Bill126": {
+    "bill_number": "126",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910603",
+    "context": "file-level match",
+    "total_hits": 9
+  },
+  "33-2-Bill103": {
+    "bill_number": "103",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19881223",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "33-2-Bill59": {
+    "bill_number": "59",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19890616",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-1-Bill401": {
+    "bill_number": "401",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911218",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "34-1-Bill113": {
+    "bill_number": "113",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19901220",
+    "context": "file-level match",
+    "total_hits": 6
+  },
+  "34-1-Bill293": {
+    "bill_number": "293",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19911203",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "34-1-Bill287": {
+    "bill_number": "287",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910620",
+    "context": "file-level match",
+    "total_hits": 4
+  },
+  "34-1-Bill253": {
+    "bill_number": "253",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910620",
+    "context": "file-level match",
+    "total_hits": 10
+  },
+  "34-2-Bill262": {
+    "bill_number": "262",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19930618",
+    "context": "file-level match",
+    "total_hits": 2
+  },
+  "33-2-Bill206": {
+    "bill_number": "206",
+    "session": "33-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19891220",
+    "context": "file-level match",
+    "total_hits": 7
+  },
+  "34-1-Bill129": {
+    "bill_number": "129",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19910327",
+    "context": "file-level match",
+    "total_hits": 8
+  },
+  "34-1-Bill115": {
+    "bill_number": "115",
+    "session": "34-1",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19901213",
+    "context": "file-level match",
+    "total_hits": 3
+  },
+  "34-2-Bill93": {
+    "bill_number": "93",
+    "session": "34-2",
+    "title": "",
+    "outcome": "passed",
+    "vote_date": "19930615",
+    "context": "file-level match",
+    "total_hits": 4
+  }
+}

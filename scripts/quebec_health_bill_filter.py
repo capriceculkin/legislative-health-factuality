@@ -69,6 +69,12 @@ EXCLUSION_KEYWORDS = [
     "eleves en classe",                  # school-safety bills
     "constituant en corporation",        # hospital-as-corporation bills (Wales Home etc.)
     "(prive)",                           # private bills, excluded per Joanie
+    "assurance autonomie",                    # Bill 67, not health per Joanie
+    "autonomie et les pouvoirs de la Ville",  # municipal autonomy bills
+    "statut de capitale nationale",           # municipal bills
+    "santé et de sécurité du travail",        # workplace safety (different from santé)
+    "confiance du public envers le système de justice",  # justice bill 25
+    "régimes de retraite",                    
 ]
 
 

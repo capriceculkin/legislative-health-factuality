@@ -82,5 +82,19 @@ def main():
     print(f"F1 score:              {f1:.3f}")
     print(f"Accuracy:              {acc:.3f}  ({TP+TN}/{total})")
 
+    print("\nFalse positives (in filter but Joanie says NOT health):")
+    for (session, num), joanie_health in JOANIE.items():
+        if not joanie_health:
+            key = (session, num.lstrip("0"))
+            if key in predicted:
+                print(f"  {session} Bill {num}")
+    
+    print("\nTrue negatives (not in filter, Joanie says NOT health):")
+    for (session, num), joanie_health in JOANIE.items():
+        if not joanie_health:
+            key = (session, num.lstrip("0"))
+            if key not in predicted:
+                print(f"  {session} Bill {num}")
+
 if __name__ == "__main__":
     main()

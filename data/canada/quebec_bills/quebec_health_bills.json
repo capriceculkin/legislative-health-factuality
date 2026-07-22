@@ -237,20 +237,6 @@
     "matched_by_committee": true
   },
   {
-    "title": "Projet de loi n° 25, Loi visant à accroître la confiance du public envers le système de justice en modernisant la déontologie judiciaire et mettant en œuvre certaines recommandations du comité de la rémunération des juges pour la période 2023-2027",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-25-43-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 18 mars 2026",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-2/journal-debats/20260318/430215.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "43-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 495, Loi modifiant la Loi sur la gouvernance du système de santé et de services sociaux pour garantir l’accès d’un organisme ayant un projet d’économie sociale aux subventions allouées aux organismes communautaires",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-495-43-2.html",
     "assembly_debates": [
@@ -361,49 +347,6 @@
       {
         "label": "Séance du 15 mars 2023",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-43-1/journal-debats/CFP-230315.html"
-      }
-    ],
-    "session": "43-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 9, Loi modifiant principalement certaines lois instituant des régimes de retraite du secteur public",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-9-43-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 9 février 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20230209/342463.html"
-      },
-      {
-        "label": "Séance du 21 février 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20230221/343531.html"
-      },
-      {
-        "label": "Séance du 21 mars 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20230321/345877.html"
-      },
-      {
-        "label": "Séance du 29 mars 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20230329/346919.html"
-      },
-      {
-        "label": "Séance du 4 avril 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20230404/347443.html"
-      },
-      {
-        "label": "Séance du 5 avril 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20230405/347635.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 16 mars 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-43-1/journal-debats/CFP-230316.html"
-      },
-      {
-        "label": "Séance du 28 mars 2023",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-43-1/journal-debats/CFP-230328.html"
       }
     ],
     "session": "43-1",
@@ -1443,77 +1386,6 @@
     "matched_by_committee": true
   },
   {
-    "title": "Projet de loi n° 95, Loi favorisant l’équité dans l’accès aux services de garde éducatifs à l’enfance subventionnés dispensés par les titulaires de permis",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-95-43-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 27 mars 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250327/403677.html"
-      },
-      {
-        "label": "Séance du 20 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250520/408117.html"
-      },
-      {
-        "label": "Séance du 20 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250520/408117.html"
-      },
-      {
-        "label": "Séance du 29 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250529/409189.html"
-      },
-      {
-        "label": "Séance du 30 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250530/409335.html"
-      },
-      {
-        "label": "Séance du 3 juin 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250603/409627.html"
-      },
-      {
-        "label": "Séance du 3 juin 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250603/409627.html"
-      },
-      {
-        "label": "Séance du 4 juin 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250604/409761.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 23 avril 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250423.html"
-      },
-      {
-        "label": "Séance du 24 avril 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250424.html"
-      },
-      {
-        "label": "Séance du 20 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250520.html"
-      },
-      {
-        "label": "Séance du 21 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250521.html"
-      },
-      {
-        "label": "Séance du 22 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250522.html"
-      },
-      {
-        "label": "Séance du 27 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250527.html"
-      },
-      {
-        "label": "Séance du 28 mai 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250528.html"
-      }
-    ],
-    "session": "43-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 101, Loi visant l’amélioration de certaines lois du travail",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-101-43-1.html",
     "assembly_debates": [
@@ -1636,7 +1508,7 @@
       }
     ],
     "session": "43-1",
-    "matched_by_title": false,
+    "matched_by_title": true,
     "matched_by_committee": true
   },
   {
@@ -1752,20 +1624,6 @@
     "session": "43-1",
     "matched_by_title": true,
     "matched_by_committee": true
-  },
-  {
-    "title": "Projet de loi n° 192, Loi visant à assurer la santé et la sécurité des élèves en classe en encadrant la qualité de l’air ambiant dans les écoles",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-192-43-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 7 décembre 2022",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20221207/338475.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "43-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
   },
   {
     "title": "Projet de loi n° 197, Loi visant à améliorer la qualité des soins par la fixation de ratios dans certains établissements visés par la Loi sur les services de santé et les services sociaux",
@@ -1906,12 +1764,12 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 694, Loi modifiant le Code de la sécurité routière afin de lutter plus efficacement contre l’alcool au volant",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-694-43-1.html",
+    "title": "Projet de loi n° 790, Loi visant à étendre aux usagers hébergés dans une résidence à assistance continue l’application du Règlement concernant les modalités d’utilisation de mécanismes de surveillance par un usager hébergé dans une installation maintenue par un établissement qui exploite un centre d’hébergement et de soins de longue durée",
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-790-43-1.html",
     "assembly_debates": [
       {
-        "label": "Séance du 19 mars 2024",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20240319/373643.html"
+        "label": "Séance du 22 mai 2024",
+        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20240522/379659.html"
       }
     ],
     "committee_debates": [],
@@ -1920,12 +1778,12 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 790, Loi visant à étendre aux usagers hébergés dans une résidence à assistance continue l’application du Règlement concernant les modalités d’utilisation de mécanismes de surveillance par un usager hébergé dans une installation maintenue par un établissement qui exploite un centre d’hébergement et de soins de longue durée",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-790-43-1.html",
+    "title": "Projet de loi n° 892, Loi visant à interdire l’offre de services de consommation supervisée à proximité d’un service de garde éducatif à l’enfance en installation ou d’un établissement d’enseignement offrant une formation de niveau préscolaire, primaire ou secondaire",
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-892-43-1.html",
     "assembly_debates": [
       {
-        "label": "Séance du 22 mai 2024",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20240522/379659.html"
+        "label": "Séance du 27 novembre 2024",
+        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20241127/394801.html"
       }
     ],
     "committee_debates": [],
@@ -1954,20 +1812,6 @@
       {
         "label": "Séance du 4 décembre 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20241204/395551.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "43-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 899, Loi modifiant le Code de la sécurité routière afin d’obliger la Société de l’assurance automobile du Québec à conclure des ententes avec des ministères ou organismes en vue de l’application de certaines lois",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-899-43-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 3 avril 2025",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250403/404647.html"
       }
     ],
     "committee_debates": [],
@@ -2220,20 +2064,6 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 27, Loi modifiant principalement certaines lois instituant des régimes de retraite du secteur public",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-27-42-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 24 mars 2022",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20220324/321263.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "42-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 28, Loi visant à mettre fin à l’état d’urgence sanitaire tout en prévoyant le maintien de mesures transitoires nécessaires pour protéger la santé de la population (titre modifié)",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-28-42-2.html",
     "assembly_debates": [
@@ -2449,20 +2279,6 @@
       {
         "label": "Séance du 5 avril 2022",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20220405/322463.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "42-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 995, Loi visant à assurer la santé et la sécurité des élèves en classe en encadrant la qualité de l’air ambiant dans les écoles",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-995-42-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 12 mai 2022",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20220512/325503.html"
       }
     ],
     "committee_debates": [],
@@ -3408,41 +3224,6 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 38, Loi modifiant certaines lois instituant des régimes de retraite du secteur public",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-38-42-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 26 septembre 2019",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20190926/252889.html"
-      },
-      {
-        "label": "Séance du 30 octobre 2019",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20191030/256077.html"
-      },
-      {
-        "label": "Séance du 5 novembre 2019",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20191105/256607.html"
-      },
-      {
-        "label": "Séance du 6 novembre 2019",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20191106/256791.html"
-      },
-      {
-        "label": "Séance du 7 novembre 2019",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20191107/256985.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 31 octobre 2019",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-42-1/journal-debats/CFP-191031.html"
-      }
-    ],
-    "session": "42-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 43, Loi modifiant la Loi sur les infirmières et les infirmiers et d’autres dispositions afin de favoriser l’accès aux services de santé",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-43-42-1.html",
     "assembly_debates": [
@@ -3585,225 +3366,6 @@
     "matched_by_committee": true
   },
   {
-    "title": "Projet de loi n° 59, Loi modernisant le régime de santé et de sécurité du travail",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-59-42-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 27 octobre 2020",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20201027/280401.html"
-      },
-      {
-        "label": "Séance du 2 février 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210202/288343.html"
-      },
-      {
-        "label": "Séance du 4 février 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210204/288837.html"
-      },
-      {
-        "label": "Séance du 9 février 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210209/289259.html"
-      },
-      {
-        "label": "Séance du 10 février 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210210/289491.html"
-      },
-      {
-        "label": "Séance du 16 février 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210216/290083.html"
-      },
-      {
-        "label": "Séance du 23 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210923/306691.html"
-      },
-      {
-        "label": "Séance du 28 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210928/307095.html"
-      },
-      {
-        "label": "Séance du 29 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210929/307349.html"
-      },
-      {
-        "label": "Séance du 30 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210930/307617.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 19 janvier 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210119.html"
-      },
-      {
-        "label": "Séance du 20 janvier 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210120.html"
-      },
-      {
-        "label": "Séance du 21 janvier 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210121.html"
-      },
-      {
-        "label": "Séance du 22 janvier 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210122.html"
-      },
-      {
-        "label": "Séance du 9 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210309.html"
-      },
-      {
-        "label": "Séance du 10 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210310.html"
-      },
-      {
-        "label": "Séance du 11 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210311.html"
-      },
-      {
-        "label": "Séance du 16 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210316.html"
-      },
-      {
-        "label": "Séance du 17 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210317.html"
-      },
-      {
-        "label": "Séance du 18 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210318.html"
-      },
-      {
-        "label": "Séance du 23 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210323.html"
-      },
-      {
-        "label": "Séance du 25 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210325.html"
-      },
-      {
-        "label": "Séance du 30 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210330.html"
-      },
-      {
-        "label": "Séance du 31 mars 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210331.html"
-      },
-      {
-        "label": "Séance du 1 avril 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210401.html"
-      },
-      {
-        "label": "Séance du 13 avril 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210413.html"
-      },
-      {
-        "label": "Séance du 15 avril 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210415.html"
-      },
-      {
-        "label": "Séance du 20 avril 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210420.html"
-      },
-      {
-        "label": "Séance du 22 avril 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210422.html"
-      },
-      {
-        "label": "Séance du 22 avril 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210422-2.html"
-      },
-      {
-        "label": "Séance du 11 mai 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210511.html"
-      },
-      {
-        "label": "Séance du 12 mai 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210512.html"
-      },
-      {
-        "label": "Séance du 13 mai 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210513.html"
-      },
-      {
-        "label": "Séance du 1 juin 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210601.html"
-      },
-      {
-        "label": "Séance du 3 juin 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210603.html"
-      },
-      {
-        "label": "Séance du 4 juin 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210604.html"
-      },
-      {
-        "label": "Séance du 8 juin 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210608.html"
-      },
-      {
-        "label": "Séance du 9 juin 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210609.html"
-      },
-      {
-        "label": "Séance du 10 juin 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210610.html"
-      },
-      {
-        "label": "Séance du 11 juin 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210611.html"
-      },
-      {
-        "label": "Séance du 17 août 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210817.html"
-      },
-      {
-        "label": "Séance du 18 août 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210818.html"
-      },
-      {
-        "label": "Séance du 19 août 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210819.html"
-      },
-      {
-        "label": "Séance du 26 août 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210826.html"
-      },
-      {
-        "label": "Séance du 31 août 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210831.html"
-      },
-      {
-        "label": "Séance du 1 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210901.html"
-      },
-      {
-        "label": "Séance du 2 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210902.html"
-      },
-      {
-        "label": "Séance du 14 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210914.html"
-      },
-      {
-        "label": "Séance du 15 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210915.html"
-      },
-      {
-        "label": "Séance du 16 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210916.html"
-      },
-      {
-        "label": "Séance du 21 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210921.html"
-      },
-      {
-        "label": "Séance du 22 septembre 2021",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210922.html"
-      }
-    ],
-    "session": "42-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 61, Loi visant la relance de l’économie du Québec et l’atténuation des conséquences de l’état d’urgence sanitaire déclaré le 13 mars 2020 en raison de la pandémie de la COVID-19",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-61-42-1.html",
     "assembly_debates": [
@@ -3886,7 +3448,7 @@
       }
     ],
     "session": "42-1",
-    "matched_by_title": false,
+    "matched_by_title": true,
     "matched_by_committee": true
   },
   {
@@ -4262,181 +3824,6 @@
     ],
     "committee_debates": [],
     "session": "42-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 3, Loi favorisant la santé financière et la pérennité des régimes de retraite à prestations déterminées du secteur municipal",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-3-41-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 12 juin 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140612/113237.html"
-      },
-      {
-        "label": "Séance du 16 septembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140916/115837.html"
-      },
-      {
-        "label": "Séance du 17 septembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140917/115899.html"
-      },
-      {
-        "label": "Séance du 18 septembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140918/116075.html"
-      },
-      {
-        "label": "Séance du 23 septembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140923/116335.html"
-      },
-      {
-        "label": "Séance du 24 septembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140924/116491.html"
-      },
-      {
-        "label": "Séance du 25 septembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140925/116671.html"
-      },
-      {
-        "label": "Séance du 30 septembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140930/116859.html"
-      },
-      {
-        "label": "Séance du 1 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20141001/117029.html"
-      },
-      {
-        "label": "Séance du 28 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20141128/126157.html"
-      },
-      {
-        "label": "Séance du 2 décembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20141202/126355.html"
-      },
-      {
-        "label": "Séance du 3 décembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20141203/126487.html"
-      },
-      {
-        "label": "Séance du 4 décembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20141204/126679.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 20 août 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-140820.html"
-      },
-      {
-        "label": "Séance du 21 août 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-140821.html"
-      },
-      {
-        "label": "Séance du 22 août 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-140822.html"
-      },
-      {
-        "label": "Séance du 25 août 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-140825.html"
-      },
-      {
-        "label": "Séance du 26 août 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-140826.html"
-      },
-      {
-        "label": "Séance du 7 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141007.html"
-      },
-      {
-        "label": "Séance du 8 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141008.html"
-      },
-      {
-        "label": "Séance du 9 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141009.html"
-      },
-      {
-        "label": "Séance du 21 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141021.html"
-      },
-      {
-        "label": "Séance du 22 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141022.html"
-      },
-      {
-        "label": "Séance du 23 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141023.html"
-      },
-      {
-        "label": "Séance du 28 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141028.html"
-      },
-      {
-        "label": "Séance du 29 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141029.html"
-      },
-      {
-        "label": "Séance du 30 octobre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141030.html"
-      },
-      {
-        "label": "Séance du 5 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141105.html"
-      },
-      {
-        "label": "Séance du 6 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141106.html"
-      },
-      {
-        "label": "Séance du 10 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141110.html"
-      },
-      {
-        "label": "Séance du 11 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141111.html"
-      },
-      {
-        "label": "Séance du 12 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141112.html"
-      },
-      {
-        "label": "Séance du 13 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141113.html"
-      },
-      {
-        "label": "Séance du 14 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141114.html"
-      },
-      {
-        "label": "Séance du 18 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141118.html"
-      },
-      {
-        "label": "Séance du 19 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141119.html"
-      },
-      {
-        "label": "Séance du 20 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141120.html"
-      },
-      {
-        "label": "Séance du 21 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141121.html"
-      },
-      {
-        "label": "Séance du 25 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141125.html"
-      },
-      {
-        "label": "Séance du 26 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141126.html"
-      },
-      {
-        "label": "Séance du 27 novembre 2014",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141127.html"
-      }
-    ],
-    "session": "41-1",
     "matched_by_title": true,
     "matched_by_committee": false
   },
@@ -4898,45 +4285,6 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 43, Loi favorisant l’information sur la dangerosité des produits présents en milieu de travail et modifiant la Loi sur la santé et la sécurité du travail",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-43-41-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 5 mai 2015",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20150505/146065.html"
-      },
-      {
-        "label": "Séance du 19 mai 2015",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20150519/147331.html"
-      },
-      {
-        "label": "Séance du 26 mai 2015",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20150526/147869.html"
-      },
-      {
-        "label": "Séance du 27 mai 2015",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20150527/147985.html"
-      },
-      {
-        "label": "Séance du 28 mai 2015",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20150528/148151.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 20 mai 2015",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-41-1/journal-debats/CET-150520.html"
-      },
-      {
-        "label": "Séance du 21 mai 2015",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-41-1/journal-debats/CET-150521-2.html"
-      }
-    ],
-    "session": "41-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 44, Loi visant à renforcer la lutte contre le tabagisme",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-44-41-1.html",
     "assembly_debates": [
@@ -5334,45 +4682,6 @@
     "matched_by_committee": true
   },
   {
-    "title": "Projet de loi n° 97, Loi modifiant certaines lois instituant des régimes de retraite applicables aux employés du secteur public",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-97-41-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 11 mai 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20160511/171077.html"
-      },
-      {
-        "label": "Séance du 18 mai 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20160518/171729.html"
-      },
-      {
-        "label": "Séance du 26 mai 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20160526/172463.html"
-      },
-      {
-        "label": "Séance du 31 mai 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20160531/172825.html"
-      },
-      {
-        "label": "Séance du 8 juin 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20160608/173945.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 24 mai 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-160524.html"
-      },
-      {
-        "label": "Séance du 25 mai 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-160525.html"
-      }
-    ],
-    "session": "41-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 99, Loi modifiant la Loi sur la protection de la jeunesse et d’autres dispositions",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-99-41-1.html",
     "assembly_debates": [
@@ -5611,81 +4920,6 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 109, Loi accordant le statut de capitale nationale à la Ville de Québec et augmentant à ce titre son autonomie et ses pouvoirs",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-109-41-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 8 juin 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20160608/173945.html"
-      },
-      {
-        "label": "Séance du 17 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161117/184589.html"
-      },
-      {
-        "label": "Séance du 23 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161123/185031.html"
-      },
-      {
-        "label": "Séance du 24 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161124/185239.html"
-      },
-      {
-        "label": "Séance du 29 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161129/185623.html"
-      },
-      {
-        "label": "Séance du 6 décembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161206/186409.html"
-      },
-      {
-        "label": "Séance du 7 décembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161207/186553.html"
-      },
-      {
-        "label": "Séance du 8 décembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161208/186697.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 14 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161114.html"
-      },
-      {
-        "label": "Séance du 15 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161115.html"
-      },
-      {
-        "label": "Séance du 16 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161116.html"
-      },
-      {
-        "label": "Séance du 29 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161129.html"
-      },
-      {
-        "label": "Séance du 30 novembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161130.html"
-      },
-      {
-        "label": "Séance du 1 décembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161201.html"
-      },
-      {
-        "label": "Séance du 2 décembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161202.html"
-      },
-      {
-        "label": "Séance du 5 décembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161205.html"
-      }
-    ],
-    "session": "41-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 115, Loi visant à lutter contre la maltraitance envers les aînés et toute autre personne majeure en situation de vulnérabilité",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-115-41-1.html",
     "assembly_debates": [
@@ -5792,65 +5026,6 @@
     "matched_by_committee": true
   },
   {
-    "title": "Projet de loi n° 121, Loi augmentant l’autonomie et les pouvoirs de la Ville de Montréal, métropole du Québec",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-121-41-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 8 décembre 2016",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161208/186697.html"
-      },
-      {
-        "label": "Séance du 30 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170330/193841.html"
-      },
-      {
-        "label": "Séance du 16 mai 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170516/197621.html"
-      },
-      {
-        "label": "Séance du 19 septembre 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170919/203697.html"
-      },
-      {
-        "label": "Séance du 20 septembre 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170920/203775.html"
-      },
-      {
-        "label": "Séance du 21 septembre 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170921/203943.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 21 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-170321.html"
-      },
-      {
-        "label": "Séance du 22 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-170322.html"
-      },
-      {
-        "label": "Séance du 23 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-170323.html"
-      },
-      {
-        "label": "Séance du 28 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-170328.html"
-      },
-      {
-        "label": "Séance du 29 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-170329.html"
-      },
-      {
-        "label": "Séance du 17 août 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-170817.html"
-      }
-    ],
-    "session": "41-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 123, Loi modifiant diverses dispositions dans le domaine de la santé et des services sociaux",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-123-41-1.html",
     "assembly_debates": [
@@ -5860,73 +5035,6 @@
       }
     ],
     "committee_debates": [],
-    "session": "41-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 126, Loi favorisant la santé financière et la pérennité du régime de retraite du personnel d'encadrement et modifiant diverses dispositions législatives",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-126-41-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 8 février 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170208/189677.html"
-      },
-      {
-        "label": "Séance du 14 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170314/192369.html"
-      },
-      {
-        "label": "Séance du 15 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170315/192489.html"
-      },
-      {
-        "label": "Séance du 5 avril 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170405/194517.html"
-      },
-      {
-        "label": "Séance du 13 avril 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170413/195531.html"
-      },
-      {
-        "label": "Séance du 10 mai 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170510/197037.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 22 février 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170222.html"
-      },
-      {
-        "label": "Séance du 23 février 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170223.html"
-      },
-      {
-        "label": "Séance du 16 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170316.html"
-      },
-      {
-        "label": "Séance du 17 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170317.html"
-      },
-      {
-        "label": "Séance du 21 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170321.html"
-      },
-      {
-        "label": "Séance du 23 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170323.html"
-      },
-      {
-        "label": "Séance du 29 mars 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170329.html"
-      },
-      {
-        "label": "Séance du 4 avril 2017",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170404.html"
-      }
-    ],
     "session": "41-1",
     "matched_by_title": true,
     "matched_by_committee": false
@@ -6411,7 +5519,7 @@
       }
     ],
     "session": "41-1",
-    "matched_by_title": true,
+    "matched_by_title": false,
     "matched_by_committee": true
   },
   {
@@ -6615,6 +5723,20 @@
     "matched_by_committee": false
   },
   {
+    "title": "Projet de loi n° 1196, Loi visant à faciliter la communication de renseignements médicaux au bénéfice des personnes adoptées ou issues d’une technique de procréation assistée",
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-1196-41-1.html",
+    "assembly_debates": [
+      {
+        "label": "Séance du 14 juin 2018",
+        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20180614/223571.html"
+      }
+    ],
+    "committee_debates": [],
+    "session": "41-1",
+    "matched_by_title": true,
+    "matched_by_committee": false
+  },
+  {
     "title": "Projet de loi n° 9, Loi instituant le Fonds des ressources informationnelles du secteur de la santé et des services sociaux",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-9-40-1.html",
     "assembly_debates": [
@@ -6652,41 +5774,6 @@
     "session": "40-1",
     "matched_by_title": true,
     "matched_by_committee": true
-  },
-  {
-    "title": "Projet de loi n° 15, Loi permettant l’établissement de régimes de retraite à prestations cibles dans certaines entreprises du secteur des pâtes et papiers",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-15-40-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 30 novembre 2012",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20121130/72835.html"
-      },
-      {
-        "label": "Séance du 4 décembre 2012",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20121204/72985.html"
-      },
-      {
-        "label": "Séance du 6 décembre 2012",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20121206/73509.html"
-      },
-      {
-        "label": "Séance du 6 décembre 2012",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20121206/73509.html"
-      },
-      {
-        "label": "Séance du 6 décembre 2012",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20121206/73509.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 5 décembre 2012",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-40-1/journal-debats/CET-121205.html"
-      }
-    ],
-    "session": "40-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
   },
   {
     "title": "Projet de loi n° 21, Loi visant l’optimisation de l’action gouvernementale en matière de prestation de services aux citoyens et aux entreprises",
@@ -7143,20 +6230,6 @@
     "matched_by_committee": true
   },
   {
-    "title": "Projet de loi n° 67, Loi sur l’assurance autonomie",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-67-40-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 6 décembre 2013",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20131206/103213.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "40-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 194, Loi modifiant la Loi sur les permis d’alcool et d’autres dispositions législatives",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-194-40-1.html",
     "assembly_debates": [
@@ -7359,41 +6432,6 @@
     "session": "39-2",
     "matched_by_title": true,
     "matched_by_committee": true
-  },
-  {
-    "title": "Projet de loi n° 42, Loi modifiant la Loi sur les régimes complémentaires de retraite en vue de prolonger certaines mesures d’atténuation des effets de la crise financière de 2008 à l’égard de régimes de retraite visés par cette loi",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-42-39-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 15 novembre 2011",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20111115/47265.html"
-      },
-      {
-        "label": "Séance du 22 novembre 2011",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20111122/47797.html"
-      },
-      {
-        "label": "Séance du 24 novembre 2011",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20111124/48155.html"
-      },
-      {
-        "label": "Séance du 29 novembre 2011",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20111129/48389.html"
-      },
-      {
-        "label": "Séance du 30 novembre 2011",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20111130/48529.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 23 novembre 2011",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-39-2/journal-debats/CFP-111123.html"
-      }
-    ],
-    "session": "39-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
   },
   {
     "title": "Projet de loi n° 48, Loi concernant l’inspection environnementale des véhicules automobiles",
@@ -7637,20 +6675,6 @@
     "session": "39-2",
     "matched_by_title": true,
     "matched_by_committee": true
-  },
-  {
-    "title": "Projet de loi n° 60, Loi visant principalement la modernisation du régime de santé et de sécurité du travail et son application aux domestiques",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-60-39-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 3 avril 2012",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20120403/54771.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "39-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
   },
   {
     "title": "Projet de loi n° 68, Loi modifiant la Loi sur les permis d’alcool et d’autres dispositions législatives",
@@ -8052,45 +7076,6 @@
       {
         "label": "Séance du 12 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090612.html"
-      }
-    ],
-    "session": "39-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 35, Loi modifiant le régime de santé et de sécurité du travail afin notamment de majorer certaines indemnités de décès et certaines amendes et d'alléger les modalités de paiement de la cotisation pour les employeurs",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-35-39-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 23 avril 2009",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20090423/11033.html"
-      },
-      {
-        "label": "Séance du 26 mai 2009",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20090526/11059.html"
-      },
-      {
-        "label": "Séance du 2 juin 2009",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20090602/11067.html"
-      },
-      {
-        "label": "Séance du 3 juin 2009",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20090603/11069.html"
-      },
-      {
-        "label": "Séance du 9 juin 2009",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20090609/11075.html"
-      },
-      {
-        "label": "Séance du 10 juin 2009",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20090610/11077.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 29 mai 2009",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-39-1/journal-debats/CET-090529.html"
       }
     ],
     "session": "39-1",
@@ -8764,20 +7749,6 @@
     "session": "39-1",
     "matched_by_title": true,
     "matched_by_committee": true
-  },
-  {
-    "title": "Projet de loi n° 110, Loi modifiant le régime de santé et de sécurité du travail pour accorder une plus grande protection à certains domestiques",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-110-39-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 4 juin 2010",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20100604/19137.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "39-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
   },
   {
     "title": "Projet de loi n° 125, Loi facilitant les dons d’organes et de tissus",
@@ -10618,36 +9589,6 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 38, Loi modifiant le Code de la sécurité routière concernant la conduite d'un véhicule sous l'effet de l'alcool",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-38-36-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 14 juin 2001",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20010614/9517.html"
-      },
-      {
-        "label": "Séance du 21 juin 2001",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20010621/9525.html"
-      },
-      {
-        "label": "Séance du 21 juin 2001",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20010621/9525.html"
-      },
-      {
-        "label": "Séance du 21 juin 2001",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20010621/9525.html"
-      },
-      {
-        "label": "Séance du 21 juin 2001",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20010621/9525.html"
-      }
-    ],
-    "committee_debates": [],
-    "session": "36-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 45, Loi modifiant la Loi sur le tabac",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-45-36-2.html",
     "assembly_debates": [
@@ -11062,41 +10003,6 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 133, Loi modifiant la Loi sur la santé et la sécurité du travail et d'autres dispositions législatives",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-133-36-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 7 novembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021107/9699.html"
-      },
-      {
-        "label": "Séance du 13 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021213/9729.html"
-      },
-      {
-        "label": "Séance du 18 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021218/9733.html"
-      },
-      {
-        "label": "Séance du 18 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021218/9733.html"
-      },
-      {
-        "label": "Séance du 18 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021218/9733.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 17 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-36-2/journal-debats/CET-021217.html"
-      }
-    ],
-    "session": "36-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 142, Loi modifiant la Loi sur les services de santé et les services sociaux concernant les activités médicales, la répartition et l'engagement des médecins",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-142-36-2.html",
     "assembly_debates": [
@@ -11167,37 +10073,6 @@
       }
     ],
     "committee_debates": [],
-    "session": "36-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 220, Loi modifiant la Loi constituant en corporation \" L'Hôpital d'Argenteuil \"",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-220-36-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 5 novembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021105/9695.html"
-      },
-      {
-        "label": "Séance du 17 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021217/9731.html"
-      },
-      {
-        "label": "Séance du 19 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021219/9735.html"
-      },
-      {
-        "label": "Séance du 19 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021219/9735.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 13 décembre 2002",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-021213.html"
-      }
-    ],
     "session": "36-2",
     "matched_by_title": true,
     "matched_by_committee": false
@@ -11549,41 +10424,6 @@
       }
     ],
     "committee_debates": [],
-    "session": "36-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 79, Loi modifiant la Loi sur la santé et la sécurité du travail",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-79-36-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 4 novembre 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19991104/9855.html"
-      },
-      {
-        "label": "Séance du 14 décembre 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19991214/9893.html"
-      },
-      {
-        "label": "Séance du 17 décembre 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19991217/9899.html"
-      },
-      {
-        "label": "Séance du 17 décembre 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19991217/9899.html"
-      },
-      {
-        "label": "Séance du 17 décembre 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19991217/9899.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 16 décembre 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-36-1/journal-debats/CET-991216.html"
-      }
-    ],
     "session": "36-1",
     "matched_by_title": true,
     "matched_by_committee": false
@@ -11969,37 +10809,6 @@
     "matched_by_committee": false
   },
   {
-    "title": "Projet de loi n° 215, Loi concernant le Régime de retraite pour certains employés du Centre hospitalier de l'Université Laval",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-215-36-1.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 3 juin 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19990603/9817.html"
-      },
-      {
-        "label": "Séance du 18 juin 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19990618/9835.html"
-      },
-      {
-        "label": "Séance du 18 juin 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19990618/9835.html"
-      },
-      {
-        "label": "Séance du 18 juin 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19990618/9835.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 17 juin 1999",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-36-1/journal-debats/CFP-990617.html"
-      }
-    ],
-    "session": "36-1",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
     "title": "Projet de loi n° 33, Loi sur l'assurance-médicaments et modifiant diverses dispositions législatives",
     "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-33-35-2.html",
     "assembly_debates": [
@@ -12262,41 +11071,6 @@
       }
     ],
     "committee_debates": [],
-    "session": "35-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 74, Loi modifiant la Loi sur les accidents du travail et les maladies professionnelles et la Loi sur la santé et la sécurité du travail",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-74-35-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 14 novembre 1996",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19961114/6711.html"
-      },
-      {
-        "label": "Séance du 27 novembre 1996",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19961127/6721.html"
-      },
-      {
-        "label": "Séance du 13 décembre 1996",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19961213/6743.html"
-      },
-      {
-        "label": "Séance du 19 décembre 1996",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19961219/6751.html"
-      },
-      {
-        "label": "Séance du 19 décembre 1996",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19961219/6751.html"
-      }
-    ],
-    "committee_debates": [
-      {
-        "label": "Séance du 5 décembre 1996",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-35-2/journal-debats/CET-961205.html"
-      }
-    ],
     "session": "35-2",
     "matched_by_title": true,
     "matched_by_committee": false
@@ -12648,20 +11422,6 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-35-2/journal-debats/CTE-980604.html"
       }
     ],
-    "session": "35-2",
-    "matched_by_title": true,
-    "matched_by_committee": false
-  },
-  {
-    "title": "Projet de loi n° 409, Loi modifiant la Loi sur la santé et la sécurité du travail",
-    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-409-35-2.html",
-    "assembly_debates": [
-      {
-        "label": "Séance du 12 mars 1998",
-        "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19980312/6915.html"
-      }
-    ],
-    "committee_debates": [],
     "session": "35-2",
     "matched_by_title": true,
     "matched_by_committee": false

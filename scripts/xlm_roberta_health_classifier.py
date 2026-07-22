@@ -141,7 +141,7 @@ def main():
     device = "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"Using device: {device}")
     print("\nLoading XLM-RoBERTa...")
-    model_name = "xlm-roberta-base"
+    model_name = "poltextlab/xlm-roberta-large-french-cap-v3"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name).to(device)
     model.eval()

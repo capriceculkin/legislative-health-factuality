@@ -123,8 +123,7 @@ def print_summary(all_rows):
     print("  Ontario: 329 keyword health-tagged (pre-classifier); vote outcomes from FSOB PDFs")
     print("           220 health bills with confirmed vote outcome; 109 still unmatched")
     print("           (unmatched = passed by voice vote or FSOB pattern missed)")
-    print("  Quebec:  262 health bills; vote outcomes pending Registre fetch (2018+ only)")
-    print("           pre-2018 vote scope is an open David/Joanie decision")
+    print("post-1994: 211 passed, 51 died in session via Cheminement pages; pre-1994: 88 passed from transcripts")
 
 def main():
     all_rows = []

@@ -30,7 +30,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHEMINEMENT_PATH = os.path.join(REPO_ROOT, "data", "canada", "quebec_bills",
                                 "cheminement_all_sessions.json")
 HEALTH_BILLS_PATH = os.path.join(REPO_ROOT, "data", "canada", "quebec_bills",
-                                 "quebec_health_bills.json")
+                                 "quebec_health_bills_combined.json")
 OUT_DIR = os.path.join(REPO_ROOT, "data", "canada", "quebec_assembly")
 LOG_PATH = os.path.join(OUT_DIR, "fetch_log.json")
 

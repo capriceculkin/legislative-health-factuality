@@ -845,7 +845,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-2/journal-debats/20251024/418599.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-2-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -899,7 +900,8 @@
         "label": "Séance du 26 mars 2026",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-2/journal-debats/CSSS-260326.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-15-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -928,7 +930,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-2/journal-debats/20251212/423415.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-16-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -978,7 +981,8 @@
         "label": "Séance du 18 février 2026",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-2/journal-debats/CSSS-260218.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-19-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1048,7 +1052,8 @@
         "label": "Séance du 11 juin 2026",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-3/journal-debats/CSSS-260611.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-23-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1061,7 +1066,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-2/journal-debats/20260318/430215.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-25-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1074,7 +1080,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-2/journal-debats/20251210/423087.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-495-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1087,7 +1094,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-2/journal-debats/20260217/427773.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-498-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1100,7 +1108,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-2/journal-debats/20260401/431619.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-595-43-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1174,7 +1183,8 @@
         "label": "Séance du 15 mars 2023",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-43-1/journal-debats/CFP-230315.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-3-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1216,7 +1226,8 @@
         "label": "Séance du 28 mars 2023",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-43-1/journal-debats/CFP-230328.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-9-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1274,7 +1285,8 @@
         "label": "Séance du 4 avril 2023",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-230404.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-10-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1372,7 +1384,8 @@
         "label": "Séance du 30 mai 2023",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-230530.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-11-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1614,7 +1627,8 @@
         "label": "Séance du 7 décembre 2023",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-231207.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-15-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1684,7 +1698,8 @@
         "label": "Séance du 26 novembre 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-43-1/journal-debats/CI-241126-2.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-32-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1722,7 +1737,8 @@
         "label": "Séance du 25 octobre 2023",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-231025.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-36-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1804,7 +1820,8 @@
         "label": "Séance du 21 mai 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-240521.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-37-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -1878,7 +1895,8 @@
         "label": "Séance du 21 février 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-43-1/journal-debats/CTE-240221.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-41-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2004,7 +2022,8 @@
         "label": "Séance du 26 novembre 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-43-1/journal-debats/CTE-241126.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-61-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2050,7 +2069,8 @@
         "label": "Séance du 24 septembre 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-240924.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-66-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2112,7 +2132,8 @@
         "label": "Séance du 31 octobre 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-43-1/journal-debats/CI-241031.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-67-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2166,7 +2187,8 @@
         "label": "Séance du 1 octobre 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-43-1/journal-debats/CET-241001.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-68-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2236,7 +2258,8 @@
         "label": "Séance du 9 avril 2025",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-250409.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-83-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2306,7 +2329,8 @@
         "label": "Séance du 28 mai 2025",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-43-1/journal-debats/CRC-250528.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-95-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2368,7 +2392,8 @@
         "label": "Séance du 9 octobre 2025",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-43-2/journal-debats/CET-251009.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-101-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2430,7 +2455,8 @@
         "label": "Séance du 11 novembre 2025",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-2/journal-debats/CSSS-251111.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-103-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2500,7 +2526,8 @@
         "label": "Séance du 4 novembre 2025",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-43-2/journal-debats/CAT-251104.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-104-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2542,7 +2569,8 @@
         "label": "Séance du 6 juin 2025",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-250606.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-106-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2555,7 +2583,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20221207/338475.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-192-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2568,7 +2597,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20221206/338293.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-197-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2598,7 +2628,8 @@
         "label": "Séance du 5 décembre 2024",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-241205.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-212-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2628,7 +2659,8 @@
         "label": "Séance du 12 février 2025",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-43-1/journal-debats/CSSS-250212.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-213-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2641,7 +2673,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20230420/348859.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-398-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2654,7 +2687,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20240321/374049.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-591-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2687,7 +2721,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20240201/368963.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-595-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2700,7 +2735,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20240319/373643.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-694-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2713,7 +2749,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20240522/379659.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-790-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2726,7 +2763,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20241203/395395.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-893-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2739,7 +2777,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20241204/395551.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-894-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2752,7 +2791,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250403/404647.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-899-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2765,7 +2805,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/43-1/journal-debats/20250507/407343.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-994-43-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2794,7 +2835,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20211209/314963.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-8-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2868,7 +2910,8 @@
         "label": "Séance du 14 avril 2022",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-2/journal-debats/CSSS-220414.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-11-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2978,7 +3021,8 @@
         "label": "Séance du 11 avril 2022",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-2/journal-debats/CSSS-220411.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-15-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -2991,7 +3035,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20211203/314275.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-19-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3004,7 +3049,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20220324/321263.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-27-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3082,7 +3128,8 @@
         "label": "Séance du 24 mai 2022",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-2/journal-debats/CSSS-220524.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-28-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3136,7 +3183,8 @@
         "label": "Séance du 2 juin 2022",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-42-2/journal-debats/CI-220602.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-29-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3186,7 +3234,8 @@
         "label": "Séance du 9 juin 2022",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-2/journal-debats/CSSS-220609.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-38-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3223,7 +3272,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20220405/322463.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-498-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3236,7 +3286,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20220512/325503.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-995-42-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3394,7 +3445,8 @@
         "label": "Séance du 21 août 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-190821.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-2-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3440,7 +3492,8 @@
         "label": "Séance du 7 mai 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-190507.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-7-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3566,7 +3619,8 @@
         "label": "Séance du 12 juin 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-42-1/journal-debats/CRC-190612.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-9-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3656,7 +3710,8 @@
         "label": "Séance du 8 mai 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cce-42-1/journal-debats/CCE-190508.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-12-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3702,7 +3757,8 @@
         "label": "Séance du 12 juin 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-42-1/journal-debats/CI-190612-2.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-20-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3808,7 +3864,8 @@
         "label": "Séance du 3 décembre 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-191203.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-27-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3858,7 +3915,8 @@
         "label": "Séance du 22 octobre 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-191022.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-28-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3928,7 +3986,8 @@
         "label": "Séance du 2 septembre 2020",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-42-1/journal-debats/CI-200902.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-29-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -3990,7 +4049,8 @@
         "label": "Séance du 27 novembre 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-191127.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-31-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4040,7 +4100,8 @@
         "label": "Séance du 24 septembre 2020",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/capern-42-1/journal-debats/CAPERN-200924.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-35-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4162,7 +4223,8 @@
         "label": "Séance du 5 février 2020",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-42-1/journal-debats/CFP-200205.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-37-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4196,7 +4258,8 @@
         "label": "Séance du 31 octobre 2019",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-42-1/journal-debats/CFP-191031.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-38-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4270,7 +4333,8 @@
         "label": "Séance du 12 mars 2020",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-200312.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-43-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4336,7 +4400,8 @@
         "label": "Séance du 22 octobre 2020",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-201022.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-52-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4554,7 +4619,8 @@
         "label": "Séance du 22 septembre 2021",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-42-1/journal-debats/CET-210922.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-59-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4588,7 +4654,8 @@
         "label": "Séance du 10 juin 2020",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-42-1/journal-debats/CFP-200610.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-61-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4638,7 +4705,8 @@
         "label": "Séance du 17 février 2021",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-210217.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-73-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4692,7 +4760,8 @@
         "label": "Séance du 8 décembre 2020",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-42-1/journal-debats/CI-201208.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-75-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4750,7 +4819,8 @@
         "label": "Séance du 8 juin 2021",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-42-1/journal-debats/CSSS-210608.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-83-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4796,7 +4866,8 @@
         "label": "Séance du 18 mars 2021",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-42-1/journal-debats/CAT-210318.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-85-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4878,7 +4949,8 @@
         "label": "Séance du 22 mars 2022",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-42-2/journal-debats/CRC-220322.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-101-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4907,7 +4979,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210923/306691.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-105-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4920,7 +4993,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20190411/240327.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-196-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4933,7 +5007,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20200526/270183.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-594-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4946,7 +5021,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20200610/271883.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-597-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4959,7 +5035,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20200612/272135.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-598-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4972,7 +5049,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20200930/277743.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-691-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -4985,7 +5063,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20210506/297647.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-798-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5002,7 +5081,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-2/journal-debats/20220209/317639.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-898-42-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5176,7 +5256,8 @@
         "label": "Séance du 27 novembre 2014",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-141127.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-3-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5350,7 +5431,8 @@
         "label": "Séance du 3 février 2015",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-150203.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-10-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5564,7 +5646,8 @@
         "label": "Séance du 28 octobre 2015",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-151028.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-20-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5630,7 +5713,8 @@
         "label": "Séance du 4 juin 2015",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-41-1/journal-debats/CET-150604.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-42-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5668,7 +5752,8 @@
         "label": "Séance du 21 mai 2015",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-41-1/journal-debats/CET-150521-2.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-43-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5750,7 +5835,8 @@
         "label": "Séance du 18 novembre 2015",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-151118.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-44-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5791,7 +5877,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20140605/112387.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-52-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5845,7 +5932,8 @@
         "label": "Séance du 9 février 2016",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-160209.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-66-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5915,7 +6003,8 @@
         "label": "Séance du 25 mai 2016",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-160525.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-81-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -5973,7 +6062,8 @@
         "label": "Séance du 11 mai 2016",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-160511.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-88-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6059,7 +6149,8 @@
         "label": "Séance du 29 novembre 2016",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-161129.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-92-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6097,7 +6188,8 @@
         "label": "Séance du 25 mai 2016",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-160525.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-97-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6199,7 +6291,8 @@
         "label": "Séance du 20 septembre 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-170920.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-99-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6333,7 +6426,8 @@
         "label": "Séance du 15 mars 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-41-1/journal-debats/CTE-170315.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-102-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6407,7 +6501,8 @@
         "label": "Séance du 5 décembre 2016",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-161205.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-109-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6481,7 +6576,8 @@
         "label": "Séance du 11 avril 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-41-1/journal-debats/CRC-170411.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-115-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6511,7 +6607,8 @@
         "label": "Séance du 26 janvier 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-170126.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-118-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6569,7 +6666,8 @@
         "label": "Séance du 17 août 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-41-1/journal-debats/CAT-170817.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-121-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6582,7 +6680,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20161209/187037.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-123-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6648,7 +6747,8 @@
         "label": "Séance du 4 avril 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-41-1/journal-debats/CFP-170404.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-126-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6766,7 +6866,8 @@
         "label": "Séance du 18 octobre 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-171018.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-130-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6816,7 +6917,8 @@
         "label": "Séance du 16 novembre 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-171116.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-148-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6874,7 +6976,8 @@
         "label": "Séance du 9 mai 2018",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-41-1/journal-debats/CET-180509.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-152-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -6916,7 +7019,8 @@
         "label": "Séance du 28 novembre 2017",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-41-1/journal-debats/CI-171128.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-154-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7126,7 +7230,8 @@
         "label": "Séance du 30 mai 2018",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-41-1/journal-debats/CSSS-180530.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-157-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7139,7 +7244,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20171123/209065.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-160-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7193,7 +7299,8 @@
         "label": "Séance du 28 mars 2018",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-41-1/journal-debats/CET-180328.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-162-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7267,7 +7374,8 @@
         "label": "Séance du 30 mai 2018",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-41-1/journal-debats/CI-180530.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-170-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7280,7 +7388,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20180529/221727.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-189-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7293,7 +7402,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20150217/136245.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-197-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7306,7 +7416,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170511/197265.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-697-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7319,7 +7430,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/41-1/journal-debats/20170404/194313.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-794-41-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7357,7 +7469,8 @@
         "label": "Séance du 6 décembre 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-40-1/journal-debats/CSSS-121206.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-9-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7391,7 +7504,8 @@
         "label": "Séance du 5 décembre 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-40-1/journal-debats/CET-121205.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-15-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7441,7 +7555,8 @@
         "label": "Séance du 27 mars 2013",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-40-1/journal-debats/CFP-130327.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-21-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7511,7 +7626,8 @@
         "label": "Séance du 7 mai 2013",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-40-1/journal-debats/CI-130507.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-22-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7569,7 +7685,8 @@
         "label": "Séance du 21 mai 2013",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-40-1/journal-debats/CSSS-130521.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-29-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7627,7 +7744,8 @@
         "label": "Séance du 5 juin 2013",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-40-1/journal-debats/CSSS-130605.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-30-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7689,7 +7807,8 @@
         "label": "Séance du 20 février 2014",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-40-1/journal-debats/CTE-140220.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-37-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7839,7 +7958,8 @@
         "label": "Séance du 16 janvier 2014",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-40-1/journal-debats/CSSS-140116.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-52-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7852,7 +7972,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20131206/103213.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-67-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7865,7 +7986,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20121115/71459.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-194-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7878,7 +8000,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20131113/100905.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-210-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7891,7 +8014,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20131010/98295.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-399-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7904,7 +8028,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/40-1/journal-debats/20131031/99777.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-497-40-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -7990,7 +8115,8 @@
         "label": "Séance du 9 novembre 2011",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-111109.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-16-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8003,7 +8129,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20111115/47265.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-36-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8049,7 +8176,8 @@
         "label": "Séance du 1 décembre 2011",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-111201.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-41-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8083,7 +8211,8 @@
         "label": "Séance du 23 novembre 2011",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-39-2/journal-debats/CFP-111123.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-42-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8109,7 +8238,8 @@
         "label": "Séance du 15 mai 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-39-2/journal-debats/CTE-120515.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-48-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8167,7 +8297,8 @@
         "label": "Séance du 12 juin 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/capern-39-2/journal-debats/CAPERN-120612.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-51-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8205,7 +8336,8 @@
         "label": "Séance du 5 avril 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-120405.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-53-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8247,7 +8379,8 @@
         "label": "Séance du 1 mai 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-120501.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-55-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8321,7 +8454,8 @@
         "label": "Séance du 14 juin 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-120614.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-59-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8334,7 +8468,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20120403/54771.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-60-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8347,7 +8482,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20120424/56521.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-68-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8389,7 +8525,8 @@
         "label": "Séance du 29 mai 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-120529.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-74-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8402,7 +8539,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20120614/61415.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-79-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8415,7 +8553,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-2/journal-debats/20120612/61123.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-84-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8445,7 +8584,8 @@
         "label": "Séance du 13 juin 2012",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-120613.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-216-39-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8503,7 +8643,8 @@
         "label": "Séance du 17 septembre 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/crc-39-1/journal-debats/CRC-090917.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-7-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8537,7 +8678,8 @@
         "label": "Séance du 21 mai 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090521.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-14-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8583,7 +8725,8 @@
         "label": "Séance du 16 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-39-1/journal-debats/CI-090616.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-21-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8637,7 +8780,8 @@
         "label": "Séance du 11 novembre 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-1/journal-debats/CSSS-091111.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-24-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8675,7 +8819,8 @@
         "label": "Séance du 17 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090617.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-26-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8729,7 +8874,8 @@
         "label": "Séance du 12 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090612.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-34-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8767,7 +8913,8 @@
         "label": "Séance du 29 mai 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-39-1/journal-debats/CET-090529.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-35-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8809,7 +8956,8 @@
         "label": "Séance du 15 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090615.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-43-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8843,7 +8991,8 @@
         "label": "Séance du 5 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090605.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-47-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8901,7 +9050,8 @@
         "label": "Séance du 9 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090609.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-49-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -8963,7 +9113,8 @@
         "label": "Séance du 16 juin 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-39-1/journal-debats/CAS-090616.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-51-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9025,7 +9176,8 @@
         "label": "Séance du 3 novembre 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-1/journal-debats/CSSS-091103.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-56-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9115,7 +9267,8 @@
         "label": "Séance du 25 mai 2010",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-39-1/journal-debats/CAT-100525.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-58-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9153,7 +9306,8 @@
         "label": "Séance du 11 novembre 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-39-1/journal-debats/CFP-091111.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-59-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9259,7 +9413,8 @@
         "label": "Séance du 4 juin 2010",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-1/journal-debats/CSSS-100604.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-67-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9373,7 +9528,8 @@
         "label": "Séance du 28 septembre 2011",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-39-2/journal-debats/CI-110928.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-94-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9390,7 +9546,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20100525/17957.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-104-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9424,7 +9581,8 @@
         "label": "Séance du 9 juin 2010",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-1/journal-debats/CSSS-100609.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-106-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9437,7 +9595,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20100604/19137.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-110-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9483,7 +9642,8 @@
         "label": "Séance du 2 décembre 2010",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-1/journal-debats/CSSS-101202.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-125-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9573,7 +9733,8 @@
         "label": "Séance du 31 mai 2011",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-2/journal-debats/CSSS-110531.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-127-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9586,7 +9747,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20090429/11037.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-194-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9616,7 +9778,8 @@
         "label": "Séance du 2 décembre 2009",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-1/journal-debats/CSSS-091202.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-217-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9646,7 +9809,8 @@
         "label": "Séance du 8 décembre 2010",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/csss-39-1/journal-debats/CSSS-101208.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-231-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9659,7 +9823,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/39-1/journal-debats/20100427/15961.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-395-39-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9693,7 +9858,8 @@
         "label": "Séance du 29 mai 2007",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-38-1/journal-debats/CAS-070529.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-1-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9722,7 +9888,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/38-1/journal-debats/20070620/3057.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-4-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9756,7 +9923,8 @@
         "label": "Séance du 13 novembre 2007",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-38-1/journal-debats/CI-071113.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-12-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9786,7 +9954,8 @@
         "label": "Séance du 10 juin 2008",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-38-1/journal-debats/CAS-080610.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-23-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9820,7 +9989,8 @@
         "label": "Séance du 30 octobre 2007",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-38-1/journal-debats/CAS-071030.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-24-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9854,7 +10024,8 @@
         "label": "Séance du 1 novembre 2007",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-38-1/journal-debats/CAS-071101.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-25-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9892,7 +10063,8 @@
         "label": "Séance du 6 novembre 2007",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-38-1/journal-debats/CAS-071106.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-26-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9930,7 +10102,8 @@
         "label": "Séance du 12 mars 2008",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-38-1/journal-debats/CI-080312.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-50-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9964,7 +10137,8 @@
         "label": "Séance du 27 novembre 2007",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-38-1/journal-debats/CAS-071127.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-51-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9977,7 +10151,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/38-1/journal-debats/20071214/3119.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-66-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -9994,7 +10169,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/38-1/journal-debats/20080313/3129.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-67-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10040,7 +10216,8 @@
         "label": "Séance du 13 mai 2008",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-38-1/journal-debats/CAS-080513.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-70-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10053,7 +10230,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/38-1/journal-debats/20080515/3177.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-90-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10066,7 +10244,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/38-1/journal-debats/20080402/3139.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-392-38-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10180,7 +10359,8 @@
         "label": "Séance du 11 décembre 2006",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-2/journal-debats/CAS-061211.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-33-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10209,7 +10389,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/37-2/journal-debats/20060613/2947.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-37-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10243,7 +10424,8 @@
         "label": "Séance du 1 décembre 2006",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-37-2/journal-debats/CET-061201.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-40-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10260,7 +10442,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/37-2/journal-debats/20061123/2985.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-45-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10314,7 +10497,8 @@
         "label": "Séance du 11 décembre 2006",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-37-2/journal-debats/CI-061211.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-48-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10336,7 +10520,8 @@
         "label": "Séance du 6 février 2007",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-37-2/journal-debats/CI-070206.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-54-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10349,7 +10534,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/37-2/journal-debats/20061128/2987.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-59-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10379,7 +10565,8 @@
         "label": "Séance du 6 décembre 2006",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-2/journal-debats/CAS-061206.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-213-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10409,7 +10596,8 @@
         "label": "Séance du 6 décembre 2006",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-2/journal-debats/CAS-061206.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-215-37-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10471,7 +10659,8 @@
         "label": "Séance du 27 novembre 2003",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-1/journal-debats/CAS-031127.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-7-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10513,7 +10702,8 @@
         "label": "Séance du 20 novembre 2003",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-37-1/journal-debats/CET-031120.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-14-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10575,7 +10765,8 @@
         "label": "Séance du 12 décembre 2003",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-1/journal-debats/CAS-031212.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-25-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10637,7 +10828,8 @@
         "label": "Séance du 14 juin 2005",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-1/journal-debats/CAS-050614.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-38-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10671,7 +10863,8 @@
         "label": "Séance du 20 mai 2004",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-37-1/journal-debats/CFP-040520.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-47-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10721,7 +10914,8 @@
         "label": "Séance du 2 décembre 2004",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-1/journal-debats/CAS-041202.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-56-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10775,7 +10969,8 @@
         "label": "Séance du 9 décembre 2004",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-37-1/journal-debats/CAT-041209.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-75-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10881,7 +11076,8 @@
         "label": "Séance du 3 novembre 2005",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-1/journal-debats/CAS-051103.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-83-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10919,7 +11115,8 @@
         "label": "Séance du 30 mars 2006",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-2/journal-debats/CAS-060330.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-89-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -10969,7 +11166,8 @@
         "label": "Séance du 13 juin 2005",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-1/journal-debats/CAS-050613.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-112-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11011,7 +11209,8 @@
         "label": "Séance du 1 décembre 2005",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-37-1/journal-debats/CAS-051201.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-130-37-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11057,7 +11256,8 @@
         "label": "Séance du 21 juin 2001",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-010621.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-15-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11131,7 +11331,8 @@
         "label": "Séance du 15 novembre 2001",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-011115.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-27-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11189,7 +11390,8 @@
         "label": "Séance du 6 juin 2001",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-010606.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-28-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11231,7 +11433,8 @@
         "label": "Séance du 28 novembre 2001",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-011128.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-36-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11260,7 +11463,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20010621/9525.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-38-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11294,7 +11498,8 @@
         "label": "Séance du 6 novembre 2001",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-011106.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-45-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11328,7 +11533,8 @@
         "label": "Séance du 13 juin 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-36-2/journal-debats/CI-020613.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-90-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11390,7 +11596,8 @@
         "label": "Séance du 11 juin 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-020611.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-98-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11436,7 +11643,8 @@
         "label": "Séance du 13 juin 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-020613.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-101-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11470,7 +11678,8 @@
         "label": "Séance du 14 juin 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-020614.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-108-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11504,7 +11713,8 @@
         "label": "Séance du 20 novembre 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-36-2/journal-debats/CI-021120.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-111-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11558,7 +11768,8 @@
         "label": "Séance du 17 décembre 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-021217.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-113-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11566,7 +11777,8 @@
     "bill_number": "114",
     "title": "Projet de loi n° 114, Loi visant la prestation continue de services médicaux d'urgence",
     "assembly_debates": [],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-114-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11595,7 +11807,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021031/9693.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-117-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11629,7 +11842,8 @@
         "label": "Séance du 20 novembre 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-36-2/journal-debats/CTE-021120.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-118-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11663,7 +11877,8 @@
         "label": "Séance du 27 novembre 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-36-2/journal-debats/CI-021127.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-132-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11697,7 +11912,8 @@
         "label": "Séance du 17 décembre 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-36-2/journal-debats/CET-021217.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-133-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11743,7 +11959,8 @@
         "label": "Séance du 12 décembre 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-021212.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-142-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11756,7 +11973,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021213/9729.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-151-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11769,7 +11987,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-2/journal-debats/20021213/9729.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-155-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11799,7 +12018,8 @@
         "label": "Séance du 13 décembre 2002",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-021213.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-220-36-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11833,7 +12053,8 @@
         "label": "Séance du 18 mai 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-36-1/journal-debats/CFP-990518.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-2-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11867,7 +12088,8 @@
         "label": "Séance du 19 mai 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-1/journal-debats/CAS-990519.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-27-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11905,7 +12127,8 @@
         "label": "Séance du 15 juin 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-1/journal-debats/CAS-990615.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-36-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11939,7 +12162,8 @@
         "label": "Séance du 8 juin 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ce-36-1/journal-debats/CE-990608.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-43-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -11973,7 +12197,8 @@
         "label": "Séance du 1 juin 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cc-36-1/journal-debats/CC-990601.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-45-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12019,7 +12244,8 @@
         "label": "Séance du 15 juin 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-1/journal-debats/CAS-990615.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-53-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12053,7 +12279,8 @@
         "label": "Séance du 9 juin 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-36-1/journal-debats/CTE-990609.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-60-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12082,7 +12309,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19990617/9833.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-69-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12111,7 +12339,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19990702/9837.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-72-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12140,7 +12369,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/36-1/journal-debats/19991027/9847.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-74-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12174,7 +12404,8 @@
         "label": "Séance du 16 décembre 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-36-1/journal-debats/CET-991216.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-79-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12224,7 +12455,8 @@
         "label": "Séance du 14 décembre 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-1/journal-debats/CAS-991214.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-83-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12282,7 +12514,8 @@
         "label": "Séance du 25 mai 2000",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-1/journal-debats/CAS-000525.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-107-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12328,7 +12561,8 @@
         "label": "Séance du 13 juin 2000",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-1/journal-debats/CAS-000613.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-117-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12362,7 +12596,8 @@
         "label": "Séance du 8 décembre 2000",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-36-1/journal-debats/CTE-001208.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-129-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12396,7 +12631,8 @@
         "label": "Séance du 24 mai 2000",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-1/journal-debats/CAS-000524.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-133-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12430,7 +12666,8 @@
         "label": "Séance du 30 mai 2001",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-36-2/journal-debats/CAS-010530.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-165-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12508,7 +12745,8 @@
         "label": "Séance du 7 décembre 2000",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cat-36-1/journal-debats/CAT-001207.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-170-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12546,7 +12784,8 @@
         "label": "Séance du 21 août 2001",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/ci-36-2/journal-debats/CI-010821.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-174-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12576,7 +12815,8 @@
         "label": "Séance du 17 juin 1999",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-36-1/journal-debats/CFP-990617.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-215-36-1.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12654,7 +12894,8 @@
         "label": "Séance du 17 juin 1996",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-960617.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-33-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12716,7 +12957,8 @@
         "label": "Séance du 5 décembre 1997",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-971205.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-39-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12750,7 +12992,8 @@
         "label": "Séance du 13 décembre 1996",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-961213.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-41-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12779,7 +13022,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19960619/6687.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-44-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12808,7 +13052,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19970318/6761.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-47-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12837,7 +13082,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19961119/6713.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-49-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12871,7 +13117,8 @@
         "label": "Séance du 5 décembre 1996",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cet-35-2/journal-debats/CET-961205.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-74-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12900,7 +13147,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19970611/6835.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-142-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12929,7 +13177,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19971209/6895.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-154-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -12963,7 +13212,8 @@
         "label": "Séance du 11 novembre 1997",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/capa-35-2/journal-debats/CAPA-971111.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-158-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13025,7 +13275,8 @@
         "label": "Séance du 15 décembre 1997",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-971215.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-176-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13046,7 +13297,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19960612/6677.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-190-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13059,7 +13311,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19960514/6645.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-208-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13089,7 +13342,8 @@
         "label": "Séance du 17 décembre 1997",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-35-2/journal-debats/CFP-971217.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-259-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13167,7 +13421,8 @@
         "label": "Séance du 15 juin 1998",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-980615.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-404-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13213,7 +13468,8 @@
         "label": "Séance du 4 juin 1998",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cte-35-2/journal-debats/CTE-980604.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-405-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13226,7 +13482,8 @@
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-2/journal-debats/19980312/6915.html"
       }
     ],
-    "committee_debates": []
+    "committee_debates": [],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-409-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13264,7 +13521,8 @@
         "label": "Séance du 3 juin 1998",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-980603.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-417-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13306,7 +13564,8 @@
         "label": "Séance du 17 juin 1998",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-980617.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-439-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13344,7 +13603,8 @@
         "label": "Séance du 12 juin 1998",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cfp-35-2/journal-debats/CFP-980612.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-442-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13402,7 +13662,8 @@
         "label": "Séance du 10 juin 1998",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-980610.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-444-35-2.html"
   },
   {
     "source": "cheminement_post1994",
@@ -13476,6 +13737,7 @@
         "label": "Séance du 12 juin 1996",
         "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/commissions/cas-35-2/journal-debats/CAS-960612.html"
       }
-    ]
+    ],
+    "bill_url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-116-35-1.html"
   }
 ]

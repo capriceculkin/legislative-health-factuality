@@ -453,8 +453,9 @@
     "bill_number": "100",
     "session": "34-2",
     "title": "",
-    "outcome": null,
-    "vote_date": null
+    "outcome": "passed",
+    "vote_date": "19930603",
+    "context": "Présentation, adoption du principe et adoption - manual confirmation"
   },
   "34-2-Bill79": {
     "bill_number": "79",

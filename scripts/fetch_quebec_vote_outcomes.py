@@ -9,7 +9,7 @@ shows structured stage-by-stage vote tallies including:
 This works for ALL sessions from 1985 onward since every bill has its
 own page at the URL stored in quebec_health_bills.json under bill_url.
 
-Output: data/canada/quebec_bills/quebec_vote_outcomes.json
+Output: data/canada/quebec_bills/"quebec_health_bills_combined.json"
 Usage: python3 scripts/fetch_quebec_vote_outcomes.py
 """
 
@@ -20,9 +20,9 @@ import time
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEALTH_BILLS_PATH = os.path.join(REPO_ROOT, "data", "canada", "quebec_bills",
-                                  "quebec_health_bills.json")
+                                  "quebec_health_bills_combined.json")
 OUTPUT_PATH = os.path.join(REPO_ROOT, "data", "canada", "quebec_bills",
-                           "quebec_vote_outcomes.json")
+                           "quebec_vote_outcomes_combined.json")
 
 # Patterns matching FRENCH rendered page text (assnat.qc.ca is in French)
 # "Adoption du principe\nSéance du 24 octobre 2025 (Vote : Pour 60, Contre 27, Abstention 0)"

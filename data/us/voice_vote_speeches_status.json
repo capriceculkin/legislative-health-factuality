@@ -5,8 +5,8 @@
     "title": "BOLD Infrastructure for Alzheimer's Reauthorization Act of 2024",
     "outcome": "passed",
     "passage_date": "2024-09-17",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "118-H.R. 7189": {
     "bill": "H.R. 7189",
@@ -14,8 +14,8 @@
     "title": "Congenital Heart Futures Reauthorization Act of 2024",
     "outcome": "passed",
     "passage_date": "2024-09-23",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "118-H.R. 6829": {
     "bill": "H.R. 6829",
@@ -23,8 +23,8 @@
     "title": "HEARTS Act of 2024",
     "outcome": "passed",
     "passage_date": "2024-09-23",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "118-H.R. 2544": {
     "bill": "H.R. 2544",
@@ -32,8 +32,8 @@
     "title": "Securing the U.S. Organ Procurement and Transplantation Network Act",
     "outcome": "passed",
     "passage_date": "2023-07-25",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "118-H.R. 670": {
     "bill": "H.R. 670",
@@ -41,8 +41,8 @@
     "title": "Think Differently Database Act",
     "outcome": "passed",
     "passage_date": "2024-12-17",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "117-H.R. 1193": {
     "bill": "H.R. 1193",
@@ -50,8 +50,8 @@
     "title": "Cardiovascular Advances in Research and Opportunities Legacy Act",
     "outcome": "passed",
     "passage_date": "2022-12-05",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "117-H.R. 189": {
     "bill": "H.R. 189",
@@ -68,8 +68,8 @@
     "title": "Lifespan Respite Care Reauthorization Act of 2020",
     "outcome": "passed",
     "passage_date": "2020-12-10",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 7898": {
     "bill": "H.R. 7898",
@@ -77,8 +77,8 @@
     "title": "To amend the Health Information Technology for Economic and Clinical Health Act ",
     "outcome": "passed",
     "passage_date": "2020-12-09",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 5663": {
     "bill": "H.R. 5663",
@@ -86,8 +86,8 @@
     "title": "Safeguarding Therapeutics Act",
     "outcome": "passed",
     "passage_date": "2020-09-21",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 2468": {
     "bill": "H.R. 2468",
@@ -95,8 +95,8 @@
     "title": "School-Based Allergies and Asthma Management Program Act",
     "outcome": "passed",
     "passage_date": "2020-09-29",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 1966": {
     "bill": "H.R. 1966",
@@ -104,8 +104,8 @@
     "title": "Henrietta Lacks Enhancing Cancer Research Act of 2019",
     "outcome": "passed",
     "passage_date": "2020-12-09",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 1839": {
     "bill": "H.R. 1839",
@@ -113,8 +113,8 @@
     "title": "Medicaid Services Investment and Accountability Act of 2019",
     "outcome": "passed",
     "passage_date": "2019-03-25",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 1418": {
     "bill": "H.R. 1418",
@@ -122,8 +122,8 @@
     "title": "Competitive Health Insurance Reform Act of 2020",
     "outcome": "passed",
     "passage_date": "2020-09-21",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 1058": {
     "bill": "H.R. 1058",
@@ -131,8 +131,8 @@
     "title": "Autism CARES Act of 2019",
     "outcome": "passed",
     "passage_date": "2019-07-24",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 776": {
     "bill": "H.R. 776",
@@ -140,8 +140,8 @@
     "title": "Emergency Medical Services for Children Program Reauthorization Act of 2019",
     "outcome": "passed",
     "passage_date": "2019-07-24",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "116-H.R. 259": {
     "bill": "H.R. 259",
@@ -167,8 +167,8 @@
     "title": "Animal Drug and Animal Generic Drug User Fee Amendments of 2018",
     "outcome": "passed",
     "passage_date": "2018-07-16",
-    "has_speech": false,
-    "has_granule": false
+    "has_speech": true,
+    "has_granule": true
   },
   "115-H.R. 5385": {
     "bill": "H.R. 5385",
@@ -176,7 +176,430 @@
     "title": "Dr. Benjy Frances Brooks Children's Hospital GME Support Reauthorization Act of ",
     "outcome": "passed",
     "passage_date": "2018-07-23",
-    "has_speech": false,
+    "has_speech": true,
+    "has_granule": true
+  },
+  "115-H.R. 4374": {
+    "bill": "H.R. 4374",
+    "congress": "115",
+    "title": "To amend the Federal Food, Drug, and Cosmetic Act to authorize additional emerge",
+    "outcome": "passed",
+    "passage_date": "2017-11-15",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "115-H.R. 3834": {
+    "bill": "H.R. 3834",
+    "congress": "115",
+    "title": "9/11 Heroes Medal of Valor Act of 2017",
+    "outcome": "passed",
+    "passage_date": "2018-09-26",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "115-H.R. 3759": {
+    "bill": "H.R. 3759",
+    "congress": "115",
+    "title": "RAISE Family Caregivers Act",
+    "outcome": "passed",
+    "passage_date": "2017-12-18",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "115-H.R. 2430": {
+    "bill": "H.R. 2430",
+    "congress": "115",
+    "title": "FDA Reauthorization Act of 2017",
+    "outcome": "passed",
+    "passage_date": "2017-07-12",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "115-H.R. 1318": {
+    "bill": "H.R. 1318",
+    "congress": "115",
+    "title": "Preventing Maternal Deaths Act of 2018",
+    "outcome": "passed",
+    "passage_date": "2018-12-11",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "115-H.R. 931": {
+    "bill": "H.R. 931",
+    "congress": "115",
+    "title": "Firefighter Cancer Registry Act of 2018",
+    "outcome": "passed",
+    "passage_date": "2017-09-12",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "114-H.R. 3831": {
+    "bill": "H.R. 3831",
+    "congress": "114",
+    "title": "Securing Fairness in Regulatory Timing Act of 2015",
+    "outcome": "passed",
+    "passage_date": "2015-12-10",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "114-H.R. 2212": {
+    "bill": "H.R. 2212",
+    "congress": "114",
+    "title": "To take certain Federal lands located in Lassen County, California, into trust f",
+    "outcome": "passed",
+    "passage_date": "2015-11-30",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "114-H.R. 1624": {
+    "bill": "H.R. 1624",
+    "congress": "114",
+    "title": "Protecting Affordable Coverage for Employees Act",
+    "outcome": "passed",
+    "passage_date": "2015-09-28",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "114-H.R. 1321": {
+    "bill": "H.R. 1321",
+    "congress": "114",
+    "title": "Microbead-Free Waters Act of 2015",
+    "outcome": "passed",
+    "passage_date": "2015-12-07",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 5185": {
+    "bill": "H.R. 5185",
+    "congress": "113",
+    "title": "EARLY Act Reauthorization of 2014",
+    "outcome": "passed",
+    "passage_date": "2014-12-09",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 4994": {
+    "bill": "H.R. 4994",
+    "congress": "113",
+    "title": "IMPACT Act of 2014",
+    "outcome": "passed",
+    "passage_date": "2014-09-16",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "113-H.R. 4631": {
+    "bill": "H.R. 4631",
+    "congress": "113",
+    "title": "Autism CARES Act of 2014",
+    "outcome": "passed",
+    "passage_date": "2014-06-24",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 4302": {
+    "bill": "H.R. 4302",
+    "congress": "113",
+    "title": "Protecting Access to Medicare Act of 2014",
+    "outcome": "passed",
+    "passage_date": "2014-03-27",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 4067": {
+    "bill": "H.R. 4067",
+    "congress": "113",
+    "title": "To provide for the extension of the enforcement instruction on supervision requi",
+    "outcome": "passed",
+    "passage_date": "2014-09-09",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 3548": {
+    "bill": "H.R. 3548",
+    "congress": "113",
+    "title": "Improving Trauma Care Act of 2014",
+    "outcome": "passed",
+    "passage_date": "2014-06-24",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 3204": {
+    "bill": "H.R. 3204",
+    "congress": "113",
+    "title": "Drug Quality and Security Act",
+    "outcome": "passed",
+    "passage_date": "2013-09-28",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 2094": {
+    "bill": "H.R. 2094",
+    "congress": "113",
+    "title": "School Access to Emergency Epinephrine Act",
+    "outcome": "passed",
+    "passage_date": "2013-07-30",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 1281": {
+    "bill": "H.R. 1281",
+    "congress": "113",
+    "title": "Newborn Screening Saves Lives Reauthorization Act of 2014",
+    "outcome": "passed",
+    "passage_date": "2014-06-24",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 669": {
+    "bill": "H.R. 669",
+    "congress": "113",
+    "title": "Sudden Unexpected Death Data Enhancement and Awareness Act",
+    "outcome": "passed",
+    "passage_date": "2014-09-09",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "113-H.R. 594": {
+    "bill": "H.R. 594",
+    "congress": "113",
+    "title": "Paul D. Wellstone Muscular Dystrophy Community Assistance, Research and Educatio",
+    "outcome": "passed",
+    "passage_date": "2014-07-28",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "112-H.R. 6433": {
+    "bill": "H.R. 6433",
+    "congress": "112",
+    "title": "FDA User Fee Corrections Act of 2012",
+    "outcome": "passed",
+    "passage_date": "2012-09-19",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "112-H.R. 6118": {
+    "bill": "H.R. 6118",
+    "congress": "112",
+    "title": "Taking Essential Steps for Testing Act of 2012",
+    "outcome": "passed",
+    "passage_date": "2012-09-19",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "112-H.R. 2005": {
+    "bill": "H.R. 2005",
+    "congress": "112",
+    "title": "Combating Autism Reauthorization Act of 2011",
+    "outcome": "passed",
+    "passage_date": "2011-09-20",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "111-H.R. 5712": {
+    "bill": "H.R. 5712",
+    "congress": "111",
+    "title": "Physician Payment and Therapy Relief Act of 2010",
+    "outcome": "passed",
+    "passage_date": "2010-11-29",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "111-H.R. 3663": {
+    "bill": "H.R. 3663",
+    "congress": "111",
+    "title": "To amend title XVIII of the Social Security Act to delay the date on which the a",
+    "outcome": "passed",
+    "passage_date": "2009-09-30",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "111-H.R. 2941": {
+    "bill": "H.R. 2941",
+    "congress": "111",
+    "title": "To reauthorize and enhance Johanna's Law to increase public awareness and knowle",
+    "outcome": "passed",
+    "passage_date": "2010-12-16",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "110-H.R. 7198": {
+    "bill": "H.R. 7198",
+    "congress": "110",
+    "title": "Stephanie Tubbs Jones Gift of Life Medal Act of 2008",
+    "outcome": "passed",
+    "passage_date": "2008-09-29",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "110-H.R. 6469": {
+    "bill": "H.R. 6469",
+    "congress": "110",
+    "title": "Stephanie Tubbs Jones Organ Transplant Authorization Act of 2008",
+    "outcome": "passed",
+    "passage_date": "2008-09-25",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "110-H.R. 6432": {
+    "bill": "H.R. 6432",
+    "congress": "110",
+    "title": "To amend the Federal Food, Drug, and Cosmetic Act to revise and extend the anima",
+    "outcome": "passed",
+    "passage_date": "2008-07-30",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "110-H.R. 5919": {
+    "bill": "H.R. 5919",
+    "congress": "110",
+    "title": "To make technical corrections regarding the Newborn Screening Saves Lives Act of",
+    "outcome": "passed",
+    "passage_date": "2008-04-30",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "110-H.R. 3668": {
+    "bill": "H.R. 3668",
+    "congress": "110",
+    "title": "TMA, Abstinence Education, and QI Programs Extension Act of 2007",
+    "outcome": "passed",
+    "passage_date": "2007-09-26",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "110-H.R. 2851": {
+    "bill": "H.R. 2851",
+    "congress": "110",
+    "title": "Michelle's Law",
+    "outcome": "passed",
+    "passage_date": "2008-07-30",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "110-H.R. 1532": {
+    "bill": "H.R. 1532",
+    "congress": "110",
+    "title": "Comprehensive Tuberculosis Elimination Act of 2008",
+    "outcome": "passed",
+    "passage_date": "2008-09-24",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "110-H.R. 1157": {
+    "bill": "H.R. 1157",
+    "congress": "110",
+    "title": "Breast Cancer and Environmental Research Act of 2008",
+    "outcome": "passed",
+    "passage_date": "2008-09-25",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "110-H.R. 1132": {
+    "bill": "H.R. 1132",
+    "congress": "110",
+    "title": "National Breast and Cervical Cancer Early Detection Program Reauthorization Act ",
+    "outcome": "passed",
+    "passage_date": "2007-03-27",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "110-H.R. 727": {
+    "bill": "H.R. 727",
+    "congress": "110",
+    "title": "Trauma Care Systems Planning and Development Act of 2007",
+    "outcome": "passed",
+    "passage_date": "2007-03-27",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "109-H.R. 4579": {
+    "bill": "H.R. 4579",
+    "congress": "109",
+    "title": "Employee Retirement Preservation Act",
+    "outcome": "passed",
+    "passage_date": "2005-12-17",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "109-H.R. 4519": {
+    "bill": "H.R. 4519",
+    "congress": "109",
+    "title": "State High Risk Pool Funding Extension Act of 2006",
+    "outcome": "passed",
+    "passage_date": "2005-12-17",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "109-H.R. 3423": {
+    "bill": "H.R. 3423",
+    "congress": "109",
+    "title": "Medical Device User Fee Stabilization Act of 2005",
+    "outcome": "passed",
+    "passage_date": "2005-07-26",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "109-H.R. 3248": {
+    "bill": "H.R. 3248",
+    "congress": "109",
+    "title": "Lifespan Respite Care Act of 2006",
+    "outcome": "passed",
+    "passage_date": "2006-12-06",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "109-H.R. 1812": {
+    "bill": "H.R. 1812",
+    "congress": "109",
+    "title": "Patient Navigator Outreach and Chronic Disease Prevention Act of 2005",
+    "outcome": "passed",
+    "passage_date": "2005-06-13",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "109-H.R. 1245": {
+    "bill": "H.R. 1245",
+    "congress": "109",
+    "title": "Johanna's Law",
+    "outcome": "passed",
+    "passage_date": "2006-11-14",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "109-H.R. 1132": {
+    "bill": "H.R. 1132",
+    "congress": "109",
+    "title": "National All Schedules Prescription Electronic Reporting Act of 2005",
+    "outcome": "passed",
+    "passage_date": "2005-07-27",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "108-H.R. 5204": {
+    "bill": "H.R. 5204",
+    "congress": "108",
+    "title": "To amend section 340E of the Public Health Service Act (relating to children's h",
+    "outcome": "passed",
+    "passage_date": "2004-10-06",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "108-H.R. 4555": {
+    "bill": "H.R. 4555",
+    "congress": "108",
+    "title": "Mammography Quality Standards Reauthorization Act of 2004",
+    "outcome": "passed",
+    "passage_date": "2004-10-05",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "108-H.R. 4278": {
+    "bill": "H.R. 4278",
+    "congress": "108",
+    "title": "Assistive Technology Act of 2004",
+    "outcome": "passed",
+    "passage_date": "2004-06-14",
+    "has_speech": true,
     "has_granule": false
   }
 }

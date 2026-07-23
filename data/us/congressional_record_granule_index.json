@@ -274,5 +274,165 @@
       "CRECB-2006-pt18-Pg23432",
       "CRECB-2006-pt18-Pg23624"
     ]
+  },
+  "2018-07-16": {
+    "packageId": "CREC-2018-07-16",
+    "granuleId": "CREC-2018-07-16-pt1-PgH-FrontMatter"
+  },
+  "2018-07-23": {
+    "packageId": "CREC-2018-07-23",
+    "granuleId": "CREC-2018-07-23-pt1-PgH-FrontMatter-2"
+  },
+  "2019-03-25": {
+    "packageId": "CREC-2019-03-25",
+    "granuleId": "CREC-2019-03-25-pt1-PgH-FrontMatter"
+  },
+  "2019-07-24": {
+    "packageId": "CREC-2019-07-24",
+    "granuleId": "CREC-2019-07-24-pt1-PgH-FrontMatter"
+  },
+  "2020-09-21": {
+    "packageId": "CREC-2020-09-21",
+    "granuleId": "CREC-2020-09-21-pt1-PgH-FrontMatter-2"
+  },
+  "2020-09-29": {
+    "packageId": "CREC-2020-09-29",
+    "granuleId": "CREC-2020-09-29-pt1-PgH-FrontMatter-2"
+  },
+  "2020-12-09": {
+    "packageId": "CREC-2020-12-09",
+    "granuleId": "CREC-2020-12-09-pt1-PgH-FrontMatter-2"
+  },
+  "2020-12-10": {
+    "packageId": "CREC-2020-12-10",
+    "granuleId": "CREC-2020-12-10-pt1-PgH-FrontMatter-5"
+  },
+  "2022-12-05": {
+    "packageId": "CREC-2022-12-05",
+    "granuleId": "CREC-2022-12-05-pt1-PgH-FrontMatter"
+  },
+  "2023-07-25": {
+    "packageId": "CREC-2023-07-25",
+    "granuleId": "CREC-2023-07-25-pt1-PgH-FrontMatter-2"
+  },
+  "2024-09-17": {
+    "packageId": "CREC-2024-09-17",
+    "granuleId": "CREC-2024-09-17-pt1-PgH-FrontMatter-5"
+  },
+  "2024-09-23": {
+    "packageId": "CREC-2024-09-23",
+    "granuleId": "CREC-2024-09-23-pt1-PgH-FrontMatter"
+  },
+  "2024-12-17": {
+    "packageId": "CREC-2024-12-17",
+    "granuleId": "CREC-2024-12-17-pt1-PgH-FrontMatter-3"
+  },
+  "2004-10-05": {
+    "packageId": "CREC-2004-10-05",
+    "granuleId": "CREC-2004-10-05-pt1-PgH8159-10"
+  },
+  "2004-10-06": {
+    "packageId": "CREC-2004-10-06",
+    "granuleId": "CREC-2004-10-06-pt1-PgE1799-2"
+  },
+  "2005-06-13": {
+    "packageId": "CREC-2005-06-13",
+    "granuleId": "CREC-2005-06-13-pt1-PgS6391-2"
+  },
+  "2007-03-27": {
+    "packageId": "CREC-2007-03-27",
+    "granuleId": "CREC-2007-03-27-pt1-PgS3792-2"
+  },
+  "2007-09-26": {
+    "packageId": "CREC-2007-09-26",
+    "granuleId": "CREC-2007-09-26-pt1-PgS12138-2"
+  },
+  "2008-04-30": {
+    "packageId": "CREC-2008-04-30",
+    "granuleId": "CREC-2008-04-30-pt1-PgS3554-2"
+  },
+  "2008-09-29": {
+    "packageId": "CREC-2008-09-29",
+    "granuleId": "CREC-2008-09-29-pt1-PgS10054-2"
+  },
+  "2009-09-30": {
+    "packageId": "CREC-2009-09-30",
+    "granuleId": "CREC-2009-09-30-pt1-PgH10409"
+  },
+  "2010-12-16": {
+    "packageId": "CREC-2010-12-16",
+    "granuleId": "CREC-2010-12-16-pt1-PgS10387-2"
+  },
+  "2011-09-20": {
+    "packageId": "CREC-2011-09-20",
+    "granuleId": "CREC-2011-09-20-pt1-PgS5748-2"
+  },
+  "2012-09-19": {
+    "packageId": "CREC-2012-09-19",
+    "granuleId": "CREC-2012-09-19-pt1-PgS6426-2"
+  },
+  "2013-07-30": {
+    "packageId": "CREC-2013-07-30",
+    "granuleId": "CREC-2013-07-30-pt1-PgS6029-2"
+  },
+  "2013-09-28": {
+    "packageId": "CREC-2013-09-28",
+    "granuleId": "CREC-2013-09-28-pt1-PgE1399-2"
+  },
+  "2014-03-27": {
+    "packageId": "CREC-2014-03-27",
+    "granuleId": "CREC-2014-03-27-pt1-PgS1800-2"
+  },
+  "2014-06-24": {
+    "packageId": "CREC-2014-06-24",
+    "granuleId": "CREC-2014-06-24-pt1-PgS3912-2"
+  },
+  "2014-07-28": {
+    "packageId": "CREC-2014-07-28",
+    "granuleId": "CREC-2014-07-28-pt1-PgS4993-2"
+  },
+  "2014-09-09": {
+    "packageId": "CREC-2014-09-09",
+    "granuleId": "CREC-2014-09-09-pt1-PgS5426-2"
+  },
+  "2014-12-09": {
+    "packageId": "CREC-2014-12-09",
+    "granuleId": "CREC-2014-12-09-pt1-PgS6404-2"
+  },
+  "2015-09-28": {
+    "packageId": "CREC-2015-09-28",
+    "granuleId": "CREC-2015-09-28-pt1-PgS6977-2"
+  },
+  "2015-11-30": {
+    "packageId": "CREC-2015-11-30",
+    "granuleId": "CREC-2015-11-30-pt1-PgS8191-2"
+  },
+  "2015-12-10": {
+    "packageId": "CREC-2015-12-10",
+    "granuleId": "CREC-2015-12-10-pt1-PgH9271-22"
+  },
+  "2017-07-12": {
+    "packageId": "CREC-2017-07-12",
+    "granuleId": "CREC-2017-07-12-pt1-PgS3934-2"
+  },
+  "2017-09-12": {
+    "packageId": "CREC-2017-09-12",
+    "granuleId": "CREC-2017-09-12-pt1-PgS5211-2"
+  },
+  "2017-11-15": {
+    "packageId": "CREC-2017-11-15",
+    "granuleId": "CREC-2017-11-15-pt1-PgH9377-15"
+  },
+  "2017-12-18": {
+    "packageId": "CREC-2017-12-18",
+    "granuleId": "CREC-2017-12-18-pt1-PgS8069-2"
+  },
+  "2018-09-26": {
+    "packageId": "CREC-2018-09-26",
+    "granuleId": "CREC-2018-09-26-pt1-PgH9091-2"
+  },
+  "2015-12-07": {
+    "packageId": "CREC-2015-12-07",
+    "granuleId": "CREC-2015-12-07-pt1-PgH9015"
   }
 }

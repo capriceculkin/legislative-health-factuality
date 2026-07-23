@@ -1,0 +1,182 @@
+{
+  "118-H.R. 7218": {
+    "bill": "H.R. 7218",
+    "congress": "118",
+    "title": "BOLD Infrastructure for Alzheimer's Reauthorization Act of 2024",
+    "outcome": "passed",
+    "passage_date": "2024-09-17",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "118-H.R. 7189": {
+    "bill": "H.R. 7189",
+    "congress": "118",
+    "title": "Congenital Heart Futures Reauthorization Act of 2024",
+    "outcome": "passed",
+    "passage_date": "2024-09-23",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "118-H.R. 6829": {
+    "bill": "H.R. 6829",
+    "congress": "118",
+    "title": "HEARTS Act of 2024",
+    "outcome": "passed",
+    "passage_date": "2024-09-23",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "118-H.R. 2544": {
+    "bill": "H.R. 2544",
+    "congress": "118",
+    "title": "Securing the U.S. Organ Procurement and Transplantation Network Act",
+    "outcome": "passed",
+    "passage_date": "2023-07-25",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "118-H.R. 670": {
+    "bill": "H.R. 670",
+    "congress": "118",
+    "title": "Think Differently Database Act",
+    "outcome": "passed",
+    "passage_date": "2024-12-17",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "117-H.R. 1193": {
+    "bill": "H.R. 1193",
+    "congress": "117",
+    "title": "Cardiovascular Advances in Research and Opportunities Legacy Act",
+    "outcome": "passed",
+    "passage_date": "2022-12-05",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "117-H.R. 189": {
+    "bill": "H.R. 189",
+    "congress": "117",
+    "title": "John Lewis NIMHD Research Endowment Revitalization Act of 2021",
+    "outcome": "passed",
+    "passage_date": "2021-04-14",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "116-H.R. 8906": {
+    "bill": "H.R. 8906",
+    "congress": "116",
+    "title": "Lifespan Respite Care Reauthorization Act of 2020",
+    "outcome": "passed",
+    "passage_date": "2020-12-10",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 7898": {
+    "bill": "H.R. 7898",
+    "congress": "116",
+    "title": "To amend the Health Information Technology for Economic and Clinical Health Act ",
+    "outcome": "passed",
+    "passage_date": "2020-12-09",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 5663": {
+    "bill": "H.R. 5663",
+    "congress": "116",
+    "title": "Safeguarding Therapeutics Act",
+    "outcome": "passed",
+    "passage_date": "2020-09-21",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 2468": {
+    "bill": "H.R. 2468",
+    "congress": "116",
+    "title": "School-Based Allergies and Asthma Management Program Act",
+    "outcome": "passed",
+    "passage_date": "2020-09-29",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 1966": {
+    "bill": "H.R. 1966",
+    "congress": "116",
+    "title": "Henrietta Lacks Enhancing Cancer Research Act of 2019",
+    "outcome": "passed",
+    "passage_date": "2020-12-09",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 1839": {
+    "bill": "H.R. 1839",
+    "congress": "116",
+    "title": "Medicaid Services Investment and Accountability Act of 2019",
+    "outcome": "passed",
+    "passage_date": "2019-03-25",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 1418": {
+    "bill": "H.R. 1418",
+    "congress": "116",
+    "title": "Competitive Health Insurance Reform Act of 2020",
+    "outcome": "passed",
+    "passage_date": "2020-09-21",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 1058": {
+    "bill": "H.R. 1058",
+    "congress": "116",
+    "title": "Autism CARES Act of 2019",
+    "outcome": "passed",
+    "passage_date": "2019-07-24",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 776": {
+    "bill": "H.R. 776",
+    "congress": "116",
+    "title": "Emergency Medical Services for Children Program Reauthorization Act of 2019",
+    "outcome": "passed",
+    "passage_date": "2019-07-24",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "116-H.R. 259": {
+    "bill": "H.R. 259",
+    "congress": "116",
+    "title": "Medicaid Extenders Act of 2019",
+    "outcome": "passed",
+    "passage_date": "2019-01-08",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "115-H.R. 6042": {
+    "bill": "H.R. 6042",
+    "congress": "115",
+    "title": "To amend title XIX of the Social Security Act to delay the reduction in Federal ",
+    "outcome": "passed",
+    "passage_date": "2018-06-19",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "115-H.R. 5554": {
+    "bill": "H.R. 5554",
+    "congress": "115",
+    "title": "Animal Drug and Animal Generic Drug User Fee Amendments of 2018",
+    "outcome": "passed",
+    "passage_date": "2018-07-16",
+    "has_speech": false,
+    "has_granule": false
+  },
+  "115-H.R. 5385": {
+    "bill": "H.R. 5385",
+    "congress": "115",
+    "title": "Dr. Benjy Frances Brooks Children's Hospital GME Support Reauthorization Act of ",
+    "outcome": "passed",
+    "passage_date": "2018-07-23",
+    "has_speech": false,
+    "has_granule": false
+  }
+}

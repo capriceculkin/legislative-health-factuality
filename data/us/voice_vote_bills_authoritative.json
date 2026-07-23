@@ -1,5 +1,311 @@
 [
   {
+    "congress": "107",
+    "bill": "H.R. 5738",
+    "title": "To amend the Public Health Service Act with respect to special diabetes programs",
+    "date": "12/17/2002"
+  },
+  {
+    "congress": "107",
+    "bill": "H.R. 5716",
+    "title": "Mental Health Parity Reauthorization Act of 2002",
+    "date": "12/02/2002"
+  },
+  {
+    "congress": "107",
+    "bill": "H.R. 5651",
+    "title": "Medical Device User Fee and Modernization Act of 2002",
+    "date": "10/26/2002"
+  },
+  {
+    "congress": "107",
+    "bill": "H.R. 4014",
+    "title": "Rare Diseases Orphan Product Development Act of 2002",
+    "date": "11/06/2002"
+  },
+  {
+    "congress": "107",
+    "bill": "H.R. 4013",
+    "title": "Rare Diseases Act of 2002",
+    "date": "11/06/2002"
+  },
+  {
+    "congress": "107",
+    "bill": "H.R. 3487",
+    "title": "Nurse Reinvestment Act",
+    "date": "08/01/2002"
+  },
+  {
+    "congress": "107",
+    "bill": "H.R. 2441",
+    "title": "To amend the Public Health Service Act to redesignate a facility as the National",
+    "date": "08/21/2002"
+  },
+  {
+    "congress": "106",
+    "bill": "H.R. 1795",
+    "title": "National Institute of Biomedical Imaging and Bioengineering Establishment Act",
+    "date": "12/29/2000"
+  },
+  {
+    "congress": "105",
+    "bill": "H.R. 2202",
+    "title": "National Bone Marrow Registry Reauthorization Act of 1998",
+    "date": "07/16/1998"
+  },
+  {
+    "congress": "105",
+    "bill": "H.R. 2018",
+    "title": "To waive temporarily the Medicaid enrollment composition rule for the Better Hea",
+    "date": "07/25/1997"
+  },
+  {
+    "congress": "105",
+    "bill": "H.R. 1023",
+    "title": "Ricky Ray Hemophilia Relief Fund Act of 1998",
+    "date": "11/12/1998"
+  },
+  {
+    "congress": "105",
+    "bill": "H.R. 1001",
+    "title": "To extend the term of appointment of certain members of the Prospective Payment ",
+    "date": "05/14/1997"
+  },
+  {
+    "congress": "105",
+    "bill": "H.R. 968",
+    "title": "To amend title XVIII and XIX of the Social Security Act to permit a waiver of th",
+    "date": "05/15/1997"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 3871",
+    "title": "To waive temporarily the Medicaid enrollment composition rule for certain health",
+    "date": "10/09/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 3632",
+    "title": "To amend title XIX of the Social Security Act to repeal the requirement for annu",
+    "date": "10/19/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 3121",
+    "title": "To amend the Foreign Assistance Act of 1961 and the Arms Export Control Act to m",
+    "date": "07/21/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 3056",
+    "title": "To permit a county-operated health insuring organization to qualify as an organi",
+    "date": "10/08/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 2685",
+    "title": "To repeal the Medicare and Medicaid Coverage Data Bank.",
+    "date": "10/02/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 2508",
+    "title": "Animal Drug Availability Act of 1996",
+    "date": "10/09/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 2366",
+    "title": "To repeal an unnecessary medical device reporting requirement.",
+    "date": "10/02/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 1878",
+    "title": "To extend for 2 years the period of applicability of enrollment mix requirement ",
+    "date": "12/29/1995"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 1791",
+    "title": "Medicaid Certification Act of 1995",
+    "date": "10/09/1996"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 1747",
+    "title": "Federally Supported Health Centers Assistance Act of 1995",
+    "date": "12/26/1995"
+  },
+  {
+    "congress": "104",
+    "bill": "H.R. 248",
+    "title": "To amend the Public Health Service Act to provide for the conduct of expanded st",
+    "date": "07/29/1996"
+  },
+  {
+    "congress": "103",
+    "bill": "H.R. 3216",
+    "title": "Domestic Chemical Diversion Control Act of 1993",
+    "date": "12/17/1993"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 6183",
+    "title": "Federally Supported Health Centers Assistance Act of 1992",
+    "date": "10/24/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 6182",
+    "title": "Mammography Quality Standards Act of 1992",
+    "date": "10/27/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 6181",
+    "title": "To amend the Federal Food, Drug, and Cosmetic Act to authorize human drug applic",
+    "date": "10/29/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 4773",
+    "title": "Fertility Clinic Success Rate and Certification Act of 1992",
+    "date": "10/24/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 4572",
+    "title": "To direct the Secretary of Health and Human Services to waive certain requiremen",
+    "date": "04/28/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 4178",
+    "title": "DES Education and Research Amendments of 1992",
+    "date": "10/13/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 3635",
+    "title": "Preventive Health Amendments of 1992",
+    "date": "10/27/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 3508",
+    "title": "Health Professions Education Extension Amendments of 1992",
+    "date": "10/13/1992"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 3402",
+    "title": "Health Information, Health Promotion, and Vaccine Injury Compensation Amendments",
+    "date": "11/26/1991"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 3259",
+    "title": "To authorize appropriations for drug abuse education and prevention programs rel",
+    "date": "10/18/1991"
+  },
+  {
+    "congress": "102",
+    "bill": "H.R. 1720",
+    "title": "District of Columbia Mental Health Program Assistance Act of 1991",
+    "date": "10/31/1991"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 5702",
+    "title": "Disadvantaged Minority Health Improvement Act of 1990",
+    "date": "11/06/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 5113",
+    "title": "Injury Control Act of 1990",
+    "date": "11/15/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 4790",
+    "title": "Breast and Cervical Cancer Mortality Prevention Act of 1990",
+    "date": "08/10/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 4487",
+    "title": "National Health Service Corps Revitalization Amendments of 1990",
+    "date": "11/16/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 4273",
+    "title": "Tuberculosis Prevention Amendments of 1990",
+    "date": "08/15/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 4238",
+    "title": "Vaccine and Immunization Amendments of 1990",
+    "date": "11/03/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 3968",
+    "title": "To amend the Organ Transplant Amendments Act of 1988 to change an effective date",
+    "date": "04/23/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 3095",
+    "title": "Safe Medical Devices Act of 1990",
+    "date": "11/28/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 2372",
+    "title": "Radiation Exposure Compensation Act",
+    "date": "10/15/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 1602",
+    "title": "Trauma Care Systems Planning and Development Act of 1990",
+    "date": "11/16/1990"
+  },
+  {
+    "congress": "101",
+    "bill": "H.R. 1426",
+    "title": "Drug Abuse Treatment Technical Corrections Act of 1989",
+    "date": "08/16/1989"
+  },
+  {
+    "congress": "100",
+    "bill": "H.R. 5471",
+    "title": "Clinical Laboratory Improvement Amendments of 1988",
+    "date": "10/31/1988"
+  },
+  {
+    "congress": "100",
+    "bill": "H.R. 5334",
+    "title": "Handicapped Programs Technical Amendments Act of 1988",
+    "date": "11/07/1988"
+  },
+  {
+    "congress": "100",
+    "bill": "H.R. 3235",
+    "title": "Health Maintenance Organization Amendments of 1988",
+    "date": "10/24/1988"
+  },
+  {
+    "congress": "100",
+    "bill": "H.R. 1207",
+    "title": "Prescription Drug Marketing Act of 1987",
+    "date": "04/22/1988"
+  },
+  {
     "congress": "118",
     "bill": "H.R. 7218",
     "title": "BOLD Infrastructure for Alzheimer's Reauthorization Act of 2024",

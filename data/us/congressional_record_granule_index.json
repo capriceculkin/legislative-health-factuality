@@ -434,5 +434,137 @@
   "2015-12-07": {
     "packageId": "CREC-2015-12-07",
     "granuleId": "CREC-2015-12-07-pt1-PgH9015"
+  },
+  "1995-11-14": {
+    "packageId": "CREC-1995-11-14",
+    "granuleId": "CREC-1995-11-14-pt1-PgH12348-2"
+  },
+  "1995-12-12": {
+    "packageId": "CREC-1995-12-12",
+    "granuleId": "CREC-1995-12-12-pt1-PgS18437-2"
+  },
+  "1995-12-18": {
+    "packageId": "CREC-1995-12-18",
+    "granuleId": "CREC-1995-12-18-pt1-PgS18814-2"
+  },
+  "1996-03-12": {
+    "packageId": "CREC-1996-03-12",
+    "granuleId": "CREC-1996-03-12-pt1-PgS1808-2"
+  },
+  "1996-04-16": {
+    "packageId": "CREC-1996-04-16",
+    "granuleId": "CREC-1996-04-16-pt1-PgH3489-2"
+  },
+  "1996-07-09": {
+    "packageId": "CREC-1996-07-09",
+    "granuleId": "CREC-1996-07-09-pt1-PgS7489-2"
+  },
+  "1996-09-04": {
+    "packageId": "CREC-1996-09-04",
+    "granuleId": "CREC-1996-09-04-pt1-PgH10043-2"
+  },
+  "1996-09-10": {
+    "packageId": "CREC-1996-09-10",
+    "granuleId": "CREC-1996-09-10-pt1-PgE1545-2"
+  },
+  "1996-09-24": {
+    "packageId": "CREC-1996-09-24",
+    "granuleId": "CREC-1996-09-24-pt1-PgH11044-2"
+  },
+  "1996-09-28": {
+    "packageId": "CREC-1996-09-28",
+    "granuleId": "CREC-1996-09-28-pt1-PgS11697-2"
+  },
+  "1997-04-08": {
+    "packageId": "CREC-1997-04-08",
+    "granuleId": "CREC-1997-04-08-pt1-PgS2826-2"
+  },
+  "1997-04-15": {
+    "packageId": "CREC-1997-04-15",
+    "granuleId": "CREC-1997-04-15-pt1-PgS3192-2"
+  },
+  "1997-07-08": {
+    "packageId": "CREC-1997-07-08",
+    "granuleId": "CREC-1997-07-08-pt1-PgH4909-2"
+  },
+  "1998-05-19": {
+    "packageId": "CREC-1998-05-19",
+    "granuleId": "CREC-1998-05-19-pt1-PgS5031-2"
+  },
+  "2002-07-22": {
+    "packageId": "CREC-2002-07-22",
+    "granuleId": "CREC-2002-07-22-pt1-PgS7127-2"
+  },
+  "2002-10-01": {
+    "packageId": "CREC-2002-10-01",
+    "granuleId": "CREC-2002-10-01-pt1-PgH6922-4"
+  },
+  "2002-11-15": {
+    "packageId": "CREC-2002-11-15",
+    "granuleId": "CREC-2002-11-15-pt1-PgE2058-2"
+  },
+  "1989-07-31": {
+    "packageId": "GPO-CRECB-1989-pt12",
+    "granuleId": "GPO-CRECB-1989-pt12-1-2"
+  },
+  "1990-04-04": {
+    "packageId": "GPO-CRECB-1990-pt5",
+    "granuleId": "GPO-CRECB-1990-pt5-2"
+  },
+  "1990-06-18": {
+    "packageId": "GPO-CRECB-1990-pt10",
+    "granuleId": "GPO-CRECB-1990-pt10-2"
+  },
+  "1990-09-27": {
+    "packageId": "GPO-CRECB-1990-pt18",
+    "granuleId": "GPO-CRECB-1990-pt18-1-2"
+  },
+  "1990-10-10": {
+    "packageId": "GPO-CRECB-1990-pt20",
+    "granuleId": "GPO-CRECB-1990-pt20-2"
+  },
+  "1990-10-16": {
+    "packageId": "GPO-CRECB-1990-pt21",
+    "granuleId": "GPO-CRECB-1990-pt21-1-2"
+  },
+  "1990-10-27": {
+    "packageId": "GPO-CRECB-1990-pt25",
+    "granuleId": "GPO-CRECB-1990-pt25-1-2"
+  },
+  "1991-06-11": {
+    "packageId": "GPO-CRECB-1991-pt10",
+    "granuleId": "GPO-CRECB-1991-pt10-1-2"
+  },
+  "1991-09-30": {
+    "packageId": "GPO-CRECB-1991-pt17",
+    "granuleId": "GPO-CRECB-1991-pt17-2"
+  },
+  "1991-11-05": {
+    "packageId": "GPO-CRECB-1991-pt20",
+    "granuleId": "GPO-CRECB-1991-pt20-1-2"
+  },
+  "1992-04-10": {
+    "packageId": "GPO-CRECB-1992-pt7",
+    "granuleId": "GPO-CRECB-1992-pt7-1-2"
+  },
+  "1992-06-29": {
+    "packageId": "GPO-CRECB-1992-pt12",
+    "granuleId": "GPO-CRECB-1992-pt12-2"
+  },
+  "1992-08-10": {
+    "packageId": "GPO-CRECB-1992-pt16",
+    "granuleId": "GPO-CRECB-1992-pt16-1-2"
+  },
+  "1992-09-29": {
+    "packageId": "GPO-CRECB-1992-pt20",
+    "granuleId": "GPO-CRECB-1992-pt20-2"
+  },
+  "1992-10-06": {
+    "packageId": "GPO-CRECB-1992-pt22",
+    "granuleId": "GPO-CRECB-1992-pt22-1-2"
+  },
+  "1990-10-26": {
+    "packageId": "GPO-CRECB-1990-pt24",
+    "granuleId": "GPO-CRECB-1990-pt24-1-2"
   }
 }

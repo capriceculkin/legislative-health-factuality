@@ -1,4 +1,455 @@
 {
+  "107-H.R. 5738": {
+    "bill": "H.R. 5738",
+    "congress": "107",
+    "title": "To amend the Public Health Service Act with respect to special diabetes programs",
+    "outcome": "passed",
+    "passage_date": "2002-11-15",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "107-H.R. 5716": {
+    "bill": "H.R. 5716",
+    "congress": "107",
+    "title": "Mental Health Parity Reauthorization Act of 2002",
+    "outcome": "passed",
+    "passage_date": "2002-11-15",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "107-H.R. 5651": {
+    "bill": "H.R. 5651",
+    "congress": "107",
+    "title": "Medical Device User Fee and Modernization Act of 2002",
+    "outcome": "passed",
+    "passage_date": "2002-10-16",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "107-H.R. 4014": {
+    "bill": "H.R. 4014",
+    "congress": "107",
+    "title": "Rare Diseases Orphan Product Development Act of 2002",
+    "outcome": "passed",
+    "passage_date": "2002-10-01",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "107-H.R. 4013": {
+    "bill": "H.R. 4013",
+    "congress": "107",
+    "title": "Rare Diseases Act of 2002",
+    "outcome": "passed",
+    "passage_date": "2002-10-01",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "107-H.R. 3487": {
+    "bill": "H.R. 3487",
+    "congress": "107",
+    "title": "Nurse Reinvestment Act",
+    "outcome": "passed",
+    "passage_date": "2002-07-22",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "107-H.R. 2441": {
+    "bill": "H.R. 2441",
+    "congress": "107",
+    "title": "To amend the Public Health Service Act to redesignate a facility as the National",
+    "outcome": "passed",
+    "passage_date": "2001-12-04",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "106-H.R. 1795": {
+    "bill": "H.R. 1795",
+    "congress": "106",
+    "title": "National Institute of Biomedical Imaging and Bioengineering Establishment Act",
+    "outcome": "passed",
+    "passage_date": "2000-09-27",
+    "has_speech": true,
+    "has_granule": false
+  },
+  "105-H.R. 2202": {
+    "bill": "H.R. 2202",
+    "congress": "105",
+    "title": "National Bone Marrow Registry Reauthorization Act of 1998",
+    "outcome": "passed",
+    "passage_date": "1998-05-19",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "105-H.R. 2018": {
+    "bill": "H.R. 2018",
+    "congress": "105",
+    "title": "To waive temporarily the Medicaid enrollment composition rule for the Better Hea",
+    "outcome": "passed",
+    "passage_date": "1997-07-08",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "105-H.R. 1023": {
+    "bill": "H.R. 1023",
+    "congress": "105",
+    "title": "Ricky Ray Hemophilia Relief Fund Act of 1998",
+    "outcome": "passed",
+    "passage_date": "1998-05-19",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "105-H.R. 1001": {
+    "bill": "H.R. 1001",
+    "congress": "105",
+    "title": "To extend the term of appointment of certain members of the Prospective Payment ",
+    "outcome": "passed",
+    "passage_date": "1997-04-15",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "105-H.R. 968": {
+    "bill": "H.R. 968",
+    "congress": "105",
+    "title": "To amend title XVIII and XIX of the Social Security Act to permit a waiver of th",
+    "outcome": "passed",
+    "passage_date": "1997-04-08",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 3871": {
+    "bill": "H.R. 3871",
+    "congress": "104",
+    "title": "To waive temporarily the Medicaid enrollment composition rule for certain health",
+    "outcome": "passed",
+    "passage_date": "1996-09-04",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 3632": {
+    "bill": "H.R. 3632",
+    "congress": "104",
+    "title": "To amend title XIX of the Social Security Act to repeal the requirement for annu",
+    "outcome": "passed",
+    "passage_date": "1996-09-28",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 3121": {
+    "bill": "H.R. 3121",
+    "congress": "104",
+    "title": "To amend the Foreign Assistance Act of 1961 and the Arms Export Control Act to m",
+    "outcome": "passed",
+    "passage_date": "1996-04-16",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 3056": {
+    "bill": "H.R. 3056",
+    "congress": "104",
+    "title": "To permit a county-operated health insuring organization to qualify as an organi",
+    "outcome": "passed",
+    "passage_date": "1996-09-10",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 2685": {
+    "bill": "H.R. 2685",
+    "congress": "104",
+    "title": "To repeal the Medicare and Medicaid Coverage Data Bank.",
+    "outcome": "passed",
+    "passage_date": "1996-03-12",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 2508": {
+    "bill": "H.R. 2508",
+    "congress": "104",
+    "title": "Animal Drug Availability Act of 1996",
+    "outcome": "passed",
+    "passage_date": "1996-09-24",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 2366": {
+    "bill": "H.R. 2366",
+    "congress": "104",
+    "title": "To repeal an unnecessary medical device reporting requirement.",
+    "outcome": "passed",
+    "passage_date": "1995-11-14",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 1878": {
+    "bill": "H.R. 1878",
+    "congress": "104",
+    "title": "To extend for 2 years the period of applicability of enrollment mix requirement ",
+    "outcome": "passed",
+    "passage_date": "1995-12-18",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 1791": {
+    "bill": "H.R. 1791",
+    "congress": "104",
+    "title": "Medicaid Certification Act of 1995",
+    "outcome": "passed",
+    "passage_date": "1996-09-24",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 1747": {
+    "bill": "H.R. 1747",
+    "congress": "104",
+    "title": "Federally Supported Health Centers Assistance Act of 1995",
+    "outcome": "passed",
+    "passage_date": "1995-12-12",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "104-H.R. 248": {
+    "bill": "H.R. 248",
+    "congress": "104",
+    "title": "To amend the Public Health Service Act to provide for the conduct of expanded st",
+    "outcome": "passed",
+    "passage_date": "1996-07-09",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "103-H.R. 3216": {
+    "bill": "H.R. 3216",
+    "congress": "103",
+    "title": "Domestic Chemical Diversion Control Act of 1993",
+    "outcome": "passed",
+    "passage_date": "1993-11-21",
+    "has_speech": true,
+    "has_granule": true
+  },
+  "102-H.R. 6183": {
+    "bill": "H.R. 6183",
+    "congress": "102",
+    "title": "Federally Supported Health Centers Assistance Act of 1992",
+    "outcome": "passed",
+    "passage_date": "1992-10-06",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 6182": {
+    "bill": "H.R. 6182",
+    "congress": "102",
+    "title": "Mammography Quality Standards Act of 1992",
+    "outcome": "passed",
+    "passage_date": "1992-10-06",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 6181": {
+    "bill": "H.R. 6181",
+    "congress": "102",
+    "title": "To amend the Federal Food, Drug, and Cosmetic Act to authorize human drug applic",
+    "outcome": "passed",
+    "passage_date": "1992-10-06",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 4773": {
+    "bill": "H.R. 4773",
+    "congress": "102",
+    "title": "Fertility Clinic Success Rate and Certification Act of 1992",
+    "outcome": "passed",
+    "passage_date": "1992-06-29",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 4572": {
+    "bill": "H.R. 4572",
+    "congress": "102",
+    "title": "To direct the Secretary of Health and Human Services to waive certain requiremen",
+    "outcome": "passed",
+    "passage_date": "1992-04-10",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 4178": {
+    "bill": "H.R. 4178",
+    "congress": "102",
+    "title": "DES Education and Research Amendments of 1992",
+    "outcome": "passed",
+    "passage_date": "1992-08-10",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 3635": {
+    "bill": "H.R. 3635",
+    "congress": "102",
+    "title": "Preventive Health Amendments of 1992",
+    "outcome": "passed",
+    "passage_date": "1992-10-06",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 3508": {
+    "bill": "H.R. 3508",
+    "congress": "102",
+    "title": "Health Professions Education Extension Amendments of 1992",
+    "outcome": "passed",
+    "passage_date": "1992-09-29",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 3402": {
+    "bill": "H.R. 3402",
+    "congress": "102",
+    "title": "Health Information, Health Promotion, and Vaccine Injury Compensation Amendments",
+    "outcome": "passed",
+    "passage_date": "1991-11-05",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 3259": {
+    "bill": "H.R. 3259",
+    "congress": "102",
+    "title": "To authorize appropriations for drug abuse education and prevention programs rel",
+    "outcome": "passed",
+    "passage_date": "1991-09-30",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "102-H.R. 1720": {
+    "bill": "H.R. 1720",
+    "congress": "102",
+    "title": "District of Columbia Mental Health Program Assistance Act of 1991",
+    "outcome": "passed",
+    "passage_date": "1991-06-11",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 5702": {
+    "bill": "H.R. 5702",
+    "congress": "101",
+    "title": "Disadvantaged Minority Health Improvement Act of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-10-10",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 5113": {
+    "bill": "H.R. 5113",
+    "congress": "101",
+    "title": "Injury Control Act of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-10-26",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 4790": {
+    "bill": "H.R. 4790",
+    "congress": "101",
+    "title": "Breast and Cervical Cancer Mortality Prevention Act of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-06-18",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 4487": {
+    "bill": "H.R. 4487",
+    "congress": "101",
+    "title": "National Health Service Corps Revitalization Amendments of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-10-26",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 4273": {
+    "bill": "H.R. 4273",
+    "congress": "101",
+    "title": "Tuberculosis Prevention Amendments of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-06-18",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 4238": {
+    "bill": "H.R. 4238",
+    "congress": "101",
+    "title": "Vaccine and Immunization Amendments of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-10-16",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 3968": {
+    "bill": "H.R. 3968",
+    "congress": "101",
+    "title": "To amend the Organ Transplant Amendments Act of 1988 to change an effective date",
+    "outcome": "passed",
+    "passage_date": "1990-04-04",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 3095": {
+    "bill": "H.R. 3095",
+    "congress": "101",
+    "title": "Safe Medical Devices Act of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-10-27",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 2372": {
+    "bill": "H.R. 2372",
+    "congress": "101",
+    "title": "Radiation Exposure Compensation Act",
+    "outcome": "passed",
+    "passage_date": "1990-09-27",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 1602": {
+    "bill": "H.R. 1602",
+    "congress": "101",
+    "title": "Trauma Care Systems Planning and Development Act of 1990",
+    "outcome": "passed",
+    "passage_date": "1990-10-26",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "101-H.R. 1426": {
+    "bill": "H.R. 1426",
+    "congress": "101",
+    "title": "Drug Abuse Treatment Technical Corrections Act of 1989",
+    "outcome": "passed",
+    "passage_date": "1989-07-31",
+    "has_speech": false,
+    "has_granule": true
+  },
+  "100-H.R. 5471": {
+    "bill": "H.R. 5471",
+    "congress": "100",
+    "outcome": "passed",
+    "passage_date": null,
+    "has_speech": false
+  },
+  "100-H.R. 5334": {
+    "bill": "H.R. 5334",
+    "congress": "100",
+    "outcome": "passed",
+    "passage_date": null,
+    "has_speech": false
+  },
+  "100-H.R. 3235": {
+    "bill": "H.R. 3235",
+    "congress": "100",
+    "outcome": "passed",
+    "passage_date": null,
+    "has_speech": false
+  },
+  "100-H.R. 1207": {
+    "bill": "H.R. 1207",
+    "congress": "100",
+    "outcome": "passed",
+    "passage_date": null,
+    "has_speech": false
+  },
   "118-H.R. 7218": {
     "bill": "H.R. 7218",
     "congress": "118",

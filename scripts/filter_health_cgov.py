@@ -11,11 +11,18 @@ with open(os.path.join(REPO, "data/us/health_bills_final_matched.csv"), newline=
 
 print("Matched (VoteView):", len(matched))
 
-cgov_path = os.path.join(REPO, "data/us/congress.gov.advanced.search.csv")
-with open(cgov_path, newline="", encoding="utf-8-sig") as f:
-    for _ in range(3):
-        next(f)
-    rows = list(csv.DictReader(f))
+
+import glob
+
+all_rows = []
+for csv_file in glob.glob(os.path.join(REPO, "data/us/congress.gov.advanced.search*.csv")):
+    with open(csv_file, newline="", encoding="utf-8-sig") as f:
+        for _ in range(3):
+            next(f)
+        all_rows.extend(list(csv.DictReader(f)))
+
+rows = all_rows
+print(f"Total Congress.gov rows across all CSVs: {len(rows)}")
 
 health_laws = [r for r in rows if r.get("billPolicyArea","").strip() == "Health"]
 print("CRS Health laws that became law:", len(health_laws))

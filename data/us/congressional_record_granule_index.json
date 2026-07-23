@@ -566,5 +566,21 @@
   "1990-10-26": {
     "packageId": "GPO-CRECB-1990-pt24",
     "granuleId": "GPO-CRECB-1990-pt24-1-2"
+  },
+  "1987-05-04": {
+    "packageId": "GPO-CRECB-1987-pt8",
+    "granuleId": "GPO-CRECB-1987-pt8-1-2"
+  },
+  "1988-09-26": {
+    "packageId": "GPO-CRECB-1988-pt18",
+    "granuleId": "GPO-CRECB-1988-pt18-1-2"
+  },
+  "1988-10-05": {
+    "packageId": "GPO-CRECB-1988-pt20",
+    "granuleId": "GPO-CRECB-1988-pt20-1-2"
+  },
+  "1988-10-06": {
+    "packageId": "GPO-CRECB-1988-pt20",
+    "granuleId": "GPO-CRECB-1988-pt20-1-2"
   }
 }

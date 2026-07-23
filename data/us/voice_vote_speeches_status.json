@@ -425,30 +425,38 @@
   "100-H.R. 5471": {
     "bill": "H.R. 5471",
     "congress": "100",
+    "title": "Clinical Laboratory Improvement Amendments of 1988",
     "outcome": "passed",
-    "passage_date": null,
-    "has_speech": false
+    "passage_date": "1988-10-06",
+    "has_speech": false,
+    "has_granule": true
   },
   "100-H.R. 5334": {
     "bill": "H.R. 5334",
     "congress": "100",
+    "title": "Handicapped Programs Technical Amendments Act of 1988",
     "outcome": "passed",
-    "passage_date": null,
-    "has_speech": false
+    "passage_date": "1988-09-26",
+    "has_speech": false,
+    "has_granule": true
   },
   "100-H.R. 3235": {
     "bill": "H.R. 3235",
     "congress": "100",
+    "title": "Health Maintenance Organization Amendments of 1988",
     "outcome": "passed",
-    "passage_date": null,
-    "has_speech": false
+    "passage_date": "1987-11-03",
+    "has_speech": true,
+    "has_granule": true
   },
   "100-H.R. 1207": {
     "bill": "H.R. 1207",
     "congress": "100",
+    "title": "Prescription Drug Marketing Act of 1987",
     "outcome": "passed",
-    "passage_date": null,
-    "has_speech": false
+    "passage_date": "1987-05-04",
+    "has_speech": false,
+    "has_granule": true
   },
   "118-H.R. 7218": {
     "bill": "H.R. 7218",

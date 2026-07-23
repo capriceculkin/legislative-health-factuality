@@ -35,13 +35,13 @@ def get_house_passage_date(congress, number):
         for a in actions:
             text = a.get("text", "").lower()
             chamber = a.get("chamber", "").lower()
-            if chamber == "house" or "house" in text:
-                if any(p in text for p in [
-                    "passed by voice vote", "agreed to by voice vote",
-                    "on motion to suspend the rules and pass",
-                    "passed without objection",
-                    "on passage agreed to",
-                ]):
+            if any(p in text for p in [
+                "passed by voice vote", "agreed to by voice vote",
+                "passed without objection", "on motion to suspend rules and pass",
+                "on passage agreed to",
+                "passed house", 
+                "passed/agreed to in house",  
+            ]):
                     return a.get("actionDate", "")
     except Exception as e:
         print(f"  Error fetching actions for {congress}/hr/{number}: {e}")

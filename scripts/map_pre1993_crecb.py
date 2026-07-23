@@ -121,6 +121,18 @@ def main():
             not_found += 1
         time.sleep(0.2)
 
+        # manually add 4 bills whose passage dates weren't auto-detected
+    manual_dates = ["1988-10-06", "1988-09-26", "1988-10-05", "1987-05-04"]
+    for date in manual_dates:
+        if date not in granule_index:
+            year = date[:4]
+            pkg_id, title = find_part_for_date(year, date)
+            if pkg_id:
+                gran = get_house_granule(pkg_id)
+                if gran:
+                    granule_index[date] = {"packageId": pkg_id, "granuleId": gran}
+                    print(f"Added {date}: {pkg_id}/{gran}")
+
     with open(GRANULE_INDEX, "w") as f:
         json.dump(granule_index, f, indent=2)
 

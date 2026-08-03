@@ -311,7 +311,7 @@
     "title": "To authorize appropriations for drug abuse education and prevention programs rel",
     "outcome": "passed",
     "passage_date": "1991-09-30",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "102-H.R. 1720": {
@@ -320,7 +320,7 @@
     "title": "District of Columbia Mental Health Program Assistance Act of 1991",
     "outcome": "passed",
     "passage_date": "1991-06-11",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 5702": {
@@ -329,7 +329,7 @@
     "title": "Disadvantaged Minority Health Improvement Act of 1990",
     "outcome": "passed",
     "passage_date": "1990-10-10",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 5113": {
@@ -338,7 +338,7 @@
     "title": "Injury Control Act of 1990",
     "outcome": "passed",
     "passage_date": "1990-10-26",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 4790": {
@@ -347,7 +347,7 @@
     "title": "Breast and Cervical Cancer Mortality Prevention Act of 1990",
     "outcome": "passed",
     "passage_date": "1990-06-18",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 4487": {
@@ -356,7 +356,7 @@
     "title": "National Health Service Corps Revitalization Amendments of 1990",
     "outcome": "passed",
     "passage_date": "1990-10-26",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 4273": {
@@ -365,7 +365,7 @@
     "title": "Tuberculosis Prevention Amendments of 1990",
     "outcome": "passed",
     "passage_date": "1990-06-18",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 4238": {
@@ -374,7 +374,7 @@
     "title": "Vaccine and Immunization Amendments of 1990",
     "outcome": "passed",
     "passage_date": "1990-10-16",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 3968": {
@@ -383,7 +383,7 @@
     "title": "To amend the Organ Transplant Amendments Act of 1988 to change an effective date",
     "outcome": "passed",
     "passage_date": "1990-04-04",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 3095": {
@@ -392,7 +392,7 @@
     "title": "Safe Medical Devices Act of 1990",
     "outcome": "passed",
     "passage_date": "1990-10-27",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 2372": {
@@ -401,7 +401,7 @@
     "title": "Radiation Exposure Compensation Act",
     "outcome": "passed",
     "passage_date": "1990-09-27",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 1602": {
@@ -410,7 +410,7 @@
     "title": "Trauma Care Systems Planning and Development Act of 1990",
     "outcome": "passed",
     "passage_date": "1990-10-26",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "101-H.R. 1426": {
@@ -419,44 +419,36 @@
     "title": "Drug Abuse Treatment Technical Corrections Act of 1989",
     "outcome": "passed",
     "passage_date": "1989-07-31",
-    "has_speech": false,
+    "has_speech": true,
     "has_granule": true
   },
   "100-H.R. 5471": {
     "bill": "H.R. 5471",
     "congress": "100",
-    "title": "Clinical Laboratory Improvement Amendments of 1988",
     "outcome": "passed",
-    "passage_date": "1988-10-06",
-    "has_speech": false,
-    "has_granule": true
+    "passage_date": null,
+    "has_speech": false
   },
   "100-H.R. 5334": {
     "bill": "H.R. 5334",
     "congress": "100",
-    "title": "Handicapped Programs Technical Amendments Act of 1988",
     "outcome": "passed",
-    "passage_date": "1988-09-26",
-    "has_speech": false,
-    "has_granule": true
+    "passage_date": null,
+    "has_speech": false
   },
   "100-H.R. 3235": {
     "bill": "H.R. 3235",
     "congress": "100",
-    "title": "Health Maintenance Organization Amendments of 1988",
     "outcome": "passed",
-    "passage_date": "1987-11-03",
-    "has_speech": true,
-    "has_granule": true
+    "passage_date": null,
+    "has_speech": false
   },
   "100-H.R. 1207": {
     "bill": "H.R. 1207",
     "congress": "100",
-    "title": "Prescription Drug Marketing Act of 1987",
     "outcome": "passed",
-    "passage_date": "1987-05-04",
-    "has_speech": false,
-    "has_granule": true
+    "passage_date": null,
+    "has_speech": false
   },
   "118-H.R. 7218": {
     "bill": "H.R. 7218",

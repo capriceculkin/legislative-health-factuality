@@ -1,0 +1,3034 @@
+[
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...concernant l\u2019application de la Loi sur les services desant\u00e9et les services so",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.774
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...L\u00c9GISLATURE Projet de loi 120 Loi sur les services desant\u00e9et les services soc",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.653
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...loi 34 Loi modifiant la Loi sur les services desant\u00e9et les services sociaux e",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.805
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...14. Le consentement aux soins exig\u00e9s par l\u2019\u00e9tat desant\u00e9du mineur est donn\u00e9 pa",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.168
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...du travail et les maladies professionnelles, la Loi sur lasant\u00e9et la s\u00e9curit\u00e9",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.858
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...loi 136 Loi modifiant la Loi sur les services desant\u00e9et les services sociaux ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.769
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...Projet de loi 291 (Priv\u00e9) Loi concernant Les Services deSant\u00e9du Qu\u00e9bec ,\\ 10 ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.781
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...loi 17 Loi modifiant la Loi sur les services desant\u00e9et les services sociaux e",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.8
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...Projet de loi 415 Loi sur le Conseil de lasant\u00e9et du bien-\u00eatre Pr\u00e9sentation P",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.822
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...public, au sens de la Loi sur les services desant\u00e9et les services sociaux (L.",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.787
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...Pr\u00e9sentation Pr\u00e9sent\u00e9 par Madame Th\u00e9r\u00e8se Lavoie-Roux Ministre de laSant\u00e9et de",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.873
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...Pr\u00e9sentation Pr\u00e9sent\u00e9 par M. Marc-Yvan C\u00f4t\u00e9 Ministre de laSant\u00e9et des Service",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.921
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...P-34.1); \u2014 L oi sur la protection de lasant\u00e9publique (chapitre P-35); \u2014 L oi ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.842
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...Q., chapitre Q-l); 25\u00b0 Loi sur les services desant\u00e9et les services sociaux (L",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.678
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...Projet de loi 65 Loi modifiant la Loi sur lasant\u00e9et la s\u00e9curit\u00e9 du travail Pr",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.89
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...chapitre P-34.1); - Loi sur la protection de lasant\u00e9publique (L.R.Q., chapitr",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.804
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...chapitre P-34.1) ; - Loi sur la protection de lasant\u00e9publique (L.R.Q., chapit",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.8
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...issue de celle-ci; 3\u00b0 l\u2019existence de services desant\u00e9et de services sociaux d",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.492
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...\u00eatre pr\u00e9sentes aupr\u00e8s d\u2019une victime dont l\u2019\u00e9tat desant\u00e9ou l\u2019\u00e2ge le requiert l",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.417
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...le maintien des services essentiels dans le secteur de lasant\u00e9et des services",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.712
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...chapitre P-34.1) - Loi sur la protection de lasant\u00e9publique (L.R.Q., chapitre",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.809
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...ou le gardien d\u2019un animal doit d\u00e9clarer \u00e0 unm\u00e9decinv\u00e9t\u00e9rinaire la pr\u00e9sence de",
+    "predicted_label": "Agriculture",
+    "predicted_health": false,
+    "confidence": 0.884
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...que l\u2019examen soit fait par un optom\u00e9triste ou unm\u00e9decinqu\u2019elle d\u00e9signe nomm\u00e9m",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.84
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...asthme, \u00e0 un consommateur sur l\u2019ordre \u00e9crit d\u2019unm\u00e9decin; \u00bb ; 2\u00b0 par l\u2019inserti",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.812
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...la s\u00e9curit\u00e9 du revenu, un membre qui est avocat oum\u00e9decinn\u2019en ordonne autreme",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.607
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...livr\u00e9s sur l\u2019ordonnance d\u2019un dentiste ou d\u2019unm\u00e9decin, ni \u00e0 la vente de m\u00e9dica",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.846
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...in\u00e9s p a r r\u00e8glem ent et rendus par unm\u00e9decinsont des services assur\u00e9s. Il pr",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.833
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...en outre qu \u2019\u00e0 moins d \u2019y \u00eatre autoris\u00e9, unm\u00e9decinne pourra quitter sans pr\u00e9a",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.827
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...propri\u00e9taire ou le possesseur d \u2019un animal ou par unm\u00e9decinv\u00e9t\u00e9rinaire soit d",
+    "predicted_label": "Agriculture",
+    "predicted_health": false,
+    "confidence": 0.518
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...le remplacement du sous-paragraphe ii par le suivant : \u00abii.unepersonne qu\u2019un ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.413
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...particulier produit au ministre un formulaire prescrit sur lequel unm\u00e9decinat",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.751
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...en tout temps \u00e0 un nouvel examen m\u00e9dical par lem\u00e9decinque celui-ci d\u00e9signe po",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.774
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...crit\u00e8res \u00e9tablis par la Conf\u00e9d\u00e9ration internationale des sages-femmes, unm\u00e9de",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.866
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...sont \u00e0 la charge du Bureau, dans le cas dum\u00e9decinqu\u2019il d\u00e9signe, \u00e0 la charge d",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.732
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...son dossier de sant\u00e9 si, de l\u2019avis d\u2019unm\u00e9decin, il en r\u00e9sulterait un pr\u00e9judic",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.839
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...em ballage des m \u00e9dicam ents v\u00e9t\u00e9rinaires vendus par unm\u00e9decinv\u00e9t\u00e9rinaire; il",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.492
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...crit\u00e8res \u00e9tablis par la Conf\u00e9d\u00e9ration internationale des sages-femmes, unm\u00e9de",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.866
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...de ses fonctions et que sa nomination \u00e0 titre dem\u00e9decin-chirurgien de l\u2019h\u00f4pit",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.734
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...annexe B ; Que cet acte pr\u00e9voyait l\u2019ouverture d\u2019unh\u00f4pitalqui serait connu sou",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.728
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...L\u00c9GISLATURE Projet de loi 292 (Priv\u00e9) Loi concernant la corporation \u00abH\u00f4pitalL",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.927
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...de certains immeubles par la ville de Montr\u00e9al \u00e0 l\u2019H\u00f4pitalRoyal Victoria Pr\u00e9s",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.826
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...objet d \u2019acqu\u00e9rir, \u00e9tablir, poss\u00e9der, maintenir, administrer et g\u00e9rer unh\u00f4pit",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.747
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...Saint-Fran\u00e7ois\u00bb; 5\u00b0 par la suppression, apr\u00e8s les mots \u00ab l\u2019H\u00f4pitalFleur-de-Ly",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.805
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...qui suit: \u00able Syndicat des salari\u00e9s et salari\u00e9es de l\u2019H\u00f4pitalSt-Luc (CEQ) Inc",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.552
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...dispositions relatives \u00e0 la dissolution, r\u00e9git \u00ab La Corporation de l\u2019H\u00f4pitalC",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.583
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...de continuer l\u2019oeuvre. Si pour la seconde fois ledith\u00f4pitalne r\u00e9ussissait pas",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.742
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...par le suivant: \u00ab 10. Les employ\u00e9s en fonction dans unh\u00f4pitalf\u00e9d\u00e9ral d\u00e9sign\u00e9 ",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.929
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...un octroi En entier de cent mille dollars \u00e0 l\u2019h\u00f4pitalSainte-Justine 1 Geo. VI",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.586
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...par le suivant : \u00aby) \u00ab ordonnance \u00bb : une autorisation de fournir unm\u00e9dicamen",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.832
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...ne sont pas affaiblies par la fatigue, la maladie, unm\u00e9dicamentou une drogue ",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.708
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...suivant: \u00ab Rien n\u2019interdit non plus la vente d\u2019unm\u00e9dicamentmentionn\u00e9 dans un ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.839
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...du permis vis\u00e9 \u00e0 l\u2019article 19.2; 2\u00b0 lem\u00e9dicamentest mentionn\u00e9 dans la liste \u00e9",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.327
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...de croissance de la v\u00e9g\u00e9tation, \u00e0 l\u2019exclusion d\u2019unm\u00e9dicamentou d\u2019un vaccin. 2",
+    "predicted_label": "Agriculture",
+    "predicted_health": false,
+    "confidence": 0.887
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...7 Loi sur une exception \u00e0 la Loi sur lapharmaciePr\u00e9sentation Pr\u00e9sent\u00e9 par M. ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.806
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...notariat (L.R.Q., chapitre N-2) - Loi sur lapharmacie(L.R.Q., chapitre P-10) ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.663
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...L.R.Q., chapitre P-9.2); \u2014 Loi sur lapharmacie(L.R.Q., chapitre P-10); \u2014 Loi ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.7
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...L.R.Q., chapitre P-9.2); - Loi sur lapharmacie(L.R.Q., chapitre P-10); - Loi ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.78
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...exclut \u00e9galement les professionnels r\u00e9gis par la Loi sur lapharmacie(L.R.Q., ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.691
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...personnes \u00bb exclut les professionnels r\u00e9gis par la Loi sur lapharmacie(chapit",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.786
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...\u00e9galement l\u2019exercice de la profession d\u2019infirmi\u00e8re ou d\u2019infirmiersous une rai",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.763
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...11 sont les montants pay\u00e9s: a) \u00e0 un dentiste, uninfirmierou un praticien ou \u00e0",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.864
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...l\u2019insertion, dans la sixi\u00e8me ligne et apr\u00e8s le mot \u00abinfirmier\u00bb, des mots \u00abou ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.798
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...directeur g\u00e9n\u00e9ral de l\u2019\u00e9tablissement qui exploite le centre der\u00e9adaptationou ",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.892
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...sociale, de stabilisation \u00e9conom ique et d \u2019indem nit\u00e9s der\u00e9adaptation\u00e9tablis",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.72
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...de stabilisation \u00e9conomique, de stabilisation sociale et d'indemnit\u00e9s der\u00e9ada",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.428
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...l\u2019enfance et de la jeunesse et des centres der\u00e9adaptationpour jeunes et m\u00e8res",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.871
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...l\u2019enfance et de la jeunesse et des centres der\u00e9adaptationpour jeunes et m\u00e8res",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.862
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...l\u2019enfance et de la jeunesse et des centres der\u00e9adaptationpour jeunes et m\u00e8res",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.871
+  },
+  {
+    "session": "34-3",
+    "bill_number": "",
+    "title": "...l\u2019enfance et de la jeunesse et des centres der\u00e9adaptationpour jeunes et m\u00e8res",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.871
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...\u00e0 voter pour le programme 5 \u00abServices des centres der\u00e9adaptation\u00bb du minist\u00e8r",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.419
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...sociaux 1 634 500 Programme 05 Services des centres der\u00e9adaptation2 624 800 P",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.82
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...soins de longue dur\u00e9e Programme 06: Services des centres der\u00e9adaptationProgra",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.841
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...assistance publique du Canada ou par la Loi sur lar\u00e9adaptationprofessionnelle",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.47
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...autres d\u00e9ficiences associ\u00e9es en vue de leur instruction, de leurr\u00e9adaptationp",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.742
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...pr\u00e9vention de la toxicomanie ; 3\u00b0 promouvoir le traitement et lar\u00e9adaptationd",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.84
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...un centre d\u2019accueil de la classe des centres der\u00e9adaptationau sens de la Loi ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.858
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...centres de services sociaux Programme 05 Services des centres der\u00e9adaptationP",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.802
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...la toxicomanie ; 3\u00b0 prom ouvoir le traitem ent et lar\u00e9adaptationdes toxicoman",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.84
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...sociaux 316 318 800 Programme 05 Services des centres der\u00e9adaptation692 459 1",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.83
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...un livre parlant ou son support en raison d \u2019unhandicapvisuel; 5 \u00b0 d \u2019\u00e9tendre",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.647
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...dans le but de permettre \u00e0 des particuliers ayant unhandicapmoteur d\u2019avoir ac",
+    "predicted_label": "Housing",
+    "predicted_health": false,
+    "confidence": 0.328
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...de biens destin\u00e9s \u00e0 pallier une d\u00e9ficience physique ou unhandicap, lorsque ce",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.691
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...lui-m\u00eame son bulletin de vote, en raison de quelquehandicapou parce qu\u2019il ne ",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.886
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...origine ethnique ou nationale, de l\u2019\u00e2ge ou d\u2019unhandicap, en vue de lutter con",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.8
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...5 distinctions, exclusions ou pr\u00e9f\u00e9rences fond\u00e9es sur l\u2019\u00e2ge, lehandicapou tou",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.683
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...origine ethnique ou nationale, de l\u2019\u00e2ge ou d\u2019unhandicapou en vue de lutter co",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.805
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...135 Loi modifiant la Loi concernant l\u2019imp\u00f4t sur letabacPr\u00e9sentation Pr\u00e9sent\u00e9 ",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.925
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...90 Loi modifiant la Loi concernant l\u2019imp\u00f4t sur letabac, la Loi sur le minist\u00e8",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.932
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...80 Lot modifiant la Loi concernant l\u2019imp\u00f4t sur letabacafin de contrer le d\u00e9to",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.929
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...152 Loi modifiant la Loi concernant l'imp\u00f4t sur letabacPr\u00e9sentation Pr\u00e9sent\u00e9 ",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.932
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...second lieu la Loi concernant l\u2019im p\u00f4t sur letabacafin de perm ettre l\u2019applic",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.914
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...en second lieu la Loi concernant l\u2019imp\u00f4t sur letabacafin de remplacer la taxe",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.902
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...II modifie \u00e9galement la Loi concernant l\u2019imp\u00f4t sur letabacde fa\u00e7on \u00e0 r\u00e9duire ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.345
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...de loi a pour objet de r\u00e9gir l \u2019usage dutabacdans certains lieux publics afin",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.423
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...en premier lieu la Loi concernant l\u2019imp\u00f4t sur letabacafin de rendre la versio",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.933
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...3.1.1); 14\u00b0 Loi concernant l\u2019imp\u00f4t sur letabac(L.R.Q., chapitre 1-2); 15\u00b0 Loi",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.826
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...1-1), \u00e0 la Loi concernant l\u2019imp\u00f4t sur letabac(L.R.Q., chapitre 1-2), \u00e0 la Loi",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.799
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...gestion du stress ou l\u2019usage ou la consommation detabac, de drogues ou d\u2019alco",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.744
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...1-1), de la Loi concernant l\u2019imp\u00f4t sur letabac(L.R.Q., chapitre 1-2), de la L",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.707
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...chapitre i-D ; 4\u00b0 Loi concernant l\u2019imp\u00f4t sur letabac(L.R.Q., chapitre 1-2); 5",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.896
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...cas d\u2019une employ\u00e9e, elle b\u00e9n\u00e9ficie d\u2019un cong\u00e9 dematernit\u00e9. 4 Aux fins de l\u2019ap",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.544
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...loi la majeure partie des dispositions concernant le cong\u00e9 dematernit\u00e9de 18 s",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.819
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...de 120 jours cotisables, les jours d\u2019un cong\u00e9 dematernit\u00e9qui \u00e9tait en cours l",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.487
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...dol. Le projet pr\u00e9voit la reconnaissance automatique du cong\u00e9 dematernit\u00e9tel ",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.822
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...de la section suivante: 6 \u00abSECTION III.l \u00ab PRESTATIONS DEMATERNIT\u00c9\u00ab11.1 Lorsq",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.731
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...si elle n\u2019avait pas b\u00e9n\u00e9fici\u00e9 d\u2019un cong\u00e9 dematernit\u00e9\u00bb. 13. L\u2019article 14 de ce",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.522
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...d\u2019un cong\u00e9 sans traitement cons\u00e9cutif \u00e0 un cong\u00e9 dematernit\u00e9, de paternit\u00e9 ou",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.642
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...m\u00eame nature en raison d\u2019accident, de maladie ou dematernit\u00e9; 4\u00b0 de capitalisa",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.395
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...nature encourus en raison d\u2019accident, de maladie ou dematernit\u00e9; 3\u00b0 de r\u00e9assu",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.912
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...nature encourus en raison d\u2019accident, de maladie ou dematernit\u00e9; c) de capita",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.516
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...m\u00eame nature en raison d\u2019accident, de maladie ou dematernit\u00e9; d) de capitalisa",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.712
+  },
+  {
+    "session": "33-2",
+    "bill_number": "",
+    "title": "...nature encouru en raison d\u2019accident, de maladie ou dematernit\u00e9; c) de capital",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.663
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...sociales Programme 04 S\u00e9curit\u00e9 du revenu Programme 05 Allocations dematernit\u00e9",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.825
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...des affaires sociales 6 542 000 Programme 5 Allocations dematernit\u00e910 242 000",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.906
+  },
+  {
+    "session": "34-1",
+    "bill_number": "",
+    "title": "...S\u00e9curit\u00e9 du revenu 158 139 900 Programme 05 Allocations dematernit\u00e94 500 000 ",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.686
+  },
+  {
+    "session": "33-1",
+    "bill_number": "",
+    "title": "...juge peut requ\u00e9rir que le d\u00e9fendeur subisse un examen cliniquepsychiatriqueet",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.781
+  },
+  {
+    "session": "34-2",
+    "bill_number": "",
+    "title": "...ati\u00e8re de garde en \u00e9tablissem ent et d\u2019exam enpsychiatrique; 6 \u00ab6. les jugeme",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.684
+  },
+  {
+    "session": "43-2",
+    "bill_number": "2",
+    "title": "Projet de loi n\u00b0 2, Loi visant principalement \u00e0 instaurer la responsabilit\u00e9 coll",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.87
+  },
+  {
+    "session": "43-2",
+    "bill_number": "15",
+    "title": "Projet de loi n\u00b0 15, Loi modifiant le Code des professions et d\u2019autres dispositi",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.907
+  },
+  {
+    "session": "43-2",
+    "bill_number": "16",
+    "title": "Projet de loi n\u00b0 16, Loi reportant l\u2019entr\u00e9e en vigueur de certaines dispositions",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.271
+  },
+  {
+    "session": "43-2",
+    "bill_number": "19",
+    "title": "Projet de loi n\u00b0 19, Loi visant notamment l\u2019am\u00e9lioration de l\u2019acc\u00e8s aux services",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.862
+  },
+  {
+    "session": "43-2",
+    "bill_number": "23",
+    "title": "Projet de loi n\u00b0 23, Loi visant principalement \u00e0 mieux accompagner les personnes",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.392
+  },
+  {
+    "session": "43-2",
+    "bill_number": "25",
+    "title": "Projet de loi n\u00b0 25, Loi visant \u00e0 accro\u00eetre la confiance du public envers le sys",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.888
+  },
+  {
+    "session": "43-2",
+    "bill_number": "495",
+    "title": "Projet de loi n\u00b0 495, Loi modifiant la Loi sur la gouvernance du syst\u00e8me de sant",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.819
+  },
+  {
+    "session": "43-2",
+    "bill_number": "498",
+    "title": "Projet de loi n\u00b0 498, Loi retirant des freins \u00e0 l\u2019efficacit\u00e9 du syst\u00e8me de sant\u00e9",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.858
+  },
+  {
+    "session": "43-2",
+    "bill_number": "595",
+    "title": "Projet de loi n\u00b0 595, Loi sur l\u2019assistance personnelle autodirig\u00e9e pour les pers",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.546
+  },
+  {
+    "session": "43-1",
+    "bill_number": "3",
+    "title": "Projet de loi n\u00b0 3, Loi sur les renseignements de sant\u00e9 et de services sociaux e",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.818
+  },
+  {
+    "session": "43-1",
+    "bill_number": "9",
+    "title": "Projet de loi n\u00b0 9, Loi modifiant principalement certaines lois instituant des r",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.956
+  },
+  {
+    "session": "43-1",
+    "bill_number": "10",
+    "title": "Projet de loi n\u00b0 10, Loi limitant le recours aux services d\u2019une agence de placem",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.724
+  },
+  {
+    "session": "43-1",
+    "bill_number": "11",
+    "title": "Projet de loi n\u00b0 11, Loi modifiant la Loi concernant les soins de fin de vie et ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.584
+  },
+  {
+    "session": "43-1",
+    "bill_number": "15",
+    "title": "Projet de loi n\u00b0 15, Loi visant \u00e0 rendre le syst\u00e8me de sant\u00e9 et de services soci",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.817
+  },
+  {
+    "session": "43-1",
+    "bill_number": "32",
+    "title": "Projet de loi n\u00b0 32, Loi instaurant l\u2019approche de s\u00e9curisation culturelle au sei",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.199
+  },
+  {
+    "session": "43-1",
+    "bill_number": "36",
+    "title": "Projet de loi n\u00b0 36, Loi sur le recouvrement du co\u00fbt des soins de sant\u00e9 et des d",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.84
+  },
+  {
+    "session": "43-1",
+    "bill_number": "37",
+    "title": "Projet de loi n\u00b0 37, Loi sur le commissaire au bien-\u00eatre et aux droits des enfan",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.64
+  },
+  {
+    "session": "43-1",
+    "bill_number": "41",
+    "title": "Projet de loi n\u00b0 41, Loi \u00e9dictant la Loi sur la performance environnementale des",
+    "predicted_label": "Environment",
+    "predicted_health": false,
+    "confidence": 0.534
+  },
+  {
+    "session": "43-1",
+    "bill_number": "61",
+    "title": "Projet de loi n\u00b0 61, Loi \u00e9dictant la Loi sur Mobilit\u00e9 Infra Qu\u00e9bec et modifiant ",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.87
+  },
+  {
+    "session": "43-1",
+    "bill_number": "66",
+    "title": "Projet de loi n\u00b0 66, Loi visant \u00e0 renforcer le suivi des personnes faisant l\u2019obj",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.894
+  },
+  {
+    "session": "43-1",
+    "bill_number": "67",
+    "title": "Projet de loi n\u00b0 67, Loi modifiant le Code des professions pour la modernisation",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.906
+  },
+  {
+    "session": "43-1",
+    "bill_number": "68",
+    "title": "Projet de loi n\u00b0 68, Loi visant principalement \u00e0 r\u00e9duire la charge administrativ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.799
+  },
+  {
+    "session": "43-1",
+    "bill_number": "83",
+    "title": "Projet de loi n\u00b0 83, Loi favorisant l\u2019exercice de la m\u00e9decine au sein du r\u00e9seau ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.853
+  },
+  {
+    "session": "43-1",
+    "bill_number": "95",
+    "title": "Projet de loi n\u00b0 95, Loi favorisant l\u2019\u00e9quit\u00e9 dans l\u2019acc\u00e8s aux services de garde ",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.855
+  },
+  {
+    "session": "43-1",
+    "bill_number": "101",
+    "title": "Projet de loi n\u00b0 101, Loi visant l\u2019am\u00e9lioration de certaines lois du travail",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.89
+  },
+  {
+    "session": "43-1",
+    "bill_number": "103",
+    "title": "Projet de loi n\u00b0 103, Loi visant \u00e0 r\u00e9glementer les sites de consommation supervi",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.911
+  },
+  {
+    "session": "43-1",
+    "bill_number": "104",
+    "title": "Projet de loi n\u00b0 104, Loi modifiant diverses dispositions afin notamment de donn",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.927
+  },
+  {
+    "session": "43-1",
+    "bill_number": "106",
+    "title": "Projet de loi n\u00b0 106, Loi visant principalement \u00e0 instaurer la responsabilit\u00e9 co",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.857
+  },
+  {
+    "session": "43-1",
+    "bill_number": "192",
+    "title": "Projet de loi n\u00b0 192, Loi visant \u00e0 assurer la sant\u00e9 et la s\u00e9curit\u00e9 des \u00e9l\u00e8ves en",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.748
+  },
+  {
+    "session": "43-1",
+    "bill_number": "197",
+    "title": "Projet de loi n\u00b0 197, Loi visant \u00e0 am\u00e9liorer la qualit\u00e9 des soins par la fixatio",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.837
+  },
+  {
+    "session": "43-1",
+    "bill_number": "212",
+    "title": "Projet de loi n\u00b0 212, Loi modifiant la Loi constituant en corporation Foyer Wale",
+    "predicted_label": "Culture",
+    "predicted_health": false,
+    "confidence": 0.444
+  },
+  {
+    "session": "43-1",
+    "bill_number": "213",
+    "title": "Projet de loi n\u00b0 213, Loi concernant certains immeubles situ\u00e9s dans la Municipal",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.94
+  },
+  {
+    "session": "43-1",
+    "bill_number": "398",
+    "title": "Projet de loi n\u00b0 398, Loi modifiant la Loi sur l\u2019instruction publique afin de co",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.901
+  },
+  {
+    "session": "43-1",
+    "bill_number": "591",
+    "title": "Projet de loi n\u00b0 591, Loi visant principalement \u00e0 renforcer le contr\u00f4le de l\u2019act",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.96
+  },
+  {
+    "session": "43-1",
+    "bill_number": "595",
+    "title": "Projet de loi n\u00b0 595, Loi proclamant la Journ\u00e9e qu\u00e9b\u00e9coise de sensibilisation au",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.576
+  },
+  {
+    "session": "43-1",
+    "bill_number": "694",
+    "title": "Projet de loi n\u00b0 694, Loi modifiant le Code de la s\u00e9curit\u00e9 routi\u00e8re afin de lutt",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.867
+  },
+  {
+    "session": "43-1",
+    "bill_number": "790",
+    "title": "Projet de loi n\u00b0 790, Loi visant \u00e0 \u00e9tendre aux usagers h\u00e9berg\u00e9s dans une r\u00e9siden",
+    "predicted_label": "Housing",
+    "predicted_health": false,
+    "confidence": 0.816
+  },
+  {
+    "session": "43-1",
+    "bill_number": "893",
+    "title": "Projet de loi n\u00b0 893, Loi sur le maintien de l\u2019autonomie des personnes a\u00een\u00e9es",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.802
+  },
+  {
+    "session": "43-1",
+    "bill_number": "894",
+    "title": "Projet de loi n\u00b0 894, Loi visant \u00e0 \u00e9tendre l\u2019admissibilit\u00e9 au r\u00e9gime d\u2019assurance",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.826
+  },
+  {
+    "session": "43-1",
+    "bill_number": "899",
+    "title": "Projet de loi n\u00b0 899, Loi modifiant le Code de la s\u00e9curit\u00e9 routi\u00e8re afin d\u2019oblig",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.882
+  },
+  {
+    "session": "43-1",
+    "bill_number": "994",
+    "title": "Projet de loi n\u00b0 994, Loi favorisant la sant\u00e9 sexuelle et reproductive par un ac",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.822
+  },
+  {
+    "session": "42-2",
+    "bill_number": "8",
+    "title": "Projet de loi n\u00b0 8, Loi visant \u00e0 reporter l\u2019entr\u00e9e en vigueur de certaines dispo",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.659
+  },
+  {
+    "session": "42-2",
+    "bill_number": "11",
+    "title": "Projet de loi n\u00b0 11, Loi visant \u00e0 augmenter l\u2019offre de services de premi\u00e8re lign",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.859
+  },
+  {
+    "session": "42-2",
+    "bill_number": "15",
+    "title": "Projet de loi n\u00b0 15, Loi modifiant la Loi sur la protection de la jeunesse et d\u2019",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.686
+  },
+  {
+    "session": "42-2",
+    "bill_number": "19",
+    "title": "Projet de loi n\u00b0 19, Loi sur les renseignements de sant\u00e9 et de services sociaux ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.805
+  },
+  {
+    "session": "42-2",
+    "bill_number": "27",
+    "title": "Projet de loi n\u00b0 27, Loi modifiant principalement certaines lois instituant des ",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.957
+  },
+  {
+    "session": "42-2",
+    "bill_number": "28",
+    "title": "Projet de loi n\u00b0 28, Loi visant \u00e0 mettre fin \u00e0 l\u2019\u00e9tat d\u2019urgence sanitaire tout e",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.685
+  },
+  {
+    "session": "42-2",
+    "bill_number": "29",
+    "title": "Projet de loi n\u00b0 29, Loi visant \u00e0 favoriser l\u2019exercice du droit de vote lors des",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.825
+  },
+  {
+    "session": "42-2",
+    "bill_number": "38",
+    "title": "Projet de loi n\u00b0 38, Loi modifiant la Loi concernant les soins de fin de vie et ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.588
+  },
+  {
+    "session": "42-2",
+    "bill_number": "498",
+    "title": "Projet de loi n\u00b0 498, Loi proclamant la Journ\u00e9e nationale de la promotion de la ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.797
+  },
+  {
+    "session": "42-2",
+    "bill_number": "995",
+    "title": "Projet de loi n\u00b0 995, Loi visant \u00e0 assurer la sant\u00e9 et la s\u00e9curit\u00e9 des \u00e9l\u00e8ves en",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.735
+  },
+  {
+    "session": "42-1",
+    "bill_number": "2",
+    "title": "Projet de loi n\u00b0 2, Loi resserrant l\u2019encadrement du cannabis",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.742
+  },
+  {
+    "session": "42-1",
+    "bill_number": "7",
+    "title": "Projet de loi n\u00b0 7, Loi concernant certaines conditions de travail applicables a",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.336
+  },
+  {
+    "session": "42-1",
+    "bill_number": "9",
+    "title": "Projet de loi n\u00b0 9, Loi visant \u00e0 accro\u00eetre la prosp\u00e9rit\u00e9 socio-\u00e9conomique du Qu\u00e9",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.599
+  },
+  {
+    "session": "42-1",
+    "bill_number": "12",
+    "title": "Projet de loi n\u00b0 12, Loi visant \u00e0 pr\u00e9ciser la port\u00e9e du droit \u00e0 la gratuit\u00e9 scol",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.906
+  },
+  {
+    "session": "42-1",
+    "bill_number": "20",
+    "title": "Projet de loi n\u00b0 20, Loi mettant en \u0153uvre certaines recommandations du rapport d",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.855
+  },
+  {
+    "session": "42-1",
+    "bill_number": "27",
+    "title": "Projet de loi n\u00b0 27, Loi concernant principalement l\u2019organisation gouvernemental",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.747
+  },
+  {
+    "session": "42-1",
+    "bill_number": "28",
+    "title": "Projet de loi n\u00b0 28, Loi permettant la mise en place de certaines mesures en mat",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.341
+  },
+  {
+    "session": "42-1",
+    "bill_number": "29",
+    "title": "Projet de loi n\u00b0 29, Loi modifiant le Code des professions et d\u2019autres dispositi",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.617
+  },
+  {
+    "session": "42-1",
+    "bill_number": "31",
+    "title": "Projet de loi n\u00b0 31, Loi modifiant principalement la Loi sur la pharmacie afin d",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.845
+  },
+  {
+    "session": "42-1",
+    "bill_number": "35",
+    "title": "Projet de loi n\u00b0 35, Loi visant \u00e0 moderniser certaines r\u00e8gles relatives \u00e0 la pub",
+    "predicted_label": "Housing",
+    "predicted_health": false,
+    "confidence": 0.594
+  },
+  {
+    "session": "42-1",
+    "bill_number": "37",
+    "title": "Projet de loi n\u00b0 37, Loi visant principalement \u00e0 instituer le Centre d\u2019acquisiti",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.927
+  },
+  {
+    "session": "42-1",
+    "bill_number": "38",
+    "title": "Projet de loi n\u00b0 38, Loi modifiant certaines lois instituant des r\u00e9gimes de retr",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.956
+  },
+  {
+    "session": "42-1",
+    "bill_number": "43",
+    "title": "Projet de loi n\u00b0 43, Loi modifiant la Loi sur les infirmi\u00e8res et les infirmiers ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.839
+  },
+  {
+    "session": "42-1",
+    "bill_number": "52",
+    "title": "Projet de loi n\u00b0 52, Loi visant \u00e0 renforcer le r\u00e9gime d\u2019examen des plaintes du r",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.674
+  },
+  {
+    "session": "42-1",
+    "bill_number": "59",
+    "title": "Projet de loi n\u00b0 59, Loi modernisant le r\u00e9gime de sant\u00e9 et de s\u00e9curit\u00e9 du travai",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.912
+  },
+  {
+    "session": "42-1",
+    "bill_number": "61",
+    "title": "Projet de loi n\u00b0 61, Loi visant la relance de l\u2019\u00e9conomie du Qu\u00e9bec et l\u2019att\u00e9nuat",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.456
+  },
+  {
+    "session": "42-1",
+    "bill_number": "73",
+    "title": "Projet de loi n\u00b0 73, Loi modifiant diverses dispositions en mati\u00e8re de procr\u00e9ati",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.761
+  },
+  {
+    "session": "42-1",
+    "bill_number": "75",
+    "title": "Projet de loi n\u00b0 75, Loi visant \u00e0 am\u00e9liorer l\u2019accessibilit\u00e9 et l\u2019efficacit\u00e9 de l",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.875
+  },
+  {
+    "session": "42-1",
+    "bill_number": "83",
+    "title": "Projet de loi n\u00b0 83, Loi concernant principalement l\u2019admissibilit\u00e9 au r\u00e9gime d\u2019a",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.881
+  },
+  {
+    "session": "42-1",
+    "bill_number": "85",
+    "title": "Projet de loi n\u00b0 85, Loi visant \u00e0 faciliter le d\u00e9roulement de l\u2019\u00e9lection g\u00e9n\u00e9ral",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.962
+  },
+  {
+    "session": "42-1",
+    "bill_number": "101",
+    "title": "Projet de loi n\u00b0 101, Loi visant \u00e0 renforcer la lutte contre la maltraitance env",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.37
+  },
+  {
+    "session": "42-1",
+    "bill_number": "105",
+    "title": "Projet de loi n\u00b0 105, Loi \u00e9tablissant un p\u00e9rim\u00e8tre aux abords de certains lieux ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.671
+  },
+  {
+    "session": "42-1",
+    "bill_number": "196",
+    "title": "Projet de loi n\u00b0 196, Loi modifiant la Loi sur la s\u00e9curit\u00e9 dans les sports afin ",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.741
+  },
+  {
+    "session": "42-1",
+    "bill_number": "594",
+    "title": "Projet de loi n\u00b0 594, Loi visant \u00e0 am\u00e9liorer la qualit\u00e9 des soins par la fixatio",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.835
+  },
+  {
+    "session": "42-1",
+    "bill_number": "597",
+    "title": "Projet de loi n\u00b0 597, Loi visant \u00e0 am\u00e9liorer le soutien offert aux entrepreneurs",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.482
+  },
+  {
+    "session": "42-1",
+    "bill_number": "598",
+    "title": "Projet de loi n\u00b0 598, Loi autorisant la vente, pour emporter ou livrer, de boiss",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.594
+  },
+  {
+    "session": "42-1",
+    "bill_number": "691",
+    "title": "Projet de loi n\u00b0 691, Loi modifiant la Loi sur le minist\u00e8re des Transports afin ",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.881
+  },
+  {
+    "session": "42-1",
+    "bill_number": "798",
+    "title": "Projet de loi n\u00b0 798, Loi conf\u00e9rant au salari\u00e9 un droit \u00e0 une \u00ab pause-vaccin \u00bb p",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.715
+  },
+  {
+    "session": "42-1",
+    "bill_number": "898",
+    "title": "Projet de loi n\u00b0 898, Loi modifiant la Loi sur la sant\u00e9 publique afin de changer",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.752
+  },
+  {
+    "session": "41-1",
+    "bill_number": "3",
+    "title": "Projet de loi n\u00b0 3, Loi favorisant la sant\u00e9 financi\u00e8re et la p\u00e9rennit\u00e9 des r\u00e9gim",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.955
+  },
+  {
+    "session": "41-1",
+    "bill_number": "10",
+    "title": "Projet de loi n\u00b0 10, Loi modifiant l\u2019organisation et la gouvernance du r\u00e9seau de",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.809
+  },
+  {
+    "session": "41-1",
+    "bill_number": "20",
+    "title": "Projet de loi n\u00b0 20, Loi \u00e9dictant la Loi favorisant l\u2019acc\u00e8s aux services de m\u00e9de",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.857
+  },
+  {
+    "session": "41-1",
+    "bill_number": "42",
+    "title": "Projet de loi n\u00b0 42, Loi regroupant la Commission de l\u2019\u00e9quit\u00e9 salariale, la Comm",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.874
+  },
+  {
+    "session": "41-1",
+    "bill_number": "43",
+    "title": "Projet de loi n\u00b0 43, Loi favorisant l\u2019information sur la dangerosit\u00e9 des produit",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.368
+  },
+  {
+    "session": "41-1",
+    "bill_number": "44",
+    "title": "Projet de loi n\u00b0 44, Loi visant \u00e0 renforcer la lutte contre le tabagisme",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.848
+  },
+  {
+    "session": "41-1",
+    "bill_number": "52",
+    "title": "Projet de loi n\u00b0 52, Loi concernant les soins de fin de vie",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.514
+  },
+  {
+    "session": "41-1",
+    "bill_number": "66",
+    "title": "Projet de loi n\u00b0 66, Loi sur les activit\u00e9s fun\u00e9raires",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.237
+  },
+  {
+    "session": "41-1",
+    "bill_number": "81",
+    "title": "Projet de loi n\u00b0 81, Loi visant \u00e0 r\u00e9duire le co\u00fbt de certains m\u00e9dicaments couver",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.874
+  },
+  {
+    "session": "41-1",
+    "bill_number": "88",
+    "title": "Projet de loi n\u00b0 88, Loi sur le d\u00e9veloppement de l\u2019industrie des boissons alcool",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.698
+  },
+  {
+    "session": "41-1",
+    "bill_number": "92",
+    "title": "Projet de loi n\u00b0 92, Loi visant \u00e0 accro\u00eetre les pouvoirs de la R\u00e9gie de l\u2019assura",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.818
+  },
+  {
+    "session": "41-1",
+    "bill_number": "97",
+    "title": "Projet de loi n\u00b0 97, Loi modifiant certaines lois instituant des r\u00e9gimes de retr",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.936
+  },
+  {
+    "session": "41-1",
+    "bill_number": "99",
+    "title": "Projet de loi n\u00b0 99, Loi modifiant la Loi sur la protection de la jeunesse et d\u2019",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.717
+  },
+  {
+    "session": "41-1",
+    "bill_number": "102",
+    "title": "Projet de loi n\u00b0 102, Loi modifiant la Loi sur la qualit\u00e9 de l\u2019environnement afi",
+    "predicted_label": "Environment",
+    "predicted_health": false,
+    "confidence": 0.889
+  },
+  {
+    "session": "41-1",
+    "bill_number": "109",
+    "title": "Projet de loi n\u00b0 109, Loi accordant le statut de capitale nationale \u00e0 la Ville d",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.938
+  },
+  {
+    "session": "41-1",
+    "bill_number": "115",
+    "title": "Projet de loi n\u00b0 115, Loi visant \u00e0 lutter contre la maltraitance envers les a\u00een\u00e9",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.426
+  },
+  {
+    "session": "41-1",
+    "bill_number": "118",
+    "title": "Projet de loi n\u00b0 118, Loi sur les laboratoires m\u00e9dicaux, les centres de services",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.87
+  },
+  {
+    "session": "41-1",
+    "bill_number": "121",
+    "title": "Projet de loi n\u00b0 121, Loi augmentant l\u2019autonomie et les pouvoirs de la Ville de ",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.956
+  },
+  {
+    "session": "41-1",
+    "bill_number": "123",
+    "title": "Projet de loi n\u00b0 123, Loi modifiant diverses dispositions dans le domaine de la ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.732
+  },
+  {
+    "session": "41-1",
+    "bill_number": "126",
+    "title": "Projet de loi n\u00b0 126, Loi favorisant la sant\u00e9 financi\u00e8re et la p\u00e9rennit\u00e9 du r\u00e9gi",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.857
+  },
+  {
+    "session": "41-1",
+    "bill_number": "130",
+    "title": "Projet de loi n\u00b0 130, Loi modifiant certaines dispositions relatives \u00e0 l\u2019organis",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.851
+  },
+  {
+    "session": "41-1",
+    "bill_number": "148",
+    "title": "Projet de loi n\u00b0 148, Loi encadrant l\u2019approvisionnement en m\u00e9dicaments g\u00e9n\u00e9rique",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.86
+  },
+  {
+    "session": "41-1",
+    "bill_number": "152",
+    "title": "Projet de loi n\u00b0 152, Loi modifiant diverses dispositions l\u00e9gislatives concernan",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.866
+  },
+  {
+    "session": "41-1",
+    "bill_number": "154",
+    "title": "Projet de loi n\u00b0 154, Loi mettant en \u0153uvre certaines recommandations du rapport ",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.837
+  },
+  {
+    "session": "41-1",
+    "bill_number": "157",
+    "title": "Projet de loi n\u00b0 157, Loi constituant la Soci\u00e9t\u00e9 qu\u00e9b\u00e9coise du cannabis, \u00e9dictan",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.729
+  },
+  {
+    "session": "41-1",
+    "bill_number": "160",
+    "title": "Projet de loi n\u00b0 160, Loi confirmant certaines conditions de travail applicables",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.283
+  },
+  {
+    "session": "41-1",
+    "bill_number": "162",
+    "title": "Projet de loi n\u00b0 162, Loi modifiant la Loi sur le b\u00e2timent et d\u2019autres dispositi",
+    "predicted_label": "Housing",
+    "predicted_health": false,
+    "confidence": 0.877
+  },
+  {
+    "session": "41-1",
+    "bill_number": "170",
+    "title": "Projet de loi n\u00b0 170, Loi modernisant le r\u00e9gime juridique applicable aux permis ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.269
+  },
+  {
+    "session": "41-1",
+    "bill_number": "189",
+    "title": "Projet de loi n\u00b0 189, Loi visant principalement \u00e0 confier la charge de la survei",
+    "predicted_label": "Foreign Trade",
+    "predicted_health": false,
+    "confidence": 0.658
+  },
+  {
+    "session": "41-1",
+    "bill_number": "197",
+    "title": "Projet de loi n\u00b0 197, Loi visant \u00e0 r\u00e9duire les co\u00fbts d\u2019approvisionnement en m\u00e9di",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.861
+  },
+  {
+    "session": "41-1",
+    "bill_number": "697",
+    "title": "Projet de loi n\u00b0 697, Loi visant \u00e0 permettre aux \u00e9tudiants en droit de donner de",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.585
+  },
+  {
+    "session": "41-1",
+    "bill_number": "794",
+    "title": "Projet de loi n\u00b0 794, Loi encadrant l'utilisation de l'\u00e9tat de sant\u00e9 comme facte",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.49
+  },
+  {
+    "session": "40-1",
+    "bill_number": "9",
+    "title": "Projet de loi n\u00b0 9, Loi instituant le Fonds des ressources informationnelles du ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.495
+  },
+  {
+    "session": "40-1",
+    "bill_number": "15",
+    "title": "Projet de loi n\u00b0 15, Loi permettant l\u2019\u00e9tablissement de r\u00e9gimes de retraite \u00e0 pre",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.567
+  },
+  {
+    "session": "40-1",
+    "bill_number": "21",
+    "title": "Projet de loi n\u00b0 21, Loi visant l\u2019optimisation de l\u2019action gouvernementale en ma",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.863
+  },
+  {
+    "session": "40-1",
+    "bill_number": "22",
+    "title": "Projet de loi n\u00b0 22, Loi modifiant la Loi sur l\u2019indemnisation des victimes d\u2019act",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.895
+  },
+  {
+    "session": "40-1",
+    "bill_number": "29",
+    "title": "Projet de loi n\u00b0 29, Loi modifiant la Loi sur H\u00e9ma-Qu\u00e9bec et sur le Comit\u00e9 d\u2019h\u00e9m",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.76
+  },
+  {
+    "session": "40-1",
+    "bill_number": "30",
+    "title": "Projet de loi n\u00b0 30, Loi modifiant le Code civil et d\u2019autres dispositions l\u00e9gisl",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.611
+  },
+  {
+    "session": "40-1",
+    "bill_number": "37",
+    "title": "Projet de loi n\u00b0 37, Loi interdisant certaines activit\u00e9s destin\u00e9es \u00e0 rechercher ",
+    "predicted_label": "Energy",
+    "predicted_health": false,
+    "confidence": 0.861
+  },
+  {
+    "session": "40-1",
+    "bill_number": "52",
+    "title": "Projet de loi n\u00b0 52, Loi concernant les soins de fin de vie",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.514
+  },
+  {
+    "session": "40-1",
+    "bill_number": "67",
+    "title": "Projet de loi n\u00b0 67, Loi sur l\u2019assurance autonomie",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.842
+  },
+  {
+    "session": "40-1",
+    "bill_number": "194",
+    "title": "Projet de loi n\u00b0 194, Loi modifiant la Loi sur les permis d\u2019alcool et d\u2019autres d",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.489
+  },
+  {
+    "session": "40-1",
+    "bill_number": "210",
+    "title": "Projet de loi n\u00b0 210, Loi modifiant la Loi fusionnant Centre de r\u00e9adaptation Mac",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.206
+  },
+  {
+    "session": "40-1",
+    "bill_number": "399",
+    "title": "Projet de loi n\u00b0 399, Loi visant \u00e0 enrayer la maltraitance des personnes vuln\u00e9ra",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.553
+  },
+  {
+    "session": "40-1",
+    "bill_number": "497",
+    "title": "Projet de loi n\u00b0 497, Loi concernant la mise en \u0153uvre dans le domaine municipal ",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.942
+  },
+  {
+    "session": "39-2",
+    "bill_number": "16",
+    "title": "Projet de loi n\u00b0 16, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.735
+  },
+  {
+    "session": "39-2",
+    "bill_number": "36",
+    "title": "Projet de loi n\u00b0 36, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.785
+  },
+  {
+    "session": "39-2",
+    "bill_number": "41",
+    "title": "Projet de loi n\u00b0 41, Loi modifiant la Loi sur la pharmacie",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.826
+  },
+  {
+    "session": "39-2",
+    "bill_number": "42",
+    "title": "Projet de loi n\u00b0 42, Loi modifiant la Loi sur les r\u00e9gimes compl\u00e9mentaires de ret",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.882
+  },
+  {
+    "session": "39-2",
+    "bill_number": "48",
+    "title": "Projet de loi n\u00b0 48, Loi concernant l\u2019inspection environnementale des v\u00e9hicules ",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.721
+  },
+  {
+    "session": "39-2",
+    "bill_number": "51",
+    "title": "Projet de loi n\u00b0 51, Loi modifiant la Loi sur la protection sanitaire des animau",
+    "predicted_label": "Agriculture",
+    "predicted_health": false,
+    "confidence": 0.883
+  },
+  {
+    "session": "39-2",
+    "bill_number": "53",
+    "title": "Projet de loi n\u00b0 53, Loi sur la dissolution de la Soci\u00e9t\u00e9 de gestion informatiqu",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.507
+  },
+  {
+    "session": "39-2",
+    "bill_number": "55",
+    "title": "Projet de loi n\u00b0 55, Loi concernant la reconnaissance professionnelle des techno",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.833
+  },
+  {
+    "session": "39-2",
+    "bill_number": "59",
+    "title": "Projet de loi n\u00b0 59, Loi concernant le partage de certains renseignements de san",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.877
+  },
+  {
+    "session": "39-2",
+    "bill_number": "60",
+    "title": "Projet de loi n\u00b0 60, Loi visant principalement la modernisation du r\u00e9gime de san",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.896
+  },
+  {
+    "session": "39-2",
+    "bill_number": "68",
+    "title": "Projet de loi n\u00b0 68, Loi modifiant la Loi sur les permis d\u2019alcool et d\u2019autres di",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.514
+  },
+  {
+    "session": "39-2",
+    "bill_number": "74",
+    "title": "Projet de loi n\u00b0 74, Loi visant \u00e0 pr\u00e9venir les cancers de la peau caus\u00e9s par le ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.647
+  },
+  {
+    "session": "39-2",
+    "bill_number": "79",
+    "title": "Projet de loi n\u00b0 79, Loi modifiant certaines dispositions du Code des profession",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.879
+  },
+  {
+    "session": "39-2",
+    "bill_number": "84",
+    "title": "Projet de loi n\u00b0 84, Loi modifiant diverses dispositions l\u00e9gislatives dans le do",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.759
+  },
+  {
+    "session": "39-2",
+    "bill_number": "216",
+    "title": "Projet de loi n\u00b0 216, Loi concernant le Centre d\u2019accueil Dixville inc.",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.474
+  },
+  {
+    "session": "39-1",
+    "bill_number": "7",
+    "title": "Projet de loi n\u00b0 7, Loi instituant le fonds pour le d\u00e9veloppement des jeunes enf",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.671
+  },
+  {
+    "session": "39-1",
+    "bill_number": "14",
+    "title": "Projet de loi n\u00b0 14, Loi prolongeant le mandat des membres des conseils d'admini",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.638
+  },
+  {
+    "session": "39-1",
+    "bill_number": "21",
+    "title": "Projet de loi n\u00b0 21, Loi modifiant le Code des professions et d'autres dispositi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.769
+  },
+  {
+    "session": "39-1",
+    "bill_number": "24",
+    "title": "Projet de loi n\u00b0 24, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.851
+  },
+  {
+    "session": "39-1",
+    "bill_number": "26",
+    "title": "Projet de loi n\u00b0 26, Loi sur les activit\u00e9s cliniques et de recherche en mati\u00e8re ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.797
+  },
+  {
+    "session": "39-1",
+    "bill_number": "34",
+    "title": "Projet de loi n\u00b0 34, Loi modifiant diverses dispositions l\u00e9gislatives concernant",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.833
+  },
+  {
+    "session": "39-1",
+    "bill_number": "35",
+    "title": "Projet de loi n\u00b0 35, Loi modifiant le r\u00e9gime de sant\u00e9 et de s\u00e9curit\u00e9 du travail ",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.912
+  },
+  {
+    "session": "39-1",
+    "bill_number": "43",
+    "title": "Projet de loi n\u00b0 43, Loi sur le recouvrement du co\u00fbt des soins de sant\u00e9 et des d",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.856
+  },
+  {
+    "session": "39-1",
+    "bill_number": "47",
+    "title": "Projet de loi n\u00b0 47, Loi modifiant la Loi approuvant l'Entente concernant la con",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.785
+  },
+  {
+    "session": "39-1",
+    "bill_number": "49",
+    "title": "Projet de loi n\u00b0 49, Loi sur la repr\u00e9sentation des ressources de type familial e",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.887
+  },
+  {
+    "session": "39-1",
+    "bill_number": "51",
+    "title": "Projet de loi n\u00b0 51, Loi sur la repr\u00e9sentation de certaines personnes responsabl",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.844
+  },
+  {
+    "session": "39-1",
+    "bill_number": "56",
+    "title": "Projet de loi n\u00b0 56, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.728
+  },
+  {
+    "session": "39-1",
+    "bill_number": "58",
+    "title": "Projet de loi n\u00b0 58, Loi modifiant la Loi sur l'am\u00e9nagement et l'urbanisme et d'",
+    "predicted_label": "Housing",
+    "predicted_health": false,
+    "confidence": 0.685
+  },
+  {
+    "session": "39-1",
+    "bill_number": "59",
+    "title": "Projet de loi n\u00b0 59, Loi modifiant la Loi concernant l'imp\u00f4t sur le tabac et d'a",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.298
+  },
+  {
+    "session": "39-1",
+    "bill_number": "67",
+    "title": "Projet de loi n\u00b0 67, Loi sur l'Institut national d'excellence en sant\u00e9 et en ser",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.529
+  },
+  {
+    "session": "39-1",
+    "bill_number": "94",
+    "title": "Projet de loi n\u00b0 94, Loi \u00e9tablissant les balises encadrant les demandes d\u2019accomm",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.955
+  },
+  {
+    "session": "39-1",
+    "bill_number": "104",
+    "title": "Projet de loi n\u00b0 104, Loi sur l\u2019abolition de certains conseils et du Fonds du se",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.791
+  },
+  {
+    "session": "39-1",
+    "bill_number": "106",
+    "title": "Projet de loi n\u00b0 106, Loi prolongeant le mandat des membres des conseils d\u2019admin",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.653
+  },
+  {
+    "session": "39-1",
+    "bill_number": "110",
+    "title": "Projet de loi n\u00b0 110, Loi modifiant le r\u00e9gime de sant\u00e9 et de s\u00e9curit\u00e9 du travail",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.502
+  },
+  {
+    "session": "39-1",
+    "bill_number": "125",
+    "title": "Projet de loi n\u00b0 125, Loi facilitant les dons d\u2019organes et de tissus",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.863
+  },
+  {
+    "session": "39-1",
+    "bill_number": "127",
+    "title": "Projet de loi n\u00b0 127, Loi visant \u00e0 am\u00e9liorer la gestion du r\u00e9seau de la sant\u00e9 et",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.808
+  },
+  {
+    "session": "39-1",
+    "bill_number": "194",
+    "title": "Projet de loi n\u00b0 194, Loi modifiant la Loi sur l'assurance maladie",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.841
+  },
+  {
+    "session": "39-1",
+    "bill_number": "217",
+    "title": "Projet de loi n\u00b0 217, Loi modifiant la Loi constituant en corporation The Wales ",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.453
+  },
+  {
+    "session": "39-1",
+    "bill_number": "231",
+    "title": "Projet de loi n\u00b0 231, Loi concernant le Centre d\u2019accueil Dixville Inc.",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.469
+  },
+  {
+    "session": "39-1",
+    "bill_number": "395",
+    "title": "Projet de loi n\u00b0 395, Loi encadrant l\u2019accessibilit\u00e9 et l\u2019universalit\u00e9 des servic",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.866
+  },
+  {
+    "session": "38-1",
+    "bill_number": "1",
+    "title": "Projet de loi n\u00b0 1, Loi instituant le Fonds pour la promotion des saines habitud",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.822
+  },
+  {
+    "session": "38-1",
+    "bill_number": "4",
+    "title": "Projet de loi n\u00b0 4, Loi abrogeant la Loi concernant la prestation des services d",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.863
+  },
+  {
+    "session": "38-1",
+    "bill_number": "12",
+    "title": "Projet de loi n\u00b0 12, Loi modifiant le Code des professions et la Loi sur la phar",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.785
+  },
+  {
+    "session": "38-1",
+    "bill_number": "23",
+    "title": "Projet de loi n\u00b0 23, Loi sur les activit\u00e9s cliniques et de recherche en mati\u00e8re ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.787
+  },
+  {
+    "session": "38-1",
+    "bill_number": "24",
+    "title": "Projet de loi n\u00b0 24, Loi modifiant la Loi sur l'assurance m\u00e9dicaments",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.859
+  },
+  {
+    "session": "38-1",
+    "bill_number": "25",
+    "title": "Projet de loi n\u00b0 25, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.19
+  },
+  {
+    "session": "38-1",
+    "bill_number": "26",
+    "title": "Projet de loi n\u00b0 26, Loi modifiant la Loi sur la R\u00e9gie de l'assurance maladie du",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.847
+  },
+  {
+    "session": "38-1",
+    "bill_number": "50",
+    "title": "Projet de loi n\u00b0 50, Loi modifiant le Code des professions et d'autres dispositi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.777
+  },
+  {
+    "session": "38-1",
+    "bill_number": "51",
+    "title": "Projet de loi n\u00b0 51, Loi modifiant la Loi sur la R\u00e9gie de l'assurance maladie du",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.849
+  },
+  {
+    "session": "38-1",
+    "bill_number": "66",
+    "title": "Projet de loi n\u00b0 66, Loi sur le Laboratoire de sciences judiciaires et de m\u00e9deci",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.735
+  },
+  {
+    "session": "38-1",
+    "bill_number": "67",
+    "title": "Projet de loi n\u00b0 67, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.849
+  },
+  {
+    "session": "38-1",
+    "bill_number": "70",
+    "title": "Projet de loi n\u00b0 70, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.824
+  },
+  {
+    "session": "38-1",
+    "bill_number": "90",
+    "title": "Projet de loi n\u00b0 90, Loi modifiant diverses dispositions l\u00e9gislatives concernant",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.531
+  },
+  {
+    "session": "38-1",
+    "bill_number": "392",
+    "title": "Projet de loi n\u00b0 392, Loi modifiant de nouveau la Loi sur l'assurance maladie",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.836
+  },
+  {
+    "session": "37-2",
+    "bill_number": "33",
+    "title": "Projet de loi n\u00b0 33, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.797
+  },
+  {
+    "session": "37-2",
+    "bill_number": "37",
+    "title": "Projet de loi n\u00b0 37, Loi concernant la prestation des services de sant\u00e9 par les ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.862
+  },
+  {
+    "session": "37-2",
+    "bill_number": "40",
+    "title": "Projet de loi n\u00b0 40, Loi modifiant la Loi sur les accidents du travail et les ma",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.885
+  },
+  {
+    "session": "37-2",
+    "bill_number": "45",
+    "title": "Projet de loi n\u00b0 45, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.851
+  },
+  {
+    "session": "37-2",
+    "bill_number": "48",
+    "title": "Projet de loi n\u00b0 48, Loi modifiant la Loi sur la protection du consommateur et l",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.926
+  },
+  {
+    "session": "37-2",
+    "bill_number": "54",
+    "title": "Projet de loi n\u00b0 54, Loi modifiant le Code des professions et la Loi sur la phar",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.786
+  },
+  {
+    "session": "37-2",
+    "bill_number": "59",
+    "title": "Projet de loi n\u00b0 59, Loi instituant le Fonds pour la promotion des saines habitu",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.827
+  },
+  {
+    "session": "37-2",
+    "bill_number": "213",
+    "title": "Projet de loi n\u00b0 213, Loi concernant l'Institut de recherches cliniques de Montr",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.707
+  },
+  {
+    "session": "37-2",
+    "bill_number": "215",
+    "title": "Projet de loi n\u00b0 215, Loi fusionnant Centre de r\u00e9adaptation Mackay et L'Associat",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.182
+  },
+  {
+    "session": "37-1",
+    "bill_number": "7",
+    "title": "Projet de loi n\u00b0 7, Loi modifiant la Loi sur les services de sant\u00e9 et les servic",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.816
+  },
+  {
+    "session": "37-1",
+    "bill_number": "14",
+    "title": "Projet de loi n\u00b0 14, Loi modifiant la Loi sur les for\u00eats et d'autres disposition",
+    "predicted_label": "Environment",
+    "predicted_health": false,
+    "confidence": 0.653
+  },
+  {
+    "session": "37-1",
+    "bill_number": "25",
+    "title": "Projet de loi n\u00b0 25, Loi sur les agences de d\u00e9veloppement de r\u00e9seaux locaux de s",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.3
+  },
+  {
+    "session": "37-1",
+    "bill_number": "38",
+    "title": "Projet de loi n\u00b0 38, Loi sur le Commissaire \u00e0 la sant\u00e9 et au bien-\u00eatre",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.437
+  },
+  {
+    "session": "37-1",
+    "bill_number": "47",
+    "title": "Projet de loi n\u00b0 47, Loi modifiant la Loi concernant l'imp\u00f4t sur le tabac et la ",
+    "predicted_label": "Macroeconomics",
+    "predicted_health": false,
+    "confidence": 0.904
+  },
+  {
+    "session": "37-1",
+    "bill_number": "56",
+    "title": "Projet de loi n\u00b0 56, Loi modifiant la Loi assurant l'exercice des droits des per",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.837
+  },
+  {
+    "session": "37-1",
+    "bill_number": "75",
+    "title": "Projet de loi n\u00b0 75, Loi sur l'exercice de certaines comp\u00e9tences municipales dan",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.958
+  },
+  {
+    "session": "37-1",
+    "bill_number": "83",
+    "title": "Projet de loi n\u00b0 83, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.794
+  },
+  {
+    "session": "37-1",
+    "bill_number": "89",
+    "title": "Projet de loi n\u00b0 89, Loi sur les activit\u00e9s cliniques et de recherche en mati\u00e8re ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.809
+  },
+  {
+    "session": "37-1",
+    "bill_number": "112",
+    "title": "Projet de loi n\u00b0 112, Loi modifiant la Loi sur le tabac et d'autres dispositions",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.779
+  },
+  {
+    "session": "37-1",
+    "bill_number": "130",
+    "title": "Projet de loi n\u00b0 130, Loi modifiant la Loi sur l'assurance m\u00e9dicaments et d'autr",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.856
+  },
+  {
+    "session": "36-2",
+    "bill_number": "15",
+    "title": "Projet de loi n\u00b0 15, Loi modifiant la Loi sur la protection de la sant\u00e9 publique",
+    "predicted_label": "Agriculture",
+    "predicted_health": false,
+    "confidence": 0.827
+  },
+  {
+    "session": "36-2",
+    "bill_number": "27",
+    "title": "Projet de loi n\u00b0 27, Loi sur le Protecteur des usagers en mati\u00e8re de sant\u00e9 et de",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.487
+  },
+  {
+    "session": "36-2",
+    "bill_number": "28",
+    "title": "Projet de loi n\u00b0 28, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.794
+  },
+  {
+    "session": "36-2",
+    "bill_number": "36",
+    "title": "Projet de loi n\u00b0 36, Loi sur la sant\u00e9 publique",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.836
+  },
+  {
+    "session": "36-2",
+    "bill_number": "38",
+    "title": "Projet de loi n\u00b0 38, Loi modifiant le Code de la s\u00e9curit\u00e9 routi\u00e8re concernant la",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.842
+  },
+  {
+    "session": "36-2",
+    "bill_number": "45",
+    "title": "Projet de loi n\u00b0 45, Loi modifiant la Loi sur le tabac",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.798
+  },
+  {
+    "session": "36-2",
+    "bill_number": "90",
+    "title": "Projet de loi n\u00b0 90, Loi modifiant le Code des professions et d'autres dispositi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.854
+  },
+  {
+    "session": "36-2",
+    "bill_number": "98",
+    "title": "Projet de loi n\u00b0 98, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments et d'autre",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.871
+  },
+  {
+    "session": "36-2",
+    "bill_number": "101",
+    "title": "Projet de loi n\u00b0 101, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.463
+  },
+  {
+    "session": "36-2",
+    "bill_number": "108",
+    "title": "Projet de loi n\u00b0 108, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.229
+  },
+  {
+    "session": "36-2",
+    "bill_number": "111",
+    "title": "Projet de loi n\u00b0 111, Loi modifiant la Loi sur le minist\u00e8re du Conseil ex\u00e9cutif ",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.862
+  },
+  {
+    "session": "36-2",
+    "bill_number": "113",
+    "title": "Projet de loi n\u00b0 113, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.847
+  },
+  {
+    "session": "36-2",
+    "bill_number": "114",
+    "title": "Projet de loi n\u00b0 114, Loi visant la prestation continue de services m\u00e9dicaux d'u",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.865
+  },
+  {
+    "session": "36-2",
+    "bill_number": "117",
+    "title": "Projet de loi n\u00b0 117, Loi modifiant la Loi sur l'Institut national de sant\u00e9 publ",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.49
+  },
+  {
+    "session": "36-2",
+    "bill_number": "118",
+    "title": "Projet de loi n\u00b0 118, Loi modifiant la Loi interdisant l'affichage publicitaire ",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.348
+  },
+  {
+    "session": "36-2",
+    "bill_number": "132",
+    "title": "Projet de loi n\u00b0 132, Loi modifiant certaines dispositions du Code de proc\u00e9dure ",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.877
+  },
+  {
+    "session": "36-2",
+    "bill_number": "133",
+    "title": "Projet de loi n\u00b0 133, Loi modifiant la Loi sur la sant\u00e9 et la s\u00e9curit\u00e9 du travai",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.854
+  },
+  {
+    "session": "36-2",
+    "bill_number": "142",
+    "title": "Projet de loi n\u00b0 142, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.823
+  },
+  {
+    "session": "36-2",
+    "bill_number": "151",
+    "title": "Projet de loi n\u00b0 151, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.819
+  },
+  {
+    "session": "36-2",
+    "bill_number": "155",
+    "title": "Projet de loi n\u00b0 155, Loi modifiant la Loi assurant l'exercice des droits des pe",
+    "predicted_label": "Civil Rights",
+    "predicted_health": false,
+    "confidence": 0.845
+  },
+  {
+    "session": "36-2",
+    "bill_number": "220",
+    "title": "Projet de loi n\u00b0 220, Loi modifiant la Loi constituant en corporation \" L'H\u00f4pita",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.554
+  },
+  {
+    "session": "36-1",
+    "bill_number": "2",
+    "title": "Projet de loi n\u00b0 2, Loi sur la r\u00e9forme de la comptabilit\u00e9 gouvernementale",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.93
+  },
+  {
+    "session": "36-1",
+    "bill_number": "27",
+    "title": "Projet de loi n\u00b0 27, Loi modifiant la Loi sur les services de sant\u00e9 et les servi",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.922
+  },
+  {
+    "session": "36-1",
+    "bill_number": "36",
+    "title": "Projet de loi n\u00b0 36, Loi modifiant la Loi sur la R\u00e9gie de l'assurance-maladie du",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.863
+  },
+  {
+    "session": "36-1",
+    "bill_number": "43",
+    "title": "Projet de loi n\u00b0 43, Loi concernant certaines dispositions d\u00e9rogatoires dans les",
+    "predicted_label": "Education",
+    "predicted_health": false,
+    "confidence": 0.939
+  },
+  {
+    "session": "36-1",
+    "bill_number": "45",
+    "title": "Projet de loi n\u00b0 45, Loi modifiant certaines dispositions l\u00e9gislatives concernan",
+    "predicted_label": "Culture",
+    "predicted_health": false,
+    "confidence": 0.47
+  },
+  {
+    "session": "36-1",
+    "bill_number": "53",
+    "title": "Projet de loi n\u00b0 53, Loi sur la Corporation d'h\u00e9bergement du Qu\u00e9bec",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.431
+  },
+  {
+    "session": "36-1",
+    "bill_number": "60",
+    "title": "Projet de loi n\u00b0 60, Loi sur l'\u00e9valuation environnementale du projet de parach\u00e8v",
+    "predicted_label": "Energy",
+    "predicted_health": false,
+    "confidence": 0.704
+  },
+  {
+    "session": "36-1",
+    "bill_number": "69",
+    "title": "Projet de loi n\u00b0 69, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.87
+  },
+  {
+    "session": "36-1",
+    "bill_number": "72",
+    "title": "Projet de loi n\u00b0 72, Loi concernant la prestation des services de soins infirmie",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.875
+  },
+  {
+    "session": "36-1",
+    "bill_number": "74",
+    "title": "Projet de loi n\u00b0 74, Loi concernant le mandat des administrateurs de certains \u00e9t",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.578
+  },
+  {
+    "session": "36-1",
+    "bill_number": "79",
+    "title": "Projet de loi n\u00b0 79, Loi modifiant la Loi sur la sant\u00e9 et la s\u00e9curit\u00e9 du travail",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.857
+  },
+  {
+    "session": "36-1",
+    "bill_number": "83",
+    "title": "Projet de loi n\u00b0 83, Loi modifiant la Loi sur l'assurance-maladie et d'autres di",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.858
+  },
+  {
+    "session": "36-1",
+    "bill_number": "107",
+    "title": "Projet de loi n\u00b0 107, Loi sur l'\u00e9quilibre budg\u00e9taire du r\u00e9seau public de la sant",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.792
+  },
+  {
+    "session": "36-1",
+    "bill_number": "117",
+    "title": "Projet de loi n\u00b0 117, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments et la Loi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.87
+  },
+  {
+    "session": "36-1",
+    "bill_number": "129",
+    "title": "Projet de loi n\u00b0 129, Loi interdisant l'affichage publicitaire le long de certai",
+    "predicted_label": "Transportation",
+    "predicted_health": false,
+    "confidence": 0.339
+  },
+  {
+    "session": "36-1",
+    "bill_number": "133",
+    "title": "Projet de loi n\u00b0 133, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.751
+  },
+  {
+    "session": "36-1",
+    "bill_number": "165",
+    "title": "Projet de loi n\u00b0 165, Loi modifiant la Loi concernant le mandat des administrate",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.613
+  },
+  {
+    "session": "36-1",
+    "bill_number": "170",
+    "title": "Projet de loi n\u00b0 170, Loi portant r\u00e9forme de l'organisation territoriale municip",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.958
+  },
+  {
+    "session": "36-1",
+    "bill_number": "174",
+    "title": "Projet de loi n\u00b0 174, Loi modifiant la Loi sur la R\u00e9gie des alcools, des courses",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.505
+  },
+  {
+    "session": "36-1",
+    "bill_number": "215",
+    "title": "Projet de loi n\u00b0 215, Loi concernant le R\u00e9gime de retraite pour certains employ\u00e9",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.921
+  },
+  {
+    "session": "35-2",
+    "bill_number": "33",
+    "title": "Projet de loi n\u00b0 33, Loi sur l'assurance-m\u00e9dicaments et modifiant diverses dispo",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.869
+  },
+  {
+    "session": "35-2",
+    "bill_number": "39",
+    "title": "Projet de loi n\u00b0 39, Loi sur la protection des personnes dont l'\u00e9tat mental pr\u00e9s",
+    "predicted_label": "Social Welfare",
+    "predicted_health": false,
+    "confidence": 0.161
+  },
+  {
+    "session": "35-2",
+    "bill_number": "41",
+    "title": "Projet de loi n\u00b0 41, Loi modifiant de nouveau la Loi sur les services de sant\u00e9 e",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.792
+  },
+  {
+    "session": "35-2",
+    "bill_number": "44",
+    "title": "Projet de loi n\u00b0 44, Loi modifiant diverses lois en mati\u00e8re de boissons alcooliq",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.627
+  },
+  {
+    "session": "35-2",
+    "bill_number": "47",
+    "title": "Projet de loi n\u00b0 47, Loi modifiant la Loi sur le paiement de certaines amendes",
+    "predicted_label": "Law and Crime",
+    "predicted_health": false,
+    "confidence": 0.484
+  },
+  {
+    "session": "35-2",
+    "bill_number": "49",
+    "title": "Projet de loi n\u00b0 49, Loi instituant le Fonds d'assistance financi\u00e8re pour certai",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.503
+  },
+  {
+    "session": "35-2",
+    "bill_number": "74",
+    "title": "Projet de loi n\u00b0 74, Loi modifiant la Loi sur les accidents du travail et les ma",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.865
+  },
+  {
+    "session": "35-2",
+    "bill_number": "142",
+    "title": "Projet de loi n\u00b0 142, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments et modifi",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.87
+  },
+  {
+    "session": "35-2",
+    "bill_number": "154",
+    "title": "Projet de loi n\u00b0 154, Loi modifiant la Loi sur la protection de la sant\u00e9 publiqu",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.827
+  },
+  {
+    "session": "35-2",
+    "bill_number": "158",
+    "title": "Projet de loi n\u00b0 158, Loi abrogeant certaines lois permettant la constitution de",
+    "predicted_label": "Domestic Commerce",
+    "predicted_health": false,
+    "confidence": 0.87
+  },
+  {
+    "session": "35-2",
+    "bill_number": "176",
+    "title": "Projet de loi n\u00b0 176, Loi modifiant la Loi sur le minist\u00e8re de la Sant\u00e9 et des S",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.715
+  },
+  {
+    "session": "35-2",
+    "bill_number": "190",
+    "title": "Projet de loi n\u00b0 190, Loi modifiant la Loi sur le minist\u00e8re de la Sant\u00e9 et des S",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.942
+  },
+  {
+    "session": "35-2",
+    "bill_number": "208",
+    "title": "Projet de loi n\u00b0 208, Loi concernant le Fonds d'assurance de la F\u00e9d\u00e9ration des m",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.572
+  },
+  {
+    "session": "35-2",
+    "bill_number": "259",
+    "title": "Projet de loi n\u00b0 259, Loi concernant la Fondation du Centre hospitalier de l'Uni",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.521
+  },
+  {
+    "session": "35-2",
+    "bill_number": "404",
+    "title": "Projet de loi n\u00b0 404, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.793
+  },
+  {
+    "session": "35-2",
+    "bill_number": "405",
+    "title": "Projet de loi n\u00b0 405, Loi favorisant la protection des eaux souterraines",
+    "predicted_label": "Environment",
+    "predicted_health": false,
+    "confidence": 0.865
+  },
+  {
+    "session": "35-2",
+    "bill_number": "409",
+    "title": "Projet de loi n\u00b0 409, Loi modifiant la Loi sur la sant\u00e9 et la s\u00e9curit\u00e9 du travai",
+    "predicted_label": "Labor",
+    "predicted_health": false,
+    "confidence": 0.867
+  },
+  {
+    "session": "35-2",
+    "bill_number": "417",
+    "title": "Projet de loi n\u00b0 417, Loi prolongeant l'effet de certaines dispositions de la Lo",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.799
+  },
+  {
+    "session": "35-2",
+    "bill_number": "439",
+    "title": "Projet de loi n\u00b0 439, Loi sur l'Institut national de sant\u00e9 publique du Qu\u00e9bec",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.746
+  },
+  {
+    "session": "35-2",
+    "bill_number": "442",
+    "title": "Projet de loi n\u00b0 442, Loi sur le regroupement de certaines soci\u00e9t\u00e9s d'\u00c9tat",
+    "predicted_label": "Government Operations",
+    "predicted_health": false,
+    "confidence": 0.919
+  },
+  {
+    "session": "35-2",
+    "bill_number": "444",
+    "title": "Projet de loi n\u00b0 444, Loi sur le tabac",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.81
+  },
+  {
+    "session": "35-1",
+    "bill_number": "116",
+    "title": "Projet de loi n\u00b0 116, Loi modifiant la Loi sur les services de sant\u00e9 et les serv",
+    "predicted_label": "Health",
+    "predicted_health": true,
+    "confidence": 0.798
+  }
+]

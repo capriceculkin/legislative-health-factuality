@@ -1,822 +1,822 @@
 {
   "43-2-2": {
     "pred": 1,
-    "prob": 0.529,
+    "prob": 0.53,
     "title": "Projet de loi n\u00b0 2, Loi visant principalement \u00e0 instaurer la responsabilit\u00e9 coll"
   },
   "43-2-15": {
     "pred": 1,
-    "prob": 0.527,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 15, Loi modifiant le Code des professions et d\u2019autres dispositi"
   },
   "43-2-16": {
     "pred": 1,
-    "prob": 0.522,
+    "prob": 0.513,
     "title": "Projet de loi n\u00b0 16, Loi reportant l\u2019entr\u00e9e en vigueur de certaines dispositions"
   },
   "43-2-19": {
     "pred": 1,
-    "prob": 0.525,
+    "prob": 0.522,
     "title": "Projet de loi n\u00b0 19, Loi visant notamment l\u2019am\u00e9lioration de l\u2019acc\u00e8s aux services"
   },
   "43-2-23": {
     "pred": 1,
-    "prob": 0.514,
+    "prob": 0.503,
     "title": "Projet de loi n\u00b0 23, Loi visant principalement \u00e0 mieux accompagner les personnes"
   },
   "43-2-25": {
-    "pred": 1,
-    "prob": 0.502,
+    "pred": 0,
+    "prob": 0.486,
     "title": "Projet de loi n\u00b0 25, Loi visant \u00e0 accro\u00eetre la confiance du public envers le sys"
   },
   "43-2-495": {
     "pred": 1,
-    "prob": 0.538,
+    "prob": 0.54,
     "title": "Projet de loi n\u00b0 495, Loi modifiant la Loi sur la gouvernance du syst\u00e8me de sant"
   },
   "43-2-498": {
     "pred": 0,
-    "prob": 0.461,
+    "prob": 0.49,
     "title": "Projet de loi n\u00b0 498, Loi retirant des freins \u00e0 l\u2019efficacit\u00e9 du syst\u00e8me de sant\u00e9"
   },
   "43-2-595": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.506,
     "title": "Projet de loi n\u00b0 595, Loi sur l\u2019assistance personnelle autodirig\u00e9e pour les pers"
   },
   "43-1-3": {
     "pred": 1,
-    "prob": 0.568,
+    "prob": 0.597,
     "title": "Projet de loi n\u00b0 3, Loi sur les renseignements de sant\u00e9 et de services sociaux e"
   },
   "43-1-9": {
-    "pred": 1,
-    "prob": 0.514,
+    "pred": 0,
+    "prob": 0.472,
     "title": "Projet de loi n\u00b0 9, Loi modifiant principalement certaines lois instituant des r"
   },
   "43-1-10": {
     "pred": 1,
-    "prob": 0.525,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 10, Loi limitant le recours aux services d\u2019une agence de placem"
   },
   "43-1-11": {
     "pred": 1,
-    "prob": 0.561,
+    "prob": 0.531,
     "title": "Projet de loi n\u00b0 11, Loi modifiant la Loi concernant les soins de fin de vie et "
   },
   "43-1-15": {
     "pred": 1,
-    "prob": 0.529,
+    "prob": 0.553,
     "title": "Projet de loi n\u00b0 15, Loi visant \u00e0 rendre le syst\u00e8me de sant\u00e9 et de services soci"
   },
   "43-1-32": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.541,
     "title": "Projet de loi n\u00b0 32, Loi instaurant l\u2019approche de s\u00e9curisation culturelle au sei"
   },
   "43-1-36": {
-    "pred": 0,
-    "prob": 0.473,
+    "pred": 1,
+    "prob": 0.511,
     "title": "Projet de loi n\u00b0 36, Loi sur le recouvrement du co\u00fbt des soins de sant\u00e9 et des d"
   },
   "43-1-37": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.509,
     "title": "Projet de loi n\u00b0 37, Loi sur le commissaire au bien-\u00eatre et aux droits des enfan"
   },
   "43-1-41": {
     "pred": 1,
-    "prob": 0.539,
+    "prob": 0.522,
     "title": "Projet de loi n\u00b0 41, Loi \u00e9dictant la Loi sur la performance environnementale des"
   },
   "43-1-61": {
     "pred": 0,
-    "prob": 0.463,
+    "prob": 0.48,
     "title": "Projet de loi n\u00b0 61, Loi \u00e9dictant la Loi sur Mobilit\u00e9 Infra Qu\u00e9bec et modifiant "
   },
   "43-1-66": {
     "pred": 0,
-    "prob": 0.471,
+    "prob": 0.483,
     "title": "Projet de loi n\u00b0 66, Loi visant \u00e0 renforcer le suivi des personnes faisant l\u2019obj"
   },
   "43-1-67": {
     "pred": 1,
-    "prob": 0.516,
+    "prob": 0.509,
     "title": "Projet de loi n\u00b0 67, Loi modifiant le Code des professions pour la modernisation"
   },
   "43-1-68": {
     "pred": 1,
-    "prob": 0.526,
+    "prob": 0.513,
     "title": "Projet de loi n\u00b0 68, Loi visant principalement \u00e0 r\u00e9duire la charge administrativ"
   },
   "43-1-83": {
     "pred": 1,
-    "prob": 0.537,
+    "prob": 0.552,
     "title": "Projet de loi n\u00b0 83, Loi favorisant l\u2019exercice de la m\u00e9decine au sein du r\u00e9seau "
   },
   "43-1-95": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.518,
     "title": "Projet de loi n\u00b0 95, Loi favorisant l\u2019\u00e9quit\u00e9 dans l\u2019acc\u00e8s aux services de garde "
   },
   "43-1-101": {
     "pred": 0,
-    "prob": 0.454,
+    "prob": 0.485,
     "title": "Projet de loi n\u00b0 101, Loi visant l\u2019am\u00e9lioration de certaines lois du travail"
   },
   "43-1-103": {
     "pred": 1,
-    "prob": 0.524,
+    "prob": 0.502,
     "title": "Projet de loi n\u00b0 103, Loi visant \u00e0 r\u00e9glementer les sites de consommation supervi"
   },
   "43-1-104": {
-    "pred": 0,
-    "prob": 0.497,
+    "pred": 1,
+    "prob": 0.505,
     "title": "Projet de loi n\u00b0 104, Loi modifiant diverses dispositions afin notamment de donn"
   },
   "43-1-106": {
     "pred": 1,
-    "prob": 0.523,
+    "prob": 0.515,
     "title": "Projet de loi n\u00b0 106, Loi visant principalement \u00e0 instaurer la responsabilit\u00e9 co"
   },
   "43-1-192": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 192, Loi visant \u00e0 assurer la sant\u00e9 et la s\u00e9curit\u00e9 des \u00e9l\u00e8ves en"
   },
   "43-1-197": {
     "pred": 1,
-    "prob": 0.529,
+    "prob": 0.506,
     "title": "Projet de loi n\u00b0 197, Loi visant \u00e0 am\u00e9liorer la qualit\u00e9 des soins par la fixatio"
   },
   "43-1-212": {
     "pred": 1,
-    "prob": 0.538,
+    "prob": 0.5,
     "title": "Projet de loi n\u00b0 212, Loi modifiant la Loi constituant en corporation Foyer Wale"
   },
   "43-1-213": {
     "pred": 0,
-    "prob": 0.467,
+    "prob": 0.469,
     "title": "Projet de loi n\u00b0 213, Loi concernant certains immeubles situ\u00e9s dans la Municipal"
   },
   "43-1-398": {
-    "pred": 1,
-    "prob": 0.53,
+    "pred": 0,
+    "prob": 0.495,
     "title": "Projet de loi n\u00b0 398, Loi modifiant la Loi sur l\u2019instruction publique afin de co"
   },
   "43-1-591": {
     "pred": 1,
-    "prob": 0.521,
+    "prob": 0.505,
     "title": "Projet de loi n\u00b0 591, Loi visant principalement \u00e0 renforcer le contr\u00f4le de l\u2019act"
   },
   "43-1-595": {
     "pred": 1,
-    "prob": 0.53,
+    "prob": 0.502,
     "title": "Projet de loi n\u00b0 595, Loi proclamant la Journ\u00e9e qu\u00e9b\u00e9coise de sensibilisation au"
   },
   "43-1-694": {
-    "pred": 1,
-    "prob": 0.522,
+    "pred": 0,
+    "prob": 0.476,
     "title": "Projet de loi n\u00b0 694, Loi modifiant le Code de la s\u00e9curit\u00e9 routi\u00e8re afin de lutt"
   },
   "43-1-790": {
-    "pred": 1,
-    "prob": 0.522,
+    "pred": 0,
+    "prob": 0.497,
     "title": "Projet de loi n\u00b0 790, Loi visant \u00e0 \u00e9tendre aux usagers h\u00e9berg\u00e9s dans une r\u00e9siden"
   },
   "43-1-893": {
-    "pred": 1,
-    "prob": 0.515,
+    "pred": 0,
+    "prob": 0.492,
     "title": "Projet de loi n\u00b0 893, Loi sur le maintien de l\u2019autonomie des personnes a\u00een\u00e9es"
   },
   "43-1-894": {
     "pred": 1,
-    "prob": 0.539,
+    "prob": 0.526,
     "title": "Projet de loi n\u00b0 894, Loi visant \u00e0 \u00e9tendre l\u2019admissibilit\u00e9 au r\u00e9gime d\u2019assurance"
   },
   "43-1-899": {
-    "pred": 1,
-    "prob": 0.521,
+    "pred": 0,
+    "prob": 0.469,
     "title": "Projet de loi n\u00b0 899, Loi modifiant le Code de la s\u00e9curit\u00e9 routi\u00e8re afin d\u2019oblig"
   },
   "43-1-994": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.511,
     "title": "Projet de loi n\u00b0 994, Loi favorisant la sant\u00e9 sexuelle et reproductive par un ac"
   },
   "42-2-8": {
     "pred": 1,
-    "prob": 0.523,
+    "prob": 0.504,
     "title": "Projet de loi n\u00b0 8, Loi visant \u00e0 reporter l\u2019entr\u00e9e en vigueur de certaines dispo"
   },
   "42-2-11": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.518,
     "title": "Projet de loi n\u00b0 11, Loi visant \u00e0 augmenter l\u2019offre de services de premi\u00e8re lign"
   },
   "42-2-15": {
     "pred": 1,
-    "prob": 0.558,
+    "prob": 0.519,
     "title": "Projet de loi n\u00b0 15, Loi modifiant la Loi sur la protection de la jeunesse et d\u2019"
   },
   "42-2-19": {
     "pred": 1,
-    "prob": 0.559,
+    "prob": 0.588,
     "title": "Projet de loi n\u00b0 19, Loi sur les renseignements de sant\u00e9 et de services sociaux "
   },
   "42-2-27": {
-    "pred": 1,
-    "prob": 0.516,
+    "pred": 0,
+    "prob": 0.477,
     "title": "Projet de loi n\u00b0 27, Loi modifiant principalement certaines lois instituant des "
   },
   "42-2-28": {
     "pred": 1,
-    "prob": 0.515,
+    "prob": 0.504,
     "title": "Projet de loi n\u00b0 28, Loi visant \u00e0 mettre fin \u00e0 l\u2019\u00e9tat d\u2019urgence sanitaire tout e"
   },
   "42-2-29": {
-    "pred": 1,
-    "prob": 0.522,
+    "pred": 0,
+    "prob": 0.5,
     "title": "Projet de loi n\u00b0 29, Loi visant \u00e0 favoriser l\u2019exercice du droit de vote lors des"
   },
   "42-2-38": {
     "pred": 1,
-    "prob": 0.561,
+    "prob": 0.53,
     "title": "Projet de loi n\u00b0 38, Loi modifiant la Loi concernant les soins de fin de vie et "
   },
   "42-2-498": {
     "pred": 1,
-    "prob": 0.513,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 498, Loi proclamant la Journ\u00e9e nationale de la promotion de la "
   },
   "42-2-995": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 995, Loi visant \u00e0 assurer la sant\u00e9 et la s\u00e9curit\u00e9 des \u00e9l\u00e8ves en"
   },
   "42-1-2": {
-    "pred": 1,
-    "prob": 0.521,
+    "pred": 0,
+    "prob": 0.494,
     "title": "Projet de loi n\u00b0 2, Loi resserrant l\u2019encadrement du cannabis"
   },
   "42-1-7": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.549,
     "title": "Projet de loi n\u00b0 7, Loi concernant certaines conditions de travail applicables a"
   },
   "42-1-9": {
     "pred": 0,
-    "prob": 0.457,
+    "prob": 0.472,
     "title": "Projet de loi n\u00b0 9, Loi visant \u00e0 accro\u00eetre la prosp\u00e9rit\u00e9 socio-\u00e9conomique du Qu\u00e9"
   },
   "42-1-12": {
     "pred": 0,
-    "prob": 0.464,
+    "prob": 0.48,
     "title": "Projet de loi n\u00b0 12, Loi visant \u00e0 pr\u00e9ciser la port\u00e9e du droit \u00e0 la gratuit\u00e9 scol"
   },
   "42-1-20": {
     "pred": 1,
-    "prob": 0.519,
+    "prob": 0.505,
     "title": "Projet de loi n\u00b0 20, Loi mettant en \u0153uvre certaines recommandations du rapport d"
   },
   "42-1-27": {
     "pred": 1,
-    "prob": 0.535,
+    "prob": 0.509,
     "title": "Projet de loi n\u00b0 27, Loi concernant principalement l\u2019organisation gouvernemental"
   },
   "42-1-28": {
     "pred": 1,
-    "prob": 0.537,
+    "prob": 0.541,
     "title": "Projet de loi n\u00b0 28, Loi permettant la mise en place de certaines mesures en mat"
   },
   "42-1-29": {
     "pred": 1,
-    "prob": 0.524,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 29, Loi modifiant le Code des professions et d\u2019autres dispositi"
   },
   "42-1-31": {
     "pred": 1,
-    "prob": 0.541,
+    "prob": 0.516,
     "title": "Projet de loi n\u00b0 31, Loi modifiant principalement la Loi sur la pharmacie afin d"
   },
   "42-1-35": {
     "pred": 0,
-    "prob": 0.459,
+    "prob": 0.479,
     "title": "Projet de loi n\u00b0 35, Loi visant \u00e0 moderniser certaines r\u00e8gles relatives \u00e0 la pub"
   },
   "42-1-37": {
     "pred": 1,
-    "prob": 0.524,
+    "prob": 0.509,
     "title": "Projet de loi n\u00b0 37, Loi visant principalement \u00e0 instituer le Centre d\u2019acquisiti"
   },
   "42-1-38": {
-    "pred": 1,
-    "prob": 0.514,
+    "pred": 0,
+    "prob": 0.476,
     "title": "Projet de loi n\u00b0 38, Loi modifiant certaines lois instituant des r\u00e9gimes de retr"
   },
   "42-1-43": {
     "pred": 1,
-    "prob": 0.551,
+    "prob": 0.526,
     "title": "Projet de loi n\u00b0 43, Loi modifiant la Loi sur les infirmi\u00e8res et les infirmiers "
   },
   "42-1-52": {
     "pred": 1,
-    "prob": 0.522,
+    "prob": 0.55,
     "title": "Projet de loi n\u00b0 52, Loi visant \u00e0 renforcer le r\u00e9gime d\u2019examen des plaintes du r"
   },
   "42-1-59": {
     "pred": 1,
-    "prob": 0.502,
+    "prob": 0.513,
     "title": "Projet de loi n\u00b0 59, Loi modernisant le r\u00e9gime de sant\u00e9 et de s\u00e9curit\u00e9 du travai"
   },
   "42-1-61": {
     "pred": 0,
-    "prob": 0.455,
+    "prob": 0.473,
     "title": "Projet de loi n\u00b0 61, Loi visant la relance de l\u2019\u00e9conomie du Qu\u00e9bec et l\u2019att\u00e9nuat"
   },
   "42-1-73": {
     "pred": 1,
-    "prob": 0.529,
+    "prob": 0.523,
     "title": "Projet de loi n\u00b0 73, Loi modifiant diverses dispositions en mati\u00e8re de procr\u00e9ati"
   },
   "42-1-75": {
     "pred": 0,
-    "prob": 0.452,
+    "prob": 0.48,
     "title": "Projet de loi n\u00b0 75, Loi visant \u00e0 am\u00e9liorer l\u2019accessibilit\u00e9 et l\u2019efficacit\u00e9 de l"
   },
   "42-1-83": {
     "pred": 1,
-    "prob": 0.547,
+    "prob": 0.527,
     "title": "Projet de loi n\u00b0 83, Loi concernant principalement l\u2019admissibilit\u00e9 au r\u00e9gime d\u2019a"
   },
   "42-1-85": {
     "pred": 0,
-    "prob": 0.45,
+    "prob": 0.474,
     "title": "Projet de loi n\u00b0 85, Loi visant \u00e0 faciliter le d\u00e9roulement de l\u2019\u00e9lection g\u00e9n\u00e9ral"
   },
   "42-1-101": {
     "pred": 1,
-    "prob": 0.522,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 101, Loi visant \u00e0 renforcer la lutte contre la maltraitance env"
   },
   "42-1-105": {
-    "pred": 1,
-    "prob": 0.511,
+    "pred": 0,
+    "prob": 0.493,
     "title": "Projet de loi n\u00b0 105, Loi \u00e9tablissant un p\u00e9rim\u00e8tre aux abords de certains lieux "
   },
   "42-1-196": {
-    "pred": 1,
-    "prob": 0.534,
+    "pred": 0,
+    "prob": 0.491,
     "title": "Projet de loi n\u00b0 196, Loi modifiant la Loi sur la s\u00e9curit\u00e9 dans les sports afin "
   },
   "42-1-594": {
     "pred": 1,
-    "prob": 0.528,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 594, Loi visant \u00e0 am\u00e9liorer la qualit\u00e9 des soins par la fixatio"
   },
   "42-1-597": {
     "pred": 1,
-    "prob": 0.518,
+    "prob": 0.521,
     "title": "Projet de loi n\u00b0 597, Loi visant \u00e0 am\u00e9liorer le soutien offert aux entrepreneurs"
   },
   "42-1-598": {
     "pred": 0,
-    "prob": 0.461,
+    "prob": 0.476,
     "title": "Projet de loi n\u00b0 598, Loi autorisant la vente, pour emporter ou livrer, de boiss"
   },
   "42-1-691": {
     "pred": 0,
-    "prob": 0.466,
+    "prob": 0.477,
     "title": "Projet de loi n\u00b0 691, Loi modifiant la Loi sur le minist\u00e8re des Transports afin "
   },
   "42-1-798": {
-    "pred": 1,
-    "prob": 0.514,
+    "pred": 0,
+    "prob": 0.498,
     "title": "Projet de loi n\u00b0 798, Loi conf\u00e9rant au salari\u00e9 un droit \u00e0 une \u00ab pause-vaccin \u00bb p"
   },
   "42-1-898": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 898, Loi modifiant la Loi sur la sant\u00e9 publique afin de changer"
   },
   "41-1-3": {
-    "pred": 1,
-    "prob": 0.53,
+    "pred": 0,
+    "prob": 0.493,
     "title": "Projet de loi n\u00b0 3, Loi favorisant la sant\u00e9 financi\u00e8re et la p\u00e9rennit\u00e9 des r\u00e9gim"
   },
   "41-1-10": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.545,
     "title": "Projet de loi n\u00b0 10, Loi modifiant l\u2019organisation et la gouvernance du r\u00e9seau de"
   },
   "41-1-20": {
     "pred": 1,
-    "prob": 0.535,
+    "prob": 0.527,
     "title": "Projet de loi n\u00b0 20, Loi \u00e9dictant la Loi favorisant l\u2019acc\u00e8s aux services de m\u00e9de"
   },
   "41-1-42": {
     "pred": 1,
-    "prob": 0.505,
+    "prob": 0.503,
     "title": "Projet de loi n\u00b0 42, Loi regroupant la Commission de l\u2019\u00e9quit\u00e9 salariale, la Comm"
   },
   "41-1-43": {
     "pred": 1,
-    "prob": 0.544,
+    "prob": 0.517,
     "title": "Projet de loi n\u00b0 43, Loi favorisant l\u2019information sur la dangerosit\u00e9 des produit"
   },
   "41-1-44": {
     "pred": 1,
-    "prob": 0.52,
+    "prob": 0.502,
     "title": "Projet de loi n\u00b0 44, Loi visant \u00e0 renforcer la lutte contre le tabagisme"
   },
   "41-1-52": {
     "pred": 1,
-    "prob": 0.549,
+    "prob": 0.516,
     "title": "Projet de loi n\u00b0 52, Loi concernant les soins de fin de vie"
   },
   "41-1-66": {
-    "pred": 1,
-    "prob": 0.522,
+    "pred": 0,
+    "prob": 0.486,
     "title": "Projet de loi n\u00b0 66, Loi sur les activit\u00e9s fun\u00e9raires"
   },
   "41-1-81": {
     "pred": 1,
-    "prob": 0.522,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 81, Loi visant \u00e0 r\u00e9duire le co\u00fbt de certains m\u00e9dicaments couver"
   },
   "41-1-88": {
-    "pred": 1,
-    "prob": 0.515,
+    "pred": 0,
+    "prob": 0.491,
     "title": "Projet de loi n\u00b0 88, Loi sur le d\u00e9veloppement de l\u2019industrie des boissons alcool"
   },
   "41-1-92": {
     "pred": 1,
-    "prob": 0.528,
+    "prob": 0.511,
     "title": "Projet de loi n\u00b0 92, Loi visant \u00e0 accro\u00eetre les pouvoirs de la R\u00e9gie de l\u2019assura"
   },
   "41-1-97": {
-    "pred": 1,
-    "prob": 0.512,
+    "pred": 0,
+    "prob": 0.476,
     "title": "Projet de loi n\u00b0 97, Loi modifiant certaines lois instituant des r\u00e9gimes de retr"
   },
   "41-1-99": {
     "pred": 1,
-    "prob": 0.552,
+    "prob": 0.506,
     "title": "Projet de loi n\u00b0 99, Loi modifiant la Loi sur la protection de la jeunesse et d\u2019"
   },
   "41-1-102": {
-    "pred": 1,
-    "prob": 0.533,
+    "pred": 0,
+    "prob": 0.494,
     "title": "Projet de loi n\u00b0 102, Loi modifiant la Loi sur la qualit\u00e9 de l\u2019environnement afi"
   },
   "41-1-109": {
-    "pred": 1,
-    "prob": 0.518,
+    "pred": 0,
+    "prob": 0.459,
     "title": "Projet de loi n\u00b0 109, Loi accordant le statut de capitale nationale \u00e0 la Ville d"
   },
   "41-1-115": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 115, Loi visant \u00e0 lutter contre la maltraitance envers les a\u00een\u00e9"
   },
   "41-1-118": {
     "pred": 1,
-    "prob": 0.537,
+    "prob": 0.511,
     "title": "Projet de loi n\u00b0 118, Loi sur les laboratoires m\u00e9dicaux, les centres de services"
   },
   "41-1-121": {
-    "pred": 1,
-    "prob": 0.519,
+    "pred": 0,
+    "prob": 0.458,
     "title": "Projet de loi n\u00b0 121, Loi augmentant l\u2019autonomie et les pouvoirs de la Ville de "
   },
   "41-1-123": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.577,
     "title": "Projet de loi n\u00b0 123, Loi modifiant diverses dispositions dans le domaine de la "
   },
   "41-1-126": {
     "pred": 1,
-    "prob": 0.527,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 126, Loi favorisant la sant\u00e9 financi\u00e8re et la p\u00e9rennit\u00e9 du r\u00e9gi"
   },
   "41-1-130": {
     "pred": 1,
-    "prob": 0.533,
+    "prob": 0.537,
     "title": "Projet de loi n\u00b0 130, Loi modifiant certaines dispositions relatives \u00e0 l\u2019organis"
   },
   "41-1-148": {
     "pred": 1,
-    "prob": 0.541,
+    "prob": 0.516,
     "title": "Projet de loi n\u00b0 148, Loi encadrant l\u2019approvisionnement en m\u00e9dicaments g\u00e9n\u00e9rique"
   },
   "41-1-152": {
     "pred": 0,
-    "prob": 0.468,
+    "prob": 0.496,
     "title": "Projet de loi n\u00b0 152, Loi modifiant diverses dispositions l\u00e9gislatives concernan"
   },
   "41-1-154": {
     "pred": 1,
-    "prob": 0.52,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 154, Loi mettant en \u0153uvre certaines recommandations du rapport "
   },
   "41-1-157": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.508,
     "title": "Projet de loi n\u00b0 157, Loi constituant la Soci\u00e9t\u00e9 qu\u00e9b\u00e9coise du cannabis, \u00e9dictan"
   },
   "41-1-160": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.548,
     "title": "Projet de loi n\u00b0 160, Loi confirmant certaines conditions de travail applicables"
   },
   "41-1-162": {
     "pred": 0,
-    "prob": 0.474,
+    "prob": 0.492,
     "title": "Projet de loi n\u00b0 162, Loi modifiant la Loi sur le b\u00e2timent et d\u2019autres dispositi"
   },
   "41-1-170": {
-    "pred": 0,
-    "prob": 0.483,
+    "pred": 1,
+    "prob": 0.513,
     "title": "Projet de loi n\u00b0 170, Loi modernisant le r\u00e9gime juridique applicable aux permis "
   },
   "41-1-189": {
     "pred": 1,
-    "prob": 0.516,
+    "prob": 0.504,
     "title": "Projet de loi n\u00b0 189, Loi visant principalement \u00e0 confier la charge de la survei"
   },
   "41-1-197": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 197, Loi visant \u00e0 r\u00e9duire les co\u00fbts d\u2019approvisionnement en m\u00e9di"
   },
   "41-1-697": {
     "pred": 1,
-    "prob": 0.509,
+    "prob": 0.505,
     "title": "Projet de loi n\u00b0 697, Loi visant \u00e0 permettre aux \u00e9tudiants en droit de donner de"
   },
   "41-1-794": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.514,
     "title": "Projet de loi n\u00b0 794, Loi encadrant l'utilisation de l'\u00e9tat de sant\u00e9 comme facte"
   },
   "40-1-9": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.545,
     "title": "Projet de loi n\u00b0 9, Loi instituant le Fonds des ressources informationnelles du "
   },
   "40-1-15": {
-    "pred": 1,
-    "prob": 0.517,
+    "pred": 0,
+    "prob": 0.49,
     "title": "Projet de loi n\u00b0 15, Loi permettant l\u2019\u00e9tablissement de r\u00e9gimes de retraite \u00e0 pre"
   },
   "40-1-21": {
     "pred": 1,
-    "prob": 0.529,
+    "prob": 0.524,
     "title": "Projet de loi n\u00b0 21, Loi visant l\u2019optimisation de l\u2019action gouvernementale en ma"
   },
   "40-1-22": {
-    "pred": 1,
-    "prob": 0.526,
+    "pred": 0,
+    "prob": 0.499,
     "title": "Projet de loi n\u00b0 22, Loi modifiant la Loi sur l\u2019indemnisation des victimes d\u2019act"
   },
   "40-1-29": {
-    "pred": 1,
-    "prob": 0.53,
+    "pred": 0,
+    "prob": 0.485,
     "title": "Projet de loi n\u00b0 29, Loi modifiant la Loi sur H\u00e9ma-Qu\u00e9bec et sur le Comit\u00e9 d\u2019h\u00e9m"
   },
   "40-1-30": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.509,
     "title": "Projet de loi n\u00b0 30, Loi modifiant le Code civil et d\u2019autres dispositions l\u00e9gisl"
   },
   "40-1-37": {
     "pred": 1,
-    "prob": 0.518,
+    "prob": 0.504,
     "title": "Projet de loi n\u00b0 37, Loi interdisant certaines activit\u00e9s destin\u00e9es \u00e0 rechercher "
   },
   "40-1-52": {
     "pred": 1,
-    "prob": 0.549,
+    "prob": 0.516,
     "title": "Projet de loi n\u00b0 52, Loi concernant les soins de fin de vie"
   },
   "40-1-67": {
     "pred": 1,
-    "prob": 0.544,
+    "prob": 0.511,
     "title": "Projet de loi n\u00b0 67, Loi sur l\u2019assurance autonomie"
   },
   "40-1-194": {
     "pred": 1,
-    "prob": 0.537,
+    "prob": 0.512,
     "title": "Projet de loi n\u00b0 194, Loi modifiant la Loi sur les permis d\u2019alcool et d\u2019autres d"
   },
   "40-1-210": {
     "pred": 1,
-    "prob": 0.538,
+    "prob": 0.503,
     "title": "Projet de loi n\u00b0 210, Loi modifiant la Loi fusionnant Centre de r\u00e9adaptation Mac"
   },
   "40-1-399": {
     "pred": 1,
-    "prob": 0.524,
+    "prob": 0.548,
     "title": "Projet de loi n\u00b0 399, Loi visant \u00e0 enrayer la maltraitance des personnes vuln\u00e9ra"
   },
   "40-1-497": {
-    "pred": 1,
-    "prob": 0.515,
+    "pred": 0,
+    "prob": 0.492,
     "title": "Projet de loi n\u00b0 497, Loi concernant la mise en \u0153uvre dans le domaine municipal "
   },
   "39-2-16": {
     "pred": 1,
-    "prob": 0.545,
+    "prob": 0.574,
     "title": "Projet de loi n\u00b0 16, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re"
   },
   "39-2-36": {
     "pred": 1,
-    "prob": 0.553,
+    "prob": 0.571,
     "title": "Projet de loi n\u00b0 36, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "39-2-41": {
     "pred": 1,
-    "prob": 0.555,
+    "prob": 0.503,
     "title": "Projet de loi n\u00b0 41, Loi modifiant la Loi sur la pharmacie"
   },
   "39-2-42": {
-    "pred": 1,
-    "prob": 0.53,
+    "pred": 0,
+    "prob": 0.481,
     "title": "Projet de loi n\u00b0 42, Loi modifiant la Loi sur les r\u00e9gimes compl\u00e9mentaires de ret"
   },
   "39-2-48": {
-    "pred": 1,
-    "prob": 0.532,
+    "pred": 0,
+    "prob": 0.489,
     "title": "Projet de loi n\u00b0 48, Loi concernant l\u2019inspection environnementale des v\u00e9hicules "
   },
   "39-2-51": {
     "pred": 1,
-    "prob": 0.543,
+    "prob": 0.504,
     "title": "Projet de loi n\u00b0 51, Loi modifiant la Loi sur la protection sanitaire des animau"
   },
   "39-2-53": {
-    "pred": 1,
-    "prob": 0.533,
+    "pred": 0,
+    "prob": 0.494,
     "title": "Projet de loi n\u00b0 53, Loi sur la dissolution de la Soci\u00e9t\u00e9 de gestion informatiqu"
   },
   "39-2-55": {
-    "pred": 1,
-    "prob": 0.533,
+    "pred": 0,
+    "prob": 0.492,
     "title": "Projet de loi n\u00b0 55, Loi concernant la reconnaissance professionnelle des techno"
   },
   "39-2-59": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.513,
     "title": "Projet de loi n\u00b0 59, Loi concernant le partage de certains renseignements de san"
   },
   "39-2-60": {
     "pred": 1,
-    "prob": 0.51,
+    "prob": 0.516,
     "title": "Projet de loi n\u00b0 60, Loi visant principalement la modernisation du r\u00e9gime de san"
   },
   "39-2-68": {
     "pred": 1,
-    "prob": 0.536,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 68, Loi modifiant la Loi sur les permis d\u2019alcool et d\u2019autres di"
   },
   "39-2-74": {
-    "pred": 1,
-    "prob": 0.52,
+    "pred": 0,
+    "prob": 0.497,
     "title": "Projet de loi n\u00b0 74, Loi visant \u00e0 pr\u00e9venir les cancers de la peau caus\u00e9s par le "
   },
   "39-2-79": {
     "pred": 1,
-    "prob": 0.517,
+    "prob": 0.506,
     "title": "Projet de loi n\u00b0 79, Loi modifiant certaines dispositions du Code des profession"
   },
   "39-2-84": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.583,
     "title": "Projet de loi n\u00b0 84, Loi modifiant diverses dispositions l\u00e9gislatives dans le do"
   },
   "39-2-216": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.502,
     "title": "Projet de loi n\u00b0 216, Loi concernant le Centre d\u2019accueil Dixville inc."
   },
   "39-1-7": {
     "pred": 1,
-    "prob": 0.537,
+    "prob": 0.514,
     "title": "Projet de loi n\u00b0 7, Loi instituant le fonds pour le d\u00e9veloppement des jeunes enf"
   },
   "39-1-14": {
     "pred": 1,
-    "prob": 0.543,
+    "prob": 0.553,
     "title": "Projet de loi n\u00b0 14, Loi prolongeant le mandat des membres des conseils d'admini"
   },
   "39-1-21": {
     "pred": 1,
-    "prob": 0.506,
+    "prob": 0.534,
     "title": "Projet de loi n\u00b0 21, Loi modifiant le Code des professions et d'autres dispositi"
   },
   "39-1-24": {
     "pred": 1,
-    "prob": 0.549,
+    "prob": 0.557,
     "title": "Projet de loi n\u00b0 24, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re"
   },
   "39-1-26": {
     "pred": 1,
-    "prob": 0.506,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 26, Loi sur les activit\u00e9s cliniques et de recherche en mati\u00e8re "
   },
   "39-1-34": {
     "pred": 1,
-    "prob": 0.545,
+    "prob": 0.522,
     "title": "Projet de loi n\u00b0 34, Loi modifiant diverses dispositions l\u00e9gislatives concernant"
   },
   "39-1-35": {
-    "pred": 0,
-    "prob": 0.497,
+    "pred": 1,
+    "prob": 0.514,
     "title": "Projet de loi n\u00b0 35, Loi modifiant le r\u00e9gime de sant\u00e9 et de s\u00e9curit\u00e9 du travail "
   },
   "39-1-43": {
-    "pred": 0,
-    "prob": 0.493,
+    "pred": 1,
+    "prob": 0.52,
     "title": "Projet de loi n\u00b0 43, Loi sur le recouvrement du co\u00fbt des soins de sant\u00e9 et des d"
   },
   "39-1-47": {
-    "pred": 1,
-    "prob": 0.537,
+    "pred": 0,
+    "prob": 0.494,
     "title": "Projet de loi n\u00b0 47, Loi modifiant la Loi approuvant l'Entente concernant la con"
   },
   "39-1-49": {
     "pred": 1,
-    "prob": 0.528,
+    "prob": 0.504,
     "title": "Projet de loi n\u00b0 49, Loi sur la repr\u00e9sentation des ressources de type familial e"
   },
   "39-1-51": {
     "pred": 1,
-    "prob": 0.526,
+    "prob": 0.502,
     "title": "Projet de loi n\u00b0 51, Loi sur la repr\u00e9sentation de certaines personnes responsabl"
   },
   "39-1-56": {
     "pred": 1,
-    "prob": 0.556,
+    "prob": 0.563,
     "title": "Projet de loi n\u00b0 56, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "39-1-58": {
     "pred": 1,
-    "prob": 0.547,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 58, Loi modifiant la Loi sur l'am\u00e9nagement et l'urbanisme et d'"
   },
   "39-1-59": {
     "pred": 1,
-    "prob": 0.547,
+    "prob": 0.519,
     "title": "Projet de loi n\u00b0 59, Loi modifiant la Loi concernant l'imp\u00f4t sur le tabac et d'a"
   },
   "39-1-67": {
     "pred": 1,
-    "prob": 0.544,
+    "prob": 0.545,
     "title": "Projet de loi n\u00b0 67, Loi sur l'Institut national d'excellence en sant\u00e9 et en ser"
   },
   "39-1-94": {
     "pred": 1,
-    "prob": 0.528,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 94, Loi \u00e9tablissant les balises encadrant les demandes d\u2019accomm"
   },
   "39-1-104": {
     "pred": 0,
-    "prob": 0.461,
+    "prob": 0.476,
     "title": "Projet de loi n\u00b0 104, Loi sur l\u2019abolition de certains conseils et du Fonds du se"
   },
   "39-1-106": {
     "pred": 1,
-    "prob": 0.543,
+    "prob": 0.553,
     "title": "Projet de loi n\u00b0 106, Loi prolongeant le mandat des membres des conseils d\u2019admin"
   },
   "39-1-110": {
     "pred": 1,
-    "prob": 0.514,
+    "prob": 0.513,
     "title": "Projet de loi n\u00b0 110, Loi modifiant le r\u00e9gime de sant\u00e9 et de s\u00e9curit\u00e9 du travail"
   },
   "39-1-125": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 125, Loi facilitant les dons d\u2019organes et de tissus"
   },
   "39-1-127": {
     "pred": 1,
-    "prob": 0.526,
+    "prob": 0.559,
     "title": "Projet de loi n\u00b0 127, Loi visant \u00e0 am\u00e9liorer la gestion du r\u00e9seau de la sant\u00e9 et"
   },
   "39-1-194": {
     "pred": 1,
-    "prob": 0.562,
+    "prob": 0.527,
     "title": "Projet de loi n\u00b0 194, Loi modifiant la Loi sur l'assurance maladie"
   },
   "39-1-217": {
     "pred": 1,
-    "prob": 0.539,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 217, Loi modifiant la Loi constituant en corporation The Wales "
   },
   "39-1-231": {
-    "pred": 1,
-    "prob": 0.531,
+    "pred": 0,
+    "prob": 0.498,
     "title": "Projet de loi n\u00b0 231, Loi concernant le Centre d\u2019accueil Dixville Inc."
   },
   "39-1-395": {
@@ -826,487 +826,487 @@
   },
   "38-1-1": {
     "pred": 1,
-    "prob": 0.54,
+    "prob": 0.521,
     "title": "Projet de loi n\u00b0 1, Loi instituant le Fonds pour la promotion des saines habitud"
   },
   "38-1-4": {
     "pred": 1,
-    "prob": 0.553,
+    "prob": 0.534,
     "title": "Projet de loi n\u00b0 4, Loi abrogeant la Loi concernant la prestation des services d"
   },
   "38-1-12": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.503,
     "title": "Projet de loi n\u00b0 12, Loi modifiant le Code des professions et la Loi sur la phar"
   },
   "38-1-23": {
-    "pred": 0,
-    "prob": 0.491,
+    "pred": 1,
+    "prob": 0.506,
     "title": "Projet de loi n\u00b0 23, Loi sur les activit\u00e9s cliniques et de recherche en mati\u00e8re "
   },
   "38-1-24": {
     "pred": 1,
-    "prob": 0.562,
+    "prob": 0.52,
     "title": "Projet de loi n\u00b0 24, Loi modifiant la Loi sur l'assurance m\u00e9dicaments"
   },
   "38-1-25": {
     "pred": 1,
-    "prob": 0.559,
+    "prob": 0.572,
     "title": "Projet de loi n\u00b0 25, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "38-1-26": {
     "pred": 1,
-    "prob": 0.555,
+    "prob": 0.532,
     "title": "Projet de loi n\u00b0 26, Loi modifiant la Loi sur la R\u00e9gie de l'assurance maladie du"
   },
   "38-1-50": {
-    "pred": 0,
-    "prob": 0.494,
+    "pred": 1,
+    "prob": 0.528,
     "title": "Projet de loi n\u00b0 50, Loi modifiant le Code des professions et d'autres dispositi"
   },
   "38-1-51": {
     "pred": 1,
-    "prob": 0.569,
+    "prob": 0.543,
     "title": "Projet de loi n\u00b0 51, Loi modifiant la Loi sur la R\u00e9gie de l'assurance maladie du"
   },
   "38-1-66": {
-    "pred": 1,
-    "prob": 0.524,
+    "pred": 0,
+    "prob": 0.495,
     "title": "Projet de loi n\u00b0 66, Loi sur le Laboratoire de sciences judiciaires et de m\u00e9deci"
   },
   "38-1-67": {
     "pred": 1,
-    "prob": 0.549,
+    "prob": 0.563,
     "title": "Projet de loi n\u00b0 67, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re"
   },
   "38-1-70": {
     "pred": 1,
-    "prob": 0.579,
+    "prob": 0.583,
     "title": "Projet de loi n\u00b0 70, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "38-1-90": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.522,
     "title": "Projet de loi n\u00b0 90, Loi modifiant diverses dispositions l\u00e9gislatives concernant"
   },
   "38-1-392": {
     "pred": 1,
-    "prob": 0.552,
+    "prob": 0.518,
     "title": "Projet de loi n\u00b0 392, Loi modifiant de nouveau la Loi sur l'assurance maladie"
   },
   "37-2-33": {
     "pred": 1,
-    "prob": 0.573,
+    "prob": 0.597,
     "title": "Projet de loi n\u00b0 33, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "37-2-37": {
     "pred": 1,
-    "prob": 0.553,
+    "prob": 0.542,
     "title": "Projet de loi n\u00b0 37, Loi concernant la prestation des services de sant\u00e9 par les "
   },
   "37-2-40": {
-    "pred": 1,
-    "prob": 0.524,
+    "pred": 0,
+    "prob": 0.485,
     "title": "Projet de loi n\u00b0 40, Loi modifiant la Loi sur les accidents du travail et les ma"
   },
   "37-2-45": {
     "pred": 1,
-    "prob": 0.551,
+    "prob": 0.561,
     "title": "Projet de loi n\u00b0 45, Loi modifiant diverses dispositions l\u00e9gislatives en mati\u00e8re"
   },
   "37-2-48": {
-    "pred": 1,
-    "prob": 0.533,
+    "pred": 0,
+    "prob": 0.495,
     "title": "Projet de loi n\u00b0 48, Loi modifiant la Loi sur la protection du consommateur et l"
   },
   "37-2-54": {
     "pred": 1,
-    "prob": 0.539,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 54, Loi modifiant le Code des professions et la Loi sur la phar"
   },
   "37-2-59": {
     "pred": 1,
-    "prob": 0.54,
+    "prob": 0.523,
     "title": "Projet de loi n\u00b0 59, Loi instituant le Fonds pour la promotion des saines habitu"
   },
   "37-2-213": {
-    "pred": 1,
-    "prob": 0.518,
+    "pred": 0,
+    "prob": 0.49,
     "title": "Projet de loi n\u00b0 213, Loi concernant l'Institut de recherches cliniques de Montr"
   },
   "37-2-215": {
     "pred": 1,
-    "prob": 0.533,
+    "prob": 0.509,
     "title": "Projet de loi n\u00b0 215, Loi fusionnant Centre de r\u00e9adaptation Mackay et L'Associat"
   },
   "37-1-7": {
     "pred": 1,
-    "prob": 0.572,
+    "prob": 0.6,
     "title": "Projet de loi n\u00b0 7, Loi modifiant la Loi sur les services de sant\u00e9 et les servic"
   },
   "37-1-14": {
     "pred": 1,
-    "prob": 0.544,
+    "prob": 0.509,
     "title": "Projet de loi n\u00b0 14, Loi modifiant la Loi sur les for\u00eats et d'autres disposition"
   },
   "37-1-25": {
     "pred": 1,
-    "prob": 0.547,
+    "prob": 0.553,
     "title": "Projet de loi n\u00b0 25, Loi sur les agences de d\u00e9veloppement de r\u00e9seaux locaux de s"
   },
   "37-1-38": {
     "pred": 1,
-    "prob": 0.533,
+    "prob": 0.524,
     "title": "Projet de loi n\u00b0 38, Loi sur le Commissaire \u00e0 la sant\u00e9 et au bien-\u00eatre"
   },
   "37-1-47": {
-    "pred": 1,
-    "prob": 0.552,
+    "pred": 0,
+    "prob": 0.494,
     "title": "Projet de loi n\u00b0 47, Loi modifiant la Loi concernant l'imp\u00f4t sur le tabac et la "
   },
   "37-1-56": {
     "pred": 1,
-    "prob": 0.544,
+    "prob": 0.518,
     "title": "Projet de loi n\u00b0 56, Loi modifiant la Loi assurant l'exercice des droits des per"
   },
   "37-1-75": {
-    "pred": 1,
-    "prob": 0.511,
+    "pred": 0,
+    "prob": 0.5,
     "title": "Projet de loi n\u00b0 75, Loi sur l'exercice de certaines comp\u00e9tences municipales dan"
   },
   "37-1-83": {
     "pred": 1,
-    "prob": 0.575,
+    "prob": 0.599,
     "title": "Projet de loi n\u00b0 83, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "37-1-89": {
     "pred": 1,
-    "prob": 0.513,
+    "prob": 0.517,
     "title": "Projet de loi n\u00b0 89, Loi sur les activit\u00e9s cliniques et de recherche en mati\u00e8re "
   },
   "37-1-112": {
     "pred": 1,
-    "prob": 0.549,
+    "prob": 0.521,
     "title": "Projet de loi n\u00b0 112, Loi modifiant la Loi sur le tabac et d'autres dispositions"
   },
   "37-1-130": {
     "pred": 1,
-    "prob": 0.567,
+    "prob": 0.543,
     "title": "Projet de loi n\u00b0 130, Loi modifiant la Loi sur l'assurance m\u00e9dicaments et d'autr"
   },
   "36-2-15": {
     "pred": 1,
-    "prob": 0.557,
+    "prob": 0.525,
     "title": "Projet de loi n\u00b0 15, Loi modifiant la Loi sur la protection de la sant\u00e9 publique"
   },
   "36-2-27": {
     "pred": 1,
-    "prob": 0.551,
+    "prob": 0.581,
     "title": "Projet de loi n\u00b0 27, Loi sur le Protecteur des usagers en mati\u00e8re de sant\u00e9 et de"
   },
   "36-2-28": {
     "pred": 1,
-    "prob": 0.573,
+    "prob": 0.607,
     "title": "Projet de loi n\u00b0 28, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "36-2-36": {
     "pred": 1,
-    "prob": 0.535,
+    "prob": 0.521,
     "title": "Projet de loi n\u00b0 36, Loi sur la sant\u00e9 publique"
   },
   "36-2-38": {
-    "pred": 1,
-    "prob": 0.527,
+    "pred": 0,
+    "prob": 0.469,
     "title": "Projet de loi n\u00b0 38, Loi modifiant le Code de la s\u00e9curit\u00e9 routi\u00e8re concernant la"
   },
   "36-2-45": {
     "pred": 1,
-    "prob": 0.546,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 45, Loi modifiant la Loi sur le tabac"
   },
   "36-2-90": {
     "pred": 1,
-    "prob": 0.52,
+    "prob": 0.534,
     "title": "Projet de loi n\u00b0 90, Loi modifiant le Code des professions et d'autres dispositi"
   },
   "36-2-98": {
     "pred": 1,
-    "prob": 0.565,
+    "prob": 0.54,
     "title": "Projet de loi n\u00b0 98, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments et d'autre"
   },
   "36-2-101": {
     "pred": 1,
-    "prob": 0.547,
+    "prob": 0.561,
     "title": "Projet de loi n\u00b0 101, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   },
   "36-2-108": {
     "pred": 1,
-    "prob": 0.559,
+    "prob": 0.575,
     "title": "Projet de loi n\u00b0 108, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   },
   "36-2-111": {
-    "pred": 1,
-    "prob": 0.52,
+    "pred": 0,
+    "prob": 0.487,
     "title": "Projet de loi n\u00b0 111, Loi modifiant la Loi sur le minist\u00e8re du Conseil ex\u00e9cutif "
   },
   "36-2-113": {
     "pred": 1,
-    "prob": 0.564,
+    "prob": 0.578,
     "title": "Projet de loi n\u00b0 113, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   },
   "36-2-114": {
     "pred": 1,
-    "prob": 0.527,
+    "prob": 0.521,
     "title": "Projet de loi n\u00b0 114, Loi visant la prestation continue de services m\u00e9dicaux d'u"
   },
   "36-2-117": {
     "pred": 1,
-    "prob": 0.524,
+    "prob": 0.532,
     "title": "Projet de loi n\u00b0 117, Loi modifiant la Loi sur l'Institut national de sant\u00e9 publ"
   },
   "36-2-118": {
     "pred": 1,
-    "prob": 0.533,
+    "prob": 0.512,
     "title": "Projet de loi n\u00b0 118, Loi modifiant la Loi interdisant l'affichage publicitaire "
   },
   "36-2-132": {
-    "pred": 1,
-    "prob": 0.523,
+    "pred": 0,
+    "prob": 0.497,
     "title": "Projet de loi n\u00b0 132, Loi modifiant certaines dispositions du Code de proc\u00e9dure "
   },
   "36-2-133": {
     "pred": 1,
-    "prob": 0.54,
+    "prob": 0.522,
     "title": "Projet de loi n\u00b0 133, Loi modifiant la Loi sur la sant\u00e9 et la s\u00e9curit\u00e9 du travai"
   },
   "36-2-142": {
     "pred": 1,
-    "prob": 0.555,
+    "prob": 0.56,
     "title": "Projet de loi n\u00b0 142, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   },
   "36-2-151": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.571,
     "title": "Projet de loi n\u00b0 151, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   },
   "36-2-155": {
     "pred": 1,
-    "prob": 0.543,
+    "prob": 0.52,
     "title": "Projet de loi n\u00b0 155, Loi modifiant la Loi assurant l'exercice des droits des pe"
   },
   "36-2-220": {
-    "pred": 1,
-    "prob": 0.543,
+    "pred": 0,
+    "prob": 0.497,
     "title": "Projet de loi n\u00b0 220, Loi modifiant la Loi constituant en corporation \" L'H\u00f4pita"
   },
   "36-1-2": {
-    "pred": 1,
-    "prob": 0.535,
+    "pred": 0,
+    "prob": 0.497,
     "title": "Projet de loi n\u00b0 2, Loi sur la r\u00e9forme de la comptabilit\u00e9 gouvernementale"
   },
   "36-1-27": {
     "pred": 1,
-    "prob": 0.558,
+    "prob": 0.569,
     "title": "Projet de loi n\u00b0 27, Loi modifiant la Loi sur les services de sant\u00e9 et les servi"
   },
   "36-1-36": {
     "pred": 1,
-    "prob": 0.547,
+    "prob": 0.518,
     "title": "Projet de loi n\u00b0 36, Loi modifiant la Loi sur la R\u00e9gie de l'assurance-maladie du"
   },
   "36-1-43": {
     "pred": 1,
-    "prob": 0.525,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 43, Loi concernant certaines dispositions d\u00e9rogatoires dans les"
   },
   "36-1-45": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 45, Loi modifiant certaines dispositions l\u00e9gislatives concernan"
   },
   "36-1-53": {
-    "pred": 1,
-    "prob": 0.529,
+    "pred": 0,
+    "prob": 0.486,
     "title": "Projet de loi n\u00b0 53, Loi sur la Corporation d'h\u00e9bergement du Qu\u00e9bec"
   },
   "36-1-60": {
-    "pred": 1,
-    "prob": 0.522,
+    "pred": 0,
+    "prob": 0.494,
     "title": "Projet de loi n\u00b0 60, Loi sur l'\u00e9valuation environnementale du projet de parach\u00e8v"
   },
   "36-1-69": {
     "pred": 1,
-    "prob": 0.558,
+    "prob": 0.518,
     "title": "Projet de loi n\u00b0 69, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments"
   },
   "36-1-72": {
     "pred": 1,
-    "prob": 0.54,
+    "prob": 0.528,
     "title": "Projet de loi n\u00b0 72, Loi concernant la prestation des services de soins infirmie"
   },
   "36-1-74": {
     "pred": 1,
-    "prob": 0.546,
+    "prob": 0.554,
     "title": "Projet de loi n\u00b0 74, Loi concernant le mandat des administrateurs de certains \u00e9t"
   },
   "36-1-79": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.503,
     "title": "Projet de loi n\u00b0 79, Loi modifiant la Loi sur la sant\u00e9 et la s\u00e9curit\u00e9 du travail"
   },
   "36-1-83": {
     "pred": 1,
-    "prob": 0.57,
+    "prob": 0.544,
     "title": "Projet de loi n\u00b0 83, Loi modifiant la Loi sur l'assurance-maladie et d'autres di"
   },
   "36-1-107": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.542,
     "title": "Projet de loi n\u00b0 107, Loi sur l'\u00e9quilibre budg\u00e9taire du r\u00e9seau public de la sant"
   },
   "36-1-117": {
     "pred": 1,
-    "prob": 0.568,
+    "prob": 0.538,
     "title": "Projet de loi n\u00b0 117, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments et la Loi"
   },
   "36-1-129": {
     "pred": 1,
-    "prob": 0.526,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 129, Loi interdisant l'affichage publicitaire le long de certai"
   },
   "36-1-133": {
     "pred": 1,
-    "prob": 0.556,
+    "prob": 0.554,
     "title": "Projet de loi n\u00b0 133, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   },
   "36-1-165": {
     "pred": 1,
-    "prob": 0.551,
+    "prob": 0.554,
     "title": "Projet de loi n\u00b0 165, Loi modifiant la Loi concernant le mandat des administrate"
   },
   "36-1-170": {
-    "pred": 1,
-    "prob": 0.514,
+    "pred": 0,
+    "prob": 0.492,
     "title": "Projet de loi n\u00b0 170, Loi portant r\u00e9forme de l'organisation territoriale municip"
   },
   "36-1-174": {
     "pred": 1,
-    "prob": 0.545,
+    "prob": 0.518,
     "title": "Projet de loi n\u00b0 174, Loi modifiant la Loi sur la R\u00e9gie des alcools, des courses"
   },
   "36-1-215": {
-    "pred": 1,
-    "prob": 0.522,
+    "pred": 0,
+    "prob": 0.49,
     "title": "Projet de loi n\u00b0 215, Loi concernant le R\u00e9gime de retraite pour certains employ\u00e9"
   },
   "35-2-33": {
     "pred": 1,
-    "prob": 0.561,
+    "prob": 0.557,
     "title": "Projet de loi n\u00b0 33, Loi sur l'assurance-m\u00e9dicaments et modifiant diverses dispo"
   },
   "35-2-39": {
     "pred": 1,
-    "prob": 0.534,
+    "prob": 0.503,
     "title": "Projet de loi n\u00b0 39, Loi sur la protection des personnes dont l'\u00e9tat mental pr\u00e9s"
   },
   "35-2-41": {
     "pred": 1,
-    "prob": 0.563,
+    "prob": 0.572,
     "title": "Projet de loi n\u00b0 41, Loi modifiant de nouveau la Loi sur les services de sant\u00e9 e"
   },
   "35-2-44": {
     "pred": 1,
-    "prob": 0.513,
+    "prob": 0.511,
     "title": "Projet de loi n\u00b0 44, Loi modifiant diverses lois en mati\u00e8re de boissons alcooliq"
   },
   "35-2-47": {
     "pred": 1,
-    "prob": 0.531,
+    "prob": 0.5,
     "title": "Projet de loi n\u00b0 47, Loi modifiant la Loi sur le paiement de certaines amendes"
   },
   "35-2-49": {
-    "pred": 1,
-    "prob": 0.522,
+    "pred": 0,
+    "prob": 0.499,
     "title": "Projet de loi n\u00b0 49, Loi instituant le Fonds d'assistance financi\u00e8re pour certai"
   },
   "35-2-74": {
     "pred": 1,
-    "prob": 0.539,
+    "prob": 0.506,
     "title": "Projet de loi n\u00b0 74, Loi modifiant la Loi sur les accidents du travail et les ma"
   },
   "35-2-142": {
     "pred": 1,
-    "prob": 0.568,
+    "prob": 0.555,
     "title": "Projet de loi n\u00b0 142, Loi modifiant la Loi sur l'assurance-m\u00e9dicaments et modifi"
   },
   "35-2-154": {
     "pred": 1,
-    "prob": 0.554,
+    "prob": 0.523,
     "title": "Projet de loi n\u00b0 154, Loi modifiant la Loi sur la protection de la sant\u00e9 publiqu"
   },
   "35-2-158": {
     "pred": 1,
-    "prob": 0.524,
+    "prob": 0.508,
     "title": "Projet de loi n\u00b0 158, Loi abrogeant certaines lois permettant la constitution de"
   },
   "35-2-176": {
     "pred": 1,
-    "prob": 0.544,
+    "prob": 0.557,
     "title": "Projet de loi n\u00b0 176, Loi modifiant la Loi sur le minist\u00e8re de la Sant\u00e9 et des S"
   },
   "35-2-190": {
-    "pred": 0,
-    "prob": 0.495,
+    "pred": 1,
+    "prob": 0.532,
     "title": "Projet de loi n\u00b0 190, Loi modifiant la Loi sur le minist\u00e8re de la Sant\u00e9 et des S"
   },
   "35-2-208": {
-    "pred": 1,
-    "prob": 0.527,
+    "pred": 0,
+    "prob": 0.499,
     "title": "Projet de loi n\u00b0 208, Loi concernant le Fonds d'assurance de la F\u00e9d\u00e9ration des m"
   },
   "35-2-259": {
-    "pred": 1,
-    "prob": 0.532,
+    "pred": 0,
+    "prob": 0.491,
     "title": "Projet de loi n\u00b0 259, Loi concernant la Fondation du Centre hospitalier de l'Uni"
   },
   "35-2-404": {
     "pred": 1,
-    "prob": 0.57,
+    "prob": 0.601,
     "title": "Projet de loi n\u00b0 404, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   },
   "35-2-405": {
-    "pred": 1,
-    "prob": 0.533,
+    "pred": 0,
+    "prob": 0.498,
     "title": "Projet de loi n\u00b0 405, Loi favorisant la protection des eaux souterraines"
   },
   "35-2-409": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.51,
     "title": "Projet de loi n\u00b0 409, Loi modifiant la Loi sur la sant\u00e9 et la s\u00e9curit\u00e9 du travai"
   },
   "35-2-417": {
     "pred": 1,
-    "prob": 0.526,
+    "prob": 0.507,
     "title": "Projet de loi n\u00b0 417, Loi prolongeant l'effet de certaines dispositions de la Lo"
   },
   "35-2-439": {
     "pred": 1,
-    "prob": 0.532,
+    "prob": 0.517,
     "title": "Projet de loi n\u00b0 439, Loi sur l'Institut national de sant\u00e9 publique du Qu\u00e9bec"
   },
   "35-2-442": {
-    "pred": 1,
-    "prob": 0.52,
+    "pred": 0,
+    "prob": 0.499,
     "title": "Projet de loi n\u00b0 442, Loi sur le regroupement de certaines soci\u00e9t\u00e9s d'\u00c9tat"
   },
   "35-2-444": {
     "pred": 1,
-    "prob": 0.53,
+    "prob": 0.501,
     "title": "Projet de loi n\u00b0 444, Loi sur le tabac"
   },
   "35-1-116": {
     "pred": 1,
-    "prob": 0.565,
+    "prob": 0.578,
     "title": "Projet de loi n\u00b0 116, Loi modifiant la Loi sur les services de sant\u00e9 et les serv"
   }
 }

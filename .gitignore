@@ -11,3 +11,7 @@ data/canada/ontario_bill_passages.json
 !data/canada/quebec/quebec_bill_index.json
 data/us/congressional_record_speeches/
 data/dbpedia_pipeline/sentences.json
+data/canada/ontario_speaker_turns.json
+data/canada/quebec_speaker_turns.json
+data/us/speaker_turns.json
+data/us/member_lookup.json

@@ -44,6 +44,9 @@ RESULTS_PATH = os.path.join(WORK_DIR, "dbpedia_results.json")
 ANNOTATED_PATH = os.path.join(WORK_DIR, "annotated_sentences.json")
 
 SPARQL_ENDPOINT = "https://dbpedia.org/sparql"
+SPARQL_ENDPOINT_BACKUP = "https://query.wikidata.org/sparql"
+SPOTLIGHT_EN = "http://localhost:2222/rest/annotate"
+SPOTLIGHT_FR = "http://localhost:2223/rest/annotate"
 BATCH_SIZE = 20  # concept pairs per SPARQL request
 
 # demo-scale grounding table; production replaces this with DBpedia Spotlight
@@ -82,27 +85,54 @@ def stage_collect():
 def stage_extract():
     import spacy
     nlp = spacy.load("en_core_web_sm", disable=["ner", "lemmatizer"])
+
+    def spotlight_annotate(text, lang="en"):
+        url = SPOTLIGHT_EN if lang == "en" else SPOTLIGHT_FR
+        try:
+            resp = requests.post(url,
+                headers={"Accept": "application/json"},
+                data={"text": text[:1000], "confidence": "0.5"},
+                timeout=15)
+            if resp.status_code == 200:
+                resources = resp.json().get("Resources", [])
+                # filter out ambiguous links (second rank too close to first)
+                good = [r["@URI"] for r in resources
+                        if float(r.get("@percentageOfSecondRank", 1.0)) < 0.5]
+                return good
+        except Exception:
+            pass
+        return []
+
     with open(SENTENCES_PATH, encoding="utf-8") as f:
         sentences = json.load(f)
 
     triples = []
-    for s in sentences:
-        low = s["text"].lower()
-        found = sorted({ENTITY_TO_DBPEDIA[e] for e in ENTITY_TO_DBPEDIA if e in low})
-        if len(found) < 2:
+    start_idx = 0
+    if os.path.exists(TRIPLES_PATH + ".checkpoint"):
+        with open(TRIPLES_PATH + ".checkpoint") as f:
+            triples = json.load(f)
+        print(f"Resuming from checkpoint: {len(triples)} triples already found")
+    total = len(sentences)
+    for idx, s in enumerate(sentences):
+        if idx % 1000 == 0:
+            print(f"  {idx}/{total} sentences processed, {len(triples)} triples found", flush=True)
+        uris = spotlight_annotate(s["text"], lang="en")
+        if len(uris) < 1:
             continue
         doc = nlp(s["text"])
-        root = next((t.lemma_ if t.lemma_ != "-PRON-" else t.text
-                     for t in doc if t.dep_ == "ROOT"), None)
+        root = next((t.lemma_ for t in doc if t.dep_ == "ROOT"), None)
         triples.append({
             "sentence_id": s["sentence_id"],
             "verb": root,
-            "concept_uris": found,
+            "concept_uris": list(dict.fromkeys(uris)),
+            "single_entity": len(uris) == 1,
         })
     with open(TRIPLES_PATH, "w", encoding="utf-8") as f:
         json.dump(triples, f, ensure_ascii=False)
     print(f"extract: {len(triples)} claim-bearing sentences -> {TRIPLES_PATH}")
-
+    if idx % 10000 == 0 and idx > 0:
+            with open(TRIPLES_PATH + ".checkpoint", "w", encoding="utf-8") as f:
+                json.dump(triples, f, ensure_ascii=False)
 
 def stage_dedupe():
     with open(TRIPLES_PATH, encoding="utf-8") as f:
@@ -140,14 +170,31 @@ def stage_query():
           VALUES (?a ?b) {{ {values} }}
           {{ ?a ?p ?b }} UNION {{ ?b ?p ?a }}
         }}"""
-        try:
-            resp = requests.get(SPARQL_ENDPOINT,
-                                params={"query": q, "format": "application/sparql-results+json"},
-                                timeout=60)
-            resp.raise_for_status()
-            rows = resp.json()["results"]["bindings"]
-        except Exception as e:
-            print(f"  batch at {start}: ERROR {e}, will retry on next run")
+        rows = []
+        sparql_succeeded = False
+        for attempt in range(3):
+            try:
+                resp = requests.get(SPARQL_ENDPOINT,
+                                    params={"query": q, "format": "application/sparql-results+json"},
+                                    headers={"User-Agent": "legislative-health-factuality/1.0"},
+                                    timeout=30)
+                resp.raise_for_status()
+                rows = resp.json()["results"]["bindings"]
+                break
+                sparql_succeeded = True
+                break
+            except Exception as e:
+                print(f"  batch at {start}: attempt {attempt+1} failed: {e}")
+                time.sleep(5 * (attempt + 1))
+        
+        for a, b in batch:
+            if f"{a}|{b}" not in cache:
+                cache[f"{a}|{b}"] = []
+        if not sparql_succeeded:
+            continue  # don't cache failed requests
+        with open(RESULTS_PATH, "w", encoding="utf-8") as f:
+            json.dump(cache, f)
+        if not rows:
             continue
 
         for a, b in batch:

@@ -180,7 +180,6 @@ def stage_query():
                                     timeout=30)
                 resp.raise_for_status()
                 rows = resp.json()["results"]["bindings"]
-                break
                 sparql_succeeded = True
                 break
             except Exception as e:

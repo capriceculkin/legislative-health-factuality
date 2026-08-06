@@ -15,3 +15,9 @@ data/canada/ontario_speaker_turns.json
 data/canada/quebec_speaker_turns.json
 data/us/speaker_turns.json
 data/us/member_lookup.json
+data/canada/ontario_health_passages.json
+data/us/congress.gov.advanced.search.csv
+data/us/congress.gov.advanced.search.pre2003.csv
+data/us/legislators-historical.yaml
+data/us/voteview/house_rollcalls_1985_present.csv
+data/us/member_lookup.json

@@ -15,7 +15,7 @@ async def check():
         await page.goto('https://bioguide.congress.gov', wait_until='networkidle', timeout=30000)
         await page.wait_for_timeout(3000)
 
-        for bid in na_ids[:20]:
+        for bid in na_ids:
             try:
                 await page.goto(
                     f'https://bioguide.congress.gov/search/bio/{bid}',

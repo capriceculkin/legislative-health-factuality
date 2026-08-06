@@ -7,9 +7,9 @@
     "vote_result": "",
     "yea_count": "413",
     "nay_count": "0",
-    "total_sentences": 1235,
-    "supported_sentences": 439,
-    "factuality_score": 0.3555
+    "total_sentences": 2443,
+    "supported_sentences": 431,
+    "factuality_score": 0.1764
   },
   "1985-10-23": {
     "filename": "1985-10-23",
@@ -19,9 +19,9 @@
     "vote_result": "",
     "yea_count": "395",
     "nay_count": "10",
-    "total_sentences": 1120,
-    "supported_sentences": 265,
-    "factuality_score": 0.2366
+    "total_sentences": 2516,
+    "supported_sentences": 261,
+    "factuality_score": 0.1037
   },
   "1985-11-12": {
     "filename": "1985-11-12",
@@ -31,9 +31,9 @@
     "vote_result": "",
     "yea_count": "380",
     "nay_count": "32",
-    "total_sentences": 1422,
-    "supported_sentences": 559,
-    "factuality_score": 0.3931
+    "total_sentences": 2807,
+    "supported_sentences": 547,
+    "factuality_score": 0.1949
   },
   "1986-02-04": {
     "filename": "1986-02-04",
@@ -43,9 +43,9 @@
     "vote_result": "",
     "yea_count": "390",
     "nay_count": "3",
-    "total_sentences": 853,
-    "supported_sentences": 150,
-    "factuality_score": 0.1758
+    "total_sentences": 1657,
+    "supported_sentences": 146,
+    "factuality_score": 0.0881
   },
   "1986-02-19": {
     "filename": "1986-02-19",
@@ -55,9 +55,9 @@
     "vote_result": "",
     "yea_count": "254",
     "nay_count": "151",
-    "total_sentences": 710,
-    "supported_sentences": 340,
-    "factuality_score": 0.4789
+    "total_sentences": 1229,
+    "supported_sentences": 333,
+    "factuality_score": 0.271
   },
   "1986-03-05": {
     "filename": "1986-03-05",
@@ -67,9 +67,9 @@
     "vote_result": "",
     "yea_count": "403",
     "nay_count": "6",
-    "total_sentences": 773,
-    "supported_sentences": 250,
-    "factuality_score": 0.3234
+    "total_sentences": 1582,
+    "supported_sentences": 243,
+    "factuality_score": 0.1536
   },
   "1986-04-22": {
     "filename": "1986-04-22",
@@ -79,9 +79,9 @@
     "vote_result": "",
     "yea_count": "246",
     "nay_count": "155",
-    "total_sentences": 1181,
-    "supported_sentences": 329,
-    "factuality_score": 0.2786
+    "total_sentences": 2363,
+    "supported_sentences": 313,
+    "factuality_score": 0.1325
   },
   "1986-05-13": {
     "filename": "1986-05-13",
@@ -91,9 +91,9 @@
     "vote_result": "",
     "yea_count": "383",
     "nay_count": "21",
-    "total_sentences": 1047,
-    "supported_sentences": 218,
-    "factuality_score": 0.2082
+    "total_sentences": 2685,
+    "supported_sentences": 211,
+    "factuality_score": 0.0786
   },
   "1987-08-04": {
     "filename": "1987-08-04",
@@ -103,9 +103,9 @@
     "vote_result": "",
     "yea_count": "355",
     "nay_count": "68",
-    "total_sentences": 1358,
-    "supported_sentences": 420,
-    "factuality_score": 0.3093
+    "total_sentences": 2656,
+    "supported_sentences": 403,
+    "factuality_score": 0.1517
   },
   "1987-09-09": {
     "filename": "1987-09-09",
@@ -115,9 +115,9 @@
     "vote_result": "",
     "yea_count": "387",
     "nay_count": "9",
-    "total_sentences": 601,
-    "supported_sentences": 172,
-    "factuality_score": 0.2862
+    "total_sentences": 1223,
+    "supported_sentences": 164,
+    "factuality_score": 0.1341
   },
   "1987-11-03": {
     "filename": "1987-11-03",
@@ -127,9 +127,9 @@
     "vote_result": "",
     "yea_count": "401",
     "nay_count": "8",
-    "total_sentences": 738,
-    "supported_sentences": 244,
-    "factuality_score": 0.3306
+    "total_sentences": 1457,
+    "supported_sentences": 234,
+    "factuality_score": 0.1606
   },
   "1988-03-22": {
     "filename": "1988-03-22",
@@ -139,9 +139,9 @@
     "vote_result": "",
     "yea_count": "409",
     "nay_count": "1",
-    "total_sentences": 1276,
-    "supported_sentences": 408,
-    "factuality_score": 0.3197
+    "total_sentences": 2678,
+    "supported_sentences": 398,
+    "factuality_score": 0.1486
   },
   "1988-07-12": {
     "filename": "1988-07-12",
@@ -151,9 +151,9 @@
     "vote_result": "",
     "yea_count": "409",
     "nay_count": "2",
-    "total_sentences": 874,
-    "supported_sentences": 188,
-    "factuality_score": 0.2151
+    "total_sentences": 1962,
+    "supported_sentences": 181,
+    "factuality_score": 0.0923
   },
   "1988-07-27": {
     "filename": "1988-07-27",
@@ -163,9 +163,9 @@
     "vote_result": "",
     "yea_count": "357",
     "nay_count": "54",
-    "total_sentences": 1099,
-    "supported_sentences": 310,
-    "factuality_score": 0.2821
+    "total_sentences": 2483,
+    "supported_sentences": 298,
+    "factuality_score": 0.12
   },
   "1988-08-11": {
     "filename": "1988-08-11",
@@ -175,9 +175,9 @@
     "vote_result": "",
     "yea_count": "270",
     "nay_count": "32",
-    "total_sentences": 2977,
-    "supported_sentences": 857,
-    "factuality_score": 0.2879
+    "total_sentences": 5719,
+    "supported_sentences": 845,
+    "factuality_score": 0.1478
   },
   "1988-09-16": {
     "filename": "1988-09-16",
@@ -187,9 +187,9 @@
     "vote_result": "",
     "yea_count": "215",
     "nay_count": "170",
-    "total_sentences": 1482,
-    "supported_sentences": 294,
-    "factuality_score": 0.1984
+    "total_sentences": 2376,
+    "supported_sentences": 282,
+    "factuality_score": 0.1187
   },
   "1988-09-22": {
     "filename": "1988-09-22",
@@ -199,9 +199,9 @@
     "vote_result": "",
     "yea_count": "89",
     "nay_count": "302",
-    "total_sentences": 2109,
-    "supported_sentences": 558,
-    "factuality_score": 0.2646
+    "total_sentences": 4180,
+    "supported_sentences": 542,
+    "factuality_score": 0.1297
   },
   "1988-09-23": {
     "filename": "1988-09-23",
@@ -211,9 +211,9 @@
     "vote_result": "",
     "yea_count": "367",
     "nay_count": "13",
-    "total_sentences": 1193,
-    "supported_sentences": 362,
-    "factuality_score": 0.3034
+    "total_sentences": 2431,
+    "supported_sentences": 352,
+    "factuality_score": 0.1448
   },
   "1988-10-21": {
     "filename": "1988-10-21",
@@ -223,21 +223,21 @@
     "vote_result": "",
     "yea_count": "361",
     "nay_count": "0",
-    "total_sentences": 7589,
-    "supported_sentences": 1517,
-    "factuality_score": 0.1999
+    "total_sentences": 13839,
+    "supported_sentences": 1479,
+    "factuality_score": 0.1069
   },
   "1989-07-31": {
     "filename": "1989-07-31",
     "date": "1989-07-31",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 1426",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 1723,
-    "supported_sentences": 592,
-    "factuality_score": 0.3436
+    "total_sentences": 3700,
+    "supported_sentences": 584,
+    "factuality_score": 0.1578
   },
   "1989-11-19": {
     "filename": "1989-11-19",
@@ -247,9 +247,9 @@
     "vote_result": "",
     "yea_count": "349",
     "nay_count": "57",
-    "total_sentences": 302,
-    "supported_sentences": 70,
-    "factuality_score": 0.2318
+    "total_sentences": 588,
+    "supported_sentences": 66,
+    "factuality_score": 0.1122
   },
   "1989-11-21": {
     "filename": "1989-11-21",
@@ -259,21 +259,21 @@
     "vote_result": "",
     "yea_count": "55",
     "nay_count": "346",
-    "total_sentences": 6329,
-    "supported_sentences": 1247,
-    "factuality_score": 0.197
+    "total_sentences": 11758,
+    "supported_sentences": 1206,
+    "factuality_score": 0.1026
   },
   "1990-04-04": {
     "filename": "1990-04-04",
     "date": "1990-04-04",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 3968",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 1514,
-    "supported_sentences": 620,
-    "factuality_score": 0.4095
+    "total_sentences": 2919,
+    "supported_sentences": 594,
+    "factuality_score": 0.2035
   },
   "1990-06-13": {
     "filename": "1990-06-13",
@@ -283,57 +283,57 @@
     "vote_result": "Passed",
     "yea_count": "407",
     "nay_count": "14",
-    "total_sentences": 986,
-    "supported_sentences": 276,
-    "factuality_score": 0.2799
+    "total_sentences": 1966,
+    "supported_sentences": 269,
+    "factuality_score": 0.1368
   },
   "1990-06-18": {
     "filename": "1990-06-18",
     "date": "1990-06-18",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 4790",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 4048,
-    "supported_sentences": 1670,
-    "factuality_score": 0.4125
+    "total_sentences": 7821,
+    "supported_sentences": 1638,
+    "factuality_score": 0.2094
   },
   "1990-09-27": {
     "filename": "1990-09-27",
     "date": "1990-09-27",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 2372",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 984,
-    "supported_sentences": 387,
-    "factuality_score": 0.3933
+    "total_sentences": 2239,
+    "supported_sentences": 383,
+    "factuality_score": 0.1711
   },
   "1990-10-10": {
     "filename": "1990-10-10",
     "date": "1990-10-10",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 5702",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 920,
-    "supported_sentences": 390,
-    "factuality_score": 0.4239
+    "total_sentences": 9813,
+    "supported_sentences": 2076,
+    "factuality_score": 0.2116
   },
   "1990-10-16": {
     "filename": "1990-10-16",
     "date": "1990-10-16",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 4238",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 8872,
+    "supported_sentences": 1321,
+    "factuality_score": 0.1489
   },
   "1990-10-25": {
     "filename": "1990-10-25",
@@ -343,45 +343,45 @@
     "vote_result": "Passed",
     "yea_count": "416",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 8197,
+    "supported_sentences": 917,
+    "factuality_score": 0.1119
   },
   "1990-10-26": {
     "filename": "1990-10-26",
     "date": "1990-10-26",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 5113",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 12855,
+    "supported_sentences": 2607,
+    "factuality_score": 0.2028
   },
   "1990-10-27": {
     "filename": "1990-10-27",
     "date": "1990-10-27",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "101",
+    "bill_number": "H.R. 3095",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 7220,
+    "supported_sentences": 1274,
+    "factuality_score": 0.1765
   },
   "1991-06-11": {
     "filename": "1991-06-11",
     "date": "1991-06-11",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "102",
+    "bill_number": "H.R. 1720",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2761,
+    "supported_sentences": 330,
+    "factuality_score": 0.1195
   },
   "1991-07-25": {
     "filename": "1991-07-25",
@@ -391,21 +391,21 @@
     "vote_result": "Passed",
     "yea_count": "274",
     "nay_count": "144",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2327,
+    "supported_sentences": 286,
+    "factuality_score": 0.1229
   },
   "1991-09-30": {
     "filename": "1991-09-30",
     "date": "1991-09-30",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "102",
+    "bill_number": "H.R. 3259",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 6110,
+    "supported_sentences": 1231,
+    "factuality_score": 0.2015
   },
   "1991-10-31": {
     "filename": "1991-10-31",
@@ -415,9 +415,9 @@
     "vote_result": "Passed",
     "yea_count": "413",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2758,
+    "supported_sentences": 246,
+    "factuality_score": 0.0892
   },
   "1991-11-19": {
     "filename": "1991-11-19",
@@ -427,9 +427,9 @@
     "vote_result": "Passed",
     "yea_count": "348",
     "nay_count": "71",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3954,
+    "supported_sentences": 780,
+    "factuality_score": 0.1973
   },
   "1992-04-30": {
     "filename": "1992-04-30",
@@ -439,9 +439,9 @@
     "vote_result": "Passed",
     "yea_count": "268",
     "nay_count": "150",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2382,
+    "supported_sentences": 317,
+    "factuality_score": 0.1331
   },
   "1992-05-19": {
     "filename": "1992-05-19",
@@ -451,9 +451,9 @@
     "vote_result": "Failed",
     "yea_count": "264",
     "nay_count": "148",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2191,
+    "supported_sentences": 301,
+    "factuality_score": 0.1374
   },
   "1992-05-28": {
     "filename": "1992-05-28",
@@ -463,9 +463,9 @@
     "vote_result": "Passed",
     "yea_count": "214",
     "nay_count": "157",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2435,
+    "supported_sentences": 356,
+    "factuality_score": 0.1462
   },
   "1992-06-24": {
     "filename": "1992-06-24",
@@ -475,9 +475,9 @@
     "vote_result": "Failed",
     "yea_count": "271",
     "nay_count": "156",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2643,
+    "supported_sentences": 305,
+    "factuality_score": 0.1154
   },
   "1992-07-01": {
     "filename": "1992-07-01",
@@ -487,9 +487,9 @@
     "vote_result": "Passed",
     "yea_count": "358",
     "nay_count": "60",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2701,
+    "supported_sentences": 314,
+    "factuality_score": 0.1163
   },
   "1992-08-06": {
     "filename": "1992-08-06",
@@ -499,9 +499,9 @@
     "vote_result": "Passed",
     "yea_count": "251",
     "nay_count": "144",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 5289,
+    "supported_sentences": 728,
+    "factuality_score": 0.1376
   },
   "1992-09-24": {
     "filename": "1992-09-24",
@@ -511,9 +511,9 @@
     "vote_result": "Passed",
     "yea_count": "397",
     "nay_count": "8",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 4215,
+    "supported_sentences": 516,
+    "factuality_score": 0.1224
   },
   "1992-10-02": {
     "filename": "1992-10-02",
@@ -523,9 +523,9 @@
     "vote_result": "Failed",
     "yea_count": "266",
     "nay_count": "148",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 6650,
+    "supported_sentences": 842,
+    "factuality_score": 0.1266
   },
   "1993-03-10": {
     "filename": "1993-03-10",
@@ -535,9 +535,9 @@
     "vote_result": "Failed",
     "yea_count": "193",
     "nay_count": "229",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2567,
+    "supported_sentences": 439,
+    "factuality_score": 0.171
   },
   "1993-03-11": {
     "filename": "1993-03-11",
@@ -547,9 +547,9 @@
     "vote_result": "Passed",
     "yea_count": "356",
     "nay_count": "58",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1569,
+    "supported_sentences": 255,
+    "factuality_score": 0.1625
   },
   "1993-03-24": {
     "filename": "1993-03-24",
@@ -559,9 +559,9 @@
     "vote_result": "Passed",
     "yea_count": "284",
     "nay_count": "119",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1135,
+    "supported_sentences": 179,
+    "factuality_score": 0.1577
   },
   "1993-03-25": {
     "filename": "1993-03-25",
@@ -571,9 +571,9 @@
     "vote_result": "Passed",
     "yea_count": "274",
     "nay_count": "142",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1479,
+    "supported_sentences": 163,
+    "factuality_score": 0.1102
   },
   "1993-03-30": {
     "filename": "1993-03-30",
@@ -583,9 +583,9 @@
     "vote_result": "Passed",
     "yea_count": "416",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1249,
+    "supported_sentences": 201,
+    "factuality_score": 0.1609
   },
   "1993-05-25": {
     "filename": "1993-05-25",
@@ -595,9 +595,9 @@
     "vote_result": "Passed",
     "yea_count": "290",
     "nay_count": "130",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3048,
+    "supported_sentences": 562,
+    "factuality_score": 0.1844
   },
   "1993-06-14": {
     "filename": "1993-06-14",
@@ -607,9 +607,9 @@
     "vote_result": "Passed",
     "yea_count": "365",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1438,
+    "supported_sentences": 190,
+    "factuality_score": 0.1321
   },
   "1993-11-21": {
     "filename": "1993-11-21",
@@ -619,9 +619,9 @@
     "vote_result": "Passed",
     "yea_count": "420",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3794,
+    "supported_sentences": 477,
+    "factuality_score": 0.1257
   },
   "1994-03-17": {
     "filename": "1994-03-17",
@@ -631,9 +631,9 @@
     "vote_result": "Passed",
     "yea_count": "398",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3142,
+    "supported_sentences": 390,
+    "factuality_score": 0.1241
   },
   "1994-05-05": {
     "filename": "1994-05-05",
@@ -643,9 +643,9 @@
     "vote_result": "Passed",
     "yea_count": "241",
     "nay_count": "174",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3181,
+    "supported_sentences": 293,
+    "factuality_score": 0.0921
   },
   "1994-10-07": {
     "filename": "1994-10-07",
@@ -655,9 +655,9 @@
     "vote_result": "Passed",
     "yea_count": "394",
     "nay_count": "5",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 5381,
+    "supported_sentences": 574,
+    "factuality_score": 0.1067
   },
   "1995-04-06": {
     "filename": "1995-04-06",
@@ -667,9 +667,9 @@
     "vote_result": "Passed",
     "yea_count": "408",
     "nay_count": "14",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2070,
+    "supported_sentences": 220,
+    "factuality_score": 0.1063
   },
   "1995-05-16": {
     "filename": "1995-05-16",
@@ -679,9 +679,9 @@
     "vote_result": "Failed",
     "yea_count": "247",
     "nay_count": "170",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3729,
+    "supported_sentences": 307,
+    "factuality_score": 0.0823
   },
   "1995-05-25": {
     "filename": "1995-05-25",
@@ -691,9 +691,9 @@
     "vote_result": "Failed",
     "yea_count": "197",
     "nay_count": "224",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 960,
+    "supported_sentences": 103,
+    "factuality_score": 0.1073
   },
   "1995-06-30": {
     "filename": "1995-06-30",
@@ -703,9 +703,9 @@
     "vote_result": "Passed",
     "yea_count": "350",
     "nay_count": "68",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1263,
+    "supported_sentences": 178,
+    "factuality_score": 0.1409
   },
   "1995-10-19": {
     "filename": "1995-10-19",
@@ -715,57 +715,57 @@
     "vote_result": "Passed",
     "yea_count": "231",
     "nay_count": "201",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 5017,
+    "supported_sentences": 278,
+    "factuality_score": 0.0554
   },
   "1995-11-14": {
     "filename": "1995-11-14",
     "date": "1995-11-14",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 2366",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 1,
+    "factuality_score": 0.5
   },
   "1995-12-12": {
     "filename": "1995-12-12",
     "date": "1995-12-12",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 1747",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "1995-12-18": {
     "filename": "1995-12-18",
     "date": "1995-12-18",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 1878",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 104,
+    "supported_sentences": 11,
+    "factuality_score": 0.1058
   },
   "1996-03-12": {
     "filename": "1996-03-12",
     "date": "1996-03-12",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 2685",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 7,
+    "supported_sentences": 4,
+    "factuality_score": 0.5714
   },
   "1996-03-28": {
     "filename": "1996-03-28",
@@ -775,19 +775,19 @@
     "vote_result": "Passed",
     "yea_count": "267",
     "nay_count": "151",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 6158,
+    "supported_sentences": 702,
+    "factuality_score": 0.114
   },
   "1996-04-16": {
     "filename": "1996-04-16",
     "date": "1996-04-16",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 3121",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -799,9 +799,9 @@
     "vote_result": "Passed",
     "yea_count": "402",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3078,
+    "supported_sentences": 253,
+    "factuality_score": 0.0822
   },
   "1996-06-11": {
     "filename": "1996-06-11",
@@ -811,21 +811,21 @@
     "vote_result": "Failed",
     "yea_count": "182",
     "nay_count": "235",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2407,
+    "supported_sentences": 320,
+    "factuality_score": 0.1329
   },
   "1996-07-09": {
     "filename": "1996-07-09",
     "date": "1996-07-09",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 248",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 1,
+    "factuality_score": 0.5
   },
   "1996-08-01": {
     "filename": "1996-08-01",
@@ -835,43 +835,43 @@
     "vote_result": "Passed",
     "yea_count": "421",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 6857,
+    "supported_sentences": 707,
+    "factuality_score": 0.1031
   },
   "1996-09-04": {
     "filename": "1996-09-04",
     "date": "1996-09-04",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 3871",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 2,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "1996-09-10": {
     "filename": "1996-09-10",
     "date": "1996-09-10",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 3056",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 8,
+    "supported_sentences": 3,
+    "factuality_score": 0.375
   },
   "1996-09-24": {
     "filename": "1996-09-24",
     "date": "1996-09-24",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 2508",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 3,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -883,21 +883,21 @@
     "vote_result": "Passed",
     "yea_count": "386",
     "nay_count": "34",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 4464,
+    "supported_sentences": 654,
+    "factuality_score": 0.1465
   },
   "1996-09-28": {
     "filename": "1996-09-28",
     "date": "1996-09-28",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "104",
+    "bill_number": "H.R. 3632",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 82,
+    "supported_sentences": 18,
+    "factuality_score": 0.2195
   },
   "1997-04-10": {
     "filename": "1997-04-10",
@@ -907,21 +907,21 @@
     "vote_result": "Passed",
     "yea_count": "398",
     "nay_count": "16",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1571,
+    "supported_sentences": 258,
+    "factuality_score": 0.1642
   },
   "1997-04-15": {
     "filename": "1997-04-15",
     "date": "1997-04-15",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "105",
+    "bill_number": "H.R. 1001",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 33,
+    "supported_sentences": 3,
+    "factuality_score": 0.0909
   },
   "1997-05-22": {
     "filename": "1997-05-22",
@@ -931,19 +931,19 @@
     "vote_result": "Passed",
     "yea_count": "420",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 771,
+    "supported_sentences": 100,
+    "factuality_score": 0.1297
   },
   "1997-07-08": {
     "filename": "1997-07-08",
     "date": "1997-07-08",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "105",
+    "bill_number": "H.R. 2018",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 3,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -955,9 +955,9 @@
     "vote_result": "Passed",
     "yea_count": "405",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2999,
+    "supported_sentences": 420,
+    "factuality_score": 0.14
   },
   "1998-04-29": {
     "filename": "1998-04-29",
@@ -967,9 +967,9 @@
     "vote_result": "Passed",
     "yea_count": "287",
     "nay_count": "140",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 4165,
+    "supported_sentences": 425,
+    "factuality_score": 0.102
   },
   "1998-05-12": {
     "filename": "1998-05-12",
@@ -979,21 +979,21 @@
     "vote_result": "Passed",
     "yea_count": "412",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2585,
+    "supported_sentences": 363,
+    "factuality_score": 0.1404
   },
   "1998-05-19": {
     "filename": "1998-05-19",
     "date": "1998-05-19",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "105",
+    "bill_number": "H.R. 2202",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 6,
+    "supported_sentences": 1,
+    "factuality_score": 0.1667
   },
   "1998-07-24": {
     "filename": "1998-07-24",
@@ -1003,9 +1003,9 @@
     "vote_result": "Passed",
     "yea_count": "216",
     "nay_count": "210",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3226,
+    "supported_sentences": 323,
+    "factuality_score": 0.1001
   },
   "1998-09-15": {
     "filename": "1998-09-15",
@@ -1015,9 +1015,9 @@
     "vote_result": "Passed",
     "yea_count": "401",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3475,
+    "supported_sentences": 532,
+    "factuality_score": 0.1531
   },
   "1998-09-16": {
     "filename": "1998-09-16",
@@ -1027,9 +1027,9 @@
     "vote_result": "Passed",
     "yea_count": "396",
     "nay_count": "9",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2872,
+    "supported_sentences": 359,
+    "factuality_score": 0.125
   },
   "1998-10-09": {
     "filename": "1998-10-09",
@@ -1039,9 +1039,9 @@
     "vote_result": "Passed",
     "yea_count": "424",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3526,
+    "supported_sentences": 503,
+    "factuality_score": 0.1427
   },
   "1998-10-10": {
     "filename": "1998-10-10",
@@ -1051,9 +1051,9 @@
     "vote_result": "Passed",
     "yea_count": "412",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 4254,
+    "supported_sentences": 580,
+    "factuality_score": 0.1363
   },
   "1998-10-13": {
     "filename": "1998-10-13",
@@ -1063,9 +1063,9 @@
     "vote_result": "Passed",
     "yea_count": "401",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 4035,
+    "supported_sentences": 425,
+    "factuality_score": 0.1053
   },
   "1999-03-10": {
     "filename": "1999-03-10",
@@ -1075,9 +1075,9 @@
     "vote_result": "Passed",
     "yea_count": "398",
     "nay_count": "12",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 487,
+    "supported_sentences": 93,
+    "factuality_score": 0.191
   },
   "1999-09-28": {
     "filename": "1999-09-28",
@@ -1087,9 +1087,9 @@
     "vote_result": "Passed",
     "yea_count": "417",
     "nay_count": "7",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 373,
+    "supported_sentences": 73,
+    "factuality_score": 0.1957
   },
   "1999-10-06": {
     "filename": "1999-10-06",
@@ -1099,9 +1099,9 @@
     "vote_result": "Passed",
     "yea_count": "227",
     "nay_count": "205",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 460,
+    "supported_sentences": 127,
+    "factuality_score": 0.2761
   },
   "1999-10-07": {
     "filename": "1999-10-07",
@@ -1111,9 +1111,9 @@
     "vote_result": "Passed",
     "yea_count": "275",
     "nay_count": "151",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 407,
+    "supported_sentences": 79,
+    "factuality_score": 0.1941
   },
   "1999-10-27": {
     "filename": "1999-10-27",
@@ -1123,9 +1123,9 @@
     "vote_result": "Passed",
     "yea_count": "271",
     "nay_count": "156",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 364,
+    "supported_sentences": 72,
+    "factuality_score": 0.1978
   },
   "1999-11-03": {
     "filename": "1999-11-03",
@@ -1135,9 +1135,9 @@
     "vote_result": "Passed",
     "yea_count": "257",
     "nay_count": "167",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 513,
+    "supported_sentences": 140,
+    "factuality_score": 0.2729
   },
   "1999-11-05": {
     "filename": "1999-11-05",
@@ -1147,9 +1147,9 @@
     "vote_result": "Passed",
     "yea_count": "388",
     "nay_count": "25",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 496,
+    "supported_sentences": 135,
+    "factuality_score": 0.2722
   },
   "1999-11-16": {
     "filename": "1999-11-16",
@@ -1159,9 +1159,9 @@
     "vote_result": "Passed",
     "yea_count": "414",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 327,
+    "supported_sentences": 72,
+    "factuality_score": 0.2202
   },
   "2000-02-01": {
     "filename": "2000-02-01",
@@ -1171,9 +1171,9 @@
     "vote_result": "Passed",
     "yea_count": "207",
     "nay_count": "175",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 380,
+    "supported_sentences": 93,
+    "factuality_score": 0.2447
   },
   "2000-02-08": {
     "filename": "2000-02-08",
@@ -1183,9 +1183,9 @@
     "vote_result": "Passed",
     "yea_count": "378",
     "nay_count": "16",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 382,
+    "supported_sentences": 83,
+    "factuality_score": 0.2173
   },
   "2000-04-04": {
     "filename": "2000-04-04",
@@ -1195,9 +1195,9 @@
     "vote_result": "Passed",
     "yea_count": "275",
     "nay_count": "147",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 335,
+    "supported_sentences": 69,
+    "factuality_score": 0.206
   },
   "2000-05-09": {
     "filename": "2000-05-09",
@@ -1207,9 +1207,9 @@
     "vote_result": "Passed",
     "yea_count": "419",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 325,
+    "supported_sentences": 64,
+    "factuality_score": 0.1969
   },
   "2000-05-23": {
     "filename": "2000-05-23",
@@ -1219,9 +1219,9 @@
     "vote_result": "Passed",
     "yea_count": "415",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 396,
+    "supported_sentences": 103,
+    "factuality_score": 0.2601
   },
   "2000-06-28": {
     "filename": "2000-06-28",
@@ -1231,9 +1231,9 @@
     "vote_result": "Passed",
     "yea_count": "217",
     "nay_count": "214",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 428,
+    "supported_sentences": 123,
+    "factuality_score": 0.2874
   },
   "2000-06-29": {
     "filename": "2000-06-29",
@@ -1243,9 +1243,9 @@
     "vote_result": "Passed",
     "yea_count": "404",
     "nay_count": "8",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 399,
+    "supported_sentences": 85,
+    "factuality_score": 0.213
   },
   "2000-06-30": {
     "filename": "2000-06-30",
@@ -1255,9 +1255,9 @@
     "vote_result": "Passed",
     "yea_count": "276",
     "nay_count": "136",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 310,
+    "supported_sentences": 60,
+    "factuality_score": 0.1935
   },
   "2000-07-19": {
     "filename": "2000-07-19",
@@ -1267,9 +1267,9 @@
     "vote_result": "Passed",
     "yea_count": "412",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 419,
+    "supported_sentences": 96,
+    "factuality_score": 0.2291
   },
   "2000-09-27": {
     "filename": "2000-09-27",
@@ -1279,9 +1279,9 @@
     "vote_result": "Passed",
     "yea_count": "415",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 410,
+    "supported_sentences": 81,
+    "factuality_score": 0.1976
   },
   "2000-10-03": {
     "filename": "2000-10-03",
@@ -1291,9 +1291,9 @@
     "vote_result": "Passed",
     "yea_count": "420",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 444,
+    "supported_sentences": 111,
+    "factuality_score": 0.25
   },
   "2000-10-05": {
     "filename": "2000-10-05",
@@ -1303,9 +1303,9 @@
     "vote_result": "Passed",
     "yea_count": "411",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 418,
+    "supported_sentences": 115,
+    "factuality_score": 0.2751
   },
   "2000-10-10": {
     "filename": "2000-10-10",
@@ -1315,9 +1315,9 @@
     "vote_result": "Passed",
     "yea_count": "385",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 398,
+    "supported_sentences": 108,
+    "factuality_score": 0.2714
   },
   "2000-10-27": {
     "filename": "2000-10-27",
@@ -1327,9 +1327,9 @@
     "vote_result": "Passed",
     "yea_count": "384",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 359,
+    "supported_sentences": 55,
+    "factuality_score": 0.1532
   },
   "2001-03-07": {
     "filename": "2001-03-07",
@@ -1339,9 +1339,9 @@
     "vote_result": "Passed",
     "yea_count": "404",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 333,
+    "supported_sentences": 44,
+    "factuality_score": 0.1321
   },
   "2001-03-20": {
     "filename": "2001-03-20",
@@ -1351,9 +1351,9 @@
     "vote_result": "Passed",
     "yea_count": "405",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 297,
+    "supported_sentences": 55,
+    "factuality_score": 0.1852
   },
   "2001-05-01": {
     "filename": "2001-05-01",
@@ -1363,9 +1363,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 478,
+    "supported_sentences": 106,
+    "factuality_score": 0.2218
   },
   "2001-07-30": {
     "filename": "2001-07-30",
@@ -1375,9 +1375,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 340,
+    "supported_sentences": 58,
+    "factuality_score": 0.1706
   },
   "2001-07-31": {
     "filename": "2001-07-31",
@@ -1387,9 +1387,9 @@
     "vote_result": "Passed",
     "yea_count": "265",
     "nay_count": "162",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 74,
+    "supported_sentences": 17,
+    "factuality_score": 0.2297
   },
   "2001-08-02": {
     "filename": "2001-08-02",
@@ -1399,9 +1399,9 @@
     "vote_result": "Passed",
     "yea_count": "226",
     "nay_count": "203",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 544,
+    "supported_sentences": 126,
+    "factuality_score": 0.2316
   },
   "2001-09-05": {
     "filename": "2001-09-05",
@@ -1411,9 +1411,9 @@
     "vote_result": "Passed",
     "yea_count": "402",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 256,
+    "supported_sentences": 56,
+    "factuality_score": 0.2188
   },
   "2001-09-24": {
     "filename": "2001-09-24",
@@ -1423,9 +1423,9 @@
     "vote_result": "Passed",
     "yea_count": "383",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 315,
+    "supported_sentences": 81,
+    "factuality_score": 0.2571
   },
   "2001-11-15": {
     "filename": "2001-11-15",
@@ -1435,9 +1435,9 @@
     "vote_result": "Passed",
     "yea_count": "338",
     "nay_count": "86",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 404,
+    "supported_sentences": 94,
+    "factuality_score": 0.2327
   },
   "2001-12-04": {
     "filename": "2001-12-04",
@@ -1447,9 +1447,9 @@
     "vote_result": "Passed",
     "yea_count": "408",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 337,
+    "supported_sentences": 79,
+    "factuality_score": 0.2344
   },
   "2001-12-12": {
     "filename": "2001-12-12",
@@ -1459,9 +1459,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 356,
+    "supported_sentences": 88,
+    "factuality_score": 0.2472
   },
   "2002-02-28": {
     "filename": "2002-02-28",
@@ -1471,9 +1471,9 @@
     "vote_result": "Passed",
     "yea_count": "412",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 255,
+    "supported_sentences": 56,
+    "factuality_score": 0.2196
   },
   "2002-05-20": {
     "filename": "2002-05-20",
@@ -1483,9 +1483,9 @@
     "vote_result": "Passed",
     "yea_count": "361",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 272,
+    "supported_sentences": 53,
+    "factuality_score": 0.1949
   },
   "2002-05-22": {
     "filename": "2002-05-22",
@@ -1495,9 +1495,9 @@
     "vote_result": "Passed",
     "yea_count": "425",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 271,
+    "supported_sentences": 71,
+    "factuality_score": 0.262
   },
   "2002-06-11": {
     "filename": "2002-06-11",
@@ -1507,9 +1507,9 @@
     "vote_result": "Passed",
     "yea_count": "400",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 182,
+    "supported_sentences": 29,
+    "factuality_score": 0.1593
   },
   "2002-06-28": {
     "filename": "2002-06-28",
@@ -1519,21 +1519,21 @@
     "vote_result": "Passed",
     "yea_count": "221",
     "nay_count": "208",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 162,
+    "supported_sentences": 38,
+    "factuality_score": 0.2346
   },
   "2002-07-22": {
     "filename": "2002-07-22",
     "date": "2002-07-22",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "107",
+    "bill_number": "H.R. 3487",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 2,
+    "factuality_score": 1.0
   },
   "2002-09-10": {
     "filename": "2002-09-10",
@@ -1543,9 +1543,9 @@
     "vote_result": "Passed",
     "yea_count": "369",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 184,
+    "supported_sentences": 37,
+    "factuality_score": 0.2011
   },
   "2002-09-17": {
     "filename": "2002-09-17",
@@ -1555,9 +1555,9 @@
     "vote_result": "Passed",
     "yea_count": "397",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 242,
+    "supported_sentences": 53,
+    "factuality_score": 0.219
   },
   "2002-09-25": {
     "filename": "2002-09-25",
@@ -1567,9 +1567,9 @@
     "vote_result": "Passed",
     "yea_count": "229",
     "nay_count": "189",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 277,
+    "supported_sentences": 73,
+    "factuality_score": 0.2635
   },
   "2002-09-26": {
     "filename": "2002-09-26",
@@ -1579,19 +1579,19 @@
     "vote_result": "Passed",
     "yea_count": "217",
     "nay_count": "203",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 313,
+    "supported_sentences": 84,
+    "factuality_score": 0.2684
   },
   "2002-10-01": {
     "filename": "2002-10-01",
     "date": "2002-10-01",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "107",
+    "bill_number": "H.R. 4014",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 2,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -1603,9 +1603,9 @@
     "vote_result": "Passed",
     "yea_count": "406",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 208,
+    "supported_sentences": 36,
+    "factuality_score": 0.1731
   },
   "2002-10-16": {
     "filename": "2002-10-16",
@@ -1615,21 +1615,21 @@
     "vote_result": "Passed",
     "yea_count": "392",
     "nay_count": "5",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 82,
+    "supported_sentences": 11,
+    "factuality_score": 0.1341
   },
   "2002-11-15": {
     "filename": "2002-11-15",
     "date": "2002-11-15",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "107",
+    "bill_number": "H.R. 5738",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 26,
+    "supported_sentences": 8,
+    "factuality_score": 0.3077
   },
   "2003-02-27": {
     "filename": "2003-02-27",
@@ -1639,9 +1639,9 @@
     "vote_result": "Passed",
     "yea_count": "241",
     "nay_count": "155",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 217,
+    "supported_sentences": 65,
+    "factuality_score": 0.2995
   },
   "2003-03-12": {
     "filename": "2003-03-12",
@@ -1651,9 +1651,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "6",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 365,
+    "supported_sentences": 83,
+    "factuality_score": 0.2274
   },
   "2003-03-13": {
     "filename": "2003-03-13",
@@ -1663,9 +1663,9 @@
     "vote_result": "Passed",
     "yea_count": "229",
     "nay_count": "196",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 417,
+    "supported_sentences": 110,
+    "factuality_score": 0.2638
   },
   "2003-03-31": {
     "filename": "2003-03-31",
@@ -1675,9 +1675,9 @@
     "vote_result": "Failed",
     "yea_count": "184",
     "nay_count": "206",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 202,
+    "supported_sentences": 38,
+    "factuality_score": 0.1881
   },
   "2003-06-19": {
     "filename": "2003-06-19",
@@ -1687,9 +1687,9 @@
     "vote_result": "Passed",
     "yea_count": "262",
     "nay_count": "162",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 227,
+    "supported_sentences": 57,
+    "factuality_score": 0.2511
   },
   "2003-06-27": {
     "filename": "2003-06-27",
@@ -1699,9 +1699,9 @@
     "vote_result": "Passed",
     "yea_count": "216",
     "nay_count": "215",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 218,
+    "supported_sentences": 29,
+    "factuality_score": 0.133
   },
   "2003-07-14": {
     "filename": "2003-07-14",
@@ -1711,9 +1711,9 @@
     "vote_result": "Failed",
     "yea_count": "191",
     "nay_count": "221",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 308,
+    "supported_sentences": 69,
+    "factuality_score": 0.224
   },
   "2003-07-16": {
     "filename": "2003-07-16",
@@ -1723,9 +1723,9 @@
     "vote_result": "Passed",
     "yea_count": "421",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 93,
+    "supported_sentences": 24,
+    "factuality_score": 0.2581
   },
   "2003-07-25": {
     "filename": "2003-07-25",
@@ -1735,9 +1735,9 @@
     "vote_result": "Passed",
     "yea_count": "243",
     "nay_count": "186",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 420,
+    "supported_sentences": 103,
+    "factuality_score": 0.2452
   },
   "2003-09-10": {
     "filename": "2003-09-10",
@@ -1747,9 +1747,9 @@
     "vote_result": "Failed",
     "yea_count": "189",
     "nay_count": "220",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 364,
+    "supported_sentences": 73,
+    "factuality_score": 0.2005
   },
   "2003-09-23": {
     "filename": "2003-09-23",
@@ -1759,9 +1759,9 @@
     "vote_result": "Failed",
     "yea_count": "202",
     "nay_count": "213",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 443,
+    "supported_sentences": 89,
+    "factuality_score": 0.2009
   },
   "2003-09-25": {
     "filename": "2003-09-25",
@@ -1771,9 +1771,9 @@
     "vote_result": "Failed",
     "yea_count": "199",
     "nay_count": "220",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 303,
+    "supported_sentences": 74,
+    "factuality_score": 0.2442
   },
   "2003-09-30": {
     "filename": "2003-09-30",
@@ -1783,9 +1783,9 @@
     "vote_result": "Failed",
     "yea_count": "202",
     "nay_count": "205",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 352,
+    "supported_sentences": 69,
+    "factuality_score": 0.196
   },
   "2003-10-01": {
     "filename": "2003-10-01",
@@ -1795,9 +1795,9 @@
     "vote_result": "Failed",
     "yea_count": "208",
     "nay_count": "215",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 307,
+    "supported_sentences": 84,
+    "factuality_score": 0.2736
   },
   "2003-10-07": {
     "filename": "2003-10-07",
@@ -1807,9 +1807,9 @@
     "vote_result": "Failed",
     "yea_count": "161",
     "nay_count": "234",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 251,
+    "supported_sentences": 45,
+    "factuality_score": 0.1793
   },
   "2003-10-15": {
     "filename": "2003-10-15",
@@ -1819,9 +1819,9 @@
     "vote_result": "Failed",
     "yea_count": "190",
     "nay_count": "218",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 217,
+    "supported_sentences": 59,
+    "factuality_score": 0.2719
   },
   "2003-10-20": {
     "filename": "2003-10-20",
@@ -1831,9 +1831,9 @@
     "vote_result": "Passed",
     "yea_count": "382",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 224,
+    "supported_sentences": 37,
+    "factuality_score": 0.1652
   },
   "2003-10-28": {
     "filename": "2003-10-28",
@@ -1843,9 +1843,9 @@
     "vote_result": "Failed",
     "yea_count": "194",
     "nay_count": "209",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 454,
+    "supported_sentences": 119,
+    "factuality_score": 0.2621
   },
   "2003-10-30": {
     "filename": "2003-10-30",
@@ -1855,9 +1855,9 @@
     "vote_result": "Failed",
     "yea_count": "195",
     "nay_count": "217",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 284,
+    "supported_sentences": 67,
+    "factuality_score": 0.2359
   },
   "2003-11-04": {
     "filename": "2003-11-04",
@@ -1867,9 +1867,9 @@
     "vote_result": "Passed",
     "yea_count": "382",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 219,
+    "supported_sentences": 50,
+    "factuality_score": 0.2283
   },
   "2003-11-06": {
     "filename": "2003-11-06",
@@ -1879,9 +1879,9 @@
     "vote_result": "Failed",
     "yea_count": "197",
     "nay_count": "209",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 122,
+    "supported_sentences": 39,
+    "factuality_score": 0.3197
   },
   "2003-11-07": {
     "filename": "2003-11-07",
@@ -1891,9 +1891,9 @@
     "vote_result": "Failed",
     "yea_count": "184",
     "nay_count": "207",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 439,
+    "supported_sentences": 106,
+    "factuality_score": 0.2415
   },
   "2003-11-19": {
     "filename": "2003-11-19",
@@ -1903,9 +1903,9 @@
     "vote_result": "Failed",
     "yea_count": "203",
     "nay_count": "218",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 316,
+    "supported_sentences": 55,
+    "factuality_score": 0.1741
   },
   "2003-11-20": {
     "filename": "2003-11-20",
@@ -1915,9 +1915,9 @@
     "vote_result": "Failed",
     "yea_count": "201",
     "nay_count": "222",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 316,
+    "supported_sentences": 69,
+    "factuality_score": 0.2184
   },
   "2003-11-21": {
     "filename": "2003-11-21",
@@ -1927,9 +1927,9 @@
     "vote_result": "Passed",
     "yea_count": "423",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 342,
+    "supported_sentences": 81,
+    "factuality_score": 0.2368
   },
   "2003-11-22": {
     "filename": "2003-11-22",
@@ -1939,9 +1939,9 @@
     "vote_result": "Passed",
     "yea_count": "210",
     "nay_count": "193",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 244,
+    "supported_sentences": 51,
+    "factuality_score": 0.209
   },
   "2004-01-27": {
     "filename": "2004-01-27",
@@ -1951,9 +1951,9 @@
     "vote_result": "Passed",
     "yea_count": "333",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 314,
+    "supported_sentences": 68,
+    "factuality_score": 0.2166
   },
   "2004-03-10": {
     "filename": "2004-03-10",
@@ -1963,9 +1963,9 @@
     "vote_result": "Passed",
     "yea_count": "396",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 83,
+    "supported_sentences": 23,
+    "factuality_score": 0.2771
   },
   "2004-03-24": {
     "filename": "2004-03-24",
@@ -1975,9 +1975,9 @@
     "vote_result": "Passed",
     "yea_count": "420",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 376,
+    "supported_sentences": 68,
+    "factuality_score": 0.1809
   },
   "2004-05-12": {
     "filename": "2004-05-12",
@@ -1987,9 +1987,9 @@
     "vote_result": "Passed",
     "yea_count": "229",
     "nay_count": "197",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 388,
+    "supported_sentences": 81,
+    "factuality_score": 0.2088
   },
   "2004-05-13": {
     "filename": "2004-05-13",
@@ -1999,9 +1999,9 @@
     "vote_result": "Passed",
     "yea_count": "252",
     "nay_count": "162",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 88,
+    "supported_sentences": 14,
+    "factuality_score": 0.1591
   },
   "2004-05-18": {
     "filename": "2004-05-18",
@@ -2011,9 +2011,9 @@
     "vote_result": "Failed",
     "yea_count": "88",
     "nay_count": "331",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 181,
+    "supported_sentences": 29,
+    "factuality_score": 0.1602
   },
   "2004-06-14": {
     "filename": "2004-06-14",
@@ -2023,9 +2023,9 @@
     "vote_result": "Passed",
     "yea_count": "377",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 377,
+    "supported_sentences": 73,
+    "factuality_score": 0.1936
   },
   "2004-07-14": {
     "filename": "2004-07-14",
@@ -2035,9 +2035,9 @@
     "vote_result": "Passed",
     "yea_count": "414",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 304,
+    "supported_sentences": 77,
+    "factuality_score": 0.2533
   },
   "2004-09-09": {
     "filename": "2004-09-09",
@@ -2047,33 +2047,33 @@
     "vote_result": "Passed",
     "yea_count": "352",
     "nay_count": "64",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 237,
+    "supported_sentences": 64,
+    "factuality_score": 0.27
   },
   "2004-10-05": {
     "filename": "2004-10-05",
     "date": "2004-10-05",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "108",
+    "bill_number": "H.R. 4555",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 3,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "2004-10-06": {
     "filename": "2004-10-06",
     "date": "2004-10-06",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "108",
+    "bill_number": "H.R. 5204",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 21,
+    "supported_sentences": 5,
+    "factuality_score": 0.2381
   },
   "2004-10-07": {
     "filename": "2004-10-07",
@@ -2083,9 +2083,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 184,
+    "supported_sentences": 35,
+    "factuality_score": 0.1902
   },
   "2005-05-24": {
     "filename": "2005-05-24",
@@ -2095,21 +2095,21 @@
     "vote_result": "Passed",
     "yea_count": "431",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 204,
+    "supported_sentences": 36,
+    "factuality_score": 0.1765
   },
   "2005-06-13": {
     "filename": "2005-06-13",
     "date": "2005-06-13",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "109",
+    "bill_number": "H.R. 1812",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 41,
+    "supported_sentences": 20,
+    "factuality_score": 0.4878
   },
   "2005-07-26": {
     "filename": "2005-07-26",
@@ -2119,9 +2119,9 @@
     "vote_result": "Passed",
     "yea_count": "263",
     "nay_count": "165",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 980,
+    "supported_sentences": 79,
+    "factuality_score": 0.0806
   },
   "2005-07-27": {
     "filename": "2005-07-27",
@@ -2131,9 +2131,9 @@
     "vote_result": "Passed",
     "yea_count": "429",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 310,
+    "supported_sentences": 71,
+    "factuality_score": 0.229
   },
   "2005-07-28": {
     "filename": "2005-07-28",
@@ -2143,9 +2143,9 @@
     "vote_result": "Passed",
     "yea_count": "230",
     "nay_count": "194",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1589,
+    "supported_sentences": 248,
+    "factuality_score": 0.1561
   },
   "2005-11-07": {
     "filename": "2005-11-07",
@@ -2155,9 +2155,9 @@
     "vote_result": "Passed",
     "yea_count": "348",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 198,
+    "supported_sentences": 48,
+    "factuality_score": 0.2424
   },
   "2005-12-17": {
     "filename": "2005-12-17",
@@ -2167,9 +2167,9 @@
     "vote_result": "Passed",
     "yea_count": "413",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 164,
+    "supported_sentences": 40,
+    "factuality_score": 0.2439
   },
   "2006-05-11": {
     "filename": "2006-05-11",
@@ -2179,9 +2179,9 @@
     "vote_result": "Passed",
     "yea_count": "406",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 291,
+    "supported_sentences": 73,
+    "factuality_score": 0.2509
   },
   "2006-06-21": {
     "filename": "2006-06-21",
@@ -2191,9 +2191,9 @@
     "vote_result": "Passed",
     "yea_count": "421",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 294,
+    "supported_sentences": 71,
+    "factuality_score": 0.2415
   },
   "2006-06-22": {
     "filename": "2006-06-22",
@@ -2203,9 +2203,9 @@
     "vote_result": "Passed",
     "yea_count": "393",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1488,
+    "supported_sentences": 239,
+    "factuality_score": 0.1606
   },
   "2006-07-18": {
     "filename": "2006-07-18",
@@ -2215,9 +2215,9 @@
     "vote_result": "Failed",
     "yea_count": "273",
     "nay_count": "154",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 298,
+    "supported_sentences": 58,
+    "factuality_score": 0.1946
   },
   "2006-07-19": {
     "filename": "2006-07-19",
@@ -2227,9 +2227,9 @@
     "vote_result": "Failed",
     "yea_count": "235",
     "nay_count": "193",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 272,
+    "supported_sentences": 58,
+    "factuality_score": 0.2132
   },
   "2006-07-27": {
     "filename": "2006-07-27",
@@ -2239,9 +2239,9 @@
     "vote_result": "Passed",
     "yea_count": "270",
     "nay_count": "148",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 323,
+    "supported_sentences": 90,
+    "factuality_score": 0.2786
   },
   "2006-09-19": {
     "filename": "2006-09-19",
@@ -2251,9 +2251,9 @@
     "vote_result": "Passed",
     "yea_count": "403",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 329,
+    "supported_sentences": 106,
+    "factuality_score": 0.3222
   },
   "2006-09-26": {
     "filename": "2006-09-26",
@@ -2263,9 +2263,9 @@
     "vote_result": "Passed",
     "yea_count": "414",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 272,
+    "supported_sentences": 61,
+    "factuality_score": 0.2243
   },
   "2006-09-28": {
     "filename": "2006-09-28",
@@ -2275,9 +2275,9 @@
     "vote_result": "Passed",
     "yea_count": "325",
     "nay_count": "98",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 301,
+    "supported_sentences": 77,
+    "factuality_score": 0.2558
   },
   "2006-11-14": {
     "filename": "2006-11-14",
@@ -2287,9 +2287,9 @@
     "vote_result": "Passed",
     "yea_count": "373",
     "nay_count": "23",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 204,
+    "supported_sentences": 38,
+    "factuality_score": 0.1863
   },
   "2006-12-06": {
     "filename": "2006-12-06",
@@ -2299,9 +2299,9 @@
     "vote_result": "Failed",
     "yea_count": "250",
     "nay_count": "162",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 791,
+    "supported_sentences": 187,
+    "factuality_score": 0.2364
   },
   "2006-12-09": {
     "filename": "2006-12-09",
@@ -2311,9 +2311,9 @@
     "vote_result": "Passed",
     "yea_count": "203",
     "nay_count": "98",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 256,
+    "supported_sentences": 56,
+    "factuality_score": 0.2188
   },
   "2007-01-11": {
     "filename": "2007-01-11",
@@ -2323,9 +2323,9 @@
     "vote_result": "Passed",
     "yea_count": "253",
     "nay_count": "174",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 281,
+    "supported_sentences": 53,
+    "factuality_score": 0.1886
   },
   "2007-01-12": {
     "filename": "2007-01-12",
@@ -2335,9 +2335,9 @@
     "vote_result": "Passed",
     "yea_count": "255",
     "nay_count": "170",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 291,
+    "supported_sentences": 63,
+    "factuality_score": 0.2165
   },
   "2007-02-05": {
     "filename": "2007-02-05",
@@ -2347,9 +2347,9 @@
     "vote_result": "Passed",
     "yea_count": "396",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 234,
+    "supported_sentences": 46,
+    "factuality_score": 0.1966
   },
   "2007-02-28": {
     "filename": "2007-02-28",
@@ -2359,9 +2359,9 @@
     "vote_result": "Passed",
     "yea_count": "412",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 325,
+    "supported_sentences": 90,
+    "factuality_score": 0.2769
   },
   "2007-03-07": {
     "filename": "2007-03-07",
@@ -2371,21 +2371,21 @@
     "vote_result": "Passed",
     "yea_count": "422",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 311,
+    "supported_sentences": 76,
+    "factuality_score": 0.2444
   },
   "2007-03-27": {
     "filename": "2007-03-27",
     "date": "2007-03-27",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "110",
+    "bill_number": "H.R. 1132",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3,
+    "supported_sentences": 1,
+    "factuality_score": 0.3333
   },
   "2007-05-23": {
     "filename": "2007-05-23",
@@ -2395,9 +2395,9 @@
     "vote_result": "Passed",
     "yea_count": "422",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 444,
+    "supported_sentences": 177,
+    "factuality_score": 0.3986
   },
   "2007-06-06": {
     "filename": "2007-06-06",
@@ -2407,9 +2407,9 @@
     "vote_result": "Failed",
     "yea_count": "204",
     "nay_count": "213",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 247,
+    "supported_sentences": 50,
+    "factuality_score": 0.2024
   },
   "2007-06-07": {
     "filename": "2007-06-07",
@@ -2419,9 +2419,9 @@
     "vote_result": "Passed",
     "yea_count": "247",
     "nay_count": "176",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1875,
+    "supported_sentences": 418,
+    "factuality_score": 0.2229
   },
   "2007-07-11": {
     "filename": "2007-07-11",
@@ -2431,9 +2431,9 @@
     "vote_result": "Passed",
     "yea_count": "403",
     "nay_count": "16",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 278,
+    "supported_sentences": 61,
+    "factuality_score": 0.2194
   },
   "2007-08-01": {
     "filename": "2007-08-01",
@@ -2443,9 +2443,9 @@
     "vote_result": "Passed",
     "yea_count": "225",
     "nay_count": "204",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 419,
+    "supported_sentences": 96,
+    "factuality_score": 0.2291
   },
   "2007-09-19": {
     "filename": "2007-09-19",
@@ -2455,21 +2455,21 @@
     "vote_result": "Passed",
     "yea_count": "405",
     "nay_count": "7",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 279,
+    "supported_sentences": 63,
+    "factuality_score": 0.2258
   },
   "2007-09-26": {
     "filename": "2007-09-26",
     "date": "2007-09-26",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "110",
+    "bill_number": "H.R. 3668",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 7,
+    "supported_sentences": 3,
+    "factuality_score": 0.4286
   },
   "2007-10-15": {
     "filename": "2007-10-15",
@@ -2479,9 +2479,9 @@
     "vote_result": "Passed",
     "yea_count": "382",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 238,
+    "supported_sentences": 52,
+    "factuality_score": 0.2185
   },
   "2007-10-16": {
     "filename": "2007-10-16",
@@ -2491,9 +2491,9 @@
     "vote_result": "Passed",
     "yea_count": "411",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 221,
+    "supported_sentences": 50,
+    "factuality_score": 0.2262
   },
   "2007-10-25": {
     "filename": "2007-10-25",
@@ -2503,9 +2503,9 @@
     "vote_result": "Passed",
     "yea_count": "265",
     "nay_count": "142",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 225,
+    "supported_sentences": 43,
+    "factuality_score": 0.1911
   },
   "2007-12-12": {
     "filename": "2007-12-12",
@@ -2515,9 +2515,9 @@
     "vote_result": "Passed",
     "yea_count": "211",
     "nay_count": "180",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 290,
+    "supported_sentences": 58,
+    "factuality_score": 0.2
   },
   "2007-12-19": {
     "filename": "2007-12-19",
@@ -2527,9 +2527,9 @@
     "vote_result": "Passed",
     "yea_count": "411",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 287,
+    "supported_sentences": 62,
+    "factuality_score": 0.216
   },
   "2008-01-23": {
     "filename": "2008-01-23",
@@ -2539,9 +2539,9 @@
     "vote_result": "Failed",
     "yea_count": "260",
     "nay_count": "152",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 219,
+    "supported_sentences": 57,
+    "factuality_score": 0.2603
   },
   "2008-02-07": {
     "filename": "2008-02-07",
@@ -2551,9 +2551,9 @@
     "vote_result": "Passed",
     "yea_count": "384",
     "nay_count": "23",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 281,
+    "supported_sentences": 59,
+    "factuality_score": 0.21
   },
   "2008-03-05": {
     "filename": "2008-03-05",
@@ -2563,9 +2563,9 @@
     "vote_result": "Passed",
     "yea_count": "268",
     "nay_count": "148",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 329,
+    "supported_sentences": 77,
+    "factuality_score": 0.234
   },
   "2008-04-08": {
     "filename": "2008-04-08",
@@ -2575,9 +2575,9 @@
     "vote_result": "Passed",
     "yea_count": "392",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 266,
+    "supported_sentences": 68,
+    "factuality_score": 0.2556
   },
   "2008-04-23": {
     "filename": "2008-04-23",
@@ -2587,21 +2587,21 @@
     "vote_result": "Passed",
     "yea_count": "349",
     "nay_count": "62",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 294,
+    "supported_sentences": 60,
+    "factuality_score": 0.2041
   },
   "2008-04-30": {
     "filename": "2008-04-30",
     "date": "2008-04-30",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "110",
+    "bill_number": "H.R. 5919",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 140,
+    "supported_sentences": 15,
+    "factuality_score": 0.1071
   },
   "2008-05-14": {
     "filename": "2008-05-14",
@@ -2611,9 +2611,9 @@
     "vote_result": "Passed",
     "yea_count": "421",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 317,
+    "supported_sentences": 79,
+    "factuality_score": 0.2492
   },
   "2008-06-04": {
     "filename": "2008-06-04",
@@ -2623,9 +2623,9 @@
     "vote_result": "Passed",
     "yea_count": "405",
     "nay_count": "10",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 314,
+    "supported_sentences": 69,
+    "factuality_score": 0.2197
   },
   "2008-06-12": {
     "filename": "2008-06-12",
@@ -2635,9 +2635,9 @@
     "vote_result": "Passed",
     "yea_count": "416",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 179,
+    "supported_sentences": 40,
+    "factuality_score": 0.2235
   },
   "2008-06-24": {
     "filename": "2008-06-24",
@@ -2647,9 +2647,9 @@
     "vote_result": "Passed",
     "yea_count": "355",
     "nay_count": "59",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 307,
+    "supported_sentences": 63,
+    "factuality_score": 0.2052
   },
   "2008-07-15": {
     "filename": "2008-07-15",
@@ -2659,9 +2659,9 @@
     "vote_result": "Passed",
     "yea_count": "383",
     "nay_count": "41",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 373,
+    "supported_sentences": 89,
+    "factuality_score": 0.2386
   },
   "2008-07-24": {
     "filename": "2008-07-24",
@@ -2671,9 +2671,9 @@
     "vote_result": "Passed",
     "yea_count": "231",
     "nay_count": "184",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 200,
+    "supported_sentences": 47,
+    "factuality_score": 0.235
   },
   "2008-07-30": {
     "filename": "2008-07-30",
@@ -2683,9 +2683,9 @@
     "vote_result": "Passed",
     "yea_count": "326",
     "nay_count": "102",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 361,
+    "supported_sentences": 60,
+    "factuality_score": 0.1662
   },
   "2008-09-23": {
     "filename": "2008-09-23",
@@ -2695,9 +2695,9 @@
     "vote_result": "Passed",
     "yea_count": "376",
     "nay_count": "47",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 287,
+    "supported_sentences": 74,
+    "factuality_score": 0.2578
   },
   "2008-09-24": {
     "filename": "2008-09-24",
@@ -2707,9 +2707,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 312,
+    "supported_sentences": 81,
+    "factuality_score": 0.2596
   },
   "2008-09-25": {
     "filename": "2008-09-25",
@@ -2719,9 +2719,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 434,
+    "supported_sentences": 83,
+    "factuality_score": 0.1912
   },
   "2008-09-26": {
     "filename": "2008-09-26",
@@ -2731,21 +2731,21 @@
     "vote_result": "Passed",
     "yea_count": "403",
     "nay_count": "6",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 322,
+    "supported_sentences": 79,
+    "factuality_score": 0.2453
   },
   "2008-09-29": {
     "filename": "2008-09-29",
     "date": "2008-09-29",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "110",
+    "bill_number": "H.R. 7198",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 15,
+    "supported_sentences": 3,
+    "factuality_score": 0.2
   },
   "2008-10-03": {
     "filename": "2008-10-03",
@@ -2755,9 +2755,9 @@
     "vote_result": "Passed",
     "yea_count": "263",
     "nay_count": "171",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 185,
+    "supported_sentences": 27,
+    "factuality_score": 0.1459
   },
   "2009-01-14": {
     "filename": "2009-01-14",
@@ -2767,9 +2767,9 @@
     "vote_result": "Passed",
     "yea_count": "289",
     "nay_count": "139",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 217,
+    "supported_sentences": 43,
+    "factuality_score": 0.1982
   },
   "2009-02-04": {
     "filename": "2009-02-04",
@@ -2779,9 +2779,9 @@
     "vote_result": "Passed",
     "yea_count": "290",
     "nay_count": "135",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 165,
+    "supported_sentences": 42,
+    "factuality_score": 0.2545
   },
   "2009-03-05": {
     "filename": "2009-03-05",
@@ -2791,9 +2791,9 @@
     "vote_result": "Passed",
     "yea_count": "416",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 255,
+    "supported_sentences": 41,
+    "factuality_score": 0.1608
   },
   "2009-03-30": {
     "filename": "2009-03-30",
@@ -2803,9 +2803,9 @@
     "vote_result": "Passed",
     "yea_count": "390",
     "nay_count": "6",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 298,
+    "supported_sentences": 78,
+    "factuality_score": 0.2617
   },
   "2009-03-31": {
     "filename": "2009-03-31",
@@ -2815,9 +2815,9 @@
     "vote_result": "Passed",
     "yea_count": "422",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 941,
+    "supported_sentences": 124,
+    "factuality_score": 0.1318
   },
   "2009-04-02": {
     "filename": "2009-04-02",
@@ -2827,9 +2827,9 @@
     "vote_result": "Passed",
     "yea_count": "298",
     "nay_count": "112",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 344,
+    "supported_sentences": 68,
+    "factuality_score": 0.1977
   },
   "2009-05-13": {
     "filename": "2009-05-13",
@@ -2839,9 +2839,9 @@
     "vote_result": "Passed",
     "yea_count": "424",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 294,
+    "supported_sentences": 48,
+    "factuality_score": 0.1633
   },
   "2009-06-03": {
     "filename": "2009-06-03",
@@ -2851,9 +2851,9 @@
     "vote_result": "Passed",
     "yea_count": "417",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 380,
+    "supported_sentences": 79,
+    "factuality_score": 0.2079
   },
   "2009-06-12": {
     "filename": "2009-06-12",
@@ -2863,9 +2863,9 @@
     "vote_result": "Passed",
     "yea_count": "307",
     "nay_count": "97",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 160,
+    "supported_sentences": 36,
+    "factuality_score": 0.225
   },
   "2009-06-16": {
     "filename": "2009-06-16",
@@ -2875,9 +2875,9 @@
     "vote_result": "Passed",
     "yea_count": "411",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 226,
+    "supported_sentences": 48,
+    "factuality_score": 0.2124
   },
   "2009-07-08": {
     "filename": "2009-07-08",
@@ -2887,9 +2887,9 @@
     "vote_result": "Passed",
     "yea_count": "417",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 291,
+    "supported_sentences": 67,
+    "factuality_score": 0.2302
   },
   "2009-07-22": {
     "filename": "2009-07-22",
@@ -2899,9 +2899,9 @@
     "vote_result": "Passed",
     "yea_count": "420",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 223,
+    "supported_sentences": 65,
+    "factuality_score": 0.2915
   },
   "2009-09-14": {
     "filename": "2009-09-14",
@@ -2911,9 +2911,9 @@
     "vote_result": "Passed",
     "yea_count": "387",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 194,
+    "supported_sentences": 49,
+    "factuality_score": 0.2526
   },
   "2009-09-16": {
     "filename": "2009-09-16",
@@ -2923,9 +2923,9 @@
     "vote_result": "Passed",
     "yea_count": "415",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 217,
+    "supported_sentences": 45,
+    "factuality_score": 0.2074
   },
   "2009-09-24": {
     "filename": "2009-09-24",
@@ -2935,19 +2935,19 @@
     "vote_result": "Passed",
     "yea_count": "406",
     "nay_count": "18",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 280,
+    "supported_sentences": 69,
+    "factuality_score": 0.2464
   },
   "2009-09-30": {
     "filename": "2009-09-30",
     "date": "2009-09-30",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "111",
+    "bill_number": "H.R. 3663",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 3,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -2959,9 +2959,9 @@
     "vote_result": "Passed",
     "yea_count": "415",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 349,
+    "supported_sentences": 93,
+    "factuality_score": 0.2665
   },
   "2009-10-08": {
     "filename": "2009-10-08",
@@ -2971,9 +2971,9 @@
     "vote_result": "Passed",
     "yea_count": "416",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 460,
+    "supported_sentences": 111,
+    "factuality_score": 0.2413
   },
   "2009-10-14": {
     "filename": "2009-10-14",
@@ -2983,9 +2983,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 226,
+    "supported_sentences": 61,
+    "factuality_score": 0.2699
   },
   "2009-10-21": {
     "filename": "2009-10-21",
@@ -2995,9 +2995,9 @@
     "vote_result": "Passed",
     "yea_count": "408",
     "nay_count": "9",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 255,
+    "supported_sentences": 71,
+    "factuality_score": 0.2784
   },
   "2009-11-07": {
     "filename": "2009-11-07",
@@ -3007,9 +3007,9 @@
     "vote_result": "Passed",
     "yea_count": "220",
     "nay_count": "215",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 7806,
+    "supported_sentences": 924,
+    "factuality_score": 0.1184
   },
   "2009-11-19": {
     "filename": "2009-11-19",
@@ -3019,9 +3019,9 @@
     "vote_result": "Passed",
     "yea_count": "243",
     "nay_count": "183",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 234,
+    "supported_sentences": 44,
+    "factuality_score": 0.188
   },
   "2009-12-01": {
     "filename": "2009-12-01",
@@ -3031,9 +3031,9 @@
     "vote_result": "Passed",
     "yea_count": "385",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 230,
+    "supported_sentences": 44,
+    "factuality_score": 0.1913
   },
   "2009-12-15": {
     "filename": "2009-12-15",
@@ -3043,9 +3043,9 @@
     "vote_result": "Passed",
     "yea_count": "426",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 179,
+    "supported_sentences": 33,
+    "factuality_score": 0.1844
   },
   "2010-01-13": {
     "filename": "2010-01-13",
@@ -3055,9 +3055,9 @@
     "vote_result": "Passed",
     "yea_count": "369",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 186,
+    "supported_sentences": 41,
+    "factuality_score": 0.2204
   },
   "2010-01-26": {
     "filename": "2010-01-26",
@@ -3067,9 +3067,9 @@
     "vote_result": "Passed",
     "yea_count": "398",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 184,
+    "supported_sentences": 35,
+    "factuality_score": 0.1902
   },
   "2010-02-23": {
     "filename": "2010-02-23",
@@ -3079,9 +3079,9 @@
     "vote_result": "Passed",
     "yea_count": "408",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 259,
+    "supported_sentences": 59,
+    "factuality_score": 0.2278
   },
   "2010-02-24": {
     "filename": "2010-02-24",
@@ -3091,9 +3091,9 @@
     "vote_result": "Passed",
     "yea_count": "406",
     "nay_count": "19",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 279,
+    "supported_sentences": 68,
+    "factuality_score": 0.2437
   },
   "2010-02-25": {
     "filename": "2010-02-25",
@@ -3103,9 +3103,9 @@
     "vote_result": "Passed",
     "yea_count": "315",
     "nay_count": "97",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 197,
+    "supported_sentences": 39,
+    "factuality_score": 0.198
   },
   "2010-03-19": {
     "filename": "2010-03-19",
@@ -3115,9 +3115,9 @@
     "vote_result": "Passed",
     "yea_count": "395",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 528,
+    "supported_sentences": 54,
+    "factuality_score": 0.1023
   },
   "2010-03-21": {
     "filename": "2010-03-21",
@@ -3127,9 +3127,9 @@
     "vote_result": "Passed",
     "yea_count": "220",
     "nay_count": "211",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 196,
+    "supported_sentences": 42,
+    "factuality_score": 0.2143
   },
   "2010-03-25": {
     "filename": "2010-03-25",
@@ -3139,9 +3139,9 @@
     "vote_result": "Passed",
     "yea_count": "220",
     "nay_count": "207",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 236,
+    "supported_sentences": 58,
+    "factuality_score": 0.2458
   },
   "2010-05-12": {
     "filename": "2010-05-12",
@@ -3151,9 +3151,9 @@
     "vote_result": "Passed",
     "yea_count": "418",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 297,
+    "supported_sentences": 61,
+    "factuality_score": 0.2054
   },
   "2010-05-25": {
     "filename": "2010-05-25",
@@ -3163,9 +3163,9 @@
     "vote_result": "Passed",
     "yea_count": "414",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 250,
+    "supported_sentences": 53,
+    "factuality_score": 0.212
   },
   "2010-06-22": {
     "filename": "2010-06-22",
@@ -3175,9 +3175,9 @@
     "vote_result": "Passed",
     "yea_count": "388",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 247,
+    "supported_sentences": 61,
+    "factuality_score": 0.247
   },
   "2010-06-24": {
     "filename": "2010-06-24",
@@ -3187,9 +3187,9 @@
     "vote_result": "Passed",
     "yea_count": "417",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 215,
+    "supported_sentences": 50,
+    "factuality_score": 0.2326
   },
   "2010-07-29": {
     "filename": "2010-07-29",
@@ -3199,9 +3199,9 @@
     "vote_result": "Failed",
     "yea_count": "255",
     "nay_count": "159",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 243,
+    "supported_sentences": 37,
+    "factuality_score": 0.1523
   },
   "2010-09-15": {
     "filename": "2010-09-15",
@@ -3211,9 +3211,9 @@
     "vote_result": "Passed",
     "yea_count": "408",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 332,
+    "supported_sentences": 77,
+    "factuality_score": 0.2319
   },
   "2010-09-22": {
     "filename": "2010-09-22",
@@ -3223,9 +3223,9 @@
     "vote_result": "Passed",
     "yea_count": "324",
     "nay_count": "64",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 171,
+    "supported_sentences": 32,
+    "factuality_score": 0.1871
   },
   "2010-09-23": {
     "filename": "2010-09-23",
@@ -3235,9 +3235,9 @@
     "vote_result": "Passed",
     "yea_count": "384",
     "nay_count": "32",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 272,
+    "supported_sentences": 72,
+    "factuality_score": 0.2647
   },
   "2010-09-29": {
     "filename": "2010-09-29",
@@ -3247,9 +3247,9 @@
     "vote_result": "Passed",
     "yea_count": "268",
     "nay_count": "160",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 433,
+    "supported_sentences": 122,
+    "factuality_score": 0.2818
   },
   "2010-11-29": {
     "filename": "2010-11-29",
@@ -3259,9 +3259,9 @@
     "vote_result": "Passed",
     "yea_count": "363",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 231,
+    "supported_sentences": 52,
+    "factuality_score": 0.2251
   },
   "2010-12-07": {
     "filename": "2010-12-07",
@@ -3271,21 +3271,21 @@
     "vote_result": "Passed",
     "yea_count": "387",
     "nay_count": "1",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 162,
+    "supported_sentences": 33,
+    "factuality_score": 0.2037
   },
   "2010-12-16": {
     "filename": "2010-12-16",
     "date": "2010-12-16",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "111",
+    "bill_number": "H.R. 2941",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 10,
+    "supported_sentences": 3,
+    "factuality_score": 0.3
   },
   "2010-12-22": {
     "filename": "2010-12-22",
@@ -3295,9 +3295,9 @@
     "vote_result": "Passed",
     "yea_count": "206",
     "nay_count": "60",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 467,
+    "supported_sentences": 118,
+    "factuality_score": 0.2527
   },
   "2011-01-19": {
     "filename": "2011-01-19",
@@ -3307,9 +3307,9 @@
     "vote_result": "Passed",
     "yea_count": "245",
     "nay_count": "189",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 132,
+    "supported_sentences": 26,
+    "factuality_score": 0.197
   },
   "2011-04-13": {
     "filename": "2011-04-13",
@@ -3319,9 +3319,9 @@
     "vote_result": "Passed",
     "yea_count": "236",
     "nay_count": "183",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 265,
+    "supported_sentences": 66,
+    "factuality_score": 0.2491
   },
   "2011-05-03": {
     "filename": "2011-05-03",
@@ -3331,9 +3331,9 @@
     "vote_result": "Passed",
     "yea_count": "238",
     "nay_count": "183",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 179,
+    "supported_sentences": 35,
+    "factuality_score": 0.1955
   },
   "2011-05-04": {
     "filename": "2011-05-04",
@@ -3343,9 +3343,9 @@
     "vote_result": "Passed",
     "yea_count": "251",
     "nay_count": "175",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 211,
+    "supported_sentences": 46,
+    "factuality_score": 0.218
   },
   "2011-05-24": {
     "filename": "2011-05-24",
@@ -3355,9 +3355,9 @@
     "vote_result": "Failed",
     "yea_count": "182",
     "nay_count": "232",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 152,
+    "supported_sentences": 41,
+    "factuality_score": 0.2697
   },
   "2011-05-25": {
     "filename": "2011-05-25",
@@ -3367,21 +3367,21 @@
     "vote_result": "Passed",
     "yea_count": "234",
     "nay_count": "185",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 257,
+    "supported_sentences": 54,
+    "factuality_score": 0.2101
   },
   "2011-09-20": {
     "filename": "2011-09-20",
     "date": "2011-09-20",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "112",
+    "bill_number": "H.R. 2005",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 8,
+    "supported_sentences": 1,
+    "factuality_score": 0.125
   },
   "2011-10-13": {
     "filename": "2011-10-13",
@@ -3391,9 +3391,9 @@
     "vote_result": "Passed",
     "yea_count": "251",
     "nay_count": "172",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 225,
+    "supported_sentences": 44,
+    "factuality_score": 0.1956
   },
   "2012-02-01": {
     "filename": "2012-02-01",
@@ -3403,9 +3403,9 @@
     "vote_result": "Passed",
     "yea_count": "267",
     "nay_count": "159",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 206,
+    "supported_sentences": 47,
+    "factuality_score": 0.2282
   },
   "2012-03-22": {
     "filename": "2012-03-22",
@@ -3415,9 +3415,9 @@
     "vote_result": "Passed",
     "yea_count": "223",
     "nay_count": "181",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 281,
+    "supported_sentences": 70,
+    "factuality_score": 0.2491
   },
   "2012-05-30": {
     "filename": "2012-05-30",
@@ -3427,9 +3427,9 @@
     "vote_result": "Passed",
     "yea_count": "387",
     "nay_count": "5",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 124,
+    "supported_sentences": 22,
+    "factuality_score": 0.1774
   },
   "2012-07-11": {
     "filename": "2012-07-11",
@@ -3439,21 +3439,21 @@
     "vote_result": "Passed",
     "yea_count": "244",
     "nay_count": "185",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 185,
+    "supported_sentences": 40,
+    "factuality_score": 0.2162
   },
   "2012-09-19": {
     "filename": "2012-09-19",
     "date": "2012-09-19",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "112",
+    "bill_number": "H.R. 6433",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 27,
+    "supported_sentences": 10,
+    "factuality_score": 0.3704
   },
   "2012-12-19": {
     "filename": "2012-12-19",
@@ -3463,9 +3463,9 @@
     "vote_result": "Passed",
     "yea_count": "401",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 213,
+    "supported_sentences": 52,
+    "factuality_score": 0.2441
   },
   "2013-01-22": {
     "filename": "2013-01-22",
@@ -3475,9 +3475,9 @@
     "vote_result": "Passed",
     "yea_count": "395",
     "nay_count": "29",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 186,
+    "supported_sentences": 48,
+    "factuality_score": 0.2581
   },
   "2013-02-04": {
     "filename": "2013-02-04",
@@ -3487,9 +3487,9 @@
     "vote_result": "Passed",
     "yea_count": "352",
     "nay_count": "50",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 189,
+    "supported_sentences": 33,
+    "factuality_score": 0.1746
   },
   "2013-03-04": {
     "filename": "2013-03-04",
@@ -3499,9 +3499,9 @@
     "vote_result": "Passed",
     "yea_count": "370",
     "nay_count": "28",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 147,
+    "supported_sentences": 27,
+    "factuality_score": 0.1837
   },
   "2013-05-16": {
     "filename": "2013-05-16",
@@ -3511,9 +3511,9 @@
     "vote_result": "Passed",
     "yea_count": "229",
     "nay_count": "195",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 178,
+    "supported_sentences": 58,
+    "factuality_score": 0.3258
   },
   "2013-06-03": {
     "filename": "2013-06-03",
@@ -3523,9 +3523,9 @@
     "vote_result": "Passed",
     "yea_count": "390",
     "nay_count": "12",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 279,
+    "supported_sentences": 40,
+    "factuality_score": 0.1434
   },
   "2013-07-17": {
     "filename": "2013-07-17",
@@ -3535,33 +3535,33 @@
     "vote_result": "Passed",
     "yea_count": "251",
     "nay_count": "174",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 242,
+    "supported_sentences": 58,
+    "factuality_score": 0.2397
   },
   "2013-07-30": {
     "filename": "2013-07-30",
     "date": "2013-07-30",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "113",
+    "bill_number": "H.R. 2094",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 1,
+    "factuality_score": 0.5
   },
   "2013-09-28": {
     "filename": "2013-09-28",
     "date": "2013-09-28",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "113",
+    "bill_number": "H.R. 3204",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 7,
+    "supported_sentences": 4,
+    "factuality_score": 0.5714
   },
   "2013-10-02": {
     "filename": "2013-10-02",
@@ -3571,9 +3571,9 @@
     "vote_result": "Passed",
     "yea_count": "254",
     "nay_count": "171",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 177,
+    "supported_sentences": 32,
+    "factuality_score": 0.1808
   },
   "2013-10-07": {
     "filename": "2013-10-07",
@@ -3583,9 +3583,9 @@
     "vote_result": "Passed",
     "yea_count": "235",
     "nay_count": "162",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 137,
+    "supported_sentences": 21,
+    "factuality_score": 0.1533
   },
   "2013-11-15": {
     "filename": "2013-11-15",
@@ -3595,9 +3595,9 @@
     "vote_result": "Passed",
     "yea_count": "261",
     "nay_count": "157",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 161,
+    "supported_sentences": 39,
+    "factuality_score": 0.2422
   },
   "2013-12-11": {
     "filename": "2013-12-11",
@@ -3607,9 +3607,9 @@
     "vote_result": "Passed",
     "yea_count": "295",
     "nay_count": "103",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 170,
+    "supported_sentences": 37,
+    "factuality_score": 0.2176
   },
   "2014-01-08": {
     "filename": "2014-01-08",
@@ -3619,9 +3619,9 @@
     "vote_result": "Passed",
     "yea_count": "388",
     "nay_count": "18",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 194,
+    "supported_sentences": 25,
+    "factuality_score": 0.1289
   },
   "2014-01-10": {
     "filename": "2014-01-10",
@@ -3631,9 +3631,9 @@
     "vote_result": "Passed",
     "yea_count": "291",
     "nay_count": "122",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 121,
+    "supported_sentences": 22,
+    "factuality_score": 0.1818
   },
   "2014-01-16": {
     "filename": "2014-01-16",
@@ -3643,9 +3643,9 @@
     "vote_result": "Passed",
     "yea_count": "259",
     "nay_count": "154",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 225,
+    "supported_sentences": 43,
+    "factuality_score": 0.1911
   },
   "2014-01-28": {
     "filename": "2014-01-28",
@@ -3655,9 +3655,9 @@
     "vote_result": "Passed",
     "yea_count": "227",
     "nay_count": "188",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 143,
+    "supported_sentences": 37,
+    "factuality_score": 0.2587
   },
   "2014-03-14": {
     "filename": "2014-03-14",
@@ -3667,21 +3667,21 @@
     "vote_result": "Passed",
     "yea_count": "238",
     "nay_count": "181",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 143,
+    "supported_sentences": 27,
+    "factuality_score": 0.1888
   },
   "2014-03-27": {
     "filename": "2014-03-27",
     "date": "2014-03-27",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "113",
+    "bill_number": "H.R. 4302",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 1,
+    "factuality_score": 0.5
   },
   "2014-04-09": {
     "filename": "2014-04-09",
@@ -3691,9 +3691,9 @@
     "vote_result": "Failed",
     "yea_count": "257",
     "nay_count": "159",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 218,
+    "supported_sentences": 68,
+    "factuality_score": 0.3119
   },
   "2014-04-29": {
     "filename": "2014-04-29",
@@ -3703,45 +3703,45 @@
     "vote_result": "Passed",
     "yea_count": "268",
     "nay_count": "150",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 315,
+    "supported_sentences": 56,
+    "factuality_score": 0.1778
   },
   "2014-06-24": {
     "filename": "2014-06-24",
     "date": "2014-06-24",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "113",
+    "bill_number": "H.R. 4631",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 3,
+    "supported_sentences": 1,
+    "factuality_score": 0.3333
   },
   "2014-07-28": {
     "filename": "2014-07-28",
     "date": "2014-07-28",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "113",
+    "bill_number": "H.R. 594",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 13,
+    "supported_sentences": 6,
+    "factuality_score": 0.4615
   },
   "2014-09-09": {
     "filename": "2014-09-09",
     "date": "2014-09-09",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "113",
+    "bill_number": "H.R. 4067",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 44,
+    "supported_sentences": 5,
+    "factuality_score": 0.1136
   },
   "2014-09-11": {
     "filename": "2014-09-11",
@@ -3751,9 +3751,9 @@
     "vote_result": "Passed",
     "yea_count": "247",
     "nay_count": "167",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 234,
+    "supported_sentences": 57,
+    "factuality_score": 0.2436
   },
   "2014-09-16": {
     "filename": "2014-09-16",
@@ -3763,21 +3763,21 @@
     "vote_result": "Passed",
     "yea_count": "410",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 335,
+    "supported_sentences": 88,
+    "factuality_score": 0.2627
   },
   "2014-12-09": {
     "filename": "2014-12-09",
     "date": "2014-12-09",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "113",
+    "bill_number": "H.R. 5185",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 16,
+    "supported_sentences": 6,
+    "factuality_score": 0.375
   },
   "2015-02-03": {
     "filename": "2015-02-03",
@@ -3787,9 +3787,9 @@
     "vote_result": "Passed",
     "yea_count": "239",
     "nay_count": "186",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 100,
+    "supported_sentences": 16,
+    "factuality_score": 0.16
   },
   "2015-03-16": {
     "filename": "2015-03-16",
@@ -3799,9 +3799,9 @@
     "vote_result": "Passed",
     "yea_count": "395",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 289,
+    "supported_sentences": 53,
+    "factuality_score": 0.1834
   },
   "2015-03-26": {
     "filename": "2015-03-26",
@@ -3811,9 +3811,9 @@
     "vote_result": "Passed",
     "yea_count": "392",
     "nay_count": "37",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 470,
+    "supported_sentences": 89,
+    "factuality_score": 0.1894
   },
   "2015-06-23": {
     "filename": "2015-06-23",
@@ -3823,9 +3823,9 @@
     "vote_result": "Passed",
     "yea_count": "244",
     "nay_count": "154",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 245,
+    "supported_sentences": 65,
+    "factuality_score": 0.2653
   },
   "2015-07-10": {
     "filename": "2015-07-10",
@@ -3835,9 +3835,9 @@
     "vote_result": "Passed",
     "yea_count": "344",
     "nay_count": "77",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 166,
+    "supported_sentences": 15,
+    "factuality_score": 0.0904
   },
   "2015-07-29": {
     "filename": "2015-07-29",
@@ -3847,9 +3847,9 @@
     "vote_result": "Passed",
     "yea_count": "424",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 225,
+    "supported_sentences": 66,
+    "factuality_score": 0.2933
   },
   "2015-09-18": {
     "filename": "2015-09-18",
@@ -3859,21 +3859,21 @@
     "vote_result": "Passed",
     "yea_count": "241",
     "nay_count": "187",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 144,
+    "supported_sentences": 21,
+    "factuality_score": 0.1458
   },
   "2015-09-28": {
     "filename": "2015-09-28",
     "date": "2015-09-28",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "114",
+    "bill_number": "H.R. 1624",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 5,
+    "supported_sentences": 1,
+    "factuality_score": 0.2
   },
   "2015-09-29": {
     "filename": "2015-09-29",
@@ -3883,9 +3883,9 @@
     "vote_result": "Passed",
     "yea_count": "236",
     "nay_count": "193",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 175,
+    "supported_sentences": 40,
+    "factuality_score": 0.2286
   },
   "2015-09-30": {
     "filename": "2015-09-30",
@@ -3895,9 +3895,9 @@
     "vote_result": "Passed",
     "yea_count": "241",
     "nay_count": "185",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 298,
+    "supported_sentences": 56,
+    "factuality_score": 0.1879
   },
   "2015-10-23": {
     "filename": "2015-10-23",
@@ -3907,33 +3907,33 @@
     "vote_result": "Passed",
     "yea_count": "240",
     "nay_count": "189",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 174,
+    "supported_sentences": 46,
+    "factuality_score": 0.2644
   },
   "2015-11-30": {
     "filename": "2015-11-30",
     "date": "2015-11-30",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "114",
+    "bill_number": "H.R. 2212",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 2,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "2015-12-10": {
     "filename": "2015-12-10",
     "date": "2015-12-10",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "114",
+    "bill_number": "H.R. 3831",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 1,
+    "factuality_score": 0.5
   },
   "2015-12-16": {
     "filename": "2015-12-16",
@@ -3943,9 +3943,9 @@
     "vote_result": "Passed",
     "yea_count": "421",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 172,
+    "supported_sentences": 31,
+    "factuality_score": 0.1802
   },
   "2016-01-06": {
     "filename": "2016-01-06",
@@ -3955,9 +3955,9 @@
     "vote_result": "Passed",
     "yea_count": "240",
     "nay_count": "181",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 152,
+    "supported_sentences": 27,
+    "factuality_score": 0.1776
   },
   "2016-02-02": {
     "filename": "2016-02-02",
@@ -3967,9 +3967,9 @@
     "vote_result": "Failed",
     "yea_count": "241",
     "nay_count": "186",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 184,
+    "supported_sentences": 33,
+    "factuality_score": 0.1793
   },
   "2016-02-12": {
     "filename": "2016-02-12",
@@ -3979,9 +3979,9 @@
     "vote_result": "Passed",
     "yea_count": "266",
     "nay_count": "144",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 148,
+    "supported_sentences": 22,
+    "factuality_score": 0.1486
   },
   "2016-03-02": {
     "filename": "2016-03-02",
@@ -3991,9 +3991,9 @@
     "vote_result": "Passed",
     "yea_count": "406",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 215,
+    "supported_sentences": 63,
+    "factuality_score": 0.293
   },
   "2016-05-11": {
     "filename": "2016-05-11",
@@ -4003,9 +4003,9 @@
     "vote_result": "Passed",
     "yea_count": "412",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 170,
+    "supported_sentences": 43,
+    "factuality_score": 0.2529
   },
   "2016-05-12": {
     "filename": "2016-05-12",
@@ -4015,9 +4015,9 @@
     "vote_result": "Passed",
     "yea_count": "415",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 164,
+    "supported_sentences": 35,
+    "factuality_score": 0.2134
   },
   "2016-05-18": {
     "filename": "2016-05-18",
@@ -4027,9 +4027,9 @@
     "vote_result": "Passed",
     "yea_count": "241",
     "nay_count": "184",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 305,
+    "supported_sentences": 64,
+    "factuality_score": 0.2098
   },
   "2016-07-06": {
     "filename": "2016-07-06",
@@ -4039,9 +4039,9 @@
     "vote_result": "Passed",
     "yea_count": "422",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 332,
+    "supported_sentences": 67,
+    "factuality_score": 0.2018
   },
   "2016-09-20": {
     "filename": "2016-09-20",
@@ -4051,9 +4051,9 @@
     "vote_result": "Passed",
     "yea_count": "383",
     "nay_count": "22",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 318,
+    "supported_sentences": 66,
+    "factuality_score": 0.2075
   },
   "2016-09-21": {
     "filename": "2016-09-21",
@@ -4063,9 +4063,9 @@
     "vote_result": "Passed",
     "yea_count": "420",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 267,
+    "supported_sentences": 46,
+    "factuality_score": 0.1723
   },
   "2016-11-30": {
     "filename": "2016-11-30",
@@ -4075,9 +4075,9 @@
     "vote_result": "Passed",
     "yea_count": "392",
     "nay_count": "26",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 281,
+    "supported_sentences": 63,
+    "factuality_score": 0.2242
   },
   "2017-01-09": {
     "filename": "2017-01-09",
@@ -4087,9 +4087,9 @@
     "vote_result": "Passed",
     "yea_count": "404",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 217,
+    "supported_sentences": 57,
+    "factuality_score": 0.2627
   },
   "2017-02-16": {
     "filename": "2017-02-16",
@@ -4099,9 +4099,9 @@
     "vote_result": "Passed",
     "yea_count": "230",
     "nay_count": "188",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 246,
+    "supported_sentences": 53,
+    "factuality_score": 0.2154
   },
   "2017-03-22": {
     "filename": "2017-03-22",
@@ -4111,9 +4111,9 @@
     "vote_result": "Passed",
     "yea_count": "236",
     "nay_count": "175",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 298,
+    "supported_sentences": 61,
+    "factuality_score": 0.2047
   },
   "2017-04-05": {
     "filename": "2017-04-05",
@@ -4123,9 +4123,9 @@
     "vote_result": "Passed",
     "yea_count": "400",
     "nay_count": "16",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 281,
+    "supported_sentences": 56,
+    "factuality_score": 0.1993
   },
   "2017-05-04": {
     "filename": "2017-05-04",
@@ -4135,9 +4135,9 @@
     "vote_result": "Passed",
     "yea_count": "217",
     "nay_count": "213",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 240,
+    "supported_sentences": 56,
+    "factuality_score": 0.2333
   },
   "2017-06-28": {
     "filename": "2017-06-28",
@@ -4147,33 +4147,33 @@
     "vote_result": "Passed",
     "yea_count": "218",
     "nay_count": "210",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 292,
+    "supported_sentences": 67,
+    "factuality_score": 0.2295
   },
   "2017-07-12": {
     "filename": "2017-07-12",
     "date": "2017-07-12",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "115",
+    "bill_number": "H.R. 2430",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 1,
+    "supported_sentences": 1,
+    "factuality_score": 1.0
   },
   "2017-09-12": {
     "filename": "2017-09-12",
     "date": "2017-09-12",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "115",
+    "bill_number": "H.R. 931",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 15,
+    "supported_sentences": 2,
+    "factuality_score": 0.1333
   },
   "2017-11-02": {
     "filename": "2017-11-02",
@@ -4183,9 +4183,9 @@
     "vote_result": "Passed",
     "yea_count": "307",
     "nay_count": "111",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 278,
+    "supported_sentences": 62,
+    "factuality_score": 0.223
   },
   "2017-11-03": {
     "filename": "2017-11-03",
@@ -4195,33 +4195,33 @@
     "vote_result": "Passed",
     "yea_count": "242",
     "nay_count": "174",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 142,
+    "supported_sentences": 26,
+    "factuality_score": 0.1831
   },
   "2017-11-15": {
     "filename": "2017-11-15",
     "date": "2017-11-15",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "115",
+    "bill_number": "H.R. 4374",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 1,
+    "factuality_score": 0.5
   },
   "2017-12-18": {
     "filename": "2017-12-18",
     "date": "2017-12-18",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "115",
+    "bill_number": "H.R. 3759",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 8,
+    "supported_sentences": 5,
+    "factuality_score": 0.625
   },
   "2018-02-06": {
     "filename": "2018-02-06",
@@ -4231,9 +4231,9 @@
     "vote_result": "Passed",
     "yea_count": "266",
     "nay_count": "157",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 220,
+    "supported_sentences": 65,
+    "factuality_score": 0.2955
   },
   "2018-02-26": {
     "filename": "2018-02-26",
@@ -4243,9 +4243,9 @@
     "vote_result": "Passed",
     "yea_count": "387",
     "nay_count": "13",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 223,
+    "supported_sentences": 48,
+    "factuality_score": 0.2152
   },
   "2018-03-13": {
     "filename": "2018-03-13",
@@ -4255,9 +4255,9 @@
     "vote_result": "Failed",
     "yea_count": "259",
     "nay_count": "140",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 265,
+    "supported_sentences": 66,
+    "factuality_score": 0.2491
   },
   "2018-03-21": {
     "filename": "2018-03-21",
@@ -4267,9 +4267,9 @@
     "vote_result": "Passed",
     "yea_count": "267",
     "nay_count": "149",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 193,
+    "supported_sentences": 35,
+    "factuality_score": 0.1813
   },
   "2018-05-22": {
     "filename": "2018-05-22",
@@ -4279,9 +4279,9 @@
     "vote_result": "Passed",
     "yea_count": "250",
     "nay_count": "169",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 337,
+    "supported_sentences": 80,
+    "factuality_score": 0.2374
   },
   "2018-06-12": {
     "filename": "2018-06-12",
@@ -4291,9 +4291,9 @@
     "vote_result": "Passed",
     "yea_count": "383",
     "nay_count": "13",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 279,
+    "supported_sentences": 87,
+    "factuality_score": 0.3118
   },
   "2018-06-13": {
     "filename": "2018-06-13",
@@ -4303,9 +4303,9 @@
     "vote_result": "Passed",
     "yea_count": "409",
     "nay_count": "8",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 218,
+    "supported_sentences": 52,
+    "factuality_score": 0.2385
   },
   "2018-06-19": {
     "filename": "2018-06-19",
@@ -4315,9 +4315,9 @@
     "vote_result": "Passed",
     "yea_count": "356",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 199,
+    "supported_sentences": 42,
+    "factuality_score": 0.2111
   },
   "2018-06-20": {
     "filename": "2018-06-20",
@@ -4327,9 +4327,9 @@
     "vote_result": "Passed",
     "yea_count": "357",
     "nay_count": "57",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 246,
+    "supported_sentences": 57,
+    "factuality_score": 0.2317
   },
   "2018-06-22": {
     "filename": "2018-06-22",
@@ -4339,45 +4339,45 @@
     "vote_result": "Passed",
     "yea_count": "396",
     "nay_count": "14",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 149,
+    "supported_sentences": 30,
+    "factuality_score": 0.2013
   },
   "2018-07-16": {
     "filename": "2018-07-16",
     "date": "2018-07-16",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "115",
+    "bill_number": "H.R. 5554",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "2018-07-23": {
     "filename": "2018-07-23",
     "date": "2018-07-23",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "115",
+    "bill_number": "H.R. 5385",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "2018-09-26": {
     "filename": "2018-09-26",
     "date": "2018-09-26",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "115",
+    "bill_number": "H.R. 3834",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 2,
+    "supported_sentences": 1,
+    "factuality_score": 0.5
   },
   "2018-12-11": {
     "filename": "2018-12-11",
@@ -4387,9 +4387,9 @@
     "vote_result": "Passed",
     "yea_count": "406",
     "nay_count": "3",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 318,
+    "supported_sentences": 72,
+    "factuality_score": 0.2264
   },
   "2018-12-19": {
     "filename": "2018-12-19",
@@ -4399,9 +4399,9 @@
     "vote_result": "Passed",
     "yea_count": "357",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 299,
+    "supported_sentences": 57,
+    "factuality_score": 0.1906
   },
   "2018-12-20": {
     "filename": "2018-12-20",
@@ -4411,9 +4411,9 @@
     "vote_result": "Passed",
     "yea_count": "386",
     "nay_count": "6",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 221,
+    "supported_sentences": 59,
+    "factuality_score": 0.267
   },
   "2019-01-08": {
     "filename": "2019-01-08",
@@ -4423,19 +4423,19 @@
     "vote_result": "Passed",
     "yea_count": "401",
     "nay_count": "17",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 299,
+    "supported_sentences": 53,
+    "factuality_score": 0.1773
   },
   "2019-03-25": {
     "filename": "2019-03-25",
     "date": "2019-03-25",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "116",
+    "bill_number": "H.R. 1839",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 2,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -4447,9 +4447,9 @@
     "vote_result": "Passed",
     "yea_count": "240",
     "nay_count": "186",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 267,
+    "supported_sentences": 71,
+    "factuality_score": 0.2659
   },
   "2019-05-08": {
     "filename": "2019-05-08",
@@ -4459,9 +4459,9 @@
     "vote_result": "Passed",
     "yea_count": "422",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 236,
+    "supported_sentences": 61,
+    "factuality_score": 0.2585
   },
   "2019-05-09": {
     "filename": "2019-05-09",
@@ -4471,9 +4471,9 @@
     "vote_result": "Passed",
     "yea_count": "230",
     "nay_count": "183",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 205,
+    "supported_sentences": 46,
+    "factuality_score": 0.2244
   },
   "2019-05-16": {
     "filename": "2019-05-16",
@@ -4483,9 +4483,9 @@
     "vote_result": "Passed",
     "yea_count": "234",
     "nay_count": "183",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 266,
+    "supported_sentences": 54,
+    "factuality_score": 0.203
   },
   "2019-06-18": {
     "filename": "2019-06-18",
@@ -4495,19 +4495,19 @@
     "vote_result": "Passed",
     "yea_count": "371",
     "nay_count": "46",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 303,
+    "supported_sentences": 68,
+    "factuality_score": 0.2244
   },
   "2019-07-24": {
     "filename": "2019-07-24",
     "date": "2019-07-24",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "116",
+    "bill_number": "H.R. 1058",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 2,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -4519,9 +4519,9 @@
     "vote_result": "Passed",
     "yea_count": "403",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 196,
+    "supported_sentences": 35,
+    "factuality_score": 0.1786
   },
   "2019-12-12": {
     "filename": "2019-12-12",
@@ -4531,9 +4531,9 @@
     "vote_result": "Passed",
     "yea_count": "230",
     "nay_count": "192",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 188,
+    "supported_sentences": 41,
+    "factuality_score": 0.2181
   },
   "2020-01-27": {
     "filename": "2020-01-27",
@@ -4543,9 +4543,9 @@
     "vote_result": "Passed",
     "yea_count": "385",
     "nay_count": "8",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 196,
+    "supported_sentences": 34,
+    "factuality_score": 0.1735
   },
   "2020-02-06": {
     "filename": "2020-02-06",
@@ -4555,9 +4555,9 @@
     "vote_result": "Passed",
     "yea_count": "223",
     "nay_count": "190",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 215,
+    "supported_sentences": 33,
+    "factuality_score": 0.1535
   },
   "2020-02-28": {
     "filename": "2020-02-28",
@@ -4567,9 +4567,9 @@
     "vote_result": "Passed",
     "yea_count": "213",
     "nay_count": "195",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 97,
+    "supported_sentences": 26,
+    "factuality_score": 0.268
   },
   "2020-03-04": {
     "filename": "2020-03-04",
@@ -4579,9 +4579,9 @@
     "vote_result": "Passed",
     "yea_count": "415",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 271,
+    "supported_sentences": 65,
+    "factuality_score": 0.2399
   },
   "2020-03-14": {
     "filename": "2020-03-14",
@@ -4591,9 +4591,9 @@
     "vote_result": "Passed",
     "yea_count": "363",
     "nay_count": "40",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 355,
+    "supported_sentences": 42,
+    "factuality_score": 0.1183
   },
   "2020-06-29": {
     "filename": "2020-06-29",
@@ -4603,31 +4603,31 @@
     "vote_result": "Passed",
     "yea_count": "234",
     "nay_count": "179",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 195,
+    "supported_sentences": 41,
+    "factuality_score": 0.2103
   },
   "2020-09-21": {
     "filename": "2020-09-21",
     "date": "2020-09-21",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "116",
+    "bill_number": "H.R. 5663",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "2020-09-29": {
     "filename": "2020-09-29",
     "date": "2020-09-29",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "116",
+    "bill_number": "H.R. 2468",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -4639,9 +4639,9 @@
     "vote_result": "Passed",
     "yea_count": "414",
     "nay_count": "0",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 301,
+    "supported_sentences": 69,
+    "factuality_score": 0.2292
   },
   "2020-10-02": {
     "filename": "2020-10-02",
@@ -4651,31 +4651,31 @@
     "vote_result": "Passed",
     "yea_count": "232",
     "nay_count": "157",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 199,
+    "supported_sentences": 41,
+    "factuality_score": 0.206
   },
   "2020-12-09": {
     "filename": "2020-12-09",
     "date": "2020-12-09",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "116",
+    "bill_number": "H.R. 7898",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
   "2020-12-10": {
     "filename": "2020-12-10",
     "date": "2020-12-10",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "116",
+    "bill_number": "H.R. 8906",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -4687,9 +4687,9 @@
     "vote_result": "Passed",
     "yea_count": "246",
     "nay_count": "175",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 127,
+    "supported_sentences": 30,
+    "factuality_score": 0.2362
   },
   "2021-04-13": {
     "filename": "2021-04-13",
@@ -4699,9 +4699,9 @@
     "vote_result": "Passed",
     "yea_count": "384",
     "nay_count": "38",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 182,
+    "supported_sentences": 42,
+    "factuality_score": 0.2308
   },
   "2021-04-14": {
     "filename": "2021-04-14",
@@ -4711,9 +4711,9 @@
     "vote_result": "Passed",
     "yea_count": "412",
     "nay_count": "8",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 216,
+    "supported_sentences": 40,
+    "factuality_score": 0.1852
   },
   "2021-04-15": {
     "filename": "2021-04-15",
@@ -4723,9 +4723,9 @@
     "vote_result": "Passed",
     "yea_count": "415",
     "nay_count": "2",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 216,
+    "supported_sentences": 47,
+    "factuality_score": 0.2176
   },
   "2021-05-11": {
     "filename": "2021-05-11",
@@ -4735,9 +4735,9 @@
     "vote_result": "Failed",
     "yea_count": "250",
     "nay_count": "168",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 244,
+    "supported_sentences": 29,
+    "factuality_score": 0.1189
   },
   "2021-05-13": {
     "filename": "2021-05-13",
@@ -4747,9 +4747,9 @@
     "vote_result": "Passed",
     "yea_count": "323",
     "nay_count": "93",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 194,
+    "supported_sentences": 33,
+    "factuality_score": 0.1701
   },
   "2021-05-19": {
     "filename": "2021-05-19",
@@ -4759,9 +4759,9 @@
     "vote_result": "Passed",
     "yea_count": "402",
     "nay_count": "23",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 222,
+    "supported_sentences": 46,
+    "factuality_score": 0.2072
   },
   "2021-09-24": {
     "filename": "2021-09-24",
@@ -4771,9 +4771,9 @@
     "vote_result": "Passed",
     "yea_count": "218",
     "nay_count": "211",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 126,
+    "supported_sentences": 17,
+    "factuality_score": 0.1349
   },
   "2021-10-19": {
     "filename": "2021-10-19",
@@ -4783,9 +4783,9 @@
     "vote_result": "Passed",
     "yea_count": "368",
     "nay_count": "56",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 272,
+    "supported_sentences": 64,
+    "factuality_score": 0.2353
   },
   "2021-10-20": {
     "filename": "2021-10-20",
@@ -4795,9 +4795,9 @@
     "vote_result": "Passed",
     "yea_count": "397",
     "nay_count": "22",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 234,
+    "supported_sentences": 61,
+    "factuality_score": 0.2607
   },
   "2021-11-30": {
     "filename": "2021-11-30",
@@ -4807,9 +4807,9 @@
     "vote_result": "Passed",
     "yea_count": "294",
     "nay_count": "130",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 249,
+    "supported_sentences": 54,
+    "factuality_score": 0.2169
   },
   "2021-12-07": {
     "filename": "2021-12-07",
@@ -4819,9 +4819,9 @@
     "vote_result": "Passed",
     "yea_count": "222",
     "nay_count": "212",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 193,
+    "supported_sentences": 38,
+    "factuality_score": 0.1969
   },
   "2021-12-08": {
     "filename": "2021-12-08",
@@ -4831,9 +4831,9 @@
     "vote_result": "Passed",
     "yea_count": "378",
     "nay_count": "48",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 268,
+    "supported_sentences": 71,
+    "factuality_score": 0.2649
   },
   "2022-04-04": {
     "filename": "2022-04-04",
@@ -4843,9 +4843,9 @@
     "vote_result": "Passed",
     "yea_count": "310",
     "nay_count": "110",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 216,
+    "supported_sentences": 41,
+    "factuality_score": 0.1898
   },
   "2022-04-05": {
     "filename": "2022-04-05",
@@ -4855,9 +4855,9 @@
     "vote_result": "Passed",
     "yea_count": "409",
     "nay_count": "11",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 259,
+    "supported_sentences": 59,
+    "factuality_score": 0.2278
   },
   "2022-05-18": {
     "filename": "2022-05-18",
@@ -4867,9 +4867,9 @@
     "vote_result": "Passed",
     "yea_count": "400",
     "nay_count": "21",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 280,
+    "supported_sentences": 76,
+    "factuality_score": 0.2714
   },
   "2022-06-08": {
     "filename": "2022-06-08",
@@ -4879,9 +4879,9 @@
     "vote_result": "Passed",
     "yea_count": "392",
     "nay_count": "28",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 273,
+    "supported_sentences": 55,
+    "factuality_score": 0.2015
   },
   "2022-06-22": {
     "filename": "2022-06-22",
@@ -4891,9 +4891,9 @@
     "vote_result": "Passed",
     "yea_count": "336",
     "nay_count": "85",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 248,
+    "supported_sentences": 56,
+    "factuality_score": 0.2258
   },
   "2022-07-15": {
     "filename": "2022-07-15",
@@ -4903,9 +4903,9 @@
     "vote_result": "Passed",
     "yea_count": "223",
     "nay_count": "205",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 173,
+    "supported_sentences": 34,
+    "factuality_score": 0.1965
   },
   "2022-07-21": {
     "filename": "2022-07-21",
@@ -4915,9 +4915,9 @@
     "vote_result": "Passed",
     "yea_count": "228",
     "nay_count": "195",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 298,
+    "supported_sentences": 83,
+    "factuality_score": 0.2785
   },
   "2022-07-26": {
     "filename": "2022-07-26",
@@ -4927,9 +4927,9 @@
     "vote_result": "Passed",
     "yea_count": "350",
     "nay_count": "69",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 358,
+    "supported_sentences": 72,
+    "factuality_score": 0.2011
   },
   "2022-07-27": {
     "filename": "2022-07-27",
@@ -4939,9 +4939,9 @@
     "vote_result": "Passed",
     "yea_count": "416",
     "nay_count": "12",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 381,
+    "supported_sentences": 74,
+    "factuality_score": 0.1942
   },
   "2022-09-22": {
     "filename": "2022-09-22",
@@ -4951,9 +4951,9 @@
     "vote_result": "Passed",
     "yea_count": "223",
     "nay_count": "206",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 280,
+    "supported_sentences": 58,
+    "factuality_score": 0.2071
   },
   "2022-09-29": {
     "filename": "2022-09-29",
@@ -4963,9 +4963,9 @@
     "vote_result": "Passed",
     "yea_count": "414",
     "nay_count": "7",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 399,
+    "supported_sentences": 79,
+    "factuality_score": 0.198
   },
   "2022-11-17": {
     "filename": "2022-11-17",
@@ -4975,9 +4975,9 @@
     "vote_result": "Passed",
     "yea_count": "402",
     "nay_count": "13",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 282,
+    "supported_sentences": 63,
+    "factuality_score": 0.2234
   },
   "2022-12-02": {
     "filename": "2022-12-02",
@@ -4987,19 +4987,19 @@
     "vote_result": "Passed",
     "yea_count": "390",
     "nay_count": "26",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 180,
+    "supported_sentences": 30,
+    "factuality_score": 0.1667
   },
   "2022-12-05": {
     "filename": "2022-12-05",
     "date": "2022-12-05",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "117",
+    "bill_number": "H.R. 1193",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -5011,9 +5011,9 @@
     "vote_result": "Passed",
     "yea_count": "408",
     "nay_count": "17",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 236,
+    "supported_sentences": 64,
+    "factuality_score": 0.2712
   },
   "2022-12-21": {
     "filename": "2022-12-21",
@@ -5023,9 +5023,9 @@
     "vote_result": "Passed",
     "yea_count": "393",
     "nay_count": "19",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 179,
+    "supported_sentences": 33,
+    "factuality_score": 0.1844
   },
   "2023-01-31": {
     "filename": "2023-01-31",
@@ -5035,9 +5035,9 @@
     "vote_result": "Passed",
     "yea_count": "220",
     "nay_count": "210",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 155,
+    "supported_sentences": 19,
+    "factuality_score": 0.1226
   },
   "2023-02-08": {
     "filename": "2023-02-08",
@@ -5047,19 +5047,19 @@
     "vote_result": "Passed",
     "yea_count": "227",
     "nay_count": "201",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 191,
+    "supported_sentences": 38,
+    "factuality_score": 0.199
   },
   "2023-07-25": {
     "filename": "2023-07-25",
     "date": "2023-07-25",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "118",
+    "bill_number": "H.R. 2544",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 2,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -5071,9 +5071,9 @@
     "vote_result": "Passed",
     "yea_count": "320",
     "nay_count": "71",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 290,
+    "supported_sentences": 66,
+    "factuality_score": 0.2276
   },
   "2023-12-12": {
     "filename": "2023-12-12",
@@ -5083,9 +5083,9 @@
     "vote_result": "Passed",
     "yea_count": "386",
     "nay_count": "37",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 174,
+    "supported_sentences": 35,
+    "factuality_score": 0.2011
   },
   "2023-12-14": {
     "filename": "2023-12-14",
@@ -5095,9 +5095,9 @@
     "vote_result": "Passed",
     "yea_count": "407",
     "nay_count": "9",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 161,
+    "supported_sentences": 34,
+    "factuality_score": 0.2112
   },
   "2024-01-18": {
     "filename": "2024-01-18",
@@ -5107,9 +5107,9 @@
     "vote_result": "Passed",
     "yea_count": "214",
     "nay_count": "208",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 196,
+    "supported_sentences": 35,
+    "factuality_score": 0.1786
   },
   "2024-02-07": {
     "filename": "2024-02-07",
@@ -5119,9 +5119,9 @@
     "vote_result": "Passed",
     "yea_count": "211",
     "nay_count": "208",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 182,
+    "supported_sentences": 58,
+    "factuality_score": 0.3187
   },
   "2024-03-05": {
     "filename": "2024-03-05",
@@ -5131,9 +5131,9 @@
     "vote_result": "Passed",
     "yea_count": "382",
     "nay_count": "12",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 310,
+    "supported_sentences": 69,
+    "factuality_score": 0.2226
   },
   "2024-03-06": {
     "filename": "2024-03-06",
@@ -5143,9 +5143,9 @@
     "vote_result": "Passed",
     "yea_count": "413",
     "nay_count": "7",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 199,
+    "supported_sentences": 40,
+    "factuality_score": 0.201
   },
   "2024-03-07": {
     "filename": "2024-03-07",
@@ -5155,9 +5155,9 @@
     "vote_result": "Passed",
     "yea_count": "391",
     "nay_count": "32",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 143,
+    "supported_sentences": 22,
+    "factuality_score": 0.1538
   },
   "2024-05-15": {
     "filename": "2024-05-15",
@@ -5167,9 +5167,9 @@
     "vote_result": "Passed",
     "yea_count": "399",
     "nay_count": "13",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 272,
+    "supported_sentences": 61,
+    "factuality_score": 0.2243
   },
   "2024-09-09": {
     "filename": "2024-09-09",
@@ -5179,19 +5179,19 @@
     "vote_result": "Passed",
     "yea_count": "306",
     "nay_count": "81",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 308,
+    "supported_sentences": 77,
+    "factuality_score": 0.25
   },
   "2024-09-17": {
     "filename": "2024-09-17",
     "date": "2024-09-17",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "118",
+    "bill_number": "H.R. 7218",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -5203,19 +5203,19 @@
     "vote_result": "Passed",
     "yea_count": "402",
     "nay_count": "13",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 316,
+    "supported_sentences": 67,
+    "factuality_score": 0.212
   },
   "2024-09-23": {
     "filename": "2024-09-23",
     "date": "2024-09-23",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "118",
+    "bill_number": "H.R. 7189",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -5227,19 +5227,19 @@
     "vote_result": "Passed",
     "yea_count": "374",
     "nay_count": "15",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 165,
+    "supported_sentences": 28,
+    "factuality_score": 0.1697
   },
   "2024-12-17": {
     "filename": "2024-12-17",
     "date": "2024-12-17",
-    "congress": "",
-    "bill_number": "",
-    "vote_result": "",
+    "congress": "118",
+    "bill_number": "H.R. 670",
+    "vote_result": "passed",
     "yea_count": "",
     "nay_count": "",
-    "total_sentences": 0,
+    "total_sentences": 1,
     "supported_sentences": 0,
     "factuality_score": 0.0
   },
@@ -5251,9 +5251,9 @@
     "vote_result": "Passed",
     "yea_count": "366",
     "nay_count": "57",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 176,
+    "supported_sentences": 37,
+    "factuality_score": 0.2102
   },
   "2025-12-17": {
     "filename": "2025-12-17",
@@ -5263,9 +5263,9 @@
     "vote_result": "Passed",
     "yea_count": "216",
     "nay_count": "211",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 220,
+    "supported_sentences": 40,
+    "factuality_score": 0.1818
   },
   "2025-12-18": {
     "filename": "2025-12-18",
@@ -5275,9 +5275,9 @@
     "vote_result": "Passed",
     "yea_count": "215",
     "nay_count": "201",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 309,
+    "supported_sentences": 61,
+    "factuality_score": 0.1974
   },
   "2026-04-21": {
     "filename": "2026-04-21",
@@ -5287,8 +5287,8 @@
     "vote_result": "Passed",
     "yea_count": "406",
     "nay_count": "4",
-    "total_sentences": 0,
-    "supported_sentences": 0,
-    "factuality_score": 0.0
+    "total_sentences": 204,
+    "supported_sentences": 45,
+    "factuality_score": 0.2206
   }
 }

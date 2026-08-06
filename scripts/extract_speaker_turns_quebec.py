@@ -66,15 +66,24 @@ def extract_turns(text):
 
 
 def build_name_lookup(members):
-    lookup = {}
-    for m in members:
-        name = m.get("name", "").strip().lower()
-        parts = name.split()
-        if parts:
-            last = parts[-1]
-            lookup[last] = m.get("party", "")
-            lookup[name] = m.get("party", "")
-    return lookup
+    import csv
+    ppb_path = os.path.join(REPO_ROOT, "data/canada/PPB.csv")
+    lookup = {}  # (last_name_lower, year) -> party
+    flat = {}    # last_name_lower -> party (most recent)
+    
+    if os.path.exists(ppb_path):
+        with open(ppb_path, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                if row.get("province", "").lower() != "quebec":
+                    continue
+                name = row.get("first_last", "").strip().lower()
+                last = name.split("_")[-1] if "_" in name else name
+                party = row.get("party", "")
+                year = row.get("year", "")
+                if last and party:
+                    lookup[(last, year)] = party
+                    flat[last] = party  # fallback
+    return lookup, flat
 
 
 def main():
@@ -83,7 +92,7 @@ def main():
     if os.path.exists(MEMBERS_PATH):
         with open(MEMBERS_PATH, encoding="utf-8") as f:
             members = json.load(f)
-        name_to_party = build_name_lookup(members)
+        name_to_party, flat_lookup = build_name_lookup(members)
         print(f"Loaded {len(members)} Quebec members")
     else:
         print("Quebec members file not found - party matching will be limited")
@@ -113,7 +122,8 @@ def main():
         for turn in turns:
             norm = turn["speaker_normalized"]
             last = norm.split()[-1] if norm else ""
-            party = name_to_party.get(norm) or name_to_party.get(last, "")
+            year = date[:4]
+            party = name_to_party.get((last, year)) or flat_lookup.get(last, "")
             turn["party"] = party
 
         results[date] = {

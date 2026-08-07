@@ -18,11 +18,21 @@ import os, json, csv
 from collections import defaultdict
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ANNOTATED_PATH = os.path.join(REPO_ROOT, "data/dbpedia_pipeline/annotated_sentences.json")
-SENTENCES_PATH = os.path.join(REPO_ROOT, "data/dbpedia_pipeline/sentences.json")
-MATCHED_PATH = os.path.join(REPO_ROOT, "data/us/health_bills_final_matched.csv")
-OUTPUT_PATH = os.path.join(REPO_ROOT, "data/dbpedia_pipeline/factuality_scores.json")
 
+JURISDICTION = os.environ.get("JURISDICTION", "us")
+WORK_DIR = os.path.join(REPO_ROOT, "data", "dbpedia_pipeline", JURISDICTION)
+
+ANNOTATED_PATH = os.path.join(WORK_DIR, "annotated_sentences.json")
+SENTENCES_PATH = os.path.join(WORK_DIR, "sentences.json")
+OUTPUT_PATH = os.path.join(WORK_DIR, "factuality_scores.json")
+
+# bill metadata paths per jurisdiction
+BILL_META_PATHS = {
+    "us": os.path.join(REPO_ROOT, "data/us/health_bills_final_matched.csv"),
+    "ontario": os.path.join(REPO_ROOT, "data/canada/ontario/ontario_bill_index.json"),
+    "quebec": os.path.join(REPO_ROOT, "data/canada/quebec_bills/quebec_health_bills_combined.json"),
+}
+MATCHED_PATH = BILL_META_PATHS[JURISDICTION]
 
 def main():
     print("Loading annotated sentences...")
@@ -63,6 +73,20 @@ def main():
                     "nay_count": row.get("nay_count", ""),
                     "date": date,
                 }
+                # also load voice vote bills
+                with open(os.path.join(REPO_ROOT, "data/us/voice_vote_speeches_status.json")) as f:
+                    vv = json.load(f)
+                for key, v in vv.items():
+                    date = v.get("passage_date", "")
+                    if date and date not in bill_meta:
+                         bill_meta[date] = {
+                            "congress": v.get("congress", ""),
+                            "bill_number": v.get("bill", ""),
+                            "result": "passed",
+                            "yea_count": "",
+                            "nay_count": "",
+                            "date": date,
+                        }
 
     # compute factuality score per bill file
     scores = {}
@@ -73,6 +97,7 @@ def main():
         supported = sum(1 for sid in claim_sids if evidence_by_id[sid])
         factuality = supported / total_claims if total_claims > 0 else 0.0
         meta = bill_meta.get(date, {})
+        
         scores[date] = {
             "filename": date,
             "date": date,
@@ -85,6 +110,7 @@ def main():
             "supported_sentences": supported,
             "factuality_score": round(factuality, 4),
         }
+        
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(scores, f, indent=2)

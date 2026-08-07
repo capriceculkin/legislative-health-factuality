@@ -33,10 +33,24 @@ import time
 import requests
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SPEECH_DIR = os.path.join(REPO_ROOT, "data", "us", "congressional_record_speeches")
-WORK_DIR = os.path.join(REPO_ROOT, "data", "dbpedia_pipeline")
-os.makedirs(WORK_DIR, exist_ok=True)
 
+JURISDICTION = os.environ.get("JURISDICTION", "us")
+
+SPEECH_DIRS = {
+    "us": os.path.join(REPO_ROOT, "data", "us", "congressional_record_speeches"),
+    "ontario": os.path.join(REPO_ROOT, "data", "canada", "ontario"),
+    "quebec": os.path.join(REPO_ROOT, "data", "canada", "quebec_assembly", "transcripts"),
+}
+SPOTLIGHT_LANGS = {
+    "us": "en",
+    "ontario": "en",
+    "quebec": "fr",
+}
+
+SPEECH_DIR = SPEECH_DIRS[JURISDICTION]
+SPOTLIGHT_LANG = SPOTLIGHT_LANGS[JURISDICTION]
+WORK_DIR = os.path.join(REPO_ROOT, "data", "dbpedia_pipeline", JURISDICTION)
+os.makedirs(WORK_DIR, exist_ok=True)
 SENTENCES_PATH = os.path.join(WORK_DIR, "sentences.json")
 TRIPLES_PATH = os.path.join(WORK_DIR, "triples.json")
 PAIRS_PATH = os.path.join(WORK_DIR, "unique_pairs.json")
@@ -116,14 +130,18 @@ def stage_extract():
     for idx, s in enumerate(sentences):
         if idx % 1000 == 0:
             print(f"  {idx}/{total} sentences processed, {len(triples)} triples found", flush=True)
-        uris = spotlight_annotate(s["text"], lang="en")
+        uris = spotlight_annotate(s["text"], lang=SPOTLIGHT_LANG)
         if len(uris) < 1:
             continue
         doc = nlp(s["text"])
         root = next((t.lemma_ for t in doc if t.dep_ == "ROOT"), None)
+        hedge_words = {"may", "might", "could", "would", "should",
+                       "possibly", "perhaps", "allegedly", "reportedly"}
+        hedged = any(t.text.lower() in hedge_words for t in doc)
         triples.append({
             "sentence_id": s["sentence_id"],
             "verb": root,
+            "hedged": hedged,
             "concept_uris": list(dict.fromkeys(uris)),
             "single_entity": len(uris) == 1,
         })

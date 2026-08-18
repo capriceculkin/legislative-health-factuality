@@ -22,3 +22,5 @@ data/us/legislators-historical.yaml
 data/us/voteview/house_rollcalls_1985_present.csv
 data/us/member_lookup.json
 data/dbpedia_pipeline/triples.json
+data/canada/quebec_speaker_turns.json
+data/canada/ontario_speaker_turns.json

@@ -20,8 +20,8 @@ OUTPUT_PATH = os.path.join(REPO_ROOT, "data/canada/ontario_speaker_turns.json")
 
 # speaker label pattern
 SPEAKER_RE = re.compile(
-    r'^((?:Hon\.\s+)?(?:Mr\.|Mrs\.|Ms\.|Miss\.|Dr\.|The\s+(?:Speaker|Chair|Deputy\s+Speaker|Acting\s+Speaker))'
-    r'[\s\w\.\-\']+?):\s*',
+    r'^((?:Hon\.\s+)?(?:Mr\.?\s+|Mrs\.?\s+|Ms\.?\s+|Miss\.?\s+|Dr\.?\s+|The\s+(?:Speaker|Chair|Deputy\s+Speaker|Acting\s+Speaker))'
+    r'[\w\.\-\'\s]+?):\s*',
     re.MULTILINE
 )
 

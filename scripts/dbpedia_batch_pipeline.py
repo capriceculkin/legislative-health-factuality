@@ -100,22 +100,44 @@ def stage_extract():
     import spacy
     nlp = spacy.load("en_core_web_sm", disable=["ner", "lemmatizer"])
 
-    def spotlight_annotate(text, lang="en"):
-        url = SPOTLIGHT_EN if lang == "en" else SPOTLIGHT_FR
-        try:
-            resp = requests.post(url,
-                headers={"Accept": "application/json"},
-                data={"text": text[:1000], "confidence": "0.5"},
-                timeout=15)
-            if resp.status_code == 200:
-                resources = resp.json().get("Resources", [])
-                # filter out ambiguous links (second rank too close to first)
-                good = [r["@URI"] for r in resources
-                        if float(r.get("@percentageOfSecondRank", 1.0)) < 0.5]
-                return good
-        except Exception:
-            pass
-        return []
+    def restart_spotlight(lang="en"):
+        port = 2222 if lang == "en" else 2223
+        container = "spotlight-en" if lang == "en" else "spotlight-fr"
+        print(f"  Spotlight unresponsive — restarting {container}...", flush=True)
+        os.system(f"ssh -i ~/.ssh/dunkleosteus_key -o StrictHostKeyChecking=no cc3436@dunkleosteus.med.yale.internal 'docker restart {container}'")
+        import time as t
+        t.sleep(120)  # wait for container to come back up
+        print(f"  Spotlight restarted, resuming...", flush=True)
+
+    def spotlight_annotate_batch(texts, lang="en"):
+        #"""Annotate a batch of sentences in one request."""
+            url = SPOTLIGHT_EN if lang == "en" else SPOTLIGHT_FR
+            combined = "\n\n".join(t[:500] for t in texts)
+            for attempt in range(3):
+                try:
+                    resp = requests.post(url,
+                        headers={"Accept": "application/json"},
+                        data={"text": combined, "confidence": "0.5"},
+                        timeout=60)
+                    if resp.status_code == 200:
+                        resources = resp.json().get("Resources", [])
+                        # group URIs by which sentence they appear in
+                        results = [[] for _ in texts]
+                        offset = 0
+                        for i, t in enumerate(texts):
+                            end = offset + len(t[:500])
+                            for r in resources:
+                                r_offset = int(r.get("@offset", 0))
+                                if offset <= r_offset < end:
+                                    if float(r.get("@percentageOfSecondRank", 1.0)) < 0.5:
+                                        results[i].append(r["@URI"])
+                            offset = end + 2  # account for \n\n separator
+                        return results
+                except Exception:
+                    if attempt == 2:
+                        restart_spotlight(lang)
+                time.sleep(5 * (attempt + 1))
+            return [[] for _ in texts]
 
     with open(SENTENCES_PATH, encoding="utf-8") as f:
         sentences = json.load(f)
@@ -127,30 +149,35 @@ def stage_extract():
             triples = json.load(f)
         print(f"Resuming from checkpoint: {len(triples)} triples already found")
     total = len(sentences)
-    for idx, s in enumerate(sentences):
-        if idx % 1000 == 0:
-            print(f"  {idx}/{total} sentences processed, {len(triples)} triples found", flush=True)
-        uris = spotlight_annotate(s["text"], lang=SPOTLIGHT_LANG)
-        if len(uris) < 1:
-            continue
-        doc = nlp(s["text"])
-        root = next((t.lemma_ for t in doc if t.dep_ == "ROOT"), None)
-        hedge_words = {"may", "might", "could", "would", "should",
-                       "possibly", "perhaps", "allegedly", "reportedly"}
-        hedged = any(t.text.lower() in hedge_words for t in doc)
-        triples.append({
-            "sentence_id": s["sentence_id"],
-            "verb": root,
-            "hedged": hedged,
-            "concept_uris": list(dict.fromkeys(uris)),
-            "single_entity": len(uris) == 1,
-        })
+    BATCH_SIZE_EXTRACT = 10
+    for batch_start in range(0, total, BATCH_SIZE_EXTRACT):
+        batch = sentences[batch_start:batch_start + BATCH_SIZE_EXTRACT]
+        if batch_start % 1000 == 0:
+            print(f"  {batch_start}/{total} sentences processed, {len(triples)} triples found", flush=True)
+        batch_uris = spotlight_annotate_batch([s["text"] for s in batch], lang=SPOTLIGHT_LANG)
+        for s, uris in zip(batch, batch_uris):
+            if len(uris) < 1:
+                continue
+            doc = nlp(s["text"])
+            root = next((t.lemma_ for t in doc if t.dep_ == "ROOT"), None)
+            hedge_words = {"may", "might", "could", "would", "should",
+                        "possibly", "perhaps", "allegedly", "reportedly"}
+            hedged = any(t.text.lower() in hedge_words for t in doc)
+            triples.append({
+                "sentence_id": s["sentence_id"],
+                "verb": root,
+                "hedged": hedged,
+                "concept_uris": list(dict.fromkeys(uris)),
+                "single_entity": len(uris) == 1,
+            })
+            if len(triples) % 1000 == 0:
+                with open(TRIPLES_PATH + ".checkpoint", "w", encoding="utf-8") as f:
+                    json.dump(triples, f, ensure_ascii=False)
+                print(f"  checkpoint saved: {len(triples)} triples", flush=True)
     with open(TRIPLES_PATH, "w", encoding="utf-8") as f:
         json.dump(triples, f, ensure_ascii=False)
     print(f"extract: {len(triples)} claim-bearing sentences -> {TRIPLES_PATH}")
-    if idx % 10000 == 0 and idx > 0:
-            with open(TRIPLES_PATH + ".checkpoint", "w", encoding="utf-8") as f:
-                json.dump(triples, f, ensure_ascii=False)
+    
 
 def stage_dedupe():
     with open(TRIPLES_PATH, encoding="utf-8") as f:
@@ -182,7 +209,9 @@ def stage_query():
 
     for start in range(0, len(todo), BATCH_SIZE):
         batch = todo[start:start + BATCH_SIZE]
-        values = " ".join(f"(<{a}> <{b}>)" for a, b in batch)
+        def to_en(uri):
+            return uri.replace("http://fr.dbpedia.org/resource/", "http://dbpedia.org/resource/")
+        values = " ".join(f"(<{to_en(a)}> <{to_en(b)}>)" for a, b in batch)
         q = f"""
         SELECT ?a ?b ?p WHERE {{
           VALUES (?a ?b) {{ {values} }}
@@ -195,7 +224,7 @@ def stage_query():
                 resp = requests.get(SPARQL_ENDPOINT,
                                     params={"query": q, "format": "application/sparql-results+json"},
                                     headers={"User-Agent": "legislative-health-factuality/1.0"},
-                                    timeout=30)
+                                    timeout=60)
                 resp.raise_for_status()
                 rows = resp.json()["results"]["bindings"]
                 sparql_succeeded = True
@@ -217,10 +246,13 @@ def stage_query():
         for a, b in batch:
             cache[f"{a}|{b}"] = []
         for r in rows:
-            key = f"{r['a']['value']}|{r['b']['value']}"
-            alt = f"{r['b']['value']}|{r['a']['value']}"
-            k = key if key in cache else alt
-            cache[k].append(r["p"]["value"])
+                def norm(uri):
+                    return uri.replace("http://dbpedia.org/resource/", "http://fr.dbpedia.org/resource/") if JURISDICTION == "quebec" else uri
+                key = f"{norm(r['a']['value'])}|{norm(r['b']['value'])}"
+                alt = f"{norm(r['b']['value'])}|{norm(r['a']['value'])}"
+                k = key if key in cache else (alt if alt in cache else None)
+                if k:
+                    cache[k].append(r["p"]["value"])
 
         with open(RESULTS_PATH, "w", encoding="utf-8") as f:
             json.dump(cache, f)

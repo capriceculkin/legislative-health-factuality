@@ -36,7 +36,16 @@ HEALTH_KEYWORDS = [
     # Joanie additions (July 16 review)
     "aide medicale a mourir",
     "sites d'injection supervisee", "consommation supervisee",
-    "procreation assistee",
+    "procreation assistee", "pause-vaccin", "vaccin", "vaccination",
+    "urgence sanitaire", "état d'urgence",
+    "consommation supervisée", "injection supervisée",
+    "autonomie des personnes aînées", "aînés",
+    "santé sexuelle", "sexuelle et reproductive",
+    "funéraires", "soins funéraires",
+    "cannabis", "substances psychoactives",
+    "maltraitance", "proches aidants",
+    "médicaments", "approvisionnement en médicaments",
+    "procréation assistée",
 ]
 
 EXCLUSION_KEYWORDS = [

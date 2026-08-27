@@ -57,7 +57,7 @@ PAIRS_PATH = os.path.join(WORK_DIR, "unique_pairs.json")
 RESULTS_PATH = os.path.join(WORK_DIR, "dbpedia_results.json")
 ANNOTATED_PATH = os.path.join(WORK_DIR, "annotated_sentences.json")
 
-SPARQL_ENDPOINT = "https://dbpedia.org/sparql"
+SPARQL_ENDPOINT = "http://fr.dbpedia.org/sparql" if os.environ.get("JURISDICTION") == "quebec" else "https://dbpedia.org/sparql"
 SPARQL_ENDPOINT_BACKUP = "https://query.wikidata.org/sparql"
 SPOTLIGHT_EN = "http://localhost:2222/rest/annotate"
 SPOTLIGHT_FR = "http://localhost:2223/rest/annotate"
@@ -159,7 +159,7 @@ def stage_extract():
             if len(uris) < 1:
                 continue
             doc = nlp(s["text"])
-            root = next((t.lemma_ for t in doc if t.dep_ == "ROOT"), None)
+            root = next((t.lemma_ for t in doc if t.dep_ == "ROOT" and t.pos_ == "VERB"), None)
             hedge_words = {"may", "might", "could", "would", "should",
                         "possibly", "perhaps", "allegedly", "reportedly"}
             hedged = any(t.text.lower() in hedge_words for t in doc)
@@ -209,14 +209,15 @@ def stage_query():
 
     for start in range(0, len(todo), BATCH_SIZE):
         batch = todo[start:start + BATCH_SIZE]
-        def to_en(uri):
-            return uri.replace("http://fr.dbpedia.org/resource/", "http://dbpedia.org/resource/")
-        values = " ".join(f"(<{to_en(a)}> <{to_en(b)}>)" for a, b in batch)
+        values = " ".join(f"(<{a}> <{b}>)" for a, b in batch)
+
+        graph_clause = ""
         q = f"""
-        SELECT ?a ?b ?p WHERE {{
-          VALUES (?a ?b) {{ {values} }}
-          {{ ?a ?p ?b }} UNION {{ ?b ?p ?a }}
-        }}"""
+            SELECT ?a ?b ?p {graph_clause} WHERE {{
+            VALUES (?a ?b) {{ {values} }}
+            {{ ?a ?p ?b }} UNION {{ ?b ?p ?a }}
+        }}
+        """
         rows = []
         sparql_succeeded = False
         for attempt in range(3):

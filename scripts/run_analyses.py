@@ -65,23 +65,48 @@ def load_ontario():
         })
     return records
 
+def load_quebec():
+    with open(os.path.join(REPO_ROOT, "data/dbpedia_pipeline/quebec/factuality_scores.json")) as f:
+        scores = json.load(f)
+    records = []
+    for date, v in scores.items():
+        if v["total_sentences"] == 0:
+            continue
+        result = (v.get("vote_result") or "").lower()
+        passed = 1 if result in ["passed"] else (0 if result in ["failed", "lost", "defeated"] else None)
+        if passed is None:
+            continue
+        records.append({
+            "date": date,
+            "year": int(date[:4]) if date else 0,
+            "factuality": v["factuality_score"],
+            "passed": passed,
+            "jurisdiction": "quebec",
+            "total_sentences": v["total_sentences"],
+        })
+    return records
 
-def analysis_1_regression(us, ontario):
+
+def analysis_1_regression(us, ontario, quebec):
     """Simple logistic regression: passage ~ factuality + jurisdiction"""
     print("\n" + "="*60)
     print("ANALYSIS 1: Factuality and Bill Passage")
     print("="*60)
 
-    all_records = us + ontario
+    all_records = us + ontario + quebec
 
     # simple comparison: mean factuality by outcome
-    for juris, records in [("US", us), ("Ontario", ontario), ("Combined", all_records)]:
+    for juris, records in [("US", us), ("Ontario", ontario), ("Quebec", quebec), ("Combined", all_records)]:
         passed_f = [r["factuality"] for r in records if r["passed"] == 1]
         failed_f = [r["factuality"] for r in records if r["passed"] == 0]
         diff = avg(passed_f) - avg(failed_f) if (passed_f and failed_f) else None
         print(f"\n{juris}:")
         print(f"  Passed bills:  mean factuality = {avg(passed_f):.4f} (n={len(passed_f)})")
-        print(f"  Failed bills:  mean factuality = {avg(failed_f):.4f} (n={len(failed_f)})")
+        failed_avg = avg(failed_f)
+        if failed_avg is not None:
+            print(f"  Failed bills:  mean factuality = {failed_avg:.4f} (n={len(failed_f)})")
+        else:
+            print(f"  Failed bills:  n/a (no failed bills in corpus)")
         if diff is not None:
             print(f"  Difference:    {diff:+.4f} ({'higher factuality → passage' if diff > 0 else 'lower factuality → passage'})")
 
@@ -90,7 +115,9 @@ def analysis_1_regression(us, ontario):
         from sklearn.linear_model import LogisticRegression
         from sklearn.preprocessing import StandardScaler
 
-        X = np.array([[r["factuality"], 1 if r["jurisdiction"]=="ontario" else 0]
+        X = np.array([[r["factuality"], 
+                       1 if r["jurisdiction"]=="ontario" else 0,
+                       1 if r["jurisdiction"]=="quebec" else 0]
                       for r in all_records])
         y = np.array([r["passed"] for r in all_records])
 
@@ -109,7 +136,7 @@ def analysis_1_regression(us, ontario):
         print("\n  (sklearn not available for logistic regression)")
 
 
-def analysis_2_gov_vs_opposition(us, ontario):
+def analysis_2_gov_vs_opposition(us, ontario, quebec):
     """Government vs opposition factuality — using year and jurisdiction as proxy"""
     print("\n" + "="*60)
     print("ANALYSIS 2: Temporal Factuality Trends")
@@ -118,7 +145,7 @@ def analysis_2_gov_vs_opposition(us, ontario):
     print("\nNote: Speaker-level gov/opposition breakdown requires")
     print("merging with speaker_turns data — showing year trends instead.\n")
 
-    for juris, records in [("US", us), ("Ontario", ontario)]:
+    for juris, records in [("US", us), ("Ontario", ontario), ("Quebec", quebec)]:
         by_year = defaultdict(list)
         for r in records:
             by_year[r["year"]].append(r["factuality"])
@@ -133,13 +160,13 @@ def analysis_2_gov_vs_opposition(us, ontario):
             print(f"  {decade}s: {avg(decades[decade]):.4f} (n={len(decades[decade])})")
 
 
-def analysis_3_covid(us, ontario):
+def analysis_3_covid(us, ontario, quebec):
     """COVID natural experiment: pre/post March 2020"""
     print("\n" + "="*60)
     print("ANALYSIS 3: COVID Natural Experiment (Pre/Post March 2020)")
     print("="*60)
 
-    for juris, records in [("US", us), ("Ontario", ontario)]:
+    for juris, records in [("US", us), ("Ontario", ontario), ("Quebec", quebec)]:
         pre = [r["factuality"] for r in records if r["year"] < 2020]
         post_covid = [r["factuality"] for r in records if r["year"] >= 2020]
         covid_year = [r["factuality"] for r in records if r["year"] == 2020]
@@ -153,7 +180,7 @@ def analysis_3_covid(us, ontario):
         print(f"  2020 specifically:        {avg(covid_year):.4f} (n={len(covid_year)})")
 
 
-def analysis_4_breakpoint(us, ontario):
+def analysis_4_breakpoint(us, ontario, quebec):
     """Pre/post political transitions: 2016 US, 2015 Canada"""
     print("\n" + "="*60)
     print("ANALYSIS 4: Political Transition Breakpoints")
@@ -189,6 +216,21 @@ def analysis_4_breakpoint(us, ontario):
         era_f = [r["factuality"] for r in ontario if start <= r["year"] < end]
         if era_f:
             print(f"  {era_name}: {avg(era_f):.4f} (n={len(era_f)})")
+    print("\nQuebec — factuality by governing party era:")
+    quebec_eras = {
+        "PQ 1985-1985": (1985, 1985),
+        "Liberal 1985-1994": (1985, 1994),
+        "PQ 1994-2003": (1994, 2003),
+        "Liberal 2003-2012": (2003, 2012),
+        "PQ 2012-2014": (2012, 2014),
+        "Liberal 2014-2018": (2014, 2018),
+        "CAQ 2018-present": (2018, 2030),
+    }
+    
+    for era_name, (start, end) in quebec_eras.items():
+        era_f = [r["factuality"] for r in quebec if start <= r["year"] < end]
+        if era_f:
+            print(f"  {era_name}: {avg(era_f):.4f} (n={len(era_f)})")
 
 
 def main():
@@ -200,14 +242,17 @@ def main():
     ontario = load_ontario()
     print(f"Ontario records: {len(ontario)}")
 
-    analysis_1_regression(us, ontario)
-    analysis_2_gov_vs_opposition(us, ontario)
-    analysis_3_covid(us, ontario)
-    analysis_4_breakpoint(us, ontario)
+    print("Loading Quebec factuality scores...")
+    quebec = load_quebec()
+    print(f"Quebec records: {len(quebec)}")
+
+    analysis_1_regression(us, ontario, quebec)
+    analysis_2_gov_vs_opposition(us, ontario, quebec)
+    analysis_3_covid(us, ontario, quebec)
+    analysis_4_breakpoint(us, ontario, quebec)
 
     print("\n" + "="*60)
     print("All analyses complete.")
-    print("Note: Quebec analyses pending French DBpedia endpoint availability.")
     print("="*60)
 
 

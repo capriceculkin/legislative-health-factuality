@@ -91,19 +91,60 @@ def load_bill_meta():
                 }
 
     elif JURISDICTION == "quebec":
-        with open(MATCHED_PATH, encoding="utf-8") as f:
-            bills = json.load(f)
-        for b in bills:
+        # Load bill metadata from cheminement which has debate dates in URLs
+        cheminement_path = os.path.join(REPO_ROOT, "data/canada/quebec_bills/cheminement_all_sessions.json")
+        health_bills_path = os.path.join(REPO_ROOT, "data/canada/quebec_bills/quebec_health_bills_combined.json")
+        
+        with open(health_bills_path, encoding="utf-8") as f:
+            health_bills = json.load(f)
+        
+        # build set of health bill identifiers (session + number)
+        health_set = set()
+        for b in health_bills:
             session = b.get("session", "")
-            bill_number = b.get("bill_number", "")
-            result = b.get("result", "unknown")
-            for date in b.get("dates", []):
-                bill_meta[date] = {
-                    "bill_number": bill_number,
-                    "session": session,
-                    "result": result,
-                    "date": date,
-                }
+            num = b.get("bill_number", "")
+            if session and num:
+                health_set.add((session, num))
+        
+        with open(cheminement_path, encoding="utf-8") as f:
+            cheminement = json.load(f)
+        
+        import re as re2
+                # Load vote outcomes
+        outcomes_path = os.path.join(REPO_ROOT, "data/canada/quebec_bills/quebec_vote_outcomes_combined.json")
+        vote_outcomes = {}
+        if os.path.exists(outcomes_path):
+            with open(outcomes_path, encoding="utf-8") as f:
+                outcomes_data = json.load(f)
+            for url, v in outcomes_data.items():
+                sess = v.get("session", "")
+                t = v.get("title", "")
+                import re as re3
+                m2 = re3.search(r"n[°o\xa0]\s*(\d+)", t)
+                if m2 and sess:
+                    vote_outcomes[(sess, m2.group(1))] = v.get("outcome", "unknown")
+        for session, bills in cheminement.items():
+            for b in bills:
+                title = b.get("title", "")
+                m = re2.search(r"n[°o\xa0]\s*(\d+)", title)
+                if not m:
+                    continue
+                bill_num = m.group(1)
+                if (session, bill_num) not in health_set:
+                    continue
+                result = vote_outcomes.get((session, bill_num), b.get("result", "unknown"))
+                # extract dates from assembly_debates URLs
+                for debate in b.get("assembly_debates", []):
+                    url = debate.get("url", "")
+                    date_m = re2.search(r'/(\d{4})(\d{2})(\d{2})/', url)
+                    if date_m:
+                        date = f"{date_m.group(1)}-{date_m.group(2)}-{date_m.group(3)}"
+                        bill_meta[date] = {
+                            "bill_number": bill_num,
+                            "session": session,
+                            "result": result,
+                            "date": date,
+                        }
 
     return bill_meta
 
@@ -157,9 +198,9 @@ def main():
 
     all_scores = [v["factuality_score"] for v in scores.values() if v["total_sentences"] > 0]
     passed = [v["factuality_score"] for v in scores.values()
-              if v.get("vote_result", "").lower() in ["passed", "yea", "carried"] and v["total_sentences"] > 0]
+            if (v.get("vote_result") or "").lower() in ["passed", "yea", "carried"] and v["total_sentences"] > 0]
     failed = [v["factuality_score"] for v in scores.values()
-              if v.get("vote_result", "").lower() in ["failed", "nay", "lost", "defeated"] and v["total_sentences"] > 0]
+            if (v.get("vote_result") or "").lower() in  ["failed", "nay", "lost", "defeated"] and v["total_sentences"] > 0]
 
     def avg(lst): return sum(lst) / len(lst) if lst else 0
 

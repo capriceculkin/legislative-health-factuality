@@ -21,6 +21,7 @@ from collections import defaultdict
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSCRIPT_DIR = os.path.join(REPO_ROOT, "data/canada/quebec_assembly")
+TRANSCRIPT_DIR_PRE1994 = os.path.join(REPO_ROOT, "data/canada/quebec_assembly/transcripts")
 OUTPUT_DIR = os.path.join(REPO_ROOT, "data/canada/quebec_assembly/bill_segments")
 INDEX_PATH = os.path.join(REPO_ROOT, "data/canada/quebec_bills/quebec_bill_segments_index.json")
 
@@ -29,7 +30,11 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # Pattern for bill study section headers
 # Matches: "Étude du projet de loi n° 52" or "Étude du projet de loi no 52"
 BILL_HEADER_RE = re.compile(
-    r'Étude du projet de loi\s+n[°o]?\s*(\d+)',
+    r'(?:Auditions\s+et\s+)?(?:[ÉE]tude\s+(?:d[ée]taill[ée]e\s+)?(?:du\s+|de\s+la\s+)?|'
+    r'Adoption\s+du\s+principe\s+(?:et\s+\w+\s+)?(?:du\s+|de\s+la\s+)?|'
+    r'Reprise\s+du\s+d[ée]bat\s+sur\s+l\'adoption\s+du\s+principe\s+du\s+|'
+    r'Prise\s+en\s+consid[ée]ration\s+du\s+rapport\s+sur\s+le\s+|'
+    r'Adoption\s+(?:du\s+|de\s+la\s+)?)projet\s+de\s+loi\s+(?:n[°o]?\s*)?(\d+)',
     re.IGNORECASE
 )
 
@@ -90,7 +95,13 @@ def main():
         f for f in os.listdir(TRANSCRIPT_DIR)
         if f.endswith('.txt') and re.match(r'\d{8}\.txt', f)
     ])
-    print(f"Found {len(txt_files)} transcript files")
+    # Add pre-1994 transcripts
+    pre1994_files = sorted([
+        f for f in os.listdir(TRANSCRIPT_DIR_PRE1994)
+        if f.endswith('.txt') and re.match(r'\d{8}\.txt', f)
+    ])
+    txt_files = txt_files + pre1994_files
+    print(f"Found {len(txt_files)} transcript files ({len(pre1994_files)} pre-1994)")
     
     index = {}  # {bill_num: {date: {path, word_count, char_count}}}
     total_segments = 0
@@ -100,6 +111,8 @@ def main():
         date_str = fname.replace('.txt', '')
         date = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
         fpath = os.path.join(TRANSCRIPT_DIR, fname)
+        if not os.path.exists(fpath):
+            fpath = os.path.join(TRANSCRIPT_DIR_PRE1994, fname)
         
         try:
             with open(fpath, encoding='utf-8', errors='replace') as f:

@@ -43,25 +43,22 @@ def load_us():
     return records
 
 def load_ontario():
-    with open(os.path.join(REPO_ROOT, "data/dbpedia_pipeline/ontario/factuality_scores_per_bill.json")) as f:
+    with open(os.path.join(REPO_ROOT, "data/dbpedia_pipeline/ontario/factuality_scores.json")) as f:
         scores = json.load(f)
     records = []
-    for bill_key, v in scores.items():
-        outcome = v.get("outcome", "").lower()
+    for date_key, v in scores.items():
+        outcome = v.get("vote_result", "").lower()
         passed = 1 if outcome in ["carried", "passed"] else (0 if outcome in ["lost", "failed", "defeated"] else None)
         if passed is None:
             continue
-        dates = v.get("dates", [])
-        if not dates:
-            continue
-        year = int(dates[-1][:4]) if dates else 0
+        year = int(date_key[:4]) if date_key else 0
         records.append({
-            "date": dates[0],
+            "date": date_key,
             "year": year,
             "factuality": v["factuality_score"],
             "passed": passed,
             "jurisdiction": "ontario",
-            "total_sentences": v["total_claim_sentences"],
+            "total_sentences": v["total_sentences"],
         })
     return records
 

@@ -30,11 +30,26 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # Pattern for bill study section headers
 # Matches: "Étude du projet de loi n° 52" or "Étude du projet de loi no 52"
 BILL_HEADER_RE = re.compile(
+    r'(?:'
+    r'(?:Auditions\s+et\s+)?(?:[ÉE]tude\s+(?:d[ée]taill[ée]e\s+)?(?:du\s+|de\s+la\s+)?)'
+    r'|Adoption\s+du\s+principe\s+(?:et\s+\w+\s+)?(?:du\s+|de\s+la\s+)?'
+    r'|Reprise\s+du\s+d[ée]bat\s+sur\s+l\'adoption\s+du\s+principe\s+du\s+'
+    r'|Prise\s+en\s+consid[ée]ration\s+du\s+rapport\s+sur\s+le\s+'
+    r'|Adoption\s+(?:du\s+|de\s+la\s+)?'
+    r'|[Dd]euxième\s+lecture\s+(?:du\s+)?(?:projet\s+de\s+loi\s+(?:n[°o]?\s*)?)?'
+    r'|[Tt]roisième\s+lecture\s+(?:du\s+)?(?:projet\s+de\s+loi\s+(?:n[°o]?\s*)?)?'
+    r'|[Dd][ée]bat\s+(?:ajourné\s+)?sur\s+(?:la\s+)?(?:motion\s+portant\s+)?(?:deuxième|troisième)\s+lecture\s+(?:du\s+)?(?:projet\s+de\s+loi\s+(?:n[°o]?\s*)?)?'
+    r')projet\s+de\s+loi\s+(?:n[°o]?\s*)?(\d+)',
+    re.IGNORECASE
+)
+
+# For files where bill number is on the next line
+BILL_HEADER_MULTILINE_RE = re.compile(
     r'(?:Auditions\s+et\s+)?(?:[ÉE]tude\s+(?:d[ée]taill[ée]e\s+)?(?:du\s+|de\s+la\s+)?|'
     r'Adoption\s+du\s+principe\s+(?:et\s+\w+\s+)?(?:du\s+|de\s+la\s+)?|'
     r'Reprise\s+du\s+d[ée]bat\s+sur\s+l\'adoption\s+du\s+principe\s+du\s+|'
     r'Prise\s+en\s+consid[ée]ration\s+du\s+rapport\s+sur\s+le\s+|'
-    r'Adoption\s+(?:du\s+|de\s+la\s+)?)projet\s+de\s+loi\s+(?:n[°o]?\s*)?(\d+)',
+    r'Adoption\s+(?:du\s+|de\s+la\s+)?)projet\s+de\s+loi\s*\n\s*(\d+)',
     re.IGNORECASE
 )
 
@@ -117,6 +132,13 @@ def main():
         try:
             with open(fpath, encoding='utf-8', errors='replace') as f:
                 text = f.read()
+            # Join cases where bill number is on next line after header
+            text = re.sub(
+                r'(projet\s+de\s+loi)\s*\n\s*(\d+)',
+                r'\1 n° \2',
+                text,
+                flags=re.IGNORECASE
+            )
         except Exception as e:
             print(f"  Error reading {fname}: {e}")
             continue

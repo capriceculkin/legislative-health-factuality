@@ -57,11 +57,11 @@ PAIRS_PATH = os.path.join(WORK_DIR, "unique_pairs.json")
 RESULTS_PATH = os.path.join(WORK_DIR, "dbpedia_results.json")
 ANNOTATED_PATH = os.path.join(WORK_DIR, "annotated_sentences.json")
 
-SPARQL_ENDPOINT = "http://fr.dbpedia.org/sparql" if os.environ.get("JURISDICTION") == "quebec" else "https://dbpedia.org/sparql"
+SPARQL_ENDPOINT = "http://localhost:8890/sparql"
 SPARQL_ENDPOINT_BACKUP = "https://query.wikidata.org/sparql"
 SPOTLIGHT_EN = "http://localhost:2222/rest/annotate"
 SPOTLIGHT_FR = "http://localhost:2223/rest/annotate"
-BATCH_SIZE = 20  # concept pairs per SPARQL request
+BATCH_SIZE = 50  # concept pairs per SPARQL request
 
 # demo-scale grounding table; production replaces this with DBpedia Spotlight
 ENTITY_TO_DBPEDIA = {
@@ -239,10 +239,14 @@ def stage_query():
                 cache[f"{a}|{b}"] = []
         if not sparql_succeeded:
             continue  # don't cache failed requests
+        if not rows:
+        # Still write cache periodically even with no results
+            if start % 1000 == 0:
+                with open(RESULTS_PATH, "w", encoding="utf-8") as f:
+                    json.dump(cache, f)
+            continue
         with open(RESULTS_PATH, "w", encoding="utf-8") as f:
             json.dump(cache, f)
-        if not rows:
-            continue
 
         for a, b in batch:
             cache[f"{a}|{b}"] = []

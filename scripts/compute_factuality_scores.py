@@ -164,7 +164,12 @@ def main():
     bill_sentences = defaultdict(list)
     for s in sentences:
         sid = s["sentence_id"]
-        date = "-".join(sid.split("-")[:3])
+        # Handle both old format (1995-06-14-turn0-0) and new format (20011025-hf0-0)
+        raw = sid.split("-")[0]
+        if len(raw) == 8 and raw.isdigit():
+            date = f"{raw[:4]}-{raw[4:6]}-{raw[6:8]}"
+        else:
+            date = "-".join(sid.split("-")[:3])
         bill_sentences[date].append(sid)
 
     print(f"Bills with sentences: {len(bill_sentences)}")

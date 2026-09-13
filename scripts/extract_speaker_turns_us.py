@@ -1,167 +1,161 @@
 """
 extract_speaker_turns_us.py
 
-Extracts speaker-attributed speech turns from US Congressional Record files.
-Speaker labels follow the pattern: "Mr. SMITH." or "Ms. JONES." (all-caps surname)
+Parses US Congressional Record speech files to extract speaker turns
+with party attribution. Uses member_lookup.json to match speaker surnames
+to party affiliation by congress number.
 
-For each health bill date, produces speaker turns with party affiliation
-matched from the member_lookup.json by congress number.
+Congressional Record speaker label format:
+  Mr. SMITH. [speech text]
+  Ms. JONES of California. [speech text]
+  Mrs. BROWN. [speech text]
+
+Output: data/us/us_speaker_turns.json
 
 Usage: python3 scripts/extract_speaker_turns_us.py
 """
-import os, json, re, csv
+import os, re, json
 from collections import defaultdict
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SPEECH_DIR = os.path.join(REPO_ROOT, "data/us/congressional_record_speeches")
+SPEECHES_DIR = os.path.join(REPO_ROOT, "data/us/congressional_record_speeches")
 MEMBER_LOOKUP_PATH = os.path.join(REPO_ROOT, "data/us/member_lookup.json")
-MATCHED_PATH = os.path.join(REPO_ROOT, "data/us/health_bills_final_matched.csv")
-OUTPUT_PATH = os.path.join(REPO_ROOT, "data/us/speaker_turns.json")
+OUTPUT_PATH = os.path.join(REPO_ROOT, "data/us/us_speaker_turns.json")
 
-# US Congressional Record speaker pattern: "Mr. SMITH." or "Ms. JONES of Texas."
+# Match speaker labels like "Mr. SMITH." or "Ms. JONES of California."
 SPEAKER_RE = re.compile(
-    r'^\s{2}((?:Mr\.|Mrs\.|Ms\.|Miss\.|Dr\.|The\s+(?:SPEAKER|CHAIR|PRESIDING\s+OFFICER))'
-    r'\s+[A-Z][A-Z\s\-\']+?(?:\s+of\s+\w+)?)\.\s+',
-    re.MULTILINE
+    r'(?:Mr\.|Ms\.|Mrs\.)\s+([A-Z][A-Za-z\-\']+(?:\s+[A-Z][A-Za-z\-\']+)?)(?:\s+of\s+[A-Za-z\s]+)?[,\.][ \t]'
 )
 
-EXCLUDE_SPEAKERS = {
-    "the speaker", "the chair", "the presiding officer",
-    "the speaker pro tempore", "the acting speaker"
+SKIP_SPEAKERS = {
+    'SPEAKER', 'CHAIR', 'CLERK', 'PRESIDENT', 'PRESIDING',
+    'ACTING', 'CHAPLAIN', 'VICE', 'CHAIRMAN', 'MR', 'MS', 'MRS',
+    'SPEAKER PRO', 'CHAIR PRO', 'TEMPORORE', 'TEMPORE',
 }
 
+def date_to_congress(date_str):
+    year = int(date_str[:4])
+    month = int(date_str[5:7])
+    # New congress starts Jan 3 of odd years
+    if year % 2 == 1 and month >= 1:
+        return str(98 + (year - 1983) // 2)
+    else:
+        return str(98 + (year - 1984) // 2)
 
-def normalize_speaker(raw):
-    """Extract just the surname from 'Mr. SMITH of Texas'."""
-    name = re.sub(r'^(Mr\.|Mrs\.|Ms\.|Miss\.|Dr\.)\s+', '', raw, flags=re.IGNORECASE)
-    name = re.sub(r'\s+of\s+\w+$', '', name, flags=re.IGNORECASE)
-    return name.strip().upper()
+def build_member_lookup():
+    with open(MEMBER_LOOKUP_PATH) as f:
+        data = json.load(f)
+    lookup = {}
+    for congress_num, members in data.get('by_congress', {}).items():
+        lookup[congress_num] = {}
+        for member in members:
+            full_name = member.get('full_name', '')
+            if not full_name:
+                continue
+            last = full_name.split()[-1].upper()
+            lookup[congress_num][last] = {
+                'party': member.get('party', 'Unknown'),
+                'full_name': full_name,
+                'state': member.get('state', ''),
+            }
+    return lookup
 
+def parse_speech_file(filepath, congress_lookup):
+    try:
+        with open(filepath, encoding='utf-8', errors='replace') as f:
+            text = f.read()
+    except Exception:
+        return []
 
-def extract_turns(text):
-    """Extract (speaker, text) turns from a CR file."""
-    turns = []
+    # Join OCR-split lines
+    text = re.sub(r'(\w)-\n(\w)', r'\1\2', text)
+    text = re.sub(r'(\w)\n(\w)', r'\1 \2', text)
+
+    # Find all speaker label positions
     matches = list(SPEAKER_RE.finditer(text))
+    if not matches:
+        return []
 
-    for i, m in enumerate(matches):
-        speaker_raw = m.group(1).strip()
-        speaker_norm = normalize_speaker(speaker_raw)
+    turns = []
+    for i, match in enumerate(matches):
+        # Handle multi-word names like "Gene Green" or "Jackson-Lee"
+        name_parts = match.group(1).upper().split()
+        lastname = name_parts[-1]  # use last word as surname
 
-        if speaker_norm.lower() in EXCLUDE_SPEAKERS:
+        if lastname in SKIP_SPEAKERS:
             continue
 
-        start = m.end()
-        end = matches[i+1].start() if i+1 < len(matches) else len(text)
-        speech = text[start:end].strip()
+        # Speech text runs from end of label to start of next label
+        speech_start = match.end()
+        speech_end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        speech_text = text[speech_start:speech_end].strip()
 
-        if len(speech) > 20:
-            turns.append({
-                "speaker_raw": speaker_raw,
-                "speaker_surname": speaker_norm,
-                "text": speech[:500],
-                "char_count": len(speech),
-            })
+        if len(speech_text) < 20:
+            continue
+
+        member_info = congress_lookup.get(lastname, {})
+        party = member_info.get('party', 'Unknown')
+        full_name = member_info.get('full_name', lastname.title())
+
+        turns.append({
+            'speaker': lastname.lower(),
+            'speaker_full': full_name,
+            'party': party,
+            'text': speech_text[:3000],
+            'is_minister': False,
+        })
 
     return turns
 
-
-def build_congress_name_lookup(member_lookup):
-    """Build congress -> surname -> {party, state, gender} lookup."""
-    lookup = {}
-    for congress, members in member_lookup.get("by_congress", {}).items():
-        by_surname = defaultdict(list)
-        for m in members:
-            surname = m["full_name"].split()[-1].upper() if m["full_name"] else ""
-            if surname:
-                by_surname[surname].append(m)
-        lookup[congress] = by_surname
-    return lookup
-
-
 def main():
-    print("Loading member lookup...")
-    with open(MEMBER_LOOKUP_PATH, encoding="utf-8") as f:
-        member_lookup = json.load(f)
-    congress_lookup = build_congress_name_lookup(member_lookup)
-    print(f"  Congresses loaded: {sorted(congress_lookup.keys())}")
+    print("Building member lookup by congress...")
+    member_lookup = build_member_lookup()
+    congresses = sorted(member_lookup.keys(), key=int)
+    print(f"Congresses: {congresses[0]} to {congresses[-1]}")
 
-    # load date -> congress mapping from matched bills
-    date_to_congress = {}
-    with open(MATCHED_PATH, newline="") as f:
-        for row in csv.DictReader(f):
-            date_to_congress[row["date"]] = row["congress"]
-    print(f"  {len(date_to_congress)} bill dates mapped to congress")
+    speech_files = sorted([
+        f for f in os.listdir(SPEECHES_DIR)
+        if f.endswith('.txt') and re.match(r'\d{4}-\d{2}-\d{2}', f)
+    ])
+    print(f"Speech files: {len(speech_files)}")
 
-    speech_files = sorted(
-        f for f in os.listdir(SPEECH_DIR)
-        if f.endswith(".txt") and "_notes" not in f
-    )
-    print(f"  {len(speech_files)} speech files")
-
-    results = {}
+    speaker_turns = {}
     total_turns = 0
-    matched_party = 0
+    matched = 0
+    unmatched = defaultdict(int)
 
     for fname in speech_files:
-        date = fname.replace(".txt", "")
-        congress = date_to_congress.get(date, "")
-        members_this_congress = congress_lookup.get(congress, {})
+        date = fname.replace('.txt', '')
+        congress_num = date_to_congress(date)
+        congress_lookup = member_lookup.get(congress_num, {})
+        filepath = os.path.join(SPEECHES_DIR, fname)
+        turns = parse_speech_file(filepath, congress_lookup)
 
-        fpath = os.path.join(SPEECH_DIR, fname)
-        with open(fpath, encoding="utf-8", errors="replace") as f:
-            text = f.read()
+        if turns:
+            speaker_turns[date] = {'turn_count': len(turns), 'turns': turns}
+            total_turns += len(turns)
+            for t in turns:
+                if t['party'] != 'Unknown':
+                    matched += 1
+                else:
+                    unmatched[t['speaker']] += 1
 
-        turns = extract_turns(text)
+    print(f"\nDates with turns: {len(speaker_turns)}/{len(speech_files)}")
+    print(f"Total turns: {total_turns:,}")
+    print(f"Party matched: {matched:,} ({matched/max(total_turns,1)*100:.1f}%)")
+    print(f"Top unmatched:")
+    for spk, n in sorted(unmatched.items(), key=lambda x: -x[1])[:10]:
+        print(f"  {spk}: {n}")
 
-        # match party by surname within congress
-        for turn in turns:
-            surname = turn["speaker_surname"]
-            candidates = members_this_congress.get(surname, [])
-            if len(candidates) == 1:
-                turn["party"] = candidates[0]["party"]
-                turn["state"] = candidates[0]["state"]
-                turn["gender"] = candidates[0]["gender"]
-                matched_party += 1
-            elif len(candidates) > 1:
-                # multiple members with same surname — flag as ambiguous
-                parties = list(set(c["party"] for c in candidates))
-                turn["party"] = parties[0] if len(parties) == 1 else "ambiguous"
-                turn["state"] = candidates[0]["state"]
-                turn["gender"] = ""
-            else:
-                turn["party"] = ""
-                turn["state"] = ""
-                turn["gender"] = ""
+    # Sample
+    for date, data in list(speaker_turns.items())[:1]:
+        print(f"\nSample ({date}):")
+        for t in data['turns'][:3]:
+            print(f"  {t['speaker_full']} ({t['party']}): {t['text'][:80]}")
 
-            # classify government vs opposition
-            # majority party per congress (simplified — Republican/Democrat varies)
-            turn["is_presiding"] = "SPEAKER" in surname or "CHAIR" in surname
-
-        results[date] = {
-            "date": date,
-            "congress": congress,
-            "turn_count": len(turns),
-            "speakers": list(set(t["speaker_surname"] for t in turns)),
-            "turns": turns,
-        }
-        total_turns += len(turns)
-
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-
-    print(f"\nProcessed {len(results)} speech files")
-    print(f"Total speaker turns: {total_turns}")
-    print(f"Turns with party matched: {matched_party}")
-    print(f"Saved to {OUTPUT_PATH}")
-
-    # sample
-    dates_with_turns = [d for d, v in results.items() if v["turn_count"] > 0]
-    if dates_with_turns:
-        sample = dates_with_turns[len(dates_with_turns)//2]
-        print(f"\nSample from {sample} (Congress {results[sample]['congress']}):")
-        for t in results[sample]["turns"][:3]:
-            print(f"  {t['speaker_raw']} [{t.get('party','unknown')}]: {t['text'][:80]}...")
-
+    with open(OUTPUT_PATH, 'w') as f:
+        json.dump(speaker_turns, f)
+    print(f"\nSaved to {OUTPUT_PATH}")
 
 if __name__ == "__main__":
     main()

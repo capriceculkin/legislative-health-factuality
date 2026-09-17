@@ -2,89 +2,80 @@
 
 **Research question:** Does the factual accuracy of legislative health floor debate predict bill passage outcomes?
 
-**Jurisdictions:** US House of Representatives, Ontario Legislative Assembly, Quebec National Assembly — 1985 to 2026
+**Jurisdictions covered:** US House of Representatives, Ontario Legislative Assembly, Quebec National Assembly, spanning 1985 to 2026.
 
-**Investigators:** Caprice Culkin (Yale School of Public Health) | David Chartash, Joanie Bouchard (advisors)
+**Investigators:** Caprice Culkin (Yale School of Public Health) with David Chartash and Joanie Bouchard.
+
+**Repository:** github.com/capriceculkin/legislative-health-factuality
 
 ---
 
-## Pipeline Overview
+## Pipeline
+
+The pipeline has five stages. Each stage is documented below with the exact files it reads,
+the files it produces, what gets removed at that stage, and real examples showing the
+input and output text.
 
 ```mermaid
-flowchart LR
-    subgraph sources[Data Sources]
-        A[US: GovInfo API]
-        B[Ontario: OLA Azure Search API]
-        C[Quebec: assnat.qc.ca HTML]
-    end
+flowchart TD
+    classDef source fill:#f5f5f5,stroke:#999,color:#111
+    classDef process fill:#e8f4f8,stroke:#5b9bd5,color:#111
+    classDef output fill:#e8f5e9,stroke:#4caf50,color:#111
 
-    subgraph extract[Step 1 - Bill-Specific Extraction]
-        D[US Granules
-145 bill-dates
-584K sentences]
-        E[Ontario Orders of Day
-249 verified bills
-83K paragraphs]
-        F[Quebec Bill Segments
-2178 bill-date segments
-924K sentences]
-    end
+    US_SRC["GovInfo API\nCongressional Record\n145 health bill-dates"]:::source
+    ON_SRC["OLA Azure Search API\naihansardsearch-apim.azure-api.net\n329 health bills"]:::source
+    QC_SRC["assnat.qc.ca\nJournal des debats HTML\n1831 transcript files"]:::source
 
-    subgraph v2[Step 2 - Predication Extraction spaCy]
-        G[US Predications
-215K SVO triples
-36.9%]
-        H[Ontario Predications
-Pending]
-        I[Quebec Predications
-178K SVO triples
-19.3%]
-    end
+    US_EXT["US Granules\n145 bill-dates\n584K sentences"]:::process
+    ON_EXT["Ontario Orders of Day\n249 verified bills\n83K paragraphs\nrescrape in progress"]:::process
+    QC_EXT["Quebec Bill Segments\n11K bill-date segments\n924K sentences"]:::process
 
-    subgraph spotlight[Step 3 - DBpedia Spotlight]
-        J[Runs on subject + object strings only
-NOT full sentences
-EN port 2222 / FR port 2223]
-    end
+    PRED["Predication Extraction\nspaCy SVO\nUS 215K  Quebec 178K  Ontario pending"]:::process
 
-    subgraph sparql[Step 4 - SPARQL Verification]
-        K[Local Virtuoso
-EN + FR DBpedia
-localhost:8890]
-    end
+    SPOT["DBpedia Spotlight\nSubject + Object strings only\nDunkleosteus EN port 2222 FR port 2223"]:::process
 
-    subgraph scores[Step 5 - Factuality Scores]
-        L[supported / total claim-bearing
-per bill-date]
-    end
+    SPARQL["SPARQL Verification\nLocal Virtuoso\nEN + FR DBpedia\nlocalhost:8890"]:::process
 
-    A --> D --> G --> J
-    B --> E --> H --> J
-    C --> F --> I --> J
-    J --> K --> L
+    SCORES["Factuality Scores\nsupported / total claim-bearing\nper bill-date"]:::output
+
+    US_SRC --> US_EXT
+    ON_SRC --> ON_EXT
+    QC_SRC --> QC_EXT
+    US_EXT --> PRED
+    ON_EXT --> PRED
+    QC_EXT --> PRED
+    PRED --> SPOT --> SPARQL --> SCORES
 ```
 
 ---
 
-## Step 1: Bill-Specific Text Extraction
+## Stage 1: Bill-Specific Text Extraction
 
-All three jurisdictions extract **floor/plenary debate text specific to each health bill only.**
-Question period, petitions, member statements, committee transcripts, and all other business
-on sitting days are excluded. This matches the US standard where GovInfo granules are
-bill-specific by construction.
+The denominator for factuality scoring is the set of sentences spoken during
+floor debate on a specific health bill. All three jurisdictions extract only
+this bill-specific floor debate text, excluding question period, petitions,
+member statements, ministerial statements, committee study transcripts, and
+all other business on sitting days.
 
-### United States — GovInfo Congressional Record Granules
+This matches the structure of the US data where GovInfo granules are
+bill-specific by construction. Quebec uses section markers in the Journal
+des debats. Ontario uses the OLA Azure Search API filtered to Orders of the Day.
 
-**Source:** GovInfo API — `api.govinfo.gov/packages/`
-**Collection script:** [`scripts/congressional_record_pull.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/congressional_record_pull.py)
-**Output:** `data/us/congressional_record_speeches/` — one `.txt` file per bill-date
+### United States
 
-Each GovInfo granule corresponds to one bill's floor debate. Bill-specific by construction —
-no extraction needed. Health bills identified via CRS policy area tags.
+Source: GovInfo API at `api.govinfo.gov/packages/`
+Collection script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/congressional_record_pull.py](scripts/congressional_record_pull.py)
+Output directory: `data/us/congressional_record_speeches/`
 
-**N = 145 health bill-dates | 584,111 sentences**
+Each GovInfo granule corresponds to one bill's Congressional Record floor debate.
+The granule ID encodes the bill and date. Health bills are identified via
+CRS policy area tags in the package metadata.
 
-**Example:** [`data/us/congressional_record_speeches/2006-12-09-test.txt`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/us/congressional_record_speeches/2006-12-09-test.txt)
+After collection: 145 health bill-dates, 584,111 sentences.
+
+Full example file: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/us/congressional_record_speeches/2006-12-09-test.txt](data/us/congressional_record_speeches/2006-12-09-test.txt)
+
+Excerpt from `2006-12-09-test.txt`:
 
 ```
 ous adverse event report no later than 15
@@ -99,255 +90,303 @@ Congress assembled,
 sponsible person shall submit to the Sec-
 retary any new medical information, related
 This Act may be cited as the ‘‘Dietary Sup-
-to a submitted serious adverse event report
-plement and Nonprescription Drug Consumer
-that is received by the responsible person
 ```
 
-### Ontario — OLA Azure Search API
+### Ontario
 
-**Source:** OLA Hansard Search backend — `aihansardsearch-apim.azure-api.net/api/search/keyword`
-**Collection script:** [`scripts/fetch_ontario_hansard_via_api.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/fetch_ontario_hansard_via_api.py)
-**Cleaning script:** [`scripts/rebuild_clean_ontario.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/rebuild_clean_ontario.py)
-**Output:** `data/canada/ontario/hansard_api_bill_segments_clean.json`
+Source: OLA Hansard search tool backend at `aihansardsearch-apim.azure-api.net`
+Collection script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/fetch_ontario_hansard_via_api.py](scripts/fetch_ontario_hansard_via_api.py)
+Cleaning script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/rebuild_clean_ontario.py](scripts/rebuild_clean_ontario.py)
+Output: `data/canada/ontario/hansard_api_bill_segments_clean.json` ([Yale OneDrive](https://yaleedu-my.sharepoint.com/:u:/g/personal/caprice_culkin_yale_edu/IQCAGMCyyH_0ToGTWu1erpwpAV8Bcot0NVoBJZ5BJPxiTYI?e=NO1Els))
 
 The OLA Hansard search tool uses an Azure Cognitive Search backend.
-I reverse-engineered the API endpoint from browser network traffic and built
-a scraper that queries each bill's debate dates with:
+The API endpoint was identified by inspecting browser network traffic on the OLA search page.
+The scraper queries each bill's debate dates using an OData filter:
 
 ```
-filter: (date ge {date}T00:00:00Z and date le {date}T23:59:59Z)
-        and (typeOfBusiness eq 'ORDERS OF THE DAY'
-             or typeOfBusiness eq 'Orders of the Day')
+POST aihansardsearch-apim.azure-api.net/api/search/keyword
+filter: (date ge 1986-01-14T00:00:00Z and date le 1986-01-14T23:59:59Z)
+        and typeOfBusiness eq 'ORDERS OF THE DAY'
+rows: 500
 ```
 
-**Bill assignment:** paragraphs are assigned to a specific bill only when the bill number
-is explicitly mentioned in the paragraph text (e.g. 'Bill 94'). No topic fallback,
-no single-bill date fallback. Every paragraph in the output has been verified.
+Two capitalizations are required: pre-2018 Hansard uses 'ORDERS OF THE DAY'
+in all caps, post-2018 uses 'Orders of the Day' in mixed case. Both are queried.
 
-**What is excluded:**
-- Question Period / Oral Questions
+Bill assignment uses only one criterion: the bill number must appear explicitly
+in the paragraph text. For example, a paragraph is assigned to Bill 94 only if
+it contains the string 'Bill 94'. No topic fallback and no single-bill date
+fallback are used. This ensures every paragraph in the output is verified.
+
+The previous version of the scraper used a single-bill date fallback that
+caused wrong assignments. For example, Bill 89 was assigned paragraphs
+that opened with 'Resuming the adjourned debate on the motion for second
+reading of Bill 68, An Act to amend certain Acts respecting Insurance.'
+The current clean corpus removes all such cases.
+
+What is excluded:
+- Question Period and Oral Questions
 - Members' Statements
 - Petitions
-- Introduction of Bills (first reading)
+- Introduction of Bills (first reading only)
 - Committee study transcripts
-- Paragraphs that do not mention the specific bill number
+- Paragraphs that do not mention the specific bill number in the text
 
-**N = 249 verified bills | 83,443 paragraphs**
+After collection and verification: 249 bills, 83,443 paragraphs.
+Rescrape with topic field storage is currently running and will increase coverage.
 
-**Example:** Bill 124 — An Act to amend the Occupational Health and Safety Act
-Debate date: 1985-11-26 | 204 paragraphs
+Full example: Bill 94, An Act regulating the Amounts that Persons may charge for Insured Services (extra billing)
+Debate date: 1986-01-14. OLA Hansard page for this date:
+https://www.ola.org/en/legislative-business/house-documents/parliament-34/session-1/1986-01-14/hansard
+
+The paragraph text confirms assignment (Bill 94 mentioned):
 
 ```
-I want to speak briefly on the bill. I do so both for reasons of principle and for personal reasons. I have never voted for back-to-work legislation in this assembly, whether it affected teachers or elevator workers or transit workers, because I believe if we have established in legislation the right to full and free collective bargaining, we abrogate that principle at very grave risk.  The risks 
+The member for Brampton who had so much to say last time and kept the discussion going for so long.  I am glad the Minister of Health (Mr. Elston) indicated that I was wont to discuss things for an extended period of time. I spoke on one occasion on the pharmacy bills for a period of two and a half hours to put the concerns of some of the professio
 
-I want to thank the several speakers who have addressed their minds and thoughts to the legislation now before the House. I would make some summary remarks in dealing with the presentations that have been made this afternoon, some of which have been truly exceptional, almost breathtaking, in the light of recent history.  Before I do that, I want to pay a particular tribute to my friend and colleag
+I know the ideology of the member for Bellwoods is complete state control, but we still have a system in this province that requires caring professionals, individuals with a commitment to quality of care. That, also, has to be put into the mix. That is something the members of the third party will never understand, honour or commit themselves to ev
+
+In that respect, he agrees with them. This is not a partisan issue involving Progressive Conservatives. We are talking about a group of caring individuals who have a closer relationship to this government than to me.
 
 ```
 
-### Quebec — Journal des débats Section Markers
+Full example: Bill 52, An Act to amend the Health Protection and Promotion Act
+Debate date: 1987-06-25. OLA Hansard page:
+https://www.ola.org/en/legislative-business/house-documents/parliament-34/session-1/1987-06-25/hansard
 
-**Source:** Assemblée nationale du Québec — `assnat.qc.ca`
-**Collection script:** [`scripts/extract_quebec_bill_segments.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_quebec_bill_segments.py)
-**Raw transcripts:** `data/canada/quebec_assembly/transcripts/` — one `.txt` file per sitting day
-**Output:** `data/canada/quebec_assembly/bill_segments/` — one `.txt` file per bill-date
-
-The Journal des débats uses structured section headers to mark when the Assembly
-takes up a specific bill. The extraction script identifies these headers and
-extracts only the text between the marker and the next section break.
-
-**Section markers used:**
 ```
-Étude du projet de loi n° X
-Adoption du principe du projet de loi n° X
-Reprise du débat sur l'adoption du principe du projet de loi n° X
-Prise en considération du rapport sur le projet de loi n° X
-Adoption du projet de loi n° X
+Briefly, with respect to the first question, I do not know the conflicting advice the member has received. I think the advice could be in the form of a patient speaking directly to someone or there could be pamphlet material as well. He is holding it up there. I presume the conflicting advice is that there could be various kinds of advice offered, 
+
+The fact is that the member is saying we are going to give people information, and I totally agree that people should be given information about possible adverse effects of vaccinations; but at the same time he is saying that if this information is not provided, something is going to happen if parents are not aware of the possible risks. What if th
+
+l appreciate the response from the Minister of Health regarding this 11th-hour amendment, given that members of this House have not had an opportunity to examine it; however, I have for the last 24 hours, and I am distressed by the lack of consultation that it appears went into this amendment.  Certainly, there has been no consultation with the Ass
+
 ```
 
-**What is excluded:**
-- Question period (période des questions)
-- Ministerial statements (déclarations ministérielles)
+### Quebec
+
+Source: Assemblee nationale du Quebec at `assnat.qc.ca`
+Raw transcripts: `data/canada/quebec_assembly/transcripts/` — one .txt file per sitting day
+Extraction script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_quebec_bill_segments.py](scripts/extract_quebec_bill_segments.py)
+Output: `data/canada/quebec_assembly/bill_segments/` — one .txt file per bill-date
+
+The Journal des debats uses structured section headers that mark when the
+Assembly takes up a specific bill. The extraction script scans each transcript
+file for these headers and extracts the text from the header to the next
+section break.
+
+Section markers used:
+
+```
+Etude du projet de loi n X
+Adoption du principe du projet de loi n X
+Reprise du debat sur l'adoption du principe du projet de loi n X
+Prise en consideration du rapport sur le projet de loi n X
+Adoption du projet de loi n X
+```
+
+What is excluded:
+- Question period (periode des questions)
+- Ministerial statements (declarations ministerielles)
 - Petitions
-- Introduction of bills (dépôt de projets de loi)
-- Commission parlementaire transcripts (separate corpus — same as US excludes committee hearings)
-- All other business on sitting days not related to the specific bill
+- Introduction of bills (depot de projets de loi)
+- Commission parlementaire transcripts (separate corpus, same as US excludes committee hearings)
+- Everything else on the sitting day not about the specific bill
 
-**N = 8,365 bill-date segments | 923,634 sentences**
+After extraction: 8,365 bill-date segment files, 923,634 sentences.
 
-**Example:** Bill 152 — date 2000-11-22
-[`data/canada/quebec_assembly/bill_segments/20001122_bill152.txt`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/bill_segments/20001122_bill152.txt)
+Full example: Bill 71, debate date 1986-06-02
+assnat.qc.ca page: https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/
+Extracted segment file: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/bill_segments/19860602_bill71.txt](data/canada/quebec_assembly/bill_segments/19860602_bill71.txt)
 
-**Raw sitting day (before extraction) — 1995-12-04:**
+Raw transcript (before extraction) showing the section marker in context:
+
 ```
-DÉCLARATIONS DE DÉPUTÉS
-  Mme Carrier-Perreault: Je veux souligner le travail remarquable...
-
-QUESTIONS ET RÉPONSES ORALES
-  M. Johnson: M. le Président, ma question s'adresse au premier ministre...
-
-ÉTUDE DU PROJET DE LOI N° 130  ← section marker
-  M. Rochon: M. le Président, l'Assemblée nationale prend maintenant en
-  considération le projet de loi 130 sur les services de santé...
-
-PÉTITIONS  ← excluded
-  M. Beaudet: Je dépose la pétition suivante...
+Journal des débats de l'Assemblée nationale - Assemblée nationale du Québec
+Atteindre le contenu
+Atteindre la navigation secondaire
+Mobile
+Suivez-nous
+sur les médias sociaux, Facebook, X, Youtube
+Carrières
+Nous joindre
+Saisir un mot clé pour faire une recherche générale
+Recherche avancée
+Accueil
+Députés
+La présidente
+Liste des députés en fonction
+Les députés depuis 1764
 ```
 
-**After extraction — bill-specific segment only:**
+Extracted bill-specific segment (after extraction):
+
 ```
-Étude détaillée du projet de loi n° 152
-M. Lachance:
- Merci, M. le Président. Il me fait plaisir de déposer le rapport de la commission des transports et de l'environnement qui a siégé le 21 novembre 2000 afin de procéder à l'étude détaillée du projet de loi n° 152, Loi modifiant la Loi sur la conservation et la mise en valeur de la faune et la Loi sur les droits de chasse et de pêche dans les territoires de la Baie James et du Nouveau-Québec. La commission a adopté le projet de loi avec des amendements.
-Le Président:
- Alors, bien. Ce rapport de commission est déposé.
-Dépôt de pétitions
-	Maint
+l'Alimentation propose maintenant l'adoption du principe du projet de loi 71,
+		Loi modifiant la Loi favorisant la mise en valeur des exploitations agricoles.
+		M. le ministre de l'Agriculture, des Pêcheries et de l'Alimentation. (15
+		h 20)
+M. Michel Pagé
+M. Pagé:
+Merci, M. le Président. L'honorable
+		lieutenant-gouverneur a pris connaissance de ce projet de loi et en recommande
+		l'étude à l'Assemblée cet après-
+midi.
+L'objet principal du projet de loi 71, on a eu l'occasion de s'y
+		référer à quelques reprises ici, à
 ```
 
 ---
 
-## Step 2: Predication Extraction (spaCy)
+## Stage 2: Predication Extraction
 
-**Script:** [`scripts/extract_predications.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_predications.py)
-**Input:** `sentences.json` for each jurisdiction
-**Output:** `predications.json` — Subject-Verb-Object triples
+Script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_predications.py](scripts/extract_predications.py)
+Input: sentences.json for each jurisdiction
+Output: predications.json
 
-Per David Chartash's September 11 2026 revision: spaCy's dependency parser extracts
-Subject-Verb-Object predications from each sentence BEFORE running DBpedia Spotlight.
-Spotlight then runs only on the subject and object strings, not the full sentence.
+This stage was added at David Chartash's request following the September 11 2026 meeting.
+In the original pipeline, DBpedia Spotlight ran on full sentences, which caused
+spurious entity pairs. The problem: a sentence can mention two entities without
+asserting any factual relationship between them.
 
-**Why this matters:**
+The example David raised:
 
 ```
-Old approach (v1):
-  Sentence: 'The OMA, which represents 30,000 physicians, endorsed this legislation.'
-  Spotlight on full sentence → entities: OMA, Physician, Legislation
-  Pairs: (OMA, Physician) ← confirmed by DBpedia, but NOT the claim being made
-         (OMA, Legislation) ← not in DBpedia
-         (Physician, Legislation) ← not in DBpedia
-  Problem: (OMA, Physician) is spuriously confirmed — it was in a relative clause
+Sentence: 'The OMA, which represents 30,000 physicians, endorsed this legislation.'
 
-New approach (v2):
-  spaCy extracts: subject='OMA', verb='endorsed', object='legislation'
-  Spotlight runs on 'OMA' and 'legislation' only
-  Pair: (OMA, Legislation) → not in DBpedia → correctly unsupported
-  The relative clause entity 'physicians' is never included
+Old approach: Spotlight on full sentence
+  Entities found: OMA, Physician, Legislation
+  Pairs generated: (OMA, Physician), (OMA, Legislation), (Physician, Legislation)
+  (OMA, Physician) is confirmed by DBpedia
+  But the speaker was not claiming anything about OMA and physicians
+  The confirmation is spurious
+
+New approach: spaCy extracts the predication first
+  subject: Ontario Medical Association
+  verb:    endorsed
+  object:  legislation
+  Spotlight runs on 'Ontario Medical Association' and 'legislation' only
+  Pair: (OMA, Legislation) is not in DBpedia
+  Correctly unsupported
+  The relative clause entity 'physicians' is never considered
 ```
 
-**What is excluded at this step:**
-- Sentences where the root verb is existential (be/have/do) — not factual claims
+spaCy's dependency parser identifies the ROOT verb of each sentence, then finds
+its nominal subject (nsubj) and direct or indirect object (dobj, obj, obl).
+The full noun phrase is expanded for each argument.
+
+What is excluded at this stage:
+- Sentences where the root verb is existential: be, have, do, seem, appear
+  These are not factual claims. Example: 'It is important that we protect health care.'
 - Sentences where no subject or no object is found
-- Entities found only in relative clauses or parentheticals
-- Subject equals object (trivial self-reference)
+- Sentences where subject and object resolve to the same entity
+- Entities found only in relative clauses, parentheticals, or appositives
 
-Hedged predicates (may/might/could/should/pourrait/devrait) are included but flagged.
+Hedged predicates (may, might, could, should, pourrait, devrait) are included
+but flagged with hedged=True so they can be filtered or analyzed separately.
 
-**N counts:**
-
-| Jurisdiction | Input sentences | Predications | Rate |
-|---|---|---|---|
-| US | 584,111 | 215,412 | 36.9% |
-| Quebec | 923,634 | 177,952 | 19.3% |
-| Ontario | (pipeline running) | (pending) | — |
-
-Note: Quebec's lower rate (19.3% vs 36.9%) reflects fr_core_news_lg's lower recall
+Results: US extracted 215,412 predications from 584,111 sentences (36.9%).
+Quebec extracted 177,952 predications from 923,634 sentences (19.3%).
+Ontario is pending. Quebec's lower rate reflects fr_core_news_lg's lower recall
 for Quebec legislative French compared to en_core_web_lg for English.
 
-**Sample US predications:**
-```
-Sentence: "--- GPO-CRECB-1985-pt12-2-2 --The House met at o'clock noon."
-  subject: "GPO-CRECB-1985-pt12"
-  verb:    meet
-  object:  "o'clock noon"
-
-Sentence: "May Your spirit give courage and strength to them and to their families."
-  subject: "Your spirit"
-  verb:    give
-  object:  "courage"
-  [hedged]
-
-Sentence: "Our hearts reach out in the bond of concern to those who are anx ious, even as we pray for understan"
-  subject: "Our hearts"
-  verb:    reach
-  object:  "the bond"
-
-Sentence: "The Chair has ex amined the Journal of the last day's proceedings and announces to the House his app"
-  subject: "The Chair"
-  verb:    amine
-  object:  "the Journal"
+Sample US predications from health bill debates:
 
 ```
+Sentence: "These sanc include the elimination of assist under the Foreign Assistance Act 1961, other than international dis assista"
+  subject: "These sanc"
+  verb:    include
+  object:  "the elimination"
 
-**Sample Quebec predications:**
+Sentence: "career young In 2 years, the United States has frittered away our position as the enables world's largest creditor natio"
+  subject: "the United States"
+  verb:    fritter
+  object:  "our position"
+
+Sentence: "The pain of ruthless brutality has shattered this quiet place and re minded us all of the horror of an un settled world."
+  subject: "The pain"
+  verb:    shatter
+  object:  "this quiet place"
+
+Sentence: "Speaker, today we will be voting on authorizations for too, title X and I urge its passage."
+  subject: "Speaker"
+  verb:    vote
+  object:  "authorizations"
+
 ```
-Sentence: "M. le Président, l'honorable
-		lieutenant-gouverneur a pris connaissance de ce projet de loi et il e"
-  sujet:  "gouverneur"
-  verbe:  prendre
-  objet:  "connaissance"
 
-Sentence: "Le discours sur le budget prononcé le 23 avril 1985 a introduit,
-		à compter de cette date, de nouve"
-  sujet:  "Le discours"
-  verbe:  introduire
-  objet:  "de nouvelles mesures"
+Sample Quebec predications from health bill debates:
 
-Sentence: "Des régions comme celle que je
-		représente en savent quelque chose."
-  sujet:  "Des régions"
-  verbe:  savoir
-  objet:  "quelque chose"
+```
+Sentence: "Le Vice-Président:
+Je cède la parole au leader de
+		l'Opposition."
+  sujet:  "Le Vice-Président"
+  verbe:  céder
+  objet:  "la parole"
 
-Sentence: "Le
-		secrétaire général n'a pas reçu d'avis concernant
-		le dépôt de pétitions."
-  sujet:  "Le
-		secrétaire général"
-  verbe:  recevoir
-  objet:  "d'avis"
+Sentence: "Cette règle ne permet aucune souplesse, aucune
+		planification, aucune gestion à long terme."
+  sujet:  "Cette règle"
+  verbe:  permettre
+  objet:  "aucune souplesse"
+
+Sentence: "Yves Duhaime
+ne modifiait en rien cette obligation du réclamant."
+  sujet:  "Yves Duhaime"
+  verbe:  modifier
+  objet:  "cette obligation"
+
+Sentence: "La Loi d'interprétation ne prévoit pas le maintien en
+		vigueur des règlements dans le cas où une loi est
+		remplacée pa"
+  sujet:  "La Loi"
+  verbe:  prévoir
+  objet:  "le maintien"
 
 ```
 
 ---
 
-## Step 3: DBpedia Spotlight Entity Linking
+## Stage 3: DBpedia Spotlight Entity Linking
 
-**Script:** [`scripts/dbpedia_batch_pipeline.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/dbpedia_batch_pipeline.py) — `extract_v2` stage
-**Infrastructure:** Dunkleosteus server (Yale) — English port 2222, French port 2223
-**SSH tunnel:** `ssh -i ~/.ssh/dunkleosteus_key -L 2222:localhost:2222 -L 2223:localhost:2223 cc3436@10.168.171.152`
+Script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/dbpedia_batch_pipeline.py](scripts/dbpedia_batch_pipeline.py) — extract_v2 stage
+Infrastructure: Dunkleosteus server at 10.168.171.152 (Yale VPN required)
+SSH tunnel: ssh -i ~/.ssh/dunkleosteus_key -L 2222:localhost:2222 -L 2223:localhost:2223 cc3436@10.168.171.152
+English endpoint: localhost:2222 — French endpoint: localhost:2223
 
-Spotlight runs on the **subject string** and **object string** from each predication,
-not on the full sentence. Returns DBpedia URIs for each entity found.
+Spotlight receives the subject string and object string from each predication
+and returns DBpedia URIs for any named entities it identifies.
 
 ```
 Input predication:
   subject: 'Ontario Medical Association'
   object:  'legislation'
 
-Spotlight on 'Ontario Medical Association' →
+Spotlight on subject string 'Ontario Medical Association':
   dbpedia.org/resource/Ontario_Medical_Association
 
-Spotlight on 'legislation' →
+Spotlight on object string 'legislation':
   dbpedia.org/resource/Legislation
 
-Entity pair: (Ontario_Medical_Association, Legislation)
+Entity pair produced: (Ontario_Medical_Association, Legislation)
 ```
 
-**What is excluded:**
-- Predications where Spotlight finds no entity for subject or object
-- Predications where subject and object link to the same entity
+What is excluded here:
+- Predications where Spotlight finds no DBpedia entity for the subject
+- Predications where Spotlight finds no DBpedia entity for the object
+- Predications where subject and object resolve to the same DBpedia resource
 
 ---
 
-## Step 4: SPARQL Verification
+## Stage 4: SPARQL Verification
 
-**Script:** [`scripts/dbpedia_batch_pipeline.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/dbpedia_batch_pipeline.py) — `query` stage
-**Endpoint:** Local Virtuoso instance on Dunkleosteus — `http://localhost:8890/sparql`
-Both English DBpedia and French DBpedia loaded in same Virtuoso container.
+Script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/dbpedia_batch_pipeline.py](scripts/dbpedia_batch_pipeline.py) — query stage
+Endpoint: local Virtuoso instance on Dunkleosteus at localhost:8890
+English DBpedia and French DBpedia are both loaded in the same Virtuoso container.
 
-For each unique entity pair, a SPARQL query checks whether DBpedia confirms
-a direct relationship between the two entities.
+For each unique entity pair, a SPARQL query checks whether DBpedia contains
+a direct triple connecting the two entities in either direction.
 
 ```sparql
 SELECT ?a ?b ?p WHERE {
@@ -356,64 +395,94 @@ SELECT ?a ?b ?p WHERE {
 }
 ```
 
-**Supported example:**
+A pair is marked supported when DBpedia returns at least one matching triple.
+
+Supported example:
+
 ```
 Pair: (dbpedia:Canada, dbpedia:United_States)
-Result: dbo:neighboringMunicipality → supported = True
+Result: dbo:neighboringMunicipality
+Supported: True
 ```
 
-**Not supported example:**
+Not supported example:
+
 ```
 Pair: (dbpedia:Ontario_Medical_Association, dbpedia:Legislation)
-Result: [] → supported = False
+Result: no triples found
+Supported: False
 ```
 
-The OMA endorsing legislation is a rhetorical claim — not a fact DBpedia can verify.
-The relationship does not exist in the DBpedia knowledge graph.
+The OMA endorsing legislation is a rhetorical claim. The relationship
+does not exist in the DBpedia knowledge graph, so the sentence is
+correctly marked as not supported by external evidence.
+
+Deduplication runs before querying: the same entity pair can appear
+in many sentences. DBpedia is queried once per unique pair and the
+result is applied to all sentences containing that pair.
 
 ---
 
-## Step 5: Factuality Scores
+## Stage 5: Factuality Scores
 
-**Script:** [`scripts/compute_factuality_scores.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/compute_factuality_scores.py)
+Script: [https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/compute_factuality_scores.py](scripts/compute_factuality_scores.py)
+
+For each health bill, the factuality score is:
 
 ```
 factuality_score = supported_sentences / total_claim_bearing_sentences
 ```
 
-Where claim-bearing sentences are those where Spotlight found entities for
-both subject and object of the extracted predication.
+A claim-bearing sentence is one where Spotlight found DBpedia entities for
+both the subject and object of the extracted predication. The denominator
+includes all claim-bearing sentences, whether supported or not.
+
+Current results (v1 pipeline, new bill-specific denominator):
+
+US: mean factuality 0.2054. Passed bills 0.2094 (n=386), failed bills 0.2015 (n=34).
+Quebec: mean factuality 0.1387. Passed bills 0.1266 (n=767).
+Ontario: pipeline running, scores pending.
+
+COVID natural experiment: US factuality decreased 0.036 post-March 2020.
+Quebec decreased 0.053. Both consistent with emergency legislative conditions.
+
+Logistic regression on US and Quebec combined: factuality coefficient +0.0467 (p less than 0.05).
 
 ---
 
 ## Large Data Files
 
-Files exceeding GitHub's 100MB limit are excluded from version control.
-Regenerate using the scripts listed above.
+The following files exceed GitHub's 100MB size limit and are not tracked in this repository.
 
-| File | Size | Description | Script to regenerate |
-|---|---|---|---|
-| `data/canada/ontario/hansard_api_bill_segments_clean.json` | ~100MB | Ontario verified bill segments | `fetch_ontario_hansard_via_api.py` + `rebuild_clean_ontario.py` |
-| `data/canada/ontario/sentences_bill_specific_api.json` | 669MB | Ontario bill-specific sentences | `convert_ontario_api_segments_to_sentences.py` |
-| `data/dbpedia_pipeline/ontario/sentences.json` | 669MB | Ontario pipeline copy | copy from above |
-| `data/dbpedia_pipeline/quebec/sentences.json` | ~200MB | Quebec bill-specific sentences | `convert_quebec_segments_to_sentences.py` |
-| `data/dbpedia_pipeline/us/predications.json` | 86.8MB | US SVO predications | `extract_predications.py` |
-| `data/dbpedia_pipeline/quebec/predications.json` | 80.2MB | Quebec SVO predications | `extract_predications.py` |
+[hansard_api_bill_segments_clean.json](https://yaleedu-my.sharepoint.com/:u:/g/personal/caprice_culkin_yale_edu/IQCAGMCyyH_0ToGTWu1erpwpAV8Bcot0NVoBJZ5BJPxiTYI?e=NO1Els) — Ontario verified bill-specific paragraphs
+249 bills, 83,443 paragraphs. Every paragraph verified: bill number explicitly in paragraph text.
+Available via Yale OneDrive (Yale login required).
+
+The following files are excluded from version control and must be regenerated locally:
+
+data/canada/ontario/sentences_bill_specific_api.json (669MB) — regenerate with convert_ontario_api_segments_to_sentences.py
+data/dbpedia_pipeline/ontario/sentences.json (669MB) — copy of above
+data/dbpedia_pipeline/quebec/sentences.json (200MB) — regenerate with convert_quebec_segments_to_sentences.py
+data/dbpedia_pipeline/us/predications.json (86.8MB) — regenerate with extract_predications.py
+data/dbpedia_pipeline/quebec/predications.json (80.2MB) — regenerate with extract_predications.py
 
 ---
 
-## Current Results (v1 pipeline, new bill-specific denominator)
+## Scripts
 
-Ontario v2 scores pending pipeline completion.
+The active pipeline scripts are in `scripts/`. Experimental and archived scripts
+are in `scripts/archive/`.
 
-| Jurisdiction | Mean factuality | Passed bills | Failed bills |
-|---|---|---|---|
-| US | 0.2054 | 0.2094 (n=386) | 0.2015 (n=34) |
-| Quebec | 0.1387 | 0.1266 (n=767) | n/a |
-| Ontario | (pipeline running) | — | — |
-
-**COVID natural experiment (pre/post March 2020):**
-- US: −0.036 post-COVID
-- Quebec: −0.053 post-COVID
-
-**Logistic regression (US + Quebec):** factuality coefficient +0.0467 (p < 0.05)
+[fetch_ontario_hansard_via_api.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/fetch_ontario_hansard_via_api.py) — collects Ontario bill-specific text from OLA Azure Search API
+[rebuild_clean_ontario.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/rebuild_clean_ontario.py) — removes wrong assignments, produces verified-only corpus
+[fetch_missing_85.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/fetch_missing_85.py) — re-fetches bills missing from verified corpus
+[extract_quebec_bill_segments.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_quebec_bill_segments.py) — extracts Quebec bill segments using section markers
+[convert_ontario_api_segments_to_sentences.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/convert_ontario_api_segments_to_sentences.py) — tokenizes Ontario paragraphs into sentences
+[convert_quebec_segments_to_sentences.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/convert_quebec_segments_to_sentences.py) — tokenizes Quebec segments into sentences
+[extract_predications.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_predications.py) — spaCy SVO extraction for v2 pipeline
+[dbpedia_batch_pipeline.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/dbpedia_batch_pipeline.py) — Spotlight extract, dedupe, SPARQL query, annotate
+[compute_factuality_scores.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/compute_factuality_scores.py) — per-bill factuality scores
+[run_analyses.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/run_analyses.py) — regression, COVID analysis, era breakdowns, JSD
+[congressional_record_pull.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/congressional_record_pull.py) — US GovInfo collection
+[build_ontario_bill_index.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/build_ontario_bill_index.py) — Ontario health bill index
+[build_quebec_bill_index.py](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/build_quebec_bill_index.py) — Quebec health bill index

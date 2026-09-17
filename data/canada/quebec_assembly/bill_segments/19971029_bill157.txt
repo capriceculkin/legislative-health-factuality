@@ -1,0 +1,300 @@
+Conformément à la motion qui vient d'être adoptée, nous sommes réunis en commission plénière pour continuer l'étude détaillée du projet de loi n° 157, Loi modifiant la Loi sur la sécurité du transport terrestre guidé. Je vous rappelle que nous étions rendus à l'article 11, dans l'étude détaillée du projet de loi. Si vous voulez, nous allons poursuivre comme nous avions commencé. Je vais vous lire rapidement l'article 11, et M. le ministre pourra faire ses commentaires, et M. le porte-parole de l'opposition officielle.
+
+Donc, à l'article 11, l'article 42 de cette loi est modifié:
+
+1° par le remplacement du premier alinéa par le suivant:
+
+«42. Avant de traverser un passage à niveau, le conducteur d'un véhicule de transport terrestre guidé doit actionner l'avertisseur sonore à une distance du passage à niveau déterminée par le code de sécurité adopté par règlement et le maintenir en opération jusqu'à ce que le passage à niveau soit totalement occupé.»;
+
+2° par le remplacement, dans la deuxième ligne du deuxième alinéa du texte anglais, du mot «conductors» par les mots «vehicle operators».
+
+M. le ministre.
+
+M. Brassard: 
+ Dans le texte actuel, on indique une distance bien précise qui est de 460 mètres quand le train va à faible vitesse, à basse vitesse, ce qui crée des problèmes, du mécontentement aussi dans les agglomérations parce que, on a fait le calcul, à 460 mètres, qu'on actionne l'avertisseur sur une distance comme celle-là, lorsqu'on va à 15 km/h, qui est la vitesse réduite de la loi actuelle, ça veut dire qu'on fait fonctionner l'avertisseur sonore pendant 110 secondes dans l'agglomération. Par contre, 460 mètres, si le train va à 90 km/h, là le temps, c'est 18 secondes. Alors, l'idée de base, c'est de déterminer par règlement les distances en fonction de la vitesse pour faire en sorte que le temps d'avertissement soit le même quelle que soit la vitesse. Alors donc, si le train va plus vite, à une vitesse relativement élevée, à ce moment-là, il va devoir commencer à avertir plus loin du passage à niveau. S'il va à basse vitesse, bien, il va pouvoir commencer à avertir à une distance plus faible du passage à niveau. Ça va se déterminer par règlement en consultation avec les entreprises de chemin de fer, qui sont déjà au courant de ce qu'on compte faire et qui sont d'accord avec cette approche.
+
+Le Président (M. Brouillet): 
+ M. le député de Pontiac.
+
+M. Middlemiss: 
+ Oui. D'accord, M. le Président. Est-ce que ça va s'appliquer aussi pour... Ça, ce n'est pas seulement les traverses pour des routes ou des rues mais aussi pour les sentiers de VTT et les sentiers de motoneiges.
+
+M. Brassard: 
+ Oui, tout ce qu'il y a de traverses, là, donc avec les chemins publics, évidemment, mais aussi avec les sentiers de véhicules hors route.
+
+(15 h 30) 
+
+M. Middlemiss: 
+ Donc, pour ça, ils ont besoin d'une signalisation. Je vais poser la question: Est-ce que les locomotives et les trains vont toujours à la même vitesse à certains endroits? Parce que sinon je vois que, tantôt, ça va prendre une signalisation. Donc, dépendant de la vitesse, la signalisation le long de la voie ferrée va être différente selon la vitesse à laquelle il va. Et je présume qu'on va vouloir avoir seulement une signalisation sur la voie ferrée pour avertir le conducteur qu'il doit commencer à siffler.
+
+M. Brassard: 
+ Il doit être fondé ou basé sur la vitesse maximale à cet endroit-là. Alors, si la vitesse maximale, c'est 5 km, parce qu'on est dans une agglomération sans clôture, bien, là, c'est sur la vitesse maximale qu'on va fonder, qu'on va adopter la distance requise.
+
+M. Middlemiss: 
+ D'accord. Seulement, sur le deuxième alinéa, pourquoi on change «conductors» par «vehicle operators»? Y a-t-il une raison spécifique?
+
+Le Président (M. Brouillet): 
+ M. le ministre.
+
+M. Brassard: 
+ Évidemment, sur le plan de l'anglais, ce n'est pas vraiment ma spécialité.
+
+ (Consultation)
+
+M. Brassard: 
+ En anglais, «conductor», ça fait référence, en français, à ce qu'on appelle l'agent de train, et non pas le mécanicien.
+
+M. Middlemiss: 
+ Et non pas l'opérateur.
+
+M. Brassard: 
+ Alors que c'est le mécanicien qu'on vise.
+
+Le Président (M. Brouillet): 
+ Alors, très bien. Ça va pour cet article?
+
+M. Middlemiss: 
+ Oui.
+
+Le Président (M. Brouillet): 
+ L'article 11 est adopté. L'article 12: L'article 43 de cette loi est modifié:
+
+1° par le remplacement, dans la première ligne du texte anglais, du mot «conductor» par le mot «operator»;
+
+2° par l'addition, à la fin, de la phrase suivante: «En cas de panne, il doit utiliser les phares déterminés par le code de sécurité adopté par règlement.» Alors, M. le ministre.
+
+M. Brassard: 
+ Le premier alinéa, ça confirme ce que je viens de dire.
+
+Une voix: 
+ Concordance.
+
+M. Brassard: 
+ Le deuxième, c'est une disposition qui a pour objet d'établir les règles à suivre en cas de panne de phare avant de la locomotive. Alors, ces règles seront semblables à celles qui s'appliquent dans l'industrie ferroviaire nord-américaine, c'est-à-dire, donc, allumer les phares de fossé ou oscillants et permettre de circuler en urgence aussi sans phare. Les phares de fossé, c'est quoi? Vous pouvez le dire au micro.
+
+M. Bérubé (Alain): 
+ Les nouvelles locomotives...
+
+Le Président (M. Brouillet): 
+ Voulez-vous vous identifier, s'il vous plaît?
+
+M. Bérubé (Alain): 
+ Alain Bérubé. Je suis ingénieur au ministère des Transports. Les phares de fossé ou les phares oscillants, c'est... Une locomotive, sur le devant, il y a le phare avant, le gros phare, et, de chaque côté, des phares. Il faut allumer les phares de fossé en certaines circonstances, c'est des règles de sécurité, de chaque côté. Lorsque le phare avant est en panne, l'industrie permet quand même de continuer, ce que ne permettait pas la loi parce que la loi disait qu'il fallait que le phare avant soit allumé. C'est pour permettre de continuer quand même avec les phares de côté jusqu'à l'endroit où il puisse réparer sa locomotive. Ce sont des règles reconnues actuellement, des règles nord-américaines.
+
+Le Président (M. Brouillet): 
+ M. le député de Pontiac.
+
+M. Middlemiss: 
+ Les lumières de fossé, «c'est-u» pour quelque chose de spécial? Est-ce qu'elles sont allumées en même temps que la lumière en avant ou on les allume pour quelque chose de spécial?
+
+M. Bérubé (Alain): 
+ On les utilise dans certaines circonstances. Généralement, c'est le phare avant qui est allumé. Les phares de fossé, en plein trajet, sont toujours allumés aussi. Et ces phares de fossé, en fait, ça fait plus de lumière. Il y a trois ou quatre lumières qui sont allumées pour qu'il soit bien visible. Mais il y a l'obligation de les fermer, ces phares de fossé là, lorsqu'il circule, mettons, le long d'une route, parallèlement à une route, pour ne pas aveugler les gens, ou des rencontres de trains, il faut qu'il les éteigne. Mais généralement ils sont allumés.
+
+M. Brassard: 
+ Pour éviter qu'il soit confondu avec une automobile, qu'il y ait confusion.
+
+M. Bérubé (Alain): 
+ Pour ne pas les aveugler non plus.
+
+M. Brassard: 
+ Pour ne pas les aveugler. O.K.
+
+M. Middlemiss: 
+ C'est bien.
+
+Le Président (M. Brouillet): 
+ Alors, l'article 12 est adopté. L'article 13: L'article 50 de cette loi est modifié par l'insertion, après le deuxième alinéa, de l'alinéa suivant:
+
+«Ce code peut aussi prévoir toute autre norme ou interdiction concernant la sécurité du transport ferroviaire, fixer des normes de rendement et prescrire l'élaboration et l'application, par l'exploitant, d'un plan de sécurité.» M. le ministre.
+
+M. Brassard: 
+ Oui. En fait, ça s'inspire du projet de loi fédéral C-43. À Ottawa, le comité d'examen de la Loi sur la sécurité ferroviaire, en 1994, dans son rapport qu'il a remis et présenté au ministre des Transports fédéral, en vertu de l'article 51 de la Loi sur la sécurité ferroviaire, considère  et je cite le rapport: «Il serait encore meilleur marché et plus rentable de permettre aux chemins de fer de gérer leurs propres affaires en matière de sécurité et qu'ils ne reçoivent que très peu de directives, sinon aucune autre directive du gouvernement aussi longtemps qu'ils atteindraient ou dépasseraient des objectifs de sécurité déterminés. Ces derniers pourraient prendre la forme de normes de rendement définies par les chemins de fer et approuvées par le gouvernement.»
+
+Alors, on s'inspire de cette proposition qui est le fruit d'une large consultation faite par le gouvernement fédéral de toute l'industrie ferroviaire et qui s'est montrée d'accord avec cette approche.
+
+Le Président (M. Brouillet): 
+ M. le député de Pontiac.
+
+M. Middlemiss: 
+ C'est bien, M. le Président.
+
+Le Président (M. Brouillet): 
+ Ça va? Oui. Alors, l'article 13 est adopté. L'article 14: L'article 54 de cette loi est modifié:
+
+1° par l'insertion, dans le paragraphe 4° du premier alinéa et après le mot «niveau», des mots «ou d'un passage signalisé d'un sentier ou d'une piste qui croise une voie de guidage»;
+
+2° par l'insertion, après le paragraphe 10° du premier alinéa, du paragraphe suivant:
+
+«10.1° déterminer, parmi les dispositions d'un règlement prises en vertu du paragraphe 10°, celles qui sont applicables à la personne qui demande le transport d'une matière dangereuse;». M. le ministre.
+
+M. Brassard: 
+ Oui. C'est un peu de la concordance. C'est qu'à partir du moment où on stipule dans d'autres dispositions qu'on vient de voir, qu'on a vues, que, pour les passages à niveau, pour les croisements avec des sentiers, les règles seront déterminées par règlement, alors, dans l'article de la loi qui prévoit le pouvoir réglementaire du gouvernement, il faut apporter la précision appropriée et faire le lien avec les dispositions adoptées précédemment. Puisqu'on évoquait dans d'autres dispositions des règlements concernant les croisements avec des sentiers, il faut que l'article de la loi portant sur le pouvoir réglementaire du gouvernement en parle, en tienne compte. Voilà.
+
+Le Président (M. Brouillet): 
+ Alors, M. le député de Pontiac.
+
+M. Middlemiss: 
+ C'est bien. Ça, c'est pour...
+
+Le Président (M. Brouillet): 
+ L'article 14.
+
+M. Middlemiss: 
+ Oui, le 1°. Le 2°, c'est qu'on ajoute autre chose pour les matières dangereuses?
+
+M. Brassard: 
+ Oui, pour les personnes qui demandent le transport d'une matière dangereuse, à partir d'un règlement également adopté par le gouvernement.
+
+M. Middlemiss: 
+ Donc, qu'est-ce qu'il y avait dans le projet de loi existant? Il manquait... Il y en avait  a, b, c, d  jusqu'à d. Donc, pourquoi est-ce qu'on a jugé à propos qu'il fallait insérer ça? Parce qu'on a des règlements, là.
+
+ (Consultation)
+
+M. Brassard: 
+ Monsieur...
+
+Le Président (M. Brouillet): 
+ Si vous voulez vous identifier, s'il vous plaît.
+
+M. Brassard: 
+ Oui.
+
+M. Vigneault (Pierre-Paul): 
+ Oui. Pierre-Paul Vigneault, à la Direction des affaires juridiques au ministère des Transports. Dans la loi actuelle, on ne pouvait pas appliquer à la personne qui demande le transport, c'est-à-dire l'expéditeur, les dispositions de la réglementation sur le transport des matières dangereuses comme on le fait dans la réglementation fédérale ni même comme on le fait dans la réglementation en vertu du Code de la sécurité routière.
+
+(15 h 40) 
+
+La personne qui demande le transport est associée, en vertu de la réglementation fédérale, à des exigences quant à l'étiquetage, aux informations de danger que comporte la marchandise confiée au transporteur. Les dispositions de la réglementation sont bien identifiées dans la réglementation fédérale, les dispositions qui s'appliquent à l'expéditeur ou à la personne qui demande le transport sont identifiées, et on va les identifier de la même façon dans notre règlement.
+
+M. Middlemiss: 
+ O.K. Bien.
+
+Le Président (M. Brouillet): 
+ Ça va, M. le député?
+
+M. Middlemiss: 
+ Oui.
+
+Le Président (M. Brouillet): 
+ Alors, l'article 14 est adopté. L'article 15: Cette loi est modifiée par l'insertion, après l'article 54, de l'article suivant:
+
+«54.1 Le ministre peut, exceptionnellement et dans la mesure qu'il détermine, autoriser l'exploitant d'un système de transport terrestre guidé à rendre applicables dans son entreprise des règles différentes des normes établies par le code de sécurité adopté par le gouvernement
+ ou de celles établies en vertu du paragraphe 10° du premier alinéa de l'article 54, s'il estime qu'elles assurent une sécurité équivalente.
+
+«L'exploitant du système de transport terrestre guidé publie, de la manière prescrite par le ministre, les règles autorisées par ce dernier et une copie de sa décision. Ces règles entrent en vigueur à la date précisée dans la décision du ministre.
+
+«Est applicable à une règle autorisée par le ministre toute disposition créant ou sanctionnant une infraction à la norme qu'elle remplace, laquelle est indiquée dans la décision du ministre.»
+
+Alors, voici pour l'article 15. M. le ministre.
+
+M. Brassard: 
+ Alors donc, ça permet de remplacer une disposition réglementaire par une règle de sécurité équivalente. C'est une disposition qui peut permettre au ministre d'autoriser des règles différentes des normes tout en s'assurant que la sécurité est équivalente dans certains cas, par exemple expérimentation de nouvelles technologies ou nouvelles méthodes d'opération, des essais qu'on veut faire également avant règlement. Il peut se présenter, donc, des situations où il est opportun, à ce moment-là, de prévoir des règles différentes des normes qu'on retrouve dans le code de sécurité, mais sans évidemment réduire le niveau de sécurité, sans que ça ait pour effet de réduire le niveau de sécurité.
+
+Le Président (M. Brouillet): 
+ M. le député de Pontiac, ça va?
+
+M. Middlemiss: 
+ Ça va.
+
+Le Président (M. Brouillet): 
+ Alors, l'article 15 est adopté. Maintenant, l'article 16: L'article 55 de cette loi est modifié par la suppression, dans les cinquième et sixième lignes, des mots «et, s'il est propriétaire d'une voie de guidage, des règles de sécurité portant sur l'entretien de celle-ci».
+
+M. Brassard: 
+ Toujours de la concordance, hein? C'est pour être concordant avec l'article 3 qui, on s'en rappellera, permettait aux propriétaires de confier l'entretien d'une voie de guidage à un exploitant. Il y avait une distinction entre le propriétaire et l'exploitant.
+
+Le Président (M. Brouillet): 
+ Alors, M. le député de Frontenac.
+
+M. Middlemiss: 
+ Pontiac.
+
+Le Président (M. Brouillet): 
+ Pontiac. Excusez. J'ai dit «Frontenac»?
+
+M. Middlemiss: 
+ Oui.
+
+Le Président (M. Brouillet): 
+ Pontiac.
+
+M. Middlemiss: 
+ C'est bien, M. le Président.
+
+Le Président (M. Brouillet): 
+ Très bien. Alors, l'article 16 est adopté. L'article 17: Cette loi est modifiée par l'insertion, avant l'article 86, du suivant:
+
+«85.1 La Loi sur les règlements ne s'applique pas aux règles de sécurité, aux règles visées à l'article 54.1 et aux décisions du ministre les concernant, ni à leurs projets.» M. le ministre.
+
+M. Brassard: 
+ Bien, on connaît tout le processus réglementaire. Cette disposition a pour objet de préciser que les exigences de la loi, concernant la publicité des règles de sécurité, auront pour effet d'écarter les exigences de publication édictées par la Loi sur les règlements au regard des projets de règlement et des règlements soumis à l'approbation d'un ministre du gouvernement. C'est ce que le gouvernement fédéral également fait. Il y a une exclusion expresse de la Loi sur les textes réglementaires dans la loi fédérale C-43 également pour simplifier les choses.
+
+Le Président (M. Brouillet): 
+ M. le député de Pontiac.
+
+M. Middlemiss: 
+ M. le Président, c'est inspirant de voir que le ministre des Affaires intergouvernementales s'inspire de ce que le fédéral fait. C'est bien.
+
+M. Brassard: 
+ ...des choses convenables là-bas aussi.
+
+Le Président (M. Brouillet): 
+ Alors, sur ce, l'article 17 est adopté. L'article 18: «Les dispositions de la présente loi entreront en vigueur à la date ou aux dates fixées par le gouvernement.» Adopté?
+
+M. Middlemiss: 
+ Oui, adopté.
+
+Le Président (M. Brouillet): 
+ Alors, adopté. Est-ce que le titre du projet de loi est adopté?
+
+M. Middlemiss: 
+ Oui.
+
+Le Président (M. Brouillet): 
+ Oui, alors, le titre est adopté. Il n'y a pas d'autres commentaires?
+
+M. Middlemiss: 
+ M. le Président, j'aimerais ça poser une question.
+
+Le Président (M. Brouillet): 
+ M. le député de Pontiac.
+
+M. Middlemiss: 
+ Oui, au moment du débat sur le principe, M. le Président, j'avais demandé au ministre à quel moment on va avoir une politique ferroviaire. Est-ce que ça s'en vient? Est-ce qu'on va la présenter? Et est-ce qu'on pourrait nous donner une indication à quel moment on peut s'attendre à ça?
+
+M. Brassard: 
+ Oui, difficile d'indiquer une date, là, mais on est déjà assez avancé sur la détermination d'un
+ réseau stratégique. Je pense que c'est d'ailleurs, on pourrait dire, la partie la plus importante, là, d'une politique ferroviaire. Il faut répondre à la question: Au Québec, sur le plan économique, quel est le réseau ferroviaire qu'il est absolument nécessaire de maintenir en opération? Donc, quel est le réseau stratégique essentiel sur le plan économique que nous devons maintenir en opération? Alors, c'est ce qu'on est en train de faire présentement. On devrait être en mesure de compléter cette opération-là bientôt, bientôt. Et, à partir de ce moment-là, évidemment tout le reste en découle. C'est que, à partir du moment où on se dit: Voici notre réseau ferroviaire stratégique, c'est clair à ce moment-là que, lorsqu'il y a des abandons ou des demandes d'abandon de lignes par soit le CP ou le CN puis que ça fait partie du réseau stratégique qu'on a identifié, il est évident qu'à ce moment-là il va falloir que le gouvernement, et le ministère des Transports au premier chef, s'efforce de trouver des entreprises pour prendre la relève pour ne pas que cet abandon de ligne annoncé aboutisse à un démantèlement de la ligne et que la ligne demeure opérationnelle.
+
+Le Président (M. Brouillet): 
+ M. le député de Pontiac.
+
+M. Middlemiss: 
+ Dans le même ordre d'idées, tout récemment, là, ce n'est pas la voie ferrée, mais le gouvernement canadien, il y a des quais qu'il laisse aller. Est-ce que vous avez arrêté une politique sur le transfert de ces infrastructures-là comme vous aviez fait pour les aéroports?
+
+Le Président (M. Brouillet): 
+ M. le ministre.
+
+M. Brassard: 
+ Pas arrêté complètement, mais on peut d'ores et déjà, pour un certain nombre de ces infrastructures, procéder de la même façon qu'on l'a fait avec les aéroports. C'est-à-dire qu'il y a déjà certaines demandes, là. Entre autres, il y en a une qui vient de votre région, de Thurso, il y en a une aussi assez pressante, là, de Rimouski. Et on compte dans ces cas-là procéder de la même façon qu'on l'a fait avec les aéroports, c'est-à-dire avec le double décret: un premier décret d'exclusion qui permet les pourparlers avec le gouvernement fédéral, la mise au point d'un plan d'affaires, et puis, après ça, si c'est satisfaisant, un deuxième décret qui vient autoriser la signature d'une entente et le transfert.
+
+M. Middlemiss: 
+ Merci.
+
+Le Président (M. Brouillet): 
+ Alors, c'est bien?
+
+M. Middlemiss: 
+ Oui.
+
+Le Président (M. Brouillet): 
+ Merci, M. le ministre, M. le député. Alors, ceci met fin aux travaux de la commission plénière. Je remercie toutes les personnes qui ont participé et, pour permettre à l'Assemblée de poursuivre sa séance, je vais suspendre quelques instants. Je demande aux personnes qui doivent se retirer de le faire immédiatement, s'il vous plaît.
+
+(Suspension de la séance à 15 h 50) 
+
+(Reprise à 15 h 51) 
+
+Le Vice-Président (M. Brouillet): 
+ Veuillez vous asseoir, s'il vous plaît. Alors, l'Assemblée reprend ses travaux. J'inviterais M. le député de Salaberry-Soulanges à bien vouloir faire le rapport de la commission, s'il vous plaît.
+
+M. Deslières (président de la commission plénière): 
+ Oui, M. le Président. J'ai l'honneur de faire rapport que la commission plénière a étudié en détail le projet de loi n° 157, Loi modifiant la Loi sur la sécurité du transport terrestre guidé, et qu'elle l'a adopté avec un amendement.

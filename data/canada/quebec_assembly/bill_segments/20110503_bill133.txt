@@ -1,0 +1,156 @@
+Très bien. Alors, à l'article 8, Mme la ministre responsable de l'Administration gouvernementale et présidente du Conseil du trésor propose l'adoption du principe du projet de loi n° 133, Loi sur la gouvernance et la gestion des ressources informationnelles des organismes publics et des entreprises du gouvernement. Mme la présidente du Conseil du trésor.
+Mme Michelle Courchesne
+Mme Courchesne:
+ Merci, Mme la Présidente. Alors, je salue les collègues qui sont avec nous en cette fin de journée. Probablement, Mme la Présidente, que nous poursuivrons plus tard ce soir. Mais je dois vous dire que c'est avec un grand intérêt que je dépose aujourd'hui pour l'adoption de principe le projet de loi n° 133 sur la gouvernance et la gestion des ressources informationnelles des organismes publics et 
+--
+ j'insiste 
+--
+ des entreprises du gouvernement, mais aussi des réseaux de l'éducation et de la santé.
+	Vous comprendrez, M. le Président, que ce projet de loi là revêt certainement une importance cruciale pour l'administration publique québécoise tant du point de vue stratégique que du point de vue financier. Mais je dis 
+«
+stratégique
+»
+, M. le Président, parce que, dans le monde d'aujourd'hui, dans ce monde moderne dans lequel nous sommes, nous devons bien sûr, dans une organisation aussi importante que la nôtre, nous devons toujours nous assurer que, lorsque nous offrons des services aux citoyens ou lorsque nous établissons nos méthodes de gestion à l'intérieur de nos organisations, nous soyons à la fine pointe de la technologie, parce que la fine pointe de la technologie, aujourd'hui, peut vouloir dire cette amélioration de qualité de services mais doit dire aussi 
+--
+ et c'est certainement un des sens et des objectifs importants de ce projet de loi 
+--
+ doit pouvoir dire aussi une gestion extrêmement rigoureuse des fonds publics qui sont investis et s'assurer de l'efficacité auprès de nos citoyens, mais de s'assurer aussi auprès de nos administrations, bien sûr, que tout est fait dans les règles de l'art, M. le Président.
+	Or, vous savez, on est conscients, je pense, tous, à quel point il y a des systèmes informatiques, dans un gouvernement, qui sont absolument imposants, qui sont d'une complexité, qui sont immenses, au fond. Il y a des 
+serveurs qui contiennent des millions et des millions de données auxquelles on a besoin de se référer et qui doivent en plus être des données d'une grande fiabilité, d'où une dimension de sécurité extrêmement importante aussi au niveau de la confidentialité de ces données-là. Mais on s'aperçoit, que ce soit en santé, en éducation, que ce soit au ministère du Revenu, que ce soit, par exemple, dans la gestion de l'aide sociale, où on touche des centaines de milliers de citoyens, on s'aperçoit aussi que, dès qu'un gouvernement change une règle ou dès qu'une nouvelle loi est adoptée, ou surtout on doit dire, M. le Président, que le ministre des Finances et le ministre du Revenu sont souvent... en ce moment, c'est la seule et même personne, on a un seul collègue, mais ce sont quand même des personnes qui, dès qu'elles prennent une décision, automatiquement ça a un impact sur le système informatique.
+	Tout ça pour vous dire que, dans cette complexité de l'environnement technologique dans laquelle nous sommes et que l'ensemble des sociétés sont confrontées, je crois qu'on peut dire qu'on a tous eu des défis imposants à cet égard-là. Le député de Richelieu est avec nous, je le salue. D'ailleurs, je sais qu'il connaît bien ce dossier-là et s'y est intéressé. Il m'arrive parfois, dans le... il m'arrive parfois 
+--
+ je vais le dire 
+--
+ ici, dans cette Chambre ou en commission parlementaire, où je le taquine sur son passé comme président du Conseil du trésor. Mais, au-delà de la taquinerie, que j'essaie toujours de garder respectueuse, il a aussi connu son déboire et son gouvernement a connu son lot de déboires. Parce que je sais qu'il va nous citer tout à l'heure des exemples de dossiers qui ont connu des retards, ont connu des augmentations de coûts. C'est vrai. Mais il conviendra avec moi que, dans tous les gouvernements, que ce soit dans les autres provinces canadiennes, que ce soit aux États-Unis, que ce soit en Europe, ce qu'on s'aperçoit aujourd'hui, c'est: avec cette vitesse de l'évolution technologique, si on prend les bouchées trop grosses, si on a une ambition démesurée et qu'on veut, dans un seul projet de développement informatique, tout régler en même temps, c'est là qu'on se casse le nez, M. le Président, c'est là qu'on s'aperçoit qu'il faut revoir nos façons de faire.
+	Pourquoi on a un projet de loi aujourd'hui? Parce que nous avons déposé en octobre dernier une politique-cadre sur la gouvernance et la gestion de ces ressources informationnelles. Et donc, à l'intérieur de cette politique-cadre... et nous convenons tout à fait qu'à l'ensemble du gouvernement il faut revoir en profondeur, en profondeur notre façon de faire, en profondeur notre façon de faire sur notre capacité d'évaluer les besoins, qu'on soit très, très sûrs qu'on sait exactement ce que l'on cherche comme résultats, quels sont nos besoins et quels résultats voulons-nous atteindre, qu'on soit capables d'avoir une bien meilleure planification à l'échelle gouvernementale et qu'on soit capables de savoir ce que la main droite et la main gauche font pour qu'on puisse les unir le plus souvent possible dans l'interopérabilité et s'assurer que, lorsqu'on développe une architecture, bien, que cette architecture technologique non seulement elle soit la bonne, mais, encore une fois, qu'elle puisse, dans bien des cas, servir à l'ensemble.
+	Donc, pour ça, il faut avoir des règles de gouvernance, il faut savoir comment gérer ces dossiers et il faut qu'il y ait une instance, à notre avis, centrale, centrale. Et c'est pour ça que le projet de loi va définir de façon formelle la fonction d'un directeur principal de l'informatique en lui donnant tous les pouvoirs nécessaires pour accomplir cette tâche-là. Il faut que son rôle, à cette personne, et ses pouvoirs soient clairement définis et qu'il ait une véritable autorité et légitimité à l'ensemble des ministères et organismes pour exercer son rôle dans une planification annuelle et triennale, dans cette capacité de bien définir l'architecture dont je parlais, et de mettre en commun lorsque c'est nécessaire de mettre en commun, et ensuite, très, très, très important, la gestion des risques, l'analyse des risques et la gestion des risques. Et ça, M. le Président... Et, à la toute fin, bien sûr, la reddition de comptes, là, je ne veux pas l'omettre non plus, reddition de comptes fort nécessaire.
+	Mais, comme vous le savez sans doute, le Vérificateur général a passé de nombreux mois à l'intérieur des organisations, et honnêtement je crois... Nous le verrons, je crois que c'est demain, il déposera son rapport publiquement. J'ai extrêmement hâte, M. le Président, de pouvoir le lire en profondeur et de pouvoir m'exprimer sur ce rapport-là, parce que je sais qu'il a fait une étude sérieuse, je sais qu'il a consulté des gens externes, des gens de nos organisations, des ministères. Je crois que le Vérificateur général, demain, nous soumettra... fera, bien sûr, un état de la situation, aura ses remarques à faire et identifiera les lacunes, mais nous fera les recommandations appropriées. Et c'est avec beaucoup d'intérêt donc que nous prendrons connaissance de cela et que nous verrons demain si cette politique-cadre que nous avons déposée répond bien aux recommandations du Vérificateur général et si, selon le Vérificateur général, cette politique-cadre corrige les lacunes qu'il aura identifiées.
+	Cela dit, j'ai pu constater, au cours des derniers mois, qu'il y avait des lacunes aussi, sans avoir lu... ou m'être entretenue avec le Vérificateur général. Vous savez que ce n'est pas une chose que les ministres font. Mais je peux vous dire que j'ai pu constater effectivement qu'il y avait des lacunes importantes et que donc ce projet de loi doit absolument répondre à ces lacunes de gouvernance.
+
+**
+(17 h 50)
+**
+	Je dois vous dire aussi que le projet de loi fera en sorte que le ministère des Services gouvernementaux sera aboli. Pourquoi? Parce qu'effectivement est-ce qu'il n'y avait pas confusion des rôles, confusion des genres, confusion des responsabilités entre le Secrétariat du Conseil du trésor et le ministère des Services gouvernementaux? Est-ce que, là, il n'y avait pas nécessité... ou est-ce qu'il n'y a pas nécessité de s'assurer que, tout en respectant la nécessité de travailler en étroite collaboration avec les ministères et organismes, il y ait quand même ce directeur principal de l'information, mais qu'il y ait quand même aussi cette capacité d'analyse au Conseil du trésor et cette capacité de faire les suivis, cette capacité de questionner, cette capacité de s'assurer, donc, que...
+	Et j'insiste sur l'analyse de la gestion de risque parce qu'avec l'analyse de la gestion de risque c'est ce qui va déterminer si on est capables de respecter l'échéancier, si on est capables de respecter les coûts et sinon quelles sont, au fur et à mesure, des étapes qui devront être identifiées, pas à la fin du projet, pas quand tout va mal. Il faut qu'on soit capables, sur une base très régulière, de suivre les différentes étapes de ces projets pour apporter les ajustements requis si c'est nécessaire parce que, je le répète, lorsqu'on est dans des projets de très grande envergure, c'est impossible qu'il n'y ait pas certains 
+imprévus, c'est impossible qu'il n'y ait pas, effectivement, un certain requestionnement.
+	Le défi... ou la nécessité, je devrais dire, que nous avons, c'est de s'assurer qu'on peut, selon un cadre de gestion clair pour tout le monde, établi pour tout le monde, strict pour tout le monde, ferme pour tout le monde... qu'on soit capables, M. le Président, à ce moment-là, de répondre aux bonnes questions au bon moment et qu'on puisse poursuivre, en tout cas de notre côté, en voulant minimiser au maximum les effets négatifs qui pourraient survenir en cours de route.
+	Donc, le projet de loi va nous permettre de mettre en oeuvre cette politique-cadre, M. le Président. Peut-être que le député de Richelieu nous dira... Parce qu'il me semble me souvenir qu'en commission parlementaire il nous disait: Pourquoi une loi? Est-ce qu'on avait vraiment besoin d'une loi? Moi, personnellement, je dis oui, M. le Président, parce que nous investissons plus de... tout près de 3 milliards de dollars par année, incluant les réseaux éducation et santé. C'est majeur, 3 milliards de dollars par année. Et je pense que justement il faut qu'une loi définisse ces rôles de façon très précise, puisse définir ces responsabilités de façon très précise, puisse donner toute l'autorité requise à la fois au directeur principal de l'information et au Conseil du trésor, puisse définir beaucoup plus clairement le rôle des ministères.
+	Parce que j'ai omis de vous dire, M. le Président, qu'un directeur principal de l'information, il y en aura un à l'ensemble du gouvernement, mais chaque ministère, organisme devra avoir identifié un directeur, aussi, principal de l'information de son ministère et de son organisme. De la même façon, il devra y en avoir un pour le réseau de la santé et un pour le réseau de l'éducation et faire les liens avec les établissements concernés.
+	Donc, il me semble que, si on veut assurer une stabilité 
+--
+ parce que la stabilité est importante dans nos processus 
+--
+ la stabilité dans nos façons de faire, si on veut s'assurer de la rigueur, de la transparence, si on veut s'assurer de notre capacité de rendre des comptes, parce qu'il faudra rendre des comptes de façon aussi très... très ordonnée, je dirais, bien, à ce moment-là une loi est certainement le meilleur outil pour être capable de fournir cet encadrement et de fournir cet ensemble de règles et de procédures qui, bien sûr, vont dorénavant guider la gestion des ressources informationnelles.
+	M. le Président, vous aurez compris aussi que ce projet de loi s'inscrit très certainement dans notre volonté de rétablir l'équilibre budgétaire en 2013-2014. On a tous la responsabilité de gérer de façon rigoureuse les finances publiques et les investissements que nous faisons, mais nous avons aussi, comme gouvernement, pris l'engagement de retrouver l'équilibre budgétaire en 2013-2014. Or, M. le Président, si nous pouvons augmenter cette interopérabilité, si nous pouvons, par exemple, rationaliser les outils informatiques... Je pense aux courriels électroniques, par exemple, je pense à notre capacité de peut-être regrouper des serveurs. Je donne des exemples, là, très rapidement parce que je ne peux pas élaborer. Mais il y aura là, à travers ne serait-ce que ces deux exemples, dans notre façon de faire les analyses et dans notre façon d'apporter des solutions, il y aura certainement, je suis convaincue de cela, des économies importantes à faire. Et, M. le Président, je vous rappelle que nous nous sommes fixé des économies de 200 millions de dollars, uniquement au niveau de la gestion des ressources informationnelles, que nous devons obtenir et faire d'ici 2013-2014, et, dans ce sens-là, je suis absolument convaincue que ce montant est réaliste.
+	C'est un défi, là, je ne suis pas en train de dire que ça va être facile. Pas du tout facile, parce que oui, il y aura des défis, et, le député de Richelieu le dira, il ne faut pas alourdir le processus, il ne faut pas étirer les délais, il faut... Et je suis tout à fait consciente de ça, M. le Président. Le défi que nous aurons, ce sera un défi d'efficacité et non pas un défi d'alourdir la bureaucratie, ça, je peux vous assurer de mon engagement à cet égard-là, parce que ce n'est certainement pas l'objectif de ce projet de loi et ce n'est certainement pas non plus l'objectif de cette politique-cadre.
+	Mais je pense que nous aurons l'occasion d'en rediscuter bien plus en profondeur et de façon très précise au moment de l'étude du projet de loi article par article. Mais je peux vous assurer et je peux assurer les membres de cette Assemblée de toute notre collaboration pour améliorer le projet de loi s'il y a lieu, mais surtout pour nous assurer que les objectifs que je viens de vous énumérer soient le plus strictement et le plus rigoureusement respectés. Merci, M. le Président.
+Le Vice-Président (M. Ouimet):
+ Alors, merci à vous, Mme la ministre.
+	Alors, compte tenu de l'heure, je vais suspendre les travaux quelques instants pour permettre la tenue des débats de fin de séance.
+(Suspension de la séance à 17 h 57)
+ 
+(Reprise à 17 h 58)
+Le Vice-Président (M. Ouimet):
+ Alors, Mmes, MM. les députés, nous allons reprendre les travaux. Est-ce qu'il y a consentement pour déroger à l'article 309 du règlement concernant la tenue des débats de fin de séance? Consentement? Consentement.
+Débats de fin de séance
+	Alors, tel qu'annoncé précédemment, nous allons maintenant procéder au débat de fin de séance. Ce débat, qui sera tenu entre M. le député de Matane et le ministre délégué aux Ressources naturelles et à la Faune, concerne la zec Wessonneau.
+	Je vous rappelle que, conformément à l'article 310 du règlement, le député qui a soulevé le débat et le ministre qui lui répond ont chacun un temps de parole de cinq minutes et le député a ensuite un droit de réplique de deux minutes. Alors, M. le député de Matane, je vous cède la parole pour cinq minutes.
+Privatisation d'une partie de la
+
+zec Wessonneau, en Mauricie
+M. Pascal Bérubé
+M. Bérubé:
+ Merci, M. le Président. Il me fait plaisir, en ma qualité de porte-parole en matière de faune de l'opposition officielle, d'intervenir aujourd'hui sur une question importante, une question qui préoccupe présentement 
+de nombreux intervenants dans le domaine de la chasse et de la pêche au Québec, un domaine qui est important, un domaine qui rapporte à la collectivité tant d'un point de vue économique que d'un point de vue social. C'est un loisir prisé des Québécois et important. Et, de ce côté-ci de la Chambre, la question de la chasse et de la pêche mérite qu'on lui donne de l'importance, et en particulier dans le cas qui nous préoccupe aujourd'hui, celui de la zec Wessonneau, qui est située en Mauricie; de manière parlementaire, on pourrait dire dans la circonscription de Laviolette.
+
+**
+(18 heures)
+**
+	Rappelons quelques faits en ce qui a trait aux zecs. En 1978, le gouvernement Lévesque, élu depuis à peine un an, décide de mettre fin à ce qu'on appelait à l'époque le clubage. Le clubage, c'était que des entreprises privées, des clubs privés détenaient des parties importantes de notre territoire pour en faire la vente, la location et donner des droits... en fait, vendre des droits d'accès à une clientèle très privilégiée. Souvent les citoyens des territoires adjacents n'avaient même pas accès à leur territoire, et le gouvernement Lévesque a mis fin à cette pratique malheureuse là il y a maintenant plus de 32 ans.
+	Le problème qu'on a, M. le Président, c'est que, dans le cas précis qui nous a été rapporté par les gestionnaires de la zec Wessonneau, par Zecs Québec, par de nombreux intervenants crédibles du domaine de la chasse et la pêche, c'est qu'on a créé un précédent, un précédent en cédant une partie importante pour cette population-là du territoire de la zec Wessonneau à une entreprise, en l'occurrence Solifor, une entreprise qui, maintenant, non seulement s'est accaparé une partie de ce territoire-là, mais décide d'en vendre l'accès, et ça va jusqu'à 1 000 $ par jour, M. le Président.
+	Alors, les citoyens, à l'époque, n'avaient pas accès, un accès libre au territoire, et c'est pour ça qu'il fallait régler la situation, et là on revient, M. le Président, à cette situation-là qu'on avait décriée à l'époque dans le cas de la zec Wessonneau.
+	Le ministre, lui, accepte. Il a cette responsabilité-là. Il accepte de vendre un terrain à une compagnie privée dont la mission est, et je cite, 
+«
+d'accroître la valeur des propriétés forestières [qu'ils gèrent] en favorisant une approche intégrée basée sur le développement durable et 
+--
+ je cite 
+--
+ l'utilisation globale et optimale des ressources du territoire
+»
+. Ça, ça provient du site Internet de l'entreprise Solifor, M. le Président. Alors, le ministre a donné ses terres à la compagnie, selon nous, en bafouant sa propre entente avec le gestionnaire de la zec Wessonneau.
+	Je vous cite un extrait de l'entente entre le ministère des Ressources naturelles et de la Faune et la zec Wessonneau: 
+«
+...le protocole d'entente signé entre le MRNF et la zec Wessonneau stipule à l'item 3.3 de l'article 1: "l'on doit consulter l'organisme dans le cas où il entend modifier ou abroger les limites de la zec Wessonneau".
+»
+ Il est assez clair, à travers toutes les discussions qu'on a eues avec les gestionnaires de la zec, qu'il n'y a pas eu de consultations ni des gestionnaires, ni des intervenants, ni des utilisateurs, et c'est là le problème. Le ministre doit consulter, à travers son propre protocole, doit respecter sa parole et sa signature.
+	Alors, le ministre exproprie notamment en douce un propriétaire de chalet qui pratiquait la chasse sur ce territoire depuis plus de cinquante ans, un octogénaire qui a fait la manchette, M. le Président, dans l'édition, entre autres, du 23 avril dernier du 
+Nouvelliste
+, et M. Guy Ouellet est choqué de cette situation-là. Il demande qu'on puisse réintégrer ces terres-là dans la zec. Il faut savoir également que la zec est gérée par des bénévoles. On y a investi beaucoup d'argent à travers les années pour de l'aménagement. C'est un beau modèle de réussite en Mauricie, et on n'arrive pas à croire qu'on a pu céder une partie aussi importante de ce terrain-là. Alors, expropriation.
+	Et là, cet après-midi, on a eu l'occasion d'échanger, le ministre et moi, sur cette question-là à travers la période de questions. D'ailleurs, c'est pour ça qu'on est ici dans cette formule particulière qu'est les débats de fin de séance, et ce n'est pas de chercher à faire une crise, la crise est déjà là, le texte, là, du 
+Nouvelliste
+ il s'appelle, et je cite: 
+Il y a de la magouille là-dedans
+. Je cite le texte, M. le Président, dans également 
+L'Écho de La Tuque
+ 
+--
+ ça se passe dans ce secteur-là 
+--
+ 
+Retour aux clubs privés?
+ C'est ce qu'on a également comme manchette là-bas. Et je cite, dans 
+Le Nouvelliste,
+ M. Ouellet qui dit: 
+«
+Le ministère des Ressources naturelles et de la Faune du Québec a annulé le bail de Guy Ouellet, qu'il avait depuis 33 ans 
+--
+ donc 
+-- 
+depuis la création de la zec, même si lui et ses frères fréquentaient déjà le secteur depuis une vingtaine d'années 
+--
+ donc on tombe à 53 ans. Il doit maintenant négocier un contrat de location avec le nouveau propriétaire légitime des terres, Solifor.
+»
+ Alors, c'est le monde à l'envers.
+	Pourtant, le ministre déclarait plus tôt, à la période de questions, aujourd'hui même: 
+«
+...à partir de là, M. le Président, étant donné que les terres n'avaient absolument pas de valeur au niveau de la pêche et au niveau de la chasse, à ce moment-là, on [a] fait des échanges de terrain.
+»
+ Puis le ministre a fait référence aux pommes. Alors, je conclus là-dessus, j'ai bien hâte d'entendre le ministre.
+Le Vice-Président (M. Ouimet):
+ Très bien. Alors, merci à vous, M. le député de Matane. Je vais maintenant céder la parole à M. le ministre responsable des... délégué aux Ressources naturelles et à la Faune. M. le ministre.
+M. Serge Simard
+M. Simard (Dubuc):
+ Merci, M. le Président. D'abord, M. le Président, je dois dire que je respecte énormément le député de Matane, mais sauf que sa question est insidieuse, M. le Président, c'est-à-dire: Il dénature les faits pour tirer des conclusions qui n'ont absolument rien à voir avec la réalité, M. le Président.
+	Créer des clubs privés, il n'en est absolument pas question, M. le Président. D'abord, le Parti québécois prétend qu'un échange de terres remet en place un régime de clubs privés qui avait été aboli par son gouvernement il y a plusieurs années. Si vous me permettez, M. le Président, je vais vous expliquer exactement et clairement les faits.
+	En février 2011, il y a eu effectivement un échange de terres entre le ministère et Solifor inc., laquelle les avait acquise d'AbitibiBowater inc. lors des difficultés de l'entreprise, bien sûr d'AbitibiBowater. Le but de l'échange, M. le Président, c'était celui-ci: régulariser des titres de propriété, permettre à la pépinière Grandes-Piles d'aménager, de continuer à aménager un verger pour la mise en valeur des forêts. Ça veut donc dire, M. le Président, que la pépinière était propriétaire, c'est-à-dire 
+avait loué des terres d'anciennement AbitibiBowater et avait aménagé, avait commencé à aménager des vergers sur ces terres-là, et voilà que les terrains ont été vendus, et véritablement ça leur causait problème. On a demandé au ministère de regarder s'il y avait possibilité de faire des échanges de terrains pour qu'ils puissent continuer à opérer leurs vergers qui nécessairement créent de l'emploi. En temps fort, en temps fort, la pépinière crée 150 jobs, M. le Président. Donc, vous comprendrez que de là l'importance d'essayer d'être aidant à ce niveau-là.
+	Donc, je vous dirai, M. le Président, que c'est un lot contigu à la propriété des terres de Solifor inc. qui a été cédé à Solifor pour que le gouvernement puisse acquérir la partie qui était opérée par la pépinière et qui a été vendue à la pépinière pour qu'on puisse nécessairement être en mesure de continuer à faire l'aménagement de leurs vergers.
+	Maintenant, M. le Président, on a fait des vérifications: aucun lac, aucune rivière d'importance pour la pêche n'était dans ce secteur. Également, on m'indique qu'il y avait un bail de villégiature. Effectivement, il y avait un bail de villégiature parce que M. Ouellet... le ministère fait des approches auprès de M. Ouellet pour essayer d'être aidant à ce niveau-là, et également... Je sais pertinemment, également, que Solifor essaie de contacter M. Ouellet, et M. Ouellet ne donne pas de retour.
+	Donc, à partir de là, on ne peut pas nécessairement être capable de créer des ententes lorsque quelqu'un ne veut pas avoir... donner de retour. Donc, de là l'importance, M. le Président, de dire que tout est en place pour trouver une solution.
+	On travaille... le ministère des Ressources naturelles travaille avec la zec. J'ai rencontré dernièrement, c'est-à-dire en fin de semaine, M. Gordon Stuart, qui est le président. Les négociations sont en plein travail avec la zec, également avec le ministère. On va trouver une solution, M. le Président, gagnant-gagnant, parce que l'objectif, c'est de s'assurer que la pépinière va continuer à créer des jobs et s'assurer qu'elle va prospérer, et également qu'on ne causera pas de problème au niveau de la zec. Il faut absolument qu'on soit gagnant-gagnant à ce niveau-là, et c'est la raison pour laquelle, M. le Président, ces terres-là ont été, je vous dirai, transférées à d'autres intervenants pour qu'on puisse être gagnant-gagnant avec le territoire du Québec. C'est notre premier objectif, et il n'y en a pas d'autre, objectif que ça, M. le Président.
+	Donc, c'est faux de dire, comme le Parti québécois, qu'on veut créer, je vous dirai, là, des clubs privés, encore une fois qui ont été enlevés il y a plusieurs années, M. le Président.
+	Le Parti québécois actuellement essaie de créer un problème là où il n'y en a pas. Le grand objectif du gouvernement, du ministère, c'est qu'on puisse s'asseoir ensemble, avec les différents intervenants, avec la zec, pour essayer de s'entendre. On sait, la zec nous a indiqué qu'il y avait des problèmes d'accessibilité. On va trouver des solutions, M. le Président, je vous... je l'ai garanti à M. Stuart, on va travailler là-dedans en partenaire, M. le Président. Voilà.
+
+**
+(18 h 10)
+**
+Le Vice-Président (M. Ouimet):
+ Alors, merci à vous, M. le ministre, pour votre intervention. Je vais maintenant céder la parole au député de Matane pour une réplique de deux minutes. M. le député.
+M. Pascal Bérubé (réplique)
+M. Bérubé:
+ Merci, M. le Président. Le problème, c'est que la transaction est déjà faite, et là on travaille à l'envers. Et, quant à la valeur du territoire, je cite M. Ouellet, il dit: 
+«
+C'est un excellent territoire. La chasse y a toujours été très bonne. [On y chassait depuis près de 50 ans.] C'est un territoire très convoité
+»
+, tellement convoité qu'on y vent des accès de chasse jusqu'à 1 000 $ par jour, M. le Président. Alors, c'est plus que des pommes. Il y a des gens qui viennent pour d'autres raisons que cueillir des pommes. D'ailleurs, on ne savait pas que c'était une spécialité locale, les vergers, en Haute-Mauricie.
+	Puis, aux crédits, le ministre nous disait que le retour du terrain à la zec, ce qu'on lui demande, au Parti québécois, était une solution inacceptable. Alors, inacceptable pour qui, M. le Président? J'aimerais ça le savoir. Le ministre responsable de la Faune défend les intérêts de qui dans ce dossier-là? C'est clair, là, qu'on n'est pas les seuls à dire ça. Le réseau Zecs Québec dit la même chose que nous, les gens de la zec Wessonneau également. Il y a là un problème majeur. On n'a pas consulté personne. Et notre intention, c'est de faire la lumière dans ce dossier-là.
+	Les propriétaires de la zec, M. le Président, ils investissent par année entre 35 000 $ et 40 000 $ pour l'entretien des ponts, des ponceaux, des chemins. Plusieurs des ponceaux ont été construits avec les cotisations des membres, année après année, et maintenant ils sont sur le territoire de Solifor. Alors, on a un problème majeur dans ce dossier-là: pas de consultation, on prend un terrain qui est public, qui bénéficie à l'ensemble de la collectivité québécoise, on le cède à une entreprise. C'est le retour à du clubage, c'est clairement le cas. Les analystes ont statué là-dessus que c'était inacceptable.
+	Et maintenant on se retrouve dans une situation où on ne peut pas rétrocéder ce qui a été pris de façon abusive, selon nous. Il y a des citoyens qui sont lésés là-dedans, des chasseurs qui sont lésés. On revient à une époque qu'on croyait révolue. Et je ne sais pas comment se sent la députée de Laviolette et ministre responsable de la région là-dedans, mais, manifestement, ce n'est pas un dossier que les gens souhaitaient voir avancer dans leur collectivité. Alors, on revient à une époque qu'on croyait révolue, et le Parti québécois va continuer de défendre cet héritage-là pour les chasseurs et les pêcheurs du Québec, M. le Président.
+Le Vice-Président (M. Ouimet):
+ Très bien. Alors, merci, M. le député de Matane pour cette intervention. Cela met fin à la rubrique Débats de fin de séance. 
+Compte tenu de l'heure, je suspends les travaux jusqu'à 19 h 30.
+(Suspension de la séance à 18 h 11)
+ 
+(Reprise à 19 h 31)
+Le Vice-Président (M. Gendron):
+ Veuillez vous asseoir.

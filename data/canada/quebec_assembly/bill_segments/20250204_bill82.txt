@@ -1,0 +1,442 @@
+du Numérique propose l'adoption du principe du projet de loi n° 82, Loi
+ concernant l'identité numérique nationale et modifiant d'autres dispositions.
+
+Alors, je vous cède la parole, M. le ministre. 
+
+M. Éric Caire
+
+M. Caire : 
+Oui. Merci, Mme la
+ Présidente. Donc, très heureux d'intervenir sur le principe de cet important projet de loi qui touche, oui, effectivement, vous
+ l'avez mentionné d'entrée de jeu, Mme la Présidente, l'identité numérique,
+ mais d'autres dispositions tout aussi
+ importantes pour la progression de la transformation numérique de l'État dans
+ son ensemble, mais aussi de la société civile, ce qui est une première,
+ et je reviendrai là-dessus, Mme la Présidente. 
+
+Donc, l'identité numérique, qu'est-ce que c'est?
+ Essentiellement, Mme la Présidente, c'est la façon dont on s'y prend pour identifier de façon unique un
+ citoyen dans l'univers numérique, essentiellement. Maintenant, cette identité
+ numérique là va évidemment se décliner dans différents services. On est tout à
+ fait habitué à... au fait de s'identifier et s'authentifier.
+ Lorsqu'on va se connecter sur une prestation électronique de service, on va sur
+ un site Web, on nous demande d'entrer
+ le mot de passe, le mot de passe, le nom d'usager. Maintenant, petite
+ modification supplémentaire, on va vous envoyer un code, on s'assure que
+ vous êtes bien la personne que vous prétendez être. Ça, on est habitué à ça. 
+
+• (10 h 20) •
+
+Maintenant, là où on va un peu plus loin, Mme la
+ Présidente, c'est quand on parle d'attestation numérique. Qu'est-ce que c'est, l'attestation numérique? Puis
+ on a tous en poche notre permis... bien, tous, la plupart des Québécois
+ ont en poche un permis de conduire, une carte d'assurance maladie et d'autres
+ pièces justificatives qui émanent du gouvernement.
+ On les a en papier, on va à l'urgence, on sort notre carte d'assurance maladie.
+ Malheureusement, petit excès de
+ vitesse, M. l'agent nous demande notre permis de conduire. On est habitué à ça.
+ On est aussi habitué, Mme la Présidente, par exemple, à aller acheter du
+ vin à la SAQ, et donc, là, on se fait demander : Avez-vous l'âge légal? Et
+ là on sort notre permis de conduire, on sort notre carte d'assurance maladie.
+ Ce faisant, Mme la Présidente, il y a un bris de sécurité. Pourquoi? Parce que ce qu'on vous demande, c'est :
+ Avez-vous l'âge légal pour acheter de l'alcool? C'est tout. Et la
+ réponse à cette question-là devrait être oui ou non. Mais la réponse à cette
+ question-là, c'est votre date de naissance,
+ votre nom, votre prénom, votre adresse, votre numéro de permis de conduire ou
+ votre numéro d'assurance sociale, votre classe de conducteur. C'est ça,
+ la réponse qu'on donne, Mme la Présidente, quand on nous pose cette
+ question-là, et ça, c'est beaucoup trop. 
+
+Alors, Mme la
+ Présidente, l'identité numérique, donc les attestations numériques qu'on pourra
+ utiliser éventuellement sur nos
+ téléphones intelligents vont nous permettre non seulement de répondre à des
+ questions : Avez-vous l'âge légal? Êtes-vous citoyen de? Êtes-vous
+ résident de ou êtes-vous assuré? Avez-vous participé au régime d'assurance
+ maladie?, en ne donnant que les informations nécessaires, sans plus,
+ mais sans moins, évidemment. 
+
+Et là il y a tous les aspects dans notre vie,
+ Mme la Présidente, où on sait qu'on pose ces gestes-là et où on sait que
+ l'univers numérique va nous permettre, évidemment, différentes possibilités.
+ Donc, l'identité numérique, Mme la Présidente,
+ c'est quoi? C'est un meilleur contrôle sur les informations qu'on donne quand
+ on a besoin de s'identifier, de s'authentifier. 
+
+L'identité numérique, Mme la Présidente, c'est
+ aussi une capacité à numériser les services. Je l'ai dit, j'ai l'expérience, comme beaucoup de Québécois, où je
+ vais à l'urgence pour un problème de santé, où j'arrive à l'urgence, appuie
+ sur un petit piton, sort un numéro. Pourquoi? Je ne sais pas. Bien, parce que,
+ dans la chaîne de services, il faut qu'on sache
+ à quel moment, moi, je vais pouvoir être servi. Alors, on a le petit papier, on
+ est au XXIe siècle, là, puis on m'imprime un petit papier avec un
+ numéro, au XXIe siècle.
+
+Bon, je me
+ présente au comptoir où on finit par m'appeler. Je donne mon petit numéro. On
+ me dit : Bien, avez-vous votre carte d'assurance maladie?
+ Absolument. Je mets la carte d'assurance maladie. Et là on m'imprime un
+ bracelet. Ah! Pourquoi? Alors, je mets le bracelet, c'est parce que... au cas
+ où vous tomberiez inanimé, il faut qu'on soit capable de vous identifier. O.K.,
+ mais c'est parce que je viens de vous donner ma carte d'assurance maladie qui a
+ une photo dessus puis tous les renseignements. Pourquoi j'ai besoin d'imprimer
+ un petit papier pour m'identifier alors que j'ai ma carte d'assurance maladie?
+ Je ne sais pas. Mystère et fromage mou. 
+
+Et là je me présente à l'admission. On me
+ dit : Avez-vous votre carte d'hôpital? Bien, non, pourquoi? Vous voulez que je fasse quoi avec une carte d'hôpital?
+ Ah! là, ça prend la carte d'hôpital. Et là, Mme la Présidente, s'enclenche
+ un processus où la carte d'hôpital... on va imprimer des papiers qui vont être
+ envoyés à l'administration, qui vont être envoyés je ne sais pas où, qui
+ vont... 
+
+Mme la Présidente, tout ça pourrait être
+ numérisé, tout ça pourrait faire l'objet d'une transformation numérique. Imaginez les gains d'efficacité, imaginez la
+ rapidité avec laquelle on pourrait traiter tout ça jusqu'au bureau du médecin,
+ si on était capable. Et le point d'émission
+ de ça, c'est quoi? Bien, c'est ça, c'est les attestations numériques, Mme la
+ Présidente. 
+Et imaginez l'ensemble des services
+ pour lesquels on pourrait augmenter l'efficacité de l'État et donc augmenter la
+ qualité des services, augmenter la disponibilité des services et augmenter la
+ confidentialité des services dans l'univers numérique. 
+
+Alors, Mme la Présidente, c'est ça, l'identité
+ numérique, c'est ça, la volonté de l'identité numérique. Et je vous dirais
+ qu'en consultations particulières, cette volonté-là a été saluée par la très
+ grande majorité des intervenants. 
+
+Maintenant, il y a des risques. C'est vrai, je
+ veux dire, ce n'est pas un univers parfait, il y a des risques. On nous a
+ dit : Il ne faut pas centraliser toutes les informations, parce que sinon,
+ évidemment, une fuite de données devient catastrophique. Encore là, Mme la
+ Présidente, je vous dirais que l'état actuel du gouvernement du Québec, c'est
+ ça qui est problématique, parce qu'on nous a dit : Là, vous allez créer le
+ registre d'identité numérique, vous allez concentrer toutes les informations d'identité d'un citoyen dans un registre. C'est
+ vrai. Ce qu'il faut comprendre, Mme la Présidente, c'est que, quand un
+ ministère ou un organisme donne une prestation de services aux citoyens, il
+ fait exactement ça, il crée son propre registre d'identité des citoyens.
+ Pourquoi? Parce qu'avant de donner un service, il a besoin d'identifier le
+ citoyen à qui il donne le service. 
+
+Donc, ce
+ n'est pas un registre d'identité numérique qu'il y a au gouvernement du Québec,
+ c'est des dizaines, voire des centaines. Et ça, c'est autant de surfaces
+ d'attaque, c'est autant de possibilités de fuites de données qu'on ne souhaite
+ pas. 
+
+Donc, Mme la Présidente, loin d'être un
+ problème, la vision du gouvernement, c'est, au contraire, d'éliminer ces
+ dizaines de registres là et de s'assurer qu'il n'y en a qu'un. Pourquoi? Un,
+ pour des questions de sécurité. Vous comprendrez que c'est plus facile et ça
+ consomme moins de ressources de protéger un seul que d'en protéger des
+ dizaines. Je pense que tout le monde comprend ça assez aisément. Ensuite, ça
+ évite la distorsion, les doublons dans les informations, parce que ces dizaines
+ de fichiers là ne peuvent pas être mis à jour en temps réel. 
+
+Donc, mon
+ identité, dans un service que je consomme régulièrement, risque d'être à jour.
+ Mais il y a des services qu'on consomme beaucoup moins régulièrement, et
+ ça, ça se peut qu'il y ait des informations qui datent, qui soient périmées,
+ mais qu'on conserve, qu'on continue d'avoir, et ce qui fait que vous allez
+ recevoir une lettre à une adresse à laquelle vous n'habitez plus depuis
+ 10 ans. Pourquoi? Parce que les fichiers ne sont pas à jour. Et ça, c'est
+ arrivé, au gouvernement du Québec : Voyons donc, je n'habite plus là ça
+ fait des années, voulez-vous bien me dire pourquoi que vous m'envoyez une lettre? Bien, parce que les fichiers ne sont pas à
+ jour. Donc, s'il y a un fichier unique auquel tout le monde se
+ réfère, bien, tout le monde a une information qui est à jour, qui est à date.
+
+Autre avantage, Mme la Présidente, avec
+ l'identité numérique, le citoyen se connecte, voit évidemment ses
+ renseignements d'identité et contrôle ses renseignements d'identité. Pensez au
+ fameux changement d'adresse, Mme la Présidente,
+ le chemin de croix, le parcours du combattant que c'est, de changer son adresse
+ dans l'administration publique. Pourquoi? À cause de ces dizaines et ces
+ dizaines de fichiers dont je vous parlais. Le fait d'en avoir un seul, unique,
+ le citoyen fait son changement d'adresse puis c'est terminé. Puisque c'est la
+ source de tous les services publics, tout le monde vient chercher son
+ information là, bien, tout le monde a une adresse à jour, tout le monde à la
+ bonne adresse, tout le monde a les bons changements faits en temps réel, et le
+ citoyen retrouve le contrôle sur ses données. Alors, ça, Mme la Présidente, ça
+ aussi, c'est dans le projet de loi.
+
+Pour l'identité numérique, Mme la Présidente, ça
+ prend évidemment un cadre législatif, parce qu'il faut évidemment que,
+ l'univers numérique, on puisse travailler avec des pièces qui sont reconnues,
+ qui sont authentiques, authentifiées, et ça
+ prend un cadre juridique. Nous créons ce cadre juridique pour l'utilisation de
+ l'identité numérique nationale.
+
+Autre élément, Mme la Présidente, très
+ important, la cybersécurité. On le sait, un des trois enjeux les plus
+ importants pour n'importe quel gouvernement à travers le monde, c'est la
+ protection des systèmes d'information et la protection des renseignements
+ personnels. Le ministère de la Cybersécurité, et ça, je pense que c'est un
+ secret bien gardé, a évidemment la responsabilité de la cybersécurité des
+ systèmes d'information du gouvernement du Québec, mais, avec l'avènement du ministère, son rôle dépasse celui du
+ gouvernement. Sa mission, c'est une mission régalienne. Elle est sur l'ensemble du territoire québécois.
+ Or, Mme la Présidente, pour être capable d'assumer cette fonction-là, bien,
+ il faut avoir connaissance des faits, et malheureusement, sur le territoire
+ québécois, il y a des attaques réussies pour lesquelles
+ on n'est pas avisés. On n'est pas au courant ou alors on l'est, mais tellement
+ longtemps après les faits qu'il n'y a plus d'intervention possible.
+
+Donc, le projet de loi fait deux choses. D'une
+ part, il rend obligatoire la divulgation des incidents de sécurité au ministère pour les organismes publics, mais il
+ va aussi permettre au gouvernement d'établir par règlement des secteurs
+ névralgiques pour lesquels le secteur public-privé sera tenu aux mêmes
+ obligations. On le sait, Mme la Présidente, il y a des secteurs, comme l'énergie, le transport,
+ l'alimentation... Ce sont des secteurs qui sont névralgiques pour l'économie
+ québécoise, pour la société en général, et on a vu, dans le passé, des
+ cyberattaques qui ont évidemment créé des soucis assez majeurs, mais ces
+ cyberattaques-là n'étant pas déclarées, la capacité d'agir et d'interagir
+ devient assez difficile, la capacité d'informer aussi, Mme la Présidente, parce
+ que, si un secteur est particulièrement attaqué, si on n'est pas avisés de ces
+ attaques-là, on ne peut pas le savoir. On ne peut pas détecter que, de toute
+ évidence, le secteur de l'énergie fait l'objet d'attaques concertées, alors
+ qu'avec la divulgation obligatoire on va pouvoir le savoir et on va... Ça va
+ nous permettre d'aviser les sociétés et les
+ entreprises qui sont visées par cette menace-là de s'y préparer. Ça va nous
+ permettre de déterminer le type d'attaque, l'origine de l'attaquant.
+ Bref, avec l'information, Mme la Présidente, c'est beaucoup plus facile de se protéger. Donc, ça, le projet de
+ loi vient faire ça, et je pense que c'est une avancée extrêmement importante.
+
+• (10 h 30) •
+
+Autre élément
+ du projet de loi, Mme la Présidente, le courtier en infonuagique. Puis, je vous
+ dirais, particulièrement dans le contexte qu'on vit avec la crise, je
+ pense qu'on peut appeler ça la crise tarifaire... Le courtier en infonuagique,
+ Mme la Présidente, c'est un modèle qu'on a mis en place au début du précédent
+ mandat. Qu'est-ce que ça fait en gros? Bien,
+ c'est ça, c'est un courtier. Donc, les entreprises qui offrent des services en
+ infonuagique vont se qualifier selon les 
+critères
+ très stricts du courtier, mais, une fois qu'on est inscrit, ça permet aux
+ ministères et organismes de choisir avec quelle
+ entreprise ils veulent faire affaire, et c'est au choix... pourvu que ce soit
+ un... une des entreprises, pardon, qualifiées à la liste du courtier, c'est au choix du ministère et de
+ l'organisme de choisir l'entreprise avec laquelle il veut faire affaire.
+
+On
+ élargit la portée du courtier, qui devient, donc, le courtier en ressources
+ informationnelles. Il se... trois nouveaux secteurs pour lesquels le
+ courtier va pouvoir agir, et l'avantage de ça, Mme la Présidente, par rapport,
+ disons, au modèle conventionnel des appels
+ d'offres, bien, c'est qu'une fois que l'entreprise est qualifiée, comme je l'ai
+ dit, le ministère et l'organisme peut choisir, peut choisir sans
+ enfreindre nos règles internationales, sans enfreindre nos ententes, sans enfreindre nos lois, notamment la Loi sur les contrats des organismes publics, peut choisir l'entreprise avec laquelle il veut
+ faire affaire.
+
+Mme
+ la Présidente, est-ce que j'ai besoin de vous dire que, dans le contexte
+ actuel, il serait beaucoup plus facile de dire... par exemple, de
+ favoriser une entreprise québécoise, canadienne, européenne, que dans un
+ contexte classique du cadre des appels
+ d'offres? Donc, pour moi, ça, c'est une avancée. On le limite quand même à
+ certains secteurs qui sont plus névralgiques pour les opérations du
+ gouvernement, parce qu'effectivement on pense qu'il ne faut pas non plus
+ délaisser le modèle des appels d'offres, qui a ses avantages, très
+ certainement.
+
+Un autre élément, Mme
+ la Présidente, qui est important, c'est tout le secteur des télécommunications.
+ Le ministère de la Cybersécurité et du
+ Numérique a, par héritage, la responsabilité d'assumer les télécommunications,
+ que ce soit le fameux réseau RENIR pour la sécurité publique, que ce
+ soit le RITM ou sa version modernisée, le Réseau gouvernemental des
+ télécommunications, etc. Donc, le ministère a, par héritage, qui était au CSPQ,
+ qui a été à l'ITQ, qui est maintenant au
+ ministère, cette responsabilité-là, mais il ne l'a pas de façon légale.
+ Résultat des courses, Mme la Présidente, n'importe quel ministère ou
+ organisme qui veut se lancer dans un projet de télécom, légalement, a le droit
+ de le faire, il peut le faire.
+
+Ça pose différents problèmes.
+ Ça pose des problèmes au niveau de la coordination, du déploiement du réseau de
+ télécom québécois. Ça pose des problèmes au niveau des choix technologiques qui
+ sont faits. Or, il faut s'assurer d'avoir
+ des technologies qui sont compatibles. Il faut aussi faire des choix
+ technologiques qui sont sécuritaires, Mme la Présidente. On l'a vécu avec les caméras Hikvision, qui sont produites
+ en Chine. On sait que, bon, maintenant, le ministère a interdit
+ l'acquisition de ces caméras-là. Mais, avant que ça se fasse, il y en a quand
+ même qui ont été acquises, qui ont été installées dans nos réseaux, puis
+ maintenant il faut gérer ça. Donc, au niveau des acquisitions, de la sécurité, des choix des fournisseurs, ça peut poser
+ différents problèmes. On l'a vu avec nos homologues canadiens, qui, pour
+ surveiller les frontières, ont acquis des drones chinois. C'est leur
+ choix.
+
+Bon, alors, pour
+ toutes ces raisons-là, Mme la Présidente, on va donner maintenant légalement la
+ responsabilité de la coordination, le déploiement
+ et la gestion du réseau, des différents réseaux de télécommunications du
+ gouvernement, au MCN. Ce qui ne veut pas dire qu'un ministère ou un
+ organisme ne pourrait pas y aller de son projet, sauf que ce projet-là sera
+ considéré comme un projet en ressources informationnelles au sens de la loi, et
+ donc devra requérir des autorisations
+ nécessaires, d'abord l'approbation du MCN et ensuite l'approbation du Conseil
+ du trésor au niveau des dépenses.
+
+Donc, on donne un
+ meilleur contrôle au gouvernement sur le déploiement de son réseau, et je pense
+ que ça, c'est quelque chose d'important et de majeur pour... Surtout
+ qu'aujourd'hui je pense que tout le monde est d'accord pour dire que les réseaux de télécommunications, c'est l'infrastructure
+ du XXIe siècle, et c'est important pour le gouvernement d'assurer le contrôle de cet aspect-là du développement de
+ sa transformation numérique. Ces infrastructures-là sont névralgiques,
+ et on doit être capables de les déployer selon une vision, un plan qui est
+ cohérent, et le projet de loi va nous permettre de faire ça.
+
+Donc, Mme la
+ Présidente, je ne veux pas aller beaucoup plus loin. Je pense que j'ai donné
+ les grandes lignes. Il y a d'autres petites
+ subtilités qui sont inhérentes au projet de loi, mais les grandes lignes, je
+ vous les ai exposées avec les motifs.
+ Et donc, pour cette raison, Mme la Présidente, je recommande à cette Assemblée
+ de voter en faveur du principe du projet de loi. Merci, Mme la
+ Présidente.
+
+La Vice-Présidente
+ (Mme Soucy) : 
+Merci, M. le ministre. Maintenant, nous allons... nous
+ allons continuer avec la prochaine intervenante. Mme la députée de Mont-Royal—Outremont, à vous la
+ parole. 
+
+Mme Michelle
+ Setlakwe
+
+Mme Setlakwe :
+ 
+Merci, Mme la Présidente. À mon
+ tour, donc, de prendre la parole ce matin à l'étape de l'adoption du
+ principe du projet de loi n° 82, Loi concernant l'identité numérique nationale
+ et modifiant d'autres dispositions, ce projet de loi qui avait été déposé par
+ le gouvernement de la CAQ à la fin de la dernière année, 2024.
+
+Ce projet de loi, qui
+ vise à établir une identité numérique nationale pour les citoyens québécois,
+ est un projet de loi très important qui aura un impact majeur sur nous tous.
+ Certes, cette idée d'introduire une identité numérique nationale aura un impact
+ potentiellement très positif, car les Québécois s'attendent aux meilleurs
+ services numériques de la part de
+ l'administration publique. L'identité numérique nationale deviendrait la seule
+ façon de s'identifier, tant dans le monde réel que dans le monde
+ numérique. Elle vise à permettre aux citoyens de s'authentifier en ligne pour
+ accéder aux services gouvernementaux de manière sécuritaire. Du moins, c'est ce
+ que l'on souhaite, Mme la Présidente. 
+
+L'identité
+ numérique nationale fonctionnerait comme un substitut pour les documents
+ d'identité physiques tels le passeport, le permis de conduire, les certificats
+ de naissance, etc. Ces avancées, on doit le souligner, elles peuvent être très
+ positives, nous en convenons, mais on parle d'un projet de loi qui a aussi le
+ potentiel d'affecter négativement les Québécois au niveau notamment de la
+ sécurité des données et de la protection de leurs renseignements personnels. La
+ transparence, la planification, la communication, l'encadrement et le déploiement
+ de ce grand projet nécessiteront la plus grande rigueur, la plus grande
+ prudence. 
+
+À l'opposition officielle,
+ nous voterons pour le principe, car nous partageons le souhait de moderniser
+ les services de l'État. C'est un projet de société qu'il nous faut entamer.
+ Offrir aux citoyens des services numériques accessibles, sécuritaires et
+ adaptés à leurs besoins, nous ne pouvons pas être contre cet objectif, Mme la
+ Présidente. Il faut le souligner, par ailleurs, nous avons accumulé un retard
+ important dans ce domaine. Dans d'autres juridictions... et permettez-moi ici
+ de me référer au mémoire qui a été déposé par l'expert en cybersécurité,
+ M. Steve Waterhouse. Il mentionne, d'entrée de jeu dans son mémoire, que
+ le travail de préparation ne fait que s'allonger d'année en année, alors que
+ d'autres gouvernances ont réellement fait le choix de numériser les
+ transactions entre les citoyens et les institutions,
+ entre autres Singapour, la Suède, l'Estonie, la Belgique, l'Inde, le Danemark,
+ les Pays-Bas, le Nigéria. Donc, si on regarde ce qui se fait ailleurs, on
+ constate qu'ici, au Québec, il est grand temps qu'on avance vers cette identité
+ numérique, qu'on avance dans ce projet, je
+ dirais, tous ensemble, parce que c'est un projet structurant pour les
+ Québécois. 
+
+• (10 h 40) •
+
+Évidemment,
+ Mme la Présidente, vous vous en doutez, je vais arriver avec certains bémols,
+ mais, sur le principe, le principe, sur l'objectif, sur l'idée de
+ moderniser l'État québécois, il est certain que l'opposition officielle ne se
+ mettra pas dans le chemin du progrès, du moins dans l'intention de procéder à
+ cette avancée. Et donc nous nous assurerons que
+ tous les enjeux et toutes les préoccupations qui ont été mis de l'avant dans le
+ cadre des consultations et dans les mémoires soumis soient discutés en
+ commission parlementaire lors de l'étude détaillée. Tout au long du processus,
+ comme toujours, nous contribuerons de façon constructive à l'analyse article
+ par article du projet de loi afin de le bonifier, car nous espérons sincèrement que cette identité numérique nationale, d'une
+ part, facilitera l'obtention des services publics pour le plus grand nombre possible de Québécois et
+ qu'il réduira les risques de fraude, comme les vols d'identité, l'hameçonnage,
+ les fuites, etc. Il faudra donc trouver l'équilibre
+ entre l'efficience administrative, la protection des renseignements personnels
+ et l'inclusion numérique. Bref, il faudra chercher l'équilibre entre simplicité
+ et sécurité. 
+
+Un élément que je me dois de mettre de l'avant
+ comme énorme bémol à notre vote en faveur du principe du projet de loi
+ n° 82, Mme la Présidente, le projet d'identité numérique nationale, c'est
+ beaucoup plus que le libellé de cette pièce législative. Le ministre doit
+ rassurer la population, fédérer les Québécois et mettre de l'avant un plan et
+ une feuille de route qui assurera le succès de ce projet structurant. Le
+ ministre de la Cybersécurité et du Numérique, qui a joué un rôle déterminant
+ dans le déploiement de SAAQclic et qui a admis que ce déploiement avait été un
+ fiasco, saura-t-il cette fois-ci réunir les conditions gagnantes pour mener à
+ bien ce projet structurant d'identité numérique? Permettez-moi de lever ce
+ drapeau, Mme la Présidente. D'ailleurs, la Vérificatrice générale du Québec,
+ dans son mémoire, nous rappelait les différents
+ travaux d'audit qu'elle a effectués au fil des ans, et elle invite le ministère
+ ou le ministre de Cybersécurité et du Numérique à consulter et
+ considérer les résultats de certains de ses travaux, et, à cet égard, elle
+ attire l'attention sur trois principaux enjeux dans son mémoire fort pertinent.
+
+Elle a traité de la cybersécurité et de la
+ protection des renseignements personnels. Elle a aussi traité de
+ l'accessibilité et de la qualité des services aux citoyens. Et enfin elle a
+ parlé de gestion de projet et, quand elle parle de gestion de projet, Mme la
+ Présidente, elle nous dit qu'il est important de bien définir les besoins. Elle
+ nous dit que ça prend une bonne planification, que c'est essentiel afin de
+ limiter les retards et les dépassements de budget. Plus loin, elle mentionne
+ que le MCN doit s'assurer d'avoir les ressources humaines compétentes pour
+ réaliser le projet. Elle mentionne aussi que
+ le processus contractuel pour ce projet ne doit pas rendre le ministère
+ dépendant d'un seul fournisseur.
+
+Donc, ce seront des questions qu'on pourra
+ discuter davantage en étude détaillée parce qu'on a beau avoir cette intention
+ louable de moderniser l'État, encore faut-il s'assurer que tout le gouvernement
+ soit derrière ce projet avec les ressources humaines et financières adéquates
+ pour le mener à bien pour les Québécois et assurer que les Québécois aient
+ confiance en ce nouveau système. Donc, quand je parle des conditions gagnantes
+ qui sont nécessaires à la réussite de ce
+ projet, je parle d'éléments qui ne se retrouvent pas forcément dans le projet
+ de loi, mais qui sont cruciaux à la réussite du projet, notamment ceux
+ qui ont été mis de l'avant dans le mémoire de la Vérificatrice générale.
+
+Avant tout, Mme la Présidente, et ça a été dit
+ et redit en consultations, il faut bien communiquer le projet aux citoyens afin qu'ils voient l'utilité du système
+ et qu'ils comprennent en quoi l'identité numérique leur offrira une meilleure
+ accessibilité aux services gouvernementaux. Donc, l'importance de bien
+ communiquer avec la population est primordiale dans ce dossier. Comment cette
+ identité numérique nationale va-t-elle simplifier la vie des Québécois? Ça peut paraître simpliste, là, mais, si on veut
+ qu'il y ait une adhésion, une acceptabilité sociale, si on veut que ça
+ fonctionne, puis qu'on fédère les Québécois, puis qu'ils participent à
+ ce nouveau régime, assurons-nous de bien communiquer, prenons le temps d'investir dans cette communication, dans cette
+ transparence, pour atteindre une acceptabilité sociale élevée.
+
+À cet égard, d'ailleurs, permettez-moi de me
+ référer à un passage du mémoire de l'observatoire international sur les impacts
+ sociétaux de l'intelligence artificielle et du numérique, Obvia. À la
+ page 8 de leur mémoire, ils parlent donc des expériences internationales
+ en matière d'identité numérique, on l'a mentionné, il y a plusieurs cas
+ d'espèce en Estonie, l'Australie, etc., et
+ de s'en inspirer pour les bonnes pratiques. Bon, d'autres juridictions, on peut
+ s'en inspirer pour tirer des leçons de ce qui a été appris car... et là
+ c'est... Le passage pertinent est le suivant : «Ces études de cas
+ démontrent que l'utilité perçue d'une identité numérique nationale est
+ essentielle à son adoption, voire à son succès. Pour assurer cette utilité, on
+ nous dit, à l' Obvia, il faut impliquer différents acteurs gouvernementaux et
+ privés dans le processus ainsi qu'inclure la population utilisatrice pour
+ développer un système répondant à ses besoins.» J'ai trouvé d'ailleurs leur
+ mémoire très utile et très pertinent dans le cadre de notre étude... de notre

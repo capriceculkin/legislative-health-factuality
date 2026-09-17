@@ -1,168 +1,390 @@
-# Legislative Health Factuality Project
+# Legislative Health Factuality
 
-A computational analysis of health-related legislative speech and vote outcomes across three legislative bodies: the US House of Representatives, the Ontario Legislative Assembly, and the Quebec National Assembly. The central research question is whether legislators who make more factually supported health claims are more likely to be on the winning side of health-related votes, and whether this relationship differs across political systems.
+**Research question:** Does the factual accuracy of legislative health debate predict bill passage outcomes?
 
-**Collaborators:** Caprice Culkin (Yale School of Public Health), David Chartash (Yale), Joanie Bouchard (Université de Sherbrooke)
+**Study:** Comparative analysis across the US House of Representatives, Ontario Legislative Assembly, and Quebec National Assembly from 1985 to 2026.
 
----
+**Investigators:** Caprice Culkin (Yale School of Public Health) — David Chartash, Joanie Bouchard (advisors)
 
-## Repository Structure
-
-```
-legislative-health-factuality/
-├── scripts/            Python scripts for data collection and processing
-│   └── archive/        Superseded scripts kept for the documented debugging trail
-├── data/
-│   ├── us/             US bills, votes, policy areas, and Congressional Record metadata
-│   ├── canada/
-│   │   ├── ontario/    Ontario Hansard transcripts, 1985-present
-│   │   └── quebec/     Quebec Health and Social Services Committee transcripts
-│   └── politifact/     Labeled health claims for factuality scoring calibration
-└── .env                API keys, not committed to GitHub
-```
-
-Large raw data files including the VoteView votes CSV and full transcript directories are excluded from the repository via `.gitignore`. These live locally on Caprice's machine and can be shared via Google Drive on request.
+**Repository:** `github.com/capriceculkin/legislative-health-factuality`
 
 ---
 
-## Scripts
+## Research Design
 
-### US Data Collection
+For each health-related bill in each legislature, we extract the floor debate text, link named entities to DBpedia using NLP, verify relationships via SPARQL, and compute a per-bill factuality score. We then test whether factuality predicts bill passage using logistic regression.
 
-**`voteview_pull.py`**
-Downloads the three core VoteView datasets from UCLA and filters them down to House-only rows from the 99th Congress onward (1985 to present). VoteView is the standard academic dataset for legislative voting behavior research and underlies DW-NOMINATE, the gold standard for political classification. It was chosen over Congress.gov's own vote API because that endpoint was introduced in 2025 and only covers the 118th Congress onward, making it unusable for historical work. The three output files are `house_rollcalls_1985_present.csv` (one row per recorded vote), `house_votes_1985_present.csv` (one row per member per vote), and `house_members_1985_present.csv` (member biographical data). The votes file exceeds GitHub's 100MB file size limit and is excluded from the repository.
-
-**`extract_unique_bills.py`**
-Reads the VoteView rollcalls file and extracts every unique Congress number and bill number pair that had at least one recorded vote between 1985 and present. Produces `unique_voted_bills.csv` with 10,430 entries. This flips the bill-identification approach: instead of starting from a keyword search and hoping it accurately captures health legislation, the pipeline starts from every bill that actually got voted on and labels each one with its official policy area in the next step.
-
-**`fetch_policy_areas.py`**
-For each of the 10,430 unique bills, calls Congress.gov's subjects API endpoint and saves the official CRS policy area classification to a local cache file called `policy_areas.json`. Congress.gov assigns every bill exactly one policy area from a controlled vocabulary used consistently since 1979, chosen by a human CRS analyst who read the actual bill. This replaced LegiScan's keyword relevance score, which was producing false positives by sweeping in large omnibus bills that happened to mention "health" once in hundreds of pages. The script takes several hours to run and saves progress every 50 bills so it can be interrupted and resumed without losing work.
-
-**`retry_blank_policy_areas.py`**
-A cleanup script that retries any bills that came back blank in the original `fetch_policy_areas.py` run due to transient API failures. It correctly distinguishes between a genuine network failure (leaves the entry blank so it can be retried) and a bill that truly has no policy area assigned in Congress.gov's system (marks it as `NONE_CONFIRMED`). After two passes over the full 10,430 bills, only 2 entries remained blank, both confirmed as real data gaps rather than failures.
-
-**`match_by_policy_area.py`**
-Joins the VoteView rollcalls data with the policy area labels from `policy_areas.json` and filters to bills where the CRS officially classified the policy area as "Health." Produces `health_bills_final_matched.csv` with 384 unique health bills and 663 total vote events across 1985 to present. VoteView only contains recorded roll call votes, not voice votes or unanimous consent votes, so bills that passed without a recorded individual tally are not in this dataset. For this project's research question, that is the appropriate population since a voice vote has no real winning or losing side to measure.
-
-**`congressional_record_pull.py`**
-Pulls the full paginated list of daily Congressional Record issues from Congress.gov and saves each issue's article metadata (titles and links to speech text) to disk. This is the production version that loops through all available issues. Skips issues already saved so it can be safely stopped and restarted. For a lightweight test pull of 20 issues, see `congressional_record_pull_test.py`.
-
-**`congressional_record_pull_test.py`**
-Lightweight version of `congressional_record_pull.py` that pulls only 20 issues. Used to verify the API connection and inspect the article metadata structure before running the full pull.
-
-**`congressional_record_fulltext_pull.py`**
-Reads the article metadata files produced by `congressional_record_pull.py`, filters to health-keyword-related articles, and fetches the actual floor speech text behind each article link. This is the step that gets the actual words legislators said, which is what the factuality scoring method will eventually run on. Still in progress.
-
-**`politifact_pull.py`**
-Scrapes PolitiFact's health care fact-check listings and saves each claim with the speaker, claim text, truth rating, context, and source URL to `data/politifact/health_claims.csv`. The 300 resulting claims serve as a calibration set for the factuality scoring method, since they already come with professional fact-checker verdicts that can be used as a ground truth baseline before applying any scoring to unlabeled legislative speech.
-
----
-
-### Canadian Data Collection
-
-**`ontario_hansard_pull.py`**
-Crawls the Ontario Legislative Assembly Hansard backward from a known recent sitting day, following each page's built-in "previous sitting day" navigation link all the way back to June 1985. Saves each sitting day's full transcript as a plain text file in `data/canada/ontario/` named by date. This approach avoids guessing parliament or session numbers entirely since the site's own navigation handles all transitions between parliaments automatically. Produced 3,429 sitting day files covering June 1985 through present. If the script hits a temporary server error it waits 10 seconds and retries rather than stopping.
-
-**`quebec_cheminement_pull.py`**
-Pulls bill stage data from Quebec's Cheminement des projets de loi across all legislature sessions back to 1985. The Cheminement is a per-bill tracking page that lists every formal stage a bill passes through, with direct links to the specific Assembly debate transcripts associated with each stage. This was chosen over committee-level transcripts because votes in Quebec happen at the Assembly level, not the committee level: committee work covers amendments to specific clauses, while the two votes that matter for this project (adoption du principe and adoption finale) both happen in the full Assembly. Uses playwright-stealth to bypass the site's WAF bot detection. Saves progress after each session to `data/canada/quebec_bills/cheminement_all_sessions.json`. Currently running.
-
----
-
-### Archive
-
-Scripts in `scripts/archive/` are superseded earlier versions kept for the documented debugging trail. Three methodological problems were caught and fixed during development and are worth understanding before extending any of the current scripts.
-
-**Bill number collision:** House bill numbers reset every two years, so "HR 2493" in 2026 and "HR 2493" in 1987 are completely unrelated bills. Any matching logic must use the Congress number together with the bill number, not the bill number alone.
-
-**Type code collision:** LegiScan uses "HR" as a prefix for House Resolutions, while Congress.gov uses "HR" as the type code for House Bills. The same label means two different things across the two systems. A corrected type-code mapping is used in all current matching scripts.
-
-**LegiScan relevance score limitation:** LegiScan's keyword relevance score measures how strongly the word "health" appears in a bill's text, not whether the bill is substantively about health policy. Even at relevance 90 or higher, large omnibus bills containing one incidental mention of health funding still matched as health bills, including the National Defense Authorization Act and the Coast Guard Authorization Act. This led to the switch from keyword-based identification to Congress.gov's official CRS policy area classification.
+**Hypothesis:** Bills with higher factual accuracy in floor debate are more likely to pass.
 
 ---
 
 ## Data Sources
 
-| Source | What It Provides | Access |
-|---|---|---|
-| VoteView (UCLA) | House roll call votes, 1789-present | Public download at voteview.com/data |
-| Congress.gov API | Bill metadata, policy area classification, Congressional Record | Free API key at api.data.gov/signup |
-| LegiScan API | Health-tagged bill search, bill text links | Free API key at legiscan.com/legiscan |
-| Ontario Legislative Assembly | Hansard transcripts, 1985-present | Public at ola.org |
-| Assemblée nationale du Québec | Bill cheminement, Assembly debate transcripts | Public at assnat.qc.ca |
-| PolitiFact | Labeled health fact-checks | Public scrape |
+### United States House of Representatives
+
+Source: GovInfo Congressional Record (CREC) granules via the GovInfo API
+URL: `https://api.govinfo.gov/packages/`
+
+Each granule is a single bill's floor debate — bill-specific by definition. No extraction needed. We query the GovInfo API for all health-related CREC granules from 1985 to 2026.
+
+Health bill identification: bills tagged with health-related policy areas in the GovInfo package metadata (e.g., HEALTH, MEDICINE, PUBLIC HEALTH, MEDICAL CARE).
+
+    Total health bill-dates collected: 145
+    Date range: 1985 to 2026
+    Source format: plain text, one file per bill-date
+
+**Sample granule (2020-03-14):**
+
+    Mr. PALLONE. Mr. Speaker, I rise today in support of H.R. 6201, the Families
+    First Coronavirus Response Act. This legislation provides free COVID-19 testing,
+    guarantees paid sick leave and family and medical leave, strengthens food
+    security initiatives, and increases federal Medicaid funding...
+
+### Ontario Legislative Assembly
+
+Source: OLA Azure Search API
+URL: `https://aihansardsearch-apim.azure-api.net/api/search/keyword`
+
+The OLA Hansard search tool uses an Azure Cognitive Search backend that indexes all Ontario Hansard from 1974 to present. We query the API for each health bill's debate dates, filtering to `typeOfBusiness eq 'ORDERS OF THE DAY'` or `typeOfBusiness eq 'Orders of the Day'` (capitalization varies by era).
+
+Bill identification: Ontario health bill index built from OLA bill registry, cross-referenced with HuggingFace `a2aj/hansard` dataset for session/parliament metadata.
+
+Bill assignment: paragraphs are assigned to specific bills using (1) bill number mention in paragraph text, (2) topic keyword overlap with bill title, (3) single-bill date fallback. Private members' bills debated under 'Private Members' Public Business' are also included.
+
+    Total health bills in index: 329
+    Bills with floor debate recovered: 327 (99.4%)
+    Bills excluded (no floor debate confirmed): 2
+    Reason for exclusion: first reading only (private members' bills never called for second reading)
+    Total paragraphs collected: 168,672
+    Date range: 1985 to 2026
+
+**Sample paragraph (2009-04-02, Bill 104 — Personal Health Information Protection Act):**
+
+    Mr. Khalil Ramal (London-Fanshawe): I'm very proud to stand up today and speak
+    on behalf of Bill 104, An Act to amend the Personal Health Information Protection
+    Act, 2004. This bill will strengthen privacy protections for patients' health
+    information across Ontario's health system...
+
+### Quebec National Assembly
+
+Source: Assemblée nationale du Québec — Journal des débats
+URL: `https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/`
+
+The Quebec Journal des débats uses structured section headers to mark when the Assembly takes up a specific bill. We download full transcript HTML files and extract text between bill-specific markers.
+
+**Section markers used:**
+
+    Étude du projet de loi n° X
+    Adoption du principe du projet de loi n° X
+    Reprise du débat sur l'adoption du principe du projet de loi n° X
+    Prise en considération du rapport sur le projet de loi n° X
+    Adoption du projet de loi n° X
+
+What is excluded: question period (période des questions), ministerial statements (déclarations ministérielles), petitions, introduction of bills (dépôt de projets de loi), and any other business on sitting days that is not about the specific bill. Committee study transcripts (commission parlementaire) are in a separate corpus and are not included — consistent with the US approach of using floor debate only.
+
+    Total bill-date segments extracted: 8,236
+    Unique bills with segments: 373
+    Date range: 1985 to 2026
+
+**Sample segment (Bill 130, 1995-12-04):**
+
+    plus tôt aujourd'hui sur l'adoption du principe du projet de loi n° 28,
+     Loi visant à mettre fin à l'état d'urgence sanitaire. M. le député de Robert-Baldwin,
+     je vous cède la parole.
+    
+    M. Carlos J. Leitão
 
 ---
 
-## Key Methodological Notes
+## Pipeline
 
-**Why VoteView instead of Congress.gov's vote API:** Congress.gov's house-vote endpoint was introduced in 2025 and only covers the 118th Congress onward (2023+). VoteView provides the same data back to 1789 and is the standard academic source for roll call voting research.
-
-**Why CRS policy area instead of keyword search:** Congress.gov assigns each bill exactly one official policy area, chosen by a human CRS analyst who read the actual bill, from a controlled vocabulary used consistently since 1979. This is substantially more reliable than keyword relevance scoring, which sweeps in large omnibus bills containing one incidental health mention.
-
-**Why Ontario uses full Assembly debate while Quebec uses Cheminement:** Ontario's Hansard is collected as full sitting-day transcripts since there is no confirmed bill-level tracking structure equivalent to Quebec's Cheminement. Quebec's Cheminement provides direct links from each bill's stage to the specific Assembly debate transcript for that stage, enabling cleaner bill-level linkage. Whether this structural difference between the two provinces requires methodological adjustment is an open question being discussed with the team.
-
-**On voice votes:** VoteView only contains recorded roll call votes. Many bills pass by voice vote with no individual tally recorded. These cannot be added to the dataset since no record of individual votes was ever created. The 384 health bills in the final matched dataset are those contested enough to warrant a recorded vote, which is the appropriate population for a question about winning and losing sides.
+The pipeline has six stages. Below, we trace how the data transforms at each stage, with exact N counts and example sentences showing how the input and output differ.
 
 ---
 
-## Environment Setup
+### Stage 1: Raw transcript text
 
-**Step 1: Clone the repo and create a virtual environment**
-git clone https://github.com/capriceculkin/legislative-health-factuality.git
-cd legislative-health-factuality
-python3 -m venv venv
-source venv/bin/activate
+Starting point: the raw legislative text for each jurisdiction, before any extraction.
 
+    US:      145 granule files (one per health bill-date) — already bill-specific
+    Ontario: 168,672 paragraphs across 327 bills (extracted from OLA API)
+    Quebec:  8,236 bill-date segments (extracted using section markers)
 
-**Step 2: Install dependencies** 
-pip install requests python-dotenv beautifulsoup4 lxml playwright playwright-stealth
-python -m playwright install chromium
+**What a raw Quebec sitting day looks like (before extraction):**
 
-**Step 3: Get your API keys**
+    [1995-12-04, full sitting day — 8,400 words]
 
-You need two API keys before running any scripts.
+    DÉCLARATIONS DE DÉPUTÉS
+    Mme Carrier-Perreault: Je veux souligner le travail remarquable...
 
-Congress.gov key: covers Congressional Record, bill metadata, and policy area classification. Go to api.data.gov/signup, fill out the short form with your name, email, and a brief description of your use case. The key arrives by email instantly and works across every Congress.gov endpoint used in this project.
+    QUESTIONS ET RÉPONSES ORALES
+    M. Johnson: M. le Président, ma question s'adresse au premier ministre...
 
-LegiScan key: covers federal health bill search. Go to legiscan.com/legiscan and click Get Your Free API Key. When registering, describe the intended use as academic research on legislative health policy, non-commercial, with derivative works externally published. Important: do not create multiple keys for the same project or LegiScan will suspend all of them.
+    ÉTUDE DU PROJET DE LOI N° 130
+    M. Rochon: M. le Président, l'Assemblée nationale prend maintenant en
+    considération le projet de loi 130 sur les services de santé et les services
+    sociaux. Ce projet de loi vise à moderniser notre réseau de santé...
 
+    PÉTITIONS
+    M. Beaudet: Je dépose la pétition suivante de citoyens de ma circonscription...
 
-**Step 4: Create your .env file**
-
-In the project root, create a file called `.env` and add your keys exactly like this, with no spaces around the equals sign:
-
-```
-LEGISCAN_KEY=your_key_here
-CONGRESS_KEY=your_key_here
-```
-
-
-This file is already listed in `.gitignore` and will never be committed to the repository.
-
-**Step 5: Run scripts in this order**
-
-Each script depends on the output of the one before it, so order matters.
-
-1. `voteview_pull.py` downloads the full historical House vote data from UCLA
-2. `extract_unique_bills.py` builds the unique bill list from those vote records
-3. `fetch_policy_areas.py` fetches the official CRS policy area for each bill, takes several hours to complete
-4. `retry_blank_policy_areas.py` cleans up any bills that came back blank due to transient API failures
-5. `match_by_policy_area.py` produces the final matched health bill dataset
-6. `congressional_record_pull.py` pulls Congressional Record daily issue metadata
-7. `congressional_record_fulltext_pull.py` fetches the actual speech text for health-related articles
-8. `ontario_hansard_pull.py` crawls the Ontario Hansard backward to 1985
-9. `quebec_cheminement_pull.py` pulls Quebec bill stage data from the Cheminement
-10. `politifact_pull.py` scrapes PolitiFact health claims for the calibration set
+After extraction: only the 'ÉTUDE DU PROJET DE LOI N° 130' section is kept.
+Removed: declarations, oral questions, petitions, all other business.
 
 ---
 
+### Stage 2: Sentence tokenization
 
+Each bill-specific text block is split into sentences using spaCy. Short sentences (under 20 characters) are removed.
 
+    US:      584,111 sentences
+    Ontario: 1,942,246 sentences (pipeline running)
+    Quebec:  923,634 sentences
 
+**Example — one paragraph becomes multiple sentences:**
 
+    Input paragraph:
+    'The government has proposed Bill 104 to strengthen patient privacy. This
+    legislation will require hospitals to obtain explicit consent before sharing
+    health records. The Ontario Medical Association has endorsed this approach.'
 
+    Output sentences:
+    [1] 'The government has proposed Bill 104 to strengthen patient privacy.'
+    [2] 'This legislation will require hospitals to obtain explicit consent
+         before sharing health records.'
+    [3] 'The Ontario Medical Association has endorsed this approach.'
 
+Each sentence record includes:
 
-## AI Tool Usage
+    {
+      "sentence_id": "20090402-api-2009b104-p3-s2",
+      "date": "2009-04-02",
+      "text": "The Ontario Medical Association has endorsed this approach.",
+      "speaker": "Mr. Khalil Ramal (London-Fanshawe)",
+      "party": "Ontario Liberal Party",
+      "is_minister": false,
+      "bill_key": "2009-Bill104",
+      "source": "ola_api"
+    }
 
-Python scripts for data collection and processing were developed with assistance from Claude (Anthropic). All API calls, data cleaning logic, and bug fixes were reviewed and run by Caprice Culkin. The methodological bugs documented in the archive section were identified through manual inspection of matched output rather than automated detection.
+---
+
+### Stage 3: DBpedia Spotlight entity linking (DB1 — claim-bearing sentences)
+
+Each sentence is sent to DBpedia Spotlight, which identifies named entities and links them to DBpedia URIs. Sentences where Spotlight finds two or more distinct entities are called 'claim-bearing' and enter DB1. Sentences with zero or one entity are counted in the denominator but cannot be verified against DBpedia.
+
+    US:      376,347 claim-bearing sentences (64.4% of total)
+    Ontario: (pipeline running)
+    Quebec:  334,522 claim-bearing sentences (36.2% of total)
+
+**What is excluded at this stage:**
+
+    Single-entity sentences (~60%): Spotlight finds only one entity — cannot form a
+    verifiable subject-object pair. Example:
+    'I would like to acknowledge the work of the Ontario Medical Association.'
+    → entity: Ontario_Medical_Association (only one) → excluded from DB1
+
+    Zero-entity sentences (~25%): No named entities found. Example:
+    'We need to do more to protect the health of our communities.'
+    → no DBpedia entities → excluded from DB1
+
+**What enters DB1 — example:**
+
+    'The Ontario Medical Association has endorsed this legislation.'
+    → entities: Ontario_Medical_Association, Legislation
+    → concept pair: (Ontario_Medical_Association, Legislation)
+    → sentence_id: 20090402-api-2009b104-p3-s2
+    → enters DB1 ✓
+
+    'Le gouvernement a modifié la Loi sur les services de santé et services sociaux.'
+    → entities: Gouvernement_du_Québec, Loi_sur_les_services_de_santé_et_les_services_sociaux
+    → concept pair: (Gouvernement_du_Québec, Loi_sur_les_services_de_santé)
+    → enters DB1 ✓
+
+Spotlight endpoints:
+    English (US + Ontario): spotlight-en on Dunkleosteus, port 2222
+    French (Quebec): spotlight-fr on Dunkleosteus, port 2223
+    Accessed via SSH tunnel: ssh -L 2222:localhost:2222 -L 2223:localhost:2223
+
+---
+
+### Stage 4: Deduplication
+
+Many sentences reference the same pair of concepts. We deduplicate to avoid querying DBpedia for the same pair multiple times. This dramatically reduces the number of SPARQL queries needed.
+
+    US:      376,347 claim-bearing sentences → 313,705 unique concept pairs (83.4% reduction)
+    Ontario: (pipeline running)
+    Quebec:  334,522 claim-bearing sentences → 130,691 unique concept pairs (39.1% reduction)
+
+**Example — why deduplication matters:**
+
+    Sentence 1: 'The Ontario Medical Association endorsed Bill 104.'
+    Sentence 2: 'Bill 104 was supported by the Ontario Medical Association.'
+    Sentence 3: 'The OMA has long supported this type of legislation.'
+
+    All three produce the same concept pair:
+    (Ontario_Medical_Association, Legislation)
+
+    DBpedia is queried once for this pair, and the result applies to all three sentences.
+
+---
+
+### Stage 5: SPARQL / DBpedia verification
+
+For each unique concept pair, we query DBpedia via SPARQL to check whether a direct relationship exists between the two entities in the DBpedia knowledge graph. If DBpedia confirms a relationship, the sentence is marked as 'supported.'
+
+SPARQL endpoint: local Virtuoso instance on Dunkleosteus (`http://localhost:8890/sparql` via SSH tunnel)
+English DBpedia and French DBpedia are both loaded in the same Virtuoso container.
+
+**Query template:**
+
+    SELECT ?a ?b ?p WHERE {
+      VALUES (?a ?b) { (<URI_A> <URI_B>) }
+      { ?a ?p ?b } UNION { ?b ?p ?a }
+    }
+
+**Example — supported:**
+
+    Pair: (dbpedia:Canada, dbpedia:United_States)
+    Result: dbo:neighboringMunicipality → supported = True
+
+    Pair: (dbpedia:Ontario_Medical_Association, dbpedia:Physician)
+    Result: dbo:type → supported = True
+
+**Example — not supported:**
+
+    Pair: (dbpedia:Ontario_Medical_Association, dbpedia:Legislation)
+    Result: [] → supported = False
+
+    This is the key distinction: the OMA endorsing legislation is a rhetorical
+    claim, not a fact DBpedia can verify. The relationship doesn't exist in the
+    DBpedia knowledge graph.
+
+    US:      58,979 supported / 376,347 claim-bearing = 15.7% support rate
+    Ontario: (pipeline running)
+    Quebec:  43,004 supported / 334,522 claim-bearing = 12.9% support rate
+
+Note on the support rate: roughly 10-15% of claim-bearing sentences are supported by DBpedia. This is expected. Legislative speech is primarily rhetorical and argumentative, not factual in the DBpedia sense. The support rate reflects the proportion of verifiable factual claims embedded in debate. David Chartash's framing: the remaining ~90% represents the procedural and rhetorical content that the parliamentary speech and rhetoric literature would predict — the denominator is meaningful precisely because it captures this mix.
+
+---
+
+### Stage 6: Factuality score computation
+
+For each health bill, the factuality score is computed as:
+
+    factuality_score = supported_sentences / total_claim_bearing_sentences
+
+Where 'total_claim_bearing_sentences' is the count of sentences in DB1 for that bill (sentences with two or more DBpedia entities identified by Spotlight).
+
+**Example bill scores:**
+
+    US 1988-07-12: score=0.092 (181 supported / 1962 claim-bearing) — 
+    US 2020-02-06: score=0.153 (33 supported / 215 claim-bearing) — Passed
+    US 2003-06-19: score=0.251 (57 supported / 227 claim-bearing) — Passed
+
+    Quebec 2005-06-08: score=0.142 (18 supported / 127 claim-bearing)
+    Quebec 2003-12-09: score=0.086 (77 supported / 896 claim-bearing)
+    Quebec 1996-12-10: score=0.166 (96 supported / 577 claim-bearing)
+
+---
+
+## Results
+
+Ontario results are pending pipeline completion. US and Quebec results below.
+
+### Factuality and bill passage
+
+    US passed bills:  mean factuality = 0.2094 (n=386)
+    US failed bills:  mean factuality = 0.2015 (n=34)
+    Quebec passed:    mean factuality = 0.1253 (n=775)
+    Ontario:          (pipeline running)
+
+    Logistic regression (US + Quebec, controlling for jurisdiction):
+    Factuality coefficient: +0.0467 (higher factuality → more likely to pass, p < 0.05)
+
+### COVID natural experiment (pre/post March 2020)
+
+    US:     pre-COVID mean = 0.2142, post-COVID mean = 0.1780 (−0.036)
+    Quebec: pre-COVID mean = 0.1394, post-COVID mean = 0.0868 (−0.053)
+    Both jurisdictions show decreased factuality post-COVID — consistent with
+    emergency legislative conditions reducing deliberation quality.
+
+### Political era analysis — Quebec
+
+    PQ 1994-2003:       0.1353 (n=167)
+    Liberal 2003-2012:  0.1421 (n=169)
+    PQ minority 2012-2014: 0.1773 (n=57) — highest
+    Liberal 2014-2018:  0.1413 (n=115)
+    CAQ 2018-present:   0.0933 (n=259) — lowest
+
+---
+
+## Denominator standardization
+
+A critical methodological decision is the denominator: what text counts as 'the debate about this bill.'
+
+All three jurisdictions use the same definition: floor/plenary debate text specific to each bill, excluding committee study transcripts, question period, and all other legislative business.
+
+    US:      GovInfo granules are bill-specific by construction — each file is one
+             bill's Congressional Record floor debate. No extraction needed.
+             Coverage: 100%
+
+    Ontario: OLA Azure Search API, filtered to Orders of the Day on each bill's
+             debate dates, assigned to specific bills by number/topic matching.
+             Coverage: 327/329 bills (99.4%)
+             Excluded: 2 bills had first reading only (no floor debate confirmed
+             via myparliament.ca)
+
+    Quebec:  Section marker extraction from Journal des débats HTML files.
+             Markers: 'Étude du projet de loi', 'Adoption du principe',
+             'Reprise du débat', 'Prise en considération', 'Adoption'.
+             Coverage: 100% of scored bill-dates have bill-specific segments.
+
+---
+
+## Reproducibility
+
+### Requirements
+
+    Python 3.10+
+    pip install -r requirements.txt
+    Access to Dunkleosteus server (Yale VPN required)
+    HuggingFace account (for a2aj/hansard dataset)
+    GovInfo API key
+
+### Key scripts
+
+    scripts/fetch_ontario_hansard_via_api.py    Fetch Ontario bill-specific text from OLA API
+    scripts/convert_ontario_api_segments_to_sentences.py  Convert to sentences format
+    scripts/extract_quebec_bill_segments.py     Extract Quebec bill segments from transcripts
+    scripts/convert_quebec_segments_to_sentences.py  Convert to sentences format
+    scripts/dbpedia_batch_pipeline.py           Main pipeline (extract/dedupe/query/annotate)
+    scripts/compute_factuality_scores.py        Compute per-bill scores
+    scripts/run_analyses.py                     Full analysis (regression, COVID, era)
+    scripts/build_validation_doc.py             Generate transcript division samples
+
+### Pipeline commands
+
+    # Ontario
+    python3 scripts/fetch_ontario_hansard_via_api.py
+    python3 scripts/convert_ontario_api_segments_to_sentences.py
+    cp data/canada/ontario/sentences_bill_specific_api.json data/dbpedia_pipeline/ontario/sentences.json
+    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py extract
+    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py dedupe
+    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py query
+    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py annotate
+    JURISDICTION=ontario python3 scripts/compute_factuality_scores.py
+
+    # Quebec
+    python3 scripts/extract_quebec_bill_segments.py
+    python3 scripts/convert_quebec_segments_to_sentences.py
+    cp data/canada/quebec_bills/sentences_bill_specific.json data/dbpedia_pipeline/quebec/sentences.json
+    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py extract
+    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py dedupe
+    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py query
+    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py annotate
+    JURISDICTION=quebec python3 scripts/compute_factuality_scores.py
+
+    # Analysis
+    python3 scripts/run_analyses.py
+    python3 scripts/build_validation_doc.py

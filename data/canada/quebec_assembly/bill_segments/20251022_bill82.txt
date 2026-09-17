@@ -1,0 +1,194 @@
+feuilleton, M. le ministre de la Cybersécurité et du Numérique propose l'adoption du projet de loi n° 82, Loi concernant l'identité numérique nationale et
+ modifiant d'autres dispositions. 
+
+Y a-t-il des interventions? M. le député de La Peltrie.
+ 
+
+M. Éric Caire
+
+M. Caire : 
+Oui. Merci, M. le
+ Président. Vous comprendrez que c'est un privilège de faire l'adoption finale
+ du projet de loi n° 82 compte tenu que j'en ai été le porteur initial, M.
+ le Président, un projet de loi extrêmement important. Vous allez me dire :
+ Ils le sont tous. C'est vrai, mais celui-là, pour moi, revêt quelque chose de
+ particulier en ce que... Bon, on le sait, au gouvernement du Québec, comme dans
+ toute la société, on est en transformation numérique, on crée un univers
+ numérique. Mais un univers numérique, M. le Président, n'a pas de sens s'il n'y
+ a pas de citoyen, s'il n'y a pas de personne numérique pour utiliser cet
+ univers-là, et il n'y a pas de citoyen numérique sans une identité numérique,
+ M. le Président. Et c'est ce que le gouvernement du Québec voulait faire et
+ c'est ce que l'Assemblée nationale va faire maintenant en adoptant la loi
+ n° 82. 
+
+Pourquoi une identité numérique, M. le
+ Président? Si on pense, par exemple, au système d'authentification
+ gouvernementale qui permet aux citoyens de s'identifier, s'authentifier aux
+ prestations électroniques de services, pas besoin d'une identité numérique pour
+ faire ça. La preuve, on le fait déjà. Par contre, M. le Président, quand on
+ pense à un univers numérique où le citoyen va consommer différents services,
+ par exemple, si vous avez besoin d'une preuve d'identité, d'une preuve d'âge,
+ d'une preuve de résidence dans un univers numérique, l'univers numérique
+ s'entend d'un univers qui nous permet, dans l'ensemble des services numériques,
+ de donner le service. Le point de départ, c'est l'identité numérique, M. le
+ Président, bien évidemment.
+
+Alors, pensez aux possibilités. Vous allez à
+ l'hôpital avec votre identité... avec votre identité numérique, vous vous
+ inscrivez, et là part une chaîne de services numériques, M. le Président, qui
+ va améliorer et évidemment rendre plus efficaces nos services. Mais la base de
+ ça, c'est une identité numérique. Et là je pourrais vous faire la nomenclature de tous les services qui pourraient répondre à ces
+ caractéristiques-là, mais, M. le Président, je pense que vous avez compris
+ le principe.
+
+Avec
+ l'identité numérique vient aussi le registre d'identité numérique nationale.
+ Pourquoi on fait ça, M. le Président? Puis
+ là je vais prendre un exemple que beaucoup ont vécu. Vous recevez une... Vous
+ auriez dû recevoir une correspondance d'un service public que vous
+ n'avez pas reçue. Pourquoi? Parce que l'organisme en question a une adresse à
+ laquelle vous n'habitez plus depuis des années. Pourquoi? Parce que chaque
+ organisme, et là on pense aux ministères, mais on pense aux 305 organismes
+ publics, va collecter des renseignements personnels sur vous, M. le Président.
+
+Donc, ils ont vos renseignements, nom, prénom,
+ adresse, numéro de téléphone, etc., mais, si vous n'utilisez pas ces services-là de cet organisme-là
+ périodiquement, bien évidemment, les informations sont désynchronisées.
+ Évidemment, les informations de certains organismes sont périmées.
+ Alors, le registre vient, entre autres, répondre à cette réalité, à ce besoin
+ des organismes d'avoir une information qui est d'actualité, qui est
+ contemporaine. Et donc, ce faisant, chaque organisme
+ devra consulter le registre d'identité nationale pour avoir accès à vos
+ renseignements d'identité, pour vous donner des services, et, ce
+ faisant, on s'assure d'avoir toujours le bon renseignement sur la bonne
+ personne.
+
+On va plus loin avec l'identité numérique, M. le
+ Président, éventuellement, et c'est prévu dans le Service québécois d'identité
+ numérique, le changement d'adresse. On sait à quel point ça peut être un chemin
+ de croix, un simple changement d'adresse, M. le Président, un simple changement
+ d'adresse. Bien là, vous avez, bon, le service, avec Services Québec, qui vous
+ permet d'avoir accès à sept ministères, mais qu'en est-il des autres? Qu'en
+ est-il des 305 organismes publics? On
+ oublie ça. Résultat des courses, ce que je vous disais précédemment, on est
+ désynchronisés. Vous avez des organismes qui ne sont pas à jour. Avec le
+ registre d'identité numérique et la source officielle de données qui est prévue
+ par la loi, le citoyen s'identifie, s'authentifie, fait son changement
+ d'adresse, et, comme c'est la source d'information unique pour l'ensemble des
+ ministères et organismes, ce changement d'adresse là, en un seul geste, se fait
+ pour tout le monde. Or, M. le Président, ce ne sont que quelques exemples de
+ l'avantage de l'identité numérique nationale prévue dans la loi n° 82. 
+
+Un
+ autre élément très important, le ministère de la Cybersécurité et du Numérique,
+ et ça, peu le savent, a un mandat en
+ cybersécurité qui couvre le territoire québécois. Alors, ses responsabilités ne
+ couvrent pas le seul gouvernement mais bien le territoire du Québec au
+ complet. Avec le projet de loi, on amène une notion qui est extrêmement importante, parce qu'on ne peut pas agir ou réagir
+ si on n'a pas connaissance des faits. Et, avec le projet de loi, il y aura
+ maintenant une déclaration obligatoire des incidents en cybersécurité,
+ évidemment, selon certaines caractéristiques, certains critères, bien sûr, pas
+ tous les incidents, mais très certainement ceux qui ont un impact et une
+ incidence sur les services, sur les systèmes, sur les citoyens, sur la vie
+ privée des citoyens, sur leurs renseignements personnels.
+
+• (17 h 10) •
+
+Et ça, c'est vrai, M.
+ le Président, pour tous les organismes publics et ce sera vrai aussi pour
+ certaines des entreprises privées qui sont des entreprises stratégiques. Et ça,
+ ça va permettre au gouvernement du Québec, au ministère
+ de la Cybersécurité, de mieux coordonner et d'assurer une meilleure cohésion
+ sur la façon de se protéger, de protéger nos entreprises, de protéger nos systèmes, de protéger nos
+ renseignements personnels et d'être plus proactifs dans l'espace public
+ québécois, donc, M. le Président, et ça, c'est quelque chose qui était demandé
+ et qui est attendu, M. le Président, je peux vous le dire.
+
+Autre
+ élément très important, M. le Président, au niveau des télécommunications, le
+ ministère de la Cybersécurité assumera maintenant... et du Numérique
+ assumera maintenant ce rôle de coordonnateur. Puis je vous donne un exemple,
+ deux organismes publics, dans le Nord, qui ont des besoins en connectivité et
+ qui, sans se parler, vont contracter deux contrats différents avec la même
+ entreprise, avec la même entreprise, deux contrats différents, donc, le contribuable québécois, évidemment, qui en fait
+ les frais, on le devine. Pourquoi? Parce qu'il n'y a pas cette cohésion,
+ il n'y a pas cette obligation, pour les organismes, d'avoir cette approbation
+ pour leurs projets. Ils ont la liberté d'aller de l'avant. Maintenant, ils devront aller chercher cette approbation. Et
+ ces projets-là seront des projets... ce qu'on appelle des projets
+ qualifiés, au sens de la LGGRI, et donc devront aller chercher les
+ autorisations.
+
+Je vous donne un
+ exemple, mais il y en a beaucoup d'autres, évidemment, qui va faire en sorte
+ qu'on va avoir une meilleure cohésion, on va
+ être mieux coordonnés dans nos projets de déploiement de nos systèmes de
+ télécommunications. Et on pourra aussi rendre ces services-là
+ obligatoires pour les organismes publics. On le sait, le gouvernement du Québec
+ est dans une transition où on va vers le réseau gouvernemental des
+ télécommunications. On a modernisé les infrastructures.
+ Maintenant, il faut s'assurer que ces services-là sont utilisés par le plus
+ grand nombre. Bien évidemment, on
+ s'assure que l'infrastructure, elle est stable, elle est fonctionnelle, elle
+ est pérenne, et ensuite il y aura une possibilité, pour le ministre de
+ la Cybersécurité et du Numérique, de le rendre obligatoire.
+
+M. le Président,
+ parce que je ne veux pas étirer ça indûment, je pourrais vous en parler encore
+ un certain temps, mais, bon, je vais conclure en vous parlant du courtier,
+ courtier en infonuagique qui a été amené avec la loi n° 95 au ministère de
+ la Cybersécurité. L'idée était, effectivement, de permettre à des entreprises
+ de répondre à un appel d'intérêt public, de se qualifier en fonction de
+ certains critères et, une fois d'être... une fois qualifiés, d'être inscrits au
+ catalogue des entreprises pouvant donner des
+ services en infonuagique. Ça simplifiait de beaucoup la tâche des ministères et
+ organismes, qui, suite à ça, pouvaient choisir avec quel fournisseur ils
+ voulaient contracter leurs services en infonuagique.
+ Ce système-là, je pense, a fait ses preuves, M. le Président. Je pense que le
+ service du courtier en infonuagique a été apprécié. En fait, on s'est
+ même aussi fait dire qu'au niveau des entreprises on voulait qu'il y ait encore
+ plus de services et plus d'entreprises qui puissent suivre ce même modèle. 
+
+On élargit, donc,
+ avec la loi n° 82, la responsabilité du courtier en infonuagique, qui
+ devient le courtier en infonuagique et en services technologiques spécialisés,
+ donc, certains services, notamment cybersécurité, nos systèmes patrimoniaux, les PGI, qui seront maintenant
+ potentiellement... pour lesquels le courtier pourra, effectivement, offrir des services
+ à l'ensemble des ministères et organismes du gouvernement du Québec pour
+ assurer, je dirais, une plus grande agilité, s'assurer aussi que ces
+ entreprises-là vont se qualifier. Et se qualifier veut dire répondre à
+ certaines normes, à certains standards, donc, qu'on peut standardiser les
+ produits qui sont utilisés, ce qui, au gouvernement du Québec, je pense, est une bonne chose, et aussi une plus
+ grande agilité pour le remplacement de nos systèmes patrimoniaux. M. le Président,
+ c'est un défi de tous les organismes publics, de tous les gouvernements. Les
+ systèmes, avec le temps, deviennent désuets. Il faut les remplacer. C'est des
+ exercices qui ne sont pas simples. Et donc d'avoir accès à ce catalogue-là de
+ produits via le courtier va très certainement aider nos ministères et
+ organismes à être plus agiles et à avoir une plus grande facilité à moderniser
+ nos systèmes patrimoniaux.
+
+Alors,
+ je pourrais continuer encore, M. le Président, mais j'avais dit que je ferais à
+ peu près une dizaine de minutes, donc
+ je vais respecter... bon, 10 minutes US, mettons. Je
+ vais respecter mon engagement. Mais vous comprendrez, M. le Président, que j'espère que tous les collègues
+ appuieront le projet de loi n° 82, parce qu'il amène plusieurs
+ modernisations, plusieurs opportunités, pour le ministère de la
+ Cybersécurité et du Numérique, de mieux jouer son rôle au sein de la
+ transformation numérique québécoise. Merci, M. le Président.
+
+Le Vice-Président
+ (M. Benjamin) :
+ Merci, M. le député de La Peltrie. Je
+ reconnais Mme la leader de l'opposition officielle et députée de Mont-Royal—Outremont.
+
+Mme Michelle
+ Setlakwe
+
+Mme Setlakwe :
+
+ Merci, M. le Président. À mon tour de prendre la parole au stade de l'adoption
+ finale du projet de loi n° 82, Loi
+ concernant l'identité numérique nationale et modifiant d'autres dispositions, à titre de porte-parole en cybersécurité
+ et numérique. 
+
+Écoutez, ça fait longtemps qu'on parle de ce

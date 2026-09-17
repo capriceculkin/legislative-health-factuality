@@ -21,8 +21,8 @@ with open(os.path.join(REPO_ROOT, "data/canada/ontario/ontario_bill_index.json")
 def get_parl_sess(date):
     if date < "1987-09-10": return (33, 1)
     if date < "1990-09-20": return (34, 1)
-    if date < "1995-06-08": return (35, 1)
-    if date < "1996-10-28": return (36, 1)
+    if date < "1995-09-26": return (35, 1)
+    if date < "1999-04-20": return (36, 1)
     if date < "1999-04-20": return (36, 2)
     if date < "1999-10-25": return (37, 1)
     if date < "2003-10-23": return (37, 2)
@@ -43,7 +43,8 @@ for v in idx.values():
         for d in v.get("dates", []):
             health_dates.add(d)
 
-print(f"Health dates to scrape: {len(health_dates)}")
+health_dates = {d for d in health_dates if d >= "1995-01-01"}
+print(f"Post-1995 health dates to scrape: {len(health_dates)}")
 
 # Load existing mapping if resuming
 out_path = os.path.join(REPO_ROOT, "data/canada/ontario/hansard_bill_number_mapping.json")

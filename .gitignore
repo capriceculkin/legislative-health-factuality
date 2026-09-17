@@ -26,3 +26,15 @@ data/canada/quebec_speaker_turns.json
 data/canada/ontario_speaker_turns.json
 data/dbpedia_pipeline/
 data/us/house_member_votes.csv
+data/canada/ontario/hansard_api_bill_segments.json
+data/canada/ontario/sentences_bill_specific_api.json
+data/dbpedia_pipeline/ontario/sentences.json
+data/dbpedia_pipeline/ontario/triples.json.checkpoint
+data/dbpedia_pipeline/quebec/predications.json
+data/dbpedia_pipeline/us/predications.json
+data/us/hein-bound.zip
+data/us/hein-daily.zip
+data/us/hein-daily-speeches.zip
+data/us/conspeak.zip
+data/us/hein-bound/
+data/us/hein-daily/

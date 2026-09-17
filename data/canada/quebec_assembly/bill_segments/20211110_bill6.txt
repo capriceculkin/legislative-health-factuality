@@ -1,0 +1,538 @@
+Transformation numérique gouvernementale propose l'adoption du principe du projet de loi n° 6,
+ Loi édictant la Loi sur le
+ ministère de la Cybersécurité et du Numérique et modifiant d'autres
+ dispositions. M. le ministre,
+ je vous cède la parole.
+
+M. Éric
+ Caire
+
+M.
+
+Caire
+ 
+:
+
+ Merci beaucoup, Mme la Présidente. D'abord, d'entrée de jeu, Mme la Présidente,
+ je dois aviser cette Assemblée que le
+ lieutenant-gouverneur a pris connaissance du projet et en recommande l'étude à
+ l'Assemblée, 
+compte tenu du fait que le projet de
+ loi prévoit un fonds destiné à la transformation numérique, donc a des
+ implications budgétaires.
+
+Ceci étant dit, Mme la
+ Présidente, aujourd'hui,
+ je vous dirais que c'est la dernière étape d'un plan ou d'un processus qu'on a amorcé il y a trois ans, quand le premier ministre m'a fait l'honneur de me demander de m'occuper de la transformation
+ numérique gouvernementale.
+
+J'ai eu
+ l'occasion de m'exprimer là-dessus à de nombreuses reprises, le pourquoi de
+ cette transformation numérique, sur l'amélioration de la qualité des services, sur l'accessibilité
+ des services, sur la disponibilité des services, et le premier ministre
+ en a rajouté, évidemment, au discours inaugural, en fait, l'objectif étant
+ d'avoir un gouvernement disponible 24 heures sur 24, sept jours sur sept au bout du pouce. Ça
+ se dit bien, mais l'articulation de
+ ça, Mme la Présidente, est assez complexe, je dois dire. Et avec cette transformation numérique, et on le voit
+ régulièrement dans les médias, avec cette transformation numérique vient une obligation, une obligation de
+ protection des systèmes d'information, une obligation de cybersécurité. Et donc assez rapidement on en est arrivés, avec
+ le premier ministre, évidemment, à la conclusion que cette mission-là
+ devait relever d'un ministère.
+
+Pourquoi?
+ D'abord parce qu'aujourd'hui, Mme la Présidente... Et là, vous le savez, je
+ viens du milieu de l'informatique, et
+ jadis... je ne vous dirai pas quand, parce que ça trahirait mon âge, et je vais
+ essayer d'éviter ça, mais jadis, quand on concevait des systèmes informatiques, au fond, qu'est-ce
+ qu'on faisait? On prenait un processus, on l'analysait puis on regardait ce
+ que l'ordinateur était capable de faire en
+ lieu et place de la personne. Donc, on parlait plus d'un soutien à une tâche
+ que d'une vraie transformation
+ numérique. Aujourd'hui, Mme la Présidente, on est ailleurs. Aujourd'hui, on
+ parle d'informatique quantique, on
+ parle d'intelligence artificielle, on parle de machines qui peuvent apprendre par
+ elles-mêmes, de leurs propres erreurs.
+ Évidemment, avec la donnée, la mobilité de la donnée, on fait le portrait de
+ tout ça et on se dit : Les possibilités sont infinies, les possibilités sont infinies. La
+ capacité du numérique... Et je donne toujours cet exemple, Mme la Présidente,
+ pour qu'on comprenne bien à quel
+ point ce que la technologie nous permet de faire, et, ce qu'on fait, on est
+ très, très, très en retard, très,
+ très, très en retard. Récemment, les gens ont pu le voir, quelqu'un aux
+ États-Unis a utilisé son «joystick» pour manoeuvrer un robot sur Mars, pas dans la rue, là, sur Mars, faire voler
+ un hélicoptère, ou ce qui y ressemble, sur Mars, à distance, à des centaines de milliers
+ de kilomètres, à prendre des prélèvements et à envoyer les informations sur
+ terre. On fait ça. On a un
+ personnage, Elon Musk, pour ne pas le nommer, qui envoie des fusées dans
+ l'espace pour mettre une Tesla en
+ orbite. On est rendus là, là. Alors qu'on... bien, en tout cas, moi, jeune, je me souviens, Mme
+ la Présidente, malheureusement, je dois vous dire, je me
+ souviens de ce premier voyage, de cet alunissement qui a été un événement
+ planétaire, quelqu'un avait
+ marché sur la lune, puis c'était, mon Dieu, la conquête de l'espace, aujourd'hui
+ c'est un fait divers, à potins.
+
+• (11 h 20) •
+
+Alors, Mme la Présidente, la technologie est rendue extrêmement loin. On va parler
+ d'applications qui vont permettre de faire de la détection et du diagnostic. On va
+ parler de technologies qui sont capables de faire de l'analyse. On va parler
+ de technologies qui peuvent faire à peu près tout ce qu'on peut
+ concevoir et qui nous apparaissait être de la science-fiction, qui... aujourd'hui,
+ c'est une réalité.
+
+ Pourquoi
+ je vous dis ça, Mme la Présidente? Parce
+ que ça, ça vient avec le savoir, la connaissance, la compétence, l'expertise.
+ Les informaticiens que nous étions, il y a quelques décennies, sont
+ rendus aujourd'hui des experts qui ont atteint un niveau de
+ compréhension, un niveau de compétence qui va beaucoup plus loin.
+
+Cette
+ expertise-là, évidemment, elle n'est pas si abondante et elle devient de plus en plus pointue, de plus en plus précise. Et donc on ne peut plus penser qu'une organisation ou que... non, de nombreuses organisations vont être en mesure d'avoir un département où toute cette expertise-là de pointe va
+ s'y trouver. Ça ne se peut pas. Alors, dans le temps, un technicien réseau, un programmeur-analyste,
+ oui. Mais, aujourd'hui, des gens qui font du chiffrement, de l'encryption,
+ de l'intelligence artificielle, de
+ l'Internet des objets, non. Ce n'est pas vrai que les 304 organismes du
+ gouvernement du Québec vont pouvoir
+ maintenir des cellules d'expertise pour chacune de leurs missions. Ça ne se
+ peut pas, ça ne se peut pas.
+
+Ce n'est pas vrai qu'au niveau de la
+ cybersécurité... Parce qu'avec ça viennent des enjeux de cybersécurité. Aujourd'hui, on parle de l'Internet des objets,
+ mais il faut comprendre que chacun de ces objets-là devient une faille de
+ sécurité. Un thermostat intelligent, par
+ exemple, une serrure intelligente ou n'importe quoi qui peut se connecter sur
+ un réseau devient une faille de sécurité, qui peut permettre des attaques, dont
+ les effets sont extrêmement néfastes
+ pour notre vie privée, pour notre
+ sécurité, pour la protection de nos renseignements
+ personnels. Donc, là aussi, on a
+ développé des expertises de très, très, très haut niveau, au point où, Mme
+ la Présidente, je pense que nous
+ sommes rendus à l'étape où il faut confier ces mandats-là à une organisation
+ dont c'est l'objectif, dont c'est la raison de se lever le matin.
+
+Je le dis souvent, le ministre de la Santé,
+ quand il rentre au travail, sa préoccupation, c'est la santé, ce n'est pas l'informatique. L'informatique, ce sont des
+ outils dont il a besoin, mais ce n'est pas pour ça que son ministère
+ existe. Même chose pour l'Éducation, même chose pour le Transport, même chose
+ pour tous les autres ministères. Alors, c'est pour ça qu'on a besoin de ce vaisseau amiral qui va
+ rassembler cette expertise-là, qui va continuer à la faire évoluer. Et ça, ça
+ ne veut pas dire qu'on va dépouiller les ministères et organismes de
+ leurs capacités opérationnelles. Non, il faut que les ministères
+ et organismes soient capables d'élaborer les programmes qui vont répondre à
+ leurs besoins. Mais ça veut dire
+ qu'on va avoir besoin de rassembler, de regrouper ce haut niveau d'expertise là
+ pour le mettre au service de la communauté. Ça veut dire aussi, Mme la Présidente, que ça prend un ministère qui est
+ capable de remplir les mandats qui sont communs, chose qu'on ne faisait pas. Alors, on demandait toujours à un ministère :
+ Bien, toi, fais-le, mais fais-le pour tous les autres. Ça a plus ou
+ moins marché. Alors, aujourd'hui, il y aura un ministère, si l'Assemblée
+ nationale adopte le projet de loi, il y aura
+ un ministère dont ce sera le mandat de s'assurer que les infrastructures
+ communes seront développées et mises à la disposition de l'ensemble de
+ nos organismes.
+
+Donc, Mme la
+ Présidente, je pense que cette décision-là du premier ministre a été saluée...
+ en fait, pas je le pense, je constate
+ qu'elle a été saluée par l'ensemble de l'écosystème. Je pense que tout le monde
+ reconnaît que, pour une organisation 
+de l'ampleur... Avec les missions névralgiques
+ qu'assume le gouvernement du Québec, d'avoir un vaisseau amiral, une entité qui aura ce mandat-là très spécifique, qui
+ aura ce mandat-là de regrouper les expertises, de travailler à l'ensemble des
+ organisations communes, des infrastructures
+ communes et de s'assurer du bon fonctionnement de la transformation numérique
+ des organismes de l'État et des réseaux, je pense qu'effectivement nous en
+ sommes rendus là.
+
+Et donc, Mme la
+ Présidente, j'espère que l'Assemblée nationale adoptera le projet de loi n° 6 et permettra au gouvernement
+ du Québec d'entrer de plain-pied au XXIe siècle, d'assurer une
+ transformation numérique au bénéfice de tous nos citoyens et de s'assurer aussi d'avoir une conscience de
+ cybersécurité d'un autre niveau, parce que l'importance des renseignements personnels que nos concitoyens
+ nous confient a pris aussi énormément de valeur, et donc fait l'objet de
+ la convoitise d'organisations malveillantes,
+ mal intentionnées, d'États délinquants, on l'a mentionné, et, là aussi, il faut
+ développer une expertise qui va nous amener
+ à protéger ces renseignements-là de la façon dont ces renseignements-là le méritent,
+ à la hauteur de leur valeur. Et, Mme
+ la Présidente, encore là, on a
+ besoin, je pense, d'une organisation centrale, d'une entité centrale qui aura l'autorité
+ d'agir sur l'ensemble des organismes gouvernementaux et qui aura la capacité de le faire.
+
+Donc, Mme la
+ Présidente, j'invite, évidemment, tous les collègues à voter en faveur du projet
+ de loi n° 6.
+
+La Vice-Présidente
+ (Mme Soucy) :
+ Je vous remercie, M. le ministre.
+
+Avant
+ de poursuivre avec la prochaine intervenante, je vous informe qu'un débat de fin de séance se
+ tiendra demain, le jeudi 11 novembre 2021, sur une question
+ adressée par Mme la députée de Saint-Laurent au ministre de l'Éducation concernant les tests de plomb réalisés dans les
+ points d'eau des écoles. Alors, voilà pour l'annonce.
+
+Maintenant, je suis
+ prête à vous céder la parole, Mme la députée de Saint-Laurent.
+
+Mme Marwah
+ Rizqy
+
+Mme Rizqy :
+ Merci
+ beaucoup, Mme la Présidente. Vous savez, j'ai déjà eu l'occasion de travailler avec le ministre délégué
+ à la Transformation numérique. Peut-être
+ il sera le nouveau ministre de ce nouveau ministère. En tout cas, je pense qu'il le
+ souhaite, et c'est de connaissance presque publique.
+
+Effectivement,
+ j'aimerais, d'entrée de jeu, dire que je partage avec lui plusieurs
+ préoccupations. Lorsqu'on dit qu'on veut
+ protéger les données, et dire : C'est une nouvelle richesse, il a
+ totalement raison. J'irais même plus loin : Nos données, c'est de l'or en banque, c'est le pétrole du
+ XXIe siècle, et tout le monde se bat pour avoir des renseignements, tout
+ le monde. Quand je dis «tout le monde», je parle même d'États étrangers qui
+ veulent savoir ce qui se passe chez nous, ici, au Québec, qui veulent aussi
+ avoir accès à nos informations les plus sensibles, comme par exemple nos
+ dossiers médicaux.
+
+• (11 h 30) •
+
+Dernièrement,
+ je parlais avec une de mes collègues qui a vraiment vécu un drame, une
+ cyberattaque. Ce sentiment de violation est tellement important. Lorsque vous
+ êtes à la tête d'une entreprise, et que vous avez des employés, et que
+ quelqu'un qui n'est même résident du Québec, qui est très, très loin, par
+ exemple en Russie, ou en Chine, ou en Afrique, s'attaque à vous, à votre entreprise, et vous dit : J'ai pris le
+ contrôle de votre PME — et c'est vrai qu'il a pris le contrôle de votre PME — et que, si vous voulez retrouver vos
+ renseignements, vos données, voici la somme à débourser, 2,6 millions, 3 millions de dollars, 5 millions de
+ dollars... Et ce n'est pas anecdotique, ce que je vous parle, c'est réel. Ça se
+ passe ici, chez nous. Et je ne vous parle pas d'entreprises, là,
+ multimillionnaires, je vous parle de petites entreprises, aussi des moyennes, aussi des grandes, mais l'impact, pour
+ les petites entreprises, est dévastateur. Évidemment, il y en a qui vont dire : Ah! mais il y a des assurances. Les
+ assurances ne couvrent pas les montants d'une aussi grande réclamation, de
+ 3 millions, 10 millions de dollars. 
+
+Et,
+ pour cette entreprise et ces autres entreprises, le stress est monumental, se
+ retrouver littéralement devant le néant, de se dire : O.K., là je fais
+ face à une rançon, rançon logicielle, devrais-je dire. Et vous savez quoi, Mme
+ la Présidente? Ces individus, ces
+ voleurs s'en foutent, du type d'entreprise. Que vous soyez une érablière, un
+ commerce de chasse et pêche ou que vous soyez, même, une école qui offre...
+ en fait, je devrais dire, un programme de tutorat privé, tout le monde,
+ aujourd'hui, font face à la même menace.
+
+Alors,
+ oui, effectivement, il va falloir que le gouvernement québécois, l'État
+ québécois, nous prenons des grandes mesures,
+ parce qu'on ne peut pas simplement dire à nos PME : Engagez-vous des
+ informaticiens. Non, non, il va falloir que nous-mêmes, on augmente notre propre capacité à lutter activement contre
+ ces cyberattaques, d'en faire même une priorité nationale, de se dire, là, que chez nous, au Québec, on va protéger
+ notre monde, on va protéger nos PME, on va vraiment s'assurer, là, que nous avons les véritables
+ outils et l'expertise. Ah! vous comprendrez qu'effectivement, un ministère qui
+ va chapeauter ça, nous, effectivement, on comprend ce besoin, parce que, les
+ cyberattaques, nos PME, là, elles en souffrent énormément. Pas juste nos
+ PME, je vous dirai que l'État québécois aussi en souffre. On a vu que, même
+ dans le réseau de l'éducation, il y a des
+ enseignants que, malheureusement, leur dossier a été volé. C'est fou, là. Puis
+ ils l'ont appris dans les médias,
+ beaucoup trop tard, même. On voit que cet enjeu-là prend beaucoup d'ampleur et
+ j'espère qu'on va être capables de tous travailler ensemble pour
+ trouver, là, les vraies solutions. 
+
+Alors,
+ vous me voyez venir, il va falloir qu'on forme du monde, il va falloir que
+ l'éducation soit au rendez-vous, que l'innovation soit au rendez-vous,
+ mais que le monde privé et le monde public se parlent. On ne pourra pas
+ travailler là-dedans en vase clos, il va
+ falloir que nos meilleurs, meilleurs experts, là, qu'on les trouve et que tout
+ le monde fasse son effort de guerre,
+ parce que, oui, nous en sommes en guerre contre les cyberattaques, et on ne
+ pourra pas, ici, aller avec des demi-mesures, parce que ça va encore
+ prendre beaucoup, beaucoup d'ampleur, ces cyberattaques.
+
+Alors,
+ là-dessus, j'espère qu'effectivement
+ on va être capable très prochainement, une fois que le ministère
+ sera créé, d'arriver avec un vrai plan d'intervention.
+
+Tantôt, le ministre,
+ dans son allocution de départ, il dit : Je suis content, le premier ministre m'a donné ce mandat-là, depuis
+ trois ans, qui s'inscrit dans une grande vision. C'est ce qu'il a dit.
+ Permettez-moi de revenir sur cette grande vision, parce que je vous ai
+ dit sur ce que je suis d'accord; or, maintenant, permettez-moi de parler de mes
+ désaccords. 
+
+Je
+ vous l'ai dit, l'État québécois, le gouvernement du Québec, et les dépositaires, c'est la plus grande banque
+ de renseignements personnels sur les citoyens québécois
+ et les résidents québécois. La plus grande banque, c'est le gouvernement du Québec. Mais pourquoi que
+ cette banque veut donner les clés de la maison au pays des Américains?
+ Pourquoi? Je ne comprends pas, moi. Pourquoi qu'on donnerait, là, à un gouvernement américain, là,
+ les clés de la maison? Puis là je veux m'expliquer, pourquoi je dis ça.
+
+Retournons
+ en février 2019. Annonce en grande pompe, à l'époque, le ministre
+ du Conseil du trésor, qui est l'actuel ministre de la Santé,
+ accompagnait le présent ministre
+ délégué à la Transformation numérique
+ pour faire une grosse annonce :
+ Nous allons privatiser plus de 80 % des données des Québécois... vont désormais être entreposées via des entreprises privées. Et j'ajoute : étrangères, dans la
+ grande majorité du cas. Et, à chaque fois, je me suis posé la question :
+ Mais de quelles données? Ils... Ah!
+ mais ce n'est pas des données importantes, ce n'est pas des données sensibles.
+ Et là, O.K., on a creusé.
+
+Pour
+ vous, le gouvernement de la CAQ, c'est quoi, des données qui ne sont
+ pas importantes, qui ne sont pas
+ sensibles? Est-ce que c'est mon
+ dossier de la RAMQ? Est-ce que c'est mon permis de conduire, mon dossier avec
+ la SAAQ ou est-ce que c'est mon
+ dossier de la SAQ? C'est lequel, là? Est-ce que c'est mon dossier de Revenu
+ Québec qui n'est pas important? Est-ce que c'est mon dossier au
+ ministère de l'Éducation qui n'est pas important? C'est lequel? Est-ce que
+ c'est celui de la Régie des rentes du Québec
+ qui n'est pas important? C'est lequel? Je n'ai jamais eu de réponse.
+ L'opposition officielle s'est levée là-dessus, là, un paquet de fois.
+ J'ai même fait un tableau facile à répondre. J'ai marqué tous les dossiers
+ pertinents puis je me suis dit qu'ils pouvaient même cocher, dans mon tableau,
+ qu'est-ce qu'ils voulaient transmettre.
+
+En
+ 2021, la vérité, c'est que toutes les données sont importantes. Pourquoi? Parce
+ qu'on fait du croisement de données. Et
+ là ce qu'on me répond : Oui, mais c'est des données, par exemple, qui vont
+ être... qui ne sont pas nominatives. Merci, Mme la Présidente, pour me
+ glisser la réponse.
+
+En
+ fait, c'est qu'on est capable de recouper l'information, aujourd'hui. Puis,
+ vous savez, là, c'est des gens, là, c'est des génies de l'informatique. Ils ne
+ sont pas comme moi. Moi, là, moi, je suis limitée. J'utilise mon ordinateur, mon téléphone intelligent et je dis même, à la blague : Des
+ fois, il est même plus intelligent que moi. C'est ça, ma limite, alors qu'eux,
+ là, c'est... ces gens, là, qui sont
+ des génies de l'informatique, ils font des algorithmes, superbons pour
+ décrypter, crypter. Eux autres, là, bien, ils sont capables de tout
+ vérifier, faire du croisement de données, et arriver à leurs fins. 
+
+Alors,
+ moi, là-dessus, je sais que, quand le ministre
+ de l'Éducation me dit qu'il a une
+ grande vision à long terme, bien, sa
+ vision à long terme, c'est la suivante. Oui, aujourd'hui, il va créer un ministère.
+ Ce ministère-là va chapeauter quoi? Bien, des données des Québécois qui ne sont plus
+ sur des serveurs administrés par le gouvernement
+ du Québec. Donc, la grande
+ banque du Québec en matière de renseignements personnels vient, aujourd'hui, de
+ dire : Voici nos voûtes, elles sont
+ ouvertes à vous, chers étrangers. Et ça, je trouve ça inacceptable, parce que,
+ lorsqu'on est un gouvernement responsable, on s'occupe de nos affaires. Pensez-vous sincèrement que les États-Unis,
+ là, les Américains nous confieraient, à nous, la gestion de leurs données? Aux Allemands? Aux Chinois? Même Donald Trump
+ n'aurait jamais fait ça, là, pour vrai, là, il n'aurait jamais dit :
+ Bien oui, on va entreposer des renseignements des Québécois sur des serveurs
+ étrangers. Voyons, même lui il comprend ça. On ne fait pas ça. Pensez-vous que
+ le gouvernement chinois aurait privatisé l'entreposage des données de leurs citoyens ailleurs que chez eux? L'Allemagne?
+ Voyons, personne ne fait ça. Pourquoi que le Québec fait ça? Pourquoi que
+ l'État québécois fait ça? Ah, la réponse était toujours dans cette conférence
+ de presse de février 2019 : pour économiser de l'argent.
+ Économiser de l'argent sur nos renseignements? J'ai un profond malaise. Qui est
+ capable, aujourd'hui, de mettre une valeur sur nos renseignements personnels? Qui? Personne, pas même moi, parce que c'est une
+ valeur qui est inestimable, et c'est pour ça que ce n'est pas vendable. Ça se
+ protège bec et ongles.
+
+Alors, là-dessus, j'espère qu'on pourra
+ éventuellement faire reculer le gouvernement, tu sais, comme, là, je vais avoir un vis-à-vis, un ministre, puis peut-être
+ qu'il va dire : Bon, finalement, on l'a essayé, ce n'est pas vraiment la
+ meilleure idée du siècle, finalement, on va s'assurer d'avoir une
+ expertise interne. Parce que le ministre ne peut pas plaider des deux côtés de la bouche. Il nous disait à quel
+ point c'était important d'avoir de l'expertise, au gouvernement. Je suis d'accord avec lui.
+ Alors, pourquoi qu'il veut privatiser la gestion de nos données? L'expertise,
+ ça se travaille, ça se nourrit. Or, il faut qu'on dise aux gens, là, de la fonction publique : On croit en
+ vous. On croit en votre expertise. Gens du Québec, on croit en
+ vous autres.
+
+Maintenant,
+ la prochaine étape, parce que je vous ai dit que, le grand plan de match, à la
+ fin, le ministre nous a aussi parlé de l'identité
+ numérique. Oh! C'est quoi, ça? Ça mange quoi en hiver, l'identité numérique?
+
+Alors,
+ tout le monde est habitué, lorsqu'on ouvre, par exemple, notre ordinateur, on met notre mot de passe. Le gouvernement voudrait créer une identité numérique qui aurait aussi une autre
+ fonction dans le mot de passe qui, par
+ exemple, pourrait utiliser mon empreinte oculaire. Savez-vous il y a combien
+ d'autres personnes qui ont la même empreinte oculaire que
+ moi? Non, hein? Aïe, c'est rare en titi, là. Pour que ça arrive, là, c'est
+ pratiquement une erreur statistique. Il n'y a presque personne qui aurait la
+ même empreinte oculaire que moi, presque personne, excessivement rare.
+
+• (11 h 40) •
+
+Alors,
+ imaginez que le gouvernement utilise ça ou, par exemple, mon empreinte
+ vocale, ou mon empreinte digitale, donc
+ des données biométriques, et imaginez, ouf! on se fait voler, cyberattaque.
+ Comment je vais faire pour remplacer mon empreinte oculaire? Est-ce que je vais être capable de le faire? C'est
+ impossible. Vous me direz : Bien, Marwah,
+ ton empreinte vocale, va te prendre un coach de voix. Je pourrais faire
+ ça, par contre, peut-être. Mon empreinte digitale, c'est quoi? Qu'est-ce que je
+ vais faire?
+
+C'est
+ tellement sensible que moi, en fait, je trouve ça particulier que le
+ gouvernement veut avancer à pas de géant là-dessus, alors qu'on n'a même pas fait les débats qui s'imposent, de
+ société. Et, quand je dis «des débats qui s'imposent, 
+de
+ société», en tout respect, chers collègues, ça me dépasse, ça vous dépasse, ça
+ nous dépasse, c'est bien au-delà des 125 députés. Ça, c'est un débat de société
+ qui se fait avec le peuple québécois, de façon sereine.
+
+Pourquoi qu'on le fait avec le peuple québécois,
+ de façon sereine? Parce que, dans un premier temps, il faut vulgariser. Dans un deuxième temps, lorsque les
+ gens comprennent les tenants et aboutissants ainsi que les risques associés
+ à avoir une identité qui utilise une
+ composante biométrique, les risques associés à cela, les gens vont pouvoir
+ prendre une décision libre, mais surtout éclairée. Et c'est là-dessus que je
+ nous amène tous à militer. Faisons confiance à l'intelligence des
+ Québécois.
+
+Allons
+ discuter avec eux sur cet enjeu, parce que le prochain élément de
+ l'identification biométrique fait référence à la reconnaissance faciale, le visage. Vous vous rappelez très bien
+ qu'il y a eu un article dans 
+La
+ 
+Presse
+, où, Mme la Présidente,
+ j'ai été associée, à mon grand étonnement et
+ à la déception de plusieurs caquistes, au caucus caquiste. Oui, oui, oui. Dans cet
+ article, il y avait les députés ainsi que les employés qui allaient
+ au caucus des caquistes. Alors, ils ont utilisé l'appareil pour voir qui rentrait, donc, est-ce qu'on est capables d'identifier. Alors, par exemple, ils ont été
+ capables d'identifier plusieurs
+ d'entre vous, mais j'ai été identifiée par
+ votre caucus. Oui, je le sais, vous avez eu presque un petit infarctus, vous
+ dites : Ah! non, non, pas Marwa
+ chez nous! Mais, pour de vrai, il y a eu une erreur. Pourquoi
+ qu'il y a eu cette erreur? Parce que, c'est démontré, il
+ y a des biais, avec la reconnaissance faciale, qui affectent davantage
+ les peaux foncées. Alors, j'ai l'avantage d'être basanée à l'année, mais j'ai le désavantage que, dans mon cas,
+ avec la reconnaissance faciale, mon risque d'erreur est beaucoup
+ plus important. Alors, moi, je pourrais, par exemple, me faire arrêter plus
+ souvent. Risque d'erreur.
+
+Et moi, je
+ suis juste basanée, mais il y a aussi des gens qui ont la peau encore plus
+ foncée. Alors, aux États-Unis, des
+ experts l'ont démontré, pour les peaux, par exemple, de gens
+ hispanophones, ou les peaux noires, dans le cas des femmes noires, le risque d'erreur est excessivement plus élevé. Ça aussi, il faut qu'on en parle, parce qu'on ne veut pas commettre des
+ impairs, mais, surtout, on ne veut pas répliquer ce que nous cherchons à
+ éliminer. Déjà que plusieurs personnes de la communauté noire se font interpeler
+ plus souvent par la police, imaginez si ce biais social est maintenant
+ reflété dans les algorithmes de la reconnaissance faciale. C'est arrivé
+ aux États-Unis plusieurs fois.
+
+Alors, c'est
+ pour ça que nous, on veut un débat très,
+ très élargi sur ce sujet. Et on ne
+ veut pas parler avec uniquement des
+ experts. On veut parler avec des sociologues, on veut parler avec des
+ philosophes. La technologie, c'est très
+ bien, mais ce n'est pas tout.
+ Il y a d'abord l'être humain. Et, en ce moment, nous avons des citoyens québécois
+ qui se posent des questions très légitimes, et qui ont peur que les biais
+ sociaux soient désormais reproduits à
+ l'intérieur des nouvelles technologies, et qu'ils se fassent faire...
+ et, pardon, et qu'eux font face davantage à des discriminations, qui seront,
+ là, littéralement systémiques via ces nouveaux logiciels informatiques, ces
+ nouvelles technologies informatiques.
+
+Alors, vous
+ comprendrez qu'effectivement je vais vous faire des propositions. Puis le
+ ministre me connaît. Il le sait, je vais arriver avec des propositions. Puis,
+ je vous le dis tout de suite, ma proposition : tenons un sommet là-dessus.
+ Oui, un sommet, un sommet où est-ce que les
+ gens vont pouvoir s'exprimer, les experts, les sociologues, les philosophes,
+ mais aussi des Américains qui ont dû
+ défendre, au tribunal, des gens qui ont été arrêtés de façon arbitraire et de
+ façon non justifiée après mauvaise
+ utilisation de reconnaissance faciale. Même chose en France. Tout à l'heure, le
+ leader adjoint parlait de la quadrature du Net, la quadrature du Net en
+ parle, de tout ça. Ça, c'est en France. 
+
+Alors, tirons les leçons des autres pays qui ont
+ fait face au problème bien avant nous, qui l'ont tentée, cette technologie. Même Facebook a dû reculer sur la
+ reconnaissance faciale. Bien, je dis Facebook, je devrais dire Meta, mais
+ même Meta Facebook a reculé, le grand géant
+ du Web. Alors, pourquoi que nous, on voudrait avancer tête baissée, sans
+ discuter?
+
+Alors, Mme la
+ Présidente, je vais m'arrêter ici. Je vais juste voir si je n'ai rien oublié...
+ Ah oui! Une dernière chose. J'oublie
+ un élément. Il va falloir aussi qu'on réfléchisse à s'assurer de
+ l'imputabilité. Pourquoi l'imputabilité? Je vous ai parlé des PME, qui, eux,
+ font face aux cyberattaques, mais j'aimerais ça vous parler maintenant des
+ grandes entreprises, qui, eux,
+ collectent nos informations. Bien, de leur côté, leur niveau d'imputabilité,
+ lorsqu'il y a une fuite de données, à ce jour, je trouve que ce n'est pas suffisant. Alors, j'espère qu'on va
+ être capable d'aller plus loin, parce que, sinon, Mme la Présidente, plusieurs auront le sentiment que leur
+ niveau de protection est insuffisant, et, lorsqu'une personne ou une entreprise
+ échoue à protéger leurs données, bien, le niveau d'imputabilité est très
+ faible. Alors, très contente que des grandes entreprises soient capables
+ de gérer correctement les données, mais, pour celles qui ont de la misère, oui,
+ on peut les accompagner, mais, à un moment
+ donné, c'est parce que ça prend beaucoup, beaucoup plus d'imputabilité, et là je
+ parle des hauts dirigeants. 
+
+Alors, Mme la
+ Présidente, c'est avec grand plaisir que je vais pouvoir travailler avec le
+ ministre en étude détaillée et que j'espère que notre proposition pour un
+ sommet sur ce sujet sera entendue. Et j'espère voir beaucoup de députés
+ participer, parce que je sais que ça touche toutes les PME dans tous vos comtés
+ puis que vous avez à coeur les PME québécoises.
+ Je le sais que, de votre côté, c'est important, la protection des données. Puis
+ je le sais que, quand on parle de fierté québécoise, bien, on est capable de
+ tout faire ça chez nous, au Québec, très franchement. Tu sais, je les connais,
+ nos universités, nos chercheurs, on est capable d'innover. Bien,
+ faisons-nous confiance, parlons-nous franchement. 
+
+Et, avant
+ d'aller de l'avant avec une identité numérique, allons d'abord au fond des
+ choses, réfléchissons. Est-ce que c'est vraiment ça qu'on veut au Québec?
+ Est-ce qu'on a vraiment besoin d'avoir une composante biométrique pour s'identifier ou est-ce qu'un système avec un mot
+ de passe double fonctionne? Comme par exemple, nous, en ce moment, avec nos téléphones puis notre connexion à
+ l'Assemblée nationale du Québec, vous le savez, on rentre notre mot de passe,
+ puis après ça on reçoit une authentification
+ sur notre téléphone. Ça, ça marche très bien. Nulle part que je mets mon visage
+ là-dedans. Bien, oui, quand je le regarde, là, mais, à part de ça, non. Mais
+ vous comprendrez que, si on est capable, à l'Assemblée
+ nationale du Québec... Et on reçoit quand même des courriels sensibles, et
+ vous, les ministres, vous recevez encore
+ des courriels beaucoup plus sensibles que moi, simple députée de Saint-Laurent,
+ et, même malgré ça, il n'y a pas de reconnaissance biométrique dans vos mots de
+ passe, présentement. Ça ne vous a jamais empêchés de faire votre travail
+ et de protéger vos courriels.
+
+Alors,
+ Mme la Présidente, j'espère que mon message sera entendu et que je recevrai
+ bientôt une invitation à un grand sommet sur la reconnaissance faciale,
+ les cyberattaques et aussi notre identité numérique. Merci.
+
+La Vice-Présidente (Mme Soucy) :
+
+ Je vous remercie, Mme la députée. Est-ce qu'il y a d'autres interventions?
+ Comme il n'y a pas d'autre intervention, en application de l'ordre spécial, je
+ vais inviter les leaders... Oh! malgré qu'il manque... 
+
+Nous allons
+ suspendre juste quelques instants pour permettre aux deux partis qui ne sont
+ pas présents au salon bleu de se joindre à nous pour le vote du principe
+ du projet de loi n° 6.
+
+(Suspension de la séance à 11 h 50)
+
+(Reprise à 11 h 56)

@@ -1,390 +1,419 @@
 # Legislative Health Factuality
 
-**Research question:** Does the factual accuracy of legislative health debate predict bill passage outcomes?
+**Research question:** Does the factual accuracy of legislative health floor debate predict bill passage outcomes?
 
-**Study:** Comparative analysis across the US House of Representatives, Ontario Legislative Assembly, and Quebec National Assembly from 1985 to 2026.
+**Jurisdictions:** US House of Representatives, Ontario Legislative Assembly, Quebec National Assembly — 1985 to 2026
 
-**Investigators:** Caprice Culkin (Yale School of Public Health) — David Chartash, Joanie Bouchard (advisors)
-
-**Repository:** `github.com/capriceculkin/legislative-health-factuality`
+**Investigators:** Caprice Culkin (Yale School of Public Health) | David Chartash, Joanie Bouchard (advisors)
 
 ---
 
-## Research Design
+## Pipeline Overview
 
-For each health-related bill in each legislature, we extract the floor debate text, link named entities to DBpedia using NLP, verify relationships via SPARQL, and compute a per-bill factuality score. We then test whether factuality predicts bill passage using logistic regression.
+```mermaid
+flowchart LR
+    subgraph sources[Data Sources]
+        A[US: GovInfo API]
+        B[Ontario: OLA Azure Search API]
+        C[Quebec: assnat.qc.ca HTML]
+    end
 
-**Hypothesis:** Bills with higher factual accuracy in floor debate are more likely to pass.
+    subgraph extract[Step 1 - Bill-Specific Extraction]
+        D[US Granules
+145 bill-dates
+584K sentences]
+        E[Ontario Orders of Day
+249 verified bills
+83K paragraphs]
+        F[Quebec Bill Segments
+2178 bill-date segments
+924K sentences]
+    end
+
+    subgraph v2[Step 2 - Predication Extraction spaCy]
+        G[US Predications
+215K SVO triples
+36.9%]
+        H[Ontario Predications
+Pending]
+        I[Quebec Predications
+178K SVO triples
+19.3%]
+    end
+
+    subgraph spotlight[Step 3 - DBpedia Spotlight]
+        J[Runs on subject + object strings only
+NOT full sentences
+EN port 2222 / FR port 2223]
+    end
+
+    subgraph sparql[Step 4 - SPARQL Verification]
+        K[Local Virtuoso
+EN + FR DBpedia
+localhost:8890]
+    end
+
+    subgraph scores[Step 5 - Factuality Scores]
+        L[supported / total claim-bearing
+per bill-date]
+    end
+
+    A --> D --> G --> J
+    B --> E --> H --> J
+    C --> F --> I --> J
+    J --> K --> L
+```
 
 ---
 
-## Data Sources
+## Step 1: Bill-Specific Text Extraction
 
-### United States House of Representatives
+All three jurisdictions extract **floor/plenary debate text specific to each health bill only.**
+Question period, petitions, member statements, committee transcripts, and all other business
+on sitting days are excluded. This matches the US standard where GovInfo granules are
+bill-specific by construction.
 
-Source: GovInfo Congressional Record (CREC) granules via the GovInfo API
-URL: `https://api.govinfo.gov/packages/`
+### United States — GovInfo Congressional Record Granules
 
-Each granule is a single bill's floor debate — bill-specific by definition. No extraction needed. We query the GovInfo API for all health-related CREC granules from 1985 to 2026.
+**Source:** GovInfo API — `api.govinfo.gov/packages/`
+**Collection script:** [`scripts/congressional_record_pull.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/congressional_record_pull.py)
+**Output:** `data/us/congressional_record_speeches/` — one `.txt` file per bill-date
 
-Health bill identification: bills tagged with health-related policy areas in the GovInfo package metadata (e.g., HEALTH, MEDICINE, PUBLIC HEALTH, MEDICAL CARE).
+Each GovInfo granule corresponds to one bill's floor debate. Bill-specific by construction —
+no extraction needed. Health bills identified via CRS policy area tags.
 
-    Total health bill-dates collected: 145
-    Date range: 1985 to 2026
-    Source format: plain text, one file per bill-date
+**N = 145 health bill-dates | 584,111 sentences**
 
-**Sample granule (2020-03-14):**
+**Example:** [`data/us/congressional_record_speeches/2006-12-09-test.txt`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/us/congressional_record_speeches/2006-12-09-test.txt)
 
-    Mr. PALLONE. Mr. Speaker, I rise today in support of H.R. 6201, the Families
-    First Coronavirus Response Act. This legislation provides free COVID-19 testing,
-    guarantees paid sick leave and family and medical leave, strengthens food
-    security initiatives, and increases federal Medicaid funding...
+```
+ous adverse event report no later than 15
+business days after the report is received
+S. 3546
+through the address or phone number de-
+Be it enacted by the Senate and House of Rep-
+scribed in section 502(x).
+resentatives of the United States of America in
+‘‘(2) N .—The re-
+Congress assembled,
+sponsible person shall submit to the Sec-
+retary any new medical information, related
+This Act may be cited as the ‘‘Dietary Sup-
+to a submitted serious adverse event report
+plement and Nonprescription Drug Consumer
+that is received by the responsible person
+```
 
-### Ontario Legislative Assembly
+### Ontario — OLA Azure Search API
 
-Source: OLA Azure Search API
-URL: `https://aihansardsearch-apim.azure-api.net/api/search/keyword`
+**Source:** OLA Hansard Search backend — `aihansardsearch-apim.azure-api.net/api/search/keyword`
+**Collection script:** [`scripts/fetch_ontario_hansard_via_api.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/fetch_ontario_hansard_via_api.py)
+**Cleaning script:** [`scripts/rebuild_clean_ontario.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/rebuild_clean_ontario.py)
+**Output:** `data/canada/ontario/hansard_api_bill_segments_clean.json`
 
-The OLA Hansard search tool uses an Azure Cognitive Search backend that indexes all Ontario Hansard from 1974 to present. We query the API for each health bill's debate dates, filtering to `typeOfBusiness eq 'ORDERS OF THE DAY'` or `typeOfBusiness eq 'Orders of the Day'` (capitalization varies by era).
+The OLA Hansard search tool uses an Azure Cognitive Search backend.
+I reverse-engineered the API endpoint from browser network traffic and built
+a scraper that queries each bill's debate dates with:
 
-Bill identification: Ontario health bill index built from OLA bill registry, cross-referenced with HuggingFace `a2aj/hansard` dataset for session/parliament metadata.
+```
+filter: (date ge {date}T00:00:00Z and date le {date}T23:59:59Z)
+        and (typeOfBusiness eq 'ORDERS OF THE DAY'
+             or typeOfBusiness eq 'Orders of the Day')
+```
 
-Bill assignment: paragraphs are assigned to specific bills using (1) bill number mention in paragraph text, (2) topic keyword overlap with bill title, (3) single-bill date fallback. Private members' bills debated under 'Private Members' Public Business' are also included.
+**Bill assignment:** paragraphs are assigned to a specific bill only when the bill number
+is explicitly mentioned in the paragraph text (e.g. 'Bill 94'). No topic fallback,
+no single-bill date fallback. Every paragraph in the output has been verified.
 
-    Total health bills in index: 329
-    Bills with floor debate recovered: 327 (99.4%)
-    Bills excluded (no floor debate confirmed): 2
-    Reason for exclusion: first reading only (private members' bills never called for second reading)
-    Total paragraphs collected: 168,672
-    Date range: 1985 to 2026
+**What is excluded:**
+- Question Period / Oral Questions
+- Members' Statements
+- Petitions
+- Introduction of Bills (first reading)
+- Committee study transcripts
+- Paragraphs that do not mention the specific bill number
 
-**Sample paragraph (2009-04-02, Bill 104 — Personal Health Information Protection Act):**
+**N = 249 verified bills | 83,443 paragraphs**
 
-    Mr. Khalil Ramal (London-Fanshawe): I'm very proud to stand up today and speak
-    on behalf of Bill 104, An Act to amend the Personal Health Information Protection
-    Act, 2004. This bill will strengthen privacy protections for patients' health
-    information across Ontario's health system...
+**Example:** Bill 124 — An Act to amend the Occupational Health and Safety Act
+Debate date: 1985-11-26 | 204 paragraphs
 
-### Quebec National Assembly
+```
+I want to speak briefly on the bill. I do so both for reasons of principle and for personal reasons. I have never voted for back-to-work legislation in this assembly, whether it affected teachers or elevator workers or transit workers, because I believe if we have established in legislation the right to full and free collective bargaining, we abrogate that principle at very grave risk.  The risks 
 
-Source: Assemblée nationale du Québec — Journal des débats
-URL: `https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/`
+I want to thank the several speakers who have addressed their minds and thoughts to the legislation now before the House. I would make some summary remarks in dealing with the presentations that have been made this afternoon, some of which have been truly exceptional, almost breathtaking, in the light of recent history.  Before I do that, I want to pay a particular tribute to my friend and colleag
 
-The Quebec Journal des débats uses structured section headers to mark when the Assembly takes up a specific bill. We download full transcript HTML files and extract text between bill-specific markers.
+```
+
+### Quebec — Journal des débats Section Markers
+
+**Source:** Assemblée nationale du Québec — `assnat.qc.ca`
+**Collection script:** [`scripts/extract_quebec_bill_segments.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_quebec_bill_segments.py)
+**Raw transcripts:** `data/canada/quebec_assembly/transcripts/` — one `.txt` file per sitting day
+**Output:** `data/canada/quebec_assembly/bill_segments/` — one `.txt` file per bill-date
+
+The Journal des débats uses structured section headers to mark when the Assembly
+takes up a specific bill. The extraction script identifies these headers and
+extracts only the text between the marker and the next section break.
 
 **Section markers used:**
+```
+Étude du projet de loi n° X
+Adoption du principe du projet de loi n° X
+Reprise du débat sur l'adoption du principe du projet de loi n° X
+Prise en considération du rapport sur le projet de loi n° X
+Adoption du projet de loi n° X
+```
 
-    Étude du projet de loi n° X
-    Adoption du principe du projet de loi n° X
-    Reprise du débat sur l'adoption du principe du projet de loi n° X
-    Prise en considération du rapport sur le projet de loi n° X
-    Adoption du projet de loi n° X
+**What is excluded:**
+- Question period (période des questions)
+- Ministerial statements (déclarations ministérielles)
+- Petitions
+- Introduction of bills (dépôt de projets de loi)
+- Commission parlementaire transcripts (separate corpus — same as US excludes committee hearings)
+- All other business on sitting days not related to the specific bill
 
-What is excluded: question period (période des questions), ministerial statements (déclarations ministérielles), petitions, introduction of bills (dépôt de projets de loi), and any other business on sitting days that is not about the specific bill. Committee study transcripts (commission parlementaire) are in a separate corpus and are not included — consistent with the US approach of using floor debate only.
+**N = 8,365 bill-date segments | 923,634 sentences**
 
-    Total bill-date segments extracted: 8,236
-    Unique bills with segments: 373
-    Date range: 1985 to 2026
+**Example:** Bill 152 — date 2000-11-22
+[`data/canada/quebec_assembly/bill_segments/20001122_bill152.txt`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/bill_segments/20001122_bill152.txt)
 
-**Sample segment (Bill 130, 1995-12-04):**
+**Raw sitting day (before extraction) — 1995-12-04:**
+```
+DÉCLARATIONS DE DÉPUTÉS
+  Mme Carrier-Perreault: Je veux souligner le travail remarquable...
 
-    plus tôt aujourd'hui sur l'adoption du principe du projet de loi n° 28,
-     Loi visant à mettre fin à l'état d'urgence sanitaire. M. le député de Robert-Baldwin,
-     je vous cède la parole.
-    
-    M. Carlos J. Leitão
+QUESTIONS ET RÉPONSES ORALES
+  M. Johnson: M. le Président, ma question s'adresse au premier ministre...
 
----
+ÉTUDE DU PROJET DE LOI N° 130  ← section marker
+  M. Rochon: M. le Président, l'Assemblée nationale prend maintenant en
+  considération le projet de loi 130 sur les services de santé...
 
-## Pipeline
+PÉTITIONS  ← excluded
+  M. Beaudet: Je dépose la pétition suivante...
+```
 
-The pipeline has six stages. Below, we trace how the data transforms at each stage, with exact N counts and example sentences showing how the input and output differ.
-
----
-
-### Stage 1: Raw transcript text
-
-Starting point: the raw legislative text for each jurisdiction, before any extraction.
-
-    US:      145 granule files (one per health bill-date) — already bill-specific
-    Ontario: 168,672 paragraphs across 327 bills (extracted from OLA API)
-    Quebec:  8,236 bill-date segments (extracted using section markers)
-
-**What a raw Quebec sitting day looks like (before extraction):**
-
-    [1995-12-04, full sitting day — 8,400 words]
-
-    DÉCLARATIONS DE DÉPUTÉS
-    Mme Carrier-Perreault: Je veux souligner le travail remarquable...
-
-    QUESTIONS ET RÉPONSES ORALES
-    M. Johnson: M. le Président, ma question s'adresse au premier ministre...
-
-    ÉTUDE DU PROJET DE LOI N° 130
-    M. Rochon: M. le Président, l'Assemblée nationale prend maintenant en
-    considération le projet de loi 130 sur les services de santé et les services
-    sociaux. Ce projet de loi vise à moderniser notre réseau de santé...
-
-    PÉTITIONS
-    M. Beaudet: Je dépose la pétition suivante de citoyens de ma circonscription...
-
-After extraction: only the 'ÉTUDE DU PROJET DE LOI N° 130' section is kept.
-Removed: declarations, oral questions, petitions, all other business.
+**After extraction — bill-specific segment only:**
+```
+Étude détaillée du projet de loi n° 152
+M. Lachance:
+ Merci, M. le Président. Il me fait plaisir de déposer le rapport de la commission des transports et de l'environnement qui a siégé le 21 novembre 2000 afin de procéder à l'étude détaillée du projet de loi n° 152, Loi modifiant la Loi sur la conservation et la mise en valeur de la faune et la Loi sur les droits de chasse et de pêche dans les territoires de la Baie James et du Nouveau-Québec. La commission a adopté le projet de loi avec des amendements.
+Le Président:
+ Alors, bien. Ce rapport de commission est déposé.
+Dépôt de pétitions
+	Maint
+```
 
 ---
 
-### Stage 2: Sentence tokenization
+## Step 2: Predication Extraction (spaCy)
 
-Each bill-specific text block is split into sentences using spaCy. Short sentences (under 20 characters) are removed.
+**Script:** [`scripts/extract_predications.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_predications.py)
+**Input:** `sentences.json` for each jurisdiction
+**Output:** `predications.json` — Subject-Verb-Object triples
 
-    US:      584,111 sentences
-    Ontario: 1,942,246 sentences (pipeline running)
-    Quebec:  923,634 sentences
+Per David Chartash's September 11 2026 revision: spaCy's dependency parser extracts
+Subject-Verb-Object predications from each sentence BEFORE running DBpedia Spotlight.
+Spotlight then runs only on the subject and object strings, not the full sentence.
 
-**Example — one paragraph becomes multiple sentences:**
+**Why this matters:**
 
-    Input paragraph:
-    'The government has proposed Bill 104 to strengthen patient privacy. This
-    legislation will require hospitals to obtain explicit consent before sharing
-    health records. The Ontario Medical Association has endorsed this approach.'
+```
+Old approach (v1):
+  Sentence: 'The OMA, which represents 30,000 physicians, endorsed this legislation.'
+  Spotlight on full sentence → entities: OMA, Physician, Legislation
+  Pairs: (OMA, Physician) ← confirmed by DBpedia, but NOT the claim being made
+         (OMA, Legislation) ← not in DBpedia
+         (Physician, Legislation) ← not in DBpedia
+  Problem: (OMA, Physician) is spuriously confirmed — it was in a relative clause
 
-    Output sentences:
-    [1] 'The government has proposed Bill 104 to strengthen patient privacy.'
-    [2] 'This legislation will require hospitals to obtain explicit consent
-         before sharing health records.'
-    [3] 'The Ontario Medical Association has endorsed this approach.'
+New approach (v2):
+  spaCy extracts: subject='OMA', verb='endorsed', object='legislation'
+  Spotlight runs on 'OMA' and 'legislation' only
+  Pair: (OMA, Legislation) → not in DBpedia → correctly unsupported
+  The relative clause entity 'physicians' is never included
+```
 
-Each sentence record includes:
+**What is excluded at this step:**
+- Sentences where the root verb is existential (be/have/do) — not factual claims
+- Sentences where no subject or no object is found
+- Entities found only in relative clauses or parentheticals
+- Subject equals object (trivial self-reference)
 
-    {
-      "sentence_id": "20090402-api-2009b104-p3-s2",
-      "date": "2009-04-02",
-      "text": "The Ontario Medical Association has endorsed this approach.",
-      "speaker": "Mr. Khalil Ramal (London-Fanshawe)",
-      "party": "Ontario Liberal Party",
-      "is_minister": false,
-      "bill_key": "2009-Bill104",
-      "source": "ola_api"
-    }
+Hedged predicates (may/might/could/should/pourrait/devrait) are included but flagged.
 
----
+**N counts:**
 
-### Stage 3: DBpedia Spotlight entity linking (DB1 — claim-bearing sentences)
+| Jurisdiction | Input sentences | Predications | Rate |
+|---|---|---|---|
+| US | 584,111 | 215,412 | 36.9% |
+| Quebec | 923,634 | 177,952 | 19.3% |
+| Ontario | (pipeline running) | (pending) | — |
 
-Each sentence is sent to DBpedia Spotlight, which identifies named entities and links them to DBpedia URIs. Sentences where Spotlight finds two or more distinct entities are called 'claim-bearing' and enter DB1. Sentences with zero or one entity are counted in the denominator but cannot be verified against DBpedia.
+Note: Quebec's lower rate (19.3% vs 36.9%) reflects fr_core_news_lg's lower recall
+for Quebec legislative French compared to en_core_web_lg for English.
 
-    US:      376,347 claim-bearing sentences (64.4% of total)
-    Ontario: (pipeline running)
-    Quebec:  334,522 claim-bearing sentences (36.2% of total)
+**Sample US predications:**
+```
+Sentence: "--- GPO-CRECB-1985-pt12-2-2 --The House met at o'clock noon."
+  subject: "GPO-CRECB-1985-pt12"
+  verb:    meet
+  object:  "o'clock noon"
 
-**What is excluded at this stage:**
+Sentence: "May Your spirit give courage and strength to them and to their families."
+  subject: "Your spirit"
+  verb:    give
+  object:  "courage"
+  [hedged]
 
-    Single-entity sentences (~60%): Spotlight finds only one entity — cannot form a
-    verifiable subject-object pair. Example:
-    'I would like to acknowledge the work of the Ontario Medical Association.'
-    → entity: Ontario_Medical_Association (only one) → excluded from DB1
+Sentence: "Our hearts reach out in the bond of concern to those who are anx ious, even as we pray for understan"
+  subject: "Our hearts"
+  verb:    reach
+  object:  "the bond"
 
-    Zero-entity sentences (~25%): No named entities found. Example:
-    'We need to do more to protect the health of our communities.'
-    → no DBpedia entities → excluded from DB1
+Sentence: "The Chair has ex amined the Journal of the last day's proceedings and announces to the House his app"
+  subject: "The Chair"
+  verb:    amine
+  object:  "the Journal"
 
-**What enters DB1 — example:**
+```
 
-    'The Ontario Medical Association has endorsed this legislation.'
-    → entities: Ontario_Medical_Association, Legislation
-    → concept pair: (Ontario_Medical_Association, Legislation)
-    → sentence_id: 20090402-api-2009b104-p3-s2
-    → enters DB1 ✓
+**Sample Quebec predications:**
+```
+Sentence: "M. le Président, l'honorable
+		lieutenant-gouverneur a pris connaissance de ce projet de loi et il e"
+  sujet:  "gouverneur"
+  verbe:  prendre
+  objet:  "connaissance"
 
-    'Le gouvernement a modifié la Loi sur les services de santé et services sociaux.'
-    → entities: Gouvernement_du_Québec, Loi_sur_les_services_de_santé_et_les_services_sociaux
-    → concept pair: (Gouvernement_du_Québec, Loi_sur_les_services_de_santé)
-    → enters DB1 ✓
+Sentence: "Le discours sur le budget prononcé le 23 avril 1985 a introduit,
+		à compter de cette date, de nouve"
+  sujet:  "Le discours"
+  verbe:  introduire
+  objet:  "de nouvelles mesures"
 
-Spotlight endpoints:
-    English (US + Ontario): spotlight-en on Dunkleosteus, port 2222
-    French (Quebec): spotlight-fr on Dunkleosteus, port 2223
-    Accessed via SSH tunnel: ssh -L 2222:localhost:2222 -L 2223:localhost:2223
+Sentence: "Des régions comme celle que je
+		représente en savent quelque chose."
+  sujet:  "Des régions"
+  verbe:  savoir
+  objet:  "quelque chose"
 
----
+Sentence: "Le
+		secrétaire général n'a pas reçu d'avis concernant
+		le dépôt de pétitions."
+  sujet:  "Le
+		secrétaire général"
+  verbe:  recevoir
+  objet:  "d'avis"
 
-### Stage 4: Deduplication
-
-Many sentences reference the same pair of concepts. We deduplicate to avoid querying DBpedia for the same pair multiple times. This dramatically reduces the number of SPARQL queries needed.
-
-    US:      376,347 claim-bearing sentences → 313,705 unique concept pairs (83.4% reduction)
-    Ontario: (pipeline running)
-    Quebec:  334,522 claim-bearing sentences → 130,691 unique concept pairs (39.1% reduction)
-
-**Example — why deduplication matters:**
-
-    Sentence 1: 'The Ontario Medical Association endorsed Bill 104.'
-    Sentence 2: 'Bill 104 was supported by the Ontario Medical Association.'
-    Sentence 3: 'The OMA has long supported this type of legislation.'
-
-    All three produce the same concept pair:
-    (Ontario_Medical_Association, Legislation)
-
-    DBpedia is queried once for this pair, and the result applies to all three sentences.
-
----
-
-### Stage 5: SPARQL / DBpedia verification
-
-For each unique concept pair, we query DBpedia via SPARQL to check whether a direct relationship exists between the two entities in the DBpedia knowledge graph. If DBpedia confirms a relationship, the sentence is marked as 'supported.'
-
-SPARQL endpoint: local Virtuoso instance on Dunkleosteus (`http://localhost:8890/sparql` via SSH tunnel)
-English DBpedia and French DBpedia are both loaded in the same Virtuoso container.
-
-**Query template:**
-
-    SELECT ?a ?b ?p WHERE {
-      VALUES (?a ?b) { (<URI_A> <URI_B>) }
-      { ?a ?p ?b } UNION { ?b ?p ?a }
-    }
-
-**Example — supported:**
-
-    Pair: (dbpedia:Canada, dbpedia:United_States)
-    Result: dbo:neighboringMunicipality → supported = True
-
-    Pair: (dbpedia:Ontario_Medical_Association, dbpedia:Physician)
-    Result: dbo:type → supported = True
-
-**Example — not supported:**
-
-    Pair: (dbpedia:Ontario_Medical_Association, dbpedia:Legislation)
-    Result: [] → supported = False
-
-    This is the key distinction: the OMA endorsing legislation is a rhetorical
-    claim, not a fact DBpedia can verify. The relationship doesn't exist in the
-    DBpedia knowledge graph.
-
-    US:      58,979 supported / 376,347 claim-bearing = 15.7% support rate
-    Ontario: (pipeline running)
-    Quebec:  43,004 supported / 334,522 claim-bearing = 12.9% support rate
-
-Note on the support rate: roughly 10-15% of claim-bearing sentences are supported by DBpedia. This is expected. Legislative speech is primarily rhetorical and argumentative, not factual in the DBpedia sense. The support rate reflects the proportion of verifiable factual claims embedded in debate. David Chartash's framing: the remaining ~90% represents the procedural and rhetorical content that the parliamentary speech and rhetoric literature would predict — the denominator is meaningful precisely because it captures this mix.
+```
 
 ---
 
-### Stage 6: Factuality score computation
+## Step 3: DBpedia Spotlight Entity Linking
 
-For each health bill, the factuality score is computed as:
+**Script:** [`scripts/dbpedia_batch_pipeline.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/dbpedia_batch_pipeline.py) — `extract_v2` stage
+**Infrastructure:** Dunkleosteus server (Yale) — English port 2222, French port 2223
+**SSH tunnel:** `ssh -i ~/.ssh/dunkleosteus_key -L 2222:localhost:2222 -L 2223:localhost:2223 cc3436@10.168.171.152`
 
-    factuality_score = supported_sentences / total_claim_bearing_sentences
+Spotlight runs on the **subject string** and **object string** from each predication,
+not on the full sentence. Returns DBpedia URIs for each entity found.
 
-Where 'total_claim_bearing_sentences' is the count of sentences in DB1 for that bill (sentences with two or more DBpedia entities identified by Spotlight).
+```
+Input predication:
+  subject: 'Ontario Medical Association'
+  object:  'legislation'
 
-**Example bill scores:**
+Spotlight on 'Ontario Medical Association' →
+  dbpedia.org/resource/Ontario_Medical_Association
 
-    US 1988-07-12: score=0.092 (181 supported / 1962 claim-bearing) — 
-    US 2020-02-06: score=0.153 (33 supported / 215 claim-bearing) — Passed
-    US 2003-06-19: score=0.251 (57 supported / 227 claim-bearing) — Passed
+Spotlight on 'legislation' →
+  dbpedia.org/resource/Legislation
 
-    Quebec 2005-06-08: score=0.142 (18 supported / 127 claim-bearing)
-    Quebec 2003-12-09: score=0.086 (77 supported / 896 claim-bearing)
-    Quebec 1996-12-10: score=0.166 (96 supported / 577 claim-bearing)
+Entity pair: (Ontario_Medical_Association, Legislation)
+```
 
----
-
-## Results
-
-Ontario results are pending pipeline completion. US and Quebec results below.
-
-### Factuality and bill passage
-
-    US passed bills:  mean factuality = 0.2094 (n=386)
-    US failed bills:  mean factuality = 0.2015 (n=34)
-    Quebec passed:    mean factuality = 0.1253 (n=775)
-    Ontario:          (pipeline running)
-
-    Logistic regression (US + Quebec, controlling for jurisdiction):
-    Factuality coefficient: +0.0467 (higher factuality → more likely to pass, p < 0.05)
-
-### COVID natural experiment (pre/post March 2020)
-
-    US:     pre-COVID mean = 0.2142, post-COVID mean = 0.1780 (−0.036)
-    Quebec: pre-COVID mean = 0.1394, post-COVID mean = 0.0868 (−0.053)
-    Both jurisdictions show decreased factuality post-COVID — consistent with
-    emergency legislative conditions reducing deliberation quality.
-
-### Political era analysis — Quebec
-
-    PQ 1994-2003:       0.1353 (n=167)
-    Liberal 2003-2012:  0.1421 (n=169)
-    PQ minority 2012-2014: 0.1773 (n=57) — highest
-    Liberal 2014-2018:  0.1413 (n=115)
-    CAQ 2018-present:   0.0933 (n=259) — lowest
+**What is excluded:**
+- Predications where Spotlight finds no entity for subject or object
+- Predications where subject and object link to the same entity
 
 ---
 
-## Denominator standardization
+## Step 4: SPARQL Verification
 
-A critical methodological decision is the denominator: what text counts as 'the debate about this bill.'
+**Script:** [`scripts/dbpedia_batch_pipeline.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/dbpedia_batch_pipeline.py) — `query` stage
+**Endpoint:** Local Virtuoso instance on Dunkleosteus — `http://localhost:8890/sparql`
+Both English DBpedia and French DBpedia loaded in same Virtuoso container.
 
-All three jurisdictions use the same definition: floor/plenary debate text specific to each bill, excluding committee study transcripts, question period, and all other legislative business.
+For each unique entity pair, a SPARQL query checks whether DBpedia confirms
+a direct relationship between the two entities.
 
-    US:      GovInfo granules are bill-specific by construction — each file is one
-             bill's Congressional Record floor debate. No extraction needed.
-             Coverage: 100%
+```sparql
+SELECT ?a ?b ?p WHERE {
+  VALUES (?a ?b) { (<URI_A> <URI_B>) }
+  { ?a ?p ?b } UNION { ?b ?p ?a }
+}
+```
 
-    Ontario: OLA Azure Search API, filtered to Orders of the Day on each bill's
-             debate dates, assigned to specific bills by number/topic matching.
-             Coverage: 327/329 bills (99.4%)
-             Excluded: 2 bills had first reading only (no floor debate confirmed
-             via myparliament.ca)
+**Supported example:**
+```
+Pair: (dbpedia:Canada, dbpedia:United_States)
+Result: dbo:neighboringMunicipality → supported = True
+```
 
-    Quebec:  Section marker extraction from Journal des débats HTML files.
-             Markers: 'Étude du projet de loi', 'Adoption du principe',
-             'Reprise du débat', 'Prise en considération', 'Adoption'.
-             Coverage: 100% of scored bill-dates have bill-specific segments.
+**Not supported example:**
+```
+Pair: (dbpedia:Ontario_Medical_Association, dbpedia:Legislation)
+Result: [] → supported = False
+```
+
+The OMA endorsing legislation is a rhetorical claim — not a fact DBpedia can verify.
+The relationship does not exist in the DBpedia knowledge graph.
 
 ---
 
-## Reproducibility
+## Step 5: Factuality Scores
 
-### Requirements
+**Script:** [`scripts/compute_factuality_scores.py`](https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/compute_factuality_scores.py)
 
-    Python 3.10+
-    pip install -r requirements.txt
-    Access to Dunkleosteus server (Yale VPN required)
-    HuggingFace account (for a2aj/hansard dataset)
-    GovInfo API key
+```
+factuality_score = supported_sentences / total_claim_bearing_sentences
+```
 
-### Key scripts
+Where claim-bearing sentences are those where Spotlight found entities for
+both subject and object of the extracted predication.
 
-    scripts/fetch_ontario_hansard_via_api.py    Fetch Ontario bill-specific text from OLA API
-    scripts/convert_ontario_api_segments_to_sentences.py  Convert to sentences format
-    scripts/extract_quebec_bill_segments.py     Extract Quebec bill segments from transcripts
-    scripts/convert_quebec_segments_to_sentences.py  Convert to sentences format
-    scripts/dbpedia_batch_pipeline.py           Main pipeline (extract/dedupe/query/annotate)
-    scripts/compute_factuality_scores.py        Compute per-bill scores
-    scripts/run_analyses.py                     Full analysis (regression, COVID, era)
-    scripts/build_validation_doc.py             Generate transcript division samples
+---
 
-### Pipeline commands
+## Large Data Files
 
-    # Ontario
-    python3 scripts/fetch_ontario_hansard_via_api.py
-    python3 scripts/convert_ontario_api_segments_to_sentences.py
-    cp data/canada/ontario/sentences_bill_specific_api.json data/dbpedia_pipeline/ontario/sentences.json
-    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py extract
-    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py dedupe
-    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py query
-    JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py annotate
-    JURISDICTION=ontario python3 scripts/compute_factuality_scores.py
+Files exceeding GitHub's 100MB limit are excluded from version control.
+Regenerate using the scripts listed above.
 
-    # Quebec
-    python3 scripts/extract_quebec_bill_segments.py
-    python3 scripts/convert_quebec_segments_to_sentences.py
-    cp data/canada/quebec_bills/sentences_bill_specific.json data/dbpedia_pipeline/quebec/sentences.json
-    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py extract
-    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py dedupe
-    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py query
-    JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py annotate
-    JURISDICTION=quebec python3 scripts/compute_factuality_scores.py
+| File | Size | Description | Script to regenerate |
+|---|---|---|---|
+| `data/canada/ontario/hansard_api_bill_segments_clean.json` | ~100MB | Ontario verified bill segments | `fetch_ontario_hansard_via_api.py` + `rebuild_clean_ontario.py` |
+| `data/canada/ontario/sentences_bill_specific_api.json` | 669MB | Ontario bill-specific sentences | `convert_ontario_api_segments_to_sentences.py` |
+| `data/dbpedia_pipeline/ontario/sentences.json` | 669MB | Ontario pipeline copy | copy from above |
+| `data/dbpedia_pipeline/quebec/sentences.json` | ~200MB | Quebec bill-specific sentences | `convert_quebec_segments_to_sentences.py` |
+| `data/dbpedia_pipeline/us/predications.json` | 86.8MB | US SVO predications | `extract_predications.py` |
+| `data/dbpedia_pipeline/quebec/predications.json` | 80.2MB | Quebec SVO predications | `extract_predications.py` |
 
-    # Analysis
-    python3 scripts/run_analyses.py
-    python3 scripts/build_validation_doc.py
+---
+
+## Current Results (v1 pipeline, new bill-specific denominator)
+
+Ontario v2 scores pending pipeline completion.
+
+| Jurisdiction | Mean factuality | Passed bills | Failed bills |
+|---|---|---|---|
+| US | 0.2054 | 0.2094 (n=386) | 0.2015 (n=34) |
+| Quebec | 0.1387 | 0.1266 (n=767) | n/a |
+| Ontario | (pipeline running) | — | — |
+
+**COVID natural experiment (pre/post March 2020):**
+- US: −0.036 post-COVID
+- Quebec: −0.053 post-COVID
+
+**Logistic regression (US + Quebec):** factuality coefficient +0.0467 (p < 0.05)

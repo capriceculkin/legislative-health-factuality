@@ -1,17 +1,21 @@
 """
-fetch_ontario_hansard_via_api.py
+fetch_ontario_hansard_via_api.py - REBUILT VERSION
 
-Fetches bill-specific Ontario Hansard text using the OLA Azure Search API.
-Batches 3 dates per request. Tries both ORDERS OF THE DAY capitalizations.
-Stores speaker with each paragraph for party attribution.
+Key changes from previous version:
+- Stores topic field with each paragraph
+- Uses topic-to-bill matching as primary assignment method
+- Bill number mention as secondary verification
+- No single-bill fallback (was causing wrong assignments)
+- Only assigns paragraphs when topic matches bill title OR bill number in text
+- Stores assignment_method for audit trail
 
 Output: data/canada/ontario/hansard_api_bill_segments.json
+Format: {bill_key: {date: [{"text": str, "speaker": str, "topic": str, "assignment_method": str}]}}
 """
 import json, os, re, time, requests
 from collections import defaultdict
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 API_URL = "https://aihansardsearch-apim.azure-api.net/api/search/keyword"
 HEADERS = {
     "Content-Type": "application/json",
@@ -24,9 +28,10 @@ BATCH_SIZE = 3
 SLEEP_BETWEEN = 30
 SLEEP_ON_429 = 180
 
-with open(os.path.join(REPO_ROOT, "data/canada/ontario/ontario_bill_index.json")) as f:
+with open(os.path.join(REPO, "data/canada/ontario/ontario_bill_index.json")) as f:
     idx = json.load(f)
 
+# Build date -> health bills mapping
 date_to_bills = defaultdict(list)
 for bill_key, v in idx.items():
     if v.get("health_tag"):
@@ -40,7 +45,7 @@ for bill_key, v in idx.items():
 health_dates = sorted(date_to_bills.keys())
 print(f"Health bill dates: {len(health_dates)}")
 
-out_path = os.path.join(REPO_ROOT, "data/canada/ontario/hansard_api_bill_segments.json")
+out_path = os.path.join(REPO, "data/canada/ontario/hansard_api_bill_segments.json")
 if os.path.exists(out_path):
     with open(out_path) as f:
         results = json.load(f)
@@ -65,9 +70,28 @@ def clean_html(text):
     return re.sub(r"<[^>]+>", " ", str(text)).strip()
 
 
+def title_keywords(title):
+    """Extract meaningful keywords from bill title for topic matching."""
+    words = re.sub(r"[^A-Za-z ]", "", title.upper()).split()
+    stop = {"AN", "ACT", "TO", "THE", "OF", "AND", "FOR", "IN", "A", "BY",
+            "OR", "AMEND", "PROVIDE", "RESPECTING", "CERTAIN", "MAKE",
+            "REQUIRE", "ENSURE", "WITH", "RESPECT", "RELATED", "RELATING"}
+    return [w for w in words if w not in stop and len(w) > 4][:6]
+
+
+def topic_matches_bill(topic, bill):
+    """Check if a Hansard topic matches a bill."""
+    if not topic:
+        return False
+    topic_upper = topic.upper()
+    kws = title_keywords(bill["title"])
+    # Need at least 2 keywords to match, or 1 very specific keyword (>8 chars)
+    matches = [kw for kw in kws if kw in topic_upper]
+    return len(matches) >= 2 or any(len(m) > 8 for m in matches)
+
+
 def fetch_batch(dates, attempt=0):
-    """Fetch Orders of the Day paragraphs for a batch of dates.
-    Tries both capitalizations: ORDERS OF THE DAY and Orders of the Day."""
+    """Fetch ORDERS OF THE DAY paragraphs for a batch of dates (both capitalizations)."""
     date_filters = " or ".join(
         f"(date ge {d}T00:00:00Z and date le {d}T23:59:59Z)"
         for d in dates
@@ -96,75 +120,60 @@ def fetch_batch(dates, attempt=0):
 
 
 def process_batch(dates, paragraphs):
+    """
+    Assign paragraphs to bills using topic matching and bill number mention.
+    NO single-bill fallback — only assign when we have positive evidence.
+    Stores topic and assignment_method for audit trail.
+    """
+    # Group paragraphs by date and topic
     date_topic_paras = defaultdict(lambda: defaultdict(list))
     for para in paragraphs:
         date = para.get("date", "")[:10]
-        topic = para.get("topic", "")
+        topic = para.get("topic", "") or ""
         text = clean_html(para.get("paragraph", ""))
         speaker = para.get("speaker", "")
         if text and len(text) > 20:
             date_topic_paras[date][topic].append({
                 "text": text,
                 "speaker": speaker,
-                "date": date
+                "topic": topic,
             })
 
     for date in dates:
         bills_on_date = date_to_bills[date]
-        bill_nums_on_date = {b["bill_number"] for b in bills_on_date if b["bill_number"]}
         topic_paras = date_topic_paras.get(date, {})
 
         for topic, paras in topic_paras.items():
             all_text = " ".join(p["text"] for p in paras)
             mentioned_bills = set(BILL_RE.findall(all_text))
 
-            matched_bill = None
-            for bill_num in mentioned_bills:
-                if bill_num in bill_nums_on_date:
-                    for b in bills_on_date:
-                        if b["bill_number"] == bill_num:
-                            matched_bill = b["bill_key"]
-                            break
-                if matched_bill:
-                    break
+            for b in bills_on_date:
+                bill_key = b["bill_key"]
+                bill_num = b["bill_number"]
+                assignment_method = None
 
-            # Single bill on date
-            if not matched_bill and len(bills_on_date) == 1:
-                matched_bill = bills_on_date[0]["bill_key"]
+                # Method 1: Bill number explicitly mentioned in this topic's text
+                if bill_num and bill_num in mentioned_bills:
+                    assignment_method = "bill_number_in_text"
 
-            # Omnibus health professions topic
-            if not matched_bill and topic:
-                topic_upper = topic.upper()
-                if any(kw in topic_upper for kw in ["HEALTH PROFESSIONS", "REGULATED HEALTH", "PROFESSION"]):
-                    for b in bills_on_date:
-                        if "profession" in b["title"].lower():
-                            if b["bill_key"] not in results:
-                                results[b["bill_key"]] = {}
-                            if date not in results[b["bill_key"]]:
-                                results[b["bill_key"]][date] = []
-                            results[b["bill_key"]][date].extend(
-                                [{"text": p["text"], "speaker": p.get("speaker", "")} for p in paras]
-                            )
+                # Method 2: Topic matches bill title keywords (2+ keywords)
+                elif topic_matches_bill(topic, b):
+                    assignment_method = "topic_keyword_match"
 
-            # Topic keyword matching
-            if not matched_bill and topic:
-                topic_upper = topic.upper()
-                for b in bills_on_date:
-                    title_words = set(b["title"].upper().split()[:6]) - {
-                        "AN", "ACT", "TO", "THE", "OF", "AND", "FOR", "IN", "A"
-                    }
-                    if any(w in topic_upper for w in title_words if len(w) > 4):
-                        matched_bill = b["bill_key"]
-                        break
-
-            if matched_bill:
-                if matched_bill not in results:
-                    results[matched_bill] = {}
-                if date not in results[matched_bill]:
-                    results[matched_bill][date] = []
-                results[matched_bill][date].extend(
-                    [{"text": p["text"], "speaker": p.get("speaker", "")} for p in paras]
-                )
+                if assignment_method:
+                    if bill_key not in results:
+                        results[bill_key] = {}
+                    if date not in results[bill_key]:
+                        results[bill_key][date] = []
+                    # Add assignment method to each paragraph for audit
+                    for p in paras:
+                        results[bill_key][date].append({
+                            "text": p["text"],
+                            "speaker": p["speaker"],
+                            "topic": topic,
+                            "assignment_method": assignment_method
+                        })
+                    break  # Don't assign same topic to multiple bills
 
 
 total_batches = (len(remaining) + BATCH_SIZE - 1) // BATCH_SIZE

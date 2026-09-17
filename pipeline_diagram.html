@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legislative Health Factuality — Pipeline</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    background: #ffffff;
+    color: #1a1a1a;
+    padding: 48px 32px 80px;
+  }
+
+  header {
+    max-width: 980px;
+    margin: 0 auto 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #1a1a1a;
+  }
+
+  header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    margin-bottom: 4px;
+  }
+
+  header p { font-size: 12px; color: #555; }
+
+  .legend {
+    display: flex;
+    gap: 24px;
+    margin-top: 14px;
+    font-size: 11px;
+    color: #555;
+  }
+
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+
+  .legend-dot {
+    width: 8px; height: 8px;
+    border: 1px solid #1a1a1a;
+    flex-shrink: 0;
+  }
+
+  .ld-done   { background: #1a1a1a; }
+  .ld-run    { background: #ffffff; border: 1.5px solid #1a1a1a; }
+  .ld-future { background: #ffffff; border: 1px dashed #999; }
+  .ld-src    { background: #f0f0f0; border: 1px solid #999; }
+
+  .hint {
+    max-width: 980px;
+    margin: 0 auto 20px;
+    font-size: 11px;
+    color: #888;
+    font-style: italic;
+  }
+
+  .pipeline {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stage-label {
+    width: 100%;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #888;
+    margin: 28px 0 10px;
+    padding-left: 2px;
+  }
+
+  .row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* NODE */
+  .node {
+    width: 300px;
+    flex-shrink: 0;
+    border: 1px solid #1a1a1a;
+    cursor: pointer;
+    transition: box-shadow 0.12s;
+    background: #fff;
+  }
+
+  .node:hover { box-shadow: 3px 3px 0 #1a1a1a; }
+
+  .node.done   { border: 1.5px solid #1a1a1a; }
+  .node.running{ border: 1.5px solid #1a1a1a; background: #fafafa; }
+  .node.future { border: 1px dashed #aaa; }
+  .node.source { background: #f5f5f5; border: 1px solid #aaa; }
+
+  .node-top {
+    padding: 10px 12px 8px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .node.done   .node-top { border-bottom: 1px solid #ccc; }
+  .node.future .node-top { border-bottom: 1px dashed #ccc; }
+
+  .node-badge {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 3px;
+  }
+
+  .node.done   .node-badge { color: #1a1a1a; }
+  .node.running .node-badge { color: #555; }
+
+  .node-title {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .node-file {
+    font-size: 9.5px;
+    font-family: 'Menlo', monospace;
+    color: #666;
+    margin-top: 3px;
+    word-break: break-all;
+  }
+
+  .node-mid {
+    padding: 7px 12px 8px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .node-n {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .node-n-label {
+    font-size: 10px;
+    color: #666;
+    margin-top: 1px;
+  }
+
+  .node-desc {
+    font-size: 11px;
+    color: #444;
+    padding: 7px 12px 9px;
+    line-height: 1.45;
+  }
+
+  /* DETAIL */
+  .node-detail {
+    display: none;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .node-detail.open { display: block; }
+
+  .detail-block {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .detail-block:last-child { border-bottom: none; }
+
+  .detail-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #999;
+    margin-bottom: 5px;
+  }
+
+  .detail-block p {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .detail-block pre {
+    font-family: 'Menlo', monospace;
+    font-size: 9.5px;
+    background: #f5f5f5;
+    border-left: 2px solid #ccc;
+    padding: 6px 8px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #222;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+
+  .trace {
+    font-family: 'Menlo', monospace;
+    font-size: 9.5px;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    padding: 8px 10px;
+    line-height: 1.8;
+    margin-top: 4px;
+  }
+
+  .trace a { color: #1a1a1a; text-decoration: underline; }
+  .trace .arr { color: #aaa; margin: 0 3px; }
+
+  .links a {
+    display: block;
+    font-family: 'Menlo', monospace;
+    font-size: 9.5px;
+    color: #1a1a1a;
+    text-decoration: underline;
+    padding: 2px 0;
+    line-height: 1.5;
+  }
+
+  .access-note {
+    font-size: 10px;
+    color: #555;
+    background: #f5f5f5;
+    border-left: 2px solid #aaa;
+    padding: 5px 8px;
+    margin-top: 5px;
+    line-height: 1.5;
+  }
+
+  /* ARROWS */
+  .arrows {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .arrow-col {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .v-line {
+    width: 1px;
+    min-height: 8px;
+    background: #ccc;
+  }
+
+  .arrow-tag {
+    font-size: 9.5px;
+    font-family: 'Menlo', monospace;
+    color: #777;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 3px 7px;
+    text-align: center;
+    max-width: 285px;
+    line-height: 1.5;
+    margin: 2px 0;
+  }
+
+  .arrow-tip {
+    font-size: 11px;
+    color: #aaa;
+  }
+
+  /* MERGE */
+  .merge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .merge-top {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+  }
+
+  .merge-v-short { width: 1px; height: 12px; background: #ccc; }
+
+  .merge-h { width: 75%; height: 1px; background: #ccc; }
+
+  .merge-v { width: 1px; height: 14px; background: #ccc; }
+
+  .merge-tag {
+    font-size: 9.5px;
+    font-family: 'Menlo', monospace;
+    color: #777;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 3px 10px;
+    text-align: center;
+    margin: 2px 0;
+    line-height: 1.5;
+  }
+
+  .analysis-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .analysis-row .node { width: 220px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Legislative Health Factuality — Data Pipeline</h1>
+  <p>US House of Representatives, Ontario Legislative Assembly, Quebec National Assembly, 1985 to 2026</p>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot ld-done"></span>Complete</span>
+    <span class="legend-item"><span class="legend-dot ld-run"></span>In progress</span>
+    <span class="legend-item"><span class="legend-dot ld-future"></span>Pending</span>
+    <span class="legend-item"><span class="legend-dot ld-src"></span>External source</span>
+  </div>
+</header>
+
+<p class="hint">Click any node to expand file paths, example text, GitHub links, and access notes. Each node traces the same example bill from raw source to factuality score.</p>
+
+<div class="pipeline">
+
+<!-- STAGE 0 -->
+<div class="stage-label">Stage 0 — External Data Sources</div>
+<div class="row">
+
+  <div class="node source" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">External</div>
+      <div class="node-title">GovInfo API</div>
+      <div class="node-file">api.govinfo.gov/packages/CREC-{year}-pt{part}</div>
+    </div>
+    <div class="node-desc">Congressional Record granules. Health bills found via CRS policy area. Each granule is one bill's House floor debate.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">API structure</div>
+        <pre>GET api.govinfo.gov/packages/CREC-2006-12-09/granules
+Returns granule list.
+Granule: CREC-2006-12-09-pt1-PgH8901
+= SCHIP floor debate, December 9 2006
+Pre-1993: bound PDFs (CRECB), OCR via pytesseract</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Script</div>
+        <div class="links">
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/congressional_record_pull.py">scripts/congressional_record_pull.py</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node source" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">External</div>
+      <div class="node-title">OLA Azure Search API</div>
+      <div class="node-file">aihansardsearch-apim.azure-api.net/api/search/keyword</div>
+    </div>
+    <div class="node-desc">Ontario Hansard search backend. Identified by inspecting browser network traffic on the OLA search page. Accepts OData filter expressions.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Filter per date</div>
+        <pre>POST /api/search/keyword
+{
+  "keyword": "*",
+  "filter": "(date ge 1986-01-14T00:00:00Z
+    and date le 1986-01-14T23:59:59Z)
+    and typeOfBusiness eq 'ORDERS OF THE DAY'",
+  "rows": 500
+}
+Note: pre-2018 uses all-caps typeOfBusiness.
+Post-2018 uses mixed case. Both queried.</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Script</div>
+        <div class="links">
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/fetch_ontario_hansard_via_api.py">scripts/fetch_ontario_hansard_via_api.py</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node source" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">External</div>
+      <div class="node-title">assnat.qc.ca</div>
+      <div class="node-file">assnat.qc.ca/fr/travaux-parlementaires/</div>
+    </div>
+    <div class="node-desc">Journal des debats HTML. 1,831 sitting-day pages. Each contains full business of the day before bill-specific extraction.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Example source page</div>
+        <div class="links">
+          <a href="https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20220413.html">Journal des debats 2022-04-13 (Bill 28 sitting day)</a>
+          <a href="https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/35-1/journal-debats/19951204.html">Journal des debats 1995-12-04</a>
+        </div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">What raw HTML contains</div>
+        <pre>DECLARATIONS DE DEPUTES
+QUESTIONS ET REPONSES ORALES
+ADOPTION DU PRINCIPE DU PROJET
+  DE LOI N 28   &lt;-- section marker
+PETITIONS
+[all of these on one page]</pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="arrows">
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">congressional_record_pull.py<br>fetch granule XML, extract House text<br>OCR for pre-1993 PDFs</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">fetch_ontario_hansard_via_api.py<br>then rebuild_clean_ontario.py<br>keep only paragraphs with bill number in text</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">HTTP fetch + strip HTML sidebar<br>save as plain text per sitting day<br>then extract_quebec_bill_segments.py</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+</div>
+
+<!-- STAGE 1 -->
+<div class="stage-label">Stage 1 — Bill-Specific Text</div>
+<div class="row">
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — on GitHub</div>
+      <div class="node-title">US Floor Debate Files</div>
+      <div class="node-file">data/us/congressional_record_speeches/</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">448</div>
+      <div class="node-n-label">.txt files, one per health bill-date</div>
+    </div>
+    <div class="node-desc">Bill-specific by construction. No extraction needed. GovInfo granule = one bill's floor debate.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">File trace — SCHIP, 2006-12-09</div>
+        <div class="trace">
+          GovInfo granule CREC-2006-12-09-pt1<br>
+          <span class="arr">&#8594;</span> <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/us/congressional_record_speeches/2006-12-09-test_notes.txt">data/us/congressional_record_speeches/2006-12-09-test_notes.txt</a><br>
+          <span class="arr">&#8594;</span> sentences.json sentence_id "20061209-s42"<br>
+          <span class="arr">&#8594;</span> predications.json<br>
+          <span class="arr">&#8594;</span> triples_v2.json<br>
+          <span class="arr">&#8594;</span> factuality_scores_v2.json key "2006-12-09"
+        </div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Example content</div>
+        <pre>"Keeping these programs intact is
+critically important for the health
+and well-being of our Nation's children.
+Since its inception, SCHIP has been an
+integral part of reducing the number of
+uninsured children..."</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">GitHub</div>
+        <div class="links">
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/us/congressional_record_speeches">Browse all 448 files</a>
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/us/congressional_record_speeches/2006-12-09-test_notes.txt">2006-12-09-test_notes.txt (SCHIP)</a>
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/us/congressional_record_speeches/1985-06-18.txt">1985-06-18.txt (earliest bill)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — Yale OneDrive</div>
+      <div class="node-title">Ontario Verified Bill Segments</div>
+      <div class="node-file">data/canada/ontario/hansard_api_bill_segments_clean.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">249 bills, 83,443 paragraphs</div>
+      <div class="node-n-label">every paragraph verified: bill number in text</div>
+    </div>
+    <div class="node-desc">Previous version had 943 wrong date-sections from a single-bill date fallback. Clean version keeps only paragraphs where the bill number appears explicitly.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">File trace — Bill 94, extra billing, 1986-01-14</div>
+        <div class="trace">
+          OLA API, date=1986-01-14, typeOfBusiness=ORDERS OF THE DAY<br>
+          <span class="arr">&#8594;</span> hansard_api_bill_segments_clean.json["1985-Bill94"]["1986-01-14"]<br>
+          <a href="https://www.ola.org/en/legislative-business/house-documents/parliament-34/session-1/1986-01-14/hansard">OLA Hansard page 1986-01-14</a><br>
+          <span class="arr">&#8594;</span> sentences_bill_specific_api.json<br>
+          <span class="arr">&#8594;</span> predications.json<br>
+          <span class="arr">&#8594;</span> triples_v2.json<br>
+          <span class="arr">&#8594;</span> factuality_scores_v2.json key "1985-Bill94"
+        </div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Example paragraph (verified)</div>
+        <pre>"Resuming the adjourned debate on the
+motion for second reading of Bill 94,
+An Act regulating the Amounts that Persons
+may Charge for rendering Services that are
+Insured Services under the Health Insurance
+Act..."</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Access</div>
+        <div class="links">
+          <a href="https://yaleedu-my.sharepoint.com/:u:/g/personal/caprice_culkin_yale_edu/IQCAGMCyyH_0ToGTWu1erpwpAV8Bcot0NVoBJZ5BJPxiTYI?e=NO1Els">Yale OneDrive — hansard_api_bill_segments_clean.json (116MB)</a>
+        </div>
+        <div class="access-note">Not on GitHub (exceeds 100MB limit). Download from Yale OneDrive. To regenerate: run fetch_ontario_hansard_via_api.py then rebuild_clean_ontario.py.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — on GitHub</div>
+      <div class="node-title">Quebec Raw Transcripts + Bill Segments</div>
+      <div class="node-file">data/canada/quebec_assembly/YYYYMMDD.txt<br>data/canada/quebec_assembly/bill_segments/</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">1,831 full-day files / 11,369 bill segments</div>
+      <div class="node-n-label">extracted via section markers from full sitting-day transcripts</div>
+    </div>
+    <div class="node-desc">Section markers identify when the Assembly takes up a specific bill. Everything else on the sitting day is removed.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">File trace — Bill 28, COVID emergency end, 2022-04-13</div>
+        <div class="trace">
+          <a href="https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20220413.html">assnat.qc.ca 2022-04-13 (source)</a><br>
+          <span class="arr">&#8594;</span> <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/20220413.txt">data/canada/quebec_assembly/20220413.txt</a> (full day)<br>
+          <span class="arr">&#8594;</span> <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/bill_segments/20220413_bill28.txt">bill_segments/20220413_bill28.txt</a> (bill-specific)<br>
+          <span class="arr">&#8594;</span> sentences.json<br>
+          <span class="arr">&#8594;</span> predications.json<br>
+          <span class="arr">&#8594;</span> triples_v2.json<br>
+          <span class="arr">&#8594;</span> factuality_scores_v2.json key "2022-Bill28"
+        </div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Section markers used</div>
+        <pre>Etude du projet de loi n X
+Adoption du principe du projet de loi n X
+Reprise du debat sur l'adoption du principe
+Prise en consideration du rapport
+Adoption du projet de loi n X</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Before extraction (full day)</div>
+        <pre>DECLARATIONS DE DEPUTES
+  Mme Carrier-Perreault: ...
+QUESTIONS ET REPONSES ORALES
+  M. Johnson: ...
+ADOPTION DU PRINCIPE DU PROJET
+  DE LOI N 28  &lt;-- marker here
+  M. Leitao: On reprend le debat...</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">After extraction (bill-specific only)</div>
+        <pre>M. Leitao: On reprend le debat sur
+le projet de loi n 28, Loi visant
+a mettre fin a l'etat d'urgence
+sanitaire...</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">GitHub</div>
+        <div class="links">
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/canada/quebec_assembly">Browse transcripts (1,831 files)</a>
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/canada/quebec_assembly/bill_segments">Browse bill segments (11,369 files)</a>
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/20220413.txt">20220413.txt (Bill 28 full day)</a>
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/bill_segments/20220413_bill28.txt">20220413_bill28.txt (Bill 28 extracted)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="arrows">
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">extract_speaker_turns_us.py<br>split by speaker attribution regex<br>tokenize sentences, lookup party</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">convert_ontario_api_segments_to_sentences.py<br>split paragraphs into sentences<br>lookup party from name-party index</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">convert_quebec_segments_to_sentences.py<br>split segments into sentences<br>assign speaker and party</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+</div>
+
+<!-- STAGE 2 -->
+<div class="stage-label">Stage 2 — Sentence Tokenization</div>
+<div class="row">
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — not on GitHub</div>
+      <div class="node-title">US Sentences</div>
+      <div class="node-file">data/dbpedia_pipeline/us/sentences.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">584,111</div>
+      <div class="node-n-label">sentences with speaker, party, bill_key</div>
+    </div>
+    <div class="node-desc">Fields: sentence_id, date, text, speaker, party, is_minister, bill_key.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Example record</div>
+        <pre>{
+  "sentence_id": "20061209-CREC-s42",
+  "date": "2006-12-09",
+  "text": "Keeping these programs intact is
+critically important for the health
+and well-being of our Nation's children.",
+  "speaker": "Mr. Pallone",
+  "party": "Democrat",
+  "is_minister": false,
+  "bill_key": "2006-HR6201"
+}</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Access</div>
+        <div class="access-note">Not on GitHub. Regenerate: python3 scripts/extract_speaker_turns_us.py</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — not on GitHub</div>
+      <div class="node-title">Ontario Sentences</div>
+      <div class="node-file">data/canada/ontario/sentences_bill_specific_api.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">1,942,246</div>
+      <div class="node-n-label">sentences — 669MB</div>
+    </div>
+    <div class="node-desc">Fields: sentence_id, date, text, speaker, party, bill_key, source.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Example record</div>
+        <pre>{
+  "sentence_id": "19860114-api-1985b94-s1",
+  "date": "1986-01-14",
+  "text": "We built up one of the best health
+care systems in North America.",
+  "speaker": "Mr. Miller",
+  "party": "Progressive Conservative Party",
+  "bill_key": "1985-Bill94",
+  "source": "ola_api"
+}</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Access</div>
+        <div class="access-note">Not on GitHub (669MB). Regenerate from hansard_api_bill_segments_clean.json (Yale OneDrive): python3 scripts/convert_ontario_api_segments_to_sentences.py</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — not on GitHub</div>
+      <div class="node-title">Quebec Sentences</div>
+      <div class="node-file">data/dbpedia_pipeline/quebec/sentences.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">923,634</div>
+      <div class="node-n-label">sentences with speaker, party, bill_key</div>
+    </div>
+    <div class="node-desc">Fields: sentence_id, date, text, speaker, party, bill_key.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Example record</div>
+        <pre>{
+  "sentence_id": "20220413-qc-bill28-s3",
+  "date": "2022-04-13",
+  "text": "On reprend le debat sur le projet
+de loi n 28, Loi visant a mettre fin
+a l'etat d'urgence sanitaire.",
+  "speaker": "M. Carlos J. Leitao",
+  "party": "Quebec Liberal Party",
+  "bill_key": "2022-Bill28"
+}</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Access</div>
+        <div class="access-note">Not on GitHub. Regenerate from bill_segments/ (on GitHub): python3 scripts/convert_quebec_segments_to_sentences.py</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="arrows">
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">extract_predications.py JURISDICTION=us<br>en_core_web_lg spaCy<br>ROOT verb + nsubj + dobj/obj<br>exclude existential roots</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">extract_predications.py JURISDICTION=ontario<br>en_core_web_lg spaCy</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">extract_predications.py JURISDICTION=quebec<br>fr_core_news_lg spaCy</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+</div>
+
+<!-- STAGE 3 -->
+<div class="stage-label">Stage 3 — Predication Extraction (V2 pipeline, per Chartash Sept 11 2026)</div>
+<div class="row">
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — not on GitHub</div>
+      <div class="node-title">US Predications</div>
+      <div class="node-file">data/dbpedia_pipeline/us/predications.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">215,412</div>
+      <div class="node-n-label">SVO triples — 36.9% of sentences</div>
+    </div>
+    <div class="node-desc">spaCy extracts Subject-Verb-Object before Spotlight runs. Spotlight then runs on subject and object strings only, never on the full sentence.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Why predications first</div>
+        <pre>OLD: Spotlight on full sentence
+"The OMA, which represents 30,000 physicians,
+endorsed this legislation."
+Entities: OMA, Physician, Legislation
+Pair (OMA, Physician) confirmed by DBpedia
+but the speaker was not claiming this.
+
+NEW: spaCy extracts predication first
+subject: Ontario Medical Association
+verb:    endorsed
+object:  legislation
+Spotlight on those two strings only.
+Pair (OMA, Legislation) not in DBpedia.
+Correctly not supported.</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Example predications</div>
+        <pre>TEXT: "Last session Congress passed an
+omnibus veterans bill, H.R..."
+  subject: Congress
+  verb:    pass
+  object:  an omnibus veterans bill
+
+TEXT: "Their work adheres to the highest
+standards of objectivity..."
+  subject: Their work
+  verb:    adhere
+  object:  the highest standards</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">What is excluded</div>
+        <pre>Existential root verbs: be, have, do, seem
+No subject or no object found
+Subject equals object
+Entities in relative clauses or parentheticals</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Access and script</div>
+        <div class="access-note">Not on GitHub (86.8MB). Regenerate: JURISDICTION=us python3 scripts/extract_predications.py</div>
+        <div class="links">
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/extract_predications.py">scripts/extract_predications.py</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node running" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">In progress</div>
+      <div class="node-title">Ontario Predications</div>
+      <div class="node-file">data/dbpedia_pipeline/ontario/predications.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">~700K expected</div>
+      <div class="node-n-label">from 1,942,246 sentences</div>
+    </div>
+    <div class="node-desc">Runs after Ontario sentences pipeline copy. Same logic as US with en_core_web_lg.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Command</div>
+        <pre>JURISDICTION=ontario caffeinate -dis \
+  python3 scripts/extract_predications.py</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">File trace — Bill 94 sentence continued</div>
+        <div class="trace">
+          sentences_bill_specific_api.json<br>
+          sentence: "We built up one of the best health care systems in North America."<br>
+          <span class="arr">&#8594;</span> predications.json<br>
+          subject: "We" | verb: build | object: "health care systems"<br>
+          <span class="arr">&#8594;</span> Spotlight on "We" and "health care systems"
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node done" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Complete — not on GitHub</div>
+      <div class="node-title">Quebec Predications</div>
+      <div class="node-file">data/dbpedia_pipeline/quebec/predications.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">177,952</div>
+      <div class="node-n-label">SVO triples — 19.3% of sentences</div>
+    </div>
+    <div class="node-desc">Lower rate than US reflects fr_core_news_lg recall on Quebec legislative French. Complex nominal constructions reduce predication extraction.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Example predications</div>
+        <pre>TEXT: "le ministre transmet a chaque regie
+regionale l'enveloppe budgetaire..."
+  sujet:  le ministre
+  verbe:  transmettre
+  objet:  l'enveloppe budgetaire
+
+TEXT: "Ce programme comporte une formation
+civique de six heures..."
+  sujet:  Ce programme
+  verbe:  comporter
+  objet:  une formation civique</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Access</div>
+        <div class="access-note">Not on GitHub (80.2MB). Regenerate: JURISDICTION=quebec python3 scripts/extract_predications.py</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="arrows">
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">dbpedia_batch_pipeline.py extract_v2<br>Spotlight EN localhost:2222<br>subject string only, then object string only</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">dbpedia_batch_pipeline.py extract_v2<br>Spotlight EN localhost:2222</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+  <div class="arrow-col">
+    <div class="v-line"></div>
+    <div class="arrow-tag">dbpedia_batch_pipeline.py extract_v2<br>Spotlight FR localhost:2223<br>links to fr.dbpedia.org entities</div>
+    <div class="v-line"></div>
+    <div class="arrow-tip">&#8595;</div>
+  </div>
+</div>
+
+<!-- STAGE 4 -->
+<div class="stage-label">Stage 4 — DBpedia Spotlight Entity Linking</div>
+<div class="row">
+
+  <div class="node running" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">In progress</div>
+      <div class="node-title">US V2 Triples</div>
+      <div class="node-file">data/dbpedia_pipeline/us/triples_v2.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">Running</div>
+      <div class="node-n-label">Spotlight on 215,412 predications</div>
+    </div>
+    <div class="node-desc">Subject and object strings sent to Spotlight separately. Returns DBpedia URI for each string.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Infrastructure</div>
+        <pre>Dunkleosteus (10.168.171.152, Yale VPN)
+English Spotlight: port 2222
+SSH tunnel:
+ssh -i ~/.ssh/dunkleosteus_key \
+  -L 2222:localhost:2222 \
+  cc3436@10.168.171.152</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Example output record</div>
+        <pre>{
+  "sentence_id": "20061209-CREC-s42",
+  "subject": "Congress",
+  "object": "an omnibus veterans bill",
+  "verb_lemma": "pass",
+  "concept_uris": [
+    "dbpedia.org/resource/United_States_Congress",
+    "dbpedia.org/resource/Omnibus_bill"
+  ],
+  "hedged": false
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending</div>
+      <div class="node-title">Ontario V2 Triples</div>
+      <div class="node-file">data/dbpedia_pipeline/ontario/triples_v2.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">Pending</div>
+      <div class="node-n-label">runs after Ontario predications complete</div>
+    </div>
+    <div class="node-desc">Same pipeline as US using English Spotlight on port 2222.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Command</div>
+        <pre>JURISDICTION=ontario caffeinate -dis \
+  python3 scripts/dbpedia_batch_pipeline.py \
+  extract_v2</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="node running" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">In progress</div>
+      <div class="node-title">Quebec V2 Triples</div>
+      <div class="node-file">data/dbpedia_pipeline/quebec/triples_v2.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">Running</div>
+      <div class="node-n-label">Spotlight FR on 177,952 predications</div>
+    </div>
+    <div class="node-desc">French Spotlight on port 2223. Links to fr.dbpedia.org.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Known infrastructure issue</div>
+        <pre>fr.dbpedia.org SSL cert expired Aug 2026.
+HTTP only throughout French pipeline.
+SPARQL: no FROM clause (returns empty with FROM).
+graph_clause set to empty string.</pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="merge">
+  <div class="merge-top">
+    <div class="merge-v-short"></div>
+    <div class="merge-v-short"></div>
+    <div class="merge-v-short"></div>
+  </div>
+  <div class="merge-h"></div>
+  <div class="merge-v"></div>
+  <div class="merge-tag">dbpedia_batch_pipeline.py dedupe<br>collect all (URI_A, URI_B) pairs across all sentences<br>deduplicate — query DBpedia once per unique pair</div>
+  <div class="merge-v"></div>
+  <div class="arrow-tip">&#8595;</div>
+</div>
+
+<!-- STAGE 5 -->
+<div class="stage-label">Stage 5 — SPARQL Verification</div>
+<div class="row" style="justify-content:center">
+
+  <div class="node future" style="width:620px" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending — all jurisdictions</div>
+      <div class="node-title">DBpedia SPARQL Results Cache</div>
+      <div class="node-file">data/dbpedia_pipeline/{jurisdiction}/dbpedia_results.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">One result per unique entity pair</div>
+      <div class="node-n-label">cached — query DBpedia once, apply to all sentences containing that pair</div>
+    </div>
+    <div class="node-desc">Local Virtuoso at localhost:8890. English and French DBpedia both loaded. Checks for any direct triple connecting the two entities in either direction.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">SPARQL query template</div>
+        <pre>SELECT ?a ?b ?p WHERE {
+  VALUES (?a ?b) { (&lt;URI_A&gt; &lt;URI_B&gt;) }
+  { ?a ?p ?b } UNION { ?b ?p ?a }
+}</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Supported example</div>
+        <pre>Pair: (dbpedia:Canada, dbpedia:United_States)
+Result: dbo:neighboringMunicipality
+Supported: True</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Not supported example</div>
+        <pre>Pair: (dbpedia:Ontario_Medical_Association,
+       dbpedia:Legislation)
+Result: no triples found
+Supported: False
+The OMA endorsing legislation is rhetorical.
+The relationship is not in DBpedia.</pre>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">Commands</div>
+        <pre>JURISDICTION=us python3 scripts/dbpedia_batch_pipeline.py query
+JURISDICTION=quebec python3 scripts/dbpedia_batch_pipeline.py query
+JURISDICTION=ontario python3 scripts/dbpedia_batch_pipeline.py query</pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="merge">
+  <div class="merge-v"></div>
+  <div class="merge-tag">dbpedia_batch_pipeline.py annotate<br>look up support for each predication via URI pair<br>join back to sentence metadata: date, party, bill_key</div>
+  <div class="merge-v"></div>
+  <div class="arrow-tip">&#8595;</div>
+</div>
+
+<!-- STAGE 6 -->
+<div class="stage-label">Stage 6 — Factuality Scores Per Bill</div>
+<div class="row">
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending V2</div>
+      <div class="node-title">US Factuality Scores</div>
+      <div class="node-file">data/dbpedia_pipeline/us/factuality_scores_v2.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">supported / total claim-bearing</div>
+      <div class="node-n-label">V1 reference: mean 0.2054</div>
+    </div>
+    <div class="node-desc">Per bill-date. Fields: date, bill_key, score, total_sentences, supported_sentences, vote_result, party.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Complete file trace — SCHIP 2006-12-09</div>
+        <div class="trace">
+          <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/us/congressional_record_speeches/2006-12-09-test_notes.txt">congressional_record_speeches/2006-12-09-test_notes.txt</a><br>
+          <span class="arr">&#8594;</span> sentences.json ["20061209-CREC-s42"]<br>
+          <span class="arr">&#8594;</span> predications.json [subject: Congress, verb: pass, object: omnibus bill]<br>
+          <span class="arr">&#8594;</span> triples_v2.json [Congress URI + Omnibus_bill URI]<br>
+          <span class="arr">&#8594;</span> dbpedia_results.json [supported: true]<br>
+          <span class="arr">&#8594;</span> annotated_sentences_v2.json [supported=true]<br>
+          <span class="arr">&#8594;</span> factuality_scores_v2.json key "2006-12-09"<br>
+          score = supported / total_claim_bearing
+        </div>
+      </div>
+      <div class="detail-block">
+        <div class="detail-label">V1 example scores</div>
+        <pre>2004-10-06: 0.238, supported=5/21, passed
+2021-12-07: 0.197, supported=38/193, Passed
+2003-09-23: 0.201, supported=89/443, Failed</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending V2</div>
+      <div class="node-title">Ontario Factuality Scores</div>
+      <div class="node-file">data/dbpedia_pipeline/ontario/factuality_scores_v2.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">supported / total claim-bearing</div>
+      <div class="node-n-label">V1 reference: mean 0.1006</div>
+    </div>
+    <div class="node-desc">Per bill-date. V1 reference: passed 0.0992 (n=158), failed 0.0983 (n=34).</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Complete file trace — Bill 94</div>
+        <div class="trace">
+          OLA API <span class="arr">&#8594;</span> <a href="https://yaleedu-my.sharepoint.com/:u:/g/personal/caprice_culkin_yale_edu/IQCAGMCyyH_0ToGTWu1erpwpAV8Bcot0NVoBJZ5BJPxiTYI?e=NO1Els">hansard_api_bill_segments_clean.json</a><br>
+          <a href="https://www.ola.org/en/legislative-business/house-documents/parliament-34/session-1/1986-01-14/hansard">OLA Hansard 1986-01-14</a><br>
+          <span class="arr">&#8594;</span> sentences_bill_specific_api.json<br>
+          <span class="arr">&#8594;</span> predications.json<br>
+          <span class="arr">&#8594;</span> triples_v2.json<br>
+          <span class="arr">&#8594;</span> dbpedia_results.json<br>
+          <span class="arr">&#8594;</span> annotated_sentences_v2.json<br>
+          <span class="arr">&#8594;</span> factuality_scores_v2.json key "1985-Bill94"
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending V2</div>
+      <div class="node-title">Quebec Factuality Scores</div>
+      <div class="node-file">data/dbpedia_pipeline/quebec/factuality_scores_v2.json</div>
+    </div>
+    <div class="node-mid">
+      <div class="node-n">supported / total claim-bearing</div>
+      <div class="node-n-label">V1 reference: mean 0.1387</div>
+    </div>
+    <div class="node-desc">Per bill-date. V1: passed 0.1266 (n=767). Era breakdown: CAQ 0.0933, PQ minority 2012 0.1773.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">Complete file trace — Bill 28</div>
+        <div class="trace">
+          <a href="https://www.assnat.qc.ca/fr/travaux-parlementaires/assemblee-nationale/42-1/journal-debats/20220413.html">assnat.qc.ca 2022-04-13</a><br>
+          <span class="arr">&#8594;</span> <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/20220413.txt">20220413.txt</a> (full day)<br>
+          <span class="arr">&#8594;</span> <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/quebec_assembly/bill_segments/20220413_bill28.txt">bill_segments/20220413_bill28.txt</a><br>
+          <span class="arr">&#8594;</span> sentences.json<br>
+          <span class="arr">&#8594;</span> predications.json<br>
+          <span class="arr">&#8594;</span> triples_v2.json (FR Spotlight)<br>
+          <span class="arr">&#8594;</span> dbpedia_results.json (FR DBpedia)<br>
+          <span class="arr">&#8594;</span> factuality_scores_v2.json key "2022-Bill28"
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="merge">
+  <div class="merge-top">
+    <div class="merge-v-short"></div>
+    <div class="merge-v-short"></div>
+    <div class="merge-v-short"></div>
+  </div>
+  <div class="merge-h"></div>
+  <div class="merge-v"></div>
+  <div class="merge-tag">run_analyses.py — all three factuality score files as input</div>
+  <div class="merge-v"></div>
+  <div class="arrow-tip">&#8595;</div>
+</div>
+
+<!-- STAGE 7 -->
+<div class="stage-label">Stage 7 — Analysis (Pending)</div>
+<div class="analysis-row">
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending</div>
+      <div class="node-title">Logistic Regression</div>
+      <div class="node-file">figures/regression_results.png</div>
+    </div>
+    <div class="node-desc">factuality predicting bill passage, controlling for jurisdiction and party.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">V1 result</div>
+        <pre>Coefficient: +0.0467
+p &lt; 0.05
+US + Quebec combined (n=1,193)</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending</div>
+      <div class="node-title">JSD Analysis</div>
+      <div class="node-file">figures/jsd_distributions.png</div>
+    </div>
+    <div class="node-desc">Jensen-Shannon divergence across full score distributions by jurisdiction and party.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">V1 results</div>
+        <pre>US vs Ontario:  0.5941
+US vs Quebec:   0.4558
+ON vs Quebec:   0.2632
+Gov vs Opp ON:  0.0167
+Gov vs Opp QC:  0.0024</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending</div>
+      <div class="node-title">COVID Experiment</div>
+      <div class="node-file">figures/covid_comparison.png</div>
+    </div>
+    <div class="node-desc">Pre vs post March 2020 factuality across all three jurisdictions.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">V1 results</div>
+        <pre>US:      -0.036 post-COVID
+Quebec:  -0.053 post-COVID
+Ontario: +0.006 (under investigation)</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="node future" onclick="T(this)">
+    <div class="node-top">
+      <div class="node-badge">Pending</div>
+      <div class="node-title">Era and Party Breakdown</div>
+      <div class="node-file">figures/era_breakdown.png</div>
+    </div>
+    <div class="node-desc">Factuality by governing party and era. Quebec and Ontario.</div>
+    <div class="node-detail">
+      <div class="detail-block">
+        <div class="detail-label">V1 Quebec by era</div>
+        <pre>PQ minority 2012: 0.1773 (highest)
+Liberal 2003-12:  0.1421
+PQ 1994-2003:     0.1353
+CAQ 2018+:        0.0933 (lowest)
+MAiD debates:     0.1563 vs mean 0.1387</pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+function T(node) {
+  const d = node.querySelector('.node-detail');
+  if (d) d.classList.toggle('open');
+}
+</script>
+</body>
+</html>

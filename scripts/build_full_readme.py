@@ -1,7 +1,7 @@
 """
 build_full_readme.py
 Full detailed README with mermaid diagram, real examples, prose explanations,
-GitHub links, OLA/assnat links, no tables, no em dashes, no AI language.
+GitHub links, OLA/assnat links.
 """
 import json, os, re, random
 random.seed(42)
@@ -114,7 +114,7 @@ w()
 w("**Repository:** github.com/capriceculkin/legislative-health-factuality")
 w()
 
-w("---")
+
 w()
 w("## Pipeline")
 w()
@@ -154,7 +154,7 @@ w("    PRED --> SPOT --> SPARQL --> SCORES")
 w("```")
 w()
 
-w("---")
+
 w()
 w("## Stage 1: Bill-Specific Text Extraction")
 w()

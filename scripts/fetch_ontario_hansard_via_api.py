@@ -132,11 +132,17 @@ def process_batch(dates, paragraphs):
         topic = para.get("topic", "") or ""
         text = clean_html(para.get("paragraph", ""))
         speaker = para.get("speaker", "")
+        session = para.get("session", "")
+        url = para.get("url", "")
+        para_url = para.get("paraUrl", "")
         if text and len(text) > 20:
             date_topic_paras[date][topic].append({
                 "text": text,
                 "speaker": speaker,
                 "topic": topic,
+                "session": session,
+                "url": url,
+                "para_url": para_url,
             })
 
     for date in dates:
@@ -171,6 +177,9 @@ def process_batch(dates, paragraphs):
                             "text": p["text"],
                             "speaker": p["speaker"],
                             "topic": topic,
+                            "session": p.get("session",""),
+                            "url": p.get("url",""),
+                            "para_url": p.get("para_url",""),
                             "assignment_method": assignment_method
                         })
                     break  # Don't assign same topic to multiple bills

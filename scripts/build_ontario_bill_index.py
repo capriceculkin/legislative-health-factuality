@@ -1,16 +1,14 @@
 """
 build_ontario_bill_index.py
 
-Extracts bill citations ("Bill 124, An Act to...") from every Ontario
-Hansard transcript in data/canada/ontario/. Unlike Quebec's CSSS files,
-Ontario floor debates cover all topics, so bills get a preliminary
-health_tag based on title keywords. Bills with no title found stay
-untagged for a later classifier pass.
+Extracts bill citations from every Ontario Hansard transcript in
+data/canada/ontario/. Bills are keyed by actual parliament-session
+(e.g. "33-1-Bill94") instead of 4-year era buckets, which caused
+bill number collisions across parliaments.
 
-Output: data/canada/ontario/ontario_bill_index.json (keyed by session-era
-bill identity: bills renumber each parliament, so the key is
-"{first_seen_year}-Bill{number}" to avoid collapsing different bills
-that share a number across decades).
+Parliament-session boundaries sourced from OLA records.
+
+Output: data/canada/ontario/ontario_bill_index.json
 """
 
 import os
@@ -22,13 +20,11 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ONTARIO_DIR = os.path.join(REPO_ROOT, "data", "canada", "ontario")
 OUTPUT_PATH = os.path.join(ONTARIO_DIR, "ontario_bill_index.json")
 
-# Formal citation: "Bill 124, An Act to amend..."
 BILL_PATTERN = re.compile(
     r"Bill\s+(\d+)\s*,\s*(An Act[^\n.;]{0,250})",
     re.IGNORECASE
 )
 
-# Bare references: "Bill 124" with no title, still worth logging the sighting
 BARE_PATTERN = re.compile(r"Bill\s+(\d+)\b")
 
 HEALTH_KEYWORDS = [
@@ -38,21 +34,60 @@ HEALTH_KEYWORDS = [
     "disability", "midwif", "dental", "ohip", "home care",
 ]
 
+# Exact parliament-session boundaries from OLA records
+PARLIAMENT_SESSIONS = {
+    "29-4": ("1975-10-28", "1977-03-08"),
+    "29-5": ("1977-03-09", "1977-09-14"),
+    "30-1": ("1977-10-18", "1978-12-15"),
+    "30-2": ("1979-03-12", "1980-02-07"),
+    "30-3": ("1980-03-10", "1981-03-26"),
+    "30-4": ("1981-03-27", "1981-11-19"),
+    "31-1": ("1981-11-23", "1982-12-16"),
+    "31-2": ("1983-03-14", "1984-03-08"),
+    "31-3": ("1984-03-26", "1984-06-21"),
+    "31-4": ("1984-10-22", "1985-02-07"),
+    "32-1": ("1985-02-11", "1985-05-01"),
+    "33-1": ("1985-05-02", "1985-10-31"),
+    "33-2": ("1985-11-18", "1986-10-06"),
+    "33-3": ("1986-11-17", "1987-09-08"),
+    "34-1": ("1987-10-01", "1988-12-16"),
+    "34-2": ("1989-03-20", "1990-08-30"),
+    "35-1": ("1990-11-20", "1991-12-19"),
+    "35-2": ("1992-04-06", "1993-06-17"),
+    "35-3": ("1993-11-15", "1995-02-09"),
+    "36-1": ("1995-09-26", "1997-12-18"),
+    "36-2": ("1998-03-23", "1998-12-10"),
+    "36-3": ("1999-03-15", "1999-10-18"),
+    "37-1": ("1999-10-25", "2001-12-20"),
+    "37-2": ("2002-03-18", "2002-12-19"),
+    "37-3": ("2003-03-17", "2003-09-18"),
+    "38-1": ("2003-12-09", "2004-12-16"),
+    "38-2": ("2005-02-28", "2007-10-01"),
+    "39-1": ("2007-10-17", "2008-12-18"),
+    "39-2": ("2009-03-02", "2011-10-06"),
+    "40-1": ("2011-11-30", "2012-12-20"),
+    "40-2": ("2013-02-19", "2014-05-02"),
+    "41-1": ("2014-07-02", "2015-12-10"),
+    "41-2": ("2016-02-22", "2017-12-07"),
+    "41-3": ("2018-03-19", "2018-05-09"),
+    "42-1": ("2018-07-11", "2019-12-12"),
+    "42-2": ("2020-02-18", "2022-05-04"),
+    "43-1": ("2022-08-08", "2024-12-12"),
+    "44-1": ("2025-04-14", "2099-12-31"),
+}
+
+
+def date_to_session(date_str):
+    """Map a date string to its parliament-session code."""
+    for session, (start, end) in PARLIAMENT_SESSIONS.items():
+        if start <= date_str <= end:
+            return session
+    return None
+
 
 def health_tag_from_title(title):
     t = title.lower()
     return any(kw in t for kw in HEALTH_KEYWORDS)
-
-
-def parliament_era(date_str):
-    """
-    Ontario bills renumber each parliament (roughly every 3-5 years).
-    Without a parliament-number source, bucket by year as a conservative
-    proxy so 'Bill 1' in 1985 doesn't merge with 'Bill 1' in 2003.
-    A 4-year bucket is used: 1985-1988 -> era 1985, etc.
-    """
-    year = int(date_str[:4])
-    return year - ((year - 1985) % 4)
 
 
 def main():
@@ -61,12 +96,16 @@ def main():
     print(f"Scanning {len(files)} Ontario Hansard files...")
 
     files_with_no_bill = 0
+    no_session = 0
 
     for filename in files:
         date = filename.replace(".txt", "")
-        era = parliament_era(date)
-        path = os.path.join(ONTARIO_DIR, filename)
+        session = date_to_session(date)
+        if not session:
+            no_session += 1
+            continue
 
+        path = os.path.join(ONTARIO_DIR, filename)
         with open(path, encoding="utf-8", errors="ignore") as f:
             content = f.read()
 
@@ -80,18 +119,21 @@ def main():
         seen_this_file = set()
 
         for number, raw_title in titled:
-            key = f"{era}-Bill{number}"
+            key = f"{session}-Bill{number}"
             title = re.sub(r"\s+", " ", raw_title).strip()
+            # Truncate at first comma to get short title only
+            short_title = title.split(",")[0].strip()
             entry = bill_index.setdefault(key, {
                 "bill_number": number,
-                "era": era,
+                "session": session,
                 "title": "",
+                "short_title": "",
                 "health_tag": False,
-                "sessions": [],
                 "dates": [],
             })
             if len(title) > len(entry["title"]):
                 entry["title"] = title
+                entry["short_title"] = short_title
                 entry["health_tag"] = health_tag_from_title(title)
             if date not in entry["dates"]:
                 entry["dates"].append(date)
@@ -101,13 +143,13 @@ def main():
             if number in seen_this_file:
                 continue
             seen_this_file.add(number)
-            key = f"{era}-Bill{number}"
+            key = f"{session}-Bill{number}"
             entry = bill_index.setdefault(key, {
                 "bill_number": number,
-                "era": era,
+                "session": session,
                 "title": "",
+                "short_title": "",
                 "health_tag": False,
-                "sessions": [],
                 "dates": [],
             })
             if date not in entry["dates"]:
@@ -120,20 +162,22 @@ def main():
     with_title = sum(1 for e in bill_index.values() if e["title"])
     health = sum(1 for e in bill_index.values() if e["health_tag"])
 
-    print(f"\nTotal unique bills (era-scoped): {total}")
-    print(f"Bills with formal title captured: {with_title}")
-    print(f"Bills keyword-tagged as health-related: {health}")
-    print(f"Files with no bill mention: {files_with_no_bill} of {len(files)}")
-    print(f"\nSaved index to: {OUTPUT_PATH}")
+    print(f"\nTotal unique bills (session-scoped): {total}")
+    print(f"Bills with formal title: {with_title}")
+    print(f"Bills health-tagged: {health}")
+    print(f"Files with no session mapping: {no_session}")
+    print(f"Files with no bill mention: {files_with_no_bill}")
+    print(f"\nSaved to: {OUTPUT_PATH}")
 
     print("\nSample health-tagged bills:")
     shown = 0
     for key, entry in bill_index.items():
         if entry["health_tag"] and shown < 5:
-            print(f"  {key}: {entry['title'][:90]}")
-            print(f"    Dates: {entry['dates'][:3]} ({len(entry['dates'])} total)")
+            print(f"  {key}: {entry['short_title'][:60]}")
+            print(f"    Dates: {entry['dates'][:3]}")
             shown += 1
 
 
 if __name__ == "__main__":
     main()
+

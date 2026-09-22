@@ -61,6 +61,39 @@ for bill_key, date_data in results.items():
 remaining = [d for d in health_dates if d not in done_dates]
 print(f"Remaining dates: {len(remaining)}")
 
+
+
+STOPWORDS_J = {
+    "AN","ACT","TO","THE","OF","AND","FOR","IN","A","BY","OR","AMEND",
+    "PROVIDE","RESPECTING","CERTAIN","MAKE","REQUIRE","ENSURE","WITH",
+    "RESPECT","RELATED","RELATING","ENACT","GOVERNING","FURTHER","VARIOUS",
+    "AMENDING","CONCERNING","AUTHORIZE","REGULATE","THAT","RENDERING",
+    "UNDER","MAY","ARE","REGULATING","INSURED","CHARGE","ESTABLISH",
+    "IMPOSING","PERSONS","PAYMENT","IMPOSE","PROVIDING","AUTHORIZING",
+    "REQUIRING","ENABLING",
+}
+LEMMA_MAP_J = {
+    "AMENDMENT":"AMEND","AMENDMENTS":"AMEND","SERVICES":"SERVICE",
+    "NURSES":"NURSE","HOMES":"HOME","WORKERS":"WORKER",
+    "PROFESSIONS":"PROFESSION","REGULATIONS":"REGULATION",
+    "RIGHTS":"RIGHT","BENEFITS":"BENEFIT","PERSONS":"PERSON",
+    "AMOUNTS":"AMOUNT","ACTS":"ACT",
+}
+
+def normalize_j(text):
+    if not text: return set()
+    text = text.upper()
+    text = re.sub(r"[^A-Z\s]", " ", text)
+    words = text.split()
+    words = [LEMMA_MAP_J.get(w, w) for w in words]
+    return set(w for w in words if w not in STOPWORDS_J and len(w) > 2)
+
+def get_short_title_j(title):
+    return title.split(",")[0].strip()
+
+def jaccard_j(a, b):
+    if not a or not b: return 0.0
+    return len(a & b) / len(a | b)
 BILL_RE = re.compile(r"\bBill\s+(\d+)\b", re.IGNORECASE)
 
 
@@ -80,14 +113,11 @@ def title_keywords(title):
 
 
 def topic_matches_bill(topic, bill):
-    """Check if a Hansard topic matches a bill."""
+    """Jaccard similarity between normalized topic and bill short title."""
     if not topic:
         return False
-    topic_upper = topic.upper()
-    kws = title_keywords(bill["title"])
-    # Need at least 2 keywords to match, or 1 very specific keyword (>8 chars)
-    matches = [kw for kw in kws if kw in topic_upper]
-    return len(matches) >= 2 or any(len(m) > 8 for m in matches)
+    short = get_short_title_j(bill.get("title", ""))
+    return jaccard_j(normalize_j(short), normalize_j(topic)) >= 0.6
 
 
 def fetch_batch(dates, attempt=0):

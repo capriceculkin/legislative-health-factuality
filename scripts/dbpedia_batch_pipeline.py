@@ -129,7 +129,7 @@ def stage_extract():
                             for r in resources:
                                 r_offset = int(r.get("@offset", 0))
                                 if offset <= r_offset < end:
-                                    if float(r.get("@percentageOfSecondRank", 1.0)) < 0.5:
+                                    if float(r.get("@percentageOfSecondRank", 1.0)) < 0.9:
                                         results[i].append(r["@URI"])
                             offset = end + 2  # account for \n\n separator
                         return results
@@ -151,7 +151,7 @@ def stage_extract():
         seen_ids = {t["sentence_id"] for t in triples}
         print(f"Resuming from checkpoint: {len(triples)} triples, {len(seen_ids)} sentences done")
     total = len(sentences)
-    BATCH_SIZE_EXTRACT = 1
+    BATCH_SIZE_EXTRACT = 50
     for batch_start in range(0, total, BATCH_SIZE_EXTRACT):
         if sentences[batch_start]["sentence_id"] in seen_ids: continue
         batch = sentences[batch_start:batch_start + BATCH_SIZE_EXTRACT]
@@ -211,7 +211,7 @@ def stage_extract_v2():
                     timeout=20)
                 if resp.status_code == 200:
                     return [r["@URI"] for r in resp.json().get("Resources", [])
-                            if float(r.get("@percentageOfSecondRank", 1.0)) < 0.5]
+                            if float(r.get("@percentageOfSecondRank", 1.0)) < 0.9]
             except Exception:
                 if attempt == 2:
                     restart_spotlight(lang)

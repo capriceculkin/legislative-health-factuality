@@ -140,6 +140,20 @@ def extract_predication(sent):
     if len(subject_text.split()) < 1 or len(object_text.split()) < 1:
         return None
 
+    # Filter pronouns and generic determiners
+    PRONOUNS = {'i','we','you','he','she','it','they','this','that','these','those',
+                'some','all','none','any','both','each','few','more','most','other',
+                'such','what','which','who','whom','there','here','something','anything',
+                'everything','nothing','someone','anyone','everyone','no one'}
+    if subject_text.lower().strip() in PRONOUNS:
+        return None
+    if object_text.lower().strip() in PRONOUNS:
+        return None
+    if subject_token.pos_ == "PRON":
+        return None
+    if object_token.pos_ == "PRON":
+        return None
+
     # Don't extract if subject and object are same
     if subject_text.lower() == object_text.lower():
         return None

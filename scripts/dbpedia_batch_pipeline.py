@@ -173,7 +173,7 @@ def stage_extract():
                 "concept_uris": list(dict.fromkeys(uris)),
                 "single_entity": len(uris) == 1,
             })
-            if len(triples) % 1000 == 0:
+            if len(triples) % 100 == 0 and len(triples) > 0:
                 with open(TRIPLES_PATH + ".checkpoint", "w", encoding="utf-8") as f:
                     json.dump(triples, f, ensure_ascii=False)
                 print(f"  checkpoint saved: {len(triples)} triples", flush=True)
@@ -239,13 +239,11 @@ def stage_extract_v2():
         if i % 1000 == 0:
             print(f"  {i}/{total} predications processed, {len(triples)} triples found", flush=True)
 
-        subj_uris = spotlight_string(pred["subject"], SPOTLIGHT_LANG)
-        obj_uris  = spotlight_string(pred["object"],  SPOTLIGHT_LANG)
-
-        if not subj_uris or not obj_uris:
+        full_text = pred.get("full_text", pred["subject"] + " " + pred["object"])
+        all_resources = spotlight_string(full_text, SPOTLIGHT_LANG)
+        if not all_resources or len(all_resources) < 2:
             continue
-
-        all_uris = list(dict.fromkeys(subj_uris + obj_uris))
+        all_uris = list(dict.fromkeys(all_resources))
         if len(all_uris) < 2:
             continue
 
@@ -261,7 +259,7 @@ def stage_extract_v2():
             "single_entity": False,
         })
 
-        if len(triples) % 1000 == 0:
+        if len(triples) % 100 == 0 and len(triples) > 0:
             with open(checkpoint, "w", encoding="utf-8") as f:
                 json.dump(triples, f, ensure_ascii=False)
             print(f"  checkpoint saved: {len(triples)} triples", flush=True)

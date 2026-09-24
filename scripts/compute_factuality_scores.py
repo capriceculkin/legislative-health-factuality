@@ -80,8 +80,8 @@ def load_bill_meta():
             if not bill_data.get("health_tag"):
                 continue
             bill_num = bill_data.get("bill_number", "")
-            era = bill_data.get("era", 0)
-            parliament = ERA_TO_PARLIAMENT.get(int(era), 0)
+            session = bill_data.get("session", "")
+            parliament = int(session.split("-")[0]) if session else 0
             outcome = bill_outcomes.get(f"{parliament}-{bill_num}", "unknown")
             for date in bill_data.get("dates", []):
                 bill_meta[date] = {

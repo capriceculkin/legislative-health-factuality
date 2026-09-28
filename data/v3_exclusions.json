@@ -1,0 +1,506 @@
+[
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "43-1-Bill66",
+  "date": "2023-04-06",
+  "reason": "not a Bill 66 sitting: the OLA Hansard for Thursday 6 April 2023 never mentions Bill 66 (it covers Bills 91 and 112), and the index had no Hansard URL for this bill-day",
+  "evidence": "https://www.ola.org/en/legislative-business/house-documents/parliament-43/session-1/2023-04-06/hansard (checked 2026-09-27)",
+  "verified": "by hand against the official record: https://www.ola.org/en/legislative-business/house-documents/parliament-43/session-1/2023-04-06/hansard (checked 2026-09-27)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR3961",
+  "date": "2010-02-24",
+  "reason": "H.R. 3961 passed the House in Nov 2009 as a Medicare physician payment bill; in Feb 2010 it was used as the vehicle for the USA PATRIOT Act extension, so these sittings are not health debate",
+  "evidence": "Congress.gov title of H.R. 3961 (111th): 'An Act to extend expiring provisions of the USA PATRIOT Improvement and Reauthorization Act of 2005...'",
+  "verified": "by hand against the official record: Congress.gov title of H.R. 3961 (111th): 'An Act to extend expiring provisions of the USA PATRIOT Improvement and Reauthorization Act of 2005...'"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR3961",
+  "date": "2010-02-25",
+  "reason": "H.R. 3961 passed the House in Nov 2009 as a Medicare physician payment bill; in Feb 2010 it was used as the vehicle for the USA PATRIOT Act extension, so these sittings are not health debate",
+  "evidence": "Congress.gov title of H.R. 3961 (111th): 'An Act to extend expiring provisions of the USA PATRIOT Improvement and Reauthorization Act of 2005...'",
+  "verified": "by hand against the official record: Congress.gov title of H.R. 3961 (111th): 'An Act to extend expiring provisions of the USA PATRIOT Improvement and Reauthorization Act of 2005...'"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "33-2-Bill94",
+  "date": "1986-07-08",
+  "reason": "section is not this bill's debate: a committee supply report",
+  "evidence": "title: An Act regulating the Amount that Persons may charge for rendering Ser | headings: STANDING COMMITTEE ON SOCIAL DEVELOPMENT | bill numbers named instead: {} | starts: Mr. Reville from the standing committee on social development reported the following r",
+  "verified": "by hand against the official record: OLA Hansard for July 8, 1986: Bill 94 is only mentioned in Oral Questions (EXTRA BILLING), after the bill had passed; the section is a committee supply report, not debate on the bill (checked 2026-09-27)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill101",
+  "date": "1998-12-17",
+  "reason": "section is not this bill's debate: a petition on health care privatization",
+  "evidence": "title:  | headings: HEALTH CARE | bill numbers named instead: {} | starts: I have a further petition addressed to the Legislature of Ontario. \"Say no to privatization of health care. \"To the Legislative Assembly of Ontario: \"Whereas we",
+  "verified": "by hand against the official record: OLA bill page: 36-2 Bill 101 is the Red Tape Reduction Act, 1998 (No. 2); the section is a petition on health care privatization that never names the bill (checked 2026-09-27)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "101-HR3607",
+  "date": "1989-11-20",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3620': 1} | starts: FURTHER MESSAGE FROM THE SENATE A further message from the Senate by Mr. Hallen, one of its clerks, announced that the Senate had passed with amendments in whic",
+  "verified": "by hand against the official record: Congress.gov: the only House action that day is 'Message on Senate action sent to the House' (no floor debate); the section is that Senate message"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "104-HR483",
+  "date": "1995-04-03",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {} | starts: Congressional Record, Volume 141 Issue 61 (Monday, April 3, 1995) EXTENSION OF REMARKS By unanimous consent, permission to revise and extend remarks was granted",
+  "verified": "by hand against the official record: Congress.gov: the only action that day is committee markup 'Ordered to be Reported (Amended) by Voice Vote' (no floor debate); the section is Extensions of Remarks"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "104-HR483",
+  "date": "1995-04-04",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {} | starts: Congressional Record, Volume 141 Issue 62 (Tuesday, April 4, 1995) EXTENSION OF REMARKS By unanimous consent, permission to revise and extend remarks was grante"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "104-HR483",
+  "date": "1995-05-24",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'1561': 18, '772': 4, '1564': 1, '1243': 1} | starts: Congressional Record, Volume 141 Issue 87 (Wednesday, May 24, 1995) AMERICAN OVERSEAS INTERESTS ACT OF 1995 The SPEAKER pro tempore. Pursuant to House Resolutio"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "105-HR4250",
+  "date": "1998-07-21",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'4193': 7, '4276': 4, '4194': 1} | starts: Congressional Record, Volume 144 Issue 98 (Tuesday, July 21, 1998) AMENDMENTS Under clause 6 of rule XXIII, proposed amendments were submitted as follows: H.R. "
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "105-HR4550",
+  "date": "1998-09-14",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'4006': 2} | starts: Congressional Record, Volume 144 Issue 121 (Monday, September 14, 1998) AMENDMENTS Under clause 6 of rule XXIII, proposed amendments were submitted as follows: ",
+  "verified": "by hand against the official record: Congress.gov: the only action that day is 'Referred to the Subcommittee on Crime' (committee referral, no floor debate)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "105-HR4567",
+  "date": "1998-10-07",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3828': 1, '3789': 1, '4274': 1} | starts: Congressional Record, Volume 144 Issue 139 (Wednesday, October 7, 1998) TIME LIMITATION OF REFERRED BILL Pursuant to clause 5 of rule X the following action was"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "106-HR3075",
+  "date": "1999-11-03",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'2634': 1} | starts: Congressional Record, Volume 145 Issue 153 (Wednesday, November 3, 1999) TIME LIMITATION OF REFERRED BILL Pursuant to clause 5 of rule X the following action wa"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "106-HR1304",
+  "date": "2000-06-27",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'4461': 13, '4733': 5} | starts: Congressional Record, Volume 146 Issue 83 (Tuesday, June 27, 2000) AMENDMENTS Under clause 8 of rule XVIII, proposed amendments were submitted as follows: H.R. "
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "106-S2311",
+  "date": "2000-10-03",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'4828': 1} | starts: Congressional Record, Volume 146 Issue 121 (Tuesday, October 3, 2000) H.R. 4828 Offered By: Mr. Walden of Oregon [Amendment in the Nature of a Substitute] Amend"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "106-HR2498",
+  "date": "2000-10-25",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'4846': 1, '4811': 1} | starts: Congressional Record, Volume 146 Issue 135 (Wednesday, October 25, 2000) FURTHER MESSAGE FROM THE SENATE A message from the Senate by Mr. Lundregan, one of its "
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "108-HR1",
+  "date": "2003-06-24",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'2417': 4, '1589': 2} | starts: Congressional Record, Volume 149 Issue 94 (Tuesday, June 24, 2003) AMENDMENTS Under clause 8 of rule XVIII, proposed amendments were submitted as follows: H.R. "
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "109-S3504",
+  "date": "2006-07-17",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {} | starts: Congressional Record, Volume 152 Issue 93 (Monday, July 17, 2006) SENATE ENROLLED BILL SIGNED The SPEAKER announced his signature to an enrolled bill of the Sen"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "109-S2754",
+  "date": "2006-07-17",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'5441': 2, '42': 1} | starts: Congressional Record, Volume 152 Issue 93 (Monday, July 17, 2006) FURTHER MESSAGE FROM THE SENATE A further message from the Senate by Ms. Curtis, one of its cl"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "109-HR810",
+  "date": "2006-07-17",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'5441': 2, '42': 1} | starts: Congressional Record, Volume 152 Issue 93 (Monday, July 17, 2006) FURTHER MESSAGE FROM THE SENATE A further message from the Senate by Ms. Curtis, one of its cl"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "110-HR3",
+  "date": "2007-01-09",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'1': 3} | starts: Congressional Record, Volume 153 Issue 4 (Tuesday, January 9, 2007) {time} 2230 30-SOMETHING WORKING GROUP The SPEAKER pro tempore. The gentleman from Florida ("
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "110-HR3963",
+  "date": "2007-10-22",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'1011': 1, '3867': 1} | starts: Congressional Record, Volume 153 Issue 160 (Monday, October 22, 2007) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9 of"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "110-HR3963",
+  "date": "2007-10-23",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'505': 1, '3685': 1} | starts: Congressional Record, Volume 153 Issue 161 (Tuesday, October 23, 2007) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9 o"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR3961",
+  "date": "2009-11-16",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {} | starts: Congressional Record, Volume 155 Issue 169 (Monday, November 16, 2009) HEALTH CARE REFORM The SPEAKER pro tempore. Under a previous order of the House, the gent"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR3961",
+  "date": "2009-11-17",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3962': 6, '3200': 1} | starts: Congressional Record, Volume 155 Issue 170 (Tuesday, November 17, 2009) HEALTH CARE REFORM (Mr. BACA asked and was given permission to address the House for 1 m"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR4872",
+  "date": "2010-03-18",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3644': 1} | starts: Congressional Record, Volume 156 Issue 40 (Thursday, March 18, 2010) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9 of "
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR847",
+  "date": "2010-07-26",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3101': 3} | starts: Congressional Record, Volume 156 Issue 110 (Monday, July 26, 2010) BUDGETARY EFFECTS OF PAYGO LEGISLATION Pursuant to Public Law 111-139, Mr. Spratt hereby subm"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR847",
+  "date": "2010-07-28",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'4658': 3, '5669': 3, '2480': 2, '5872': 2} | starts: Congressional Record, Volume 156 Issue 112 (Wednesday, July 28, 2010) BUDGETARY EFFECTS OF PAYGO LEGISLATION Pursuant to Public Law 111-139, Mr. Spratt hereby s"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HR847",
+  "date": "2010-09-28",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3619': 8, '6026': 8, '512': 6, '3421': 6, '4168': 6} | starts: Congressional Record, Volume 156 Issue 132 (Tuesday, September 28, 2010) BUDGETARY EFFECTS OF PAYGO LEGISLATION Pursuant to Public Law 111-139, Mr. Spratt hereb"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "113-HJRES73",
+  "date": "2013-09-30",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3205': 1} | starts: Congressional Record, Volume 159 Issue 132 (Monday, September 30, 2013) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9 "
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "113-HJRES73",
+  "date": "2013-10-01",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {} | starts: Congressional Record, Volume 159 Issue 133 (Tuesday, October 1, 2013) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9 of"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "114-HR3762",
+  "date": "2016-02-01",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {} | starts: Congressional Record, Volume 162 Issue 18 (Monday, February 1, 2016) IRAN TERROR FINANCE TRANSPARENCY ACT (Mr. ALLEN asked and was given permission to address t"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "115-HR1215",
+  "date": "2017-06-27",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'1500': 5} | starts: Congressional Record, Volume 163 Issue 110 (Tuesday, June 27, 2017) {time} 1415 ROBERT EMMET PARK ACT OF 2017 Mr. COOK. Mr. Speaker, I move to suspend the rules",
+  "verified": "by hand against the official record: Congress.gov: the only House action that day is 'Rule H. Res. 382 passed House' (the rule, not the bill); the section is the Robert Emmet Park Act; H.R. 1215 itself was debated 2017-06-28, which is kept"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "115-HR6",
+  "date": "2018-06-20",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'6136': 10, '4760': 8} | starts: Congressional Record, Volume 164 Issue 103 (Wednesday, June 20, 2018) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9 of"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "115-HR6",
+  "date": "2018-06-21",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'4760': 1, '6136': 1} | starts: Congressional Record, Volume 164 Issue 104 (Thursday, June 21, 2018) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9 of ",
+  "verified": "by hand against the official record: Congress.gov: the only action that day is a unanimous-consent order of procedure; the section is other bills (H.R. 6136, H.R. 4760); H.R. 6 was debated and passed 2018-06-22, which is kept"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "117-HR7667",
+  "date": "2022-06-08",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'7776': 2} | starts: Congressional Record, Volume 168 Issue 98 (Wednesday, June 8, 2022) BUDGETARY EFFECTS OF PAYGO LEGISLATION Pursuant to the Statutory Pay-As-You-Go Act of 2010 (",
+  "verified": "by hand against the official record: the H.R. 7667 debate is in the Congressional Record of June 7, 2022 (GovInfo granule CREC-2022-06-07-pt1-PgH5298, 'FOOD AND DRUG AMENDMENTS OF 2022', kept); on June 8 the House only held the recorded vote (House Vote #254). The June 8 section was a budget notice."
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "117-HR8542",
+  "date": "2022-09-20",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'8873': 2} | starts: Congressional Record, Volume 168 Issue 151 (Tuesday, September 20, 2022) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause 9"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "118-HR3843",
+  "date": "2024-03-06",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'2799': 25, '2796': 1, '2795': 1, '2812': 1, '2593': 1} | starts: Congressional Record, Volume 170 Issue 40 (Wednesday, March 6, 2024) EXPANDING ACCESS TO CAPITAL ACT OF 2023 General Leave Mr. McHENRY. Mr. Speaker, I ask unani"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "119-HR498",
+  "date": "2025-12-17",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'3492': 1} | starts: Congressional Record, Volume 171 Issue 213 (Wednesday, December 17, 2025) CONGRESSIONAL EARMARKS, LIMITED TAX BENEFITS, OR LIMITED TARIFF BENEFITS Under clause ",
+  "verified": "by hand against the official record: Congress.gov: the only action that day is 'Rules Committee Resolution H. Res. 953 Reported to House' (the rule was reported, no floor debate); the section is an earmark statement; H.R. 498 was debated 2025-12-18, which is kept"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "101-HR1602",
+  "date": "1990-10-25",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'996': 20, '5311': 9, '5803': 7, '486': 5, '5399': 4} | starts: CONFERENCE REPORT ON H.R. 5803, DEPARTMENT OF DEFENSE APPROPRIATIONS ACT, 1991 Mr. MURTHA. Mr. Speaker, pursuant to House Resolution 529, I call up the conferen"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-08-18",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {'136': 6} | starts: Last week the Mike Harris Health Services Restructuring Commission arrived in Ottawa and did wha"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-08-19",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: My question is also of the Minister of Health. Minister, you're probably well aware of the real needs of"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-08-25",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: This is a petition signed by hundreds of people in the Toronto area regarding the Wellesley Central Hosp"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-08-26",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: It is in the hope of a better answer that I direct this to the Premier. I want to ask you about your hos"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-08-27",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {'26': 1} | starts: My question is directed to the Minister of Health. I think people in this chamber realize, and so"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-02",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I have a petition to the Legislature of Ontario. \"Whereas the undersigned residents living in the city o"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-03",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: My question is for the Minister of Health. Minister, I have spent a considerable amount of time in the l"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-04",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: To the Legislative Assembly of Ontario: \"Whereas the undersigned residents living in the city of Thunder"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-09",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I have a petition to the Legislature of Ontario. \"Whereas the undersigned residents living in the city o"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-10",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I have a petition to the Legislature of Ontario. \"Whereas the undersigned residents living in the city o"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-11",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I want to present a petition on behalf of Ann Roxburgh in Thunder Bay, who is very concerned that Women'"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-15",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I have a question to the Minister of Health. Health care planners, health care workers, the public and j"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-16",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I rise today to note what otherwise might not be remarked upon in this House, because the decision made "
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-17",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I have a petition to the Legislative Assembly of Ontario. \"Whereas the Health Services Restructuring Com"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-18",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I have a question for the Minister of Health. A couple of weeks ago I talked to you personally about rep"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-22",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: ABORTION / HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: As the House is aware, we have been chasing the Minister of Health and asking him repeatedly "
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-23",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I have a question for the Minister of Health. Minister, if there's one thing that people are saying abou"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-24",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: My question is for the Minister of Health. I understand he's just now making his way into the House. Yes"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-09-29",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: FAIR MUNICIPAL FINANCE ACT, 1997 (NO. 2) / LOI DE 1997 SUR LE FINANCEMENT ÉQUITABLE DES MUNICIPALITÉS (NO 2) / HOSPITAL RESTRUCTURING | bill numbers named instead: {'136'"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-10-01",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I would like to address this question to the Minister of Health. Which one? Whichever minister would lik"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-10-06",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: ABORTION / HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: To the Legislative Assembly of Ontario: \"Whereas Northwestern Hospital provides quality healt"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-10-07",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: ABORTION / FAIR MUNICIPAL FINANCE ACT, 1997 (NO. 2) / LOI DE 1997 SUR LE FINANCEMENT ÉQUITABLE DES MUNICIPALITÉS (NO 2) / HOSPITAL RESTRUCTURING | bill numbers named inst"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-10-08",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I want to direct my statement to the Minister of Health. May I say, it is delivered with a strong degree"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-10-09",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: \"Whereas tomorrow morning the Health Services Restructuring Commission will be presenting its preliminar"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-11-18",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: ABORTION / HOSPITAL RESTRUCTURING | bill numbers named instead: {} | starts: I am pleased to present a petition signed by hundreds of my constituents in Renfrew county an"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-11-19",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: ABORTION | bill numbers named instead: {} | starts: I have a petition to the Legislative Assembly of Ontario. \"Whereas the Ontario health system is overburdened and unnec"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-11-20",
+  "reason": "section is question period / petitions on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "title: An Act to continue the reforms begun by the Fair Municipal Finance Act | headings: ABORTION | bill numbers named instead: {} | starts: I have a petition signed by 198 people: \"Whereas the Ontario health system is overburdened and unnecessary spending mu"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "104-HR3121",
+  "date": "1996-04-15",
+  "reason": "section is not this bill's debate: the text never names the bill; it is procedural or another bill's business",
+  "evidence": "bill numbers named instead: {'1527': 1} | starts: Congressional Record, Volume 142 Issue 47 (Monday, April 15, 1996) TIME LIMITATION OF REFERRED BILL Pursuant to clause 5 of rule X the following action was take"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "113-HR2668",
+  "date": "2013-07-16",
+  "reason": "section is a one-minute speech on the Authority for Mandate Delay Act (H.R. 2667), which it names twice; it never names H.R. 2668",
+  "evidence": "Congressional Record, Vol. 159 No. 101 (July 16, 2013), 'AUTHORITY FOR MANDATE DELAY ACT' (Mr. Thompson of Pennsylvania)",
+  "verified": "by hand against the official record: the Record text for this section names H.R. 2667 twice and never H.R. 2668; H.R. 2668 was debated and voted on 2013-07-17, which is kept"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "1997-10-02",
+  "reason": "section is a petition on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
+  "evidence": "OLA bill status page for 36-1 Bill 149",
+  "verified": "by hand against the official record: the OLA status page lists October 2, 1997 for Bill 149 only as 'Time allocated' (a procedural motion); our section for that day is a petition headed HOSPITAL RESTRUCTURING that never names the bill (checked 2026-09-27)"
+ }
+]

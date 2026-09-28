@@ -1,0 +1,436 @@
+[
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill135",
+  "date": "1991-06-26",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ONTARIO MEDICAL ASSOCIATION DUES ACT, 1991 / LOI DE 1991 SUR LES COTISATIONS DE L'ONTARIO ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill135",
+  "date": "1991-11-05",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ONTARIO MEDICAL ASSOCIATION DUES ACT, 1991 / LOI DE 1991 SUR LES COTISATIONS DE L'ONTARIO ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill135",
+  "date": "1991-11-06",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ONTARIO MEDICAL ASSOCIATION DUES ACT, 1991 / LOI DE 1991 SUR LES COTISATIONS DE L'ONTARIO ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill135",
+  "date": "1991-12-19",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ONTARIO MEDICAL ASSOCIATION DUES ACT, 1991 / LOI DE 1991 SUR LES COTISATIONS DE L'ONTARIO ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill143",
+  "date": "1991-11-19",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (WASTE MANAGEMENT ACT, 1991 / LOI DE 1991 SUR LA GESTION DES DÉCHETS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill143",
+  "date": "1991-11-26",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (WASTE MANAGEMENT ACT, 1991 / LOI DE 1991 SUR LA GESTION DES DÉCHETS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill143",
+  "date": "1991-12-09",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (WASTE MANAGEMENT ACT, 1991 / LOI DE 1991 SUR LA GESTION DES DÉCHETS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill147",
+  "date": "1991-11-05",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (HEALTH CARE WORKERS' PROTECTION ACT, 1991 / LOI DE 1991 SUR LA PROTECTION DES TRAVAILLEURS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill147",
+  "date": "1991-11-21",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (HEALTH CARE WORKERS' PROTECTION ACT, 1991 / LOI DE 1991 SUR LA PROTECTION DES TRAVAILLEURS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill24",
+  "date": "1991-03-20",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (HEALTH CARDS AND NUMBERS CONTROL ACT, 1990 / LOI DE 1990 SUR LE CONTRÔLE DES CARTES SANTÉ ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill43",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (REGULATED HEALTH PROFESSIONS ACT, 1991 / LOI DE 1991 SUR LES PROFESSIONS DE LA SANTÉ RÉGLE); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill43",
+  "date": "1991-11-20",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (REGULATED HEALTH PROFESSIONS ACT, 1991, AND COMPANION LEGISLATION / LOI DE 1991 SUR LES PR); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill45",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (CHIROPODY ACT, 1991 / LOI DE 1991 SUR LES PODOLOGUES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill49",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (DENTISTRY ACT, 1991 / LOI DE 1991 SUR LES DENTISTES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill52",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (MASSAGE THERAPY ACT, 1991 / LOI DE 1991 SUR LES MASSOTHÉRAPEUTES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill55",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (MEDICINE ACT, 1991 / LOI DE 1991 SUR LES MÉDECINS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill56",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (MIDWIFERY ACT, 1991 / LOI DE 1991 SUR LES SAGES-FEMMES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill57",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (NURSING ACT, 1991 / LOI DE 1991 SUR LES INFIRMIÈRES ET INFIRMIERS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill58",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (OCCUPATIONAL THERAPY ACT, 1991 / LOI DE 1991 SUR LES ERGOTHÉRAPEUTES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill60",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (OPTOMETRY ACT, 1991 / LOI DE 1991 SUR LES OPTOMÉTRISTES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill62",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (PHYSIOTHERAPY ACT, 1991 / LOI DE 1991 SUR LES PHYSIOTHÉRAPEUTES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill63",
+  "date": "1991-04-02",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (PSYCHOLOGY ACT, 1991 / LOI DE 1991 SUR LES PSYCHOLOGUES); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill143",
+  "date": "1992-04-16",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (WASTE MANAGEMENT ACT, 1992 / LOI DE 1992 SUR LA GESTION DES DÉCHETS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill143",
+  "date": "1992-04-21",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (WASTE MANAGEMENT ACT, 1992 / LOI DE 1992 SUR LA GESTION DES DÉCHETS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill143",
+  "date": "1992-04-23",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (WASTE MANAGEMENT ACT, 1992 / LOI DE 1992 SUR LA GESTION DES DÉCHETS); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill67",
+  "date": "1992-06-15",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (INVESTIGATION INTO THE HUMAN HEALTH EFFECTS OF EXPOSURE TO RADON IN INDOOR AIR ACT, 1992 /); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill69",
+  "date": "1992-06-16",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (INVESTIGATION INTO THE HUMAN HEALTH EFFECTS OF EXPOSURE TO ABRIN ACT, 1992 / LOI DE 1992 S); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill70",
+  "date": "1992-06-16",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (INVESTIGATION INTO THE HUMAN HEALTH EFFECTS OF EXPOSURE TO BENZOAPYRENE ACT, 1992 / LOI DE); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill85",
+  "date": "1992-10-19",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (TOBACCO TAX AND LIQUOR CONTROL STATUTE LAW AMENDMENT ACT (RETURNING RESIDENTS), 1992 / LOI); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill85",
+  "date": "1992-12-08",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (TOBACCO TAX AND LIQUOR CONTROL STATUTE LAW AMENDMENT ACT (RETURNING RESIDENTS), 1992 / LOI); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-3-Bill119",
+  "date": "1993-12-09",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (TOBACCO CONTROL ACT, 1993 / LOI DE 1993 SUR LA RÉGLEMENTATION DE L'USAGE DU TABAC); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-3-Bill119",
+  "date": "1993-12-14",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (TOBACCO CONTROL ACT, 1993 / LOI DE 1993 SUR LA RÉGLEMENTATION DE L'USAGE DU TABAC); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-3-Bill18",
+  "date": "1994-06-21",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (CHRONIC CARE PATIENTS' TELEVISION ACT, 1993 / LOI DE 1993 SUR L'INSTALLATION DE TÉLÉVISEUR); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-3-Bill50",
+  "date": "1993-07-27",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (EXPENDITURE CONTROL PLAN STATUTE LAW AMENDMENT ACT, 1993 / LOI DE 1993 MODIFIANT DES LOIS ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-3-Bill50",
+  "date": "1993-12-08",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (EXPENDITURE CONTROL PLAN STATUTE LAW AMENDMENT ACT, 1993 / LOI DE 1993 MODIFIANT DES LOIS ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill118",
+  "date": "1997-02-03",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (RED TAPE REDUCTION ACT (MINISTRY OF HEALTH), 1997 / LOI DE 1997 VISANT À RÉDUIRE LES FORMA); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill127",
+  "date": "1997-04-30",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (EXPANDED NURSING SERVICES FOR PATIENTS ACT, 1997 / LOI DE 1997 SUR L'EXTENSION DES SERVICE); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill24",
+  "date": "1996-05-09",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL PROTECTION STATUTE LAW AMENDMENT ACT, 1995 / LOI DE 1995 MODIFIANT DES LOIS ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill41",
+  "date": "1996-04-25",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (PATIENTS' BILL OF RIGHTS, 1996 / CHARTE DES DROITS DES PATIENTS DE 1996); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill56",
+  "date": "1996-05-28",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (IMPORTATION OF WASTE STATUTE LAW AMENDMENT ACT, 1996 / LOI DE 1996 MODIFIANT DES LOIS EN C); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill56",
+  "date": "1996-06-13",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (IMPORTATION OF WASTE STATUTE LAW AMENDMENT ACT, 1996 / LOI DE 1996 MODIFIANT DES LOIS EN C); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill57",
+  "date": "1996-06-03",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL APPROVALS IMPROVEMENT ACT, 1996 / LOI DE 1996 SUR L'AMÉLIORATION DU PROCESSU); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill57",
+  "date": "1996-09-26",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL APPROVALS IMPROVEMENT ACT, 1996 / LOI DE 1996 SUR L'AMÉLIORATION DU PROCESSU); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill57",
+  "date": "1996-09-30",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL APPROVALS IMPROVEMENT ACT, 1996 / LOI DE 1996 SUR L'AMÉLIORATION DU PROCESSU); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill57",
+  "date": "1996-12-11",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL APPROVALS IMPROVEMENT ACT, 1996 / LOI DE 1996 SUR L'AMÉLIORATION DU PROCESSU); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill76",
+  "date": "1996-06-24",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL ASSESSMENT AND CONSULTATION IMPROVEMENT ACT, 1996 / LOI DE 1996 AMÉLIORANT L); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill76",
+  "date": "1996-06-25",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL ASSESSMENT AND CONSULTATION IMPROVEMENT ACT, 1996 / LOI DE 1996 AMÉLIORANT L); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill76",
+  "date": "1996-10-31",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL ASSESSMENT AND CONSULTATION IMPROVEMENT ACT, 1996 / LOI DE 1996 AMÉLIORANT L); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill76",
+  "date": "1996-11-04",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL ASSESSMENT AND CONSULTATION IMPROVEMENT ACT, 1996 / LOI DE 1996 AMÉLIORANT L); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill87",
+  "date": "1996-11-07",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (HEALTH INSURANCE AMENDMENT ACT, 1996 / LOI DE 1996 MODIFIANT LA LOI SUR L'ASSURANCE-SANTÉ); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill13",
+  "date": "1998-05-05",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (CRACKDOWN ON ILLEGAL WASTE DUMPING ACT, 1998 / LOI DE 1998 SUR LA PRISE DE MESURES DE RÉPR); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill50",
+  "date": "1998-10-15",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (HEALTH CARE ACCOUNTABILITY AND PATIENTS' BILL OF RIGHTS ACT, 1998 / LOI DE 1998 SUR L'OBLI); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill51",
+  "date": "1998-06-24",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (SUNNYBROOK AND WOMEN'S COLLEGE HEALTH SCIENCES CENTRE ACT, 1998 / LOI DE 1998 SUR LE CENTR); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill51",
+  "date": "1998-06-25",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (SUNNYBROOK AND WOMEN'S COLLEGE HEALTH SCIENCES CENTRE ACT, 1998 / LOI DE 1998 SUR LE CENTR); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill82",
+  "date": "1998-11-23",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL STATUTE LAW AMENDMENT ACT, 1998 / LOI DE 1998 MODIFIANT DES LOIS EN CE QUI C); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill82",
+  "date": "1998-12-01",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL STATUTE LAW AMENDMENT ACT, 1998 / LOI DE 1998 MODIFIANT DES LOIS EN CE QUI C); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill82",
+  "date": "1998-12-07",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL STATUTE LAW AMENDMENT ACT, 1998 / LOI DE 1998 MODIFIANT DES LOIS EN CE QUI C); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill82",
+  "date": "1998-12-10",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL STATUTE LAW AMENDMENT ACT, 1998 / LOI DE 1998 MODIFIANT DES LOIS EN CE QUI C); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill82",
+  "date": "1998-12-16",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (ENVIRONMENTAL STATUTE LAW AMENDMENT ACT, 1998 / LOI DE 1998 MODIFIANT DES LOIS EN CE QUI C); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill84",
+  "date": "1998-11-25",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (NURSES' BILL OF RIGHTS, 1998 DÉCLARATION DES DROITS DES INFIRMIÈRES ET INFIRMIERS DE 1998); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill98",
+  "date": "1998-12-14",
+  "checked": "2026-09-27",
+  "finding": "correct: the Hansard heading is this bill's own short title (EDUCATION AMENDMENT ACT (MOULD CONTAMINATION IN PORTABLE CLASSROOMS), 1998 / LOI DE 1998 M); the long title in bills_master uses different words"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "117-HR1667",
+  "date": "2021-12-07",
+  "checked": "2026-09-27",
+  "finding": "correct: the section is the debate on the Dr. Lorna Breen Health Care Provider Protection Act, which is H.R. 1667"
+ }
+]

@@ -1,0 +1,1458 @@
+[
+ {
+  "jurisdiction": "us",
+  "bill_key": "104-HR3121",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): foreign assistance and arms export control",
+  "evidence": "official title: To amend the Foreign Assistance Act of 1961 and the Arms Export Control Act to make improvements to certain defense and security assistance provisions under tho; share of its debate sentences with health terms: 0.005",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "110-HR1424",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): financial rescue (Emergency Economic Stabilization Act); its mental health parity part is in the set separately as 110-HR6983",
+  "evidence": "official title: A bill to provide authority for the Federal Government to purchase and insure certain types of troubled assets for the purposes of providing stability to and pr; share of its debate sentences with health terms: 0.113",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HRES786",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): commemorates a canonization",
+  "evidence": "official title: Commemorating the canonization of Father Damien de Veuster, SS.CC. to sainthood.; share of its debate sentences with health terms: 0.153",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "111-HRES860",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Chicago Wilderness and a children's outdoor bill of rights",
+  "evidence": "official title: Supporting the initiatives of Chicago Wilderness and the Children's Outdoor Bill of Rights.; share of its debate sentences with health terms: 0.047",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "114-HR1321",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): water pollution from microbeads",
+  "evidence": "official title: Microbead-Free Waters Act of 2015; share of its debate sentences with health terms: 0.084",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "114-HR2212",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): federal lands taken into trust for the Susanville Indian Rancheria",
+  "evidence": "official title: To take certain Federal lands located in Lassen County, California, into trust for the benefit of the Susanville Indian Rancheria, and for other purposes.; share of its debate sentences with health terms: 0.015",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "115-HR3834",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): 9/11 Heroes Medal of Valor",
+  "evidence": "official title: 9/11 Heroes Medal of Valor Act of 2017; share of its debate sentences with health terms: 0.056",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "118-HR8333",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): national security restrictions on federal contracts with certain biotechnology companies",
+  "evidence": "official title: BIOSECURE Act; share of its debate sentences with health terms: 0.065",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "108-HR4278",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): assistive technology grants (education and workforce)",
+  "evidence": "official title: Assistive Technology Act of 2004; share of its debate sentences with health terms: 0.011",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "33-1-Bill7",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): conforming statutes to section 15 of the Charter",
+  "evidence": "official title: An Act to amend certain Ontario Statutes to conform to section 15 of the Canadian Charter of Rights and Freedoms; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "33-2-Bill172",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental rights",
+  "evidence": "official title: An Act respecting Environmental Rights in Ontario; share of its debate sentences with health terms: 0.75",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "33-3-Bill9",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental rights",
+  "evidence": "official title: An Act respecting Environmental Rights in Ontario; share of its debate sentences with health terms: 0.213",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "34-1-Bill13",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental rights",
+  "evidence": "official title: An Act respecting Environmental Rights in Ontario; share of its debate sentences with health terms: 0.178",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-3-Bill26",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental rights",
+  "evidence": "official title: An Act respecting Environmental Rights in Ontario / Projet de loi 26, Loi concernant les droits environnementaux en Ontario; share of its debate sentences with health terms: 0.207",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "34-1-Bill174",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): funding for intervenors in environmental proceedings",
+  "evidence": "official title: An Act for the establishment and conduct of a Project to provide Funding to Intervenors in Proceedings before a Joint Board under the Consolidated Hearings Act,; share of its debate sentences with health terms: 0.097",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "34-2-Bill165",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Environmental Protection Act",
+  "evidence": "official title: An Act to amend the Environmental Protection Act; share of its debate sentences with health terms: 0.056",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "34-2-Bill218",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Environmental Protection Act",
+  "evidence": "official title: An Act to amend the Environmental Protection Act; share of its debate sentences with health terms: 0.069",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "34-2-Bill220",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Environmental Protection Act and Ontario Water Resources Act",
+  "evidence": "official title: An Act to amend the Environmental Protection Act and the Ontario Water Resources Act; share of its debate sentences with health terms: 0.165",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "34-2-Bill231",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental harm",
+  "evidence": "official title: An Act respecting Environmental Harm; share of its debate sentences with health terms: 0.286",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-1-Bill143",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): waste management in the Greater Toronto Area",
+  "evidence": "official title: An Act respecting the Management of Waste in the Greater Toronto Area and to amend the Environmental Protection Act / Projet de loi 143, Loi concernant la gesti; share of its debate sentences with health terms: 0.092",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-2-Bill143",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): waste management in the Greater Toronto Area",
+  "evidence": "official title: An Act respecting the Management of Waste in the Greater Toronto Area and to amend the Environmental Protection Act / Loi concernant la gestion des déchets dans; share of its debate sentences with health terms: 0.056",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "35-3-Bill93",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Highway Traffic Act",
+  "evidence": "official title: An Act to amend the Highway Traffic Act / Projet de loi 93, Loi modifiant le Code de la route; share of its debate sentences with health terms: 0.015",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill149",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): municipal property tax (Fair Municipal Finance Act); its sections were question period on hospital restructuring, not this bill",
+  "evidence": "official title: An Act to continue the reforms begun by the Fair Municipal Finance Act, 1997 and to make other amendments respecting the financing of local governments / Projet; share of its debate sentences with health terms: 0.157",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill24",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental protection, water resources and pesticides enforcement",
+  "evidence": "official title: An Act to amend the Environmental Protection Act, the Ontario Water Resources Act and the Pesticides Act / Projet de loi 24, Loi modifiant la Loi sur la protect; share of its debate sentences with health terms: 0.3",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill57",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental approvals process",
+  "evidence": "official title: An Act to improve the Efficiency of the Environmental Approvals Process and Certain Other Matters / Projet de loi 57, Loi visant à améliorer l'efficience du pro; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-1-Bill76",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental assessment",
+  "evidence": "official title: An Act to improve environmental protection, increase accountability and enshrine public consultation in the Environmental Assessment Act / Projet de loi 76, Loi; share of its debate sentences with health terms: 0.087",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill13",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): illegal waste dumping",
+  "evidence": "official title: An Act to Crack Down on Illegal Waste Dumping by amending the Environmental Protection Act, the Ontario Water Resources Act and the Pesticides Act / Projet de l; share of its debate sentences with health terms: 0.2",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "36-2-Bill82",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental enforcement",
+  "evidence": "official title: An Act to strengthen environmental protection and enforcement / Projet de loi 82, Loi visant à affermir la protection de l'environnement et les mesures d'exécut; share of its debate sentences with health terms: 0.062",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "37-1-Bill124",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental protection, water resources and pesticides enforcement",
+  "evidence": "official title: An Act to amend the Environmental Protection Act, the Ontario Water Resources Act and the Pesticides Act in respect of penalties / Projet de loi 124, Loi modifi; share of its debate sentences with health terms: 0.119",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "37-1-Bill144",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): correctional services accountability",
+  "evidence": "official title: An Act to establish accountability in correctional services, to make offenders demonstrate that they are drug-free, to set rules for offenders to earn their rel; share of its debate sentences with health terms: 0.084",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "37-1-Bill181",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): day nursery capacity in rural areas",
+  "evidence": "official title: An Act to amend the Day Nurseries Act to allow up to seven children to be cared for in rural areas without requiring a licence under the Act / Projet de loi 181; share of its debate sentences with health terms: 0.375",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "37-2-Bill41",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): day nursery capacity in rural areas",
+  "evidence": "official title: An Act to amend the Day Nurseries Act to allow up to seven children to be cared for in rural areas without requiring a licence under the Act / Projet de loi 41,; share of its debate sentences with health terms: 0.5",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "37-4-Bill99",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): day nursery capacity in rural areas",
+  "evidence": "official title: An Act to amend the Day Nurseries Act to allow up to seven children to be cared for in rural areas without requiring a licence under the Act / Projet de loi 99,; share of its debate sentences with health terms: 0.5",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "38-1-Bill59",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): day nursery capacity in rural areas",
+  "evidence": "official title: An Act to amend the Day Nurseries Act to allow up to seven children to be cared for in rural areas without requiring a licence under the Act / Projet de loi 59,; share of its debate sentences with health terms: 0.667",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill60",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): day nursery capacity in rural areas",
+  "evidence": "official title: An Act to amend the Day Nurseries Act to allow more children to be cared for in rural areas / Projet de loi 60, Loi modifiant la Loi sur les garderies afin de p; share of its debate sentences with health terms: 0.125",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill26",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): day nursery corporate ownership",
+  "evidence": "official title: An Act to amend the Day Nurseries Act to limit the approval of corporations to not for profit corporations / Projet de loi 26, Loi modifiant la Loi sur les gard; share of its debate sentences with health terms: 0.045",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill10",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child care and early years",
+  "evidence": "official title: An Act to enact the Child Care and Early Years Act, 2014, to repeal the Day Nurseries Act, to amend the Early Childhood Educators Act, 2007, the Education Act a; share of its debate sentences with health terms: 0.028",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "37-2-Bill82",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): MPP compensation (Legislative Assembly Act)",
+  "evidence": "official title: An Act to amend the Legislative Assembly Act to provide an arm's length process to determine members' compensation / Projet de loi 82, Loi modifiant la Loi sur ; share of its debate sentences with health terms: 0.024",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "38-1-Bill25",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): government advertising",
+  "evidence": "official title: An Act respecting government advertising / Projet de loi 25, Loi concernant la publicité gouvernementale; share of its debate sentences with health terms: 0.041",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-2-Bill112",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): government advertising",
+  "evidence": "official title: An Act to amend the Government Advertising Act, 2004 / Projet de loi 112, Loi modifiant la Loi de 2004 sur la publicité gouvernementale; share of its debate sentences with health terms: 0.044",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-3-Bill7",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): government advertising",
+  "evidence": "official title: An Act to amend the Government Advertising Act, 2004 / Projet de loi 7, Loi modifiant la Loi de 2004 sur la publicité gouvernementale; share of its debate sentences with health terms: 0.143",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill101",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): government advertising",
+  "evidence": "official title: An Act to amend the Government Advertising Act, 2004 / Projet de loi 101, Loi modifiant la Loi de 2004 sur la publicité gouvernementale; share of its debate sentences with health terms: 0.022",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "44-1-Bill54",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): government advertising",
+  "evidence": "official title: An Act to amend the Government Advertising Act, 2004 / Projet de loi 54, Loi modifiant la Loi de 2004 sur la publicité gouvernementale; share of its debate sentences with health terms: 0.1",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "38-1-Bill78",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child protection and inquests (Child and Family Services Act)",
+  "evidence": "official title: An Act to amend the Child and Family Services Act and the Coroners Act to better protect the children of Ontario / Projet de loi 78, Loi modifiant la Loi sur le; share of its debate sentences with health terms: 0.021",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "38-2-Bill83",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child protection and inquests (Child and Family Services Act)",
+  "evidence": "official title: An Act to amend the Child and Family Services Act and the Coroners Act to better protect the children of Ontario / Projet de loi 83, Loi modifiant la Loi sur le; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "38-2-Bill89",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child protection and inquests (Child and Family Services Act)",
+  "evidence": "official title: An Act to amend the Child and Family Services Act and the Coroners Act to better protect the children of Ontario / Projet de loi 89, Loi modifiant la Loi sur le; share of its debate sentences with health terms: 0.007",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill81",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child protection and inquests (Child and Family Services Act)",
+  "evidence": "official title: An Act to amend the Child and Family Services Act and the Coroners Act with respect to inquests into children's deaths / Projet de loi 81, Loi modifiant la Loi ; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "38-2-Bill193",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): product stewardship (Environmental Protection Act)",
+  "evidence": "official title: An Act to amend the Environmental Protection Act with respect to the stewardship of products and of the packages or containers used for products / Projet de loi; share of its debate sentences with health terms: 0.333",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill123",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental assessment",
+  "evidence": "official title: An Act to amend the Environmental Assessment Act / Projet de loi 123, Loi modifiant la Loi sur les évaluations environnementales; share of its debate sentences with health terms: 0.224",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill160",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): recruitment of live-in caregivers and foreign workers",
+  "evidence": "official title: An Act respecting the recruitment and protection of caregivers and foreign workers / Projet de loi 160, Loi ayant trait au recrutement et à la protection des fo; share of its debate sentences with health terms: 0.028",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill185",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): greenhouse gas emissions trading",
+  "evidence": "official title: An Act to amend the Environmental Protection Act with respect to greenhouse gas emissions trading and other economic and financial instruments and market-based ; share of its debate sentences with health terms: 0.052",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill192",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): proclaims June 24 (St. Jean Baptiste Day)",
+  "evidence": "official title: An Act to proclaim June 24 in each year as St; share of its debate sentences with health terms: 0.286",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-1-Bill99",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Lake Simcoe watershed",
+  "evidence": "official title: An Act to protect and restore the ecological health of the Lake Simcoe watershed and to amend the Ontario Water Resources Act in respect of water quality tradin; share of its debate sentences with health terms: 0.071",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-2-Bill179",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): adoption (Child and Family Services Act)",
+  "evidence": "official title: An Act to amend the Child and Family Services Act respecting adoption and the provision of care and maintenance / Projet de loi 179, Loi modifiant la Loi sur le; share of its debate sentences with health terms: 0.02",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-2-Bill208",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): workers' compensation permanent partial disability benefits",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 respecting permanent partial disability supplements / Projet de loi 208, Loi modifiant la Loi de 19; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-1-Bill125",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): workers' compensation permanent partial disability benefits",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 with respect to permanent partial disability supplements / Projet de loi 125, Loi modifiant la Loi ; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-2-Bill128",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): workers' compensation permanent partial disability benefits",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 with respect to permanent partial disability supplements / Projet de loi 128, Loi modifiant la Loi ; share of its debate sentences with health terms: 0.042",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill133",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): workers' compensation permanent partial disability benefits",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 respecting permanent partial disability supplements / Projet de loi 133, Loi modifiant la Loi de 19; share of its debate sentences with health terms: 0.029",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill98",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): workers' compensation loss of earnings benefits",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 with respect to loss of earnings and survivor benefits / Projet de loi 98, Loi modifiant la Loi de ; share of its debate sentences with health terms: 0.109",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-2-Bill145",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): WSIB employer classification for residential care facilities (checked on OLA page)",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 / Projet de loi 145, Loi modifiant la Loi de 1997 sur la sécurité professionnelle et l’assurance co; share of its debate sentences with health terms: 0.133",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-3-Bill49",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): WSIB employer classification for residential care facilities (checked on OLA page)",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 / Projet de loi 49, Loi modifiant la Loi de 1997 sur la sécurité professionnelle et l’assurance con; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill194",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): WSIB employer classification for residential care facilities (checked on OLA page)",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 / Projet de loi 194, Loi modifiant la Loi de 1997 sur la sécurité professionnelle et l’assurance co; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-2-Bill16",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): WSIB employer classification for residential care facilities (checked on OLA page)",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 / Projet de loi 16, Loi modifiant la Loi de 1997 sur la sécurité professionnelle et l’assurance con; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "43-1-Bill54",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): WSIB employer classification for residential care facilities (checked on OLA page)",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 / Projet de loi 54, Loi modifiant la Loi de 1997 sur la sécurité professionnelle et l’assurance con; share of its debate sentences with health terms: 0.071",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "44-1-Bill8",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): WSIB employer classification for residential care facilities (checked on OLA page)",
+  "evidence": "official title: An Act to amend the Workplace Safety and Insurance Act, 1997 / Projet de loi 8, Loi modifiant la Loi de 1997 sur la sécurité professionnelle et l’assurance cont; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-2-Bill23",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): disability income support and taxation",
+  "evidence": "official title: An Act to amend the Ontario Disability Support Program Act, 1997 and the Taxation Act, 2007 / Projet de loi 23, Loi modifiant la Loi de 1997 sur le Programme on; share of its debate sentences with health terms: 0.024",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-2-Bill27",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): disability income support program",
+  "evidence": "official title: An Act to require the introduction of legislation for a consolidated program of disability support and employment and other financial assistance / Projet de loi; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill185",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): social assistance research commission",
+  "evidence": "official title: An Act to amend the Ministry of Community and Social Services Act to establish the Social Assistance Research Commission / Projet de loi 185, Loi modifiant la L; share of its debate sentences with health terms: 0.052",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-2-Bill6",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): social assistance research commission",
+  "evidence": "official title: An Act to amend the Ministry of Community and Social Services Act to establish the Social Assistance Research Commission / Projet de loi 6, Loi modifiant la Loi; share of its debate sentences with health terms: 0.037",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-3-Bill30",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): social assistance research commission",
+  "evidence": "official title: An Act to amend the Ministry of Community and Social Services Act to establish the Social Assistance Research Commission / Projet de loi 30, Loi modifiant la Lo; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill60",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): social assistance research commission",
+  "evidence": "official title: An Act to amend the Ministry of Community and Social Services Act to establish the Social Assistance Research Commission / Projet de loi 60, Loi modifiant la Lo; share of its debate sentences with health terms: 0.05",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-2-Bill92",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): social assistance research commission",
+  "evidence": "official title: An Act to amend the Ministry of Community and Social Services Act to establish the Social Assistance Research Commission / Projet de loi 92, Loi modifiant la Lo; share of its debate sentences with health terms: 0.011",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-2-Bill87",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Ontario Works (social assistance)",
+  "evidence": "official title: An Act to amend the Ontario Works Act, 1997 / Projet de loi 87, Loi modifiant la Loi de 1997 sur le programme Ontario au travail; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-2-Bill28",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): littering",
+  "evidence": "official title: An Act to amend the Environmental Protection Act and the Highway Traffic Act to prevent littering with cigarette butts / Projet de loi 28, Loi modifiant la Loi ; share of its debate sentences with health terms: 0.286",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "39-2-Bill92",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): fire sprinklers in retirement homes",
+  "evidence": "official title: An Act to require automatic sprinklers in all Ontario retirement homes / Projet de loi 92, Loi exigeant l’installation d’extincteurs automatiques dans toutes le; share of its debate sentences with health terms: 0.023",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-1-Bill54",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): fire code retrofits in retirement homes",
+  "evidence": "official title: An Act to amend the Fire Protection and Prevention Act, 1997 to require the retrofitting of retirement homes with automatic sprinklers / Projet de loi 54, Loi m; share of its debate sentences with health terms: 0.025",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-1-Bill2",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): home renovation tax credit",
+  "evidence": "official title: An Act to amend the Taxation Act, 2007 to implement a healthy homes renovation tax credit / Projet de loi 2, Loi modifiant la Loi de 2007 sur les impôts en vue ; share of its debate sentences with health terms: 0.055",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-1-Bill42",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): electricity and environmental protection",
+  "evidence": "official title: An Act to amend the Electricity Act, 1998 and the Environmental Protection Act with respect to renewable energy / Projet de loi 42, Loi modifiant la Loi de 1998; share of its debate sentences with health terms: 0.061",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-2-Bill138",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): ending coal-fired electricity",
+  "evidence": "official title: An Act to amend the Environmental Protection Act to require the cessation of coal use to generate electricity at generation facilities / Projet de loi 138, Loi ; share of its debate sentences with health terms: 0.2",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill9",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): ending coal-fired electricity",
+  "evidence": "official title: An Act to amend the Environmental Protection Act to require the cessation of coal use to generate electricity at generation facilities / Projet de loi 9, Loi mo; share of its debate sentences with health terms: 0.068",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-2-Bill161",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): immigration to Ontario",
+  "evidence": "official title: An Act with respect to immigration to Ontario and a related amendment to the Regulated Health Professions Act, 1991 / Projet de loi 161, Loi portant sur l’immig; share of its debate sentences with health terms: 0.057",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill49",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): immigration to Ontario",
+  "evidence": "official title: An Act with respect to immigration to Ontario and a related amendment to the Regulated Health Professions Act, 1991 / Projet de loi 49, Loi portant sur l’immigr; share of its debate sentences with health terms: 0.033",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-2-Bill186",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Environmental Bill of Rights conflict of interest rules",
+  "evidence": "official title: An Act to amend the Environmental Bill of Rights, 1993 to establish conflict of interest guidelines for the Environmental Commissioner / Projet de loi 186, Loi ; share of its debate sentences with health terms: 0.571",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "40-2-Bill25",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): sick days in the broader public sector (collective bargaining)",
+  "evidence": "official title: An Act governing sick days in the broader public sector / Projet de loi 25, Loi régissant les journées de congé de maladie dans le secteur parapublic; share of its debate sentences with health terms: 0.051",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill162",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): inquiry into trafficking of people, drugs and weapons",
+  "evidence": "official title: An Act to establish a commission of inquiry into illegal trade and trafficking of people, drugs, money, tobacco and weapons / Projet de loi 162, Loi visant la c; share of its debate sentences with health terms: 0.163",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill177",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): employment leave for victims of violence",
+  "evidence": "official title: An Act to amend the Employment Standards Act, 2000 in respect of leave and accommodation for victims of domestic or sexual violence and to amend the Occupationa; share of its debate sentences with health terms: 0.083",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-2-Bill26",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): employment leave for victims of violence",
+  "evidence": "official title: An Act to amend the Employment Standards Act, 2000 in respect of leave and accommodation for victims of domestic or sexual violence and to amend the Occupationa; share of its debate sentences with health terms: 0.074",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-1-Bill54",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child protection for 16 and 17 year olds",
+  "evidence": "official title: An Act to amend the Child and Family Services Act with respect to children 16 years of age and older / Projet de loi 54, Loi modifiant la Loi sur les services à; share of its debate sentences with health terms: 0.032",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-2-Bill32",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child protection for 16 and 17 year olds",
+  "evidence": "official title: An Act to amend the Child and Family Services Act with respect to children 16 years of age and older / Projet de loi 32, Loi modifiant la Loi sur les services à; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-2-Bill127",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): omnibus budget bill",
+  "evidence": "official title: An Act to implement Budget measures and to enact, amend and repeal various statutes / Projet de loi 127, Loi visant à mettre en oeuvre les mesures budgétaires e; share of its debate sentences with health terms: 0.116",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill229",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): omnibus budget bill",
+  "evidence": "official title: An Act to implement Budget measures and to enact, amend and repeal various statutes / Projet de loi 229, Loi visant à mettre en oeuvre les mesures budgétaires e; share of its debate sentences with health terms: 0.114",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-2-Bill175",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): policing, coroners and forensic laboratories (Safer Ontario Act)",
+  "evidence": "official title: An Act to implement measures with respect to policing, coroners and forensic laboratories and to enact, amend or repeal certain other statutes and revoke a regu; share of its debate sentences with health terms: 0.043",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "41-3-Bill16",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental assessment",
+  "evidence": "official title: An Act to amend the Environmental Assessment Act and the Environmental Protection Act to require support from municipal councils and band councils before establ; share of its debate sentences with health terms: 0.037",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill204",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): municipal elections",
+  "evidence": "official title: An Act to amend various Acts respecting municipal elections, to amend the Reopening Ontario (A Flexible Response to COVID-19) Act, 2020 and to provide for a tem; share of its debate sentences with health terms: 0.037",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill244",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): residential evictions",
+  "evidence": "official title: An Act to amend the Residential Tenancies Act, 2006 with respect to evictions during the COVID-19 pandemic / Projet de loi 244, Loi modifiant la Loi de 2006 sur; share of its debate sentences with health terms: 0.052",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-2-Bill90",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): residential evictions",
+  "evidence": "official title: An Act to amend the Residential Tenancies Act, 2006 with respect to evictions during the COVID-19 pandemic / Projet de loi 90, Loi modifiant la Loi de 2006 sur ; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill275",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): public sector procurement",
+  "evidence": "official title: An Act to amend the Supply Chain Management Act (Government, Broader Public Sector and Health Sector Entities), 2019 / Projet de loi 275, Loi modifiant la Loi d; share of its debate sentences with health terms: 0.035",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill279",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): microplastics filters for washing machines",
+  "evidence": "official title: An Act to amend the Environmental Protection Act with respect to microplastics filters for washing machines / Projet de loi 279, Loi modifiant la Loi sur la pro; share of its debate sentences with health terms: 0.4",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-2-Bill102",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): microfibre filters for washing machines",
+  "evidence": "official title: An Act to amend the Environmental Protection Act with respect to microfiber filters for washing machines / Projet de loi 102, Loi modifiant la Loi sur la protec; share of its debate sentences with health terms: 0.333",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "42-1-Bill34",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): repeal of the Green Energy Act",
+  "evidence": "official title: An Act to repeal the Green Energy Act, 2009 and to amend the Electricity Act, 1998, the Environmental Protection Act, the Planning Act and various other statute; share of its debate sentences with health terms: 0.028",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "43-1-Bill128",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Disability Pride Month",
+  "evidence": "official title: An Act to proclaim the month of July as Disability Pride Month / Projet de loi 128, Loi proclamant le mois de juillet Mois de la fierté des personnes handicapée; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "43-1-Bill171",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): veterinary profession",
+  "evidence": "official title: An Act to enact the Veterinarian Professionals Act, 2024 and amend or repeal various acts / Projet de loi 171, Loi visant à édicter la Loi de 2024 sur les profe; share of its debate sentences with health terms: 0.089",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "43-1-Bill173",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): intimate partner violence",
+  "evidence": "official title: An Act respecting intimate partner violence / Projet de loi 173, Loi concernant la violence entre partenaires intimes; share of its debate sentences with health terms: 0.028",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "44-1-Bill55",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): intimate partner violence",
+  "evidence": "official title: An Act respecting intimate partner violence / Projet de loi 55, Loi concernant la violence entre partenaires intimes; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "43-1-Bill201",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental change-of-use exemptions",
+  "evidence": "official title: An Act to amend the Environmental Protection Act with respect to change of use exemptions / Projet de loi 201, Loi modifiant la Loi sur la protection de l’envir; share of its debate sentences with health terms: 0.064",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "44-1-Bill10",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): enforcement at premises with illegal drug activity",
+  "evidence": "official title: An Act to enact the Measures Respecting Premises with Illegal Drug Activity Act, 2025 and to amend various Acts with respect to public safety and the justice sy; share of its debate sentences with health terms: 0.031",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "44-1-Bill67",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Hospitality Workers Appreciation Day",
+  "evidence": "official title: An Act to proclaim Hospitality Workers Appreciation Day / Projet de loi 67, Loi proclamant la Journée de reconnaissance des travailleuses et travailleurs de l’i; share of its debate sentences with health terms: 0.264",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "44-1-Bill87",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental review of industrial projects",
+  "evidence": "official title: An Act to amend the Environmental Protection Act to require a Minister’s review related to industrial, commercial and institutional source separation programs /; share of its debate sentences with health terms: 0.286",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "35-2-Bill158",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): repeal of incorporation statutes",
+  "evidence": "official title: Projet de loi n° 158, Loi abrogeant certaines lois permettant la constitution de personnes morales en matière agricole et modifiant diverses dispositi; share of its debate sentences with health terms: 0.002",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "35-2-Bill405",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): groundwater protection",
+  "evidence": "official title: Projet de loi n° 405, Loi favorisant la protection des eaux souterraines; share of its debate sentences with health terms: 0.043",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "35-2-Bill44",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): alcoholic beverage licensing",
+  "evidence": "official title: Projet de loi n° 44, Loi modifiant diverses lois en matière de boissons alcooliques; share of its debate sentences with health terms: 0.004",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-1-Bill174",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): alcohol, racing and gaming board",
+  "evidence": "official title: Projet de loi n° 174, Loi modifiant la Loi sur la Régie des alcools, des courses et des jeux et d'autres dispositions législatives; share of its debate sentences with health terms: 0.017",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-2-Bill68",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): alcohol permits",
+  "evidence": "official title: Projet de loi n° 68, Loi modifiant la Loi sur les permis d’alcool et d’autres dispositions législatives; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "40-1-Bill194",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): alcohol permits",
+  "evidence": "official title: Projet de loi n° 194, Loi modifiant la Loi sur les permis d’alcool et d’autres dispositions législatives; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill170",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): alcohol permits",
+  "evidence": "official title: Projet de loi n° 170, Loi modernisant le régime juridique applicable aux permis d’alcool et modifiant diverses dispositions législatives en matière de; share of its debate sentences with health terms: 0.023",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill88",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): craft alcoholic beverage industry",
+  "evidence": "official title: Projet de loi n° 88, Loi sur le développement de l’industrie des boissons alcooliques artisanales; share of its debate sentences with health terms: 0.03",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill598",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): take-out sale of alcoholic beverages by restaurants",
+  "evidence": "official title: Projet de loi n° 598, Loi autorisant la vente, pour emporter ou livrer, de boissons alcooliques à base de spiritueux par le titulaire d’un permis d’al; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "35-2-Bill442",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): merger of state corporations",
+  "evidence": "official title: Projet de loi n° 442, Loi sur le regroupement de certaines sociétés d'État; share of its debate sentences with health terms: 0.024",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "35-2-Bill47",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): payment of fines",
+  "evidence": "official title: Projet de loi n° 47, Loi modifiant la Loi sur le paiement de certaines amendes; share of its debate sentences with health terms: 0.025",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "35-2-Bill49",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): disaster relief fund",
+  "evidence": "official title: Projet de loi n° 49, Loi instituant le Fonds d'assistance financière pour certaines régions sinistrées à la suite des pluies diluviennes survenues les; share of its debate sentences with health terms: 0.018",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-1-Bill129",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): roadside billboards",
+  "evidence": "official title: Projet de loi n° 129, Loi interdisant l'affichage publicitaire le long de certaines voies de circulation; share of its debate sentences with health terms: 0.021",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-2-Bill118",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): roadside billboards",
+  "evidence": "official title: Projet de loi n° 118, Loi modifiant la Loi interdisant l'affichage publicitaire le long de certaines voies de circulation; share of its debate sentences with health terms: 0.025",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-1-Bill170",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): municipal reorganization",
+  "evidence": "official title: Projet de loi n° 170, Loi portant réforme de l'organisation territoriale municipale des régions métropolitaines de Montréal, de Québec et de l'Outaoua; share of its debate sentences with health terms: 0.015",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-1-Bill2",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): government accounting reform",
+  "evidence": "official title: Projet de loi n° 2, Loi sur la réforme de la comptabilité gouvernementale; share of its debate sentences with health terms: 0.078",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-1-Bill43",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): override clauses in education statutes",
+  "evidence": "official title: Projet de loi n° 43, Loi concernant certaines dispositions dérogatoires dans les lois relatives à l'éducation; share of its debate sentences with health terms: 0.033",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-1-Bill45",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): public curator",
+  "evidence": "official title: Projet de loi n° 45, Loi modifiant certaines dispositions législatives concernant le curateur public; share of its debate sentences with health terms: 0.026",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-1-Bill60",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental assessment of a development project",
+  "evidence": "official title: Projet de loi n° 60, Loi sur l'évaluation environnementale du projet de parachèvement du développement hydroélectrique de la rivière Churchill; share of its debate sentences with health terms: 0.058",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-2-Bill132",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Code of Civil Procedure",
+  "evidence": "official title: Projet de loi n° 132, Loi modifiant certaines dispositions du Code de procédure civile; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "36-2-Bill38",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Highway Safety Code",
+  "evidence": "official title: Projet de loi n° 38, Loi modifiant le Code de la sécurité routière concernant la conduite d'un véhicule sous l'effet de l'alcool; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "37-1-Bill14",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): forests",
+  "evidence": "official title: Projet de loi n° 14, Loi modifiant la Loi sur les forêts et d'autres dispositions législatives et prévoyant certaines dispositions particulières en ma; share of its debate sentences with health terms: 0.021",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "37-1-Bill75",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): municipal powers in urban agglomerations",
+  "evidence": "official title: Projet de loi n° 75, Loi sur l'exercice de certaines compétences municipales dans certaines agglomérations; share of its debate sentences with health terms: 0.012",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "37-2-Bill48",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): consumer protection and debt collection",
+  "evidence": "official title: Projet de loi n° 48, Loi modifiant la Loi sur la protection du consommateur et la Loi sur le recouvrement de certaines créances; share of its debate sentences with health terms: 0.005",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-1-Bill104",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): abolition of councils and the government air service fund",
+  "evidence": "official title: Projet de loi n° 104, Loi sur l’abolition de certains conseils et du Fonds du service aérien gouvernemental; share of its debate sentences with health terms: 0.042",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-1-Bill51",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): representation of home child care providers",
+  "evidence": "official title: Projet de loi n° 51, Loi sur la représentation de certaines personnes responsables d'un service de garde en milieu familial et sur le régime de négoci; share of its debate sentences with health terms: 0.023",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-1-Bill58",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): land use planning",
+  "evidence": "official title: Projet de loi n° 58, Loi modifiant la Loi sur l'aménagement et l'urbanisme et d'autres dispositions législatives concernant les communautés métropolit; share of its debate sentences with health terms: 0.049",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-1-Bill7",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): early childhood development fund",
+  "evidence": "official title: Projet de loi n° 7, Loi instituant le fonds pour le développement des jeunes enfants et modifiant la Loi instituant le Fonds pour la promotion des sai; share of its debate sentences with health terms: 0.032",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-1-Bill94",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): accommodation requests in the public administration",
+  "evidence": "official title: Projet de loi n° 94, Loi établissant les balises encadrant les demandes d’accommodement dans l’Administration gouvernementale et dans certains établis; share of its debate sentences with health terms: 0.046",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-2-Bill42",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): supplemental pension plans",
+  "evidence": "official title: Projet de loi n° 42, Loi modifiant la Loi sur les régimes complémentaires de retraite en vue de prolonger certaines mesures d’atténuation des effets d; share of its debate sentences with health terms: 0.025",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "39-2-Bill48",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): vehicle emissions inspection",
+  "evidence": "official title: Projet de loi n° 48, Loi concernant l’inspection environnementale des véhicules automobiles; share of its debate sentences with health terms: 0.182",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "40-1-Bill15",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): target-benefit pension plans",
+  "evidence": "official title: Projet de loi n° 15, Loi permettant l’établissement de régimes de retraite à prestations cibles dans certaines entreprises du secteur des pâtes et pap; share of its debate sentences with health terms: 0.013",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "40-1-Bill22",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): compensation of crime victims",
+  "evidence": "official title: Projet de loi n° 22, Loi modifiant la Loi sur l’indemnisation des victimes d’actes criminels, la Loi visant à favoriser le civisme et certaines dispos; share of its debate sentences with health terms: 0.012",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "40-1-Bill37",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): shale gas exploration (checked on Assemblee nationale page)",
+  "evidence": "official title: Projet de loi n° 37, Loi interdisant certaines activités destinées à rechercher ou à exploiter du gaz naturel dans le schiste; share of its debate sentences with health terms: 0.039",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "40-1-Bill497",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): municipal recommendations",
+  "evidence": "official title: Projet de loi n° 497, Loi concernant la mise en œuvre dans le domaine municipal de certaines recommandations du rapport Innover pour pérenniser le sys; share of its debate sentences with health terms: 0.083",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill102",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environment quality",
+  "evidence": "official title: Projet de loi n° 102, Loi modifiant la Loi sur la qualité de l’environnement afin de moderniser le régime d’autorisation environnementale et modifiant; share of its debate sentences with health terms: 0.099",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill109",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): national capital status for Quebec City",
+  "evidence": "official title: Projet de loi n° 109, Loi accordant le statut de capitale nationale à la Ville de Québec et augmentant à ce titre son autonomie et ses pouvoirs; share of its debate sentences with health terms: 0.013",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill121",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Montreal metropolis status",
+  "evidence": "official title: Projet de loi n° 121, Loi augmentant l’autonomie et les pouvoirs de la Ville de Montréal, métropole du Québec; share of its debate sentences with health terms: 0.021",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill126",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): pension plan",
+  "evidence": "official title: Projet de loi n° 126, Loi favorisant la santé financière et la pérennité du régime de retraite du personnel d'encadrement et modifiant diverses dispos; share of its debate sentences with health terms: 0.025",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill152",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): labour law",
+  "evidence": "official title: Projet de loi n° 152, Loi modifiant diverses dispositions législatives concernant le domaine du travail afin principalement de donner suite à certaine; share of its debate sentences with health terms: 0.017",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill154",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): remuneration committee recommendations",
+  "evidence": "official title: Projet de loi n° 154, Loi mettant en œuvre certaines recommandations du rapport du comité de la rémunération des juges pour la période 2016-2019; share of its debate sentences with health terms: 0.013",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill162",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): building code",
+  "evidence": "official title: Projet de loi n° 162, Loi modifiant la Loi sur le bâtiment et d’autres dispositions législatives afin principalement de donner suite à certaines recom; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill189",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): collective agreement decrees",
+  "evidence": "official title: Projet de loi n° 189, Loi visant principalement à confier la charge de la surveillance des décrets de convention collective à la Commission des normes; share of its debate sentences with health terms: 0.077",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill3",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): municipal pension plans",
+  "evidence": "official title: Projet de loi n° 3, Loi favorisant la santé financière et la pérennité des régimes de retraite à prestations déterminées du secteur municipal; share of its debate sentences with health terms: 0.037",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill697",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): legal consultations by law students",
+  "evidence": "official title: Projet de loi n° 697, Loi visant à permettre aux étudiants en droit de donner des consultations et des avis d’ordre juridique dans une clinique juridi; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill97",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): pension plans",
+  "evidence": "official title: Projet de loi n° 97, Loi modifiant certaines lois instituant des régimes de retraite applicables aux employés du secteur public; share of its debate sentences with health terms: 0.075",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "41-1-Bill99",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): youth protection",
+  "evidence": "official title: Projet de loi n° 99, Loi modifiant la Loi sur la protection de la jeunesse et d’autres dispositions; share of its debate sentences with health terms: 0.042",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill12",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): free public schooling",
+  "evidence": "official title: Projet de loi n° 12, Loi visant à préciser la portée du droit à la gratuité scolaire et à permettre l’encadrement de certaines contributions financièr; share of its debate sentences with health terms: 0.012",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill20",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): remuneration committee recommendations",
+  "evidence": "official title: Projet de loi n° 20, Loi mettant en œuvre certaines recommandations du rapport du 20 août 2018 du comité de la rémunération des juges pour la période ; share of its debate sentences with health terms: 0.01",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill27",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): economic development organization",
+  "evidence": "official title: Projet de loi n° 27, Loi concernant principalement l’organisation gouvernementale en matière d’économie et d’innovation; share of its debate sentences with health terms: 0.031",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill35",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): land registry publicity",
+  "evidence": "official title: Projet de loi n° 35, Loi visant à moderniser certaines règles relatives à la publicité foncière et à favoriser la diffusion de l’information géospatia; share of its debate sentences with health terms: 0.013",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill37",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): government procurement centre",
+  "evidence": "official title: Projet de loi n° 37, Loi visant principalement à instituer le Centre d’acquisitions gouvernementales et Infrastructures technologiques Québec; share of its debate sentences with health terms: 0.063",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill38",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): public sector pension plans",
+  "evidence": "official title: Projet de loi n° 38, Loi modifiant certaines lois instituant des régimes de retraite du secteur public; share of its debate sentences with health terms: 0.025",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill597",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): support for entrepreneurs and farmers",
+  "evidence": "official title: Projet de loi n° 597, Loi visant à améliorer le soutien offert aux entrepreneurs et aux agriculteurs en matière de santé mentale; share of its debate sentences with health terms: 0.235",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill61",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): economic recovery (projects acceleration)",
+  "evidence": "official title: Projet de loi n° 61, Loi visant la relance de l’économie du Québec et l’atténuation des conséquences de l’état d’urgence sanitaire déclaré le 13 mars ; share of its debate sentences with health terms: 0.029",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill691",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Ministry of Transport",
+  "evidence": "official title: Projet de loi n° 691, Loi modifiant la Loi sur le ministère des Transports afin d’assurer le maintien de services de transport aérien dans certaines r; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill75",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): access to justice",
+  "evidence": "official title: Projet de loi n° 75, Loi visant à améliorer l’accessibilité et l’efficacité de la justice, notamment pour répondre à des conséquences de la pandémie d; share of its debate sentences with health terms: 0.021",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill85",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): municipal general election",
+  "evidence": "official title: Projet de loi n° 85, Loi visant à faciliter le déroulement de l’élection générale municipale du 7 novembre 2021 dans le contexte de la pandémie de la ; share of its debate sentences with health terms: 0.039",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-1-Bill9",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): immigration and socio-economic prosperity",
+  "evidence": "official title: Projet de loi n° 9, Loi visant à accroître la prospérité socio-économique du Québec et à répondre adéquatement aux besoins du marché du travail par un; share of its debate sentences with health terms: 0.014",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-2-Bill15",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): youth protection",
+  "evidence": "official title: Projet de loi n° 15, Loi modifiant la Loi sur la protection de la jeunesse et d’autres dispositions législatives; share of its debate sentences with health terms: 0.038",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-2-Bill27",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): pension plans",
+  "evidence": "official title: Projet de loi n° 27, Loi modifiant principalement certaines lois instituant des régimes de retraite du secteur public; share of its debate sentences with health terms: 0.056",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "42-2-Bill29",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): voting in elections",
+  "evidence": "official title: Projet de loi n° 29, Loi visant à favoriser l’exercice du droit de vote lors des prochaines élections générales au Québec (titre modifié); share of its debate sentences with health terms: 0.053",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill101",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): labour laws",
+  "evidence": "official title: Projet de loi n° 101, Loi visant l’amélioration de certaines lois du travail; share of its debate sentences with health terms: 0.093",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill104",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): miscellaneous legislative amendments",
+  "evidence": "official title: Projet de loi n° 104, Loi modifiant diverses dispositions afin notamment de donner suite à certaines demandes du milieu municipal; share of its debate sentences with health terms: 0.002",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill213",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): buildings in the Municipality of Dixville",
+  "evidence": "official title: Projet de loi n° 213, Loi concernant certains immeubles situés dans la Municipalité de Dixville; share of its debate sentences with health terms: 0.038",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill37",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): commissioner for children's well-being and rights",
+  "evidence": "official title: Projet de loi n° 37, Loi sur le commissaire au bien-être et aux droits des enfants; share of its debate sentences with health terms: 0.043",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill398",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): public education",
+  "evidence": "official title: Projet de loi n° 398, Loi modifiant la Loi sur l’instruction publique afin de consacrer le droit des élèves handicapés ou en difficulté d’adaptation o; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill41",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): environmental performance of buildings",
+  "evidence": "official title: Projet de loi n° 41, Loi édictant la Loi sur la performance environnementale des bâtiments et modifiant diverses dispositions en matière de transition; share of its debate sentences with health terms: 0.066",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill61",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Mobilite Infra Quebec",
+  "evidence": "official title: Projet de loi n° 61, Loi édictant la Loi sur Mobilité Infra Québec et modifiant certaines dispositions relatives au transport collectif; share of its debate sentences with health terms: 0.036",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill694",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Highway Safety Code",
+  "evidence": "official title: Projet de loi n° 694, Loi modifiant le Code de la sécurité routière afin de lutter plus efficacement contre l’alcool au volant; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill899",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): Highway Safety Code",
+  "evidence": "official title: Projet de loi n° 899, Loi modifiant le Code de la sécurité routière afin d’obliger la Société de l’assurance automobile du Québec à conclure des enten; share of its debate sentences with health terms: 0.034",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill9",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): pension plans",
+  "evidence": "official title: Projet de loi n° 9, Loi modifiant principalement certaines lois instituant des régimes de retraite du secteur public; share of its debate sentences with health terms: 0.038",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-1-Bill95",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): child care services",
+  "evidence": "official title: Projet de loi n° 95, Loi favorisant l’équité dans l’accès aux services de garde éducatifs à l’enfance subventionnés dispensés par les titulaires de pe; share of its debate sentences with health terms: 0.033",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ },
+ {
+  "jurisdiction": "quebec",
+  "bill_key": "43-2-Bill25",
+  "date": "*",
+  "reason": "not a health bill: primary subject is not health (official title): justice system",
+  "evidence": "official title: Projet de loi n° 25, Loi visant à accroître la confiance du public envers le système de justice en modernisant la déontologie judiciaire et mettant en; share of its debate sentences with health terms: 0.0",
+  "decision": "PROPOSED: exclude (not removed; needs David/Joanie approval)"
+ }
+]

@@ -76,7 +76,12 @@ def congress(url):
     if got != (str(c), SLUG[slug], str(n)):
         return "BROKEN", f"the API record for {bk} is {' '.join(got)}"
     page = b.get("legislationUrl") or ""
-    if page and page.rstrip("/") != re.sub(r"/all-actions/?$", "", url).rstrip("/"):
+    # the API writes every congress with "th" (101th, 102th, 103th) while the site's own
+    # pages use 101st, 102nd, 103rd; compare congress, type and number, not the suffix
+    def core(u):
+        return re.sub(r"/(\d+)(?:st|nd|rd|th)-congress/", r"/\1-congress/",
+                      re.sub(r"/all-actions/?$", "", u.replace("http://", "https://")).rstrip("/"))
+    if page and core(page) != core(url):
         return "BROKEN", f"Congress.gov gives the page as {page}"
     return "CONFIRMED", (f"Congress.gov API record {b.get('type')} {b.get('number')}, {c}{suf} Congress"
                          + (" (page URL given by the API matches)" if page else "")
@@ -136,7 +141,7 @@ def main():
           f"OLA pages to open: up to {len(live)} (about {len(live) * (SLEEP + 1.5) / 60:.0f} min)", flush=True)
     for i, r in enumerate(todo, 1):
         u = r["url"]
-        if u in done:
+        if u in done and r["site"] != "www.congress.gov":      # Congress.gov checks are instant: always redo
             continue
         if r["site"] == "www.congress.gov":
             res = congress(u)

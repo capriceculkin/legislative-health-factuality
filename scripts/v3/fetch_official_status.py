@@ -200,6 +200,11 @@ def cmd_us_bound():
         if b.get("vote_date", "") < "1994-01-01":
             d0 = dt.date.fromisoformat(b["vote_date"])
             need |= {b["vote_date"], (d0 - dt.timedelta(days=1)).isoformat()}
+    # plus the House debate days from Congress.gov (us_rebuild.py floor-days)
+    fl = ROOT / "data/us/v3/floor_days.json"
+    if fl.exists():
+        for days in json.loads(fl.read_text(encoding="utf-8")).values():
+            need |= {d for d in days if d < "1994-01-01"}
     need = sorted(need)
     gl_dir = ROOT / "data/us/v3/cache/granule_lists"
     gl_dir.mkdir(parents=True, exist_ok=True)

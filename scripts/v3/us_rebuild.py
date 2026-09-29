@@ -46,7 +46,7 @@ import re
 import sys
 import time
 import zipfile
-from collections import Counter
+from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from v3_common import (rp, load_json, save_json, parse_us_bill, us_bill_mention_re, first_long_date, github_url)
@@ -69,6 +69,9 @@ CACHE = os.path.join(OUT, "cache")
 SEG_DIR = os.path.join(OUT, "cr_segments_v3")
 PLAN = os.path.join(OUT, "plan.json")
 INDEX = os.path.join(OUT, "segments_index.json")
+FLOOR = os.path.join(OUT, "floor_days.json")                   # House debate days per bill (Congress.gov)
+FLOOR_TODO = os.path.join(OUT, "floor_days_bound_todo.txt")   # pre-1994 floor days not yet read from PDF
+FLOOR_AFTER_VOTE = os.environ.get("US_FLOOR_AFTER_VOTE", "0") == "1"
 TABLE = os.path.join(OUT, "us_running_table.csv")
 API = "https://api.govinfo.gov"
 KEY = os.environ.get("GOVINFO_API_KEY", "")
@@ -622,18 +625,89 @@ def cmd_plan():
     print(f"Plan: {len(plan)} (bill, vote date) rows; {dict(ed)}; unparseable rows skipped: {bad}")
 
 
+def window_days(b):
+    d0 = dt.date.fromisoformat(b["vote_date"])
+    look = LOOKBACK_DAILY if b["edition"] == "daily" else LOOKBACK_BOUND
+    return [(d0 - dt.timedelta(days=k)).isoformat() for k in range(look + 1)]
+
+
+def floor_extra(plan):
+    """Congress.gov House debate days that the vote-day windows do not cover, each given
+    to the bill's first vote on or after it (so a day is searched once). Days after the
+    bill's last vote are left out unless US_FLOOR_AFTER_VOTE=1."""
+    floor = load_json(FLOOR, {}) or {}
+    rows = defaultdict(list)
+    for i, b in enumerate(plan):
+        rows[b["bill_key"]].append(i)
+    extra = defaultdict(set)
+    for bk, ids in rows.items():
+        covered = {d for i in ids for d in window_days(plan[i])}
+        votes = sorted(ids, key=lambda i: plan[i]["vote_date"])
+        for d in floor.get(bk, []):
+            if d in covered:
+                continue
+            tgt = next((i for i in votes if plan[i]["vote_date"] >= d), None)
+            if tgt is None and FLOOR_AFTER_VOTE:
+                tgt = votes[-1]
+            if tgt is not None:
+                extra[tgt].add(d)
+    return extra
+
+
+def cmd_floor_days():
+    """Reads each bill's Congress.gov action list (data/v3_status_cache/us/{bill}.actions.json)
+    and records the days the House debated it (debate, suspension, Committee of the Whole;
+    Rules Committee actions are not debate). The segment step searches these days as well
+    as the vote day and the days before it, so a debate held earlier than that window
+    (H.R. 2454: debated 10/28/1991, voted 10/31/1991) is no longer missed."""
+    from compare_debate_days import house_floor
+    plan = load_json(PLAN) or sys.exit("Run plan first.")
+    status = rp("data", "v3_status_cache", "us")
+    out, no_list = {}, []
+    for bk in sorted({b["bill_key"] for b in plan}):
+        acts = (load_json(os.path.join(status, f"{bk}.actions.json")) or {}).get("actions")
+        if acts is None:
+            no_list.append(bk)
+            continue
+        days = sorted(d for d, (kind, _) in house_floor(acts).items() if kind == "debate")
+        if days:
+            out[bk] = days
+    save_json(out, FLOOR, indent=1)
+    extra = floor_extra(plan)
+    new_days = sorted({d for ds in extra.values() for d in ds})
+    todo = []
+    for d in new_days:
+        if d < DAILY_FROM:
+            c = load_json(os.path.join(CACHE, "bound_text", f"{d}.json"))
+            if not (c and c.get("source") == "pdf_columns_v2" and c.get("lines")):
+                todo.append(d)
+    with open(FLOOR_TODO, "w", encoding="utf-8") as f:
+        f.write(",".join(todo))
+    print(f"Congress.gov House debate days found for {len(out)} bills ({len(no_list)} bills have no action list)")
+    print(f"days the vote windows did not cover, now added: {sum(len(v) for v in extra.values())} "
+          f"({len(new_days)} distinct dates; {sum(d < DAILY_FROM for d in new_days)} before 1994)"
+          + ("" if FLOOR_AFTER_VOTE else "; days after a bill's last vote left out (US_FLOOR_AFTER_VOTE=1 adds them)"))
+    print(f"pre-1994 days still to read from the PDF: {len(todo)} -> {FLOOR_TODO}")
+
+
 def cmd_segment():
     plan = load_json(PLAN) or sys.exit("Run plan first.")
     os.makedirs(SEG_DIR, exist_ok=True)
     index, missing = [], []
+    merged = {}                # (bill_key, debate_day) -> one entry, whichever votes reach it
+    extra = floor_extra(plan) if os.path.exists(FLOOR) else {}
+    if extra:
+        print(f"also searching {sum(len(v) for v in extra.values())} Congress.gov House debate days "
+              f"outside the vote windows (floor_days.json)", flush=True)
     for i, b in enumerate(plan, 1):
-        d0 = dt.date.fromisoformat(b["vote_date"])
-        look = LOOKBACK_DAILY if b["edition"] == "daily" else LOOKBACK_BOUND
         hint = set()               # old text files are not used any more
         units_by_day = {}
-        for k in range(look + 1):
-            day = (d0 - dt.timedelta(days=k)).isoformat()
+        for day in window_days(b):
             units_by_day[day] = daily_units(day) if b["edition"] == "daily" else bound_units(day, hint)
+        floor_days = sorted(extra.get(i - 1, set()))
+        for day in floor_days:
+            units_by_day[day] = daily_units(day) if day >= DAILY_FROM else bound_units(day, hint)
+        d0 = dt.date.fromisoformat(b["vote_date"])
         chosen, excluded = select_units(units_by_day, b)
         if not chosen:
             missing.append({**b, "days_searched": list(units_by_day),
@@ -644,17 +718,40 @@ def cmd_segment():
         for u, method in chosen:
             by_day.setdefault(u["day"], []).append((u, method))
         for day, items in sorted(by_day.items()):
-            path = os.path.join(SEG_DIR, f"{b['bill_key']}_{day}.txt")
-            with open(path, "w", encoding="utf-8") as f:
-                f.write("\n\n".join(p for u, _ in items for p in u["paragraphs"]) + "\n")
+            # A bill with several votes (motions, conference report, passage) can reach the same
+            # debate day from more than one vote. Each bill-day is kept ONCE: the units every vote
+            # found for it are merged, and the entry is labelled from the nearest vote on or after it.
             k = (d0 - dt.date.fromisoformat(day)).days
-            index.append({**b, "debate_date": day, "date_source": "vote_date" if k == 0 else f"vote_date_minus_{k}",
-                          "file": os.path.relpath(path, US),
-                          "units": [{"id": u["id"], "title": u["title"], "method": m, "source": u["source"],
-                                     "printed": u.get("printed", {}), "url": u.get("url", "")} for u, m in items],
-                          "excluded": [e for e in excluded if e["day"] == day]})
+            src = ("congress_gov_floor_day" if day in floor_days else
+                   "vote_date" if k == 0 else f"vote_date_minus_{k}")
+            m = merged.get((b["bill_key"], day))
+            if m is None or (src != "congress_gov_floor_day" and (m["src"] == "congress_gov_floor_day" or k < m["k"])):
+                prev = m
+                m = {"b": b, "k": k, "src": src, "floor": day in floor_days,
+                     "units": prev["units"] if prev else {}, "votes": prev["votes"] if prev else [],
+                     "excluded": prev["excluded"] if prev else []}
+                merged[(b["bill_key"], day)] = m
+            for u, meth in items:
+                m["units"].setdefault(u["id"], (u, meth))
+            m["votes"].append(b["vote_date"])
+            m["excluded"] += [e for e in excluded if e["day"] == day and e not in m["excluded"]]
         print(f"  [{i}/{len(plan)}] {b['bill_key']} {b['vote_date']}: {len(chosen)} units on {sorted(by_day)}",
               flush=True)
+    for (bk, day), m in merged.items():
+        b, items = m["b"], list(m["units"].values())
+        path = os.path.join(SEG_DIR, f"{bk}_{day}.txt")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("\n\n".join(p for u, _ in items for p in u["paragraphs"]) + "\n")
+        index.append({**b, "debate_date": day, "date_source": m["src"],
+                      "edition": (("daily" if day >= DAILY_FROM else "bound") if m["floor"] else b["edition"]),
+                      "file": os.path.relpath(path, US),
+                      "votes_served": sorted(set(m["votes"])),
+                      "units": [{"id": u["id"], "title": u["title"], "method": mm, "source": u["source"],
+                                 "printed": u.get("printed", {}), "url": u.get("url", "")} for u, mm in items],
+                      "excluded": m["excluded"]})
+    dup = sum(len(m["votes"]) - 1 for m in merged.values())
+    print(f"Bill-days reached from more than one vote, kept once: {sum(len(m['votes']) > 1 for m in merged.values())} "
+          f"({dup} repeat entries merged)")
     save_json(index, INDEX, indent=1)
     save_json(missing, os.path.join(OUT, "segments_missing.json"), indent=1)
     print(f"Files written: {len(index)}; bill-votes not found: {len(missing)} (segments_missing.json)")
@@ -704,7 +801,7 @@ def cmd_verify():
 
 
 if __name__ == "__main__":
-    cmds = {"plan": cmd_plan, "segment": cmd_segment, "verify": cmd_verify,
+    cmds = {"plan": cmd_plan, "floor-days": cmd_floor_days, "segment": cmd_segment, "verify": cmd_verify,
             "all": lambda: (cmd_plan(), cmd_segment(), cmd_verify())}
     if len(sys.argv) != 2 or sys.argv[1] not in cmds:
         sys.exit("usage: us_rebuild.py " + "|".join(cmds))

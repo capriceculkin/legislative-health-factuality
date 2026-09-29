@@ -246,7 +246,16 @@ for j in ("us", "ontario", "quebec"):
             f"{len(id_mis)} mismatches" + (f" e.g. {examples(id_mis, 3)}" if id_mis else ""))
     for x in (bk_mis + date_mis)[:300]:
         issue("B", j, x[1], "", "predication disagrees with its sentence", x)
-    del smap
+    # the same sentence stored twice (a bill-day read twice) counts its claims twice
+    sid_counts = Counter(s[sid_field] for s in sents[j])
+    dup_ids = [(k, n) for k, n in sid_counts.items() if n > 1]
+    dup_days = sorted({"|".join(str(k).split("|")[1:3]) for k, _ in dup_ids})
+    verdict(f"B6 {j} every sentence is stored once", not dup_ids,
+            f"{sum(n - 1 for _, n in dup_ids):,} extra copies on {len(dup_days)} bill-day(s)"
+            + (f" e.g. {examples(dup_days, 5)}" if dup_days else ""))
+    for d in dup_days[:200]:
+        issue("B6", j, d.split("|")[0], d.split("|")[-1], "sentences stored more than once", "")
+    del smap, sid_counts
 
 # ============================================================ transcript index maps
 # (bill_key, iso_date) -> dict(url_full_day, urls, printed_dates, session_in_url, ...)
@@ -350,6 +359,11 @@ for j in ("us", "ontario", "quebec"):
     # reverse: index bill-dates with no predications (informational)
     no_preds = [k for k in idx[j] if k not in pairs]
     info(f"C2 {j} index bill-dates with zero predications", f"{len(no_preds)} of {len(idx[j])}")
+_us_days = Counter((e.get("bill_key"), e.get("debate_date")) for e in us_index)
+_rep = sorted(k for k, n in _us_days.items() if n > 1)
+verdict("C3 us each bill-day appears once in the transcript index", not _rep,
+        f"{len(us_index)} entries, {len(_us_days)} bill-days, {len(_rep)} listed more than once"
+        + (f" e.g. {examples(_rep, 5)}" if _rep else ""))
 
 # ============================================================ D. dates, three ways
 say("\n" + "-" * 78 + "\nD. sitting dates: index vs URL vs printed/French header vs weekday\n" + "-" * 78)
@@ -808,9 +822,24 @@ def content_words(s):
 
 
 def title_match(title, headings):
-    t = content_words(title)
+    """title may be one title or a list (long title, short title); any one matching is enough."""
     h = content_words(" ".join(headings))
-    return bool(t) and len(t & h) / len(t) >= 0.6
+    for one in (title if isinstance(title, (list, tuple)) else [title]):
+        t = content_words(one)
+        if t and len(t & h) / len(t) >= 0.6:
+            return True
+    return False
+
+
+def ola_short_title(bk):
+    """Short title from the <title> of the bill's cached OLA status page (an official source separate
+    from bills_master), e.g. 'Fair Municipal Finance Act, 1997 (No. 2)'. Hansard headings use it."""
+    p = ROOT / "data" / "v3_status_cache" / "ontario" / f"{bk}.html"
+    if not p.exists():
+        return ""
+    m = re.search(r"<title>\s*Bill\s+\d+\s*,\s*(.+?)\s+-\s+Legislative Assembly",
+                  p.read_text(encoding="utf-8", errors="ignore"), re.S | re.I)
+    return re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
 
 
 EXCL = []
@@ -847,13 +876,14 @@ def mention_check(jur, rows):
             per_bill[bk].append(False)
             hl = [heads] if isinstance(heads, str) else list(heads or [])
             others = Counter(re.findall(r"\b(?:Bill|H\.\s?R\.|projet de loi(?: n\S{0,3})?)\s*(\d+)", text, re.I))
-            bad_rows.append((bk, d, f"title: {str(title)[:70]} | headings: {' / '.join(map(str, hl[:3]))[:150]} | "
+            bad_rows.append((bk, d, f"title: {str(title[0] if isinstance(title, list) else title)[:70]} | headings: {' / '.join(map(str, hl[:3]))[:150]} | "
                                     f"bill numbers named instead: {dict(others.most_common(5))} | "
                                     f"starts: {' '.join(str(text).split())[:160]}"))
     never = sorted(k for k, v in per_bill.items() if not any(v))
     n = ok_num + ok_title + ok_hand + bad
     verdict(f"I1 {jur} bill-day sections that name their bill", bad == 0,
-            f"{n - bad} of {n} ({ok_num} by number, {ok_title} by title words in the heading, "
+            f"{n - bad} of {n} ({ok_num} by number, {ok_title} by title words in the heading"
+            f"{' (long title or OLA short title)' if jur == 'ontario' else ''}, "
             f"{ok_hand} checked by hand, see data/v3_section_checks.json); {bad} name neither")
     verdict(f"I2 {jur} bills where NO section names the bill", not never,
             f"{len(never)} of {len(per_bill)}" + (f" e.g. {examples(never)}" if never else ""))
@@ -868,7 +898,7 @@ try:
     for bk, days in on_segs.items():
         n = bk.rsplit("-Bill", 1)[1]
         rx = re.compile(r"\bBill\s+(?:No\.\s*)?" + n + r"\b", re.I)
-        title = (on_master.get(bk) or {}).get("long_title", "")
+        title = [(on_master.get(bk) or {}).get("long_title", ""), ola_short_title(bk)]
         for d, paras in days.items():
             text = " ".join(str(p.get("text", "")) for p in paras)
             heads = sorted({str(p.get("topic", "")) for p in paras if p.get("topic")})

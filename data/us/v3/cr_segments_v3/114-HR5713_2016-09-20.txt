@@ -1,0 +1,961 @@
+Congressional Record, Volume 162 Issue 142 (Tuesday, September 20, 2016)
+
+SUSTAINING HEALTHCARE INTEGRITY AND FAIR TREATMENT ACT OF 2016
+
+Mr. TIBERI. Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 5713) to provide for the extension of certain long-term care hospital Medicare payment rules, clarify the application of rules on the calculation of hospital length of stay to certain moratorium- excepted long-term care hospitals, and for other purposes, as amended.
+
+The Clerk read the title of the bill.
+
+The text of the bill is as follows:
+
+H.R. 5713
+
+Be it enacted by the Senate and House of Representatives of
+
+the United States of America in Congress assembled,
+
+SECTION 1. SHORT TITLE; TABLE OF CONTENTS.
+
+(a) Short Title.--This Act may be cited as the ``Sustaining
+
+Healthcare Integrity and Fair Treatment Act of 2016''.
+
+(b) Table of Contents.--This table of contents of this Act
+
+is as follows:
+
+Sec. 1. Short title; table of contents.
+
+TITLE I--MEDICARE PART A PROVISIONS
+
+Sec. 101. Extension of certain LTCH Medicare payment rules. Sec. 102. Application of rules on the calculation of hospital length of
+
+stay to all LTCHs. Sec. 103. Change in Medicare classification for certain hospitals. Sec. 104. Temporary exception to the application of the Medicare LTCH
+
+site neutral provisions for certain spinal cord specialty
+
+hospitals. Sec. 105. Temporary extension to the application of the Medicare LTCH
+
+site neutral provisions for certain discharges with
+
+severe wounds.
+
+TITLE II--OTHER PROVISIONS
+
+Sec. 201. No payment for items and services furnished by newly enrolled
+
+providers or suppliers within a temporary moratorium
+
+area.
+
+TITLE I--MEDICARE PART A PROVISIONS
+
+SEC. 101. EXTENSION OF CERTAIN LTCH MEDICARE PAYMENT RULES.
+
+(a) 25-Percent Patient Threshold Payment Adjustment.--
+
+Section 114(c)(1)(A) of the Medicare, Medicaid, and SCHIP
+
+Extension Act of 2007 (42 U.S.C. 1395ww note), as amended by
+
+section 4302(a) of division B of the American Recovery and
+
+Reinvestment Act (Public Law 111-5), sections 3106(a) and
+
+10312(a) of Public Law 111-148, and section 1206(b)(1)(B) of
+
+the Pathway for SGR Reform Act of 2013 (division B of Public
+
+Law 113-67), is amended by striking ``for a 9-year period''
+
+and inserting ``through June 30, 2016, and for discharges
+
+occurring on or after October 1, 2016, and before July 1,
+
+2017''.
+
+(b) Payment for Hospitals-within-hospitals.--Section
+
+114(c)(2) of the Medicare, Medicaid, and SCHIP Extension Act
+
+of 2007 (42 U.S.C. 1395ww note), as amended by section
+
+4302(a) of division B of the American Recovery and
+
+Reinvestment Act (Public Law 111-5), sections 3106(a) and
+
+10312(a) of Public
+
+Law 111-148, and section 1206(b)(1)(A) of the Pathway for SGR
+
+Reform Act of 2013 (division B of Public Law 113-67), is
+
+amended--
+
+(1) in subparagraph (A), by inserting ``or any similar
+
+provision,'' after ``Regulations,'';
+
+(2) in subparagraph (B)--
+
+(A) in clause (i), by inserting ``or any similar
+
+provision,'' after ``Regulations,''; and
+
+(B) in clause (ii), by inserting ``, or any similar
+
+provision,'' after ``Regulations''; and
+
+(3) in subparagraph (C), by striking ``for a 9-year
+
+period'' and inserting ``through June 30, 2016, and for
+
+discharges occurring on or after October 1, 2016, and before
+
+July 1, 2017''.
+
+SEC. 102. APPLICATION OF RULES ON THE CALCULATION OF HOSPITAL
+
+LENGTH OF STAY TO ALL LTCHS.
+
+(a) In General.--Section 1206(a)(3) of the Pathway for SGR
+
+Reform Act of 2013 (division B of Public Law 113-67; 42
+
+U.S.C. 1395ww note) is amended--
+
+(1) by striking subparagraph (B);
+
+(2) by striking ``site neutral basis.--'' and all that
+
+follows through ``For discharges occurring'' and inserting
+
+``site neutral basis.--For discharges occurring'';
+
+(3) by striking ``subject to subparagraph (B),''; and
+
+(4) by redesignating clauses (i) and (ii) as subparagraphs
+
+(A) and (B), respectively, and moving each of such
+
+subparagraphs (as so redesignated) 2 ems to the left.
+
+(b) Effective Date.--The amendments made by subsection (a)
+
+shall be effective as if included in the enactment of section
+
+1206(a)(3) of the Pathway for SGR Reform Act of 2013
+
+(division B of Public Law 113-67; 42 U.S.C. 1395ww note).
+
+SEC. 103. CHANGE IN MEDICARE CLASSIFICATION FOR CERTAIN
+
+HOSPITALS.
+
+(a) In General.--Subsection (d)(1)(B) of section 1886 of
+
+the Social Security Act (42 U.S.C. 1395ww) is amended--
+
+(1) in clause (iv)--
+
+(A) in subclause (I), by striking ``or'' at the end;
+
+(B) in subclause (II)--
+
+(i) by striking ``, or'' at the end and inserting a
+
+semicolon; and
+
+(ii) by redesignating such subclause as clause (vi) and by
+
+moving it to immediately follow clause (v); and
+
+(iii) in clause (v), by striking the semicolon at the end
+
+and inserting ``, or''; and
+
+(C) by striking ``(iv)(I) a hospital'' and inserting ``(iv)
+
+a hospital''.
+
+(b) Conforming Payment References.--The second sentence of
+
+subsection (d)(1)(B) of such section is amended--
+
+(1) by inserting ``(as in effect as of such date)'' after
+
+``clause (iv)''; and
+
+(2) by inserting ``(or, in the case of a hospital described
+
+in clause (iv)(II), as so in effect, shall be classified
+
+under clause (vi) on and after the effective date of such
+
+clause (vi) and for cost reporting periods beginning on or
+
+after January 1, 2015, shall not be subject to subsection (m)
+
+as of the date of such classification)'' after ``so
+
+classified''.
+
+(c) Application.--
+
+(1) In general.--For cost reporting periods beginning on or
+
+after January 1, 2015, in the case of an applicable hospital
+
+(as defined in paragraph (3)), the following shall apply:
+
+(A) Payment for inpatient operating costs shall be made on
+
+a reasonable cost basis in the manner provided in section
+
+412.526(c)(3) of title 42, Code of Federal Regulations (as in
+
+effect on January 1, 2015) and in any subsequent
+
+modifications.
+
+(B) Payment for capital costs shall be made in the manner
+
+provided by section 412.526(c)(4) of title 42, Code of
+
+Federal Regulations (as in effect on such date).
+
+(C) Claims for payment for Medicare beneficiaries who are
+
+discharged on or after January 1, 2017, shall be processed as
+
+claims which are paid on a reasonable cost basis as described
+
+in section 412.526(c) of title 42, Code of Federal
+
+Regulations (as in effect on such date).
+
+(2) Applicable hospital defined.--In this subsection, the
+
+term ``applicable hospital'' means a hospital that is
+
+classified under clause (iv)(II) of section 1886(d)(1)(B) of
+
+the Social Security Act (42 U.S.C. 1395ww(d)(1)(B)) on the
+
+day before the date of the enactment of this Act and which is
+
+classified under clause (vi) of such section, as redesignated
+
+and moved by subsection (a), on or after such date of
+
+enactment.
+
+(d) Conforming Technical Amendments.--
+
+(1) Section 1899B(a)(2)(A)(iv) of the Social Security Act
+
+(42 U.S.C. 1395lll(a)(2)(A)(iv)) is amended by striking
+
+``1886(d)(1)(B)(iv)(II)'' and inserting
+
+``1886(d)(1)(B)(vi)''.
+
+(2) Section 1886(m)(5)(F) of such Act (42 U.S.C.
+
+1395ww(m)(5)(F)) is amended in each of clauses (i) and (ii)
+
+by striking ``(d)(1)(B)(iv)(II)'' and inserting
+
+``(d)(1)(B)(vi)''.
+
+SEC. 104. TEMPORARY EXCEPTION TO THE APPLICATION OF THE
+
+MEDICARE LTCH SITE NEUTRAL PROVISIONS FOR
+
+CERTAIN SPINAL CORD SPECIALTY HOSPITALS.
+
+(a) Exception.--Section 1886(m)(6) of the Social Security
+
+Act (42 U.S.C. 1395ww(m)(6)) is amended--
+
+(1) in subparagraph (A)(i), by striking ``and (E)'' and
+
+inserting ``, (E), and (F)''; and
+
+(2) by adding at the end the following new subparagraph:
+
+``(F) Temporary exception for certain spinal cord specialty
+
+hospitals.--For discharges in cost reporting periods
+
+beginning during fiscal years 2018 and 2019, subparagraph
+
+(A)(i) shall not apply (and payment shall be made to a long-
+
+term care hospital without regard to this paragraph) if such
+
+discharge is from a long-term care hospital that meets each
+
+of the following requirements:
+
+``(i) Not-for-profit.--The long-term care hospital was a
+
+not-for-profit long-term care hospital on June 1, 2014, as
+
+determined by cost report data.
+
+``(ii) Primarily providing treatment for catastrophic
+
+spinal cord or acquired brain injuries or other paralyzing
+
+neuromuscular conditions.--Of the discharges in calendar year
+
+2013 from the long-term care hospital for which payment was
+
+made under this section, at least 50 percent were classified
+
+under MS-LTCH-DRGs 28, 29, 52, 57, 551, 573, and 963.
+
+``(iii) Significant out-of-state admissions.--
+
+``(I) In general.--The long-term care hospital discharged
+
+inpatients (including both individuals entitled to, or
+
+enrolled for, benefits under this title and individuals not
+
+so entitled or enrolled) during fiscal year 2014 who had been
+
+admitted from at least 20 of the 50 States, determined by the
+
+States of residency of such inpatients and based on such data
+
+submitted by the hospital to the Secretary as the Secretary
+
+may require.
+
+``(II) Implementation.--Notwithstanding any other provision
+
+of law, the Secretary may implement subclause (I) by program
+
+instruction or otherwise.
+
+``(III) Non-application of paperwork reduction act.--
+
+Chapter 35 of title 44, United States Code, shall not apply
+
+to data collected under this clause.''.
+
+(b) Study and Report on the Status and Viability of Certain
+
+Spinal Cord Specialty Long-term Care Hospitals.--
+
+(1) Study.--The Comptroller General of the United States
+
+shall conduct a study on long-term care hospitals described
+
+in section 1886(m)(6)(F) of the Social Security Act, as added
+
+by subsection (a). Such report shall include an analysis of
+
+the following:
+
+(A) The impact on such hospitals of the classification and
+
+facility licensure by State agencies of such hospitals.
+
+(B) The Medicare payment rates for such hospitals.
+
+(C) Data on the number and health care needs of Medicare
+
+beneficiaries who have been diagnosed with catastrophic
+
+spinal cord or acquired brain injuries or other paralyzing
+
+neuromuscular conditions (as described within the discharge
+
+classifications specified in clause (ii) of such section) who
+
+are receiving services from such hospitals.
+
+(2) Report.--Not later than October 1, 2018, the
+
+Comptroller General shall submit to Congress a report on the
+
+study conducted under paragraph (1), including
+
+recommendations for such legislation and administrative
+
+action as the Comptroller General determines appropriate.
+
+SEC. 105. TEMPORARY EXTENSION TO THE APPLICATION OF THE
+
+MEDICARE LTCH SITE NEUTRAL PROVISIONS FOR
+
+CERTAIN DISCHARGES WITH SEVERE WOUNDS.
+
+(a) In General.--Section 1886(m)(6) of the Social Security
+
+Act (42 U.S.C. 1395ww(m)(6)), as amended by section 104, is
+
+further amended--
+
+(1) in subparagraph (A)(i) by striking ``and (F)'' and
+
+inserting ``(F), and (G)'';
+
+(2) in subparagraph (E)(i)(I)(aa), by striking ``the
+
+amendment made'' and all that follows before the semicolon
+
+and inserting ``the last sentence of subsection (d)(1)(B)'';
+
+and
+
+(3) by adding at the end the following new subparagraph:
+
+``(G) Additional temporary exception for certain severe
+
+wound discharges from certain long-term care hospitals.--
+
+``(i) In general.--For a discharge occurring in a cost
+
+reporting period beginning during fiscal year 2018,
+
+subparagraph (A)(i) shall not apply (and payment shall be
+
+made to a long-term care hospital without regard to this
+
+paragraph) if such discharge--
+
+``(I) is from a long-term care hospital identified by the
+
+last sentence of subsection (d)(1)(B);
+
+``(II) is classified under MS-LTCH-DRG 602, 603, 539, or
+
+540; and
+
+``(III) is with respect to an individual treated by a long-
+
+term care hospital for a severe wound.
+
+``(ii) Severe wound defined.--In this subparagraph, the
+
+term `severe wound' means a wound which is a stage 3 wound,
+
+stage 4 wound, unstageable wound, non-healing surgical wound,
+
+or fistula as identified in the claim from the long-term care
+
+hospital.
+
+``(iii) Wound defined.--In this subparagraph, the term
+
+`wound' means an injury involving division of tissue or
+
+rupture of the integument or mucous membrane with exposure to
+
+the external environment.''.
+
+(c) Study and Report to Congress.--
+
+(1) Study.--The Comptroller General of the United States
+
+shall, in consultation with relevant stakeholders, conduct a
+
+study on the treatment needs of individuals entitled to
+
+benefits under part A of title XVIII of the Social Security
+
+Act or enrolled under part B of such title who require
+
+specialized wound care, and the cost, for such individuals
+
+and the Medicare program under such title, of treating severe
+
+wounds in rural and urban areas. Such study shall include an
+
+assessment of--
+
+(A) access of such individuals to appropriate levels of
+
+care for such cases;
+
+(B) the potential impact that section 1886(m)(6)(A)(i) of
+
+such Act (42 U.S.C. 1395ww(m)(6)(A)(i)) will have on the
+
+access, quality, and cost of care for such individuals; and
+
+(C) how to appropriately pay for such care under the
+
+Medicare program under such title.
+
+(2) Report.--Not later than October 1, 2020, the
+
+Comptroller General shall submit to Congress a report on the
+
+study conducted
+
+under paragraph (1), including recommendations for such
+
+legislation and administrative action as the Comptroller
+
+General determines appropriate.
+
+TITLE II--OTHER PROVISIONS
+
+SEC. 201. NO PAYMENT FOR ITEMS AND SERVICES FURNISHED BY
+
+NEWLY ENROLLED PROVIDERS OR SUPPLIERS WITHIN A
+
+TEMPORARY MORATORIUM AREA.
+
+(a) Medicare.--Section 1866(j)(7) of the Social Security
+
+Act (42 U.S.C. 1395cc(j)(7)) is amended--
+
+(1) in the paragraph heading, by inserting ``; nonpayment''
+
+before the period; and
+
+(2) by adding at the end the following new subparagraph:
+
+``(C) Nonpayment.--
+
+``(i) In general.--No payment may be made under this title
+
+or under a program described in subparagraph (A) with respect
+
+to an item or service described in clause (ii) furnished on
+
+or after October 1, 2017.
+
+``(ii) Item or service described.--An item or service
+
+described in this clause is an item or service furnished--
+
+``(I) within a geographic area with respect to which a
+
+temporary moratorium imposed under subparagraph (A) is in
+
+effect; and
+
+``(II) by a provider of services or supplier that meets the
+
+requirements of clause (iii).
+
+``(iii) Requirements.--For purposes of clause (ii), the
+
+requirements of this clause are that a provider of services
+
+or supplier--
+
+``(I) enrolls under this title on or after the effective
+
+date of such temporary moratorium; and
+
+``(II) is within a category of providers of services and
+
+suppliers (as described in subparagraph (A)) subject to such
+
+temporary moratorium.
+
+``(iv) Prohibition on charges for specified items or
+
+services.--In no case shall a provider of services or
+
+supplier described in clause (ii)(II) charge an individual or
+
+other person for an item or service described in clause (ii)
+
+furnished on or after October 1, 2017, to an individual
+
+entitled to benefits under part A or enrolled under part B or
+
+an individual under a program specified in subparagraph
+
+(A).''.
+
+(b) Conforming Amendments.--
+
+(1) Medicaid.--
+
+(A) In general.--Section 1903(i)(2) of the Social Security
+
+Act (42 U.S.C. 1396b(i)(2)) is amended--
+
+(i) in subparagraph (A), by striking the comma at the end
+
+and inserting a semicolon;
+
+(ii) in subparagraph (B), by striking ``or'' at the end;
+
+and
+
+(iii) by adding at the end the following new subparagraph:
+
+``(D) with respect to any amount expended for such an item
+
+or service furnished during calendar quarters beginning on or
+
+after October 1, 2017, subject to section
+
+1902(kk)(4)(A)(ii)(II), within a geographic area that is
+
+subject to a moratorium imposed under section 1866(j)(7) by a
+
+provider or supplier that meets the requirements specified in
+
+subparagraph (C)(iii) of such section, during the period of
+
+such moratorium; or''.
+
+(B) Exception with respect to access.--Section
+
+1902(kk)(4)(A)(ii) of the Social Security Act (42 U.S.C.
+
+1396a(kk)(4)(A)(ii)) is amended to read as follows:
+
+``(ii) Exceptions.--
+
+``(I) Compliance with moratorium.--A State shall not be
+
+required to comply with a temporary moratorium described in
+
+clause (i) if the State determines that the imposition of
+
+such temporary moratorium would adversely impact
+
+beneficiaries' access to medical assistance.
+
+``(II) FFP available.--Notwithstanding section
+
+1903(i)(2)(D), payment may be made to a State under this
+
+title with respect to amounts expended for items and services
+
+described in such section if the Secretary, in consultation
+
+with the State agency administering the State plan under this
+
+title (or a waiver of the plan), determines that denying
+
+payment to the State pursuant to such section would adversely
+
+impact beneficiaries' access to medical assistance. ''.
+
+(C) State plan requirement with respect to limitation on
+
+charges to beneficiaries.--Section 1902(kk)(4)(A) of the
+
+Social Security Act (42 U.S.C. 1396a(kk)(4)(A)) is amended by
+
+adding at the end the following new clause:
+
+``(iii) Limitation on charges to beneficiaries.--With
+
+respect to any amount expended for items or services
+
+furnished during calendar quarters beginning on or after
+
+October 1, 2017, the State prohibits, during the period of a
+
+temporary moratorium described in clause (i), a provider
+
+meeting the requirements specified in subparagraph (C)(iii)
+
+of section 1866(j)(7) from charging an individual or other
+
+person eligible to receive medical assistance under the State
+
+plan under this title (or a waiver of the plan) for an item
+
+or service described in section 1903(i)(2)(D) furnished to
+
+such an individual.''.
+
+(2) Correcting amendments to related provisions.--
+
+(A) Section 1866(j).--Section 1866(j) of the Social
+
+Security Act (42 U.S.C. 1395cc(j)) is amended--
+
+(i) in paragraph (1)(A)--
+
+(I) by striking ``paragraph (4)'' and inserting ``paragraph
+
+(5)'';
+
+(II) by striking ``moratoria in accordance with paragraph
+
+(5)'' and inserting ``moratoria in accordance with paragraph
+
+(7)''; and
+
+(III) by striking ``paragraph (6)'' and inserting
+
+``paragraph (9)''; and
+
+(ii) by redesignating the second paragraph (8) (added by
+
+section 1304(1) of Public Law 111-152) as paragraph (9).
+
+(B) Section 1902(kk).--Section 1902(kk) of such Act (42
+
+U.S.C. 1396a(kk)) is amended--
+
+(i) in paragraph (1), by striking ``section 1886(j)(2)''
+
+and inserting ``section 1866(j)(2)'';
+
+(ii) in paragraph (2), by striking ``section 1886(j)(3)''
+
+and inserting ``section 1866(j)(3)'';
+
+(iii) in paragraph (3), by striking ``section 1886(j)(4)''
+
+and inserting ``section 1866(j)(5)''; and
+
+(iv) in paragraph (4)(A), by striking ``section
+
+1886(j)(6)'' and inserting ``section 1866(j)(7)''.
+
+The SPEAKER pro tempore. Pursuant to the rule, the gentleman from Ohio (Mr. Tiberi) and the gentleman from New Jersey (Mr. Pascrell) each will control 20 minutes.
+
+The Chair recognizes the gentleman from Ohio.
+
+General Leave
+
+Mr. TIBERI. Mr. Speaker, I ask unanimous consent that all Members may have 5 legislative days within which to revise and extend their remarks and include extraneous material on H.R. 5713, currently under consideration.
+
+The SPEAKER pro tempore. Is there objection to the request of the gentleman from Ohio?
+
+There was no objection.
+
+Mr. TIBERI. Mr. Speaker, I yield myself such time as I may consume. This bill provides needed regulatory relief for our hospitals, specifically long-term care hospitals.
+
+I am happy that the Ways and Means Committee has come together in a bipartisan effort on this bill, and I want to thank my colleague and dear friend from the Garden State, Bill Pascrell, for cosponsoring this bill with me today.
+
+H.R. 5713, the Sustaining Healthcare Integrity and Fair Treatment Act, or the SHIFT Act, will give relief to all long-term care hospitals, or LTCHs, from the 25 percent rule before it fully goes into effect next month on October 1 of this year.
+
+This CMS rule, which has been delayed for 10 years, allows for no more than 25 percent of patients to come from one inpatient acute care hospital in one quarter. My bill will reinstate the 50 percent threshold that was in effect prior to July 1, 2016, and delay the rule for 9 months.
+
+During a time when patients and healthcare providers are facing increasing burdens and higher costs, I am pleased that we could come to an agreement that will help over 400 hospitals across America. This bill will also provide relief for four specific groups of LTCHs that treat highly unique groups of patients.
+
+I was glad to work with a number of my colleagues to incorporate their bills within this bill, including Mr. Buchanan's and Mr. Pascrell's bill, H.R. 4650; Mr. Jason Smith's bill, H.R. 5559; Mr. Crowley's bill, H.R. 5614; Dr. Price's and Mr. Lewis' bill, H.R. 5688; and finally, Mr. Levin's bill, H.R. 5723.
+
+The SHIFT Act also allows the Medicare, Medicaid, and Children's Health Insurance Program to limit reimbursement for providers or suppliers who may be exploiting program integrity loopholes and engaging in waste, fraud, or abuse. This will prevent hard-earned taxpayer dollars from going to bad actors.
+
+Mr. Speaker, I reserve the balance of my time.
+
+House of Representatives,
+
+Committee on Energy and Commerce,
+
+Washington, DC, September 20, 2016.
+
+Hon. Kevin Brady,
+
+Chairman, Committee on Ways and Means,
+
+Washington, DC.
+
+Dear Chairman Brady: I write in regard to the following
+
+bills:
+
+H.R. 5713, Sustaining Healthcare Integrity and Fair
+
+Treatment Act of 2016;
+
+H.R. 5659, Expanding Seniors Receiving Dialysis Choice Act
+
+of 2016; and,
+
+H.R. 5613, To provide for the extension of the enforcement
+
+instruction on supervision requirements for outpatient
+
+therapeutic services in critical access and small rural
+
+hospitals through 2016.
+
+As you know, H.R. 5716, H.R. 5659, and H.R. 5613 were each
+
+referred to both the Committee on Energy and Commerce and the
+
+Committee on Ways and Means. I wanted to notify you that the
+
+Committee on Energy and Commerce will forgo action on each of
+
+these bills so that they may proceed expeditiously to the
+
+House floor for consideration.
+
+This is done with the understanding that the Committee on
+
+Energy and Commerce's jurisdictional interests over these
+
+bills and similar legislation are in no way diminished or
+
+altered and that the Committee will be appropriately
+
+consulted and involved as these bills or similar legislation
+
+move forward. In addition, the Committee reserves the right
+
+to seek conferees each of these bills and requests your
+
+support when such a request is made.
+
+I would appreciate your response confirming this
+
+understanding with respect to
+
+H.R. 5716, H.R. 5659, and H.R. 5613 and ask that a copy of
+
+our exchange of letters on this matter be included in the
+
+Congressional Record during consideration of these bills on
+
+the House floor.
+
+Sincerely,
+
+Fred Upton,
+
+Chairman.
+
+____
+
+Committee on Ways and Means,
+
+House of Representatives,
+
+Washington, DC, September 20, 2016.
+
+Hon. Fred Upton,
+
+Chairman, Committee on Energy and Commerce,
+
+Washington, DC.
+
+Dear Chairman Upton: Thank you for your letter regarding
+
+the following bills:
+
+H.R. 5713, the ``Sustaining Healthcare Integrity and Fair
+
+Treatment Act of 2016;''
+
+H.R. 5659, the ``Expanding Seniors Receiving Dialysis
+
+Choice Act of 2016;'' and
+
+H.R. 5613, to provide for the extension of the enforcement
+
+instruction on supervision requirements for outpatient
+
+therapeutic services in critical access and small rural
+
+hospitals through 2016.
+
+I am most appreciative of your decision to waive formal
+
+consideration of these measures so that they may proceed
+
+expeditiously to the House floor. I acknowledge that although
+
+you waived formal consideration of these bills, the Committee
+
+on Energy and Commerce is in no way waiving its jurisdiction
+
+over the subject matter contained in those provisions of the
+
+bills that fall within your Rule X jurisdiction. I would
+
+support your effort to seek appointment of an appropriate
+
+number of conferees on any House-Senate conference involving
+
+this legislation.
+
+I will include a copy of our letters in the Congressional
+
+Record during consideration of these measures on the House
+
+floor.
+
+Sincerely,
+
+Kevin Brady,
+
+Chairman.
+
+Mr. PASCRELL. Mr. Speaker, I yield myself such time as I may consume.
+
+Mr. Speaker, I am proud to introduce H.R. 5713 with Mr. Tiberi, Sustaining Healthcare Integrity and Fair Treatment Act. I think this is good legislation, not because my name is on it but because I thought a lot of thought came into this, and staff helped tremendously.
+
+This is one of the areas I have tried to concentrate on since being in Congress: long-term and acute care. As the cofounder and co-chair of the Congressional Brain Injury Task Force, I understand the important role that long-term care hospitals play in the recovery of many individuals who suffer moderate to severe traumatic brain injuries, or TBIs.
+
+I use this as one example, the area of TBI. If there is one thing I have learned about TBI in the 18 years I have been working on this issue, it is that recovery looks different for everyone, whether you are on the battlefield or you fall off a ladder trying to fix your roof.
+
+I understand the important role that long-term care hospitals play. I want to repeat that. That is why we must, I believe, preserve access to all post-acute care options, so that patients can receive the individualized care they need, and we don't tell them: get out, because your time is up, in the middle of their treatment. And that is what the gentleman from Ohio (Mr. Tiberi) has talked about many times.
+
+{time}  1730
+
+This is the right legislation, I believe, for this particular problem. H.R. 5713 would provide an additional 9 months of relief from the full implementation of the 25 percent rule for long-term care hospitals, which Mr. Tiberi mentioned. This bill includes technical changes for long-term hospitals.
+
+H.R. 5713 would, first, clarify the application of rules on the calculation of the hospital length to certain moratorium-excepted LTCHs, the long-term care hospitals.
+
+Second, it would correct the status of Calvary Hospital in New York City that has led to secondary-payer issues, big issues.
+
+Third, it would provide a temporary exception to the application of the Medicare long-term care hospital site-neutral provisions for certain spinal cord specialty hospitals.
+
+Fourth, it would exempt four payment codes for severe wounds from site-neutral payments.
+
+This is a bipartisan piece of legislation. We can do this. We could do it, without exception, if you put people in the room who want to compromise, who don't know all the answers, and I don't. We could come to a conclusion.
+
+This bill would offset the cost of this extension by implementing an important program integrity policy that would allow the Secretary to reject Medicare claims from new Medicare suppliers and providers located just outside of the moratorium areas.
+
+While this bill is an important step forward, it is just a temporary Band-Aid on the 25 percent rule. I say to the gentleman, I don't believe it is a permanent solution, but I think it helps us. We need to work together to find a long-term solution to the issue.
+
+I urge my colleagues to support this bill before us today.
+
+Mr. Speaker, I reserve the balance of my time.
+
+Mr. TIBERI. Mr. Speaker, I don't think I have any more speakers and am ready to close.
+
+I reserve the balance of my time.
+
+Mr. PASCRELL. Mr. Speaker, long-term hospitals are an important part of our post-acute care system. This bill will help preserve access and maintain fairness for these hospitals and their patients.
+
+I urge my colleagues to support H.R. 5713, and it is my hope that this bill is taken up expeditiously on the other side of the building in the Senate.
+
+Mr. Speaker, I yield back the balance of my time.
+
+Mr. TIBERI. Mr. Speaker, I yield myself such time as I may consume.
+
+I thank the Speaker for allowing me the opportunity to present this bill today, this bipartisan bill that came out of the Ways and Means Committee.
+
+I really can't add much to what Mr. Pascrell said, and I really appreciate his leadership, not only on this issue, but on the issue of traumatic brain injury. There has been nobody in the Congress who has talked more, spent more time in educating folks and trying to come up with solutions to traumatic brain injury, and I appreciate his leadership.
+
+I thank the Speaker for allowing us to present and advance this package, this healthcare package through the process today.
+
+I ask all my colleagues to vote for it. We must help those beneficiaries that suffer from acute, long-term illness and injuries, and I believe this bill will do just that.
+
+Mr. Speaker, I yield back the balance of my time.
+
+The SPEAKER pro tempore. The question is on the motion offered by the gentleman from Ohio (Mr. Tiberi) that the House suspend the rules and pass the bill, H.R. 5713, as amended.
+
+The question was taken.
+
+The SPEAKER pro tempore. In the opinion of the Chair, two-thirds being in the affirmative, the ayes have it.
+
+Mr. HUELSKAMP. Mr. Speaker, on that I demand the yeas and nays.
+
+The yeas and nays were ordered.
+
+The SPEAKER pro tempore. Pursuant to clause 8 of rule XX, further proceedings on this motion will be postponed.

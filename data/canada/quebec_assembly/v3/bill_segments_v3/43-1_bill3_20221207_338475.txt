@@ -1,0 +1,43 @@
+La Présidente : À l'article a du feuilleton, M. le ministre de la Cybersécurité et du Numérique présente le projet de loi n° 3, Loi sur les renseignements de santé et de services sociaux et modifiant diverses dispositions législatives. M. le ministre.
+
+M. Caire : Merci, Mme la Présidente. Donc, effectivement, je dépose le projet de loi en collaboration avec M. le ministre de la Santé, que je remercie pour sa confiance, Loi sur les renseignements de santé et de services sociaux et modifiant diverses dispositions législatives.
+
+Ce projet de loi établit un cadre juridique spécifique aux renseignements de santé et de services sociaux, applicable à tout organisme du secteur de la santé et des services sociaux qui détient de tels renseignements. Il a pour objet d'assurer la protection des renseignements, tout en permettant l'optimisation de l'utilisation qui en est faite et leur communication en temps opportun, en vue d'améliorer la qualité des services offerts à la population et de permettre une gestion du système de santé et de services sociaux basée sur la connaissance des besoins des personnes et de la consommation de services.
+
+Pour ce faire, le projet de loi définit ce que sont les renseignements de santé et de services sociaux et les organismes du secteur de la santé et des services sociaux. Il encadre la collecte des renseignements par ces organismes et détermine les cas dans lesquels ils peuvent être utilisés, sans le consentement de la personne concernée, à d'autres fins que celles pour lesquelles ils ont été recueillis.
+
+Le projet de loi énonce certains principes généraux, notamment celui voulant que l'utilisation d'un renseignement de santé et de services sociaux et sa communication doivent, lorsque possible, se faire sous une forme ne permettant pas d'identifier directement la personne concernée. Il prévoit aussi qu'à moins d'obtenir le consentement exprès de la personne concernée, un tel renseignement ne peut être utilisé ou communiqué que conformément aux règles qu'il établit.
+
+Le projet de loi établit le droit des personnes concernées par les renseignements de santé et de services sociaux et de certaines personnes qui sont liées à celles-ci d'y avoir accès et de les faire rectifier.
+
+Le projet de loi encadre par ailleurs l'accès aux renseignements de santé et de services sociaux par des tiers. Notamment, il autorise un professionnel qui offre des services de santé ou des services sociaux au sein d'un organisme du secteur de la santé et des services sociaux à avoir accès à un renseignement détenu par tout organisme de ce secteur lorsqu'il est nécessaire à cette offre de services. Il prévoit aussi qu'un chercheur qui respecte certaines conditions peut être autorisé à avoir accès à un renseignement de santé et de services sociaux détenu par tout organisme du secteur de la santé et des services sociaux lorsqu'il est nécessaire à la réalisation d'un projet de recherche approuvé par un comité d'éthique, en s'adressant soit à un organisme de ce secteur, soit à l'organisme public chargé par le gouvernement d'agir à titre de centre d'accès pour la recherche, en fonction de son rattachement.
+
+Le projet de loi permet à une personne de restreindre l'accès aux renseignements la concernant en déterminant qu'un intervenant particulier ou qui appartient à une catégorie d'intervenants ne peut avoir accès à un renseignement ou plusieurs renseignements de services de santé et services sociaux qu'elle identifie. Il lui donne également la possibilité de refuser que certaines personnes aient accès à certains renseignements de santé et de services sociaux la concernant.
+
+Le projet de loi prévoit les cas et les conditions dans lesquels un organisme du secteur de la santé et des services sociaux doit communiquer un renseignement de santé et de services sociaux qu'il détient, notamment à un intervenant ou à un chercheur, de même que les cas et les conditions dans lesquels ils peuvent communiquer un tel renseignement. Il charge le gestionnaire délégué aux données numériques gouvernementales du ministère de la Santé et des Services sociaux d'autoriser certaines communications. Il prévoit aussi que le ministre peut déterminer, par règlement, la procédure et les moyens selon lesquels s'effectuent les accès des intervenants et des chercheurs de même que certaines communications.
+
+Le projet de loi permet à un organisme du secteur de la santé et des services sociaux de communiquer les renseignements de santé et de services sociaux nécessaires pour protéger une personne ou un groupe de personnes identifiable d'un risque sérieux de mort ou de blessures graves, lié notamment à une disparition ou un acte de violence. Il communique les dispositions d'autres lois du corpus législatif afin de permettre, aux mêmes fins, la communication de renseignements par les professionnels au sens du Code des professions et par d'autres personnes et d'autres organismes. Il accorde une immunité de poursuite judiciaire à ceux qui communiquent de bonne foi des renseignements dans ce contexte.
+
+Le projet de loi prévoit que le ministre définit, par règlement, des règles de gouvernance des renseignements de santé et de services sociaux qui sont applicables à l'ensemble des organismes du secteur de la santé et des services sociaux, qui comprennent entre autres des balises devant guider les professionnels dans leur évaluation de la nécessité d'utiliser ou de recevoir communication d'un renseignement de santé ou de services sociaux. Il octroie au dirigeant réseau de l'information du secteur la responsabilité d'établir, pour ces organismes, des règles particulières en matière de gestion sécuritaire des renseignements. De plus, il donne aux organismes eux-mêmes des obligations en matière de gouvernance et de protection de ces renseignements, notamment l'obligation d'adopter une politique qui mette en oeuvre les règles définies par le ministre, celle de désigner un responsable de la protection des renseignements, celle de journaliser l'ensemble de l'utilisation des communications des renseignements et celle d'utiliser seulement des produits et des services technologiques certifiés par le ministre dans les cas que celui-ci détermine par règlement.
+
+Le projet de loi donne à la Commission d'accès à l'information la fonction d'en surveiller l'application et lui octroie en conséquence des pouvoirs d'inspection, d'enquête et d'ordonnance. Il lui donne aussi la fonction de réviser les demandes d'accès et de rectification et prévoit dans certains cas un droit d'appel à la Cour du Québec.
+
+Le projet de loi modifie par ailleurs la Loi sur les services de santé et les services sociaux pour permettre au ministre d'instituer un système national de dépôt de renseignements ayant notamment pour but de faciliter les utilisations et les communications autorisées. Il prévoit que ce système doit, entre autres, permettre la tenue des dossiers des usagers des établissements de santé et de services sociaux, l'indexation des dossiers des autres organismes du secteur de la santé et des services sociaux ainsi que la mise en place de mécanismes permettant à une personne de trouver un professionnel de la santé ou des services sociaux qui accepte d'assurer son suivi médical et de prendre rendez-vous avec lui. Le projet de loi prévoit également que le ministre doit instituer un registre des usagers, un registre des intervenants et un registre des organismes.
+
+Pour assurer la mise en place du nouveau cadre juridique, le projet de loi modifie plusieurs autres lois et il abroge la Loi concernant le partage de certains renseignements de santé, qui régit le Dossier santé Québec.
+
+Enfin, le projet de loi contient des dispositions pénales et prévoit des dispositions transitoires et finales.
+
+• (10 h 10) •
+
+La Présidente : Je reconnais M. le leader de l'opposition officielle.
+
+M. Derraji : Toute une note, Mme la Présidente. Et vous allez comprendre que nous souhaitons la tenue de consultations particulières. Et je demande au leader du gouvernement s'il s'y engage, envers des consultations particulières, vu l'importance de ce projet de loi. Il n'a qu'à suivre la note longue que le ministre a prononcée, je pense que ça nous prend des consultations particulières, Mme la Présidente.
+
+La Présidente : M. le leader du gouvernement.
+
+M. Jolin-Barrette : Mme la Présidente, ça nous fera plaisir de recevoir la liste de groupes de l'opposition officielle, et nous pourrons convenir des invitations que nous ferons relativement aux différents groupes.
+
+La Présidente : Est-ce que l'Assemblée accepte d'être saisie de ce projet de loi? Accepté. Je reconnais M. le leader de l'opposition officielle.
+
+M. Derraji : Mme la Présidente, je vous demanderais d'appeler l'article b.

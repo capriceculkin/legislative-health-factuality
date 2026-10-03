@@ -1,0 +1,317 @@
+Le Vice-Président (M. Picard) : À l'article 2 du feuilleton, M. le ministre de l'Énergie et des Ressources naturelles propose l'adoption du principe du projet de loi n° 35, Loi visant à moderniser certaines règles relatives à la publicité foncière et à favoriser la diffusion de l'information géospatiale.
+
+Y a-t-il des interventions? M. le ministre de l'Énergie et des Ressources naturelles.
+
+M. Julien : Oui. Merci, M. le Président. Bonjour, chers collègues, merci d'être ici présents aujourd'hui.
+
+Alors, j'ai le plaisir aujourd'hui de soumettre à l'adoption du principe le projet de loi n° 35, qui vise, M. le Président, à moderniser certaines règles relatives à la publicité foncière et à favoriser la diffusion de l'information géospatiale au Québec. Outre les économies, les économies récurrentes qui pourront être générées, on aide ici le citoyen dans ses recherches d'information concernant sa propriété. On améliore le fonctionnement de l'État, tout en contribuant activement à la diffusion de données ouvertes. Nous faisons un pas de plus dans la numérisation du gouvernement.
+
+Je rappelle d'abord que les membres de la Commission de l'agriculture, des pêcheries, de l'énergie et des ressources naturelles se sont réunis les 15 et 16 septembre derniers à l'occasion de la tenue de consultations particulières concernant justement ce projet de loi. Je tiens d'ailleurs à saluer et à remercier les groupes qui y ont participé ainsi que leurs représentants, qui ont généreusement offert leur temps, soit la Chambre des notaires du Québec, l'Ordre des arpenteurs-géomètres du Québec, la Chambre des huissiers de justice du Québec. Je remercie également tous les autres partenaires qui ont contribué aux échanges avec leurs commentaires ou mémoires, notamment le Barreau du Québec, l'Union des municipalités du Québec, la Fédération québécoise des municipalités, l'Association professionnelle des notaires du Québec ainsi que l'Association de géomatique municipale. Et enfin je remercie sincèrement mon collègue député de Laval-des-Rapides pour sa participation active lors de ces consultations. C'est grâce, justement, à ce travail-là de collaboration que nous pouvons constater l'appui à ce projet de loi n° 35, l'appui unanime au principe du projet de loi.
+
+• (15 h 30) •
+
+Le projet de loi n° 35 s'inscrit directement dans notre vision, notre vision gouvernementale et notre engagement pour la transformation numérique de l'État québécois. Ainsi, le projet de loi que nous proposons aujourd'hui, M. le Président, nous permettra d'intervenir concrètement pour améliorer les services offerts par mon ministère aux citoyens et aux professionnels. Les mesures du projet de loi visent notamment : compléter l'informatisation du Registre foncier du Québec, mettre les conditions en place pour créer des outils pour mieux informer la population et faciliter l'accès aux données et aux connaissances détenues par le secteur public tout en allégeant l'administration du Registre foncier. Et le Registre foncier, M. le Président, c'est 70 millions de documents différents mis à la disposition des citoyens pour consultation.
+
+Alors, afin d'assurer une mise en oeuvre harmonieuse des nouvelles mesures, leur entrée en vigueur se fera graduellement, prévoyant une période de transition qui déjà, avec la pandémie, a permis d'être testée et de faire ses preuves. Si nous voulons que le Registre foncier du Québec continue de s'ajuster à l'évolution marquée du mode de transmission des actes dans un souci d'optimisation, dans un souci d'efficience, il est impératif de procéder à certaines modifications législatives, M. le Président.
+
+Le Registre foncier du Québec est une institution de près de 180 ans. Ce registre légal, qui est tenu par l'Officier de la publicité foncière, n'a jamais cessé d'évoluer dans le temps afin, justement, de tenir compte des besoins de sa clientèle dans le respect de sa mission. Le projet de loi ici, dont il est question, s'inscrit justement dans le contexte d'une évolution nécessaire du Registre foncier. Notre objectif, je le rappelle : une modernisation des façons de faire pour une efficacité accrue. Plus précisément, les modifications législatives sur lesquelles porte ce projet de loi sont les suivantes : la permission, puis, après la période de transition, l'obligation de transmettre électroniquement les documents au Registre foncier; le rapatriement des ressources des bureaux de publicité des droits dans les centres de Services Québec en région — ainsi, on informatise les services de transmission en offrant toujours des services de consultation et d'accompagnement dans toutes les régions du Québec; l'interdiction de publier certains renseignements personnels; la permission, justement, de caviarder des renseignements prohibés dans les documents qui sont déjà publiés; la permission de diffuser les renseignements de nature foncière; et la permission à l'officier de modifier lui-même les heures d'ouverture des bureaux de publicité foncière et de prévoir sa fermeture temporaire si des circonstances l'exigent.
+
+Alors, depuis 1841, les actes ont été transmis au Registre foncier du Québec en format papier. Dans la foulée de la transformation numérique mise en oeuvre par le gouvernement du Québec, la plateforme permet déjà, depuis 20 ans, la transmission de certains types de documents en format électronique. Et on a vu une gradation, à travers les années, qui fait en sorte qu'en 2020, actuellement, 93 % des actes sont transmis électroniquement, et, sur le 7 % résiduel, seulement 3 % de ces actes-là n'ont pas le droit d'être transmis de manière électronique, ce que vient corriger le projet de loi. Donc, on veut continuer de nous ajuster à la réalité de notre clientèle. On veut réduire les coûts d'inscription pour les citoyens, pour les professionnels. Donc, on propose désormais de rendre obligatoire cette transformation. Par le fait même, cette mesure permettra de cesser les activités du réseau dans 73 bureaux qui servent uniquement actuellement, à travers les régions, à recevoir des actes. Naturellement, ce n'est pas un job à temps plein, dans les 73 bureaux régionaux, donc il n'y a pas une personne de moins qui vont être dans les bureaux régionaux, mais cette personne-là va faire d'autres tâches que celles liées au Registre foncier, et, pour le MERN, c'est une économie annuelle de 5,6 millions qu'on va aller chercher par ce fait-là.
+
+Ce qui est très important pour nous, c'est la modernisation des pratiques tout en maintenant la présence gouvernementale en région. Ainsi, l'ensemble des employés en région, je le réitère, dont une petite partie de la tâche était liée au bureau de la publicité des droits demeurent en poste au sein du réseau régional de Services Québec et pourront, justement, être affectés à d'autres tâches puisqu'on me dit qu'ils ont beaucoup de travail à faire, autre. Alors, on va les dégager de cette petite tâche.
+
+Par ailleurs, bien que le gouvernement du Québec produit de l'information géospatiale et foncière de grande qualité, l'accès à cette information, sa diffusion et la mise en commun des données issues des ministères et organismes concernés, on parle de neuf ministères et organismes, peuvent être améliorés, et on le croit fortement. C'est la raison pour laquelle nous voulons permettre au ministère de diffuser gratuitement certains renseignements de nature foncière prévus à la loi sur les mutations immobilières ainsi que l'information issue de divers domaines spécialisés tels que les prises de vue aériennes, la cartographie, la télédétection et l'arpentage. Nous souhaitons faciliter l'accès pour le ministère, dans l'exercice de ses fonctions et de sa mission, à des informations provenant d'autres ministères et organismes, qui pourront être mis, justement, dans cette base de données.
+
+Le projet de loi vise enfin, M. le Président, à nous donner les moyens de valoriser et de rendre accessibles aux citoyens l'ensemble des données détenues par le gouvernement et le milieu municipal à propos des bâtiments situés en zone inondable.
+
+M. le Président, j'espère vous avoir convaincu, avoir convaincu tous mes collègues que l'adoption du principe du projet de loi n° 35 s'impose. Le contexte actuel dans lequel nous vivons l'exige, et nous avons le soutien de l'ensemble de nos partenaires, que je tiens à remercier, encore une fois, pour leur précieuse collaboration.
+
+L'adoption du principe de ce projet de loi nous permettra de poursuivre les travaux, d'abord par l'étude détaillée en commission parlementaire. Ce sera l'occasion de travailler ensemble, chers collègues, dans l'amélioration de l'offre de services du registre foncier.
+
+Alors, en mon nom et au nom de celui des citoyens et des professionnels qui vont bénéficier, justement, du projet de loi n° 35, je vous remercie, chers collègues. Je vous remercie, M. le Président, pour votre attention.
+
+Le Vice-Président (M. Picard) : Merci, M. le ministre.
+
+Avant de poursuivre, je vous informe que trois débats de fin de séance se tiendront aujourd'hui : le premier débat portera sur une question adressée par Mme la députée de Maurice-Richard au ministre de la Santé et des Services sociaux concernant l'absence de plan du gouvernement caquiste pour combler les retards importants dans les chirurgies; le deuxième débat portera sur une question adressée par M. le député de LaFontaine au ministre de la Famille concernant son absence de leadership dans le dossier de la grève dans les services de garde en milieu familial; et le troisième débat portera sur une question adressée par M. le député de Robert-Baldwin au ministre de l'Économie et de l'Innovation sur l'absence de plan du gouvernement caquiste pour aider l'économie québécoise à traverser la seconde vague de la pandémie de COVID-19.
+
+Et je cède maintenant la parole à M. le député de Laval-des-Rapides.
+
+M. Polo : Merci beaucoup, M. le Président. Merci, M. le ministre, également tous les collègues qui ont participé dans les travaux de notre commission lors des consultations en lien avec le projet de loi n° 35.
+
+En effet, j'annonce d'entrée de jeu, comme le ministre l'a fait, qu'on a offert toute notre collaboration pour la poursuite des travaux et l'avancement de ce projet de loi, projet de loi qui est accueilli de façon unanime, mis à part quelques recommandations de part et d'autre, là, mais est accueilli, de façon générale, très favorablement par les différents acteurs de l'industrie ou, en fait, concernés par le projet de loi.
+
+Je vais profiter, donc, du temps qui m'est octroyé, M. le Président, pour informer les collègues qui sont parmi nous ou informer le public qui ne sont pas au courant des détails de ce projet de loi là, pour bien faire une vue d'ensemble de ce projet de loi là, parce qu'il peut être très technique. Ceci dit, il vaut la peine qu'il soit bien expliqué.
+
+Ce projet de loi là présenté, tel que mentionné par le ministre, vise à moderniser les règles relatives à la publicité foncière, notamment sur deux éléments. Un, en optimisant sa performance par l'utilisation des moyens technologiques, d'une part, et, d'autre part, en s'assurer que la protection des informations personnelles des citoyens est assurée. Cela permettra notamment de simplifier l'administration du Registre foncier, de la rendre plus accessible à la population et de mieux protéger les données sensibles qui s'y retrouveront. Ces mesures alignent également le Québec avec les bonnes pratiques internationales en matière d'accessibilité aux données géospatiales par le public. Une période de transition de 10 mois est prévue dans le projet de loi afin de permettre aux professionnels de s'adapter aux nouvelles pratiques professionnelles et de partager ces nouvelles pratiques avec l'ensemble des citoyens du Québec.
+
+• (15 h 40) •
+
+Le projet de loi prévoit le remplacement des bureaux de la publicité et des droits établis dans les différentes circonscriptions foncières, qui reçoivent actuellement les actes en format papier par le Bureau de la publicité foncière. Ainsi, ce projet de loi va générer des économies de 5,6 millions de dollars à terme par année pour le ministère de l'Énergie et des Ressources naturelles. Le projet de loi va donc entraîner une certaine perte d'emplois dans certaines régions, mais il y a une certaine redistribution qui va se faire, et on a certains mémoires qui le mentionnent également, que ce soit notamment l'UMQ.
+
+Ce projet de loi aura donc un impact sur le travail des notaires, qui s'assureront au quotidien que les titres publiés au Registre foncier sont exempts d'erreur ou de vice. Ils garantissent également la sécurité des titres fonciers, notamment par l'examen des actes, des informations publiées au Registre foncier.
+
+Ce projet de loi aura aussi un impact sur le travail des huissiers en justice du Québec, qui assurent les services de signification et d'exécution sur l'ensemble du territoire québécois et qui devront utiliser la signature électronique.
+
+Ce projet de loi là aura également un impact sur le travail des arpenteurs-géomètres du Québec, qui, dans leur pratique, garantissent à la population la sécurité juridique du territoire pour l'exactitude de sa délimitation et de sa représentation cartographique.
+
+M. le Président, nous avons eu l'occasion d'avoir la présentation de trois groupes qui sont venus nous voir, mais nous avons reçu également deux mémoires de différents groupes qui nous ont quand même soumis leurs commentaires, leurs recommandations sous forme papier, mais qui, malheureusement, n'ont pas pu nous accompagner, là, lors des audiences en lien avec ce projet de loi là.
+
+Je vais commencer ici par faire un bref résumé, si vous le permettez, par l'Association professionnelle des notaires du Québec, qui fut invitée, mais qui, malheureusement, n'a pas pu se joindre à nous. C'est une association qui regroupe environ 2 000 membres à travers le Québec et qui a pour mission de défendre et promouvoir les intérêts socioéconomiques de tous ses membres et de la profession notariale.
+
+L'APNQ a lu et examiné le projet de loi n° 35, et elle approuve, et elle salue dans son ensemble les efforts de modernisation du système de la publicité foncière, point central des transactions immobilières.
+
+Elle a également fait des remarques. D'abord, elle constate qu'à plusieurs reprises le titre de l'Officier de la publicité foncière est identifié... bon, il y a certaines corrections à avoir au niveau du lexique, mais ce même article 19, dans le projet de loi, fait encore référence à l'officier à la publicité foncière des droits, alors qu'ils comprennent que son titre devrait être l'Officier de la publicité foncière, corrigé.
+
+Ils font également mention à l'article 2, M. le Président... Ils espèrent que l'avis pourra être présenté en vertu du nouvel article 2730 du Code civil du Québec, tel que modifié, avec copie du jugement, qui pourra l'être entièrement sous support électronique, et ce, en ce sens qu'une copie conforme dudit jugement ne devra être produite sous format papier mais bien, elle aussi, sur support technologique. De plus, le projet de loi n° 35 devra préciser que le jugement présenté ait acquis force de chose jugée.
+
+L'APNQ se questionne également à savoir comment exactement l'Officier de la publicité foncière traitera les demandes transmises conformément à l'article 13 du projet de loi n° 35. La personne autorisée à faire cette demande devra-t-elle le faire par déclaration attestée par un notaire, ou un avocat, ou autrement? Cela aura un impact notamment sur l'application de l'article 59 du projet de loi n° 35.
+
+De plus, l'APNQ est d'avis que les expressions... par la suite, il y a des corrections ou des suggestions, que l'expression «mention relative à une atteinte à l'intégrité physique ou psychique» mentionnée à l'article 13 du projet de loi n° 35 devrait être définie. Elle craint que cet article de loi, tel que rédigé, entraîne des incohérences, des abus ou de l'incertitude sur son application : «Il serait législativement avantageux de définir ces expressions dans un règlement.» Voilà en résumé certaines de leurs recommandations, M. le Président, au niveau de l'Association professionnelle des notaires du Québec.
+
+L'UMQ a également envoyé ses recommandations, M. le Président. L'UMQ mentionne que ce projet de loi permettra notamment de simplifier l'administration du Registre foncier et de le rendre plus accessible à la population en plus de mieux protéger les données sensibles qui s'y retrouvent. Notamment, ils aimeraient toutefois attirer l'attention des membres sur deux éléments.
+
+D'abord, les emplois gouvernementaux en région. Je le mentionnais en introduction, les économies de 5,6 millions de dollars sont faites notamment par certaines suppressions d'emplois en région. Et voici ce que l'UMQ mentionne : «Ainsi, le projet de loi vise entre autres à compléter l'informatisation du Registre foncier. Celle-ci rendra caduc le réseau alternatif des bureaux de la publicité des droits qui reçoit actuellement les actes en format papier. Ainsi, plusieurs dizaines d'emplois seront abolis à travers toutes les régions du Québec, de manière à générer des économies de 5,6 millions de dollars par année pour le ministère de l'Énergie et des Ressources naturelles. Des vérifications administratives nous ont permis de nous assurer que les personnes employées par les BPD avaient déjà été réaffectées dans d'autres services gouvernementaux dans leurs régions respectives. Toutefois, dans la mesure où les réaffectations se font au profit de besoins qui auraient de toutes les façons dû être comblés, le projet de loi entraîne une perte d'emplois dans nos régions.
+
+«Dans son plan de relance économique élaboré pour faire face à la crise [du] COVID-19 et publié le 4 mai 2020, l'UMQ demande au gouvernement, à la mesure 20, d'accélérer le transfert des 5 000 emplois gouvernementaux dans les régions du Québec [pour] une réelle délocalisation. Il est à noter que cette mesure découle d'un engagement pris par le gouvernement en campagne électorale. Nous comprenons donc que la décentralisation ne doit pas être synonyme de bureaucratisation, mais nous ne pouvons que réitérer l'importance que les emplois gouvernementaux soient répartis sur [l'ensemble du] territoire [de] l'État québécois [afin de] contribuer concrètement à la vitalité de l'ensemble des régions.»
+
+La deuxième recommandation principale de l'UMQ en lien avec le projet de loi n° 35 est liée à l'harmonisation du Registre foncier et de l'évaluation foncière : «L'article 79 du projet de loi prévoit conférer un nouveau pouvoir réglementaire au ministre de l'Énergie et des Ressources naturelles par l'ajout d'un paragraphe 9.2° au premier alinéa de l'article 263 de la Loi sur la fiscalité municipale. Il est intéressant de prévoir la possibilité de mettre en place un cadre harmonisé pour le partage des informations contenues au Registre foncier ainsi que les rôles d'évaluation foncière. Il est louable de vouloir faciliter l'accès de la population aux informations qui sont publiques. Notons que la gestion du rôle d'évaluation foncière et des données municipales interpelle directement les membres de l'UMQ, et, à ce titre, nous demandons à être consultés en amont à l'élaboration d'un tel projet de règlement, si le ministre choisissait de mobiliser ce pouvoir. Cette consultation permettrait de mieux évaluer si des impacts — par exemple, financiers ou charge administrative de transition — pourraient être attendus. Elle serait, selon nous, une condition pour une harmonisation réussie des différents niveaux de gouvernement en matière informatique et administrative.»
+
+M. le Président, la Chambre des huissiers de justice du Québec est également venue nous rencontrer et nous a non seulement déposé son mémoire, mais nous a présenté ses principales recommandations. La Chambre des huissiers de justice du Québec, qui regroupe, au total, dénombre 28 000... Trois ordres professionnels relèvent du domaine du droit, selon le Barreau du Québec, la Chambre des notaires et la Chambre des huissiers de justice du Québec. Dans les cas des huissiers en justice, c'est 426 membres. Au niveau de la Chambre des notaires, c'est 28 000... Non, pardon, 28 000 avocats et 3 800 notaires.
+
+D'emblée, la chambre appuie les objectifs du projet de loi qui vise la modernisation des règles de la publicité foncière par la numérisation des documents ainsi que l'élimination des déplacements. La chambre applaudit aussi les dispositions identifiant une période de transition qu'assurera le passage du document papier vers le fichier électronique.
+
+Voici cependant certaines de ses objections, M. le Président : «Nous croyons, tel que mentionné dans le mémoire, que la transmission des documents au Registre foncier par moyen électronique ne doit pas inclure, dans sa mise en oeuvre administrative, l'imposition de fournisseur de certification de signature électronique aux membres d'un ordre professionnel, particulièrement du domaine du droit. D'abord, la CHJQ assure la gestion du tableau de ses membres, un élément important dans sa mission principale de protection du public, reconnue, donc, par leur ordre professionnel, et les huissiers utilisent déjà une signature électronique officielle notamment reconnue par le ministère de la Justice.»
+
+Certaines de leurs objections ou, en fait, certaines de leurs craintes, c'est que l'utilisation de ce nouvel outil informatique ou de cette nouvelle signature électronique va engendrer des coûts additionnels aux citoyens dans l'utilisation de cet outil. La chambre veut rappeler que la modernisation par la numérisation doit comprendre également la protection du public. Assurons-nous que le passage du papier numérique n'apporte pas des coûts additionnels qui seront relayés aux citoyens ou aux clients.
+
+• (15 h 50) •
+
+Selon le projet de loi, des frais s'ajoutent à ce nouveau processus de certification de la signature électronique. La liste de ces frais, publiée sur le site du Registre foncier, prévoit l'ensemble des besoins de l'utilisateur, que ce soit l'adhésion, les services de formation et l'accompagnement. Le principe est bien, mais il y a un coût associé à ça, M. le Président.
+
+De plus, il y a des questionnements légitimes à se poser en termes de connectivité, en lien avec l'Internet en région. Sans être des experts de la question, il semble que certains territoires du Québec ne soient toujours pas branchés selon les normes souhaitées en connectivité Internet, ce qui pourrait limiter le citoyen dans son accès aux services du Registre foncier. Et les huissiers ont constaté également que plusieurs citoyens n'utilisent pas l'Internet, qu'ils soient en région ou dans les grands centres urbains.
+
+La question de la signature électronique et de sa certification est également un sujet qui a alimenté plusieurs discussions lors des audiences du projet de loi n° 35, M. le Président : «Le site du Registre foncier reconnaît deux fournisseurs de certification de la signature électronique. Nous voulons faire valoir, cependant, que la production de documents par un huissier en justice est un acte professionnel qui inclut l'utilisation de sa signature électronique. En toute déférence, la chambre des huissiers réfute la pertinence d'imposer des organisations de certification de signature à nos membres huissiers de justice, alors qu'ils produisent déjà des documents numérisés dans le système judiciaire qui sont acceptés notamment par des tribunaux.» C'est ce que je vous mentionnais.
+
+«La période de transition de la loi permettrait d'ailleurs d'échanger avec le Registre foncier afin d'harmoniser la technologie actuelle utilisée par les huissiers en justice et les paramètres requis offrant le niveau de certification identifié par le ministère de la Justice. Nous croyons que le projet de loi n° 35 devrait aborder la certification de la signature électronique des huissiers dans la perspective de l'implication de leur ordre professionnel.» Notamment la Chambre des huissiers en justice du Québec.
+
+Au niveau de la certification de la signature électronique par la Chambre des huissiers en justice du Québec : «Le site Internet du Registre foncier indique deux "prestataires de services" pour la certification de la signature électronique : [tout d'abord] Notarius — qui est utilisé par la Chambre des notaires du Québec — ou le service de certification ICPG du ministère de la Justice.
+
+D'abord, le conseil d'administration de la Chambre des huissiers a décidé de ne pas accepter l'offre de services de Notarius : «Nous avons analysé alors les conditions d'utilisation du service de certification ICPG du ministère de la Justice selon la politique de certification ainsi que les tarifs aux utilisateurs.» Et ils rappellent que, le 28 mars 2020... les huissiers de justice, depuis cette date-là, utilisent la signification électronique, qui, dans le contexte de la pandémie... la ministre de la Justice a instauré cette mesure d'urgence à l'intention des huissiers en justice afin de préserver les droits des citoyens : «La signification électronique des actes de procédure est toujours en vigueur et est priorisée plutôt qu'en mains propres afin de limiter la propagation de la COVID-19. De toute évidence, la signature électronique doit obligatoirement être reconnue et validée pour chaque acte professionnel, notamment avec le Registre foncier. Et nous souscrivons [également] sans réserve au principe de validation de la signature électronique pour l'ensemble des utilisateurs, [qu'ils soient] citoyens ou professionnels.»
+
+Alors, quels sont les coûts associés à ça, M. le Président? «En tout respect...» La Chambre des huissiers en justice nous indique qu'«il nous apparaît ici que ni la procédure d'authentification de la signature électronique ni les tarifs aux utilisateurs, ce qui inclurait les huissiers [en] justice selon notre compréhension de la mise en oeuvre administrative par le Registre foncier, ne laissent présager une amélioration à la facture que devront accepter ultimement les citoyens ou les entreprises qui auront besoin d'utiliser la plateforme du Registre foncier».
+
+À l'article 63 du projet de loi n° 35, M. le Président, le projet de loi n° 35 indique que des modifications terminologiques à l'article 607 du Code de procédure civile seront nécessaires. La chambre indique que ces modifications additionnelles s'avéreraient tout aussi importantes : «En fait, selon les dispositions du Code de procédure civile, article 607, l'inscription [au] procès-verbal de saisie au Registre foncier précède obligatoirement la saisie. Nous déplorons que la période qui s'impose par la suite, entre la publication au registre et la saisie, puisse facilement permettre au défendeur de se départir de l'immeuble visé par le jugement.» Pour contrer cet effet, ils estiment qu'il serait judicieux de permettre la saisie par la signification du procès-verbal de saisie avant ou après un jugement au Barreau... au bureau de la publicité des droits, et ce, avant que la signification soit effectuée au débiteur ou au défendeur.
+
+En conclusion, M. le Président, la Chambre des huissiers en justice du Québec félicite «la période de transition de 10 mois prévue au projet de loi, laquelle [permettrait] aux huissiers non seulement d'adapter la nouvelle pratique professionnelle, mais également de la partager avec la clientèle provenant de l'ensemble du territoire québécois».
+
+Ensuite, la Chambre des huissiers souhaite également souligner la contribution de l'équipe du Registre foncier qui a présenté les orientations du projet de numérisation à leur congrès en 2019.
+
+M. le Président, nous avons également eu la présentation de l'Ordre des arpenteurs-géomètres du Québec, un mémoire qui a suscité également plusieurs questions, plusieurs échanges en lien avec leur interprétation du projet de loi n° 35. J'aimerais ici mentionner qu'ils ont notamment effectué cinq recommandations principales, mais je vais vous faire une mise en contexte de leurs recommandations.
+
+En lien avec la transmission des réquisitions d'inscription par moyen technologique, voici ce que l'ordre nous mentionnait : «Le projet de loi n° 35 prévoit que toute réquisition d'inscription au Registre foncier se fera, à terme, par un moyen technologique. Nous appuyons sans hésitation cette décision du ministère de l'Énergie et des Ressources naturelles, d'autant plus que le temps de transition proposé est tout à fait adéquat; une transmission d'informations est prévue pour tous les professionnels du foncier et de l'immobilier; et ces professionnels pourront bénéficier de mesures d'accompagnement, le cas échéant.»
+
+Par ailleurs, il salue «le fait que les heures de consultation possible du registre soient considérablement étendues, soit à sept jours sur sept [et] de six heures le matin à [minuit le soir]. Cette amélioration contribuera à la performance des entreprises liées aux domaines du foncier et de l'immobilier.»
+
+En lien avec les mesures de protection des renseignements personnels, M. le Président, l'Ordre des arpenteurs-géomètres mentionne que «le projet de loi n° 35 entend assurer la protection des citoyens en limitant l'accès à certains renseignements personnels dans les documents publiés au Registre foncier du Québec de même qu'aux informations pouvant porter atteinte à l'intégrité physique ou psychique d'une personne : «Nous sommes totalement en accord avec cette décision de restreindre l'accès [au] public aux renseignements personnels. Nous nous devons de mentionner que, dans le cadre de sa pratique actuelle, l'arpenteur-géomètre n'est pas touché par les modifications proposées à cet égard par le projet de loi n° 35. Les procès-verbaux d'abornement dressés par l'arpenteur-géomètre font partie des documents déposés au Registre foncier. L'article 52 de la Loi sur les arpenteurs-géomètres prévoit les éléments obligatoires contenus au procès-verbal d'abornement. Comme on peut le noter à la lecture de l'article 52 ci-après, il ne contient pas de données sensibles telles qu'énoncées à l'article 104 du projet de loi n° 35.»
+
+• (16 heures) •
+
+Je vais vous faire une lecture de l'article 52 en question, M. le Président, parce qu'il est mentionné que «l'arpenteur-géomètre procédant à un bornage est tenu, lorsqu'il a terminé son opération, d'en dresser un procès-verbal y déclarant sous peine de nullité — les points suivants :
+
+«a) le district judiciaire où sont situés les immeubles bornés;
+
+«b) la date où les opérations d'abornement se sont effectuées;
+
+«c) le nom des parties au bornage, leur qualité et leur résidence;
+
+«d) son nom, son droit d'exercer la profession d'arpenteur-géomètre, le nom de la société au sein de laquelle il exerce ses activités professionnelles et l'adresse de son étude;
+
+«e) les titres et documents qu'il a examinés;
+
+«f) en vertu de quelle autorité il a procédé à la pose de bornes;
+
+«g) la présence des parties aux opérations, ou de leurs représentants autorisés, ou en leur absence, le nom et la qualité des témoins qui ont assisté à la pose des bornes;
+
+«h) les opérations qu'il a effectuées, incluant les opérations de rattachement;
+
+«i) le nom des aides, avec mention de leur assermentation, s'il y a lieu, de leur âge et de leur domicile;
+
+«j) les renseignements de nature à faire trouver et constater l'identité des bornes qu'il a posées et les lignes qu'il a établies;
+
+«k) la date à laquelle il dresse ce procès-verbal, la date et l'endroit de la signature des parties, s'il y a lieu, ainsi que le numéro qu'il donne à sa minute.
+
+«Au lieu de consigner les informations prévues aux sous-paragraphes e et h ci-haut, l'arpenteur-géomètre peut annexer à son procès-verbal une copie du rapport qu'il a préparé suivant l'article 470 du Code de procédure civile et y référer.
+
+«L'arpenteur-géomètre ne peut faire l'interligne, ni effacer dans la minute ou dans les copies du procès-verbal.
+
+«Le nombre de mots rayés et de renvois à la marge est mentionné dans la minute et ces mentions sont initialisées par l'arpenteur-géomètre et les personnes qui signent le procès-verbal.»
+
+Donc, en lien avec l'article 62, l'Ordre des arpenteurs-géomètres du Québec, M. le Président, mentionne qu'il «demeure que l'arpenteur-géomètre doit collecter un certain nombre de renseignements personnels dans le cadre de ses opérations. À titre d'exemple, dans le cadre du procès-verbal d'abornement, il lui est recommandé de prendre une copie des pièces d'identité qui lui sont présentées afin de s'assurer de l'identité des individus concernés par l'opération. Ces copies seront toutefois conservées confidentiellement au greffe du professionnel. Il s'agit ici de garder une preuve au dossier du fait que l'arpenteur-géomètre a bien accompli toutes ses obligations, dont celle de vérifier l'identité et les qualités des parties.
+
+«Si une modification à la pratique des arpenteurs-géomètres faisait en sorte qu'ils aient à produire et à inscrire des documents contenant des informations sensibles ciblées par projet de loi n° 35 au Registre foncier, nous sommes d'avis que l'éventuel caviardage requis devrait être assuré par l'Officier de la publicité foncière. En effet, nous croyons important que les documents déposés au registre soient authentiques et que ceux-ci, dans leur forme non altérée, puissent être consultés, au besoin, par les professionnels, le tout afin de préserver la force probante du Registre foncier québécois.
+
+«Ainsi, pour le volet du projet de loi qui traite de l'accès aux renseignements personnels des citoyens, nous proposons deux recommandations.» Les voici, M. le Président. Tout d'abord, recommandation n° 1, le volet de protection des renseignements personnels : «Advenant la nécessité d'inscrire des documents contenant des informations sensibles au Registre foncier, le caviardage des renseignements personnels sensibles devrait être réservé à l'Officier de la publicité foncière, et ce, une fois qu'une copie du document authentique est faite et conservée dans les archives numériques du registre.» Et la deuxième recommandation, M. le Président, c'est de «déterminer les règles qui permettent... permettant la consultation des documents originaux par les professionnels».
+
+M. le Président, l'Ordre des arpenteurs-géomètres également s'est intéressé à la diffusion de l'information géospatiale : «En modifiant la Loi sur le ministère des Ressources naturelles et de la Faune — aujourd'hui le MERN — le projet de loi n° 35 ouvre la porte à la diffusion massive, par le MERN, de l'information en matière cadastrale, foncière et d'arpentage que détient le gouvernement ainsi que le Registre du domaine de l'État. L'accès de plus en plus facilité à l'information géospatiale mènera, espérons-le, à la consolidation de l'infrastructure de données géospatiales du Québec.
+
+«L'Ordre des arpenteurs-géomètres du Québec salue et appuie cette initiative, qui aligne le Québec avec les bonnes pratiques internationales en matière d'accessibilité à la donnée géospatiale pour le public. [Son] enthousiasme s'accompagne néanmoins de quelques mises en garde.»
+
+Selon eux, «cette diffusion doit certainement se faire de façon élargie afin de permettre l'accès aux jeux de données pour les professionnels et pour le public. Or, puisqu'il s'agit d'un corpus de données hétérogène, dont les métadonnées associées ne sont pas toutes créées systématiquement et avec la même rigueur, les privilèges d'accès aux jeux de données doivent être définis de façon singulière selon le type d'utilisateur. Il leur apparaît donc nécessaire de «qualifier préalablement chaque jeu de données à être diffusées dans le but d'identifier qui peut l'utiliser et à quelle finalité».
+
+«Puisque que la diffusion de l'information géospatiale par le gouvernement — en matière cadastrale, foncière et d'arpentage — doit, selon [eux], être qualifiée préalablement, il s'avère ainsi essentiel que la procédure de la prépublication comporte la certification des données», M. le Président.
+
+«Ces données sont de nature cadastrale, foncière et d'arpentage et, comme ces domaines — pour tout ce qui concerne la mesure et le géoréférencement de la propriété foncière — sont de prérogative à la profession d'arpenteur-géomètre, nous sommes d'avis que la certification devrait relever des membres de l'Ordre des arpenteurs‑géomètres.
+
+«Pour ne donner qu'un exemple du bien-fondé de la certification préalable à la diffusion de la donnée géospatiale, nous nous référons au Plan de protection du territoire face aux inondations publié par le gouvernement du Québec en mai 2020.
+
+«Ce plan matérialise la volonté de l'État québécois de diffuser, de façon répandue, des informations géospatiales ayant un impact sur la propriété foncière. Sous la dimension Connaître et communiquer , on peut y lire entre autres [les] objectifs [suivants] — l'objectif n° 22 : Mettre en réseau les informations disponibles et les rendre accessibles aux différents acteurs et au grand public.» La mesure n° 23 : Rendre accessible aux concitoyennes et aux concitoyens une source officielle permettant de savoir si une propriété est située en zone inondable. Ce dernier point permettrait de «regrouper et [de] diffuser l'information officielle concernant la présence d'une zone inondable sur un terrain ainsi que la représenter en relation avec le cadastre du Québec.
+
+«En tant qu'Ordre des arpenteurs-géomètres, M. le Président, le libellé de ces objectifs nous interpelle — ou interpelle l'ordre — de façon importante et confirme la nécessité de faire intervenir les arpenteurs-géomètres pour certifier l'information géospatiale préalablement à sa diffusion.
+
+«D'une part, précisons que la localisation de ces contraintes pouvant affecter la propriété foncière [...] requiert l'expertise de l'arpenteur-géomètre puisque de telles contraintes nécessitent un positionnement précis par rapport aux limites de la propriété, [et], d'autre part, rappelons que le cadastre du Québec a été rénové dans l'optique d'illustrer le morcellement foncier dans son ensemble et non pas pour positionner les limites de propriétés de façon précise.»
+
+Plus loin, M. le Président, l'Ordre des arpenteurs-géomètres mentionne, en lien avec l'obtention d'autres informations géospatiales, que «la modification proposée par le projet de loi n° 35 à la Loi sur le ministère de l'Énergie et des Ressources naturelles permettrait également l'obtention, par le ministre, des informations détenues dans leurs divers ministères et organismes du gouvernement du Québec ainsi que celles détenues par Hydro-Québec dans le domaine de la géodésie, de la prise de vue aérienne, de la télédétection et de la cartographie».
+
+«L'Ordre des arpenteurs-géomètres se réjouit [que] cet ajout aux pouvoirs et [aux] fonctions du ministre de l'Énergie et des Ressources naturelles. Nous croyons [à cet] effet — mentionne l'ordre — à l'importance de la mission d'information du Registre foncier et de toute autre initiative mise en place par le gouvernement dans le but de mieux informer tant le citoyen que les professionnels de l'immobilier.
+
+«Compte tenu des objectifs du présent projet de loi en matière de diffusion de l'information géospatiale, il est donc souhaitable que les informations nouvellement obtenues par le [ministère] soient, à terme, accessibles [au] public.
+
+«Les mises en garde exprimées dans la section précédente de ce mémoire deviennent ainsi applicables à toute information géospatiale obtenue par le [ministère] et qui doit être diffusée par le ministère.»
+
+Voici cinq recommandations, M. le Président. Tout d'abord : «Viser la diffusion élargie de l'information géospatiale détenue par le [ministère] ainsi que de celle obtenue des autres ministères et organismes gouvernementaux et en permettre l'accès aux professionnels et au public.» Quatrièmement : «Définir les privilèges d'accès aux jeux de données selon le type d'utilisateur et la finalité de l'usage.» Cinquièmement : «Prévoir la qualification préalable de l'information géospatiale en matière [d'information] cadastrale, foncière et d'arpentage qui sera diffusée.» Sixièmement : «Prescrire la procédure pour harmoniser la création des métadonnées de l'information géospatiale à diffuser.» Et septièmement : «Modifier la Loi sur les arpenteurs-géomètres afin de prévoir la certification préalable, par les membres de l'OAGQ, des jeux de données officiels ayant un impact sur la propriété foncière avant toute diffusion...»
+
+En conclusion, dans leur mémoire, M. le Président, de l'Ordre des arpenteurs-géomètres, ils appuient le projet de loi dans ses deux volets. D'une part, ils croient... ils sont d'accord qu'il est «essentiel de moderniser les règles relatives à la publicité foncière en bonifiant sa performance par l'utilisation [de] moyens technologiques. D'autre part, nous sommes particulièrement enthousiastes quant au volet qui entend favoriser la diffusion de l'information géospatiale.»
+
+Cependant, certaines de leurs «recommandations insistent, entre autres, sur l'importance d'assurer la qualification des données géospatiales susceptibles d'être diffusées. À l'image de l'exemple tiré du Plan de protection du territoire face aux inondations, il en est de même pour tous les jeux de données et de géoréférenciers qui seraient publiés pour être utilisés par le grand public, par divers groupes de professionnels ou même par des entreprises.
+
+«Dans ce dernier cas, nous pensons au fait que l'adoption du projet de loi n° 35 ouvrira la porte à la mise en oeuvre de produits dérivés fort utiles, à condition toutefois de bien connaître le niveau de qualité et [de] la précision des données géospatiales de base utilisées.»
+
+• (16 h 10) •
+
+Le dernier groupe qui est venu nous rencontrer, M. le Président, c'est la Chambre des notaires. Et je suis convaincu que vous êtes tout aussi intéressé que moi de connaître les recommandations de la Chambre des notaires, la Chambre des notaires, comme je vous l'ai mentionné, qui regroupe près de... un peu plus de 3 900 membres et qui a pour mission principale d'assurer la protection du public, notamment en faisant la promotion de l'exercice du droit préventif, en soutenant une pratique notariale innovante et visant l'excellence, en favorisant notamment l'accès à la justice pour tous.
+
+«Les notaires et leur ordre professionnel demeurent des acteurs importants du système foncier au Québec», M. le Président. «Les notaires s'assurent au quotidien que les titres publiés au Registre foncier sont exempts d'erreurs ou de vices [et ainsi] ils garantissent la sécurité des titres fonciers, notamment par l'examen des actes et des informations publiées au Registre foncier.»
+
+Tout d'abord, la chambre mentionnait qu'elle «appuie et accueille favorablement le projet de loi n° 35, qui vise notamment à compléter le processus d'informatisation du système de publicité foncière entrepris par le gouvernement du Québec il y a près de deux décennies». Bonification. Ce projet de loi permet également la «bonification des services en ligne, amélioration des délais d'inscription, transmission des réquisitions d'inscription uniquement via un moyen technologique et accessibilité accrue aux informations du Registre foncier. Il ne s'agit là que [...] quelques-unes des mesures techniques et administratives qui sont avantageusement proposées par le projet de loi n° 35. La chambre se doit de saluer toute initiative visant à moderniser et actualiser les règles actuelles à la nouvelle réalité technologique. La profession notariale est elle-même en train d'entreprendre son propre virage numérique au bénéfice du citoyen.»
+
+Dans sa première partie du mémoire présenté par la Chambre des notaires, M. le Président, leurs recommandations principales sont en lien avec le caviardage : «La chambre reconnaît et souligne l'importance qu'accorde le projet de loi à la protection des renseignements personnels et sensibles [et] cette avenue était nécessaire, à l'ère où la technologie est omniprésente au sein de notre société. En fait, l'accès et l'instantanéité du Registre foncier renforcés par le projet de loi n° 35 pourraient profiter à certaines personnes malintentionnées pour retracer des renseignements confidentiels publiés au registre au détriment des personnes qui en sont titulaires. Il est donc normal que le législateur tente de resserrer les règles d'accès à ces renseignements. Il faut en effet s'assurer que cette mise à la disposition d'information ne puisse être attentatoire à la protection des renseignements personnels des individus.
+
+«[...]La seconde partie du [...] mémoire [est] consacrée à des commentaires relatifs à des dispositions spécifiques du projet de loi n° 35. Enfin, en guise de conclusion, la chambre proposera des améliorations complémentaires afin de maintenir les instruments fonciers performants et assurer la sécurité des droits réels immobiliers afin que la confiance que porte le public envers le Registre foncier [en] soit [assurée].»
+
+La chambre fait essentiellement cinq recommandations. Le sommaire de ces recommandations sont celles-ci, M. le Président, tout d'abord «que le moyen proposé par le projet de loi n° 35 pour limiter la présence de renseignements personnels et sensibles au Registre foncier soit réévalué à la lumière des éléments suivants : [tout d'abord] des dispositions de la Loi concernant le cadre juridique des technologies de l'information, chapitre C-1.1; les garanties que doit offrir le Registre foncier auprès des justiciables, notamment en matière de prépondérance de la preuve des documents qui y sont publiés; [et également] la nécessité d'assurer une uniformité d'application en matière de protection [des] renseignements personnels au sein de l'ensemble des banques de données publiques et des registres québécois».
+
+La deuxième recommandation, à la page 118, mentionne : «Que certaines des règles de publicité actuellement prévues au Code civil soient revues en conformité avec l'objectif de protection [des] renseignements personnels défendu par le législateur — notamment, par exemple, au Code civil du Québec, exemple, 3015, le changement de nom bien souvent associé à un changement au niveau de l'identité de genre.»
+
+La troisième recommandation, c'est «l'expression "atteinte à l'intégrité physique et psychique" soit objectivée et circonscrite aux termes du Règlement sur la publicité foncière».
+
+La quatrième recommandation est en lien avec «les renseignements qui ne peuvent pas être caviardés soient prévus au terme du règlement sur la publicité foncière plutôt qu'au Code civil et qu'ils soient bonifiés».
+
+Et la cinquième recommandation : «Qu'on donne suite aux commentaires techniques qui visent entre autres à harmoniser la terminologie utilisée par le projet de loi n° 35.»
+
+En lien avec la protection des renseignements personnels et publiés au Registre foncier, M. le Président, tout d'abord, «le moyen proposé par le projet de loi n° 35 en est un qui, aux yeux de la chambre, apparaît quelque peu problématique. En effet, le caviardage d'information présuppose à l'apposition de marques permanentes sur un document afin de rendre certaines informations illisibles. On s'interroge ici sur les conséquences qu'aura ce geste sur la prépondérance de la preuve d'un document [altéré de cette façon]. Caviarder un document porte nécessairement atteinte à son intégrité. Or, l'intégrité d'un document doit être assurée et maintenue tout au long du cycle de vie d'un document afin qu'il conserve [certaines valeurs probantes].
+
+«On se rappellera que le registre foncier demeure une garantie précieuse de la protection des droits des justiciables et constitue un témoin silencieux et privilégié de l'histoire de notre société. Il faut que le moyen utilisé pour préserver l'intégrité physique ou psychique d'un justiciable s'inscrive en harmonie à ces fondements.
+
+«Cela dit, il est difficile de comprendre pourquoi un moyen mécanique, [...]le caviardage, a été retenu par le législateur alors que le projet de loi n° 35 tend à consolider la présence du registre foncier dans une ère de technologie et de modernité. Un moyen ou procédé technologique qui se substituerait au caviardage serait certainement plus approprié et permettrait d'arriver aux mêmes fins. [...]En d'autres termes, la chambre estime que le projet de loi n° 35 devrait considérer davantage l'application [notamment] de la Loi concernant le cadre juridique des technologies de l'information dans le choix du moyen destiné à préserver des renseignements pouvant porter atteinte à l'intégrité d'une personne, et pour cause.
+
+«En effet, la réalité de la protection des renseignements personnels à laquelle le Registre foncier est confronté en est une qui concerne tout autant les autres registres et les banques de données publiques du gouvernement. Au nom des utilisateurs de ces registres, la chambre croit qu'il y aurait lieu d'assurer une uniformité dans les divers moyens retenus destinés à mieux assurer la protection des renseignements sensibles.»
+
+Donc, en lien avec la recommandation n° 1, M. le Président, la problématique majeure en lien avec cette mise en oeuvre, c'est... En fait, la Chambre des notaires «comprend que les articles 13 et 115 du projet de loi n° 35 constitueront désormais une norme en matière de publicité foncière. Toute mention pouvant porter atteinte à l'intégrité physique ou psychique d'une personne pourra être caviardée par l'Officier de publicité foncière, sur demande écrite d'une personne. Or, la chambre considère que certaines règles actuellement en vigueur auraient mérité d'être vues en conformité avec l'objectif de protection des renseignements personnels défendus par le législateur. On leur superposera plutôt cette nouvelle mesure, qui risque probablement de rendre leur application stérile.
+
+«À titre d'exemple, [des] exigences de publication de l'article 3015 du Code civil apparaissent difficilement conciliables au regard des articles 13 et 115 du projet de loi n° 35.»
+
+Plus loin, M. le Président, en lien avec la deuxième recommandation, qui est l'intégrité... en fait, la deuxième recommandation, qui vise notamment que certaines règles de publicité actuellement prévues au Code civil soient revues en conformité avec l'objectif de protection des renseignements personnels défendus par le législateur...
+
+En lien avec l'intégrité physique et psychique : «La chambre s'interroge par ailleurs sur le caractère subjectif de l'évaluation que pourra faire [ainsi] l'Officier de la publicité foncière quant à une possible atteinte à l'intégrité physique ou psychique d'une personne. Le p.l. n° 35 reste en effet muet sur la façon dont l'officier pourra déterminer s'il y a effectivement atteinte à cette intégrité. À titre d'illustration, quelqu'un pourrait-il prétendre que la divulgation du montant de son prêt dans l'acte d'hypothèque porte atteinte à son intégrité psychique? Quels seront alors les recours du titulaire d'un renseignement dont la demande de caviardage se voit refusée par l'officier? Étant donné la variété possible de chaque cas d'espèce, il semble qu'il pourrait être difficile pour l'officier de circonscrire adéquatement la portée d'application de l'expression "atteinte à l'intégrité physique ou psychique d'une personne".
+
+«La chambre considère essentiel d'objectiver et de circonscrire cette expression dans le Règlement sur la publicité foncière. Les critères permettant d'accueillir une demande de caviardage pourraient être prévus dans ce règlement. Il pourrait également être déterminé que les demandes de caviardage [soient] limitées à une série de renseignements déterminés par ce règlement. Les demandes de caviardage ne pourraient ainsi être accueillies par l'officier que si les critères ont été respectés et qu'elles portent sur l'un ou l'autre des renseignements visés par le Règlement sur la publicité foncière. D'ailleurs, la chambre croit que les renseignements prévus à l'article 53.0.1 du Règlement sur la publicité foncière, tel que proposé par l'article 104 du projet de loi n° 35, pourraient constituer un bon départ pour cibler les renseignements sur lesquels une demande de caviardage pourrait porter.
+
+«Parallèlement, la chambre considère que les renseignements qui ne peuvent pas être caviardés devraient être prévus aux termes du Règlement sur la publicité foncière plutôt qu'au second alinéa de l'article 3010.1 du Code civil du Québec, tel que le propose actuellement l'article 13 du projet de loi n° 35. Il semble par ailleurs que d'autres renseignements impératifs au bon fonctionnement du Registre foncier ne devraient [être également pas] caviardés. À cet égard, voici ceux que la Chambre a, de façon non limitative, relevés selon la nature de l'acte : le nom du conjoint, la date [du] décès, la date de mariage ou la date de divorce, le nom des représentants légaux, et, le cas échéant, [référencement] au jugement qui lui donne l'autorité d'agir.
+
+• (16 h 20) •
+
+«Il ne faudrait effectivement pas que les notaires et autres professionnels qui procèdent régulièrement à des examens de titres immobiliers aient des difficultés à réaliser l'exercice. Il en va de la fiabilité des titres et de la sécurité juridique des transactions. Prévoir les renseignements qui ne peuvent pas être caviardés dans un règlement permettrait d'en éviter la cristallisation législative, faciliterait leur modulation selon l'expérience terrain, et [en fait] favoriserait la concertation de l'ensemble des acteurs du milieu. À défaut, peut-être faudrait-il envisager un moyen qui permettrait à ces professionnels d'avoir accès aux renseignements visés.»
+
+De là, donc, découlent les deux recommandations suivantes, la troisième recommandation étant : «Que l'expression "atteinte à l'intégrité physique ou psychique" soit objectivée et circonscrite aux termes du règlement sur la publicité foncière.» Et la quatrième : «Que les renseignements qui ne peuvent pas être caviardés soient prévus aux termes [d'un] règlement sur la publicité foncière plutôt qu'au Code civil et qu'ils soient bonifiés.»
+
+La cinquième recommandation, M. le Président, est en lien avec les commentaires techniques, notamment les précisions terminologiques.
+
+En conclusion, certaines des recommandations... La chambre s'interroge sur le fait que... pour lesquels «le législateur n'a pas cru bon prévoir que le jugement auquel réfère l'article 2730 du Code civil du Québec, tel que modifié par l'article 2 du projet de loi n° 35, doit avoir acquis force de chose jugée. À l'instar de ce que prévoient les articles 2994, 3002 et 3073 du Code civil, elle estime que l'article 2730 du Code civil du Québec devrait le préciser. Ainsi en devrait-il être pour les articles 2999.1.1 et 3073.1 du Code civil du Québec, tel que modifié par le projet de loi n° 35».
+
+Donc, la cinquième recommandation de la Chambre des notaires du Québec prévoit «qu'on donne suite aux commentaires qui visent entre autres à harmoniser la terminologie utilisée au projet de loi n° 35».
+
+En conclusion, M. le Président : «Comme mentionné, la chambre appuie et accueille favorablement le projet de loi n° 35, d'autant plus qu'elle [...] comprend qu'il constitue sans doute un pas menant vers la véritable réforme juridique du système de publicité foncière qui se fait attendre depuis la dernière tentative du législateur en [...] 2013.«[...]Ainsi, en guise de conclusion, la chambre ne souhaite pas revenir sur les détails des commentaires émis dans le cadre du présent mémoire [mais] elle souhaite plutôt remettre de l'avant certaines idées qui pourraient être considérées par le législateur dans le cadre d'une éventuelle réforme juridique du système foncier [du] Québec. Au-delà des recommandations qu'elle a soumises en 2013 et en 2019, la chambre souhaite que l'opportunité de centraliser, à terme, au sein du Registre foncier, les renseignements immobiliers d'importance qui peuvent parfois limiter le droit de propriété soit considérée. On parle ici notamment des renseignements relatifs aux zones inondables, [des] droits miniers, [de] zonage agricole, [le] patrimoine culturel, etc. À l'heure actuelle, ces renseignements se trouvent de registres distincts, ce qui complexifie parfois l'exercice. En bref, cette base de données que constituerait le Registre foncier deviendrait une sorte de guichet unique en matière immobilière pour le citoyen et le professionnel de l'immobilier.
+
+«La chambre souhaite demeurer un acteur d'importance dans les travaux qui mèneront à cette réforme [et] la chambre réaffirme à cet égard son entière disponibilité pour la suite des travaux entourant le projet de loi n° 35.»
+
+Alors, Mme la Présidente, en lien avec le projet de loi n° 35, aujourd'hui, j'ai tenu à faire un exposé qui comprenait ou qui résumait de façon assez complète les cinq mémoires qu'on a reçus. Je réitère auprès du ministre et des différents collègues membres du gouvernement notre collaboration à faire avancer les travaux en lien avec le projet de loi n° 35. Et pour moi c'était important de bien porter le message des différents groupes qui nous ont déposé des mémoires en lien avec le projet de loi n° 35. Merci beaucoup, Mme la Présidente.
+
+La Vice-Présidente (Mme Gaudreault) : Je vous remercie, M. le député de Laval-des-Rapides. Alors, y a-t-il d'autres interventions? Alors, je ne crois pas.
+
+Et, en application de l'ordre spécial, puisqu'il n'y a pas de représentants des groupes pour effectuer le vote, je vais suspendre nos travaux pour un maximum de 10 minutes.
+
+(Suspension de la séance à 16 h 25)
+
+(Reprise à 16 h 29)
+
+La Vice-Présidente (Mme Gaudreault) : Alors, nous reprenons nos travaux
+
+Et, en application de l'ordre spécial, j'inviterais les leaders parlementaires à m'indiquer le vote de leurs groupes sur cette motion, c'est-à-dire... sur cette motion, oui, d'adoption du projet de loi. Alors, M. le leader adjoint du gouvernement?
+
+M. Schneeberger : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : M. le député de Laval-des-Rapides?
+
+M. Polo : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : Mme la députée de Sherbrooke?
+
+Mme Labrie : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : M. le député de Rimouski?
+
+M. LeBel : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : Maintenant, M. le leader adjoint, est-ce que vous avez des indications à me donner concernant le vote de Mme la députée de Marie-Victorin?
+
+M. Schneeberger : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : Et de M. le député de Chomedey?
+
+M. Schneeberger : Pour.
+
+• (16 h 30) •
+
+La Vice-Présidente (Mme Gaudreault) : Pour. Alors, c'est très bien. Je vous remercie. Et, en conséquence, le principe du projet de loi n° 35 est adopté. Je recède la parole à M. le leader adjoint du gouvernement.
+
+M. Schneeberger : Merci, Mme la Présidente. Alors, conformément à l'article 243 de notre règlement, je fais motion afin que le projet de loi n° 35, Loi visant à moderniser certaines règles relatives à la publicité foncière et à favoriser la diffusion de l'information géospatiale, soit déféré à la Commission de l'agriculture, des pêches, de l'énergie et des ressources naturelles pour son étude détaillée.
+
+La Vice-Présidente (Mme Gaudreault) : Alors, je vous remercie. Toujours en application de l'ordre spécial, j'inviterais maintenant les leaders de chaque formation politique de nous mentionner le vote de leurs groupes. M. le leader adjoint du gouvernement?
+
+M. Schneeberger : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : M. le député de Laval-des-Rapides?
+
+M. Polo : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : Mme la députée de Sherbrooke?
+
+Mme Labrie : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : Et M. le député de Rimouski?
+
+M. LeBel : Pour.
+
+La Vice-Présidente (Mme Gaudreault) : Et maintenant, M. le leader adjoint, votre indication concernant le vote de Mme la députée de Marie-Victorin?
+
+M. Schneeberger : Alors, au niveau des votes, j'imagine, c'est pour, pour les deux...
+
+La Vice-Présidente (Mme Gaudreault) : Et ainsi que pour M. le député de Chomedey?
+
+M. Schneeberger : Oui.
+
+La Vice-Présidente (Mme Gaudreault) : Alors, je vous remercie. Alors, en conséquence, la motion est adoptée.
+
+Pour la suite de nos travaux, je recède la parole à M. le leader adjoint du gouvernement.
+
+M. Schneeberger : Oui, alors, Mme la Présidente, je vous demanderais d'appeler l'article 16 de notre feuilleton.

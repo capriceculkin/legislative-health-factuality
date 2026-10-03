@@ -1,0 +1,1373 @@
+Congressional Record, Volume 161 Issue 44 (Monday, March 16, 2015)
+
+NOTICE OF OBSERVATION TREATMENT AND IMPLICATION FOR CARE ELIGIBILITY
+
+ACT
+
+Mr. RYAN of Wisconsin. Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 876) to amend title XVIII of the Social Security Act to require hospitals to provide certain notifications to individuals classified by such hospitals under observation status rather than admitted as inpatients of such hospitals, as amended.
+
+The Clerk read the title of the bill.
+
+The text of the bill is as follows:
+
+H.R. 876
+
+Be it enacted by the Senate and House of Representatives of
+
+the United States of America in Congress assembled,
+
+SECTION 1. SHORT TITLE.
+
+This Act may be cited as the ``Notice of Observation
+
+Treatment and Implication for Care Eligibility Act'' or the
+
+``NOTICE Act''.
+
+SEC. 2. MEDICARE REQUIREMENT FOR HOSPITAL NOTIFICATIONS OF
+
+OBSERVATION STATUS.
+
+Section 1866(a)(1) of the Social Security Act (42 U.S.C.
+
+1395cc(a)(1)) is amended--
+
+(1) in subparagraph (V), by striking at the end ``and'';
+
+(2) in the first subparagraph (W), by striking at the end
+
+the period and inserting a comma;
+
+(3) in the second subparagraph (W)--
+
+(A) by redesignating such subparagraph as subparagraph (X);
+
+and
+
+(B) by striking at the end the period and inserting ``,
+
+and''; and
+
+(4) by inserting after such subparagraph (X) the following
+
+new subparagraph:
+
+``(Y) beginning 12 months after the date of the enactment
+
+of this subparagraph, in the case of a hospital or critical
+
+access hospital, with respect to each individual who receives
+
+observation services as an outpatient at such hospital or
+
+critical access hospital for more than 24 hours, to provide
+
+to such individual not later than 36 hours after the time
+
+such individual begins receiving such services (or, if
+
+sooner, upon release)--
+
+``(i) such oral explanation of the written notification
+
+described in clause (ii), and such documentation of the
+
+provision of such explanation, as the Secretary determines to
+
+be appropriate;
+
+``(ii) a written notification (as specified by the
+
+Secretary pursuant to rulemaking and containing such language
+
+as the Secretary prescribes consistent with this paragraph)
+
+which--
+
+``(I) explains the status of the individual as an
+
+outpatient receiving observation services and not as an
+
+inpatient of the hospital or critical access hospital and the
+
+reasons for such status of such individual;
+
+``(II) explains the implications of such status on services
+
+furnished by the hospital or critical access hospital
+
+(including services furnished on an inpatient basis), such as
+
+implications for cost-sharing requirements under this title
+
+and for subsequent eligibility for coverage under this title
+
+for services furnished by a skilled nursing facility;
+
+``(III) includes such additional information as the
+
+Secretary determines appropriate;
+
+``(IV) either--
+
+``(aa) is signed by such individual or a person acting on
+
+such individual's behalf to acknowledge receipt of such
+
+notification; or
+
+``(bb) if such individual or person refuses to provide the
+
+signature described in item (aa), is signed by the staff
+
+member of the hospital or critical access hospital who
+
+presented the written notification and includes the name and
+
+title of such staff member, a certification that the
+
+notification was presented, and the date and time the
+
+notification was presented; and
+
+``(V) is written and formatted using plain language and is
+
+made available in appropriate languages as determined by the
+
+Secretary.''.
+
+The SPEAKER pro tempore. Pursuant to the rule, the gentleman from Wisconsin (Mr. Ryan) and the gentleman from Texas (Mr. Doggett) each will control 20 minutes.
+
+The Chair recognizes the gentleman from Wisconsin.
+
+General Leave
+
+Mr. RYAN of Wisconsin. Mr. Speaker, I ask unanimous consent that all Members may have 5 legislative days within which to revise and extend their remarks and include extraneous material on H.R. 876, currently under consideration.
+
+The SPEAKER pro tempore. Is there objection to the request of the gentleman from Wisconsin?
+
+There was no objection.
+
+Mr. RYAN of Wisconsin. Mr. Speaker, this is commonsense legislation dealing with the Medicare program that is bipartisan that the Committee on Ways and Means marked up a couple of weeks ago.
+
+I want to just commend my colleagues Congressman Young from Indiana and Congressman Doggett from Texas for their work on this.
+
+This is common sense. This tells patients what the rules are so that they know what is going to happen when they are in the hospital, so they know what kind of billing they are going to have.
+
+I yield whatever time he may consume to the gentleman from Indiana (Mr. Young), the coauthor of this legislation, for the purpose of describing this legislation.
+
+Mr. YOUNG of Indiana. Mr. Speaker, I thank the chairman for taking up this important piece of legislation today. I also want to thank the gentleman from Texas (Mr. Doggett) for his leadership on this issue.
+
+When seniors require a hospital stay, they are rightfully more concerned with their recovery than with understanding how the hospital classifies their status as a patient; but when that classification can impact future coverage of health care services related to their recovery, they deserve to be made aware of the potential ramifications.
+
+This act, the NOTICE Act, would require hospitals to provide meaningful written and oral notification to patients who are in the hospital under observation for more than 24 hours. This notice would alert the beneficiary or person acting on their behalf of the Medicare patient's admission status and the financial implications of that classification so he or she can advocate on their own behalf while in the hospital.
+
+No one should be caught off guard by a large medical bill just because they weren't aware of the status codes or the billing procedures. In a time of sickness and stress, families should focus on the recovery of their loved ones instead of dealing with the hidden costs due to lack of notice.
+
+Mr. DOGGETT. Mr. Speaker, I rise in support of the bill and yield myself such time as I might consume.
+
+The NOTICE Act, as the name suggests, is about giving notice. In this case, it gives notice to patients when they are about to be billed personally, perhaps for many thousands of dollars, because they were characterized as under observation rather than regular inpatient status without them even knowing.
+
+I am pleased to have worked on this legislation since last summer with Mr. Young when we originally filed the bill, and I am appreciative of Chairman Ryan's prompt consideration of it in our committee.
+
+This is a consumer protection bill designed to provide at least limited protection to health care consumers. Currently, a hospital may either admit a patient as an inpatient or keep them under observation. This categorization might apply to heart murmur, irregular heartbeat, indigestion, or other symptoms that would cause a senior or an individual with a disability who is covered by Medicare to go into the hospital.
+
+It probably makes little or no difference in the way the hospital treats the physical condition, but it can make a very big difference in terms of how the patient's pocketbook is cared for. Indeed, the effect of being under observation is that the patient gets stuck with the bill for any skilled nursing home care that is required for rehabilitative services after the stay at the hospital.
+
+Medicare will pay for that needed care if a Medicare recipient patient is hospitalized for more than 3 days as an inpatient, but Medicare will not pay for skilled nursing home care if someone is simply under observation. Since Medicare has paid nothing, there is also no gap to be covered by Medigap; and instead of being in a gap, folks like this are really left in just a giant black hole. A Medicare patient that is sucked into this hole will be billed for the entire cost of rehabilitation at the nursing home, which can run into tens of thousands of dollars.
+
+This practice is happening more and more across America, though it is largely unknown to most people until they get caught up in it. In 2012, Medicare patients had more than 600,000 observation stays that lasted 3 days or more. According to one study, over a 6-year span, the number of stays under observation has increased by 88 percent. Many Medicare patients are being put under observation for a length of time that exceeds the guidelines that have been set by Medicare.
+
+Last year on the NBC Nightly News, Kate Snow profiled Ms. Kelley- Nelum, who discovered that this costly classification had a big impact on her hospitalized husband. After repeated questioning and demanding to know why
+
+her husband was under observation, she got the hospital to reclassify him. She later learned that had that not occurred, had she not been persistent in standing up for her ill husband, that they would have faced about $22,000 in out-of-pocket rehabilitation bills.
+
+Last year, with so many patients facing insurmountable out-of-pocket costs for skilled nursing care after unknowingly being placed under observation, The New York Times actually ran a piece that was designed to provide guidance to health care consumers about how to get out of this observation category. The first step is knowing you are in it, and this bill provides for that meaningful disclosure.
+
+This legislation is endorsed by AARP, by the Alliance for Retired Americans, the Center for Medicare Advocacy, the National Association of Professional Geriatric Care Managers, LeadingAge, American Health Care Association, and the National Committee to Preserve Social Security and Medicare.
+
+I include in the Record letters from two of those groups in support of the legislation.
+
+AARP,
+
+February 24, 2015.
+
+Hon. Lloyd Doggett,
+
+Rayburn Office Building,
+
+House of Representatives, Washington, DC.
+
+Hon. Todd Young,
+
+Longworth Office Building,
+
+House of Representatives, Washington, DC.
+
+Dear Representative Doggett and Representative Young: On
+
+behalf of the nearly 38 million AARP members and the millions
+
+more Americans with Medicare, we are pleased to endorse the
+
+Notice of Observation Treatment and Implication for Care
+
+Eligibility (NOTICE) Act of 2015 (H.R. 876). Thank you for
+
+working together to address the growing problem of Medicare
+
+beneficiaries paying high out-of-pocket costs due to hospital
+
+stays in which they were classified as an outpatient, rather
+
+than being formally admitted as an inpatient.
+
+As you know, the use of ``observation status'' has become
+
+more prevalent in recent years, and the duration of
+
+observation stays has grown longer. While there may be
+
+several reasons for these trends, it is clear that Medicare
+
+beneficiaries are spending more and more time in the hospital
+
+without being formally admitted. Admission as an inpatient
+
+activates Medicare Part A cost-sharing and a three-day stay
+
+requirement for skilled nursing facility (SNF) coverage; in
+
+contrast, observation status is billed under Part B, and can
+
+expose beneficiaries to unexpectedly high out-of-pocket costs
+
+amounting to thousands of dollars.
+
+Beneficiaries must be informed and made aware of how any
+
+changes to their status will affect them. This legislation
+
+would require hospitals to provide meaningful written and
+
+oral notification to patients who are in the hospital ``under
+
+observation'' for more than 24 hours. While this does not
+
+solve all the problems regarding cost-sharing and access to
+
+SNF coverage, it is an important step to ensuring Medicare
+
+beneficiaries have access to information about their care.
+
+Clearly understanding their admission status will help
+
+patients, and their caregivers, better plan treatment options
+
+with their health care providers.
+
+Again, thank you for your continued work to protect
+
+Medicare beneficiaries. If you have any questions, please
+
+contact me, or have your staff contact Ariel Gonzalez,
+
+Director of Federal Health and Family.
+
+Sincerely,
+
+Joyce A. Rogers,
+
+Senior Vice President,
+
+Government Affairs.
+
+____
+
+American Health Care Association,
+
+Washington, DC, February 11, 2015.
+
+Hon. Lloyd Doggett,
+
+Rayburn House Office Building,
+
+Washington, DC.
+
+Congressman Doggett: I serve as the president and chief
+
+executive officer of AHCA/NCAL, the nation's largest
+
+association of long term and post-acute care providers. The
+
+association advocates for quality care and services for the
+
+frail, elderly, and individuals with disabilities. Our
+
+members provide essential care to millions of individuals in
+
+more than 12,000 not for profit and for profit member
+
+facilities.
+
+AHCA/NCAL, its affiliates, and member providers advocate
+
+for the continuing vitality of the long term care provider
+
+community. We are committed to developing and advocating for
+
+public policies that support quality care and quality of life
+
+for our nation's most vulnerable. Therefore, we are in
+
+support of the legislation, Notice of Observation Treatment
+
+and Implication for Care Eligibility (NOTICE) Act, that you
+
+and Congressman Todd Young (R-IN-9) have introduced again
+
+this Congress.
+
+The NOTICE Act requires hospitals to give formal notice to
+
+patients within a period of time after classifying them as an
+
+inpatient or as an outpatient under observation. More
+
+specifically, the legislation works to ensure that hospitals
+
+notify patients entitled to Medicare part A coverage of their
+
+outpatient status within 36 hours after the time of their
+
+classification or, if sooner, upon discharge.
+
+Often times, patients have no idea what their status is in
+
+a hospital or the importance of it. This can lead to
+
+thousands of dollars in out-of-pocket medical expenses should
+
+they need skilled nursing center care following their
+
+hospital stay. The observation stays issue is a financial
+
+burden on seniors and their families. It can cause
+
+unnecessary spend-down, accelerating the time frame in which
+
+seniors will have to turn to programs such as Medicaid to pay
+
+for their care.
+
+This legislation is a positive step forward, and raises
+
+attention to a complex and critical issue hurting the
+
+nation's seniors. AHCA/NCAL applauds Congressmen Doggett and
+
+Young for serving as champions for seniors and those
+
+individuals who need our services the most.
+
+Sincerely,
+
+Mark Parkinson,
+
+AHCA/NCAL President & CEO.
+
+Mr. DOGGETT. Mr. Speaker, I also appreciate the help we have received from the Center for Medicare Advocacy. They have had reports, again, from people all over the country being placed in this situation.
+
+The hospitals may act in the best interests of a patient's health but not always in the best interest of the patient's pocketbook. The NOTICE Act will equip patients and their loved ones with the knowledge that they need to be effective advocates and avoid crippling financial repercussions.
+
+Mr. Speaker, I reserve the balance of my time.
+
+Mr. RYAN of Wisconsin. Mr. Speaker, may I inquire of the gentleman from Texas if they have any other speakers? We are prepared to close.
+
+Mr. DOGGETT. I have one speaker on the way. If you are prepared to close and he is not arriving, then we will close.
+
+Do you have any other speakers?
+
+Mr. RYAN of Wisconsin. I will just say a few things. I yield myself such time as I may consume, Mr. Speaker.
+
+This is basically common sense. What is happening is people on Medicare are going to the hospital. They don't know what their status is, whether they are considered inpatient or outpatient. As far as they are concerned, it is the same thing. The problem is they are being declared one or the other, unbeknownst to them, and that has a huge difference in the billing that they receive.
+
+So what this bill simply says is you will know your status so that you can make an informed decision as a patient in a hospital, because there are huge financial implications to that status. This is very simple. It is good government.
+
+I reserve the balance of my time.
+
+Mr. DOGGETT. Mr. Speaker, I yield myself 15 seconds and will welcome my colleague, Joe Courtney, who has long sought to respond legislatively to protect health care consumers from the financial pain of this observation status.
+
+While the passage of the NOTICE Act is an important step, Representative Courtney has an Improving Access to Medicare Coverage Act that would treat observation stays the same as inpatient stays. I support his legislation as he has supported, from the beginning, this initiative, and I appreciate his leadership.
+
+Mr. Speaker, I yield 3 minutes to the gentleman from Connecticut (Mr. Courtney).
+
+Mr. COURTNEY. Mr. Speaker, I want to, first of all, salute Congressman Doggett for his effort in terms of bringing this legislation forward. As the chairman of the committee said, this is really about giving patients a fighting chance to challenge this coding, a change that happens while people are in the hospital and have absolutely no idea that they are not being treated as full part A inpatient patients at hospital facilities.
+
+The impact of being coded as observation versus inpatient may sound extremely arcane, but what that means is that at time of discharge, if a patient is medically prescribed to go to a nursing home for rehab care for a broken bone or for home health services for a heart condition, they are not covered by Medicare if they are in the observation bucket as opposed to the inpatient bucket.
+
+The inspector general's office for Medicare issued a report in 2012 that 600,000 patients across the country with long-stay hospital visits over 3 days fell into this black hole, this no man's land where, again, their doctors are telling them that they need to have rehab services so that people can walk again and deal with activities of daily living; but the price for doing that, because you are in observation status,
+
+can be tens of thousands of dollars, which is where long-term care facilities, nursing home coverage for private-pay patients, out-of- pocket patients, exist today.
+
+This bill at least gives patients the opportunity to challenge that decision. But the fact of the matter is, what we need to do is to restore the 3-day rule, which is in statute. It has been there since 1965. Observation status is something new within the last 10 years, and what we need to do as a Congress is to restore that 3-day rule, which says to a patient: If you are coded observation or if you are coded inpatient, it should not interfere with your medically prescribed course of treatment at the time that you are discharged from the hospital.
+
+That, unfortunately, is not going to be fixed as a result of this legislation. We should build on this legislation and again restore Medicare's promise, which, again, from day one, has said that medically prescribed care will be covered by the system at time of discharge from a hospital for longer than 3 days.
+
+The horror stories of people who in some instances were in hospital for 9 days with broken bones, broken hips, who, again, are staring at a 10 to $15,000 fee to be admitted to a nursing home--again, 600,000 cases in 2012.
+
+So again, we need to build on this legislation, but fundamentally, we need to restore the 3-day rule which has been in statute since 1965. We will be introducing that legislation later this week. It will be a bipartisan bill. We think we can withstand the test of any pay-fors to make sure that it allows the Medicare system's finances to stay in a stable condition. In the meantime, we should pass this legislation today.
+
+Again, I want to salute the Member from Texas for his leadership on this issue.
+
+{time}  1645
+
+Mr. DOGGETT. Mr. Speaker, I concur with the gentleman from Connecticut.
+
+I yield back the balance of my time.
+
+Mr. RYAN of Wisconsin. I agree, Mr. Speaker.
+
+I yield back the balance of my time.
+
+The SPEAKER pro tempore. The question is on the motion offered by the gentleman from Wisconsin (Mr. Ryan) that the House suspend the rules and pass the bill, H.R. 876, as amended.
+
+The question was taken.
+
+The SPEAKER pro tempore. In the opinion of the Chair, two-thirds being in the affirmative, the ayes have it.
+
+Mr. RYAN of Wisconsin. Mr. Speaker, on that I demand the yeas and nays.
+
+The yeas and nays were ordered.
+
+The SPEAKER pro tempore. Pursuant to clause 8 of rule XX, further proceedings on this motion will be postponed.
+
+Congressional Record, Volume 161 Issue 44 (Monday, March 16, 2015)
+
+NOTICE OF OBSERVATION TREATMENT AND IMPLICATION FOR CARE ELIGIBILITY
+
+ACT
+
+The SPEAKER pro tempore. The unfinished business is the vote on the motion to suspend the rules and pass the bill (H.R. 876) to amend title XVIII of the Social Security Act to require hospitals to provide certain notifications to individuals classified by such hospitals under observation status rather than admitted as inpatients of such hospitals, as amended, on which the yeas and nays were ordered.
+
+The Clerk read the title of the bill.
+
+The SPEAKER pro tempore. The question is on the motion offered by the gentleman from Wisconsin (Mr. Ryan) that the House suspend the rules and pass the bill, as amended.
+
+This is a 5-minute vote.
+
+The vote was taken by electronic device, and there were--yeas 395, nays 0, not voting 37, as follows:
+
+[Roll No. 115]
+
+YEAS--395
+
+Abraham
+
+Adams
+
+Aderholt
+
+Aguilar
+
+Allen
+
+Amash
+
+Amodei
+
+Ashford
+
+Babin
+
+Barletta
+
+Barr
+
+Barton
+
+Bass
+
+Beatty
+
+Benishek
+
+Bera
+
+Beyer
+
+Bilirakis
+
+Bishop (GA)
+
+Bishop (MI)
+
+Bishop (UT)
+
+Black
+
+Blackburn
+
+Blum
+
+Blumenauer
+
+Bonamici
+
+Bost
+
+Boustany
+
+Boyle, Brendan F.
+
+Brady (PA)
+
+Brady (TX)
+
+Brat
+
+Bridenstine
+
+Brooks (AL)
+
+Brooks (IN)
+
+Brown (FL)
+
+Brownley (CA)
+
+Buchanan
+
+Buck
+
+Bucshon
+
+Burgess
+
+Bustos
+
+Butterfield
+
+Byrne
+
+Calvert
+
+Capps
+
+Cardenas
+
+Carson (IN)
+
+Carter (GA)
+
+Carter (TX)
+
+Cartwright
+
+Castor (FL)
+
+Castro (TX)
+
+Chabot
+
+Chaffetz
+
+Chu, Judy
+
+Cicilline
+
+Clark (MA)
+
+Clawson (FL)
+
+Clay
+
+Cleaver
+
+Clyburn
+
+Coffman
+
+Cohen
+
+Cole
+
+Collins (GA)
+
+Collins (NY)
+
+Comstock
+
+Conaway
+
+Connolly
+
+Cook
+
+Cooper
+
+Costa
+
+Costello (PA)
+
+Courtney
+
+Cramer
+
+Crawford
+
+Crenshaw
+
+Crowley
+
+Cuellar
+
+Culberson
+
+Cummings
+
+Curbelo (FL)
+
+Davis (CA)
+
+Davis, Danny
+
+Davis, Rodney
+
+DeGette
+
+Delaney
+
+DeLauro
+
+DelBene
+
+Denham
+
+Dent
+
+DeSantis
+
+DeSaulnier
+
+DesJarlais
+
+Deutch
+
+Diaz-Balart
+
+Dingell
+
+Doggett
+
+Dold
+
+Doyle, Michael F.
+
+Duckworth
+
+Duffy
+
+Duncan (SC)
+
+Duncan (TN)
+
+Ellison
+
+Ellmers (NC)
+
+Emmer (MN)
+
+Engel
+
+Eshoo
+
+Esty
+
+Farenthold
+
+Farr
+
+Fattah
+
+Fitzpatrick
+
+Fleischmann
+
+Fleming
+
+Flores
+
+Forbes
+
+Foster
+
+Foxx
+
+Frankel (FL)
+
+Franks (AZ)
+
+Frelinghuysen
+
+Fudge
+
+Gabbard
+
+Gallego
+
+Garamendi
+
+Garrett
+
+Gibbs
+
+Gibson
+
+Gohmert
+
+Goodlatte
+
+Gosar
+
+Gowdy
+
+Graham
+
+Graves (GA)
+
+Graves (LA)
+
+Grayson
+
+Green, Al
+
+Green, Gene
+
+Griffith
+
+Grothman
+
+Guinta
+
+Guthrie
+
+Hahn
+
+Hanna
+
+Hardy
+
+Harper
+
+Harris
+
+Hartzler
+
+Hastings
+
+Heck (NV)
+
+Heck (WA)
+
+Hensarling
+
+Herrera Beutler
+
+Hice, Jody B.
+
+Higgins
+
+Hill
+
+Himes
+
+Honda
+
+Hoyer
+
+Hudson
+
+Huelskamp
+
+Huffman
+
+Huizenga (MI)
+
+Hultgren
+
+Hunter
+
+Hurd (TX)
+
+Hurt (VA)
+
+Israel
+
+Issa
+
+Jackson Lee
+
+Jenkins (KS)
+
+Jenkins (WV)
+
+Johnson (GA)
+
+Johnson (OH)
+
+Johnson, E. B.
+
+Johnson, Sam
+
+Jolly
+
+Jones
+
+Jordan
+
+Joyce
+
+Katko
+
+Keating
+
+Kelly (IL)
+
+Kelly (PA)
+
+Kennedy
+
+Kildee
+
+Kilmer
+
+Kind
+
+King (IA)
+
+King (NY)
+
+Kinzinger (IL)
+
+Kirkpatrick
+
+Kline
+
+Knight
+
+Kuster
+
+Labrador
+
+LaMalfa
+
+Lamborn
+
+Lance
+
+Langevin
+
+Larsen (WA)
+
+Larson (CT)
+
+Latta
+
+Lawrence
+
+Lee
+
+Levin
+
+Lewis
+
+Lieu, Ted
+
+LoBiondo
+
+Loebsack
+
+Lofgren
+
+Long
+
+Loudermilk
+
+Love
+
+Lowenthal
+
+Lowey
+
+Lucas
+
+Luetkemeyer
+
+Lujan Grisham (NM)
+
+Lujan, Ben Ray (NM)
+
+Lynch
+
+MacArthur
+
+Maloney, Carolyn
+
+Maloney, Sean
+
+Marchant
+
+Marino
+
+Massie
+
+Matsui
+
+McCarthy
+
+McCaul
+
+McClintock
+
+McCollum
+
+McDermott
+
+McGovern
+
+McHenry
+
+McKinley
+
+McMorris Rodgers
+
+McNerney
+
+McSally
+
+Meehan
+
+Meeks
+
+Meng
+
+Messer
+
+Mica
+
+Miller (FL)
+
+Miller (MI)
+
+Moolenaar
+
+Mooney (WV)
+
+Moore
+
+Moulton
+
+Mullin
+
+Murphy (FL)
+
+Murphy (PA)
+
+Nadler
+
+Napolitano
+
+Neal
+
+Neugebauer
+
+Newhouse
+
+Noem
+
+Nolan
+
+Norcross
+
+Nugent
+
+Nunes
+
+O'Rourke
+
+Olson
+
+Palazzo
+
+Pallone
+
+Palmer
+
+Paulsen
+
+Pearce
+
+Pelosi
+
+Perlmutter
+
+Perry
+
+Peters
+
+Peterson
+
+Pingree
+
+Pittenger
+
+Pitts
+
+Pocan
+
+Poe (TX)
+
+Poliquin
+
+Polis
+
+Pompeo
+
+Price (NC)
+
+Price, Tom
+
+Quigley
+
+Rangel
+
+Ratcliffe
+
+Reed
+
+Reichert
+
+Renacci
+
+Ribble
+
+Rice (NY)
+
+Rice (SC)
+
+Richmond
+
+Rigell
+
+Roby
+
+Roe (TN)
+
+Rogers (AL)
+
+Rogers (KY)
+
+Rokita
+
+Rooney (FL)
+
+Ros-Lehtinen
+
+Ross
+
+Rothfus
+
+Rouzer
+
+Roybal-Allard
+
+Royce
+
+Ruiz
+
+Ruppersberger
+
+Russell
+
+Ryan (WI)
+
+Salmon
+
+Sanchez, Linda T.
+
+Sanford
+
+Sarbanes
+
+Scalise
+
+Schakowsky
+
+Schiff
+
+Schock
+
+Schrader
+
+Schweikert
+
+Scott (VA)
+
+Sensenbrenner
+
+Serrano
+
+Sessions
+
+Sewell (AL)
+
+Sherman
+
+Shimkus
+
+Shuster
+
+Simpson
+
+Sinema
+
+Sires
+
+Slaughter
+
+Smith (MO)
+
+Smith (NE)
+
+Smith (TX)
+
+Stefanik
+
+Stewart
+
+Stivers
+
+Stutzman
+
+Swalwell (CA)
+
+Takai
+
+Takano
+
+Thompson (CA)
+
+Thompson (MS)
+
+Thompson (PA)
+
+Thornberry
+
+Tiberi
+
+Tipton
+
+Titus
+
+Tonko
+
+Torres
+
+Trott
+
+Tsongas
+
+Upton
+
+Valadao
+
+Van Hollen
+
+Vargas
+
+Veasey
+
+Vela
+
+Velazquez
+
+Visclosky
+
+Wagner
+
+Walberg
+
+Walden
+
+Walker
+
+Walorski
+
+Walters, Mimi
+
+Walz
+
+Wasserman Schultz
+
+Watson Coleman
+
+Weber (TX)
+
+Webster (FL)
+
+Welch
+
+Wenstrup
+
+Westerman
+
+Westmoreland
+
+Whitfield
+
+Williams
+
+Wilson (FL)
+
+Wittman
+
+Womack
+
+Woodall
+
+Yarmuth
+
+Yoder
+
+Yoho
+
+Young (AK)
+
+Young (IA)
+
+Young (IN)
+
+Zeldin
+
+Zinke
+
+NOT VOTING--37
+
+Becerra
+
+Capuano
+
+Carney
+
+Clarke (NY)
+
+Conyers
+
+DeFazio
+
+Edwards
+
+Fincher
+
+Fortenberry
+
+Granger
+
+Graves (MO)
+
+Grijalva
+
+Gutierrez
+
+Hinojosa
+
+Holding
+
+Jeffries
+
+Kaptur
+
+Lipinski
+
+Lummis
+
+Meadows
+
+Mulvaney
+
+Pascrell
+
+Payne
+
+Posey
+
+Rohrabacher
+
+Roskam
+
+Rush
+
+Ryan (OH)
+
+Sanchez, Loretta
+
+Scott, Austin
+
+Scott, David
+
+Smith (NJ)
+
+Smith (WA)
+
+Speier
+
+Turner
+
+Waters, Maxine
+
+Wilson (SC)
+
+{time}  1910
+
+So (two-thirds being in the affirmative) the rules were suspended and the bill, as amended, was passed.
+
+The result of the vote was announced as above recorded.
+
+A motion to reconsider was laid on the table.
+
+Stated for:
+
+Mr. WILSON of South Carolina. Mr. Speaker, I was hosting French Ambassador Gerard Araud in South Carolina where we visited French business investments across the Second Congressional District creating thousands of jobs. Had I been present, I would have voted ``aye'' on H.R. 876--Notice of Observation Treatment and Implication for Care Eligibility Act, as amended.
+
+Personal Explanation
+
+Ms. GRANGER. Mr. Speaker, on rollcall No. 113 on the Access to Life- Saving Trauma Care for All Americans Act, H.R. 647, I am not recorded because of prior commitments in the Congressional District. Had I been present, I would have voted ``aye.''
+
+=========================== NOTE ===========================
+
+March 16, 2015, on page H1651, the following appeared:Mr. GRANGER. Mr. Speaker, on rollcall No.
+
+The online version should be corrected to read: Ms. GRANGER. Mr. Speaker, on rollcall No.
+
+========================= END NOTE =========================
+
+On rollcall No. 114 on the Trauma Systems and Regionalization of Emergency Care Reauthorization Act, H.R. 648, I am not recorded because of prior commitments in the Congressional District. Had I been present, I would have voted ``aye.''
+
+On rollcall No. 115 on the Notice of Observation Treatment and Implication for Care Eligibility Act, H.R. 876, I am not recorded because of prior commitments in the Congressional District. Had I been present, I would have voted ``aye.''
+
+Personal Explanation
+
+Mr. PASCRELL. Mr. Speaker, on today, March 16, 2015, I was unavoidably detained in my district and missed the three rollcall votes of the day. Had I been present I would have voted:
+
+``aye''--rollcall vote No. 113--H.R. 647--Access to Life-Saving Trauma Care for All Americans Act;
+
+``aye''--rollcall vote No. 114--H.R. 648--Trauma Systems and Regionalization of Emergency Care Reauthorization Act;
+
+``aye''--rollcall vote No. 115--H.R. 876--Notice of Observation Treatment and Implication for Care Eligibility Act.
+
+Personal Explanation
+
+Mr. DeFAZIO. Mr. Speaker, on March 16, 2015 I was unable to be present and missed the following votes:
+
+On rollcall vote No. 115, on Motion to Suspend the Rules and Pass H.R. 876, the Notice of Observation Treatment and Implication for Care Eligibility Act, I would have voted ``aye.''

@@ -30,7 +30,7 @@ The Chair recognizes the gentleman from Virginia [Mr. Bliley].
 
 Mr. BLILEY. Mr. Chairman, I yield myself such time as I may consume.
 
-Mr. Chairman, I urge my colleagues to join me in supporting the extension of the Medicare Select Program. The bill before the House was worked out between the members of the Commerce and Ways and Means Committees. The bill provides for a 5-year extension of the program and permits it to be offered in all 50 States. The bill also requires the secretary of the Department of Health and Human Services to conduct a study comparing the health care costs, quality of care, and access to services under Medicare select policies with other Medigap policies. The secretary is required to establish Medicare select on a permanent basis unless the study finds that: First, Medicare select has not resulted in savings to Medicare select enrollees, second, it has led to significant expenditures in the Medicare program, or third, it has significantly diminished access to and quality of care. I think the bill provides for a reasonable balance that will permit a valuable and innovative program for more informed evaluation of the program. We must remember that Medicare select is a MediGap insurance policy which provides seniors with another option to receive medical care. By giving the elderly more choices within MediGap we give them the option to pick plans which meet their individual needs.
+Mr. Chairman, I urge my colleagues to join me in supporting the extension of the Medicare Select Program. The bill before the House was worked out between the members of the Commerce and Ways and Means Committees. The bill provides for a 5-year extension of the program and permits it to be offered in all 50 States. The bill also requires the secretary of the Department of Health and Human Services to conduct a study comparing the health care costs, quality of care, and access to services under Medicare select policies with other Medigap policies. The secretary is required to establish Medicare select on a permanent basis unless the study finds that: First, Medicare select has not resulted in savings to Medicare select enrollees, second, it has led to significant expenditures in the Medicare program, or third, it has significantly diminished access to and quality of care. I think the bill provides for a reasonable balance that will permit a valuable and innovative program for our senior citizens to be continued while permitting a more informed evaluation of the program. We must remember that Medicare select is a MediGap insurance policy which provides seniors with another option to receive medical care. By giving the elderly more choices within MediGap we give them the option to pick plans which meet their individual needs.
 
 In my view, we must not allow this program to expire. It is unfair to both participants and insurers alike to have to worry about what the Congress will do next. Medicare Select is a small but important program--and, I might add, a highly regulated program. It is regulated under the Federal MediGap standards. There are additional Federal statutory standards for select policies, plus our States insurance departments regulate them under State law. Medicare Select saves senior citizens money, provides more choice for senior citizens than the current Medicare risk contract HMO, and has given them the opportunity to secure a more comprehensive benefits package. If we do not act to extend this program, no new enrollees will be permitted to enroll in Select plans and we will see the ultimate demise of these plans. The end result is bound to be significant increases in premiums for current enrollees. Medicare beneficiaries will be denied a product that saves them money and which has served them well. There is no reason not to extend this program in a responsible fashion.
 
@@ -88,7 +88,7 @@ Since the time that both committees completed action on H.R. 483, the committees
 
 The bill the House is considering would extend the Medicare Select Program for a 5 year period and expands the coverage to all 50 States.
 
-The bill would also require the Secretary of the Department of Health and Human Services to conduct a study comparing the health care costs, quality of care, and access to services under Medicare select policies with other MediGap policies. This study must be completed by the end of 1998. Based on the results of this study. The Secretary must make a determination that the Medicare Select Program is permanent unless the study finds that: (1) Medicare select has not resulted in savings to Medicare select enrollees. (2) it has or (3) it has significantly diminished access to and quality of care.
+The bill would also require the Secretary of the Department of Health and Human Services to conduct a study comparing the health care costs, quality of care, and access to services under Medicare select policies with other MediGap policies. This study must be completed by the end of 1998. Based on the results of this study. The Secretary must make a determination that the Medicare Select Program is permanent unless the study finds that: (1) Medicare select has not resulted in savings to Medicare select enrollees. (2) it has led to significant expenditures in the Medicare Program, or (3) it has significantly diminished access to and quality of care.
 
 Congress needs to enact legislation to extend this program now.
 
@@ -154,7 +154,7 @@ Mr. BLILEY. Mr. Chairman, to close debate on our side, I yield 5 minutes to the 
 
 Mrs. JOHNSON of Connecticut. Mr. Chairman, I rise in strong support of this bill, and urge my colleagues to support it with enthusiasm. A number of issues have been raised from the other side, but they are issues that were thoroughly addressed in the hearings that we have had on this bill.
 
-First of all, this is not a failed program. This is a very strong program that seniors are choosing, and they are care that is also high-quality health care. Their premiums are anywhere from 10 to almost 40 percent less than the premiums of other Medigap policies. That is why they choose it. That is why seniors all over America should have the right to choose it.
+First of all, this is not a failed program. This is a very strong program that seniors are choosing, and they are choosing it because it offers them lower cost health care that is also high-quality health care. Their premiums are anywhere from 10 to almost 40 percent less than the premiums of other Medigap policies. That is why they choose it. That is why seniors all over America should have the right to choose it.
 
 Are these good policies? According to the Consumer Reports, 8 of the 15 top-ranked policies were Medicare select policies. That is pretty good.
 
@@ -398,6 +398,8 @@ under subparagraph (A)) that--
 
 premiums costs to these enrolled
 
+in medicare select policies (in comparison to
+
 their enrollment in medicare supplemental policies that are
 
 not medicare select policies and that provide comparable
@@ -570,7 +572,7 @@ There is a lot of talk that the Republicans would like to take the Medicare prog
 
 {time}  1715
 
-Managed care is a reasonable option but it ought to be an option at the choice of the beneficiary, not something which they are forced into whether they like it or not. In fact, if it is only a good option when people have the ability in a free market to walk away and leave and join another alternative plan. But if they only have one choice, you can be sure that when they are captive in that one choice, that they are not going to be as important a customer, since they are a captive customer of the Medicare select plans.
+Managed care is a reasonable option but it ought to be an option at the choice of the beneficiary, not something which they are forced into whether they like it or not. In fact, if we really believe in managed choice being a good option, it is only a good option when people have the ability in a free market to walk away and leave and join another alternative plan. But if they only have one choice, you can be sure that when they are captive in that one choice, that they are not going to be as important a customer, since they are a captive customer of the Medicare select plans.
 
 Members will hear in this debate about how well these Medicare select plans are doing. I do not deny they are doing well. The consumers generally seem happy in most States. Our fear is what the marketplace will look like not right now but in a couple of years.
 
@@ -742,7 +744,9 @@ Washington Counsel, NAIC.
 
 Mr. WAXMAN. Mr. Chairman, I yield 3 minutes to the gentleman from Oregon [Mr. Wyden].
 
-(Mr. WYDEN asked and was given permission to revise and extend his remarks.) gentleman from California very interesting because many of us who support the Waxman amendment are strong supporters of 21st century Medicare that uses managed care to a much greater extent. In fact, in my community, we have one of the highest concentrations in the country of managed care participation. We have seen the future, and we know it can work.
+(Mr. WYDEN asked and was given permission to revise and extend his remarks.)
+
+Mr. WYDEN. Mr. Chairman, I found the comments of the gentleman from California very interesting because many of us who support the Waxman amendment are strong supporters of 21st century Medicare that uses managed care to a much greater extent. In fact, in my community, we have one of the highest concentrations in the country of managed care participation. We have seen the future, and we know it can work.
 
 But the fact is that as part of that future, we should incorporate two principles that the Waxman amendment addresses.
 
@@ -806,7 +810,9 @@ In all of the States where this has been done, there remains plenty of competiti
 
 Attained age rating removes the ability of consumers to meaningfully compare different premiums: Hence, this is a practice which undermines the major objective of the 1990 reforms, to standardize policies.
 
-Second, attained age rating can cost consumers thousands of dollars more over the long run than a fairly nicely priced product because it allows insurers to play games with premiums that are hard for regulators to control or consumers to make an intelligent judgment on. who want to use community rating to move away from that method of rating. This will cause the kind of fragmentation that occurred in the health insurance marketplace that led to so many of the problems we have today.
+Second, attained age rating can cost consumers thousands of dollars more over the long run than a fairly nicely priced product because it allows insurers to play games with premiums that are hard for regulators to control or consumers to make an intelligent judgment on.
+
+Third, attained age rating is forcing good insurers who want to use community rating to move away from that method of rating. This will cause the kind of fragmentation that occurred in the health insurance marketplace that led to so many of the problems we have today.
 
 Now with thanks to my good friend from California, Mr. Stark, let me go through some of the differences which exist. If you take a policy where premiums do not vary by age, for example the AARP Prudential plan, the plan is, at all times, every year of the life of the insured, $957 a year. But, if you take any of the other plans where attained age rating is used, then you come up with quite a different one.
 
@@ -1517,6 +1523,8 @@ Thornton
 Thurman
 
 Torres
+
+Torricelli
 
 Towns
 
@@ -2827,6 +2835,8 @@ Solomon
 Souder
 
 Spence
+
+Spratt
 
 Stearns
 

@@ -432,5 +432,12 @@
   "date": "2021-12-07",
   "checked": "2026-09-27",
   "finding": "correct: the section is the debate on the Dr. Lorna Breen Health Care Provider Protection Act, which is H.R. 1667"
+ },
+ {
+  "jurisdiction": "us",
+  "bill_key": "110-S5",
+  "date": "2007-06-06",
+  "checked": "2026-10-05",
+  "finding": "correct: a one-minute speech (Mr. Klein of Florida) printed under the heading STEM CELL RESEARCH ENHANCEMENT ACT OF 2007, the short title of S. 5, the day the rule for S. 5 (H. Res. 464) was reported; the House debated and passed S. 5 on 2007-06-07, which is also in the data. The audit cannot match the heading because the bill list has no title for 110-S5."
  }
 ]

@@ -1,0 +1,4557 @@
+{
+ "parser": "isanlp_rst cc8789f44c unirst",
+ "rows": [
+  {
+   "n": 1,
+   "lang": "en",
+   "text": "A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "A small hardware store in an AHP would be joining an association,",
+     "start": 0,
+     "end": 65
+    },
+    {
+     "text": "sending their premiums not to themselves but off to others,",
+     "start": 66,
+     "end": 125
+    },
+    {
+     "text": "and that is why we need the check.",
+     "start": 126,
+     "end": 160
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "explanation",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "lang": "en",
+   "text": "The bill contains many protections against abuse, such as requiring women donating fetal tissue for research to sign a written consent form, explicitly ensuring that the decision to have an abortion is separate and independent of that to donate fetal tissue.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The bill contains many protections against abuse,",
+     "start": 0,
+     "end": 49
+    },
+    {
+     "text": "such as requiring women",
+     "start": 50,
+     "end": 73
+    },
+    {
+     "text": "donating fetal tissue for research",
+     "start": 74,
+     "end": 108
+    },
+    {
+     "text": "to sign a written consent form,",
+     "start": 109,
+     "end": 140
+    },
+    {
+     "text": "explicitly ensuring",
+     "start": 141,
+     "end": 160
+    },
+    {
+     "text": "that the decision",
+     "start": 161,
+     "end": 178
+    },
+    {
+     "text": "to have an abortion",
+     "start": 179,
+     "end": 198
+    },
+    {
+     "text": "is separate and independent of that",
+     "start": 199,
+     "end": 234
+    },
+    {
+     "text": "to donate fetal tissue.",
+     "start": 235,
+     "end": 258
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      5,
+      5
+     ],
+     "right": [
+      6,
+      6
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      7,
+      7
+     ],
+     "right": [
+      8,
+      8
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      5,
+      6
+     ],
+     "right": [
+      7,
+      8
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      4,
+      4
+     ],
+     "right": [
+      5,
+      8
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    },
+    {
+     "left": [
+      1,
+      3
+     ],
+     "right": [
+      4,
+      8
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      8
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "lang": "en",
+   "text": "The CHAMP bill would have also addressed major health care issues, first by protecting traditional Medicare and second by addressing the catastrophic 10 percent payment cuts to physicians who serve Medicare patients.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The CHAMP bill would have also addressed major health care issues,",
+     "start": 0,
+     "end": 66
+    },
+    {
+     "text": "first by protecting traditional Medicare",
+     "start": 67,
+     "end": 107
+    },
+    {
+     "text": "and second by addressing the catastrophic 10 percent payment cuts to physicians",
+     "start": 108,
+     "end": 187
+    },
+    {
+     "text": "who serve Medicare patients.",
+     "start": 188,
+     "end": 216
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      3
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "lang": "en",
+   "text": "If only punitive damages are capped, leaving noneconomic awards with no ceiling, plaintiffs' lawyers would simply change their complaints to plead greater economic damages.”",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "If only punitive damages are capped,",
+     "start": 0,
+     "end": 36
+    },
+    {
+     "text": "leaving noneconomic awards with no ceiling,",
+     "start": 37,
+     "end": 80
+    },
+    {
+     "text": "plaintiffs' lawyers would simply change their complaints",
+     "start": 81,
+     "end": 137
+    },
+    {
+     "text": "to plead greater economic damages.”",
+     "start": 138,
+     "end": 173
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "causal",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "lang": "en",
+   "text": "His doctor prescribed the medication, but then the HMO said, “You need another opinion.”",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "His doctor prescribed the medication,",
+     "start": 0,
+     "end": 37
+    },
+    {
+     "text": "but then the HMO said,",
+     "start": 38,
+     "end": 60
+    },
+    {
+     "text": "“You need another opinion.”",
+     "start": 61,
+     "end": 88
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "adversative",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "lang": "en",
+   "text": "Last year the House passed legislation identical to H.R. 5, but the Senate refused to act.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Last year the House passed legislation identical to H.R. 5,",
+     "start": 0,
+     "end": 59
+    },
+    {
+     "text": "but the Senate refused to act.",
+     "start": 60,
+     "end": 90
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "adversative",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "lang": "en",
+   "text": "It is time to stop playing politics with people’s lives. | urge my colleagues to reject the amendment.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "It is time",
+     "start": 0,
+     "end": 10
+    },
+    {
+     "text": "to stop playing politics with people’s lives.",
+     "start": 11,
+     "end": 56
+    },
+    {
+     "text": "|",
+     "start": 57,
+     "end": 58
+    },
+    {
+     "text": "urge my colleagues to reject the amendment.",
+     "start": 59,
+     "end": 102
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      3
+     ],
+     "relation": "explanation",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "lang": "en",
+   "text": "A little over a year ago, this House passed the 21st Century Cures Act, made unprecedented acceleration of discoveries.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "A little over a year ago, this House passed the 21st Century Cures Act,",
+     "start": 0,
+     "end": 71
+    },
+    {
+     "text": "made unprecedented acceleration of discoveries.",
+     "start": 72,
+     "end": 119
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "lang": "en",
+   "text": "The costs will not go towards patient care but towards sustaining doctor unionization and salary hikes.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The costs will not go towards patient care",
+     "start": 0,
+     "end": 42
+    },
+    {
+     "text": "but towards sustaining doctor unionization and salary hikes.",
+     "start": 43,
+     "end": 103
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "adversative",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "lang": "en",
+   "text": "Such program shall include a separate focus (with respect to all the elements described in this subparagraph) on racial and ethnic minorities.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Such program shall include a separate focus",
+     "start": 0,
+     "end": 43
+    },
+    {
+     "text": "(with respect to all the elements described in this subparagraph)",
+     "start": 44,
+     "end": 109
+    },
+    {
+     "text": "on racial and ethnic minorities.",
+     "start": 110,
+     "end": 142
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "lang": "en",
+   "text": "SB-8, bars abortion after a fetal heartbeat can be detected and puts clinics at risk of being shut down if they are found to be in violation.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "SB-8, bars abortion",
+     "start": 0,
+     "end": 19
+    },
+    {
+     "text": "after a fetal heartbeat can be detected",
+     "start": 20,
+     "end": 59
+    },
+    {
+     "text": "and puts clinics at risk",
+     "start": 60,
+     "end": 84
+    },
+    {
+     "text": "of being shut down",
+     "start": 85,
+     "end": 103
+    },
+    {
+     "text": "if they are found to be in violation.",
+     "start": 104,
+     "end": 141
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "temporal",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      4
+     ],
+     "relation": "condition",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      4
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      4
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "lang": "en",
+   "text": "The Clerk will designate the amendment.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The Clerk will designate the amendment.",
+     "start": 0,
+     "end": 39
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 13,
+   "lang": "en",
+   "text": "In short, this Republican bill offers a false choice.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "In short, this Republican bill offers a false choice.",
+     "start": 0,
+     "end": 53
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 14,
+   "lang": "en",
+   "text": "My own State of Arkansas was recently declared to have the highest number of meth lab seizures per capita in the Nation.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "My own State of Arkansas was recently declared to have the highest number of meth lab seizures per capita in the Nation.",
+     "start": 0,
+     "end": 120
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 15,
+   "lang": "en",
+   "text": "Research tells us adult stem cell research works.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Research tells us",
+     "start": 0,
+     "end": 17
+    },
+    {
+     "text": "adult stem cell research works.",
+     "start": 18,
+     "end": 49
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "lang": "en",
+   "text": "The substitute envisions no such thing.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The substitute envisions no such thing.",
+     "start": 0,
+     "end": 39
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 17,
+   "lang": "en",
+   "text": "My Republican friends say repeal these health care rights and protections that were extended last year.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "My Republican friends say",
+     "start": 0,
+     "end": 25
+    },
+    {
+     "text": "repeal these health care rights and protections",
+     "start": 26,
+     "end": 73
+    },
+    {
+     "text": "that were extended last year.",
+     "start": 74,
+     "end": 103
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "lang": "en",
+   "text": "The bill started with a very simple request from seniors in my district.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The bill started with a very simple request from seniors in my district.",
+     "start": 0,
+     "end": 72
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 19,
+   "lang": "en",
+   "text": "The Administration has labeled the current economic situation as a crisis that requires emergency measures.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The Administration has labeled the current economic situation as a crisis",
+     "start": 0,
+     "end": 73
+    },
+    {
+     "text": "that requires emergency measures.",
+     "start": 74,
+     "end": 107
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "lang": "en",
+   "text": "For the safety of other prisoners and those who work in the prisons, prisoners need to be tested for the AIDS virus.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "For the safety of other prisoners and those",
+     "start": 0,
+     "end": 43
+    },
+    {
+     "text": "who work in the prisons,",
+     "start": 44,
+     "end": 68
+    },
+    {
+     "text": "prisoners need to be tested for the AIDS virus.",
+     "start": 69,
+     "end": 116
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "lang": "en",
+   "text": "In 2005 NIH spent $38 million, up $13 million from 2004.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "In 2005 NIH spent $38 million, up $13 million from 2004.",
+     "start": 0,
+     "end": 56
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 22,
+   "lang": "en",
+   "text": "Moreover, the potential liability for an adverse reaction by a patient far outweighs any potential financial benefit in some of these cases.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Moreover, the potential liability for an adverse reaction by a patient far outweighs any potential financial benefit in some of these cases.",
+     "start": 0,
+     "end": 140
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 23,
+   "lang": "en",
+   "text": "As geographic trends in the disease change, the revised formula automatically realigns funding with the current distribution of the disease.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "As geographic trends in the disease change,",
+     "start": 0,
+     "end": 43
+    },
+    {
+     "text": "the revised formula automatically realigns funding with the current distribution of the disease.",
+     "start": 44,
+     "end": 140
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "condition",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "lang": "en",
+   "text": "So ACT assembled a special task force of scientists and",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "So ACT assembled a special task force of scientists and",
+     "start": 0,
+     "end": 55
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 25,
+   "lang": "en",
+   "text": "Tens of thousands of people die each year from preventable medical errors.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Tens of thousands of people die each year from preventable medical errors.",
+     "start": 0,
+     "end": 74
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 26,
+   "lang": "en",
+   "text": "The cartridge can contain flavouring and nicotine.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The cartridge can contain flavouring and nicotine.",
+     "start": 0,
+     "end": 50
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 27,
+   "lang": "en",
+   "text": "One hundred and seventeen women from Cochrane district all travelled outside their area to obtain abortions.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "One hundred and seventeen women from Cochrane district all travelled outside their area",
+     "start": 0,
+     "end": 87
+    },
+    {
+     "text": "to obtain abortions.",
+     "start": 88,
+     "end": 108
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "enablement",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "lang": "en",
+   "text": "The government has fittingly, in my opinion, chosen to call this Brian's Law after Brian Smith, the much-ad-mired Ottawa sportscaster, whom I knew very well on a personal basis.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The government has fittingly, in my opinion, chosen to call this Brian's Law after Brian Smith, the much-ad-mired Ottawa sportscaster,",
+     "start": 0,
+     "end": 134
+    },
+    {
+     "text": "whom I knew very well on a personal basis.",
+     "start": 135,
+     "end": 177
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "lang": "en",
+   "text": "This legislation warrants the support of every member of this Legislative Assembly.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "This legislation warrants the support of every member of this Legislative Assembly.",
+     "start": 0,
+     "end": 83
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 30,
+   "lang": "en",
+   "text": "Shelter organizations and folks that work on the front lines of communities across the province are raising the alarm.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Shelter organizations and folks",
+     "start": 0,
+     "end": 31
+    },
+    {
+     "text": "that work on the front lines of communities across the province",
+     "start": 32,
+     "end": 95
+    },
+    {
+     "text": "are raising the alarm.",
+     "start": 96,
+     "end": 118
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 31,
+   "lang": "en",
+   "text": "That country has realized the folly of being dependent on foreign sources of energy.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "That country has realized the folly",
+     "start": 0,
+     "end": 35
+    },
+    {
+     "text": "of being dependent on foreign sources of energy.",
+     "start": 36,
+     "end": 84
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 32,
+   "lang": "en",
+   "text": "Ontario Health has already integrated 22 former health agencies and organizations, such as Cancer Care Ontario, eHealth Ontario, Health Quality Ontario and others into a single organization, bringing together the expertise and experience of these former agencies to support a more connected, high-quality health care system.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Ontario Health has already integrated 22 former health agencies and organizations, such as Cancer Care Ontario, eHealth Ontario, Health Quality Ontario and others into a single organization,",
+     "start": 0,
+     "end": 190
+    },
+    {
+     "text": "bringing together the expertise and experience of these former agencies",
+     "start": 191,
+     "end": 262
+    },
+    {
+     "text": "to support a more connected, high-quality health care system.",
+     "start": 263,
+     "end": 324
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "enablement",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "lang": "en",
+   "text": "Quebec’s bill, and I read some of it out, allows for the reunification of families, and it allows for the settlement of refugees and displaced persons.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Quebec’s bill,",
+     "start": 0,
+     "end": 14
+    },
+    {
+     "text": "and I read some of it out,",
+     "start": 15,
+     "end": 41
+    },
+    {
+     "text": "allows for the reunification of families,",
+     "start": 42,
+     "end": 83
+    },
+    {
+     "text": "and it allows for the settlement of refugees and displaced persons.",
+     "start": 84,
+     "end": 151
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "lang": "en",
+   "text": "Stores would have trained and knowledgeable staff and they would sell products in a safe, responsible manner, including strict requirements for age verification, as well as meeting additional federal requirements.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Stores would have trained and knowledgeable staff",
+     "start": 0,
+     "end": 49
+    },
+    {
+     "text": "and they would sell products in a safe, responsible manner,",
+     "start": 50,
+     "end": 109
+    },
+    {
+     "text": "including strict requirements for age verification,",
+     "start": 110,
+     "end": 161
+    },
+    {
+     "text": "as well as meeting additional federal requirements.",
+     "start": 162,
+     "end": 213
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      3
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 35,
+   "lang": "en",
+   "text": "Migrants of colour, we know, earn 40% less than their white counterparts.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Migrants of colour,",
+     "start": 0,
+     "end": 19
+    },
+    {
+     "text": "we know,",
+     "start": 20,
+     "end": 28
+    },
+    {
+     "text": "earn 40% less than their white counterparts.",
+     "start": 29,
+     "end": 73
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 36,
+   "lang": "en",
+   "text": "Immigrants make up only 22% of our population compared to 29% across Ontario.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Immigrants make up only 22% of our population",
+     "start": 0,
+     "end": 45
+    },
+    {
+     "text": "compared to 29% across Ontario.",
+     "start": 46,
+     "end": 77
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "comparison",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 37,
+   "lang": "en",
+   "text": "The bill that is before us today claims to establish administrative proceedings to ensure that a woman’s decision to have an abortion is based on informed choice.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The bill",
+     "start": 0,
+     "end": 8
+    },
+    {
+     "text": "that is before us today",
+     "start": 9,
+     "end": 32
+    },
+    {
+     "text": "claims to establish administrative proceedings",
+     "start": 33,
+     "end": 79
+    },
+    {
+     "text": "to ensure",
+     "start": 80,
+     "end": 89
+    },
+    {
+     "text": "that a woman’s decision",
+     "start": 90,
+     "end": 113
+    },
+    {
+     "text": "to have an abortion",
+     "start": 114,
+     "end": 133
+    },
+    {
+     "text": "is based on informed choice.",
+     "start": 134,
+     "end": 162
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      4,
+      4
+     ],
+     "right": [
+      5,
+      5
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      4,
+      5
+     ],
+     "right": [
+      6,
+      6
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      6
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      6
+     ],
+     "relation": "enablement",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "lang": "en",
+   "text": "Pharmacies should continue to be restricted to the lowest price in inventory on product selected prescriptions.\" The report also recommends that the Ministry of Health and pharmacy organizations should set a target level of substitution.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Pharmacies should continue to be restricted to the lowest price in inventory on product selected prescriptions.\"",
+     "start": 0,
+     "end": 112
+    },
+    {
+     "text": "The report also recommends",
+     "start": 113,
+     "end": 139
+    },
+    {
+     "text": "that the Ministry of Health and pharmacy organizations should set a target level of substitution.",
+     "start": 140,
+     "end": 237
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "lang": "en",
+   "text": "The member across the way from Windsor West would know the challenges that we face in long-term-care facilities, and some of the shortfalls that this government has made when it comes to funding and actually coming to the table with a plan that will address those needs.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The member across the way from Windsor West would know the challenges",
+     "start": 0,
+     "end": 69
+    },
+    {
+     "text": "that we face in long-term-care facilities,",
+     "start": 70,
+     "end": 112
+    },
+    {
+     "text": "and some of the shortfalls",
+     "start": 113,
+     "end": 139
+    },
+    {
+     "text": "that this government has made",
+     "start": 140,
+     "end": 169
+    },
+    {
+     "text": "when it comes to funding and actually coming to the table with a plan",
+     "start": 170,
+     "end": 239
+    },
+    {
+     "text": "that will address those needs.",
+     "start": 240,
+     "end": 270
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      4,
+      4
+     ],
+     "right": [
+      5,
+      5
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      3
+     ],
+     "right": [
+      4,
+      5
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      5
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 40,
+   "lang": "en",
+   "text": "Perhaps the Treasurer, in his usual wisdom, could consider a Queen’s Park verbosity tax, whereby long and repetitive interventions would become taxable.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Perhaps the Treasurer, in his usual wisdom, could consider a Queen’s Park verbosity tax,",
+     "start": 0,
+     "end": 88
+    },
+    {
+     "text": "whereby long and repetitive interventions would become taxable.",
+     "start": 89,
+     "end": 152
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 41,
+   "lang": "en",
+   "text": "This report contains 12 recommendations, including the creation of new legislation to consolidate under one roof out-of-hospital and independent health facilities.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "This report contains 12 recommendations,",
+     "start": 0,
+     "end": 40
+    },
+    {
+     "text": "including the creation of new legislation",
+     "start": 41,
+     "end": 82
+    },
+    {
+     "text": "to consolidate under one roof out-of-hospital and independent health facilities.",
+     "start": 83,
+     "end": 163
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 42,
+   "lang": "en",
+   "text": "The amendment enhances the intent of the legislation and we are happy to support it.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The amendment enhances the intent of the legislation",
+     "start": 0,
+     "end": 52
+    },
+    {
+     "text": "and we are happy to support it.",
+     "start": 53,
+     "end": 84
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 43,
+   "lang": "en",
+   "text": "Way back in the day, miners who went underground were constantly exposed to various types of carcinogens.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Way back in the day, miners",
+     "start": 0,
+     "end": 27
+    },
+    {
+     "text": "who went underground",
+     "start": 28,
+     "end": 48
+    },
+    {
+     "text": "were constantly exposed to various types of carcinogens.",
+     "start": 49,
+     "end": 105
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 44,
+   "lang": "en",
+   "text": "The city’s administration wrote a council report on how that experiment was received by the voters.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "The city’s administration wrote a council report on how that experiment was received by the voters.",
+     "start": 0,
+     "end": 99
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 45,
+   "lang": "en",
+   "text": "“Strokes account for 20,000 emergency visits and 15,350 in-patient hospital admissions.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "“Strokes account for 20,000 emergency visits and 15,350 in-patient hospital admissions.",
+     "start": 0,
+     "end": 87
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 46,
+   "lang": "en",
+   "text": "So when I first got elected here, my father was diagnosed with an inoperable oral cancer.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "So when I first got elected here,",
+     "start": 0,
+     "end": 33
+    },
+    {
+     "text": "my father was diagnosed with an inoperable oral cancer.",
+     "start": 34,
+     "end": 89
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "background",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 47,
+   "lang": "en",
+   "text": "Mr Eves moves that subsection 19(4) of the bill be struck out and the following substituted therefor: “(4) The director shall deliver with the notice under subsection (3) a notice that the licensee is entitled to a hearing by the board if the licensee mails or delivers, within 15 days after the notice is served on the licensee, notice in writing requiring a hearing to the director and the board, and the licensee may so require such a hearing.”",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "Mr Eves moves",
+     "start": 0,
+     "end": 13
+    },
+    {
+     "text": "that subsection 19(4) of the bill be struck out",
+     "start": 14,
+     "end": 61
+    },
+    {
+     "text": "and the following substituted therefor:",
+     "start": 62,
+     "end": 101
+    },
+    {
+     "text": "“(4) The director shall deliver with the notice under subsection (3) a notice",
+     "start": 102,
+     "end": 179
+    },
+    {
+     "text": "that the licensee is entitled to a hearing by the board",
+     "start": 180,
+     "end": 235
+    },
+    {
+     "text": "if the licensee mails or delivers,",
+     "start": 236,
+     "end": 270
+    },
+    {
+     "text": "within 15 days after the notice is served on the licensee, notice in writing",
+     "start": 271,
+     "end": 347
+    },
+    {
+     "text": "requiring a hearing to the director and the board,",
+     "start": 348,
+     "end": 398
+    },
+    {
+     "text": "and the licensee may so require such a hearing.”",
+     "start": 399,
+     "end": 447
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      5,
+      5
+     ],
+     "right": [
+      6,
+      6
+     ],
+     "relation": "temporal",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      5,
+      6
+     ],
+     "right": [
+      7,
+      7
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      5,
+      7
+     ],
+     "right": [
+      8,
+      8
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      4,
+      4
+     ],
+     "right": [
+      5,
+      8
+     ],
+     "relation": "condition",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      8
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      2
+     ],
+     "right": [
+      3,
+      8
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      8
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 48,
+   "lang": "en",
+   "text": "People no longer go to that lodge on Lake Simcoe by train or by steamer, as they did in the days of Stephen Leacock—and obviously a demand for, a request for additional recreational resources.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "People no longer go to that lodge on Lake Simcoe by train or by steamer,",
+     "start": 0,
+     "end": 72
+    },
+    {
+     "text": "as they did in the days of Stephen Leacock",
+     "start": 73,
+     "end": 115
+    },
+    {
+     "text": "— and obviously a demand for, a request for additional recreational resources.",
+     "start": 116,
+     "end": 194
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "comparison",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ],
+   "note": "dashes spaced out"
+  },
+  {
+   "n": 49,
+   "lang": "en",
+   "text": "These statements of environmental values must be developed by 14 affected ministries of the government to act as guiding principles for taking the environment into account in making their decisions.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "These statements of environmental values must be developed by 14 affected ministries of the government",
+     "start": 0,
+     "end": 102
+    },
+    {
+     "text": "to act as guiding principles",
+     "start": 103,
+     "end": 131
+    },
+    {
+     "text": "for taking the environment into account in making their decisions.",
+     "start": 132,
+     "end": 198
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "enablement",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 50,
+   "lang": "en",
+   "text": "On average, 93% of taxpayers are saving $200 annually, and 90,000 Ontarians aren’t paying any tax at all.",
+   "inventory": "eng.rst.rstdt",
+   "edus": [
+    {
+     "text": "On average, 93% of taxpayers are saving $200 annually,",
+     "start": 0,
+     "end": 54
+    },
+    {
+     "text": "and 90,000 Ontarians aren’t paying any tax at all.",
+     "start": 55,
+     "end": 105
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "joint",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 51,
+   "lang": "fr",
+   "text": "La franchise va passer de 8,33 à 9,13 par mois, M. le Président.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "La franchise va passer de 8,33 à 9,13 par mois, M. le Président.",
+     "start": 0,
+     "end": 64
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 52,
+   "lang": "fr",
+   "text": "Le ministre a amené cet après-midi, à 15 heures, 35 amendements, je ne sais pas s'il a voulu que ça corresponde avec le numéro de son projet de loi, 35 amendements sur le projet de loi 35, mais c'est un drôle de hasard.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le ministre a amené cet après-midi, à 15 heures, 35 amendements,",
+     "start": 0,
+     "end": 64
+    },
+    {
+     "text": "je ne sais pas",
+     "start": 65,
+     "end": 79
+    },
+    {
+     "text": "s'il a voulu que ça corresponde avec le numéro de son projet de loi,",
+     "start": 80,
+     "end": 148
+    },
+    {
+     "text": "35 amendements sur le projet de loi 35,",
+     "start": 149,
+     "end": 188
+    },
+    {
+     "text": "mais c'est un drôle de hasard.",
+     "start": 189,
+     "end": 219
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      3
+     ],
+     "relation": "attribution",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      3
+     ],
+     "right": [
+      4,
+      4
+     ],
+     "relation": "contrast",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      4
+     ],
+     "relation": "topic-comment",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 53,
+   "lang": "fr",
+   "text": "Le 4 novembre 1971, l'Assemblée nationale du Québec, cette Assemblée, M. le Président, adoptait la Loi sur l'indemnisation des victimes d'actes criminels.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le 4 novembre 1971,",
+     "start": 0,
+     "end": 19
+    },
+    {
+     "text": "l'Assemblée nationale du Québec,",
+     "start": 20,
+     "end": 52
+    },
+    {
+     "text": "cette Assemblée,",
+     "start": 53,
+     "end": 69
+    },
+    {
+     "text": "M. le Président,",
+     "start": 70,
+     "end": 86
+    },
+    {
+     "text": "adoptait la Loi sur l'indemnisation des victimes d'actes criminels.",
+     "start": 87,
+     "end": 154
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      3
+     ],
+     "right": [
+      4,
+      4
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      4
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      4
+     ],
+     "relation": "frame",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 54,
+   "lang": "fr",
+   "text": "Quand ça traîne trop, bien les gens perdent leur enthousiasme, leur confiance puis ils s'en vont vers autre chose.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Quand ça traîne trop,",
+     "start": 0,
+     "end": 21
+    },
+    {
+     "text": "bien les gens perdent leur enthousiasme, leur confiance",
+     "start": 22,
+     "end": 77
+    },
+    {
+     "text": "puis ils s'en vont vers autre chose.",
+     "start": 78,
+     "end": 114
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "sequence",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 55,
+   "lang": "fr",
+   "text": "La richesse est taxée en Allemagne de l'Ouest et je pourrais vous citer beaucoup d'autres pays: l'Autriche, la Belgique, la Norvège et le Danemark; tous utilisent cet impôt sur la richesse.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "La richesse est taxée en Allemagne de l'Ouest",
+     "start": 0,
+     "end": 45
+    },
+    {
+     "text": "et je pourrais vous citer beaucoup d'autres pays: l'Autriche, la Belgique, la Norvège et le Danemark;",
+     "start": 46,
+     "end": 147
+    },
+    {
+     "text": "tous utilisent cet impôt sur la richesse.",
+     "start": 148,
+     "end": 189
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 56,
+   "lang": "fr",
+   "text": "Et mon collègue le député de Groulx, qui est du niveau des juristes, il connaît la loi sur la santé et les services sociaux sur le bout des doigts, et ça permet, pour quelqu'un comme moi, d'être beaucoup plus efficace et de vraiment améliorer...",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Et mon collègue le député de Groulx,",
+     "start": 0,
+     "end": 36
+    },
+    {
+     "text": "qui est du niveau des juristes,",
+     "start": 37,
+     "end": 68
+    },
+    {
+     "text": "il connaît la loi sur la santé et les services sociaux sur le bout des doigts,",
+     "start": 69,
+     "end": 147
+    },
+    {
+     "text": "et ça permet,",
+     "start": 148,
+     "end": 161
+    },
+    {
+     "text": "pour quelqu'un comme moi, d'être beaucoup plus efficace",
+     "start": 162,
+     "end": 217
+    },
+    {
+     "text": "et de vraiment améliorer...",
+     "start": 218,
+     "end": 245
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      4
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      3,
+      4
+     ],
+     "right": [
+      5,
+      5
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      5
+     ],
+     "relation": "result",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 57,
+   "lang": "fr",
+   "text": "Alors qu'il se vantait d'obtenir le financement du gouvernement fédéral pour notre système de santé, une proportion de 90 % de l'argent qu'il y a injecté provient d'une entente négociée par le gouvernement péquiste qui l'a précédé.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Alors qu'il se vantait d'obtenir le financement du gouvernement fédéral pour notre système de santé,",
+     "start": 0,
+     "end": 100
+    },
+    {
+     "text": "une proportion de 90 % de l'argent",
+     "start": 101,
+     "end": 135
+    },
+    {
+     "text": "qu'il y a injecté",
+     "start": 136,
+     "end": 153
+    },
+    {
+     "text": "provient d'une entente négociée par le gouvernement péquiste",
+     "start": 154,
+     "end": 214
+    },
+    {
+     "text": "qui l'a précédé.",
+     "start": 215,
+     "end": 231
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      4
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      2
+     ],
+     "right": [
+      3,
+      4
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      4
+     ],
+     "relation": "background",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 58,
+   "lang": "fr",
+   "text": "C'est pour cela que les citoyens deviennent un peu cyniques devant la politique, parce qu'ils se rendent compte que les libéraux disent n'importe quoi et ne remplissent ensuite aucun engagement.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "C'est pour cela que les citoyens deviennent un peu cyniques devant la politique,",
+     "start": 0,
+     "end": 80
+    },
+    {
+     "text": "parce qu'ils se rendent compte que les libéraux disent n'importe quoi",
+     "start": 81,
+     "end": 150
+    },
+    {
+     "text": "et ne remplissent ensuite aucun engagement.",
+     "start": 151,
+     "end": 194
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "sequence",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "explanation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 59,
+   "lang": "fr",
+   "text": "L'équité est désormais rétablie entre tous les commerçants.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "L'équité est désormais rétablie entre tous les commerçants.",
+     "start": 0,
+     "end": 59
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 60,
+   "lang": "fr",
+   "text": "Un nombre quasi incalculable d'études, de rapports, d'engagements politiques sont restés lettre morte, se heurtant à un concert d'intérêts divergents, pas toujours guidés par la poursuite du bien commun. »",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Un nombre quasi incalculable d'études, de rapports, d'engagements politiques sont restés lettre morte,",
+     "start": 0,
+     "end": 102
+    },
+    {
+     "text": "se heurtant à un concert d'intérêts divergents,",
+     "start": 103,
+     "end": 150
+    },
+    {
+     "text": "pas toujours guidés par la poursuite du bien commun. »",
+     "start": 151,
+     "end": 205
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "explanation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 61,
+   "lang": "fr",
+   "text": "Le chef de l'Opposition de 1979, dis-je bien, non pas le ministre des Affaires municipales.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le chef de l'Opposition de 1979, dis-je bien,",
+     "start": 0,
+     "end": 45
+    },
+    {
+     "text": "non pas le ministre des Affaires municipales.",
+     "start": 46,
+     "end": 91
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "contrast",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 62,
+   "lang": "fr",
+   "text": "L'AQDR, l'association québécoise des droits des retraités, a même parlé d'un système à deux vitesses, un système d'hébergement pour personnes âgées, à deux vitesses, qu'introduit le projet de loi n° 83 qui est devant nous présentement, projet de loi qui en fait prévoit une certification facultative, c'est-à-dire que le propriétaire d'une résidence privée pourra la demander ou ne pas la demander.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "L'AQDR,",
+     "start": 0,
+     "end": 7
+    },
+    {
+     "text": "l'association québécoise des droits des retraités,",
+     "start": 8,
+     "end": 58
+    },
+    {
+     "text": "a même parlé d'un système à deux vitesses,",
+     "start": 59,
+     "end": 101
+    },
+    {
+     "text": "un système d'hébergement pour personnes âgées, à deux vitesses,",
+     "start": 102,
+     "end": 165
+    },
+    {
+     "text": "qu'introduit le projet de loi n° 83",
+     "start": 166,
+     "end": 201
+    },
+    {
+     "text": "qui est devant nous présentement,",
+     "start": 202,
+     "end": 235
+    },
+    {
+     "text": "projet de loi qui en fait prévoit une certification facultative,",
+     "start": 236,
+     "end": 300
+    },
+    {
+     "text": "c'est-à-dire que le propriétaire d'une résidence privée pourra la demander ou ne pas la demander.",
+     "start": 301,
+     "end": 398
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      4,
+      4
+     ],
+     "right": [
+      5,
+      5
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      6,
+      6
+     ],
+     "right": [
+      7,
+      7
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      4,
+      5
+     ],
+     "right": [
+      6,
+      7
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      3
+     ],
+     "right": [
+      4,
+      7
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 63,
+   "lang": "fr",
+   "text": "L'ensemble des partenaires municipaux reconnaissaient déjà aux municipalités régionales de comté une expertise en matière d'aménagement et une connaissance fine de leur territoire.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "L'ensemble des partenaires municipaux reconnaissaient déjà aux municipalités régionales de comté une expertise en matière d'aménagement et une connaissance fine de leur territoire.",
+     "start": 0,
+     "end": 180
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 64,
+   "lang": "fr",
+   "text": "Ainsi, les parents devraient maintenant laisser leurs enfants à la porte des édifices publics pour aller stationner plus loin parce qu'ils n'ont pas droit à la vignette.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Ainsi, les parents devraient maintenant laisser leurs enfants à la porte des édifices publics",
+     "start": 0,
+     "end": 93
+    },
+    {
+     "text": "pour aller stationner plus loin",
+     "start": 94,
+     "end": 125
+    },
+    {
+     "text": "parce qu'ils n'ont pas droit à la vignette.",
+     "start": 126,
+     "end": 169
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "purpose",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "explanation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 65,
+   "lang": "fr",
+   "text": "Ce projet de loi visait ainsi à encourager les citoyens à collaborer avec l'administration de la justice.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Ce projet de loi visait ainsi à encourager les citoyens à collaborer avec l'administration de la justice.",
+     "start": 0,
+     "end": 105
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 66,
+   "lang": "fr",
+   "text": "Le projet de loi 145 sonne la fin de cette période où le manque de responsabilités avait trop facilement cours en matière de protection policière.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le projet de loi 145 sonne la fin de cette période",
+     "start": 0,
+     "end": 50
+    },
+    {
+     "text": "où le manque de responsabilités avait trop facilement cours en matière de protection policière.",
+     "start": 51,
+     "end": 146
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 67,
+   "lang": "fr",
+   "text": "Ensuite: « Le projet de loi prévoit de plus la gratuité des médicaments pour les personnes âgées recevant la prestation maximale du supplément du revenu garanti. » Bien, c'est une bonne mesure, ça.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Ensuite",
+     "start": 0,
+     "end": 7
+    },
+    {
+     "text": ":",
+     "start": 7,
+     "end": 8
+    },
+    {
+     "text": "« Le projet de loi prévoit de plus la gratuité des médicaments pour les personnes âgées recevant la prestation maximale du supplément du revenu garanti. »",
+     "start": 9,
+     "end": 163
+    },
+    {
+     "text": "Bien, c'est une bonne mesure, ça.",
+     "start": 164,
+     "end": 197
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "topic-comment",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 68,
+   "lang": "fr",
+   "text": "Afin d'offrir aux personnes handicapées des services le plus près possible de leur milieu naturel, le ministre propose d'agir sur trois plans: premièrement, une équipe multidisciplinaire en adaptation-réadaptation pour les personnes ayant une déficience auditive, motrice ou visuelle, dans les régions où ces services de base ne sont pas disponibles; deuxièmement, augmenter le budget des services de maintien à domicile pour les personnes handicapées et celui des services de répit, dépannage et gardiennage pour leur famille; troisièmement, il se propose de rendre disponible un plus grand nombre de lieux d'hébergement adaptés pour les personnes adultes atteintes de séquelles ou de déficiences.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Afin d'offrir aux personnes handicapées des services le plus près possible de leur milieu naturel,",
+     "start": 0,
+     "end": 98
+    },
+    {
+     "text": "le ministre propose d'agir sur trois plans:",
+     "start": 99,
+     "end": 142
+    },
+    {
+     "text": "premièrement, une équipe multidisciplinaire en adaptation-réadaptation pour les personnes ayant une déficience auditive, motrice ou visuelle, dans les régions où ces services de base ne sont pas disponibles;",
+     "start": 143,
+     "end": 350
+    },
+    {
+     "text": "deuxièmement, augmenter le budget des services de maintien à domicile pour les personnes handicapées et celui des services de répit, dépannage et gardiennage pour leur famille;",
+     "start": 351,
+     "end": 527
+    },
+    {
+     "text": "troisièmement,",
+     "start": 528,
+     "end": 542
+    },
+    {
+     "text": "il se propose de rendre disponible un plus grand nombre de lieux d'hébergement adaptés pour les personnes adultes atteintes de séquelles ou de déficiences.",
+     "start": 543,
+     "end": 698
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      4,
+      4
+     ],
+     "right": [
+      5,
+      5
+     ],
+     "relation": "frame",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      5
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      5
+     ],
+     "relation": "sequence",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      5
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      5
+     ],
+     "relation": "purpose",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 69,
+   "lang": "fr",
+   "text": "Oui, effectivement, M. le ministre a reconnu une partie de ses erreurs, de l'erreur de cette loi.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Oui, effectivement, M. le ministre a reconnu une partie de ses erreurs,",
+     "start": 0,
+     "end": 71
+    },
+    {
+     "text": "de l'erreur de cette loi.",
+     "start": 72,
+     "end": 97
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 70,
+   "lang": "fr",
+   "text": "Les huit grandes villes sont venues s'asseoir, en plein été, avec le ministre des Affaires municipales et l'ont supplié d'attendre en 2005, à l'occasion des élections municipales, pour provoquer la question face aux citoyens.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Les huit grandes villes sont venues s'asseoir, en plein été, avec le ministre des Affaires municipales",
+     "start": 0,
+     "end": 102
+    },
+    {
+     "text": "et l'ont supplié d'attendre en 2005,",
+     "start": 103,
+     "end": 139
+    },
+    {
+     "text": "à l'occasion des élections municipales,",
+     "start": 140,
+     "end": 179
+    },
+    {
+     "text": "pour provoquer la question face aux citoyens.",
+     "start": 180,
+     "end": 225
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "purpose",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      3
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 71,
+   "lang": "fr",
+   "text": "De plus, et c'est important de le mentionner, les nouvelles règles en vigueur assureront une meilleure garantie d'indépendance pour les citoyens parce qu'ils ne se sentiront plus lésés dans leurs droits.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "De plus,",
+     "start": 0,
+     "end": 8
+    },
+    {
+     "text": "et c'est important de le mentionner,",
+     "start": 9,
+     "end": 45
+    },
+    {
+     "text": "les nouvelles règles en vigueur assureront une meilleure garantie d'indépendance pour les citoyens",
+     "start": 46,
+     "end": 144
+    },
+    {
+     "text": "parce qu'ils ne se sentiront plus lésés dans leurs droits.",
+     "start": 145,
+     "end": 203
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "explanation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 72,
+   "lang": "fr",
+   "text": "Au départ, le nouveau rôle des CLSC se voulait un élément moteur de cette réforme.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Au départ, le nouveau rôle des CLSC se voulait un élément moteur de cette réforme.",
+     "start": 0,
+     "end": 82
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 73,
+   "lang": "fr",
+   "text": "Bien non, le gouvernement libéral ne pourra pas congédier les gens du jour au lendemain, sauf quelques P.D.G. d'agences.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Bien non, le gouvernement libéral ne pourra pas congédier les gens du jour au lendemain,",
+     "start": 0,
+     "end": 88
+    },
+    {
+     "text": "sauf quelques P.D.G. d'agences.",
+     "start": 89,
+     "end": 120
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "contrast",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 74,
+   "lang": "fr",
+   "text": "Avec ce projet de loi, notre gouvernement veut permettre aux catégories d'électeurs dont l'exercice du vote est le plus susceptible d'être affecté par la COVID-19 d'exercer leur droit de vote.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Avec ce projet de loi,",
+     "start": 0,
+     "end": 22
+    },
+    {
+     "text": "notre gouvernement veut permettre aux catégories d'électeurs",
+     "start": 23,
+     "end": 83
+    },
+    {
+     "text": "dont l'exercice du vote est le plus susceptible d'être affecté par la COVID-19",
+     "start": 84,
+     "end": 162
+    },
+    {
+     "text": "d'exercer leur droit de vote.",
+     "start": 163,
+     "end": 192
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 75,
+   "lang": "fr",
+   "text": "Finalement, des comités de vigilance relevant du conseil d'administration seront créés dans tous les établissements et dans les agences.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Finalement, des comités de vigilance relevant du conseil d'administration seront créés dans tous les établissements et dans les agences.",
+     "start": 0,
+     "end": 136
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 76,
+   "lang": "fr",
+   "text": "Projet de loi au sujet duquel la commission parlementaire aurait pu entreprendre ses travaux il y a fort longtemps.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Projet de loi au sujet duquel la commission parlementaire aurait pu entreprendre ses travaux il y a fort longtemps.",
+     "start": 0,
+     "end": 115
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 77,
+   "lang": "fr",
+   "text": "La loi permettra l'inscription à la régie d'une nouvelle catégorie d'individus, soit les personnes admissibles à certains services en vertu de la Loi sur le ministère de la Santé et des Services sociaux, plus particulièrement les articles 10 et 10.1 de cette loi.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "La loi permettra l'inscription à la régie d'une nouvelle catégorie d'individus,",
+     "start": 0,
+     "end": 79
+    },
+    {
+     "text": "soit les personnes admissibles à certains services en vertu de la Loi sur le ministère de la Santé et des Services sociaux,",
+     "start": 80,
+     "end": 203
+    },
+    {
+     "text": "plus particulièrement les articles 10 et 10.1 de cette loi.",
+     "start": 204,
+     "end": 263
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 78,
+   "lang": "fr",
+   "text": "Évidemment, là, le gouvernement faillit présentement à cette tâche, parce qu'on n'a pas encore les données actualisées au 30 décembre de 2013.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Évidemment, là, le gouvernement faillit présentement à cette tâche,",
+     "start": 0,
+     "end": 67
+    },
+    {
+     "text": "parce qu'on n'a pas encore les données actualisées au 30 décembre de 2013.",
+     "start": 68,
+     "end": 142
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "explanation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 79,
+   "lang": "fr",
+   "text": "La commission parlementaire peut notamment discuter de la déclaration de services, des résultats obtenus par rapport aux objectifs des programmes d'accès, de toute autre matière de nature administrative.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "La commission parlementaire peut notamment discuter de la déclaration de services, des résultats obtenus par rapport aux objectifs des programmes d'accès, de toute autre matière de nature administrative.",
+     "start": 0,
+     "end": 203
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 80,
+   "lang": "fr",
+   "text": "La promesse s'est envolée comme neige au soleil.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "La promesse s'est envolée comme neige au soleil.",
+     "start": 0,
+     "end": 48
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 81,
+   "lang": "fr",
+   "text": "Alors, le projet de loi se caractérise évidemment par le souci que notre formation politique et que le gouvernement portent à la protection des libertés individuelles, toutefois en précisant qu'une liberté individuelle ne peut pas s'exercer à l'encontre des valeurs fondamentales du peuple québécois.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Alors,",
+     "start": 0,
+     "end": 6
+    },
+    {
+     "text": "le projet de loi se caractérise évidemment par le souci que notre formation politique et que le gouvernement portent à la protection des libertés individuelles,",
+     "start": 7,
+     "end": 167
+    },
+    {
+     "text": "toutefois en précisant qu'une liberté individuelle ne peut pas s'exercer à l'encontre des valeurs fondamentales du peuple québécois.",
+     "start": 168,
+     "end": 300
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "contrast",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 82,
+   "lang": "fr",
+   "text": "D'autre part, M. le Président, le projet de loi prévoit à son titre III les règles régissant l'administration du régime.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "D'autre part,",
+     "start": 0,
+     "end": 13
+    },
+    {
+     "text": "M. le Président,",
+     "start": 14,
+     "end": 30
+    },
+    {
+     "text": "le projet de loi prévoit à son titre III les règles régissant l'administration du régime.",
+     "start": 31,
+     "end": 120
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "frame",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 83,
+   "lang": "fr",
+   "text": "Le projet de loi resserre ensuite les règles applicables en matière de possession de cannabis en prévoyant qu'il est interdit d'en posséder sur les terrains, dans les locaux ou dans les bâtiments d'un établissement d'enseignement collégial ou universitaire, à l'exception des résidences universitaires.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le projet de loi resserre ensuite les règles applicables en matière de possession de cannabis",
+     "start": 0,
+     "end": 93
+    },
+    {
+     "text": "en prévoyant",
+     "start": 94,
+     "end": 106
+    },
+    {
+     "text": "qu'il est interdit d'en posséder sur les terrains, dans les locaux ou dans les bâtiments d'un établissement d'enseignement collégial ou universitaire,",
+     "start": 107,
+     "end": 257
+    },
+    {
+     "text": "à l'exception des résidences universitaires.",
+     "start": 258,
+     "end": 302
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "contrast",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      3
+     ],
+     "relation": "attribution",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      3
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 84,
+   "lang": "fr",
+   "text": "Mais, en matière de santé publique, ma conviction la plus profonde, c'était que les gens doivent faire partie de cet exercice.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Mais,",
+     "start": 0,
+     "end": 5
+    },
+    {
+     "text": "en matière de santé publique,",
+     "start": 6,
+     "end": 35
+    },
+    {
+     "text": "ma conviction la plus profonde, c'était que les gens doivent faire partie de cet exercice.",
+     "start": 36,
+     "end": 126
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 85,
+   "lang": "fr",
+   "text": "Le contrôle de ces maladies est confié au ministère de la Santé et des Services sociaux en vertu de la Loi sur la protection de la santé publique.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le contrôle de ces maladies est confié au ministère de la Santé et des Services sociaux",
+     "start": 0,
+     "end": 87
+    },
+    {
+     "text": "en vertu de la Loi sur la protection de la santé publique.",
+     "start": 88,
+     "end": 146
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "explanation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 86,
+   "lang": "fr",
+   "text": "A l'article 28, tel que demandé par M. le leader adjoint du gouvernement, M. le ministre du Travail propose l'adoption du principe du projet de loi 35, Loi modifiant la Loi sur les accidents du travail et les maladies professionnelles, la Loi sur la santé et la sécurité du travail et la Loi sur l'assurance-maladie.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "A l'article 28,",
+     "start": 0,
+     "end": 15
+    },
+    {
+     "text": "tel que demandé par M. le leader adjoint du gouvernement,",
+     "start": 16,
+     "end": 73
+    },
+    {
+     "text": "M. le ministre du Travail propose l'adoption du principe du projet de loi 35,",
+     "start": 74,
+     "end": 151
+    },
+    {
+     "text": "Loi modifiant la Loi sur les accidents du travail et les maladies professionnelles, la Loi sur la santé et la sécurité du travail et la Loi sur l'assurance-maladie.",
+     "start": 152,
+     "end": 316
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      3
+     ],
+     "relation": "background",
+     "nuclearity": "SN"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      3
+     ],
+     "relation": "frame",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 87,
+   "lang": "fr",
+   "text": "Et ces 13 villes vont être confondues dans huit arrondissements.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Et ces 13 villes vont être confondues dans huit arrondissements.",
+     "start": 0,
+     "end": 64
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 88,
+   "lang": "fr",
+   "text": "Parce que, là, le propriétaire t'a sûrement fait signer un papier comme quoi tu n'avais pas le droit de fumer dans ton logement.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Parce que, là, le propriétaire t'a sûrement fait signer un papier",
+     "start": 0,
+     "end": 65
+    },
+    {
+     "text": "comme quoi tu n'avais pas le droit de fumer dans ton logement.",
+     "start": 66,
+     "end": 128
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 89,
+   "lang": "fr",
+   "text": "Des problèmes de fonctionnement et de réglementation du programme d'aide sociale, d'incitation au travail et aux études, et d'équité des mesures gouvernementales sont apparus confirmant la nécessité d'une politique de sécurité du revenu.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Des problèmes de fonctionnement et de réglementation du programme d'aide sociale, d'incitation au travail et aux études, et d'équité des mesures gouvernementales sont apparus",
+     "start": 0,
+     "end": 174
+    },
+    {
+     "text": "confirmant la nécessité d'une politique de sécurité du revenu.",
+     "start": 175,
+     "end": 237
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "result",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 90,
+   "lang": "fr",
+   "text": "Maintenant, l'Assemblée prend en considération le rapport de la commission des affaires sociales sur le projet de loi n° 7, Loi modifiant la Loi sur les services de santé et les services sociaux, ainsi que les amendements transmis.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Maintenant,",
+     "start": 0,
+     "end": 11
+    },
+    {
+     "text": "l'Assemblée prend en considération le rapport de la commission des affaires sociales sur le projet de loi n° 7,",
+     "start": 12,
+     "end": 123
+    },
+    {
+     "text": "Loi modifiant la Loi sur les services de santé et les services sociaux,",
+     "start": 124,
+     "end": 195
+    },
+    {
+     "text": "ainsi que les amendements transmis.",
+     "start": 196,
+     "end": 231
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "frame",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    }
+   ]
+  },
+  {
+   "n": 91,
+   "lang": "fr",
+   "text": "Ce projet de loi précise les fonctions du ministre responsable de la section II de la Loi sur le ministère du Conseil exécutif et apporte certaines modifications d'harmonisation à des dispositions de cette loi relatives à certaines ententes.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Ce projet de loi précise les fonctions du ministre responsable de la section II de la Loi sur le ministère du Conseil exécutif",
+     "start": 0,
+     "end": 126
+    },
+    {
+     "text": "et apporte certaines modifications d'harmonisation à des dispositions de cette loi relatives à certaines ententes.",
+     "start": 127,
+     "end": 241
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 92,
+   "lang": "fr",
+   "text": "Vous savez, M. le Président, depuis des temps immémoriaux, les peuples ont toujours organisé les territoires sur lesquels ils fondaient leur société.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Vous savez, M. le Président,",
+     "start": 0,
+     "end": 28
+    },
+    {
+     "text": "depuis des temps immémoriaux, les peuples ont toujours organisé les territoires sur lesquels ils fondaient leur société.",
+     "start": 29,
+     "end": 149
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "attribution",
+     "nuclearity": "SN"
+    }
+   ]
+  },
+  {
+   "n": 93,
+   "lang": "fr",
+   "text": "Et le gouvernement, en plus, s'acharne à faire des lois dans le domaine des forêts, entre autres, ou des applications de règlement qui mettent encore nos scieries, nos employeurs et nos industriels forestiers dans des contextes de plus en plus difficiles.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Et le gouvernement, en plus, s'acharne à faire des lois dans le domaine des forêts, entre autres, ou des applications de règlement qui mettent encore nos scieries, nos employeurs et nos industriels forestiers dans des contextes de plus en plus difficiles.",
+     "start": 0,
+     "end": 255
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 94,
+   "lang": "fr",
+   "text": "Notre priorité, comme gouvernement, a été de mettre en place un encadrement permettant d'assurer la protection de la santé et de la sécurité de la population, et tout particulièrement, comme vous le savez, celle de nos jeunes.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Notre priorité,",
+     "start": 0,
+     "end": 15
+    },
+    {
+     "text": "comme gouvernement,",
+     "start": 16,
+     "end": 35
+    },
+    {
+     "text": "a été de mettre en place un encadrement",
+     "start": 36,
+     "end": 75
+    },
+    {
+     "text": "permettant d'assurer la protection de la santé et de la sécurité de la population,",
+     "start": 76,
+     "end": 158
+    },
+    {
+     "text": "et tout particulièrement,",
+     "start": 159,
+     "end": 184
+    },
+    {
+     "text": "comme vous le savez,",
+     "start": 185,
+     "end": 205
+    },
+    {
+     "text": "celle de nos jeunes.",
+     "start": 206,
+     "end": 226
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      4,
+      4
+     ],
+     "right": [
+      5,
+      5
+     ],
+     "relation": "background",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      4,
+      5
+     ],
+     "right": [
+      6,
+      6
+     ],
+     "relation": "same-unit",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      6
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      2
+     ],
+     "right": [
+      3,
+      6
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 95,
+   "lang": "fr",
+   "text": "Et tous les paramètres, les mécanismes de fonctionnement sont prévus dans des protocoles d'entente dont on ne connaît pas encore le contenu.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Et tous les paramètres, les mécanismes de fonctionnement sont prévus dans des protocoles d'entente",
+     "start": 0,
+     "end": 98
+    },
+    {
+     "text": "dont on ne connaît pas encore le contenu.",
+     "start": 99,
+     "end": 140
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      1
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 96,
+   "lang": "fr",
+   "text": "Alors, le ministre, là, il va nommer le Commissaire à la santé.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Alors, le ministre, là, il va nommer le Commissaire à la santé.",
+     "start": 0,
+     "end": 63
+    }
+   ],
+   "relations": []
+  },
+  {
+   "n": 97,
+   "lang": "fr",
+   "text": "Le directeur général doit résider dans la localité où sont situés les quartiers généraux de la Sûreté.\" Bref, c'est le gouvernement qui fixe le traitement du directeur général de la Sûreté du Québec et l'endroit où il doit demeurer.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le directeur général doit résider dans la localité où sont situés les quartiers généraux de la Sûreté.\"",
+     "start": 0,
+     "end": 103
+    },
+    {
+     "text": "Bref, c'est le gouvernement qui fixe le traitement du directeur général de la Sûreté du Québec",
+     "start": 104,
+     "end": 198
+    },
+    {
+     "text": "et l'endroit où il doit demeurer.",
+     "start": 199,
+     "end": 232
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      2
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      2
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 98,
+   "lang": "fr",
+   "text": "La Vice-Présidente: À l'article 4 de notre feuilleton, le ministre de la Justice propose l'adoption du principe du projet de loi 10, Loi modifiant la Loi sur les tribunaux judiciaires et d'autres dispositions législatives en vue d'instituer la Cour unifiée.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "La Vice-Présidente:",
+     "start": 0,
+     "end": 19
+    },
+    {
+     "text": "À l'article 4 de notre feuilleton,",
+     "start": 20,
+     "end": 54
+    },
+    {
+     "text": "le ministre de la Justice propose l'adoption du principe du projet de loi 10,",
+     "start": 55,
+     "end": 132
+    },
+    {
+     "text": "Loi modifiant la Loi sur les tribunaux judiciaires et d'autres dispositions législatives",
+     "start": 133,
+     "end": 221
+    },
+    {
+     "text": "en vue d'instituer la Cour unifiée.",
+     "start": 222,
+     "end": 257
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      3,
+      3
+     ],
+     "right": [
+      4,
+      4
+     ],
+     "relation": "purpose",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      4
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      4
+     ],
+     "relation": "frame",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      4
+     ],
+     "relation": "frame",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 99,
+   "lang": "fr",
+   "text": "Le ministre s'est permis, au départ, d'ouvrir son jeu et de parler exactement de l'ensemble du discours sur le budget, non pas seulement des mesures qui sont contenues dans le projet de loi, mais de l'ensemble du budget proposé par le ministre des Finances.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "Le ministre s'est permis, au départ, d'ouvrir son jeu",
+     "start": 0,
+     "end": 53
+    },
+    {
+     "text": "et de parler exactement de l'ensemble du discours sur le budget,",
+     "start": 54,
+     "end": 118
+    },
+    {
+     "text": "non pas seulement des mesures",
+     "start": 119,
+     "end": 148
+    },
+    {
+     "text": "qui sont contenues dans le projet de loi,",
+     "start": 149,
+     "end": 190
+    },
+    {
+     "text": "mais de l'ensemble du budget proposé par le ministre des Finances.",
+     "start": 191,
+     "end": 257
+    }
+   ],
+   "relations": [
+    {
+     "left": [
+      2,
+      2
+     ],
+     "right": [
+      3,
+      3
+     ],
+     "relation": "e-elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      2,
+      3
+     ],
+     "right": [
+      4,
+      4
+     ],
+     "relation": "contrast",
+     "nuclearity": "NN"
+    },
+    {
+     "left": [
+      1,
+      1
+     ],
+     "right": [
+      2,
+      4
+     ],
+     "relation": "elaboration",
+     "nuclearity": "NS"
+    },
+    {
+     "left": [
+      0,
+      0
+     ],
+     "right": [
+      1,
+      4
+     ],
+     "relation": "continuation",
+     "nuclearity": "NS"
+    }
+   ]
+  },
+  {
+   "n": 100,
+   "lang": "fr",
+   "text": "La pénurie d'infirmières oblige également la direction de l'hôpital à payer énormément d'heures supplémentaires.",
+   "inventory": "fra.sdrt.annodis",
+   "edus": [
+    {
+     "text": "La pénurie d'infirmières oblige également la direction de l'hôpital à payer énormément d'heures supplémentaires.",
+     "start": 0,
+     "end": 112
+    }
+   ],
+   "relations": []
+  }
+ ]
+}

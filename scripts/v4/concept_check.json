@@ -1,0 +1,346 @@
+[
+{
+"n": 2,
+"lang": "en",
+"side": "object",
+"surface": "abortion",
+"old": "Abortion",
+"right": true
+},
+{
+"n": 4,
+"lang": "en",
+"side": "subject",
+"surface": "punitive damages",
+"old": "Punitive_damages",
+"right": true
+},
+{
+"n": 5,
+"lang": "en",
+"side": "subject",
+"surface": "HMO",
+"old": "Health_maintenance_organization",
+"right": true
+},
+{
+"n": 6,
+"lang": "en",
+"side": "subject",
+"surface": "Senate",
+"old": "United_States_Senate",
+"right": true
+},
+{
+"n": 8,
+"lang": "en",
+"side": "object",
+"surface": "21st Century Cures Act",
+"old": "21st_Century_Cures_Act",
+"right": true
+},
+{
+"n": 8,
+"lang": "en",
+"side": "object",
+"surface": "acceleration",
+"old": "Acceleration",
+"right": false
+},
+{
+"n": 11,
+"lang": "en",
+"side": "object",
+"surface": "abortion",
+"old": "Abortion",
+"right": true
+},
+{
+"n": 13,
+"lang": "en",
+"side": "subject",
+"surface": "Republican",
+"old": "Republican_Party_(United_States)",
+"right": true
+},
+{
+"n": 13,
+"lang": "en",
+"side": "object",
+"surface": "false choice",
+"old": "False_dilemma",
+"right": true
+},
+{
+"n": 14,
+"lang": "en",
+"side": "subject",
+"surface": "Arkansas",
+"old": "Arkansas",
+"right": true
+},
+{
+"n": 14,
+"lang": "en",
+"side": "object",
+"surface": "meth lab",
+"old": "Rolling_meth_lab",
+"right": false
+},
+{
+"n": 15,
+"lang": "en",
+"side": "object",
+"surface": "stem cell",
+"old": "Stem_cell",
+"right": true
+},
+{
+"n": 16,
+"lang": "en",
+"side": "subject",
+"surface": "The substitute",
+"old": "The_Substitute",
+"right": false
+},
+{
+"n": 17,
+"lang": "en",
+"side": "subject",
+"surface": "Republican",
+"old": "Republican_Party_(United_States)",
+"right": true
+},
+{
+"n": 20,
+"lang": "en",
+"side": "object",
+"surface": "AIDS",
+"old": "HIV",
+"right": true
+},
+{
+"n": 20,
+"lang": "en",
+"side": "object",
+"surface": "virus",
+"old": "Virus",
+"right": true
+},
+{
+"n": 21,
+"lang": "en",
+"side": "subject",
+"surface": "NIH",
+"old": "National_Institutes_of_Health",
+"right": true
+},
+{
+"n": 24,
+"lang": "en",
+"side": "subject",
+"surface": "ACT",
+"old": "Australian_Capital_Territory",
+"right": false
+},
+{
+"n": 24,
+"lang": "en",
+"side": "object",
+"surface": "special task force",
+"old": "Special_Task_Force_(Sri_Lanka)",
+"right": false
+},
+{
+"n": 26,
+"lang": "en",
+"side": "subject",
+"surface": "cartridge",
+"old": "ROM_cartridge",
+"right": false
+},
+{
+"n": 26,
+"lang": "en",
+"side": "object",
+"surface": "nicotine",
+"old": "Nicotine",
+"right": true
+},
+{
+"n": 27,
+"lang": "en",
+"side": "subject",
+"surface": "Cochrane district",
+"old": "Cochrane_District",
+"right": true
+},
+{
+"n": 28,
+"lang": "en",
+"side": "subject",
+"surface": "Brian Smith",
+"old": "Brian_Smith_(rugby_league,_born_1954)",
+"right": false
+},
+{
+"n": 28,
+"lang": "en",
+"side": "object",
+"surface": "Ottawa",
+"old": "Ottawa",
+"right": true
+},
+{
+"n": 28,
+"lang": "en",
+"side": "object",
+"surface": "sportscaster",
+"old": "Sports_commentator",
+"right": true
+},
+{
+"n": 31,
+"lang": "en",
+"side": "object",
+"surface": "folly",
+"old": "Folly",
+"right": false
+},
+{
+"n": 32,
+"lang": "en",
+"side": "subject",
+"surface": "Ontario",
+"old": "Ontario",
+"right": false
+},
+{
+"n": 32,
+"lang": "en",
+"side": "object",
+"surface": "Cancer Care Ontario",
+"old": "Cancer_Care_Ontario",
+"right": true
+},
+{
+"n": 33,
+"lang": "en",
+"side": "object",
+"surface": "displaced persons",
+"old": "Forced_displacement",
+"right": true
+},
+{
+"n": 33,
+"lang": "en",
+"side": "object",
+"surface": "reunification",
+"old": "German_reunification",
+"right": false
+},
+{
+"n": 34,
+"lang": "en",
+"side": "object",
+"surface": "age verification",
+"old": "Age_verification_system",
+"right": true
+},
+{
+"n": 39,
+"lang": "en",
+"side": "subject",
+"surface": "Windsor West",
+"old": "Windsor_West",
+"right": true
+},
+{
+"n": 44,
+"lang": "en",
+"side": "subject",
+"surface": "city",
+"old": "City",
+"right": true
+},
+{
+"n": 46,
+"lang": "en",
+"side": "object",
+"surface": "oral cancer",
+"old": "Oral_cancer",
+"right": true
+},
+{
+"n": 48,
+"lang": "en",
+"side": "object",
+"surface": "Lake Simcoe",
+"old": "Lake_Simcoe",
+"right": true
+},
+{
+"n": 49,
+"lang": "en",
+"side": "subject",
+"surface": "environmental values",
+"old": "Environmental_Values",
+"right": false
+},
+{
+"n": 55,
+"lang": "fr",
+"side": "object",
+"surface": "Allemagne de l'Ouest",
+"old": "Allemagne_de_l'Ouest",
+"right": true
+},
+{
+"n": 55,
+"lang": "fr",
+"side": "object",
+"surface": "impôt",
+"old": "Impôt",
+"right": true
+},
+{
+"n": 78,
+"lang": "fr",
+"side": "object",
+"surface": "2013",
+"old": "2013",
+"right": true
+},
+{
+"n": 83,
+"lang": "fr",
+"side": "object",
+"surface": "cannabis",
+"old": "Cannabis",
+"right": true
+},
+{
+"n": 89,
+"lang": "fr",
+"side": "subject",
+"surface": "aide sociale",
+"old": "Prestation_sociale",
+"right": true
+},
+{
+"n": 91,
+"lang": "fr",
+"side": "object",
+"surface": "II",
+"old": "Cabinet_Viggo_Kampmann_II",
+"right": false
+},
+{
+"n": 91,
+"lang": "fr",
+"side": "object",
+"surface": "Conseil exécutif",
+"old": "Gouvernement_de_Catalogne",
+"right": false
+}
+]

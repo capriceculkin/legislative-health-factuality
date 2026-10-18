@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Factuality Pipeline, Oct 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<style>
+/* Layout: an n-funnel up top, then one vertical spine of stages in run order; each stage opens to show script, files, fields, what is removed and why, and an example. */
+:root{
+  --bg:#f6f7f5; --paper:#ffffff; --ink:#1d2421; --muted:#5b6561; --rule:#cfd6d2; --soft:#eef1ef;
+  --done:#1f6b4f; --done-bg:#e3f1ea; --sample:#9a5b00; --sample-bg:#fbefd9;
+  --ready:#24508f; --ready-bg:#e2eaf6; --wait:#6b6f75; --wait-bg:#eceeef; --link:#24508f; --bar:#7aa894;
+  --serif:"Source Serif 4", Georgia, serif; --sans:"IBM Plex Sans", system-ui, sans-serif; --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --paper:#1c2320; --ink:#e4ebe7; --muted:#9aa6a0; --rule:#34403b; --soft:#232b28;
+  --done:#6fcfa5; --done-bg:#1d3a2e; --sample:#f0b45a; --sample-bg:#3a2c14; --ready:#8fb4ee; --ready-bg:#1d2b42;
+  --wait:#a5abb2; --wait-bg:#2a2f33; --link:#8fb4ee; --bar:#4f8a70; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --paper:#1c2320; --ink:#e4ebe7; --muted:#9aa6a0; --rule:#34403b; --soft:#232b28;
+  --done:#6fcfa5; --done-bg:#1d3a2e; --sample:#f0b45a; --sample-bg:#3a2c14; --ready:#8fb4ee; --ready-bg:#1d2b42;
+  --wait:#a5abb2; --wait-bg:#2a2f33; --link:#8fb4ee; --bar:#4f8a70; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans);margin:0}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font:600 clamp(24px,3vw,32px)/1.15 var(--serif);margin:0 0 6px;text-wrap:balance}
+h2.sec{font:600 20px/1.3 var(--serif);margin:34px 0 10px}
+.lede{color:var(--muted);max-width:72ch;margin:0 0 16px}
+code,.mono{font-family:var(--mono);font-size:.88em}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0 0 8px}
+.chip{display:inline-flex;align-items:center;font:500 11.5px/1 var(--sans);letter-spacing:.04em;text-transform:uppercase;padding:5px 8px;border-radius:3px;white-space:nowrap}
+.chip.done{color:var(--done);background:var(--done-bg)} .chip.sample{color:var(--sample);background:var(--sample-bg)}
+.chip.ready{color:var(--ready);background:var(--ready-bg)} .chip.wait{color:var(--wait);background:var(--wait-bg)}
+.scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;background:var(--soft)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.minus{color:var(--muted)}
+.funnel{display:grid;gap:6px;margin-top:10px}
+.frow{display:grid;grid-template-columns:minmax(150px,240px) minmax(0,1fr) 92px;gap:10px;align-items:center;font-size:13.5px}
+.frow .bar{height:16px;background:var(--bar);border-radius:2px;min-width:3px}
+.frow .val{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px}
+.frow small{color:var(--muted)}
+@media (max-width:560px){.frow{grid-template-columns:minmax(0,1fr) 70px}.frow .bar{grid-column:1 / -1;order:3}}
+.tools{display:flex;gap:10px;justify-content:flex-end;margin:12px 0 8px}
+button{font:500 13px var(--sans);background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:3px;padding:6px 10px;cursor:pointer}
+.spine{display:flex;flex-direction:column}
+.stage{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px}
+.num{display:flex;flex-direction:column;align-items:center}
+.num span{width:30px;height:30px;border:1.5px solid var(--rule);border-radius:50%;display:grid;place-items:center;background:var(--paper);font:600 13px var(--mono);color:var(--muted)}
+.num::after{content:"";flex:1;width:2px;background:var(--rule);margin-top:4px}
+.stage:last-child .num::after{display:none}
+details.box{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--stat);border-radius:4px;margin-bottom:14px}
+details.done{--stat:var(--done)} details.sample{--stat:var(--sample)} details.ready{--stat:var(--ready)} details.wait{--stat:var(--wait)}
+summary{list-style:none;cursor:pointer;padding:12px 14px}
+summary::-webkit-details-marker{display:none}
+.sh{display:flex;flex-wrap:wrap;gap:6px 12px;justify-content:space-between;align-items:baseline}
+.sh h3{margin:0;font:600 16px/1.3 var(--sans)}
+.sh h3::before{content:"\25B8  ";color:var(--muted)}
+details[open] .sh h3::before{content:"\25BE  "}
+.sum{margin:6px 0 0;font-size:14px;color:var(--ink)}
+.sum b{font-variant-numeric:tabular-nums}
+.body{padding:0 14px 14px;display:grid;gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:720px){.grid2{grid-template-columns:minmax(0,1fr)}}
+.panel{border:1px solid var(--rule);border-radius:3px;padding:10px 11px;font-size:13.5px;min-width:0}
+.panel h4{margin:0 0 6px;font:600 11.5px/1 var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.panel ul{margin:0;padding-left:18px} .panel li{margin:2px 0}
+.panel p{margin:0 0 6px}
+.ex{font-family:var(--mono);font-size:12.5px;background:var(--soft);border-radius:3px;padding:8px 10px;white-space:pre-wrap;overflow-wrap:anywhere}
+.loc{font-size:12px;color:var(--muted)}
+.q{font-size:13.5px;background:var(--wait-bg);border-radius:3px;padding:7px 9px}
+.q b{font-weight:600}
+.note{font-size:12.5px;color:var(--muted);margin-top:18px;max-width:84ch}
+</style>
+
+<div class="wrap">
+  <h1>Factuality pipeline, as of October 18, 2026</h1>
+  <p class="lede">US House, Ontario Legislative Assembly and Quebec National Assembly health debate, 1985 to 2026. Open any stage to see its script, input and output files on GitHub, the fields in the output, how many items go in and come out, what is removed and why, and a real example.</p>
+  <div class="legend" aria-label="Status key">
+    <span class="chip done">Run on the full corpus</span>
+    <span class="chip ready">Built and timed, full run ready</span>
+    <span class="chip sample">Run on the 100-sentence sample</span>
+    <span class="chip wait">Waiting on a decision</span>
+  </div>
+
+  <h2 class="sec">How many at each stage</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Stage</th><th class="n">US House</th><th class="n">Ontario</th><th class="n">Quebec</th><th>What changes the count</th></tr></thead>
+    <tbody>
+      <tr><td>Bills in the study (with an outcome)</td><td class="n">492</td><td class="n">651</td><td class="n">359</td><td>179 of 1,502 reviewed bills are proposed for exclusion as not health; still in every count until David and Joanie decide</td></tr>
+      <tr><td>Sentences built from the bill-specific debate text</td><td class="n">569,032</td><td class="n">501,141</td><td class="n">438,007</td><td>stage 2</td></tr>
+      <tr><td class="minus">removed: bill-days confirmed wrong against the official record (70 bill-days)</td><td class="n minus">&minus;488</td><td class="n minus">&minus;475</td><td class="n minus">0</td><td>apply_exclusions.py, outputs/audit/exclusions_applied.csv</td></tr>
+      <tr><td class="minus">removed: US sections that are not the bill's own floor debate</td><td class="n minus">&minus;229,772</td><td class="n minus">n/a</td><td class="n minus">n/a</td><td>other bills' debates, omnibus "Disposing of various legislative measures" sections, procedural notices, members' speeches outside floor consideration</td></tr>
+      <tr><td><b>Sentences now</b></td><td class="n"><b>338,772</b></td><td class="n"><b>500,666</b></td><td class="n"><b>438,007</b></td><td>1,277,445 in all; Ontario has 6,436 French sentences, Quebec 2,666 English</td></tr>
+      <tr><td>Old extractor (v19, one claim per sentence, Oct 8)</td><td class="n">58,690</td><td class="n">48,203</td><td class="n">32,097</td><td>being replaced; claim in 4% to 20% of random sentences</td></tr>
+      <tr><td>New pipeline, predications per sentence (300 random each)</td><td class="n">2.45</td><td class="n">2.48</td><td class="n">2.56</td><td>stage 4</td></tr>
+      <tr><td>New pipeline, stated predications, projected</td><td class="n">&asymp;365,000</td><td class="n">&asymp;537,000</td><td class="n">&asymp;542,000</td><td>projection from 300 sentences each, not a count</td></tr>
+      <tr><td>Full run time on the laptop, projected</td><td class="n">18 h</td><td class="n">28 h</td><td class="n">42 h</td><td>timed Oct 18; about 88 h one after another</td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="lede" style="margin-top:18px">On the 100-sentence sample (50 English: 25 US and 25 Ontario; 50 French: Quebec), each step after parsing narrows the claims that can be checked. After the stated claims, the two evidence checks run side by side, each on the 142:</p>
+  <div class="funnel" role="img" aria-label="Funnel on the 100-sentence sample">
+    <div class="frow"><span>Predications kept by the vote</span><div class="bar" style="width:100%"></div><span class="val">241</span></div>
+    <div class="frow"><span>Stated by the speaker <small>(82 embedded, 17 reported)</small></span><div class="bar" style="width:58.9%"></div><span class="val">142</span></div>
+    <div class="frow"><span>Text check: checkable <small>(subject has a name)</small></span><div class="bar" style="width:41.1%"></div><span class="val">99</span></div>
+    <div class="frow"><span>DBpedia: concept node at both ends</span><div class="bar" style="width:12.4%"></div><span class="val">30</span></div>
+    <div class="frow"><span>DBpedia: a route</span><div class="bar" style="width:10%"></div><span class="val">24</span></div>
+    <div class="frow"><span>Text check: supported by a Wikipedia sentence</span><div class="bar" style="width:6.2%"></div><span class="val">15</span></div>
+    <div class="frow"><span>DBpedia: a direct link</span><div class="bar" style="width:.4%"></div><span class="val">1</span></div>
+  </div>
+
+  <h2 class="sec">Stages</h2>
+  <div class="tools"><button type="button" id="openAll">Open all</button><button type="button" id="closeAll">Close all</button></div>
+  <div class="spine">
+
+    <div class="stage"><div class="num"><span>0</span></div>
+      <details class="box done"><summary><div class="sh"><h3>Official sources and the health bill list</h3><span class="chip done">Full corpus</span></div>
+        <p class="sum">1,502 candidate bills reviewed by title and share of health sentences; outcomes from two official sources each.</p></summary>
+        <div class="body">
+          <div class="grid2">
+            <div class="panel"><h4>Sources</h4><ul>
+              <li>US: Congressional Record (GovInfo daily edition from 1994; bound PDFs before), Congress.gov actions, Voteview roll calls, CRS policy area tags</li>
+              <li>Ontario: OLA Hansard API, OLA bill status pages, FSOB file for bills before 1995</li>
+              <li>Quebec: Journal des débats and each bill's Assemblée page; Quebec health bills found by keyword + n-gram classifier checked against Joanie's review</li></ul></div>
+            <div class="panel"><h4>Scripts</h4><ul>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/fetch_official_status.py">fetch_official_status.py</a> downloads bill pages and floor actions</li>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/outcomes_v3.py">outcomes_v3.py</a> one pass or fail per bill, compared with a second source</li>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/apply_royal_assent.py">apply_royal_assent.py</a> Ontario royal assent lists</li></ul></div>
+          </div>
+          <div class="panel"><h4>Outcomes now</h4>
+            <p>US: about 485 passed the House, 8 did not (became law: 231 of 494 with action lists). Ontario: 164 passed, 463 not, 24 pending; 183 never past first reading. Quebec: 290 passed, 65 not, 4 pending.</p>
+            <p class="loc">Voteview and Congress.gov agree on all 363 US bills with a passage roll call; FSOB agrees with OLA pages on 98.7% of shared bills.</p></div>
+          <div class="q"><b>Decisions for David:</b> US outcome (passed the House or became law); drop bills never debated (183 Ontario, about 50 Quebec); the 179 proposed exclusions.</div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>1</span></div>
+      <details class="box done"><summary><div class="sh"><h3>Debate text for each bill and sitting day</h3><span class="chip done">Full corpus</span></div>
+        <p class="sum">Only the bill's own debate: a passing mention of its number never assigns text to it.</p></summary>
+        <div class="body">
+          <div class="scroll"><table>
+            <thead><tr><th></th><th>US House</th><th>Ontario</th><th>Quebec</th></tr></thead>
+            <tbody>
+              <tr><td>Script</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/us_rebuild.py">us_rebuild.py</a>, <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/reextract_bound.py">reextract_bound.py</a></td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/ontario_rebuild.py">ontario_rebuild.py</a></td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/quebec_rebuild.py">quebec_rebuild.py</a></td></tr>
+              <tr><td>Which days</td><td>vote date and the days before it, plus every House floor day Congress.gov lists</td><td>days with a procedural line for the bill ("moved second reading of Bill 94") plus days on its OLA page</td><td>the debates listed on each bill's Assemblée page</td></tr>
+              <tr><td>How text is tied to the bill</td><td>Record units that name the bill (H.R. N) and units under the same heading; rule debates, procedural notices, omnibus sections left out</td><td>paragraphs under the bill's own heading, found by procedural lines and a topic hash per session; paragraphs told apart by the API's own id</td><td>page read paragraph by paragraph: a bill heading or procedural line sets the bill, a section heading clears it</td></tr>
+              <tr><td>Output</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/us/v3">data/us/v3/</a> (segments_index.json, cr_segments_v3/)</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/canada/ontario/v3/bill_texts">data/canada/ontario/v3/bill_texts/</a></td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/canada/quebec_assembly/v3/bill_segments_v3">data/canada/quebec_assembly/v3/bill_segments_v3/</a></td></tr>
+              <tr><td>Checked against</td><td>Congress.gov floor actions (<a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/compare_debate_days.py">compare_debate_days.py</a>)</td><td colspan="2">OLA and Assemblée bill pages (<a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/compare_debate_days_canada.py">compare_debate_days_canada.py</a>)</td></tr>
+            </tbody></table></div>
+          <div class="grid2">
+            <div class="panel"><h4>Removed here</h4><ul>
+              <li>70 bill-days confirmed against the official record as not the bill's debate (<a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/apply_exclusions.py">apply_exclusions.py</a>)</li>
+              <li>US sections flagged by <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/check_open_items.py">check_open_items.py</a>: other bills' debates, omnibus, procedural notices</li>
+              <li>Debate days after the House vote used as the US outcome (they come after the outcome)</li></ul></div>
+            <div class="panel"><h4>Checks</h4><p>59 audit checks rerun on every rebuild (<a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/audit_review_data.py">audit_review_data.py</a>): dates match the printed Record, Hansard URL and Journal header; every bill-day section names its bill; every sentence stored once. 59 of 59 pass.</p></div>
+          </div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>2</span></div>
+      <details class="box done"><summary><div class="sh"><h3>Sentences, each tagged with its language</h3><span class="chip done">Full corpus</span></div>
+        <p class="sum"><b>1,277,445</b> sentences: US <b>338,772</b>, Ontario <b>500,666</b>, Quebec <b>438,007</b>.</p></summary>
+        <div class="body"><div class="grid2">
+          <div class="panel"><h4>Script and output</h4><p><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/build_sentences_v3.py">build_sentences_v3.py</a> writes <code>data/dbpedia_pipeline/{us,ontario,quebec}/sentences_v3.json</code></p><p class="loc">On the laptop; the files are over GitHub's 100 MB limit.</p></div>
+          <div class="panel"><h4>Fields in each record</h4><p><code>sentence_id</code> (jurisdiction | bill | sitting day | paragraph | sentence), <code>bill_key</code>, <code>session</code>, <code>date</code>, <code>lang</code>, <code>lang_method</code>, <code>text</code></p></div>
+        </div>
+        <div class="ex">US|102-HR2507|1991-07-25|p102|s10
+"The bill contains many protections against abuse, such as requiring women donating fetal tissue for research to sign a written consent form, explicitly ensuring that the decision to have an abortion is separate and independent of that to donate fetal tissue."</div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>3</span></div>
+      <details class="box ready"><summary><div class="sh"><h3>Three syntactic parses, every clause</h3><span class="chip ready">Full run ready</span></div>
+        <p class="sum">Each sentence is parsed three ways; the same extraction rules turn each parse into subject | verb | object lines.</p></summary>
+        <div class="body">
+          <div class="scroll"><table>
+            <thead><tr><th>Parse</th><th>Tool and model</th><th>Why this one</th><th class="n">Sample, lines found</th></tr></thead>
+            <tbody>
+              <tr><td>Dependency 1</td><td>spaCy 3.8, en_core_web_lg / fr_core_news_lg</td><td>rules first built on it; fast; its parts of speech also feed stage 6</td><td class="n">103/119 en, 88/116 fr</td></tr>
+              <tr><td>Dependency 2</td><td>Stanza 1.15</td><td>different model and training data, so it fails on different sentences; best single French parser</td><td class="n">100/119 en, 95/116 fr</td></tr>
+              <tr><td>Constituency</td><td>Stanza (English); Berkeley parser benepar_fr2 (French)</td><td>phrase boundaries, so noun phrases stay whole past commas; Stanza has no French model</td><td class="n">102/119 en, 77/116 fr</td></tr>
+            </tbody></table></div>
+          <div class="grid2">
+            <div class="panel"><h4>What the rules do</h4><ul>
+              <li>every clause, not only the main verb ("tried to set up", not "tried")</li>
+              <li>inherited subjects, marked <code>(inh)</code>: "The bill (inh) | requiring | women"</li>
+              <li>appositions as their own line ("Brian Smith | is | the much-admired Ottawa sportscaster")</li>
+              <li>negation, and hedges: would, could, might, may, the French conditional; should, must, can, doit, peut are not hedges</li>
+              <li>stated, embedded (if, when, purpose, relative clause) or reported (someone else's words)</li>
+              <li>questions give no claim</li></ul></div>
+            <div class="panel"><h4>Scripts</h4><ul>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/parse_corpus_v5.py">parse_corpus_v5.py</a> runs all parses on the corpus, restartable</li>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/preds.py">preds.py</a> rules for dependency and Stanza trees</li>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/const_fr.py">const_fr.py</a> rules for French Treebank trees</li>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/benepar_fix.py">benepar_fix.py</a> runs the Berkeley parser on current PyTorch</li>
+              <li><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/run_compare.py">run_compare.py</a> the sample's saved parses (<a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/pc.json">pc.json</a>)</li></ul></div>
+          </div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>4</span></div>
+      <details class="box ready"><summary><div class="sh"><h3>Keep what two of three parses agree on</h3><span class="chip ready">Full run ready</span></div>
+        <p class="sum">Sample: <b>240</b> lines kept (122 en, 118 fr) plus 1 apposition; <b>133</b> found by one parse go to review.</p></summary>
+        <div class="body">
+          <div class="scroll"><table>
+            <thead><tr><th>Rule</th><th class="n">English found</th><th class="n">English produced (in key)</th><th class="n">French found</th><th class="n">French produced (in key)</th></tr></thead>
+            <tbody>
+              <tr><td>Any one parse</td><td class="n">111/119</td><td class="n">166 (111)</td><td class="n">108/116</td><td class="n">207 (108)</td></tr>
+              <tr><td>Two of three agree</td><td class="n">107/119</td><td class="n">122 (107)</td><td class="n">93/116</td><td class="n">118 (93)</td></tr>
+            </tbody></table></div>
+          <div class="grid2">
+            <div class="panel"><h4>Script and output</h4><p><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/combine_lib.py">combine_lib.py</a> (vote), <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/statements_v4.py">statements_v4.py</a> (sample) writes <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/v4_sample/statements_v4.json">statements_v4.json</a>; full run writes <code>statements_v5.jsonl</code> per jurisdiction</p></div>
+            <div class="panel"><h4>Fields per predication</h4><p><code>subject</code>, <code>verb</code>, <code>object</code>, <code>kind</code> (after discourse), <code>kind_parser</code>, <code>how</code>, <code>rst</code>, <code>negated</code>, <code>hedged</code>, <code>found_by</code>, <code>source</code>; plus <code>for_review</code> lines found by one parse</p></div>
+          </div>
+          <div class="ex">The bill | contains | many protections against abuse        spaCy, Stanza, constituency   stated
+The bill (inh) | requiring | women                          spaCy, constituency           stated
+women | donating | fetal tissue                             all three                     embedded
+The bill (inh) | ensuring | that the decision ... separate all three                     stated
+review: many protections against abuse | requiring | women  Stanza only</div>
+          <div class="panel"><h4>Random 300 per jurisdiction (Oct 18)</h4><p>Lines found by one parse only: US 440, Ontario 621, Quebec 548 (60% to 83% as many as the lines kept), so review has to be a sample. Files: <a href="https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/v4_sample">data/v4_sample/</a> (timing_*.json, sample_*.jsonl).</p></div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>5</span></div>
+      <details class="box ready"><summary><div class="sh"><h3>Discourse parse: stated, embedded or reported</h3><span class="chip ready">Full run ready</span></div>
+        <p class="sum">Re-reads only lines the syntax calls stated. Sample: stated-or-not right for <b>102/107</b> English and <b>84/93</b> French (syntax alone 102 and 85).</p></summary>
+        <div class="body">
+          <div class="grid2">
+            <div class="panel"><h4>Tool</h4><p>IsaNLP UniRST (Chistova 2025): one multilingual model, RST-DT relations for English, ANNODIS (SDRT) relations for French. Runs on sentences with two or more predications or a speech verb (about 64%).</p><p><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/rst_run.py">rst_run.py</a> (sample) writes <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/discourse.json">discourse.json</a>; rules in <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/combine_lib.py">combine_lib.py</a> (edu_roles, rst_kind)</p></div>
+            <div class="panel"><h4>Rules that change a label</h4><ul>
+              <li>attribution, someone else is the source: reported</li>
+              <li>attribution, the line is the content of "ensuring that": embedded</li>
+              <li>condition: embedded</li>
+              <li>temporal, circumstance, frame starting with when, after, lorsque: embedded</li>
+              <li>purpose starting with to, pour, so that: embedded</li>
+              <li>"I think", "vous savez": the speaker's own framing, no change</li></ul></div>
+          </div>
+          <div class="panel"><h4>What it changed</h4><p>Sample: 1 line, and that change was wrong (Quebec sentence 83). Random 900: 75 lines (US 14, Ontario 17, Quebec 44), 50 of them through the "complement of an attribution verb" rule.</p></div>
+          <div class="q"><b>Decision for David:</b> keep it as the judge, use it only for attribution, use its relations to link claims to their reasons, or drop it (saves about 29 of the 88 hours).</div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>6</span></div>
+      <details class="box sample"><summary><div class="sh"><h3>Concept nodes for the subject and object</h3><span class="chip sample">Sample only</span></div>
+        <p class="sum">142 stated claims in, <b>30</b> with a node at both ends. <b>34/43</b> senses right by the Oct 13 reading (Spotlight alone 29).</p></summary>
+        <div class="body">
+          <div class="grid2">
+            <div class="panel"><h4>Tool and checks</h4><ul>
+              <li>DBpedia Spotlight on Dunkleosteus (English port 2222, French 2223), on the subject and object phrases</li>
+              <li>reject films and other works, sports people, pages located in another country</li>
+              <li>nouns only (parties kept: "Republican", "libéral")</li>
+              <li>gazetteer for each legislature: "this House", "cette Assemblée", "the government"</li>
+              <li>French pages mapped to English by Wikipedia language links, then fr.dbpedia</li></ul>
+              <p><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/concepts_v3.py">concepts_v3.py</a> writes <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/v4_sample/concepts_v3.json">concepts_v3.json</a></p></div>
+            <div class="panel"><h4>Why 112 of 142 have no node at both ends</h4>
+              <div class="scroll"><table><tbody>
+                <tr><td>no subject node (pronoun or no page)</td><td class="n">71</td></tr>
+                <tr><td>subject or object is the bill under debate</td><td class="n">21</td></tr>
+                <tr><td>no object node</td><td class="n">18</td></tr>
+                <tr><td>page has no infobox links</td><td class="n">2</td></tr>
+              </tbody></table></div></div>
+          </div>
+          <div class="ex">His doctor | prescribed | the medication
+  doctor -> Physician          medication -> Medication
+The bill | contains | many protections against abuse
+  The bill -> (the bill under debate, no page)   abuse -> Abuse</div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>7</span></div>
+      <details class="box wait"><summary><div class="sh"><h3>Evidence check</h3><span class="chip wait">Waiting on the definition</span></div>
+        <p class="sum">Two methods run on the sample; neither is evidence for most debate claims yet.</p></summary>
+        <div class="body">
+          <div class="scroll"><table>
+            <thead><tr><th>Method</th><th>What it does</th><th>300 judged facts, AUC true vs made up / vs judged false</th><th>142 debate claims</th><th>Script and output</th></tr></thead>
+            <tbody>
+              <tr><td>DBpedia path score</td><td>Ciampaglia 2015: cheapest path on the 2022 infobox graph (7,220,726 pages; 20,708,852 factual links after removing 340,629 see-also links); hubs cost more; direct link = 1</td><td class="n">0.66 / 0.56</td><td>24 routes, 1 direct link (Arkansas, country, United States)</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/rel_linker.py">rel_linker.py</a>, <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/v4_sample/rel_linker.json">rel_linker.json</a></td></tr>
+              <tr><td>Relation-aware path</td><td>Shiralkar 2017: steps cost more when the link type is unlike the claim's relation</td><td class="n">0.63 / 0.55</td><td>did not beat the plain score</td><td>same</td></tr>
+              <tr><td>Wikipedia text + NLI, v2</td><td>search by claim words and concept names; a sentence counts only if it names both ends; mDeBERTa-v3 judges support or contradiction</td><td class="n">0.93 / 0.78</td><td>15 supported, 17 contradicted, 67 not enough information, 43 not checkable</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/text_evidence_v2.py">text_evidence_v2.py</a>, <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/v4_sample/text_evidence_v2.json">text_evidence_v2.json</a></td></tr>
+              <tr><td>Bill text</td><td>proposed for claims about the bill itself</td><td>not run</td><td>21 claims</td><td></td></tr>
+            </tbody></table></div>
+          <div class="ex">"This House condemns capital punishment" (David, Oct 8)
+US House    3 links  tau 0.088  via Washington, D.C. and David Herold
+Ontario     4 links  tau 0.082  via Elizabeth Dowdeswell, Belfast, Robert McGladdery
+Quebec      5 links  tau 0.076  via Abstentionism, UK Parliament, Company rule in India
+Every route runs through someone who was executed.</div>
+          <div class="q"><b>Decision for David:</b> what counts as evidence for a claim like "SB-8 bars abortion"; whether the bill text is a source.</div>
+        </div></details></div>
+
+    <div class="stage"><div class="num"><span>8</span></div>
+      <details class="box wait"><summary><div class="sh"><h3>Bill score and passage</h3><span class="chip wait">Spring</span></div>
+        <p class="sum">Supported ÷ checkable per bill, with the checkable share as a control.</p></summary>
+        <div class="body"><div class="grid2">
+          <div class="panel"><h4>Plan</h4><ul>
+            <li>score per bill, all sitting days together</li>
+            <li>logistic regression of passage, mixed effects for bills within sessions</li>
+            <li>controls: jurisdiction, session, government vs opposition, party, sponsor career, bill length, days left in session</li>
+            <li>hedged claims reported separately; negated claims scored against</li></ul></div>
+          <div class="panel"><h4>Scripts</h4><p><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v3/compute_scores_v3.py">compute_scores_v3.py</a> (not yet run on the new claims); outcomes from stage 0.</p></div>
+        </div></div></details></div>
+  </div>
+
+  <h2 class="sec">Checked against</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Set</th><th>Stages</th><th>What it is</th><th>File</th></tr></thead>
+    <tbody>
+      <tr><td>Answer key</td><td>3 to 5</td><td>100 sentences, 235 lines (119 English, 116 French); first draft written with AI (Claude), being confirmed line by line by Caprice (English) and Joanie (French); 15 flagged</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/gold.py">gold.py</a>, <a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/gold2.py">gold2.py</a></td></tr>
+      <tr><td>Held-out key</td><td>3 to 5</td><td>30 sentences, 69 lines, drafted with AI from the sentence alone before any output was seen; never used to tune the rules; not yet confirmed</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/gold_heldout.py">gold_heldout.py</a></td></tr>
+      <tr><td>Hand-checked senses</td><td>6</td><td>43 subject and object phrases, senses read with AI on Oct 13; column left for David and Joanie to confirm</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/concept_check.json">concept_check.json</a></td></tr>
+      <tr><td>300 judged facts</td><td>7</td><td>Google relation-extraction corpus: 50 judged true, 50 judged false, 50 swapped, for place of birth and school attended</td><td><a href="https://github.com/capriceculkin/legislative-health-factuality/blob/main/scripts/v4/full_graph_inputs.json">full_graph_inputs.json</a></td></tr>
+      <tr><td>Official records</td><td>0 and 1</td><td>debate days and outcomes against Congress.gov, Voteview, OLA and Assemblée pages</td><td>outputs/audit/</td></tr>
+    </tbody></table></div>
+
+  <p class="note">Counts: stages 0 to 2 from the Oct 8 and Oct 18 runs; stages 3 to 5 from the Oct 15 sample run and the Oct 18 timing run on 300 random sentences per jurisdiction; stages 6 and 7 from the Oct 15, 16 and 18 runs on the sample's 142 stated claims. Sample scores are against the draft answer key and will change once it is confirmed. Scripts from Oct 15 to 19 are in scripts/v4 and their sample outputs in data/v4_sample.</p>
+</div>
+<script>
+document.getElementById('openAll').addEventListener('click',()=>document.querySelectorAll('details.box').forEach(d=>d.open=true));
+document.getElementById('closeAll').addEventListener('click',()=>document.querySelectorAll('details.box').forEach(d=>d.open=false));
+</script>
+
+</html>

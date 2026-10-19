@@ -1,0 +1,75 @@
+== Oct 16 steps, version Oct 16a (if you do not see this line, an older copy ran)
+Fri Oct 16 11:14:35 EDT 2026
+== 1 of 2: relation-aware path score
+11:14:38 == 1. the full graph, factual links only
+11:14:40    7,220,726 pages, 20,708,852 factual links (340,629 'see also' links left out)
+11:14:40 == 2. how similar each pair of the 632 relations is (shared pages, TF-IDF, cosine)
+/Users/caprice/.oct16_files/rel_linker.py:50: RuntimeWarning: divide by zero encountered in matmul
+  U = Wn @ Wn.T
+/Users/caprice/.oct16_files/rel_linker.py:50: RuntimeWarning: overflow encountered in matmul
+  U = Wn @ Wn.T
+/Users/caprice/.oct16_files/rel_linker.py:50: RuntimeWarning: invalid value encountered in matmul
+  U = Wn @ Wn.T
+11:14:45    relations closest to birthPlace: deathPlace, country, restingPlace, residence, hometown, location
+11:14:45    relations closest to almaMater: education, person, institution, relation, foundedBy, occupation
+11:14:45    relations closest to education: almaMater, restingPlace, person, occupation, training, deathPlace
+11:14:45 == 3. the 300 judged facts: KL (as before) and KL-REL (relation-aware), same graph
+11:16:29    25 of 300 done
+11:20:58    50 of 300 done
+11:24:48    75 of 300 done
+11:29:29    100 of 300 done
+11:33:36    125 of 300 done
+11:37:26    150 of 300 done
+11:40:04    175 of 300 done
+11:43:50    200 of 300 done
+11:47:41    225 of 300 done
+11:51:35    250 of 300 done
+11:55:15    275 of 300 done
+11:58:00    300 of 300 done
+11:58:00    kl               true vs made up        AUC 0.663 (pair count 0.663; 89 true, 90 other)
+11:58:00    kl               true vs judged false   AUC 0.557 (pair count 0.557; 89 true, 92 other)
+11:58:00    klrel            true vs made up        AUC 0.633 (pair count 0.633; 89 true, 90 other)
+11:58:00    klrel            true vs judged false   AUC 0.545 (pair count 0.545; 89 true, 92 other)
+11:58:00    kl_no_direct     true vs made up        AUC 0.635 (pair count 0.635; 89 true, 90 other)
+11:58:00    kl_no_direct     true vs judged false   AUC 0.518 (pair count 0.518; 89 true, 92 other)
+11:58:00    klrel_no_direct  true vs made up        AUC 0.603 (pair count 0.603; 89 true, 90 other)
+11:58:00    klrel_no_direct  true vs judged false   AUC 0.503 (pair count 0.503; 89 true, 92 other)
+11:58:00 == 4. debate statements with a page at both ends (concepts from the Oct 15e run)
+12:04:20    30 debate statements scored; the relation picked for each verb is in the file
+12:04:20 == wrote /Users/caprice/Desktop/next_steps/oct16/rel_linker.json
+== 2 of 2: Wikipedia text check
+12:04:25 == 1. loading the inference model MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7 (downloads once, about 1.1 GB)
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 7591.77it/s]
+12:13:04    labels: {0: 'entailment', 1: 'neutral', 2: 'contradiction'}
+12:13:04 == 2. the 300 judged facts against the subject's Wikipedia page
+12:17:10    50 of 300 done
+12:22:06    100 of 300 done
+12:27:01    150 of 300 done
+12:31:04    200 of 300 done
+12:35:13    250 of 300 done
+12:40:03    300 of 300 done
+12:40:03    support                    true vs made up        AUC 0.911 (pair count 0.911)
+12:40:03    support                    true vs judged false   AUC 0.747 (pair count 0.747)
+12:40:03    support minus contradict   true vs made up        AUC 0.93 (pair count 0.93)
+12:40:03    support minus contradict   true vs judged false   AUC 0.759 (pair count 0.759)
+12:40:03    judged true        supported 73, contradicted 6, not enough information 10
+12:40:03    judged false       supported 38, contradicted 28, not enough information 27
+12:40:03    swapped (made up)  supported 1, contradicted 54, not enough information 36
+12:40:03 == 3. the debate statements (stated ones from the Oct 15e run)
+12:46:05    20 of 142 done
+12:55:09    40 of 142 done
+13:03:10    60 of 142 done
+13:09:07    80 of 142 done
+13:13:12    100 of 142 done
+13:19:23    120 of 142 done
+13:23:16    140 of 142 done
+13:24:09    labels: {'en': {'not enough information': 39, 'contradicted': 22, 'supported': 9}, 'fr': {'not enough information': 47, 'supported': 11, 'contradicted': 14}}
+13:24:09    Wikipedia: {'pages_fetched': 574, 'pages_cached': 102, 'searches': 142, 'fetch_failed': 0}
+13:24:09 == wrote /Users/caprice/Desktop/next_steps/oct16/text_evidence.json
+== DONE. Attach these files from ~/Desktop/next_steps/oct16 to the chat:
+total 1144
+drwxr-xr-x@ 5 caprice  staff     160 Oct 16 13:24 .
+drwxr-xr-x@ 3 caprice  staff      96 Oct 16 11:14 ..
+-rw-r--r--@ 1 caprice  staff  300912 Oct 16 12:04 rel_linker.json
+-rw-r--r--@ 1 caprice  staff    4459 Oct 16 13:24 run_log.txt
+-rw-r--r--@ 1 caprice  staff  272829 Oct 16 13:24 text_evidence.json

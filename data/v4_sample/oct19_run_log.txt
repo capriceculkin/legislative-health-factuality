@@ -1,0 +1,112 @@
+== Oct 19 steps, version Oct 19a (if you do not see this line, an older copy ran)
+Sun Oct 18 12:40:08 EDT 2026
+== 1 of 2: timing and claim yield on 300 random sentences per jurisdiction
+12:40:13 == parse_corpus_v5 us: v5 (Oct 19): three parses, two-of-three vote, discourse re-read; same rules as the Oct 15 sample
+12:40:14    338,772 sentences in data/dbpedia_pipeline/us/sentences_v3.json; languages {'en': 338539, 'fr': 233}
+12:40:14    sample of 300 sentences (seed 20261019); the discourse parse runs on all of them so it can be timed
+12:40:16    loaded spaCy en (core_web_lg 3.8.0) in 1.1s
+12:40:19    loaded Stanza en 1.15.0 (constituency: yes) in 2.3s
+12:40:43    loaded the discourse parser (UniRST) in 15.1s
+12:40:50    64 of 300 (6,335/hour; about 0.0 h left)
+12:40:59    128 of 300 (10,096/hour; about 0.0 h left)
+12:41:05    160 of 300 (11,351/hour; about 0.0 h left)
+12:41:13    224 of 300 (13,521/hour; about 0.0 h left)
+12:41:18    256 of 300 (14,429/hour; about 0.0 h left)
+12:41:24    300 of 300 (15,281/hour; about 0.0 h left)
+12:41:24    wrote 300 sentences in 1.2 min -> /Users/caprice/Desktop/next_steps/oct19/sample_us.jsonl
+12:41:25 == us: claim yield on 300 random sentences
+12:41:25    735 predications (2.45 per sentence): 323 stated, 351 embedded, 61 reported, 11 appositions; 247 sentences have a stated one; the old extractor had a claim for 60
+12:41:25    440 lines found by one parser only (review); 5 questions or too short; discourse re-read changed 14 lines; 33 negated, 31 hedged
+12:41:25 == us: seconds per sentence spacy 0.0116, stanza 0.1001, berkeley 0.0, rules 0.0012, discourse (per sentence it ran on) 0.1246
+12:41:25    the discourse parse would run on 64% of sentences under --rst multi
+12:41:25 == us: projected hours for all 338,772 sentences: syntax (spaCy, Stanza, Berkeley, rules) 10.6; discourse on every sentence 11.7; discourse on multi-predication sentences only 7.5; total with --rst multi 18.1; total with --rst all 22.4
+12:41:25 == wrote /Users/caprice/Desktop/next_steps/oct19/timing_us.json
+12:41:26 == parse_corpus_v5 ontario: v5 (Oct 19): three parses, two-of-three vote, discourse re-read; same rules as the Oct 15 sample
+12:41:26    500,666 sentences in data/dbpedia_pipeline/ontario/sentences_v3.json; languages {'en': 494230, 'fr': 6436}
+12:41:26    sample of 300 sentences (seed 20261019); the discourse parse runs on all of them so it can be timed
+12:41:28    loaded spaCy en (core_web_lg 3.8.0) in 0.6s
+12:41:31    loaded Stanza en 1.15.0 (constituency: yes) in 2.0s
+12:41:48    loaded the discourse parser (UniRST) in 15.0s
+12:41:51    loaded spaCy fr (core_news_lg 3.8.0) in 2.3s
+12:41:52    loaded Stanza fr 1.15.0 (constituency: no) in 1.3s
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+12:42:01    loaded the Berkeley parser (benepar_fr2) in 8.7s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+12:42:13    79 of 300 (6,078/hour; about 0.0 h left)
+12:42:18    111 of 300 (7,709/hour; about 0.0 h left)
+12:42:27    175 of 300 (10,299/hour; about 0.0 h left)
+12:42:33    207 of 300 (11,208/hour; about 0.0 h left)
+12:42:41    271 of 300 (13,081/hour; about 0.0 h left)
+12:42:46    300 of 300 (13,557/hour; about 0.0 h left)
+12:42:46    wrote 300 sentences in 1.3 min -> /Users/caprice/Desktop/next_steps/oct19/sample_ontario.jsonl
+12:42:46 == ontario: claim yield on 300 random sentences
+12:42:46    743 predications (2.48 per sentence): 322 stated, 395 embedded, 26 reported, 9 appositions; 250 sentences have a stated one; the old extractor had a claim for 27
+12:42:46    621 lines found by one parser only (review); 19 questions or too short; discourse re-read changed 17 lines; 57 negated, 42 hedged
+12:42:46 == ontario: seconds per sentence spacy 0.0203, stanza 0.0906, berkeley 0.0014, rules 0.0028, discourse (per sentence it ran on) 0.1303
+12:42:46    the discourse parse would run on 63% of sentences under --rst multi
+12:42:46 == ontario: projected hours for all 500,666 sentences: syntax (spaCy, Stanza, Berkeley, rules) 16.0; discourse on every sentence 18.1; discourse on multi-predication sentences only 11.5; total with --rst multi 27.5; total with --rst all 34.1
+12:42:46 == wrote /Users/caprice/Desktop/next_steps/oct19/timing_ontario.json
+12:42:49 == parse_corpus_v5 quebec: v5 (Oct 19): three parses, two-of-three vote, discourse re-read; same rules as the Oct 15 sample
+12:42:49    438,007 sentences in data/dbpedia_pipeline/quebec/sentences_v3.json; languages {'fr': 435341, 'en': 2666}
+12:42:49    sample of 300 sentences (seed 20261019); the discourse parse runs on all of them so it can be timed
+12:42:53    loaded spaCy fr (core_news_lg 3.8.0) in 2.1s
+12:42:55    loaded Stanza fr 1.15.0 (constituency: no) in 1.8s
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+12:43:06    loaded the Berkeley parser (benepar_fr2) in 9.7s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+12:43:18    loaded the discourse parser (UniRST) in 11.8s
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+12:43:31    64 of 300 (5,522/hour; about 0.0 h left)
+12:43:46    128 of 300 (8,136/hour; about 0.0 h left)
+12:43:53    160 of 300 (9,061/hour; about 0.0 h left)
+12:44:07    224 of 300 (10,436/hour; about 0.0 h left)
+12:44:15    256 of 300 (10,692/hour; about 0.0 h left)
+12:44:27    300 of 300 (10,995/hour; about 0.0 h left)
+12:44:27    wrote 300 sentences in 1.6 min -> /Users/caprice/Desktop/next_steps/oct19/sample_quebec.jsonl
+12:44:28 == quebec: claim yield on 300 random sentences
+12:44:28    769 predications (2.56 per sentence): 371 stated, 367 embedded, 31 reported, 2 appositions; 232 sentences have a stated one; the old extractor had a claim for 13
+12:44:28    548 lines found by one parser only (review); 20 questions or too short; discourse re-read changed 44 lines; 51 negated, 17 hedged
+12:44:28 == quebec: seconds per sentence spacy 0.0152, stanza 0.0669, berkeley 0.0941, rules 0.089, discourse (per sentence it ran on) 0.126
+12:44:28    the discourse parse would run on 64% of sentences under --rst multi
+12:44:28 == quebec: projected hours for all 438,007 sentences: syntax (spaCy, Stanza, Berkeley, rules) 32.3; discourse on every sentence 15.3; discourse on multi-predication sentences only 9.8; total with --rst multi 42.0; total with --rst all 47.6
+12:44:28 == wrote /Users/caprice/Desktop/next_steps/oct19/timing_quebec.json
+== 2 of 2: Wikipedia text check v2 (both ends of the claim required)
+12:44:29 == 1. loading the inference model MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7 (downloads once, about 1.1 GB)
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 9292.46it/s]
+12:44:34    labels: {0: 'entailment', 1: 'neutral', 2: 'contradiction'}
+12:44:34 == 2. the 300 judged facts against the subject's Wikipedia page
+12:44:45    50 of 300 done
+12:44:55    100 of 300 done
+12:44:56    150 of 300 done
+12:45:11    200 of 300 done
+12:45:29    250 of 300 done
+12:45:38    300 of 300 done
+12:45:38    support                    true vs made up        AUC 0.933 (pair count 0.933)
+12:45:38    support                    true vs judged false   AUC 0.729 (pair count 0.729)
+12:45:38    support minus contradict   true vs made up        AUC 0.925 (pair count 0.925)
+12:45:38    support minus contradict   true vs judged false   AUC 0.776 (pair count 0.776)
+12:45:38    judged true        supported 71, contradicted 4, not enough information 14
+12:45:38    judged false       supported 37, contradicted 23, not enough information 33
+12:45:38    swapped (made up)  supported 0, contradicted 12, not enough information 79
+12:45:38 == 3. the debate statements (stated ones from the Oct 15e run), both ends required
+12:50:06    20 of 142 done
+12:58:05    40 of 142 done
+13:10:08    80 of 142 done
+13:19:05    120 of 142 done
+13:23:04    140 of 142 done
+13:24:03    labels: {'en': {'not enough information': 33, 'not checkable by text': 19, 'contradicted': 10, 'supported': 8}, 'fr': {'not enough information': 34, 'not checkable by text': 24, 'contradicted': 7, 'supported': 7}}
+13:24:03    Wikipedia: {'pages_fetched': 304, 'pages_cached': 449, 'searches': 167, 'fetch_failed': 0}
+13:24:03 == wrote /Users/caprice/Desktop/next_steps/oct19/text_evidence_v2.json
+== DONE. Attach these from ~/Desktop/next_steps/oct19 to the chat: run_log.txt, timing_us.json, timing_ontario.json, timing_quebec.json, text_evidence_v2.json
+total 3176
+drwxr-xr-x@ 10 caprice  staff     320 Oct 18 13:24 .
+drwxr-xr-x@  4 caprice  staff     128 Oct 18 12:40 ..
+-rw-r--r--@  1 caprice  staff    9831 Oct 18 13:24 run_log.txt
+-rw-r--r--@  1 caprice  staff  437310 Oct 18 12:42 sample_ontario.jsonl
+-rw-r--r--@  1 caprice  staff  448347 Oct 18 12:44 sample_quebec.jsonl
+-rw-r--r--@  1 caprice  staff  414749 Oct 18 12:41 sample_us.jsonl
+-rw-r--r--@  1 caprice  staff  294408 Oct 18 13:24 text_evidence_v2.json
+-rw-r--r--@  1 caprice  staff    1351 Oct 18 12:42 timing_ontario.json
+-rw-r--r--@  1 caprice  staff    1306 Oct 18 12:44 timing_quebec.json
+-rw-r--r--@  1 caprice  staff    1280 Oct 18 12:41 timing_us.json

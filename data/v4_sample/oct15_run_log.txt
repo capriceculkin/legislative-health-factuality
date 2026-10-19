@@ -1,0 +1,88 @@
+== Oct 15 steps, version Oct 15e (if you do not see this line, an older copy ran)
+Thu Oct 15 16:13:06 EDT 2026
+== 1 of 3: French constituency parse
+   python: /Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/bin/python3 (version 3.10.7; inside a venv)
+   ok       torch 2.13.0
+   ok       transformers 5.14.1
+   ok       tokenizers 0.22.2
+   ok       sentencepiece 0.2.2
+   ok       google.protobuf 5.29.6
+   ok       nltk 3.10.3
+   ok       torch_struct 
+   ok       benepar 
+   the Berkeley parser imports and is patched for current torch and transformers added torch._six (removed in torch 2)
+== French constituency: loading spaCy French and the Berkeley parser's French model
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+   test sentence parsed: (TOP (SENT (NP (DET Le) (NC+ (NC projet) (P de) (NC loi))) (VN (V est) (VPP adopté)) (PONCT .)))
+   fixes used: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+   parsed 65 French sentences in 6s; 0 sentence parts failed
+   labels seen: NC 502, NP 488, DET 315, PP 286, P 284, PONCT 232, VN 199, V 134, ADJ 131, ADV 116, P+D 78, TOP 77, SENT 76, AP 65, COORD 56, NC+ 55, VPinf 54, VINF 54, CLS 49, CC 49, VPP 45, Sint 37, CS 27, VPpart 27, ADV+ 26, NPP 24, Srel 24, PROREL 24, Ssub 23, PRO 21
+== wrote /Users/caprice/Desktop/next_steps/oct15/fr_trees.json
+== 2 of 3: predications from all three parses
+== French constituency trees found for 65 sentences
+   2 of 3 en: key lines found 107/119, lines produced 122 (107 in the key); stated-or-not right 102/107
+   2 of 3 fr: key lines found 93/116, lines produced 118 (93 in the key); stated-or-not right 84/93
+   any parse en: key lines found 111/119, lines produced 166 (111 in the key); stated-or-not right 105/111
+   any parse fr: key lines found 108/116, lines produced 207 (108 in the key); stated-or-not right 92/108
+   single parse const en: 102/119
+   single parse const fr: 77/116
+   single parse spacy en: 103/119
+   single parse spacy fr: 88/116
+   single parse stanza en: 100/119
+   single parse stanza fr: 95/116
+   held-out French, constituency alone: 23/33
+== wrote /Users/caprice/Desktop/next_steps/oct15/statements_v4.json
+== 3 of 3: concepts and paths (needs the tunnel to Dunkleosteus open in another window)
+16:13:33 == 1. the full graph from ~/.kg_dump
+16:13:35    7,220,726 pages, 21,049,482 links
+16:13:35    left out 340,629 'see also' and 'not to be confused with' links; 20,708,852 factual links remain
+16:13:35    parts of speech for 100 of 100 sentences (so 'The', 'You', 'major' are not taken as concepts)
+16:13:36 == 2. Spotlight (tunnel to Dunkleosteus)
+16:13:46    mapping 51 French pages to English in a few batches
+16:13:56    fr.dbpedia.org also failed for a batch (HTTPError 406); 7 French pages stay unmapped this run
+16:14:11    20 statements done (35s)
+16:15:40    40 statements done (124s)
+16:17:27    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:17:37    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:17:47    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:18:03    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:18:13    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:18:22    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:18:34    120 statements done (299s)
+16:18:45    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:18:54    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:19:04    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:19:14    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:19:24    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:19:33    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:19:43    fr.dbpedia.org also failed for a batch (HTTPError 406); 1 French pages stay unmapped this run
+16:19:45    140 statements done (369s)
+16:20:04 == results
+    old {'statements': 142, 'concept at both ends': 9, 'with a path': None}
+    v1 {'statements': 142, 'concept at both ends': 30, 'with a path': 30}
+    v2 {'statements': 142, 'concept at both ends': 16, 'with a path': 16}
+    v3 {'statements': 142, 'concept at both ends': 19, 'with a path': 19}
+    hand-checked senses right, version 0 29/43
+    hand-checked senses right, version 1 34/43
+    hand-checked senses right, version 2 29/43
+    hand-checked senses right, version 3 33/43
+    sentences where the candidate list failed 0
+    French pages mapped to English {'wikipedia': 23, 'dbpedia': 0, 'none': 0, 'failed_batches': 14}
+    French statements with a concept at either end (v1) 33/72
+    links left out (see also, not to be confused with) 340629
+    This House condemns capital punishment: United_States_House_of_Representatives -> 0.0876 United_States_House_of_Representatives -[location]-> Washington,_D.C. (links 8316) <-[deathPlace]- David_Herold (links 4) -[convictionPenalty]-> Capital_punishm
+    This House condemns capital punishment: Legislative_Assembly_of_Ontario -> 0.0815 Legislative_Assembly_of_Ontario -[leader]-> Elizabeth_Dowdeswell (links 10) -[birthPlace]-> Belfast (links 1971) <-[deathPlace]- Robert_McGladdery (links 4) -[c
+    This House condemns capital punishment: National_Assembly_of_Quebec -> 0.0759 National_Assembly_of_Quebec -[politicalPartyInLegislature]-> Abstentionism (links 7) <-[politicalPartyInLegislature]- Parliament_of_the_United_Kingdom (links 39
+    This House condemns capital punishment: House_of_Commons_of_Canada -> 0.0808 House_of_Commons_of_Canada -[politicalPartyInLegislature]-> Conservative_Party_of_Canada (links 537) <-[politician]- Beamsville,_Ontario__PoliticalFunction__3 (
+    This House condemns capital punishment: Supreme_Court_of_the_United_States -> 0.0884 Supreme_Court_of_the_United_States <-[nonFictionSubject]- The_Brethren:_Inside_the_Supreme_Court (links 5) -[author]-> Bob_Woodward (links 25) -[birthPlace]-> G
+16:20:04 == wrote /Users/caprice/Desktop/next_steps/oct15/concepts_v3.json
+== DONE. Attach these files from ~/Desktop/next_steps/oct15 to the chat (run_log.txt matters most):
+total 1096
+drwxr-xr-x@ 7 caprice  staff     224 Oct 15 16:20 .
+drwxr-xr-x@ 3 caprice  staff      96 Oct 15 16:13 ..
+-rw-r--r--@ 1 caprice  staff  221568 Oct 15 16:20 concepts_v3.json
+-rw-r--r--@ 1 caprice  staff   58836 Oct 15 16:13 fr_trees.json
+-rw-r--r--@ 1 caprice  staff    7020 Oct 15 16:20 run_log.txt
+-rw-r--r--@ 1 caprice  staff   96549 Oct 15 16:20 spotlight_raw.json
+-rw-r--r--@ 1 caprice  staff  166652 Oct 15 16:13 statements_v4.json

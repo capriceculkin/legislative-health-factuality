@@ -1,0 +1,6881 @@
+{
+ "version": "v4 (Oct 15)",
+ "summary": [
+  "2 of 3 en: key lines found 107/119, lines produced 122 (107 in the key); stated-or-not right 102/107",
+  "2 of 3 fr: key lines found 93/116, lines produced 118 (93 in the key); stated-or-not right 84/93",
+  "any parse en: key lines found 111/119, lines produced 166 (111 in the key); stated-or-not right 105/111",
+  "any parse fr: key lines found 108/116, lines produced 207 (108 in the key); stated-or-not right 92/108",
+  "single parse const en: 102/119",
+  "single parse const fr: 77/116",
+  "single parse spacy en: 103/119",
+  "single parse spacy fr: 88/116",
+  "single parse stanza en: 100/119",
+  "single parse stanza fr: 95/116",
+  "held-out French, constituency alone: 23/33"
+ ],
+ "rows": [
+  {
+   "n": 1,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "108-HR660",
+   "sentence_id": "US|108-HR660|2003-06-19|p2899|s7",
+   "text": "A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "A small hardware store in an AHP",
+     "verb": "would be joining",
+     "object": "an association",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "A small hardware store in an AHP (inh)",
+     "verb": "sending",
+     "object": "their premiums",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word; hedge carried over",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "we",
+     "verb": "need",
+     "object": "the check",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of is",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "that",
+     "verb": "is",
+     "object": "why we need the check",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "that",
+     "verb": "is",
+     "object": "why we need the check",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "that",
+     "verb": "is",
+     "object": "why we need the check",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "102-HR2507",
+   "sentence_id": "US|102-HR2507|1991-07-25|p102|s10",
+   "text": "The bill contains many protections against abuse, such as requiring women donating fetal tissue for research to sign a written consent form, explicitly ensuring that the decision to have an abortion is separate and independent of that to donate fetal tissue.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The bill",
+     "verb": "contains",
+     "object": "many protections against abuse",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The bill (inh)",
+     "verb": "requiring",
+     "object": "women",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "example (such as / including)",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "women",
+     "verb": "donating",
+     "object": "fetal tissue",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "women (inh)",
+     "verb": "to sign",
+     "object": "a written consent form",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "purpose (to)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The bill (inh)",
+     "verb": "ensuring",
+     "object": "that the decision to have an abortion is separate and independent of that to donate fetal tissue",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the decision",
+     "verb": "is",
+     "object": "separate and independent of that to donate fetal tissue",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of ensuring",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the decision",
+     "verb": "have",
+     "object": "an abortion",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the decision (inh)",
+     "verb": "donate",
+     "object": "fetal tissue",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "purpose (to)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "many protections against abuse",
+     "verb": "requiring",
+     "object": "women",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "110-HR3963",
+   "sentence_id": "US|110-HR3963|2007-10-25|p6586|s3",
+   "text": "The CHAMP bill would have also addressed major health care issues, first by protecting traditional Medicare and second by addressing the catastrophic 10 percent payment cuts to physicians who serve Medicare patients.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The CHAMP bill",
+     "verb": "would have addressed",
+     "object": "major health care issues",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The CHAMP bill (inh)",
+     "verb": "protecting",
+     "object": "traditional Medicare",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "means (by); hedge carried over",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The CHAMP bill (inh)",
+     "verb": "addressing",
+     "object": "the catastrophic 10 percent payment cuts to physicians",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "means (by); hedge carried over",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "physicians",
+     "verb": "serve",
+     "object": "Medicare patients",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 4,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "107-HR2563",
+   "sentence_id": "US|107-HR2563|2001-08-02|p394|s2",
+   "text": "If only punitive damages are capped, leaving noneconomic awards with no ceiling, plaintiffs' lawyers would simply change their complaints to plead greater economic damages.”",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "only punitive damages",
+     "verb": "are capped",
+     "object": "",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "condition or time (if)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "plaintiffs' lawyers",
+     "verb": "would change",
+     "object": "their complaints",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "plaintiffs' lawyers (inh)",
+     "verb": "to plead",
+     "object": "greater economic damages",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "purpose (to)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "only punitive damages (inh)",
+     "verb": "leaving",
+     "object": "noneconomic awards",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "plaintiffs' lawyers (inh)",
+     "verb": "leaving",
+     "object": "noneconomic awards",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "only punitive damages",
+     "verb": "are capped",
+     "object": "leaving noneconomic awards with no ceiling",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "105-HR4250",
+   "sentence_id": "US|105-HR4250|1998-07-24|p15810|s4",
+   "text": "His doctor prescribed the medication, but then the HMO said, “You need another opinion.”",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "His doctor",
+     "verb": "prescribed",
+     "object": "the medication",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the HMO",
+     "verb": "said",
+     "object": "You need another opinion",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "You",
+     "verb": "need",
+     "object": "another opinion",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 6,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "108-HR5",
+   "sentence_id": "US|108-HR5|2003-03-12|p303|s0",
+   "text": "Last year the House passed legislation identical to H.R. 5, but the Senate refused to act.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "the House",
+     "verb": "passed",
+     "object": "legislation identical to H.R. 5",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the Senate",
+     "verb": "refused to act",
+     "object": "",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "the Senate",
+     "verb": "refused",
+     "object": "to act",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "103-HR4",
+   "sentence_id": "US|103-HR4|1993-03-10|p85|s13",
+   "text": "It is time to stop playing politics with people’s lives. | urge my colleagues to reject the amendment.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "It",
+     "verb": "is",
+     "object": "time",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "time",
+     "verb": "to stop playing",
+     "object": "politics",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "|",
+     "verb": "urge",
+     "object": "my colleagues",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "my colleagues (inh)",
+     "verb": "to reject",
+     "object": "the amendment",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "stop playing politics with people’s lives",
+     "verb": "is",
+     "object": "It time",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "stop playing politics with people’s lives (inh)",
+     "verb": "stop playing",
+     "object": "politics",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "time (inh)",
+     "verb": "playing",
+     "object": "politics",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "115-HR5247",
+   "sentence_id": "US|115-HR5247|2018-03-13|p432|s0",
+   "text": "A little over a year ago, this House passed the 21st Century Cures Act, made unprecedented acceleration of discoveries.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "this House",
+     "verb": "passed",
+     "object": "the 21st Century Cures Act",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "this House (inh)",
+     "verb": "made",
+     "object": "unprecedented acceleration of discoveries",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 9,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "106-HR1304",
+   "sentence_id": "US|106-HR1304|2000-06-29|p637|s4",
+   "text": "The costs will not go towards patient care but towards sustaining doctor unionization and salary hikes.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The costs",
+     "verb": "will not go",
+     "object": "towards patient care",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The costs (inh)",
+     "verb": "sustaining",
+     "object": "doctor unionization and salary hikes",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 10,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "108-HR1",
+   "sentence_id": "US|108-HR1|2003-06-26|p30616|s0",
+   "text": "Such program shall include a separate focus (with respect to all the elements described in this subparagraph) on racial and ethnic minorities.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Such program",
+     "verb": "shall include",
+     "object": "a separate focus with respect to all the elements on racial and ethnic minorities",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "all the elements",
+     "verb": "described",
+     "object": "in this subparagraph",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 11,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "117-HR3755",
+   "sentence_id": "US|117-HR3755|2021-09-24|p1670|s1",
+   "text": "SB-8, bars abortion after a fetal heartbeat can be detected and puts clinics at risk of being shut down if they are found to be in violation.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "SB-8",
+     "verb": "bars",
+     "object": "abortion",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "a fetal heartbeat",
+     "verb": "can be detected",
+     "object": "",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "condition or time (after)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "they",
+     "verb": "are found to be",
+     "object": "in violation",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "condition or time (if)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "SB-8 (inh)",
+     "verb": "puts",
+     "object": "clinics",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "they (inh)",
+     "verb": "be",
+     "object": "in violation",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "a fetal heartbeat (inh)",
+     "verb": "puts",
+     "object": "clinics",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "a fetal heartbeat (inh)",
+     "verb": "being shut down",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "SB-8 (inh)",
+     "verb": "can be detected",
+     "object": "after a fetal heartbeat",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "risk",
+     "verb": "being shut down",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "they",
+     "verb": "are found",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "SB-8 (inh)",
+     "verb": "being shut down",
+     "object": "if they are found to be in violation",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "114-HR4641",
+   "sentence_id": "US|114-HR4641|2016-05-11|p279|s1",
+   "text": "The Clerk will designate the amendment.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The Clerk",
+     "verb": "will designate",
+     "object": "the amendment",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 13,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "115-HR3922",
+   "sentence_id": "US|115-HR3922|2017-11-03|p1519|s0",
+   "text": "In short, this Republican bill offers a false choice.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "this Republican bill",
+     "verb": "offers",
+     "object": "a false choice",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 14,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "106-HR4365",
+   "sentence_id": "US|106-HR4365|2000-09-27|p8211|s1",
+   "text": "My own State of Arkansas was recently declared to have the highest number of meth lab seizures per capita in the Nation.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "My own State of Arkansas",
+     "verb": "was declared to have",
+     "object": "the highest number of meth lab seizures per capita in the Nation",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "My own State of Arkansas (inh)",
+     "verb": "to have",
+     "object": "the highest number of meth lab seizures per capita in the Nation",
+     "kind": "reported",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "110-HR3",
+   "sentence_id": "US|110-HR3|2007-01-11|p619|s6",
+   "text": "Research tells us adult stem cell research works.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Research",
+     "verb": "tells",
+     "object": "adult stem cell research works",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "adult stem cell research",
+     "verb": "works",
+     "object": "",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "what is said (tells)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Research",
+     "verb": "tells",
+     "object": "us",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "104-HR2425",
+   "sentence_id": "US|104-HR2425|1995-10-19|p14940|s1",
+   "text": "The substitute envisions no such thing.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The substitute",
+     "verb": "envisions",
+     "object": "no such thing",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "The substitute",
+     "verb": "envisions",
+     "object": "no such thing",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "112-HR2",
+   "sentence_id": "US|112-HR2|2011-01-19|p2268|s0",
+   "text": "My Republican friends say repeal these health care rights and protections that were extended last year.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "My Republican friends",
+     "verb": "say repeal",
+     "object": "these health care rights and protections",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "these health care rights and protections",
+     "verb": "were extended",
+     "object": "last year",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "these health care rights and protections",
+     "verb": "were extended",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "My Republican friends (inh)",
+     "verb": "repeal",
+     "object": "these health care rights and protections",
+     "kind": "reported",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "116-HR2115",
+   "sentence_id": "US|116-HR2115|2019-10-28|p156|s0",
+   "text": "The bill started with a very simple request from seniors in my district.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The bill",
+     "verb": "started",
+     "object": "with a very simple request from seniors in my district",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 19,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "110-HR1424",
+   "sentence_id": "US|110-HR1424|2008-10-03|p11438|s1",
+   "text": "The Administration has labeled the current economic situation as a crisis that requires emergency measures.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The Administration",
+     "verb": "has labeled",
+     "object": "the current economic situation",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "a crisis",
+     "verb": "requires",
+     "object": "emergency measures",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 20,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "100-HR5142",
+   "sentence_id": "US|100-HR5142|1988-09-22|p42|s53",
+   "text": "For the safety of other prisoners and those who work in the prisons, prisoners need to be tested for the AIDS virus.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "those",
+     "verb": "work",
+     "object": "in the prisons",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "prisoners",
+     "verb": "need to be tested",
+     "object": "for the AIDS virus",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "prisoners (inh)",
+     "verb": "to be tested",
+     "object": "for the AIDS virus",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "109-HR810",
+   "sentence_id": "US|109-HR810|2006-07-19|p481|s1",
+   "text": "In 2005 NIH spent $38 million, up $13 million from 2004.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "NIH",
+     "verb": "spent",
+     "object": "$38 million",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 22,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "108-S15",
+   "sentence_id": "US|108-S15|2004-07-14|p1945|s1",
+   "text": "Moreover, the potential liability for an adverse reaction by a patient far outweighs any potential financial benefit in some of these cases.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "the potential liability for an adverse reaction by a patient",
+     "verb": "outweighs",
+     "object": "any potential financial benefit in some of these cases",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 23,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "106-S2311",
+   "sentence_id": "US|106-S2311|2000-10-05|p2850|s5",
+   "text": "As geographic trends in the disease change, the revised formula automatically realigns funding with the current distribution of the disease.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "the revised formula",
+     "verb": "realigns",
+     "object": "funding with the current distribution of the disease",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 24,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "107-HR2505",
+   "sentence_id": "US|107-HR2505|2001-07-31|p1230|s2",
+   "text": "So ACT assembled a special task force of scientists and",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "ACT",
+     "verb": "assembled",
+     "object": "a special task force of scientists",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 25,
+   "lang": "en",
+   "jurisdiction": "us",
+   "bill_key": "108-HR5",
+   "sentence_id": "US|108-HR5|2003-03-13|p1928|s2",
+   "text": "Tens of thousands of people die each year from preventable medical errors.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Tens of thousands of people",
+     "verb": "die",
+     "object": "from preventable medical errors",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Tens of thousands of people",
+     "verb": "die",
+     "object": "each year",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "41-1-Bill45",
+   "sentence_id": "ON|41-1-Bill45|2014-12-03|p6|s7",
+   "text": "The cartridge can contain flavouring and nicotine.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The cartridge",
+     "verb": "can contain",
+     "object": "flavouring and nicotine",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 27,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "34-1-Bill147",
+   "sentence_id": "ON|34-1-Bill147|1988-11-07|p16|s27",
+   "text": "One hundred and seventeen women from Cochrane district all travelled outside their area to obtain abortions.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "One hundred and seventeen women from Cochrane district",
+     "verb": "travelled",
+     "object": "outside their area",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "One hundred and seventeen women from Cochrane district (inh)",
+     "verb": "to obtain",
+     "object": "abortions",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "purpose (to)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 28,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "37-1-Bill68",
+   "sentence_id": "ON|37-1-Bill68|2000-06-05|p14|s25",
+   "text": "The government has fittingly, in my opinion, chosen to call this Brian's Law after Brian Smith, the much-ad-mired Ottawa sportscaster, whom I knew very well on a personal basis.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The government",
+     "verb": "has chosen to call",
+     "object": "this Brian's Law",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "I",
+     "verb": "knew",
+     "object": "the much-ad-mired Ottawa sportscaster",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Brian Smith",
+     "verb": "is (apposition)",
+     "object": "the much-ad-mired Ottawa sportscaster",
+     "at": 27,
+     "kind": "asserted",
+     "how": "apposition (renames the noun before the comma)",
+     "found_by": [
+      "spacy"
+     ],
+     "source": "apposition"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "The government",
+     "verb": "has",
+     "object": "in my opinion, chosen to call this Brian's Law after Brian Smith, the much-ad-mired Ottawa sportscaster, whom",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "The government (inh)",
+     "verb": "to call",
+     "object": "this Brian's Law",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "35-1-Bill147",
+   "sentence_id": "ON|35-1-Bill147|1991-11-21|p12|s35",
+   "text": "This legislation warrants the support of every member of this Legislative Assembly.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "This legislation",
+     "verb": "warrants",
+     "object": "the support of every member of this Legislative Assembly",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 30,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "42-1-Bill189",
+   "sentence_id": "ON|42-1-Bill189|2020-04-14|p9|s48",
+   "text": "Shelter organizations and folks that work on the front lines of communities across the province are raising the alarm.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Shelter organizations and folks",
+     "verb": "work",
+     "object": "on the front lines of communities across the province",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Shelter organizations and folks",
+     "verb": "are raising",
+     "object": "the alarm",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 31,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "39-1-Bill185",
+   "sentence_id": "ON|39-1-Bill185|2009-09-14|p65|s21",
+   "text": "That country has realized the folly of being dependent on foreign sources of energy.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "That country",
+     "verb": "has realized",
+     "object": "the folly",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "the folly",
+     "verb": "being",
+     "object": "dependent on foreign sources of energy",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "That country (inh)",
+     "verb": "being",
+     "object": "dependent on foreign sources of energy",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 32,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "43-1-Bill135",
+   "sentence_id": "ON|43-1-Bill135|2023-10-23|p24|s25",
+   "text": "Ontario Health has already integrated 22 former health agencies and organizations, such as Cancer Care Ontario, eHealth Ontario, Health Quality Ontario and others into a single organization, bringing together the expertise and experience of these former agencies to support a more connected, high-quality health care system.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Ontario Health",
+     "verb": "has integrated",
+     "object": "22 former health agencies and organizations, such as Cancer Care Ontario, eHealth Ontario, Health Quality Ontario and others",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Ontario Health (inh)",
+     "verb": "bringing",
+     "object": "the expertise and experience of these former agencies",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Ontario Health (inh)",
+     "verb": "to support",
+     "object": "a more connected, high-quality health care system",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "purpose (to)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Ontario Health (inh)",
+     "verb": "bringing",
+     "object": "together",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "40-2-Bill161",
+   "sentence_id": "ON|40-2-Bill161|2014-03-04|p23|s155",
+   "text": "Quebec’s bill, and I read some of it out, allows for the reunification of families, and it allows for the settlement of refugees and displaced persons.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "I",
+     "verb": "read out",
+     "object": "some of it",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: other (nsubj)",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "it",
+     "verb": "allows",
+     "object": "for the settlement of refugees and displaced persons",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "I (inh)",
+     "verb": "allows",
+     "object": "for the reunification of families",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Quebec’s bill, and",
+     "verb": "allows",
+     "object": "for the reunification of families",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "41-2-Bill174",
+   "sentence_id": "ON|41-2-Bill174|2017-11-02|p6|s25",
+   "text": "Stores would have trained and knowledgeable staff and they would sell products in a safe, responsible manner, including strict requirements for age verification, as well as meeting additional federal requirements.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Stores",
+     "verb": "would have trained",
+     "object": "staff",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "they",
+     "verb": "would sell",
+     "object": "products including strict requirements for age verification, as well as",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "they (inh)",
+     "verb": "meeting",
+     "object": "additional federal requirements",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: other (pobj); hedge carried over",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Stores",
+     "verb": "would have",
+     "object": "trained and knowledgeable staff",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 35,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "41-1-Bill49",
+   "sentence_id": "ON|41-1-Bill49|2015-03-09|p42|s70",
+   "text": "Migrants of colour, we know, earn 40% less than their white counterparts.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "we",
+     "verb": "know",
+     "object": "",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Migrants of colour",
+     "verb": "earn",
+     "object": "40% less than their white counterparts",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 36,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "41-1-Bill49",
+   "sentence_id": "ON|41-1-Bill49|2015-03-02|p51|s29",
+   "text": "Immigrants make up only 22% of our population compared to 29% across Ontario.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Immigrants",
+     "verb": "make up",
+     "object": "only 22% of our population",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "only 22% of our population",
+     "verb": "compared",
+     "object": "to 29% across Ontario",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 37,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "34-1-Bill123",
+   "sentence_id": "ON|34-1-Bill123|1988-05-05|p4|s0",
+   "text": "The bill that is before us today claims to establish administrative proceedings to ensure that a woman’s decision to have an abortion is based on informed choice.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The bill",
+     "verb": "is",
+     "object": "before us",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The bill",
+     "verb": "claims to establish",
+     "object": "administrative proceedings",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The bill (inh)",
+     "verb": "to ensure",
+     "object": "that a woman’s decision to have an abortion is based on informed choice",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "purpose (to)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "a woman’s decision",
+     "verb": "is based",
+     "object": "on informed choice",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of ensure",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "a woman’s decision",
+     "verb": "have",
+     "object": "an abortion",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "The bill (inh)",
+     "verb": "to establish",
+     "object": "administrative proceedings",
+     "kind": "reported",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "33-1-Bill54",
+   "sentence_id": "ON|33-1-Bill54|1986-01-13|p224|s40",
+   "text": "Pharmacies should continue to be restricted to the lowest price in inventory on product selected prescriptions.\" The report also recommends that the Ministry of Health and pharmacy organizations should set a target level of substitution.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Pharmacies",
+     "verb": "should continue to be restricted",
+     "object": "to the lowest price in inventory on product selected prescriptions",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The report",
+     "verb": "recommends",
+     "object": "that the Ministry of Health and pharmacy organizations should set a target level of substitution",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the Ministry of Health and pharmacy organizations",
+     "verb": "should set",
+     "object": "a target level of substitution",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Pharmacies (inh)",
+     "verb": "to be restricted",
+     "object": "to the lowest price in inventory on product selected prescriptions",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "40-1-Bill2",
+   "sentence_id": "ON|40-1-Bill2|2012-02-21|p26|s5",
+   "text": "The member across the way from Windsor West would know the challenges that we face in long-term-care facilities, and some of the shortfalls that this government has made when it comes to funding and actually coming to the table with a plan that will address those needs.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The member across the way from Windsor West",
+     "verb": "would know",
+     "object": "the challenges",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "we",
+     "verb": "face",
+     "object": "the challenges",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "this government",
+     "verb": "has made",
+     "object": "the shortfalls",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "it",
+     "verb": "comes",
+     "object": "to funding",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "condition or time (when)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "it (inh)",
+     "verb": "coming",
+     "object": "to the table",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "joined to: condition or time (when)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "a plan",
+     "verb": "will address",
+     "object": "those needs",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 40,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "34-2-Bill47",
+   "sentence_id": "ON|34-2-Bill47|1989-10-25|p4|s3",
+   "text": "Perhaps the Treasurer, in his usual wisdom, could consider a Queen’s Park verbosity tax, whereby long and repetitive interventions would become taxable.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "the Treasurer",
+     "verb": "could consider",
+     "object": "a Queen’s Park verbosity tax",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "long and repetitive interventions",
+     "verb": "would become",
+     "object": "taxable",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "long and repetitive interventions",
+     "verb": "would become",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 41,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "41-2-Bill160",
+   "sentence_id": "ON|41-2-Bill160|2017-12-07|p13|s9",
+   "text": "This report contains 12 recommendations, including the creation of new legislation to consolidate under one roof out-of-hospital and independent health facilities.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "This report",
+     "verb": "contains",
+     "object": "12 recommendations, including the creation of new legislation",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "new legislation",
+     "verb": "consolidate",
+     "object": "under one roof out-of-hospital and independent health facilities",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "the creation",
+     "verb": "to consolidate",
+     "object": "out-of-hospital and independent health facilities",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 42,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "34-1-Bill174",
+   "sentence_id": "ON|34-1-Bill174|1988-12-14|p64|s0",
+   "text": "The amendment enhances the intent of the legislation and we are happy to support it.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The amendment",
+     "verb": "enhances",
+     "object": "the intent of the legislation",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "we",
+     "verb": "are",
+     "object": "happy to support it",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "we",
+     "verb": "are to support",
+     "object": "it",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 43,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "39-2-Bill160",
+   "sentence_id": "ON|39-2-Bill160|2011-03-24|p2|s6",
+   "text": "Way back in the day, miners who went underground were constantly exposed to various types of carcinogens.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "miners",
+     "verb": "went",
+     "object": "underground",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "miners",
+     "verb": "were exposed",
+     "object": "to various types of carcinogens",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 44,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "42-1-Bill218",
+   "sentence_id": "ON|42-1-Bill218|2020-10-26|p49|s15",
+   "text": "The city’s administration wrote a council report on how that experiment was received by the voters.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "The city’s administration",
+     "verb": "wrote",
+     "object": "a council report",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "that experiment",
+     "verb": "was received",
+     "object": "by the voters",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 45,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "41-2-Bill9",
+   "sentence_id": "ON|41-2-Bill9|2016-09-29|p18|s14",
+   "text": "“Strokes account for 20,000 emergency visits and 15,350 in-patient hospital admissions.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Strokes",
+     "verb": "account",
+     "object": "for 20,000 emergency visits and 15,350 in-patient hospital admissions",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 46,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "42-1-Bill3",
+   "sentence_id": "ON|42-1-Bill3|2020-12-01|p18|s22",
+   "text": "So when I first got elected here, my father was diagnosed with an inoperable oral cancer.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "I",
+     "verb": "got elected",
+     "object": "here",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "condition or time (when)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "my father",
+     "verb": "was diagnosed",
+     "object": "with an inoperable oral cancer",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 47,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "34-2-Bill147",
+   "sentence_id": "ON|34-2-Bill147|1989-11-16|p149|s0",
+   "text": "Mr Eves moves that subsection 19(4) of the bill be struck out and the following substituted therefor: “(4) The director shall deliver with the notice under subsection (3) a notice that the licensee is entitled to a hearing by the board if the licensee mails or delivers, within 15 days after the notice is served on the licensee, notice in writing requiring a hearing to the director and the board, and the licensee may so require such a hearing.”",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Mr Eves",
+     "verb": "moves",
+     "object": "that subsection 19(4) of the bill be struck out and",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of deliver",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "that subsection 19(4 of the bill",
+     "verb": "be struck out",
+     "object": "",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of moves",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "The director",
+     "verb": "shall deliver",
+     "object": "a notice",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the licensee",
+     "verb": "is entitled",
+     "object": "to a hearing by the board",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the licensee (inh)",
+     "verb": "delivers",
+     "object": "",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the notice",
+     "verb": "is served",
+     "object": "on the licensee",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "a notice (inh)",
+     "verb": "requiring",
+     "object": "a hearing to the director and the board",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the licensee",
+     "verb": "may require",
+     "object": "such a hearing",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "the following",
+     "verb": "substituted",
+     "object": "(4) The director shall deliver with the notice under subsection (3) a notice that the licensee is entitled to a",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "joined to: complement of moves",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "the licensee",
+     "verb": "mails",
+     "object": "within 15 days",
+     "kind": "reported",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "a notice",
+     "verb": "notice",
+     "object": "in writing",
+     "kind": "reported",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "Mr Eves (inh)",
+     "verb": "be struck out",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "the licensee",
+     "verb": "is entitled",
+     "object": "a notice",
+     "kind": "reported",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "writing",
+     "verb": "requiring",
+     "object": "a hearing",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 48,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "39-1-Bill99",
+   "sentence_id": "ON|39-1-Bill99|2008-09-22|p60|s6",
+   "text": "People no longer go to that lodge on Lake Simcoe by train or by steamer, as they did in the days of Stephen Leacock—and obviously a demand for, a request for additional recreational resources.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "People",
+     "verb": "no longer go",
+     "object": "to that lodge on Lake Simcoe",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "they",
+     "verb": "did",
+     "object": "in the days of Stephen Leacock and obviously a demand for",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "People",
+     "verb": "go",
+     "object": "to that lodge on Lake Simcoe",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 49,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "35-3-Bill26",
+   "sentence_id": "ON|35-3-Bill26|1993-08-03|p1|s31",
+   "text": "These statements of environmental values must be developed by 14 affected ministries of the government to act as guiding principles for taking the environment into account in making their decisions.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "These statements of environmental values",
+     "verb": "must be developed to act",
+     "object": "as guiding principles",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "These statements of environmental values (inh)",
+     "verb": "taking",
+     "object": "the environment",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "These statements of environmental values (inh)",
+     "verb": "making",
+     "object": "their decisions",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "These statements of environmental values",
+     "verb": "must be developed",
+     "object": "by 14 affected ministries of the government",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "guiding principles",
+     "verb": "taking",
+     "object": "the environment",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "guiding principles (inh)",
+     "verb": "making",
+     "object": "their decisions",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 50,
+   "lang": "en",
+   "jurisdiction": "ontario",
+   "bill_key": "40-1-Bill2",
+   "sentence_id": "ON|40-1-Bill2|2011-12-05|p54|s4",
+   "text": "On average, 93% of taxpayers are saving $200 annually, and 90,000 Ontarians aren’t paying any tax at all.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "93% of taxpayers",
+     "verb": "are saving",
+     "object": "$200",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "90,000 Ontarians",
+     "verb": "aren’t paying",
+     "object": "any tax at all",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 51,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "36-2-Bill98",
+   "sentence_id": "QC|36-2-Bill98|2002-06-04|p201|s3",
+   "text": "La franchise va passer de 8,33 à 9,13 par mois, M. le Président.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "La franchise",
+     "verb": "va passer",
+     "object": "de 8,33",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 52,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-2-Bill35",
+   "sentence_id": "QC|34-2-Bill35|1992-06-09|p466|s6",
+   "text": "Le ministre a amené cet après-midi, à 15 heures, 35 amendements, je ne sais pas s'il a voulu que ça corresponde avec le numéro de son projet de loi, 35 amendements sur le projet de loi 35, mais c'est un drôle de hasard.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le ministre",
+     "verb": "a amené",
+     "object": "cet après-midi",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "il",
+     "verb": "a voulu",
+     "object": "35 amendements sur le projet de loi 35",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of sais",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ça",
+     "verb": "corresponde",
+     "object": "avec le numéro de son projet de loi",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of voulu",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "c'",
+     "verb": "est",
+     "object": "un drôle de hasard",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "je",
+     "verb": "ne sais pas",
+     "object": "à 15 heures",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "Le ministre",
+     "verb": "a amené",
+     "object": "35 amendements",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "je",
+     "verb": "ne sais pas",
+     "object": "s'il a voulu que ça corresponde avec le numéro de son projet de loi, 35 amendements sur le projet de loi 35",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 53,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-2-Bill106",
+   "sentence_id": "QC|34-2-Bill106|1993-10-19|p3|s0",
+   "text": "Le 4 novembre 1971, l'Assemblée nationale du Québec, cette Assemblée, M. le Président, adoptait la Loi sur l'indemnisation des victimes d'actes criminels.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "cette Assemblée",
+     "verb": "adoptait",
+     "object": "la Loi sur l'indemnisation des victimes d'actes criminels",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "M. le Président",
+     "verb": "adoptait",
+     "object": "la Loi sur l'indemnisation des victimes d'actes criminels",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 54,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-2-Bill33",
+   "sentence_id": "QC|37-2-Bill33|2006-11-02|p342|s11",
+   "text": "Quand ça traîne trop, bien les gens perdent leur enthousiasme, leur confiance puis ils s'en vont vers autre chose.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "ça",
+     "verb": "traîne",
+     "object": "",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "condition or time (quand)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les gens",
+     "verb": "perdent",
+     "object": "leur enthousiasme",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ils",
+     "verb": "vont",
+     "object": "vers autre chose",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 55,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill89",
+   "sentence_id": "QC|34-1-Bill89|1990-12-14|p41|s4",
+   "text": "La richesse est taxée en Allemagne de l'Ouest et je pourrais vous citer beaucoup d'autres pays: l'Autriche, la Belgique, la Norvège et le Danemark; tous utilisent cet impôt sur la richesse.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "La richesse",
+     "verb": "est taxée",
+     "object": "en Allemagne de l'Ouest",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "je",
+     "verb": "pourrais citer",
+     "object": "beaucoup",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "tous",
+     "verb": "utilisent",
+     "object": "cet impôt",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 56,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "39-2-Bill59",
+   "sentence_id": "QC|39-2-Bill59|2012-06-15|p69|s6",
+   "text": "Et mon collègue le député de Groulx, qui est du niveau des juristes, il connaît la loi sur la santé et les services sociaux sur le bout des doigts, et ça permet, pour quelqu'un comme moi, d'être beaucoup plus efficace et de vraiment améliorer...",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le député de Groulx",
+     "verb": "est",
+     "object": "du niveau des juristes",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le député de Groulx",
+     "verb": "connaît",
+     "object": "la loi sur la santé et les services sociaux sur le bout des doigts",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ça",
+     "verb": "permet",
+     "object": "pour quelqu'un comme moi",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ça (inh)",
+     "verb": "être",
+     "object": "efficace et vraiment améliorer",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ça (inh)",
+     "verb": "améliorer",
+     "object": "",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "joined to: complement",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "mon collègue",
+     "verb": "est",
+     "object": "du niveau des juristes",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "il",
+     "verb": "connaît",
+     "object": "la loi sur la santé et les services sociaux",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 57,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill83",
+   "sentence_id": "QC|37-1-Bill83|2005-11-25|p31|s1",
+   "text": "Alors qu'il se vantait d'obtenir le financement du gouvernement fédéral pour notre système de santé, une proportion de 90 % de l'argent qu'il y a injecté provient d'une entente négociée par le gouvernement péquiste qui l'a précédé.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "il",
+     "verb": "vantait d'obtenir",
+     "object": "le financement du gouvernement fédéral",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "condition or time (alors)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "il",
+     "verb": "a injecté",
+     "object": "l'argent",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "une proportion de 90 % de l'argent",
+     "verb": "provient",
+     "object": "d'une entente",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "une entente",
+     "verb": "négociée",
+     "object": "par le gouvernement péquiste",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le gouvernement péquiste",
+     "verb": "a précédé",
+     "object": "l'",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "il (inh)",
+     "verb": "obtenir",
+     "object": "le financement du gouvernement fédéral",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 58,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-1-Bill78",
+   "sentence_id": "QC|33-1-Bill78|1986-10-29|p69|s0",
+   "text": "C'est pour cela que les citoyens deviennent un peu cyniques devant la politique, parce qu'ils se rendent compte que les libéraux disent n'importe quoi et ne remplissent ensuite aucun engagement.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "les libéraux",
+     "verb": "disent",
+     "object": "quoi",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of rendent",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les libéraux (inh)",
+     "verb": "ne remplissent",
+     "object": "aucun engagement",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "joined to: complement of rendent",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "C'",
+     "verb": "est",
+     "object": "pour cela les citoyens deviennent un peu cyniques devant la politique",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ils",
+     "verb": "se rendent",
+     "object": "que les libéraux disent n'importe quoi et ne remplissent ensuite aucun engagement",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "cause (parce)",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "C'",
+     "verb": "est deviennent",
+     "object": "un peu cyniques",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "ils",
+     "verb": "rendent",
+     "object": "compte",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "les citoyens",
+     "verb": "deviennent",
+     "object": "devant la politique",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "les citoyens",
+     "verb": "deviennent",
+     "object": "un peu cyniques",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 59,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill75",
+   "sentence_id": "QC|34-1-Bill75|1990-06-19|p261|s3",
+   "text": "L'équité est désormais rétablie entre tous les commerçants.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "L'équité",
+     "verb": "est rétablie",
+     "object": "entre tous les commerçants",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 60,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "36-1-Bill170",
+   "sentence_id": "QC|36-1-Bill170|2000-12-13|p3|s4",
+   "text": "Un nombre quasi incalculable d'études, de rapports, d'engagements politiques sont restés lettre morte, se heurtant à un concert d'intérêts divergents, pas toujours guidés par la poursuite du bien commun. »",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Un nombre quasi incalculable d'études, de rapports, d'engagements politiques",
+     "verb": "sont restés",
+     "object": "lettre morte",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Un nombre quasi incalculable d'études, de rapports, d'engagements politiques (inh)",
+     "verb": "heurtant",
+     "object": "à un concert d'intérêts divergents",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "un concert d'intérêts divergents",
+     "verb": "pas guidés",
+     "object": "par la poursuite du bien commun",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "Un nombre quasi incalculable d'études, de rapports, d'engagements politiques",
+     "verb": "sont restés",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "un concert d'intérêts divergents",
+     "verb": "guidés",
+     "object": "par la poursuite du bien commun",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 61,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill145",
+   "sentence_id": "QC|34-1-Bill145|1991-05-22|p181|s3",
+   "text": "Le chef de l'Opposition de 1979, dis-je bien, non pas le ministre des Affaires municipales.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le chef de l'Opposition de 1979",
+     "verb": "dis",
+     "object": "non pas le ministre des Affaires municipales",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "je",
+     "verb": "dis",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 62,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill83",
+   "sentence_id": "QC|37-1-Bill83|2005-04-13|p90|s0",
+   "text": "L'AQDR, l'association québécoise des droits des retraités, a même parlé d'un système à deux vitesses, un système d'hébergement pour personnes âgées, à deux vitesses, qu'introduit le projet de loi n° 83 qui est devant nous présentement, projet de loi qui en fait prévoit une certification facultative, c'est-à-dire que le propriétaire d'une résidence privée pourra la demander ou ne pas la demander.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "L'AQDR, l'association québécoise des droits des retraités",
+     "verb": "a parlé",
+     "object": "d'un système à deux vitesses, un système d'hébergement pour personnes âgées, à deux vitesses",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "qui est devant nous présentement projet de loi",
+     "verb": "prévoit",
+     "object": "une certification facultative",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le propriétaire d'une résidence privée",
+     "verb": "pourra demander",
+     "object": "la",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "what is said (dire)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le propriétaire d'une résidence privée (inh)",
+     "verb": "ne pas demander",
+     "object": "la",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "joined to: complement",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le projet de loi n° 83",
+     "verb": "introduit",
+     "object": "un système à deux vitesses un système d'hébergement pour personnes âgées à deux vitesses",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "un système d'hébergement pour personnes âgées à deux vitesses",
+     "verb": "introduit",
+     "object": "un système d'hébergement pour personnes âgées à deux vitesses",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "un système d'hébergement pour personnes âgées à deux vitesses (inh)",
+     "verb": "est",
+     "object": "projet de loi",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "projet de loi",
+     "verb": "est",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "le projet de loi n° 83",
+     "verb": "est",
+     "object": "devant nous",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "le propriétaire d'une résidence privée (inh)",
+     "verb": "demander",
+     "object": "la",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 63,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "39-1-Bill58",
+   "sentence_id": "QC|39-1-Bill58|2010-02-17|p9|s4",
+   "text": "L'ensemble des partenaires municipaux reconnaissaient déjà aux municipalités régionales de comté une expertise en matière d'aménagement et une connaissance fine de leur territoire.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "L'ensemble des partenaires municipaux",
+     "verb": "reconnaissaient",
+     "object": "une expertise en matière d'aménagement et une connaissance fine de leur territoire",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "L'ensemble des partenaires municipaux",
+     "verb": "reconnaissaient",
+     "object": "aux municipalités régionales de comté",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 64,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-1-Bill73",
+   "sentence_id": "QC|33-1-Bill73|1987-12-01|p68|s2",
+   "text": "Ainsi, les parents devraient maintenant laisser leurs enfants à la porte des édifices publics pour aller stationner plus loin parce qu'ils n'ont pas droit à la vignette.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "les parents",
+     "verb": "devraient laisser",
+     "object": "leurs enfants",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ils",
+     "verb": "n'ont",
+     "object": "pas droit à la vignette",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "cause (parce)",
+     "rst": "parser's reading kept",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les parents (inh)",
+     "verb": "aller stationner",
+     "object": "plus loin",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "purpose (to)",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "les parents (inh)",
+     "verb": "aller stationner",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "les parents (inh)",
+     "verb": "stationner",
+     "object": "plus loin",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "ils",
+     "verb": "n'ont",
+     "object": "droit à la vignette",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 65,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-2-Bill106",
+   "sentence_id": "QC|34-2-Bill106|1993-10-19|p107|s4",
+   "text": "Ce projet de loi visait ainsi à encourager les citoyens à collaborer avec l'administration de la justice.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Ce projet de loi",
+     "verb": "visait à encourager",
+     "object": "les citoyens",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les citoyens",
+     "verb": "collaborer",
+     "object": "avec l'administration de la justice",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Ce projet de loi (inh)",
+     "verb": "encourager",
+     "object": "les citoyens",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "Ce projet de loi (inh)",
+     "verb": "collaborer",
+     "object": "avec l'administration de la justice",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 66,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill145",
+   "sentence_id": "QC|34-1-Bill145|1991-06-19|p9|s5",
+   "text": "Le projet de loi 145 sonne la fin de cette période où le manque de responsabilités avait trop facilement cours en matière de protection policière.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le projet de loi 145",
+     "verb": "sonne",
+     "object": "la fin de cette période",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "le manque de responsabilités",
+     "verb": "avait",
+     "object": "cours",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "le manque de responsabilités",
+     "verb": "avait",
+     "object": "trop facilement",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 67,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill130",
+   "sentence_id": "QC|37-1-Bill130|2005-11-24|p189|s0",
+   "text": "Ensuite: « Le projet de loi prévoit de plus la gratuité des médicaments pour les personnes âgées recevant la prestation maximale du supplément du revenu garanti. » Bien, c'est une bonne mesure, ça.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le projet de loi",
+     "verb": "prévoit",
+     "object": "de plus la gratuité des médicaments pour les personnes âgées",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "médicaments pour les personnes âgées",
+     "verb": "recevant",
+     "object": "la prestation maximale du supplément du revenu garanti",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "c'",
+     "verb": "est",
+     "object": "une bonne mesure",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 68,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill120",
+   "sentence_id": "QC|34-1-Bill120|1990-12-17|p264|s0",
+   "text": "Afin d'offrir aux personnes handicapées des services le plus près possible de leur milieu naturel, le ministre propose d'agir sur trois plans: premièrement, une équipe multidisciplinaire en adaptation-réadaptation pour les personnes ayant une déficience auditive, motrice ou visuelle, dans les régions où ces services de base ne sont pas disponibles; deuxièmement, augmenter le budget des services de maintien à domicile pour les personnes handicapées et celui des services de répit, dépannage et gardiennage pour leur famille; troisièmement, il se propose de rendre disponible un plus grand nombre de lieux d'hébergement adaptés pour les personnes adultes atteintes de séquelles ou de déficiences.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le ministre",
+     "verb": "propose d'agir",
+     "object": "sur trois plans",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les personnes",
+     "verb": "ayant",
+     "object": "une déficience auditive, motrice ou visuelle, dans les régions",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ces services de base",
+     "verb": "ne sont pas",
+     "object": "les régions disponibles",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "",
+     "verb": "augmenter",
+     "object": "le budget des services de maintien à domicile",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "il",
+     "verb": "propose de rendre",
+     "object": "disponible",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les personnes adultes",
+     "verb": "atteintes",
+     "object": "de séquelles ou de déficiences",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "aux personnes des services le plus près possible de leur milieu naturel",
+     "verb": "handicapées",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "les personnes dépannage et gardiennage pour leur famille",
+     "verb": "handicapées",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "le ministre (inh)",
+     "verb": "agir",
+     "object": "premièrement, une équipe multidisciplinaire en adaptation-réadaptation pour les personnes",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "il",
+     "verb": "se propose de rendre",
+     "object": "un plus grand nombre de lieux d'hébergement",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "lieux d'hébergement",
+     "verb": "adaptés",
+     "object": "pour les personnes adultes",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "le ministre (inh)",
+     "verb": "offrir",
+     "object": "aux personnes handicapées",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "le ministre (inh)",
+     "verb": "agir",
+     "object": "sur trois plans",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "il (inh)",
+     "verb": "rendre",
+     "object": "disponible",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 69,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill75",
+   "sentence_id": "QC|34-1-Bill75|1990-06-11|p497|s1",
+   "text": "Oui, effectivement, M. le ministre a reconnu une partie de ses erreurs, de l'erreur de cette loi.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "effectivement, M. le ministre",
+     "verb": "a reconnu",
+     "object": "une partie de ses erreurs",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 70,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill75",
+   "sentence_id": "QC|37-1-Bill75|2004-11-25|p375|s0",
+   "text": "Les huit grandes villes sont venues s'asseoir, en plein été, avec le ministre des Affaires municipales et l'ont supplié d'attendre en 2005, à l'occasion des élections municipales, pour provoquer la question face aux citoyens.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Les huit grandes villes (inh)",
+     "verb": "ont supplié",
+     "object": "l'",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Les huit grandes villes",
+     "verb": "sont venues s'asseoir",
+     "object": "en plein été",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Les huit grandes villes",
+     "verb": "sont venues asseoir",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "l' (inh)",
+     "verb": "attendre",
+     "object": "en 2005",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "l' (inh)",
+     "verb": "provoquer",
+     "object": "la question",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "l' (inh)",
+     "verb": "attendre",
+     "object": "en 2005",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "l' (inh)",
+     "verb": "provoquer",
+     "object": "la question",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "Les huit grandes villes (inh)",
+     "verb": "attendre",
+     "object": "en",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "Les huit grandes villes (inh)",
+     "verb": "provoquer",
+     "object": "la question",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 71,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-2-Bill105",
+   "sentence_id": "QC|34-2-Bill105|1993-11-10|p86|s3",
+   "text": "De plus, et c'est important de le mentionner, les nouvelles règles en vigueur assureront une meilleure garantie d'indépendance pour les citoyens parce qu'ils ne se sentiront plus lésés dans leurs droits.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "c'",
+     "verb": "est",
+     "object": "important",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les nouvelles règles en vigueur",
+     "verb": "assureront",
+     "object": "une meilleure garantie d'indépendance",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ils",
+     "verb": "ne sentiront lésés",
+     "object": "dans leurs droits",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "c' (inh)",
+     "verb": "mentionner",
+     "object": "le",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "les nouvelles règles en vigueur (inh)",
+     "verb": "mentionner",
+     "object": "le",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 72,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill120",
+   "sentence_id": "QC|34-1-Bill120|1991-08-28|p134|s2",
+   "text": "Au départ, le nouveau rôle des CLSC se voulait un élément moteur de cette réforme.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le nouveau rôle des CLSC",
+     "verb": "voulait",
+     "object": "un élément moteur de cette réforme",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "le nouveau rôle des CLSC",
+     "verb": "se voulait",
+     "object": "Au départ",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 73,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "41-1-Bill10",
+   "sentence_id": "QC|41-1-Bill10|2014-11-20|p180|s3",
+   "text": "Bien non, le gouvernement libéral ne pourra pas congédier les gens du jour au lendemain, sauf quelques P.D.G. d'agences.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le gouvernement libéral",
+     "verb": "ne pourra pas congédier",
+     "object": "les gens du jour au lendemain",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 74,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "42-2-Bill29",
+   "sentence_id": "QC|42-2-Bill29|2022-04-07|p7|s0",
+   "text": "Avec ce projet de loi, notre gouvernement veut permettre aux catégories d'électeurs dont l'exercice du vote est le plus susceptible d'être affecté par la COVID-19 d'exercer leur droit de vote.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "notre gouvernement",
+     "verb": "veut permettre",
+     "object": "aux catégories d'électeurs dont l'exercice du vote est le plus susceptible être affecté par la COVID-19 exercer leur droit de vote",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "dont l'exercice du vote",
+     "verb": "est d'être affecté d'exercer",
+     "object": "leur droit de vote",
+     "kind": "embedded",
+     "kind_parser": "asserted",
+     "how": "other (amod)",
+     "rst": "relative clause (elaboration)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "l'exercice du vote",
+     "verb": "est",
+     "object": "le plus susceptible d'être affecté par la COVID-19",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "l'exercice du vote (inh)",
+     "verb": "être affecté",
+     "object": "par la",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "notre gouvernement (inh)",
+     "verb": "exercer",
+     "object": "leur droit de vote",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 75,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill83",
+   "sentence_id": "QC|37-1-Bill83|2005-11-22|p30|s1",
+   "text": "Finalement, des comités de vigilance relevant du conseil d'administration seront créés dans tous les établissements et dans les agences.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Finalement des comités de vigilance",
+     "verb": "relevant",
+     "object": "du conseil d'administration",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Finalement, des comités de vigilance",
+     "verb": "seront créés",
+     "object": "dans tous les établissements et dans les agences",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 76,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-2-Bill34",
+   "sentence_id": "QC|33-2-Bill34|1988-12-09|p111|s1",
+   "text": "Projet de loi au sujet duquel la commission parlementaire aurait pu entreprendre ses travaux il y a fort longtemps.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "la commission parlementaire",
+     "verb": "aurait pu entreprendre",
+     "object": "ses travaux",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": true,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "il",
+     "verb": "a",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "la commission parlementaire (inh)",
+     "verb": "entreprendre",
+     "object": "ses travaux",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 77,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-2-Bill139",
+   "sentence_id": "QC|33-2-Bill139|1989-06-01|p5|s1",
+   "text": "La loi permettra l'inscription à la régie d'une nouvelle catégorie d'individus, soit les personnes admissibles à certains services en vertu de la Loi sur le ministère de la Santé et des Services sociaux, plus particulièrement les articles 10 et 10.1 de cette loi.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "La loi",
+     "verb": "permettra",
+     "object": "l'inscription",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 78,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "41-1-Bill3",
+   "sentence_id": "QC|41-1-Bill3|2014-09-23|p276|s2",
+   "text": "Évidemment, là, le gouvernement faillit présentement à cette tâche, parce qu'on n'a pas encore les données actualisées au 30 décembre de 2013.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le gouvernement",
+     "verb": "faillit",
+     "object": "à cette tâche",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "on",
+     "verb": "n'a",
+     "object": "les données au 30 décembre de 2013",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "other (obl:mod)",
+     "rst": "parser's reading kept",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "on n'a pas encore les données au 30 décembre de 2013",
+     "verb": "actualisées",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "les données",
+     "verb": "actualisées",
+     "object": "au 30 décembre de 2013",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "on",
+     "verb": "n'a",
+     "object": "les données",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 79,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "36-2-Bill133",
+   "sentence_id": "QC|36-2-Bill133|2002-12-13|p53|s2",
+   "text": "La commission parlementaire peut notamment discuter de la déclaration de services, des résultats obtenus par rapport aux objectifs des programmes d'accès, de toute autre matière de nature administrative.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "La commission parlementaire",
+     "verb": "peut discuter",
+     "object": "de la déclaration de services, des résultats de toute autre matière de nature administrative",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "des résultats de toute autre matière de nature administrative",
+     "verb": "obtenus",
+     "object": "par rapport aux objectifs des programmes d'accès",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 80,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill38",
+   "sentence_id": "QC|37-1-Bill38|2004-12-10|p399|s9",
+   "text": "La promesse s'est envolée comme neige au soleil.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "La promesse",
+     "verb": "est envolée",
+     "object": "comme neige",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "La promesse",
+     "verb": "s'est envolée comme neige au soleil",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 81,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "39-1-Bill94",
+   "sentence_id": "QC|39-1-Bill94|2011-02-09|p194|s0",
+   "text": "Alors, le projet de loi se caractérise évidemment par le souci que notre formation politique et que le gouvernement portent à la protection des libertés individuelles, toutefois en précisant qu'une liberté individuelle ne peut pas s'exercer à l'encontre des valeurs fondamentales du peuple québécois.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le projet de loi",
+     "verb": "caractérise",
+     "object": "par le souci notre formation politique",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le gouvernement",
+     "verb": "portent",
+     "object": "à la protection des libertés individuelles",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "une liberté individuelle",
+     "verb": "ne peut pas exercer",
+     "object": "à l'encontre des valeurs fondamentales du peuple québécois",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of précisant",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le projet de loi (inh)",
+     "verb": "précisant",
+     "object": "qu'une liberté individuelle ne peut pas s'exercer à l'encontre des valeurs fondamentales du peuple québécois",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "means (by)",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "le gouvernement (inh)",
+     "verb": "précisant",
+     "object": "qu'une liberté individuelle ne peut pas s'exercer à l'encontre des valeurs fondamentales du peuple québécois",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "notre formation politique et que le gouvernement",
+     "verb": "portent",
+     "object": "le souci (que)",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 82,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-2-Bill106",
+   "sentence_id": "QC|34-2-Bill106|1993-10-19|p32|s0",
+   "text": "D'autre part, M. le Président, le projet de loi prévoit à son titre III les règles régissant l'administration du régime.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le projet de loi",
+     "verb": "prévoit",
+     "object": "les règles",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "les règles",
+     "verb": "régissant",
+     "object": "l'administration du régime",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "le projet de loi",
+     "verb": "prévoit",
+     "object": "à son titre III",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 83,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "42-1-Bill2",
+   "sentence_id": "QC|42-1-Bill2|2018-12-05|p4|s0",
+   "text": "Le projet de loi resserre ensuite les règles applicables en matière de possession de cannabis en prévoyant qu'il est interdit d'en posséder sur les terrains, dans les locaux ou dans les bâtiments d'un établissement d'enseignement collégial ou universitaire, à l'exception des résidences universitaires.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le projet de loi",
+     "verb": "resserre",
+     "object": "les règles applicables en matière de possession de cannabis",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "il",
+     "verb": "est interdit d' posséder",
+     "object": "sur les terrains",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of prévoyant",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Le projet de loi (inh)",
+     "verb": "prévoyant",
+     "object": "qu'il est interdit d'en posséder sur les terrains, dans les locaux ou dans les bâtiments d'un établissement d'enseignement collégial ou",
+     "kind": "embedded",
+     "kind_parser": "asserted",
+     "how": "means (by)",
+     "rst": "complement of an attribution verb",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "les règles applicables en matière de possession de cannabis",
+     "verb": "prévoyant",
+     "object": "qu'il est interdit d'en posséder sur les terrains, dans les locaux ou dans les bâtiments d'un établissement d'enseignement collégial ou",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "il",
+     "verb": "est",
+     "object": "interdit",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "il (inh)",
+     "verb": "en posséder",
+     "object": "sur les terrains",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 84,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "36-2-Bill15",
+   "sentence_id": "QC|36-2-Bill15|2001-06-21|p25|s2",
+   "text": "Mais, en matière de santé publique, ma conviction la plus profonde, c'était que les gens doivent faire partie de cet exercice.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "les gens",
+     "verb": "était faire",
+     "object": "de cet exercice",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "c'",
+     "verb": "était faire",
+     "object": "partie",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "ma conviction la plus profonde",
+     "verb": "était",
+     "object": "que les gens doivent faire partie de cet exercice",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 85,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill184",
+   "sentence_id": "QC|34-1-Bill184|1991-11-21|p6|s1",
+   "text": "Le contrôle de ces maladies est confié au ministère de la Santé et des Services sociaux en vertu de la Loi sur la protection de la santé publique.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le contrôle de ces maladies",
+     "verb": "est confié",
+     "object": "au ministère de la Santé et des Services sociaux",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 86,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-2-Bill35",
+   "sentence_id": "QC|34-2-Bill35|1992-06-02|p0|s1",
+   "text": "A l'article 28, tel que demandé par M. le leader adjoint du gouvernement, M. le ministre du Travail propose l'adoption du principe du projet de loi 35, Loi modifiant la Loi sur les accidents du travail et les maladies professionnelles, la Loi sur la santé et la sécurité du travail et la Loi sur l'assurance-maladie.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "M. le ministre du Travail",
+     "verb": "propose",
+     "object": "l'adoption du principe du projet de loi 35",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Loi",
+     "verb": "modifiant",
+     "object": "la Loi sur les accidents du travail et les maladies professionnelles, la Loi sur la santé et la sécurité du travail et",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "A l'article 28, tel (inh)",
+     "verb": "demandé",
+     "object": "que",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "A l'article 28, tel",
+     "verb": "propose",
+     "object": "l'adoption du principe du projet de loi 35",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "A l'article 28, tel (inh)",
+     "verb": "modifiant",
+     "object": "la Loi sur les accidents du travail et les maladies professionnelles",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "M. le ministre du Travail (inh)",
+     "verb": "demandé",
+     "object": "par M. le leader adjoint du gouvernement",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 87,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "36-1-Bill170",
+   "sentence_id": "QC|36-1-Bill170|2000-12-13|p174|s5",
+   "text": "Et ces 13 villes vont être confondues dans huit arrondissements.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "ces 13 villes",
+     "verb": "vont être confondues",
+     "object": "dans huit arrondissements",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 88,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "42-1-Bill2",
+   "sentence_id": "QC|42-1-Bill2|2019-02-28|p116|s3",
+   "text": "Parce que, là, le propriétaire t'a sûrement fait signer un papier comme quoi tu n'avais pas le droit de fumer dans ton logement.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le propriétaire",
+     "verb": "a signer",
+     "object": "un papier",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le droit",
+     "verb": "fumer",
+     "object": "dans ton logement",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "tu",
+     "verb": "n'avais pas",
+     "object": "le droit",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "tu",
+     "verb": "n'avais pas",
+     "object": "comme quoi",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "tu",
+     "verb": "n'avais",
+     "object": "le droit de fumer dans ton logement",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "tu (inh)",
+     "verb": "fumer",
+     "object": "dans ton logement",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 89,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-2-Bill37",
+   "sentence_id": "QC|33-2-Bill37|1988-06-16|p174|s1",
+   "text": "Des problèmes de fonctionnement et de réglementation du programme d'aide sociale, d'incitation au travail et aux études, et d'équité des mesures gouvernementales sont apparus confirmant la nécessité d'une politique de sécurité du revenu.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Des problèmes de fonctionnement et de réglementation du programme d'aide sociale, d'incitation au travail et aux études, et d'équité des",
+     "verb": "sont apparus confirmant",
+     "object": "la nécessité d'une politique de sécurité du revenu",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Des problèmes de fonctionnement et de réglementation du programme d'aide sociale, d'incitation au travail et aux études, et",
+     "verb": "sont apparus",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "Des problèmes de fonctionnement et de réglementation du programme d'aide sociale, d'incitation au travail et aux études, et d'équité des mesures gouvernementales (inh)",
+     "verb": "confirmant",
+     "object": "la nécessité d'une politique de sécurité du revenu",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 90,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill7",
+   "sentence_id": "QC|37-1-Bill7|2003-12-16|p0|s1",
+   "text": "Maintenant, l'Assemblée prend en considération le rapport de la commission des affaires sociales sur le projet de loi n° 7, Loi modifiant la Loi sur les services de santé et les services sociaux, ainsi que les amendements transmis.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "l'Assemblée",
+     "verb": "prend",
+     "object": "le rapport de la commission des affaires sociales sur le projet de loi n° 7",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ainsi que les amendements",
+     "verb": "transmis",
+     "object": "",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Loi",
+     "verb": "modifiant",
+     "object": "la Loi sur les services de santé et les services sociaux",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "l'Assemblée (inh)",
+     "verb": "modifiant",
+     "object": "la Loi sur les services de santé et les services sociaux",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "l'Assemblée",
+     "verb": "prend",
+     "object": "en considération",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 91,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-2-Bill42",
+   "sentence_id": "QC|33-2-Bill42|1988-06-13|p8|s0",
+   "text": "Ce projet de loi précise les fonctions du ministre responsable de la section II de la Loi sur le ministère du Conseil exécutif et apporte certaines modifications d'harmonisation à des dispositions de cette loi relatives à certaines ententes.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Ce projet de loi",
+     "verb": "précise",
+     "object": "les fonctions du ministre responsable de la section II de la Loi sur le ministère du Conseil exécutif",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Ce projet de loi (inh)",
+     "verb": "apporte",
+     "object": "certaines modifications d'harmonisation à des dispositions de cette loi relatives à certaines ententes",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 92,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "39-1-Bill58",
+   "sentence_id": "QC|39-1-Bill58|2010-02-17|p26|s0",
+   "text": "Vous savez, M. le Président, depuis des temps immémoriaux, les peuples ont toujours organisé les territoires sur lesquels ils fondaient leur société.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "les peuples",
+     "verb": "ont organisé",
+     "object": "les territoires",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ils",
+     "verb": "fondaient",
+     "object": "leur société",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Vous",
+     "verb": "savez",
+     "object": "M. le Président, depuis des temps immémoriaux, les peuples ont toujours organisé les territoires sur lesquels ils fondaient leur société",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Vous",
+     "verb": "savez",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 93,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "34-1-Bill97",
+   "sentence_id": "QC|34-1-Bill97|1990-11-22|p392|s5",
+   "text": "Et le gouvernement, en plus, s'acharne à faire des lois dans le domaine des forêts, entre autres, ou des applications de règlement qui mettent encore nos scieries, nos employeurs et nos industriels forestiers dans des contextes de plus en plus difficiles.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le gouvernement",
+     "verb": "acharne à faire",
+     "object": "des lois dans le domaine des forêts, entre autres, ou des applications de règlement nos employeurs et nos industriels forestiers dans des contextes",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "ou des applications de règlement nos employeurs et nos industriels forestiers dans des contextes de plus en plus difficiles",
+     "verb": "mettent",
+     "object": "nos scieries",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "le gouvernement (inh)",
+     "verb": "faire",
+     "object": "des lois dans le domaine des forêts, entre autres, ou des applications de règlement qui mettent encore nos scieries, nos employeurs et nos industriels forestiers dans des contextes de plus en plus difficiles",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 94,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "42-1-Bill2",
+   "sentence_id": "QC|42-1-Bill2|2019-09-19|p2|s4",
+   "text": "Notre priorité, comme gouvernement, a été de mettre en place un encadrement permettant d'assurer la protection de la santé et de la sécurité de la population, et tout particulièrement, comme vous le savez, celle de nos jeunes.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Notre priorité, comme gouvernement",
+     "verb": "a été mettre",
+     "object": "un encadrement et tout particulièrement celle de nos jeunes",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "un encadrement et tout particulièrement celle de nos jeunes",
+     "verb": "permettant d'assurer",
+     "object": "la protection de la santé et de la sécurité de la population",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "un encadrement (inh)",
+     "verb": "assurer",
+     "object": "la protection de la santé et de la sécurité de la population, et tout particulièrement celle de nos jeunes",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "complement of permettant",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "vous",
+     "verb": "savez",
+     "object": "le",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "Notre priorité (inh)",
+     "verb": "mettre en place",
+     "object": "un encadrement",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 95,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "39-1-Bill7",
+   "sentence_id": "QC|39-1-Bill7|2009-06-04|p79|s1",
+   "text": "Et tous les paramètres, les mécanismes de fonctionnement sont prévus dans des protocoles d'entente dont on ne connaît pas encore le contenu.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "tous les paramètres",
+     "verb": "sont prévus",
+     "object": "dans des protocoles d'entente",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "on",
+     "verb": "ne connaît",
+     "object": "le contenu",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": true,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "les mécanismes de fonctionnement",
+     "verb": "sont prévus",
+     "object": "dans des protocoles d'entente",
+     "kind": "asserted",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 96,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "37-1-Bill38",
+   "sentence_id": "QC|37-1-Bill38|2004-12-10|p295|s3",
+   "text": "Alors, le ministre, là, il va nommer le Commissaire à la santé.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "le ministre",
+     "verb": "va nommer",
+     "object": "le Commissaire",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 97,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-1-Bill92",
+   "sentence_id": "QC|33-1-Bill92|1986-10-21|p69|s1",
+   "text": "Le directeur général doit résider dans la localité où sont situés les quartiers généraux de la Sûreté.\" Bref, c'est le gouvernement qui fixe le traitement du directeur général de la Sûreté du Québec et l'endroit où il doit demeurer.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le directeur général",
+     "verb": "doit résider",
+     "object": "dans la localité",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "c'",
+     "verb": "est",
+     "object": "le gouvernement",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Bref c'est le gouvernement",
+     "verb": "fixe",
+     "object": "le traitement du directeur général de la Sûreté du Québec et l'endroit",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "il",
+     "verb": "doit demeurer",
+     "object": "",
+     "kind": "reported",
+     "kind_parser": "reported",
+     "how": "inside a quote",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "la localité",
+     "verb": "sont situés",
+     "object": "les quartiers généraux de la Sûreté",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "les quartiers généraux de la Sûreté",
+     "verb": "sont situés",
+     "object": "",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "qui",
+     "verb": "fixe",
+     "object": "le traitement du directeur général de la Sûreté du Québec et l'endroit",
+     "kind": "reported",
+     "found_by": [
+      "stanza"
+     ]
+    },
+    {
+     "subject": "les quartiers généraux de la Sûreté",
+     "verb": "sont situés",
+     "object": "la localité (où)",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    },
+    {
+     "subject": "il",
+     "verb": "doit demeurer",
+     "object": "l'endroit (où)",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 98,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-2-Bill10",
+   "sentence_id": "QC|33-2-Bill10|1988-06-10|p0|s0",
+   "text": "La Vice-Présidente: À l'article 4 de notre feuilleton, le ministre de la Justice propose l'adoption du principe du projet de loi 10, Loi modifiant la Loi sur les tribunaux judiciaires et d'autres dispositions législatives en vue d'instituer la Cour unifiée.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "vue",
+     "verb": "instituer",
+     "object": "la Cour unifiée",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "le ministre de la Justice",
+     "verb": "propose",
+     "object": "l'adoption du principe du projet de loi 10",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Loi",
+     "verb": "modifiant",
+     "object": "la Loi sur les tribunaux judiciaires et d'autres dispositions législatives",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "La Vice-Présidente",
+     "verb": "propose",
+     "object": "l'adoption du principe du projet de loi 10",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "La Vice-Présidente (inh)",
+     "verb": "Loi",
+     "object": "",
+     "kind": "asserted",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "La Vice-Présidente (inh)",
+     "verb": "modifiant",
+     "object": "la Loi sur les tribunaux judiciaires et d'autres dispositions législatives en vue",
+     "kind": "embedded",
+     "found_by": [
+      "spacy"
+     ]
+    },
+    {
+     "subject": "le ministre de la Justice (inh)",
+     "verb": "instituer",
+     "object": "la Cour unifiée",
+     "kind": "embedded",
+     "found_by": [
+      "const"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 99,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "33-1-Bill120",
+   "sentence_id": "QC|33-1-Bill120|1987-03-24|p24|s4",
+   "text": "Le ministre s'est permis, au départ, d'ouvrir son jeu et de parler exactement de l'ensemble du discours sur le budget, non pas seulement des mesures qui sont contenues dans le projet de loi, mais de l'ensemble du budget proposé par le ministre des Finances.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "Le ministre",
+     "verb": "est permis",
+     "object": "au départ",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Le ministre (inh)",
+     "verb": "ouvrir",
+     "object": "son jeu",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "Le ministre (inh)",
+     "verb": "parler",
+     "object": "de l'ensemble du discours sur le budget, non pas seulement des mesures",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "joined to: added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "non pas seulement des mesures",
+     "verb": "sont contenues",
+     "object": "dans le projet de loi",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "relative clause",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "budget",
+     "verb": "proposé",
+     "object": "par le ministre des Finances",
+     "kind": "embedded",
+     "kind_parser": "embedded",
+     "how": "describes a noun",
+     "rst": "parser's reading kept (only a stated line can be re-read)",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": []
+  },
+  {
+   "n": 100,
+   "lang": "fr",
+   "jurisdiction": "quebec",
+   "bill_key": "36-1-Bill107",
+   "sentence_id": "QC|36-1-Bill107|2000-04-05|p58|s3",
+   "text": "La pénurie d'infirmières oblige également la direction de l'hôpital à payer énormément d'heures supplémentaires.",
+   "methods": [
+    "spacy",
+    "stanza",
+    "const"
+   ],
+   "statements": [
+    {
+     "subject": "La pénurie d'infirmières",
+     "verb": "oblige",
+     "object": "la direction de l'hôpital",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "main clause",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "stanza",
+      "const"
+     ],
+     "source": "agreed"
+    },
+    {
+     "subject": "La pénurie d'infirmières (inh)",
+     "verb": "payer",
+     "object": "énormément",
+     "kind": "asserted",
+     "kind_parser": "asserted",
+     "how": "added clause, no linking word",
+     "rst": "parser's reading kept",
+     "negated": false,
+     "hedged": false,
+     "found_by": [
+      "spacy",
+      "const"
+     ],
+     "source": "agreed"
+    }
+   ],
+   "for_review": [
+    {
+     "subject": "la direction de l'hôpital (inh)",
+     "verb": "payer",
+     "object": "énormément d'heures supplémentaires",
+     "kind": "embedded",
+     "found_by": [
+      "stanza"
+     ]
+    }
+   ]
+  }
+ ]
+}

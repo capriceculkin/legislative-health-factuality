@@ -1,0 +1,49 @@
+{
+ "version": "v5 (Oct 19): three parses, two-of-three vote, discourse re-read; same rules as the Oct 15 sample",
+ "yield": {
+  "sentences": 300,
+  "predications": 769,
+  "per_sentence": 2.56,
+  "stated": 371,
+  "embedded": 367,
+  "reported": 31,
+  "appositions": 2,
+  "sentences_with_a_stated_predication": 232,
+  "sentences_with_any_predication": 257,
+  "lines_sent_to_review (one parser only)": 548,
+  "questions_or_too_short": 20,
+  "discourse_parsed": 280,
+  "stated_lines_re_read_by_discourse": 44,
+  "negated": 51,
+  "hedged": 17,
+  "tree_parts_failed": 0,
+  "old_extractor_had_a_claim": 13
+ },
+ "timing": {
+  "jurisdiction": "quebec",
+  "sample": 300,
+  "corpus": 438007,
+  "seconds_per_sentence": {
+   "spacy": 0.0152,
+   "stanza": 0.0669,
+   "berkeley": 0.0941,
+   "rules": 0.089,
+   "discourse (per sentence it ran on)": 0.126
+  },
+  "model_load_seconds": {
+   "spacy_fr": 2.1,
+   "stanza_fr": 1.8,
+   "berkeley": 9.7,
+   "discourse": 11.8
+  },
+  "share_of_sentences_the_discourse_parse_would_run_on (multi policy)": 0.637,
+  "projected_hours": {
+   "syntax (spaCy, Stanza, Berkeley, rules)": 32.3,
+   "discourse on every sentence": 15.3,
+   "discourse on multi-predication sentences only": 9.8,
+   "total with --rst multi": 42.0,
+   "total with --rst all": 47.6
+  },
+  "threads": "default"
+ }
+}

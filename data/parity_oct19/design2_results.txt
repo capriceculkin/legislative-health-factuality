@@ -1,0 +1,20 @@
+design   test pairs passed (of 45)
+  d1:  EN 44  FR 45
+  2a:  EN 41  FR 43
+  2b:  EN 41  FR 43
+
+heldout: found/key  produced  precision  label right
+  en d1: 30/36  p40  75%  label 28/30
+  en 2a: 28/36  p39  72%  label 27/28
+  en 2b: 28/36  p36  78%  label 27/28
+  fr d1: 25/33  p35  71%  label 25/25
+  fr 2a: 25/33  p39  64%  label 24/25
+  fr 2b: 23/33  p29  79%  label 22/23
+
+sample: found/key  produced  precision  label right
+  en d1: 108/119  p124  87%  label 106/108
+  en 2a: 102/119  p126  81%  label 99/102
+  en 2b: 99/119  p110  90%  label 96/99
+  fr d1: 94/116  p121  78%  label 87/94
+  fr 2a: 95/116  p133  71%  label 89/95
+  fr 2b: 88/116  p112  79%  label 83/88

@@ -1,0 +1,8 @@
+== wsj_0001.1 Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .
+   dependency rules: [('Pierre Vinken , 61 years old', 'will join', 'the board', 'asserted')]  appositions: []
+   constituency rules on GOLD tree: [('Pierre Vinken, 61 years old', 'will join', 'the board', 'asserted')]
+== wsj_0001.2 Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .
+   dependency rules: [('Mr. Vinken', 'is', 'chairman of Elsevier N.V.', 'asserted')]  appositions: [('Elsevier N.V.', 'is (apposition)', 'the Dutch publishing group', 'asserted')]
+   constituency rules on GOLD tree: [('Mr. Vinken', 'is', 'chairman of Elsevier N.V., the Dutch publishing group', 'asserted')]
+== wsj_0003.1 A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago , researchers reported .
+   dependency rules: [('A form of asbestos once', 'used to make', 'researchers', 'asserted'), ('Kent cigarette filters', 'has caused', 'a high percentage of cancer deaths', 'embedded'), ('workers', 'exposed', 'to it', 'embedded'), ('researchers', 'reported', '', 'embedded')]  appositions: []

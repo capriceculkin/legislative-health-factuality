@@ -1,0 +1,205 @@
+17:21:17 == parity_collect: rules /Users/caprice/.parity_v6/preds.py
+17:21:17    220 sentences: test 90, heldout 30, sample 100
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+17:21:32    loaded the Berkeley parser (benepar_fr2) in 15.8s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+17:21:35    loaded spaCy en (core_web_lg 3.8.0) in 0.7s
+17:21:37    loaded Stanza en 1.15.0 (constituency: yes) in 1.6s
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+17:21:50    loaded the discourse parser (UniRST) in 13.2s
+17:21:52    loaded spaCy fr (core_news_lg 3.8.0) in 2.4s
+17:21:54    loaded Stanza fr 1.15.0 (constituency: no) in 1.3s
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+17:21:59    20/220 parsed (1.2s each)
+17:22:03    40/220 parsed (0.7s each)
+17:22:07    60/220 parsed (0.5s each)
+17:22:11    80/220 parsed (0.5s each)
+17:22:16    100/220 parsed (0.4s each)
+17:22:25    120/220 parsed (0.4s each)
+17:22:30    140/220 parsed (0.4s each)
+17:22:36    160/220 parsed (0.4s each)
+17:22:44    180/220 parsed (0.4s each)
+17:22:54    200/220 parsed (0.4s each)
+17:23:03    220/220 parsed (0.4s each)
+17:23:03 == wrote /Users/caprice/Desktop/next_steps/oct20/parity_parses.json
+17:23:03    saved parses reproduced on this Mac: spaCy 100/100, Stanza 100/100
+== rules /Users/caprice/.parity_v6   discourse inventory: native   English constituency: prod   discourse policy: multi
+
+-- parallel tests (final output; P = every expected line found with the right label and hedge, and no extra lines)
+  A1   one clause                                       EN P  FR P
+  A2   passive with by / par                            EN P  FR P
+  A3   two subjects joined by and / et                  EN P  FR P
+  A4   two clauses with a comma only                    EN -  FR P   <-- the languages differ
+  A5   two verbs share one subject                      EN P  FR P
+  A6   shared subject, two objects                      EN P  FR P
+  A7   contrast with but / mais                         EN P  FR P
+  A8   David's sentence (D6)                            EN P  FR P
+  A9   form of address before the subject               EN P  FR P
+  A10  apposition                                       EN P  FR -   <-- the languages differ
+  A11  question (skipped by design)                     EN P  FR P
+  B1   not / ne ... pas                                 EN P  FR P
+  B2   never / ne ... jamais                            EN P  FR P
+  B3   nobody / personne as subject                     EN P  FR P
+  B4   nothing / rien as object                         EN P  FR P
+  B5   no longer / ne ... plus                          EN P  FR P
+  B6   no / aucun on the subject                        EN P  FR P
+  B7   only / ne ... que is not negation                EN P  FR P
+  C1   would / conditional                              EN P  FR -   <-- the languages differ
+  C2   could / pourrait                                 EN P  FR P
+  C3   probably / probablement                          EN P  FR P
+  C4   should / devrait is obligation, not a hedge      EN P  FR P
+  C5   must / doit is obligation, not a hedge           EN P  FR P
+  C6   seems / semble (hedge policy open)               EN P  FR P
+  D1   said that / a dit que                            EN P  FR -   <-- the languages differ
+  D2   told X that / a dit à X que                      EN P  FR P
+  D3   according to / selon                             EN -  FR -
+  D4   direct quotation                                 EN P  FR -   <-- the languages differ
+  D5   the speaker's own framing (I think / je pense)   EN -  FR -
+  E1   condition: if / si                               EN P  FR P
+  E2   time: when / quand                               EN P  FR P
+  E3   time: before / avant que                         EN P  FR P
+  E4   until / jusqu'à ce que                           EN P  FR -   <-- the languages differ
+  E5   unless / à moins que                             EN P  FR -   <-- the languages differ
+  E6   whether / si (indirect question)                 EN P  FR -   <-- the languages differ
+  E7   purpose: to / pour                               EN P  FR P
+  E8   cause: because / parce que (stated)              EN P  FR -   <-- the languages differ
+  E9   cause: since / puisque (stated)                  EN P  FR -   <-- the languages differ
+  E10  concession: although / bien que                  EN P  FR P
+  E11  as / comme opening a clause (policy: not stated) EN P  FR P
+  E12  means: by -ing / en -ant (stated)                EN -  FR P   <-- the languages differ
+  F1   subject relative: who / qui                      EN P  FR -   <-- the languages differ
+  F2   object relative: that / que                      EN P  FR P
+  F3   participle describing a noun                     EN P  FR -   <-- the languages differ
+  F4   object control: urge X to / exhorter X à         EN P  FR P
+
+  by group:   structure: EN 10/11 FR 10/11   negation: EN 7/7 FR 7/7   hedge: EN 6/6 FR 5/6   reported: EN 3/5 FR 1/5   clauses: EN 11/12 FR 7/12   relative: EN 4/4 FR 2/4
+
+-- heldout: key lines found / produced / right label (of found)
+  en  spacy 30/36 p38 l26   stanza 28/36 p39 l27   const 28/36 p39 l26   vote 30/36 p40 l26   final 30/36 p40 l26
+  fr  spacy 22/33 p36 l21   stanza 25/33 p39 l24   const 22/33 p41 l19   vote 25/33 p35 l24   final 25/33 p35 l23
+
+-- sample: key lines found / produced / right label (of found)
+  en  spacy 104/119 p118 l99   stanza 101/119 p126 l97   const 104/119 p131 l91   vote 108/119 p124 l103   final 108/119 p124 l103
+  fr  spacy 88/116 p129 l80   stanza 95/116 p133 l88   const 77/116 p130 l60   vote 93/116 p120 l85   final 93/116 p120 l84
+ 
+== rules /Users/caprice/.parity_v6   discourse inventory: rstdt   English constituency: prod   discourse policy: multi
+
+-- parallel tests (final output; P = every expected line found with the right label and hedge, and no extra lines)
+  A1   one clause                                       EN P  FR P
+  A2   passive with by / par                            EN P  FR P
+  A3   two subjects joined by and / et                  EN P  FR P
+  A4   two clauses with a comma only                    EN -  FR P   <-- the languages differ
+  A5   two verbs share one subject                      EN P  FR P
+  A6   shared subject, two objects                      EN P  FR P
+  A7   contrast with but / mais                         EN P  FR P
+  A8   David's sentence (D6)                            EN P  FR P
+  A9   form of address before the subject               EN P  FR P
+  A10  apposition                                       EN P  FR -   <-- the languages differ
+  A11  question (skipped by design)                     EN P  FR P
+  B1   not / ne ... pas                                 EN P  FR P
+  B2   never / ne ... jamais                            EN P  FR P
+  B3   nobody / personne as subject                     EN P  FR P
+  B4   nothing / rien as object                         EN P  FR P
+  B5   no longer / ne ... plus                          EN P  FR P
+  B6   no / aucun on the subject                        EN P  FR P
+  B7   only / ne ... que is not negation                EN P  FR P
+  C1   would / conditional                              EN P  FR -   <-- the languages differ
+  C2   could / pourrait                                 EN P  FR P
+  C3   probably / probablement                          EN P  FR P
+  C4   should / devrait is obligation, not a hedge      EN P  FR P
+  C5   must / doit is obligation, not a hedge           EN P  FR P
+  C6   seems / semble (hedge policy open)               EN P  FR P
+  D1   said that / a dit que                            EN P  FR -   <-- the languages differ
+  D2   told X that / a dit à X que                      EN P  FR P
+  D3   according to / selon                             EN -  FR -
+  D4   direct quotation                                 EN P  FR -   <-- the languages differ
+  D5   the speaker's own framing (I think / je pense)   EN -  FR -
+  E1   condition: if / si                               EN P  FR P
+  E2   time: when / quand                               EN P  FR P
+  E3   time: before / avant que                         EN P  FR P
+  E4   until / jusqu'à ce que                           EN P  FR -   <-- the languages differ
+  E5   unless / à moins que                             EN P  FR -   <-- the languages differ
+  E6   whether / si (indirect question)                 EN P  FR -   <-- the languages differ
+  E7   purpose: to / pour                               EN P  FR P
+  E8   cause: because / parce que (stated)              EN P  FR -   <-- the languages differ
+  E9   cause: since / puisque (stated)                  EN P  FR -   <-- the languages differ
+  E10  concession: although / bien que                  EN P  FR P
+  E11  as / comme opening a clause (policy: not stated) EN P  FR P
+  E12  means: by -ing / en -ant (stated)                EN -  FR P   <-- the languages differ
+  F1   subject relative: who / qui                      EN P  FR -   <-- the languages differ
+  F2   object relative: that / que                      EN P  FR P
+  F3   participle describing a noun                     EN P  FR -   <-- the languages differ
+  F4   object control: urge X to / exhorter X à         EN P  FR P
+
+  by group:   structure: EN 10/11 FR 10/11   negation: EN 7/7 FR 7/7   hedge: EN 6/6 FR 5/6   reported: EN 3/5 FR 1/5   clauses: EN 11/12 FR 7/12   relative: EN 4/4 FR 2/4
+
+-- heldout: key lines found / produced / right label (of found)
+  en  spacy 30/36 p38 l26   stanza 28/36 p39 l27   const 28/36 p39 l26   vote 30/36 p40 l26   final 30/36 p40 l26
+  fr  spacy 22/33 p36 l21   stanza 25/33 p39 l24   const 22/33 p41 l19   vote 25/33 p35 l24   final 25/33 p35 l23
+
+-- sample: key lines found / produced / right label (of found)
+  en  spacy 104/119 p118 l99   stanza 101/119 p126 l97   const 104/119 p131 l91   vote 108/119 p124 l103   final 108/119 p124 l103
+  fr  spacy 88/116 p129 l80   stanza 95/116 p133 l88   const 77/116 p130 l60   vote 93/116 p120 l85   final 93/116 p120 l85
+ 
+== rules /Users/caprice/.parity_v6   discourse inventory: native   English constituency: en3   discourse policy: multi
+
+-- parallel tests (final output; P = every expected line found with the right label and hedge, and no extra lines)
+  A1   one clause                                       EN P  FR P
+  A2   passive with by / par                            EN P  FR P
+  A3   two subjects joined by and / et                  EN P  FR P
+  A4   two clauses with a comma only                    EN -  FR P   <-- the languages differ
+  A5   two verbs share one subject                      EN P  FR P
+  A6   shared subject, two objects                      EN P  FR P
+  A7   contrast with but / mais                         EN P  FR P
+  A8   David's sentence (D6)                            EN P  FR P
+  A9   form of address before the subject               EN P  FR P
+  A10  apposition                                       EN P  FR -   <-- the languages differ
+  A11  question (skipped by design)                     EN P  FR P
+  B1   not / ne ... pas                                 EN P  FR P
+  B2   never / ne ... jamais                            EN P  FR P
+  B3   nobody / personne as subject                     EN P  FR P
+  B4   nothing / rien as object                         EN P  FR P
+  B5   no longer / ne ... plus                          EN P  FR P
+  B6   no / aucun on the subject                        EN P  FR P
+  B7   only / ne ... que is not negation                EN P  FR P
+  C1   would / conditional                              EN P  FR -   <-- the languages differ
+  C2   could / pourrait                                 EN P  FR P
+  C3   probably / probablement                          EN P  FR P
+  C4   should / devrait is obligation, not a hedge      EN P  FR P
+  C5   must / doit is obligation, not a hedge           EN P  FR P
+  C6   seems / semble (hedge policy open)               EN P  FR P
+  D1   said that / a dit que                            EN P  FR -   <-- the languages differ
+  D2   told X that / a dit à X que                      EN P  FR P
+  D3   according to / selon                             EN -  FR -
+  D4   direct quotation                                 EN P  FR -   <-- the languages differ
+  D5   the speaker's own framing (I think / je pense)   EN -  FR -
+  E1   condition: if / si                               EN P  FR P
+  E2   time: when / quand                               EN P  FR P
+  E3   time: before / avant que                         EN P  FR P
+  E4   until / jusqu'à ce que                           EN P  FR -   <-- the languages differ
+  E5   unless / à moins que                             EN P  FR -   <-- the languages differ
+  E6   whether / si (indirect question)                 EN P  FR -   <-- the languages differ
+  E7   purpose: to / pour                               EN P  FR P
+  E8   cause: because / parce que (stated)              EN P  FR -   <-- the languages differ
+  E9   cause: since / puisque (stated)                  EN P  FR -   <-- the languages differ
+  E10  concession: although / bien que                  EN P  FR P
+  E11  as / comme opening a clause (policy: not stated) EN P  FR P
+  E12  means: by -ing / en -ant (stated)                EN -  FR P   <-- the languages differ
+  F1   subject relative: who / qui                      EN P  FR -   <-- the languages differ
+  F2   object relative: that / que                      EN P  FR P
+  F3   participle describing a noun                     EN P  FR -   <-- the languages differ
+  F4   object control: urge X to / exhorter X à         EN P  FR P
+
+  by group:   structure: EN 10/11 FR 10/11   negation: EN 7/7 FR 7/7   hedge: EN 6/6 FR 5/6   reported: EN 3/5 FR 1/5   clauses: EN 11/12 FR 7/12   relative: EN 4/4 FR 2/4
+
+-- heldout: key lines found / produced / right label (of found)
+  en  spacy 30/36 p38 l26   stanza 28/36 p39 l27   const 25/36 p37 l23   vote 29/36 p39 l25   final 29/36 p39 l25
+  fr  spacy 22/33 p36 l21   stanza 25/33 p39 l24   const 22/33 p41 l19   vote 25/33 p35 l24   final 25/33 p35 l23
+
+-- sample: key lines found / produced / right label (of found)
+  en  spacy 104/119 p118 l99   stanza 101/119 p126 l97   const 103/119 p131 l93   vote 109/119 p123 l104   final 109/119 p123 l104
+  fr  spacy 88/116 p129 l80   stanza 95/116 p133 l88   const 77/116 p130 l60   vote 93/116 p120 l85   final 93/116 p120 l84
+ 
+17:23:05 == done. Send parity_parses.json (and the printout) to the chat.

@@ -1,0 +1,773 @@
+<title>Predication Pipeline Walkthrough</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: two trees drawn top to bottom like the paper (what runs now, then the proposal); every box carries its spec, the example sentence as it leaves the box, and every question from the drawing with its answer. */
+:root{
+  --bg:#f6f7f5; --panel:#ffffff; --ink:#1d2421; --muted:#5b6661; --line:#d6dcd8;
+  --accent:#2f6f5e; --accent-soft:#e2eee8; --ex:#f1efe6; --q:#f3f6f4; --warn:#94570f; --warn-soft:#f6ebd9; --bad:#a23b3b; --bad-soft:#f6e2e2;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141917; --panel:#1b2220; --ink:#e3e8e5; --muted:#9aa6a0; --line:#323c37;
+  --accent:#7cc4ad; --accent-soft:#1f3830; --ex:#24261f; --q:#18201d; --warn:#e2b26a; --warn-soft:#3a2e1b; --bad:#e58f8f; --bad-soft:#3d2323; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141917; --panel:#1b2220; --ink:#e3e8e5; --muted:#9aa6a0; --line:#323c37;
+  --accent:#7cc4ad; --accent-soft:#1f3830; --ex:#24261f; --q:#18201d; --warn:#e2b26a; --warn-soft:#3a2e1b; --bad:#e58f8f; --bad-soft:#3d2323; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--sans);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.col{max-width:72ch}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:2.1rem;font-weight:700}
+h2{font-size:1.5rem;font-weight:600;padding-top:10px;border-top:1px solid var(--line)}
+h3{font-size:1.08rem;font-weight:600}
+p{margin:0}
+section{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font:500 .75rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+code,.mono{font-family:var(--mono);font-size:.86em}
+a{color:var(--accent)}
+.note{background:var(--warn-soft);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:.92rem}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:.86rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+td.n{text-align:right;white-space:nowrap}
+tr.best td{background:var(--accent-soft)}
+.pill{display:inline-block;font:500 .72rem var(--sans);padding:1px 8px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.ok{background:var(--accent-soft);color:var(--accent)}
+.warnp{background:var(--warn-soft);color:var(--warn)}
+.badp{background:var(--bad-soft);color:var(--bad)}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+
+.switch{display:flex;flex-wrap:wrap;gap:8px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px}
+.switch button{font:500 .88rem var(--sans);padding:7px 14px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.switch button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.switch button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.trees[data-show="en"] .ex[data-for="fr"],.trees[data-show="fr"] .ex[data-for="en"]{display:none}
+.sent{font-family:var(--serif);font-size:1.06rem;font-style:italic}
+
+.tree{display:flex;flex-direction:column;align-items:stretch}
+.node{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.node.main{border-color:var(--accent)}
+.node h3 .step{font:600 .72rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:2px}
+.spec{display:grid;grid-template-columns:96px 1fr;gap:3px 12px;font-size:.86rem;margin:0}
+.spec dt{color:var(--muted);font-weight:600}
+.spec dd{margin:0;min-width:0}
+.ex{background:var(--ex);border-radius:6px;padding:9px 11px;font-size:.84rem;display:flex;flex-direction:column;gap:4px}
+.lab{font:600 .7rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ln{font-family:var(--mono);font-size:.8rem;line-height:1.45;overflow-wrap:anywhere}
+.k{color:var(--muted)}
+.ln.drop{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--bad)}
+.tag{font:500 .7rem var(--sans);padding:0 6px;border-radius:4px;border:1px solid var(--line);white-space:nowrap;margin-left:4px}
+table.arcs{min-width:980px}table.arcs td.ln:nth-child(-n+2){white-space:nowrap}
+.qa{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.qa .q{display:grid;grid-template-columns:minmax(0,34%) 1fr;gap:4px 14px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.86rem}
+.qa .q b{font-family:var(--serif);font-weight:600;font-size:.92rem}
+.qa .q .src{display:block;color:var(--muted);font-size:.78rem;margin-top:3px}
+.down{height:24px;width:2px;background:var(--accent);margin:0 auto;position:relative}
+.down::after{content:"";position:absolute;bottom:-1px;left:-4px;border:5px solid transparent;border-top-color:var(--accent);border-bottom:0}
+.fork{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.forkbar{height:14px;margin:0 16.6%;border:2px solid var(--accent);border-bottom:0}
+.joinbar{height:14px;margin:0 16.6%;border:2px solid var(--accent);border-top:0}
+.fork .down{height:14px}
+.branch{display:flex;flex-direction:column;min-width:0}
+.fork .qa .q{grid-template-columns:1fr}
+.side{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:12px}
+.node.review{border-style:dashed;background:var(--bg)}
+.treehead{display:flex;flex-direction:column;gap:6px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.flowline{font:.82rem/1.4 var(--mono);color:var(--muted)}
+@media (max-width:780px){
+  .fork{grid-template-columns:1fr}.forkbar,.joinbar{display:none}
+  .side{grid-template-columns:1fr}
+  .spec{grid-template-columns:1fr}.spec dt{margin-top:4px}
+  .qa .q{grid-template-columns:1fr}
+  h1{font-size:1.7rem}
+}
+.check{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.check>div{padding:10px 12px;border-bottom:1px solid var(--line);min-width:0}
+.check>div:nth-child(odd){font-family:var(--serif);font-style:italic;color:var(--muted)}
+@media (max-width:640px){.check{grid-template-columns:1fr}.check>div:nth-child(odd){border-bottom:none;padding-bottom:0}}
+@media (prefers-reduced-motion:no-preference){.switch button{transition:background .15s}}
+</style>
+
+<div class="wrap">
+
+<header class="col" style="display:flex;flex-direction:column;gap:12px">
+  <div class="eyebrow">Steps 1 to 5 · meeting with David Chartash, Thursday October 22</div>
+  <h1>How a debate sentence becomes predications</h1>
+  <p>Both drawings, redrawn top to bottom: what runs now, and the different proposal. Every box gives what goes in, what comes out, and what it is built on. Every box shows a real debate sentence from our data as it leaves that box. Every question written on the drawings sits under its box with the answer and where the answer comes from. The page stops at step 5, since David said the question right now is how the predications come out, not factuality.</p>
+  <p class="muted">Numbers are from the current rules (v6b) on the parses saved on Caprice's laptop on October 19, unless a line says v5 (the rules that ran on the full corpus). Facts about the parsers come from their papers, documentation and model files, cited under each answer.</p>
+  <nav class="toc" aria-label="Sections"><a href="#monday">Monday's two sentences</a><a href="#three">The three parsers compared</a><a href="#now">What runs now</a><a href="#proposal">Different proposal</a><a href="#compare">The two compared</a><a href="#more">More real sentences</a><a href="#ptb">Penn Treebank</a><a href="#accuracy">Accuracy</a><a href="#david">David's questions</a><a href="#decide">To decide</a></nav>
+</header>
+
+<section id="monday">
+  <h2>Monday's two sentences, answered first</h2>
+  <p class="col">These are the two sentences David walked through on October 19. For each one: what he said a full reading needs, what all three parses and the discourse parse contain, what Monday's output said, and what the pipeline now gives. Nothing below was edited by hand; it is the output of <code>full.py</code> on the parses saved on October 19.</p>
+
+  <div class="node main">
+    <h3><span class="step">Sentence 1 · sample #1, US House, H.R. 660, June 19 2003</span>The hardware store</h3>
+    <p class="sent">A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.</p>
+    <p style="font-size:.86rem"><b>What David named:</b> who (a small hardware store in an AHP), two separate actions (joining an association; sending premiums), to whom the premiums go, qualified by a negation (not to themselves, but off to others), and a why that ties the last clause to what came before.</p>
+    <div class="scroll"><table class="arcs">
+      <thead><tr><th>spaCy</th><th>Stanza</th><th>Constituency tree</th><th>Discourse units</th></tr></thead>
+      <tbody><tr>
+        <td class="ln">store nsubj → joining<br>association dobj → joining<br>sending advcl → joining<br>premiums dobj → sending<br><b>to prep → sending</b><br><b>themselves pobj → to</b><br>is conj → joining<br>need ccomp → is</td>
+        <td class="ln">store nsubj → joining<br>association obj → joining<br>sending advcl → joining<br>premiums obj → sending<br><b>themselves obl → sending</b><br><b>others conj → themselves</b><br>why conj → joining<br>need advcl:relcl → why</td>
+        <td class="ln">(S (NP A small hardware store (PP in an AHP)) (VP would be joining (NP an association) , (S (VP sending (NP their premiums) <b>(PP not (PP to themselves) but (PP off (PP to others)))</b>))))<br>, and (S that (VP is (SBAR why (S we (VP need the check)))))</td>
+        <td class="ln">0: A small hardware store in an AHP would be joining an association,<br>1: sending their premiums not to themselves but off to others,<br>2: and that is why we need the check.<br><span class="k">1 elaborates 0; <b>2 explains (0, 1)</b></span></td>
+      </tr></tbody>
+    </table></div>
+    <p style="font-size:.86rem">All three parses have "to themselves ... to others" attached to "sending", and the discourse parse has the explanation link. The information was in the data on Monday. The rules threw it away, and the loose scorer did not notice.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Part David named</th><th>Monday's output</th><th>Now</th></tr></thead>
+      <tbody>
+        <tr><td>Who, joining what</td><td>A small hardware store in an AHP | would be joining | an association (hedged)</td><td>same, with modal: would <span class="pill ok">caught</span></td></tr>
+        <tr><td>Who, sending what</td><td>... (inherited) | sending | their premiums</td><td>same <span class="pill ok">caught</span></td></tr>
+        <tr><td>To whom, with the negation</td><td><span class="pill badp">missing</span></td><td>to: not to themselves but off to others, marked as a negated part <span class="pill ok">caught</span></td></tr>
+        <tr><td>How the two actions relate</td><td><span class="pill badp">missing</span></td><td>sending is linked to joining (adverbial clause; discourse: elaboration) <span class="pill ok">caught</span></td></tr>
+        <tr><td>The why</td><td>"that | is | why we need the check" as its own line, plus "we | need | the check" as embedded</td><td>we | need | the check, stated, linked to the clauses before it as their result ("that is why"; discourse: explanation). The "that is why" line is folded into the link. <span class="pill ok">caught</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted" style="font-size:.84rem">One reading is still open, and David raised it himself: the why may tie to the sending alone rather than to the whole first part. The output links it to the first clause, which holds the sending under it; the narrower reading would need a person to decide.</p>
+  </div>
+
+  <div class="down"></div>
+
+  <div class="node main">
+    <h3><span class="step">Sentence 2 · test A8 (David's sentence), English and French</span>The Senate refused to act</h3>
+    <p class="sent">Last year the House passed legislation identical to H.R. 5, but the Senate refused to act.</p>
+    <p style="font-size:.86rem"><b>What David asked:</b> the Senate refused to act on what, and when? "Either the Senate refused to act on the legislation, or the Senate refused to act last year. Both of them are reasonable objects."</p>
+    <div class="scroll"><table class="arcs">
+      <thead><tr><th>spaCy</th><th>Stanza</th><th>Constituency tree</th><th>Discourse units</th></tr></thead>
+      <tbody><tr>
+        <td class="ln">year npadvmod → passed<br>House nsubj → passed<br>legislation dobj → passed<br>refused conj → passed<br>act xcomp → refused</td>
+        <td class="ln">year obl:unmarked → passed<br>House nsubj → passed<br>legislation obj → passed<br>refused conj → passed<br>act xcomp → refused</td>
+        <td class="ln">(S <b>(NP Last year)</b> (S the House (VP passed (NP legislation identical to H.R. 5))) , but (S the Senate (VP refused (S to act))))</td>
+        <td class="ln">0: Last year the House passed legislation identical to H.R. 5,<br>1: but the Senate refused to act.<br><span class="k">0 and 1 adversative (contrast)</span></td>
+      </tr></tbody>
+    </table></div>
+    <p style="font-size:.86rem">"Last year" opens the whole sentence in the tree (it sits above both clauses), while both dependency parses hang it on "passed" only. "Act" has no object in any parse, because the sentence never says what was not acted on.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Part</th><th>Monday's output</th><th>Now (English)</th><th>Now (French)</th></tr></thead>
+      <tbody>
+        <tr><td>House passed what, when</td><td>the House | passed | legislation identical to H.R. 5</td><td>same, with when: Last year <span class="pill ok">caught</span></td><td>la Chambre | a adopté | un projet de loi identique au projet de loi 5, when: L'an dernier <span class="pill ok">caught</span></td></tr>
+        <tr><td>Senate refused to act, on what</td><td>the Senate | refused to act | (empty)</td><td>object not stated; refers back to: legislation identical to H.R. 5, marked <i>inferred</i> <span class="pill warnp">inferred</span></td><td>same: un projet de loi identique au projet de loi 5, inferred <span class="pill warnp">inferred</span></td></tr>
+        <tr><td>Senate refused, when</td><td><span class="pill badp">missing</span></td><td>when: Last year, marked <i>inherited, may cover this clause</i> <span class="pill warnp">either reading</span></td><td>when: L'an dernier, inherited <span class="pill warnp">either reading</span></td></tr>
+        <tr><td>How the clauses relate</td><td><span class="pill badp">missing</span></td><td>contrast ("but"; discourse: adversative) <span class="pill ok">caught</span></td><td>contrast ("mais"; discourse: contrast) <span class="pill ok">caught</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted" style="font-size:.84rem">The pipeline never states an inferred part as fact: the object and the time for the Senate clause are both marked, so a reader sees that the sentence leaves them open, which is David's point. The French line now uses the wording two of the three parsers agree on ("identique au projet de loi 5"); on Monday it took spaCy's shorter wording because spaCy comes first.</p>
+  </div>
+
+  <div class="down"></div>
+
+  <div class="node">
+    <h3>What changed in the pipeline, and what it did to the numbers</h3>
+    <dl class="spec">
+      <dt>Output</dt><dd>Each kept line now carries every argument of its verb (to whom, for what, when, how), negation inside an argument, a time phrase that opens the sentence carried to the clauses joined to it, an unstated object marked as unstated, and links to the line it depends on with the linking word and the discourse relation. "That is why X" becomes a link. Same code and same paired word lists for English and French. <code>full.py</code></dd>
+      <dt>Wording</dt><dd>Each line takes the wording two of the parsers agree on, instead of the first parser's.</dd>
+      <dt>Scoring</dt><dd>A strict score now sits next to the loose one: exact match of subject, verb and object, and how many of the key object's words the output covers. <code>strict.py</code></dd>
+    </dl>
+    <div class="scroll"><table>
+      <thead><tr><th>Set</th><th>Lang</th><th>Loose: found</th><th>Strict: all three slots exact, Monday</th><th>Now</th><th>Key object words covered (lines found), Monday</th><th>Now</th></tr></thead>
+      <tbody>
+        <tr><td>Sample</td><td>EN</td><td class="n">108/119</td><td class="n">56 (47%)</td><td class="n">60 (50%)</td><td class="n">288/365 (79%)</td><td class="n">309/365 (85%)</td></tr>
+        <tr><td>Sample</td><td>FR</td><td class="n">94/116</td><td class="n">26 (22%)</td><td class="n">34 (29%)</td><td class="n">260/327 (80%)</td><td class="n">293/327 (90%)</td></tr>
+        <tr><td>Held-out</td><td>EN</td><td class="n">30/36</td><td class="n">19 (53%)</td><td class="n">21 (58%)</td><td class="n">72/95 (76%)</td><td class="n">76/95 (80%)</td></tr>
+        <tr><td>Held-out</td><td>FR</td><td class="n">25/33</td><td class="n">9 (27%)</td><td class="n">9 (27%)</td><td class="n">63/78 (81%)</td><td class="n">63/78 (81%)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted" style="font-size:.82rem">Exact counts were checked two ways: word-overlap scoring on the paired lines (<code>strict.py</code>), and a plain string comparison of every key line against every output line. They agree on all eight cells except one English sample line, where the words match but their order does not; the table uses the stricter count.</p>
+    <p class="note">The strict numbers are the honest headline. Loose matching says the pipeline finds 91% of English and 81% of French key lines. Exact matching says half of the English lines and under a third of the French lines come out word for word as the key has them. Some of that gap is the pipeline, and some is the key: it has one object slot, so it sometimes leaves out parts David would want ("sent the report <i>to the Senate</i>"), and the full predication is then marked wrong for including them. The key needs a slot for each part (object, to whom, when, why) before the strict score can be final. That is annotation work for Caprice and Joanie, with a written rule for each slot.</p>
+  </div>
+</section>
+
+
+<section id="three">
+  <h2>How the three parsers compare, alone and in the vote</h2>
+  <p class="col">Each parser's own lines were turned into full predications the same way as the vote's (the tree's arguments are read from the phrases beside its verb), then scored against the same keys. This is what each one does on its own, and whether the vote beats it on the same key lines. <code>compare3.py</code></p>
+
+  <h3>Each one on David's two sentences</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Part</th><th>spaCy alone</th><th>Stanza alone</th><th>Tree alone</th><th>Vote</th></tr></thead>
+    <tbody>
+      <tr><td>store | sending | their premiums</td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill ok">3 of 3</span></td></tr>
+      <tr><td>to: not to themselves but off to others</td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td></tr>
+      <tr><td>"that is why": we need the check as the result</td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill badp">no</span> keeps "that | is | why ..." as a line</td><td><span class="pill ok">yes</span></td></tr>
+      <tr><td>links between clauses</td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill badp">not built</span> for trees</td><td><span class="pill ok">yes</span></td></tr>
+      <tr><td>House passed ..., when: Last year</td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill badp">no</span> "Last year" sits outside the clause</td><td><span class="pill ok">yes</span></td></tr>
+      <tr><td>Senate | refused to act, object not stated, contrast</td><td><span class="pill ok">yes</span></td><td><span class="pill ok">yes</span></td><td><span class="pill badp">no</span> splits it into "refused | to act" and "to act"</td><td><span class="pill ok">yes</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Each one on the keys</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Set</th><th>Lang</th><th>Method</th><th>Loose found (95% CI)</th><th>Exact, 3 slots (95% CI)</th><th>Object words</th><th>Not in key</th><th>Label</th></tr></thead>
+    <tbody>
+      <tr><td>Sample</td><td>EN</td><td>spaCy alone</td><td class="n">104/119 (80 to 92)</td><td class="n">54 = 45% (37 to 54)</td><td class="n">73%</td><td class="n">13</td><td class="n">102</td></tr>
+      <tr><td></td><td></td><td>Stanza alone</td><td class="n">103/119 (79 to 92)</td><td class="n">63 = 53% (44 to 62)</td><td class="n">77%</td><td class="n">22</td><td class="n">100</td></tr>
+      <tr><td></td><td></td><td>Tree alone</td><td class="n">104/119 (80 to 92)</td><td class="n">53 = 45% (36 to 53)</td><td class="n">75%</td><td class="n">27</td><td class="n">96</td></tr>
+      <tr class="best"><td></td><td></td><td>Vote</td><td class="n">108/119 (84 to 95)</td><td class="n">60 = 50% (42 to 59)</td><td class="n">77%</td><td class="n">15</td><td class="n">107</td></tr>
+      <tr><td>Sample</td><td>FR</td><td>spaCy alone</td><td class="n">88/116 (67 to 83)</td><td class="n">26 = 22% (16 to 31)</td><td class="n">63%</td><td class="n">41</td><td class="n">81</td></tr>
+      <tr class="best"><td></td><td></td><td>Stanza alone</td><td class="n">96/116 (75 to 89)</td><td class="n">42 = 36% (28 to 45)</td><td class="n">72%</td><td class="n">37</td><td class="n">89</td></tr>
+      <tr><td></td><td></td><td>Tree alone</td><td class="n">77/116 (57 to 74)</td><td class="n">32 = 28% (20 to 36)</td><td class="n">64%</td><td class="n">53</td><td class="n">59</td></tr>
+      <tr><td></td><td></td><td>Vote</td><td class="n">94/116 (73 to 87)</td><td class="n">34 = 29% (22 to 38)</td><td class="n">72%</td><td class="n">27</td><td class="n">87</td></tr>
+      <tr><td>Held-out</td><td>EN</td><td>spaCy alone</td><td class="n">30/36</td><td class="n">18 = 50%</td><td class="n">70%</td><td class="n">8</td><td class="n">26</td></tr>
+      <tr><td></td><td></td><td>Stanza alone</td><td class="n">29/36</td><td class="n">17 = 47%</td><td class="n">60%</td><td class="n">10</td><td class="n">27</td></tr>
+      <tr><td></td><td></td><td>Tree alone</td><td class="n">28/36</td><td class="n">17 = 47%</td><td class="n">68%</td><td class="n">11</td><td class="n">26</td></tr>
+      <tr class="best"><td></td><td></td><td>Vote</td><td class="n">30/36</td><td class="n">21 = 58%</td><td class="n">67%</td><td class="n">10</td><td class="n">28</td></tr>
+      <tr><td>Held-out</td><td>FR</td><td>spaCy alone</td><td class="n">22/33</td><td class="n">9 = 27%</td><td class="n">64%</td><td class="n">14</td><td class="n">22</td></tr>
+      <tr class="best"><td></td><td></td><td>Stanza alone</td><td class="n">25/33</td><td class="n">11 = 33%</td><td class="n">64%</td><td class="n">14</td><td class="n">24</td></tr>
+      <tr><td></td><td></td><td>Tree alone</td><td class="n">22/33</td><td class="n">8 = 24%</td><td class="n">64%</td><td class="n">19</td><td class="n">20</td></tr>
+      <tr><td></td><td></td><td>Vote</td><td class="n">25/33</td><td class="n">9 = 27%</td><td class="n">65%</td><td class="n">10</td><td class="n">25</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted col" style="font-size:.84rem">Held-out intervals are wide (about ±15 points) and left out of the table for space. "Key object words carried" counts over all key lines, found or not, so it is lower than the figure in Monday's section, which counts over the lines found. Stanza alone finds 96 French lines here against 95 in the three-slot score, because the full predication fills an empty object from the verb's first argument.</p>
+
+  <h3>Does the vote beat each parser on the same key lines?</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Sample</th><th>Compared with</th><th>Measure</th><th>Only the vote gets it</th><th>Only the parser gets it</th><th>McNemar p</th><th>Difference, 95% interval (points)</th></tr></thead>
+    <tbody>
+      <tr><td>EN</td><td>spaCy alone</td><td>loose</td><td class="n">5</td><td class="n">1</td><td class="n">0.22</td><td class="n">0.0 to +7.6</td></tr>
+      <tr><td>EN</td><td>spaCy alone</td><td>exact</td><td class="n">6</td><td class="n">0</td><td class="n">0.03</td><td class="n">+1.6 to +9.3</td></tr>
+      <tr><td>EN</td><td>Stanza alone</td><td>loose</td><td class="n">7</td><td class="n">2</td><td class="n">0.18</td><td class="n">-1.0 to +9.6</td></tr>
+      <tr><td>EN</td><td>Stanza alone</td><td>exact</td><td class="n">7</td><td class="n">10</td><td class="n">0.63</td><td class="n">-9.4 to +4.1</td></tr>
+      <tr><td>EN</td><td>Tree alone</td><td>loose</td><td class="n">5</td><td class="n">1</td><td class="n">0.22</td><td class="n">0.0 to +7.6</td></tr>
+      <tr><td>FR</td><td>spaCy alone</td><td>loose</td><td class="n">8</td><td class="n">2</td><td class="n">0.11</td><td class="n">0.0 to +11.1</td></tr>
+      <tr><td>FR</td><td>Stanza alone</td><td>loose</td><td class="n">3</td><td class="n">5</td><td class="n">0.73</td><td class="n">-7.2 to +3.4</td></tr>
+      <tr><td>FR</td><td>Stanza alone</td><td>exact</td><td class="n">3</td><td class="n">11</td><td class="n">0.06</td><td class="n">-12.7 to -1.6</td></tr>
+      <tr><td>FR</td><td>Tree alone</td><td>loose</td><td class="n">24</td><td class="n">7</td><td class="n">0.00</td><td class="n">+6.3 to +23.3</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted col" style="font-size:.84rem">The interval resamples whole sentences 10,000 times, so the lines of one sentence move together. On the held-out set every comparison has p of 0.12 or more; the full table is in <code>compare3_out.txt</code>.</p>
+
+  <h3>How independent the three voters are</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Lines from</th><th>also produced by</th><th>English</th><th>French</th></tr></thead>
+    <tbody>
+      <tr><td>spaCy</td><td>Stanza</td><td class="n">83%</td><td class="n">73%</td></tr>
+      <tr><td>spaCy</td><td>tree</td><td class="n">83%</td><td class="n">59%</td></tr>
+      <tr><td>Stanza</td><td>tree</td><td class="n">82%</td><td class="n">62%</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>What this says</h3>
+  <div class="col" style="display:flex;flex-direction:column;gap:10px">
+    <p><b>English.</b> The vote is the best English method, but only one difference is clear: it gets 6 lines exactly right that spaCy alone gets wrong, and none the other way (p = 0.03). Against Stanza and the tree, the vote finds a few more lines loosely, but the intervals include zero. All three English parsers agree with each other on about 83% of lines, so the vote has three fairly independent readers to choose from.</p>
+    <p><b>French.</b> The vote does not beat Stanza alone. Stanza alone gets 11 lines exactly right that the vote gets wrong, against 3 the other way (p = 0.06, interval entirely below zero). The French vote is pulled down by its two weaker voters. spaCy and Stanza agree with each other far more (73%) than either agrees with the tree (59% and 62%), which fits their shared Sequoia training. The vote does keep fewer wrong lines (27 against Stanza's 37).</p>
+    <p><b>Tried and not adopted:</b> letting the vote decide which lines to keep but taking Stanza's wording. It looked better on the sample (English 66 exact, French 40), but on the held-out set it lost 3 English exact lines (21 to 18). Since the variant was chosen by looking at the sample, the held-out result is the one that counts, and it says no.</p>
+    <p><b>So, the honest answer to "why three parsers":</b> in English the vote is safest and at least as good as any one parser. In French it gives fewer wrong lines but less exact wording than Stanza alone. That is a measured trade-off, not a win, and it is the decision for Thursday: keep the vote in both languages, or use the vote in English and Stanza with the vote as a check in French, which would break the same-method-in-both-languages rule.</p>
+  </div>
+</section>
+
+
+<div class="trees" id="trees" data-show="en">
+<div class="switch" role="group" aria-label="Choose the example sentence">
+  <button type="button" aria-pressed="true" data-ex="en">Ontario, English · Bill 160, Dec 7 2017</button>
+  <button type="button" aria-pressed="false" data-ex="fr">Quebec, French · Bill 106, Oct 19 1993</button>
+</div>
+
+<!-- ============================== TREE 1 ============================== -->
+<section id="now">
+  <div class="treehead">
+    <div class="eyebrow">Page 1 of the drawing</div>
+    <h2 style="border:0;padding:0">What runs now</h2>
+    <div class="flowline">debate text → sentences → spaCy dep ‖ Stanza dep ‖ constituency → rules (×3) → subject | verb | object ×3 → 2-of-3 vote → discourse re-read → output</div>
+  </div>
+
+  <div class="tree">
+
+    <div class="node main">
+      <h3><span class="step">Step 1</span>Debate text · US, Ontario, Quebec</h3>
+      <dl class="spec">
+        <dt>Input</dt><dd>Congressional Record (GovInfo, with OCR for 1985 to 1993), Ontario Hansard, Quebec Journal des débats (OCR before 1994).</dd>
+        <dt>Output</dt><dd>Each bill's own debate, one file per sitting day.</dd>
+        <dt>Tested</dt><dd>59 audit checks against Congress.gov, Ontario and Assemblée bill pages; 70 wrong bill-days removed.</dd>
+      </dl>
+      <div class="ex" data-for="en"><span class="lab">This example</span>Ontario Legislative Assembly, Parliament 41 session 2, Bill 160, debate of December 7, 2017.</div>
+      <div class="ex" data-for="fr"><span class="lab">This example</span>Assemblée nationale du Québec, legislature 34 session 2, Bill 106, debate of October 19, 1993.</div>
+      <div class="qa">
+        <div class="q"><b>Are the three the same kind of text?</b><span>No. French is Quebec only; English is the US Congress plus Ontario, so language and legislature are mixed in every English to French comparison. Ontario English against Quebec French is the fairer pair, since both are Westminster provincial assemblies. <span class="pill warnp">open</span></span></div>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Step 2</span>Sentences</h3>
+      <dl class="spec">
+        <dt>Input</dt><dd>The debate text from step 1.</dd>
+        <dt>Output</dt><dd><code>sentences_v3.json</code>, one record per sentence: sentence_id, bill, session, date, lang, lang_method, text. 1,277,445 in all (US 338,772; Ontario 500,666; Quebec 438,007).</dd>
+        <dt>Script</dt><dd><code>build_sentences_v3.py</code>, <code>split_sentences()</code>, <code>v3_common.detect_lang()</code></dd>
+      </dl>
+      <div class="ex" data-for="en"><span class="lab">This example</span><span class="sent">This report contains 12 recommendations, including the creation of new legislation to consolidate under one roof out-of-hospital and independent health facilities.</span><span class="mono k">ON|41-2-Bill160|2017-12-07|p13|s9</span></div>
+      <div class="ex" data-for="fr"><span class="lab">This example</span><span class="sent">Ce projet de loi visait ainsi à encourager les citoyens à collaborer avec l'administration de la justice.</span><span class="mono k">QC|34-2-Bill106|1993-10-19|p107|s4</span></div>
+      <div class="qa">
+        <div class="q"><b>How is it split?</b><span>Our own regular expression: cut after . ! ? when a capital, digit, quote or parenthesis follows. A list of 52 abbreviations (Mr., M., Mme, Sec., H.R., L.R.O.) undoes false cuts. Pieces under 20 characters are dropped. None of the parsers re-split it: Stanza runs with <code>tokenize_no_ssplit=True</code>.<span class="src">build_sentences_v3.py; parse_corpus_v5.py line 84</span></span></div>
+        <div class="q"><b>How is the language decided?</b><span>Two different detectors: function-word and accent counts, and the lingua model. When they agree, that language is used. When they disagree, or the sentence is under 6 words, the paragraph's language is used. Last run: 1,017,183 agree, 348 disagree.<span class="src">v3_common.detect_lang()</span></span></div>
+        <div class="q"><b>How accurate is the split?</b><span>Not measured yet. Plan: hand-check 200 boundaries per language, the same way for both. <span class="pill warnp">open</span></span></div>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Step 3</span>Parse: the same sentence goes to three parsers, separately</h3>
+      <p style="font-size:.86rem">Questions and sentences under three words are dropped right after parsing, before the rules. Each parser tokenizes on its own, which is why the vote later matches lines by their words rather than by word positions.</p>
+      <p class="note" style="font-size:.86rem">Found Oct 19: the parsers do not all see the same sentence. The French tree parser reads spaCy's sentence breaks, and spaCy cut 8 of the 50 French sample sentences into 2 to 4 pieces, mostly at colons and quotation marks. Fix: pass every parser the same stored sentence, and check after each one that the sentence count and text match. <span class="pill warnp">to fix</span></p>
+      <div class="qa">
+        <div class="q"><b>Where from? Based on? Tested how? Accuracy?</b><span>In the table below. "Published" is the maker's own score on its own test set. "Ours" is answer-key lines found on the 100-sentence sample with the current rules.</span></div>
+      </div>
+      <div class="scroll"><table>
+        <thead><tr><th>Parser</th><th>Maker · method</th><th>Trained on</th><th>Published</th><th>Ours EN</th><th>Ours FR</th></tr></thead>
+        <tbody>
+          <tr><td>spaCy dependency</td><td>Explosion, spaCy 3.8 · transition-based</td><td>EN OntoNotes 5 (ClearNLP labels) · FR UD French Sequoia</td><td id="pub-spacy">LAS 90.21 EN / 85.71 FR <span class="k">(model card 3.8.0; eval set not named)</span></td><td class="n">104/119</td><td class="n">88/116</td></tr>
+          <tr><td>Stanza dependency</td><td>Stanford, Stanza 1.15 · biaffine graph</td><td>EN combined UD English · FR combined UD French</td><td id="pub-stanza">None for the combined models. Nearest: LAS 86.77 EN EWT / 91.28 FR GSD <span class="k">(performance page, Stanza 1.5.1, UD 2.12)</span></td><td class="n">102/119</td><td class="n">95/116</td></tr>
+          <tr><td>Constituency</td><td>EN Stanza · FR Berkeley benepar_fr2</td><td>EN Penn Treebank · FR French Treebank</td><td id="pub-const">F1 93.16 EN <span class="k">(Stanza docs)</span> / 88.43 FR <span class="k">(benepar README)</span></td><td class="n">104/119</td><td class="n">77/116</td></tr>
+        </tbody>
+      </table></div>
+      <div class="qa">
+        <div class="q"><b>Why these?</b><span>Widely used, run offline, and each exists in both languages. Only partly apples to apples: spaCy English does not use UD labels, and the two constituency parsers are different families.</span></div>
+      </div>
+    </div>
+    <div class="forkbar"></div>
+
+    <div class="fork">
+      <!-- spaCy -->
+      <div class="branch"><div class="down"></div>
+        <div class="node main">
+          <h3><span class="step">Step 3a</span>spaCy dependency</h3>
+          <div class="ex" data-for="en"><span class="lab">Main arcs</span>
+            <span class="ln">report nsubj → contains</span><span class="ln">recommendations dobj → contains</span><span class="ln">creation pobj → including</span><span class="ln"><b>consolidate acl → creation</b></span><span class="ln">facilities dobj → consolidate</span></div>
+          <div class="ex" data-for="fr"><span class="lab">Main arcs</span>
+            <span class="ln">projet nsubj → visait</span><span class="ln">encourager xcomp → visait</span><span class="ln">citoyens obj → encourager</span><span class="ln"><b>collaborer acl → citoyens</b></span><span class="ln">administration obl:mod → collaborer</span></div>
+          <div class="qa" id="qa-spacy"><div class="q"><b>What does it receive?</b><span>The cleaned sentence text. It tokenizes itself, and its own sentence breaks are only used by the French tree parser (below).<span class="src">parse_corpus_v5.py process_batch()</span></span></div>
+<div class="q"><b>Built on, trained on?</b><span><code>en_core_web_lg</code> / <code>fr_core_news_lg</code> 3.8.0. English: OntoNotes 5 with the ClearNLP conversion to dependencies. French: UD French Sequoia v2.8. Published LAS 90.21 English, 85.71 French; the model card does not say which split.<span class="src">model meta and README in the 3.8.0 wheels (2 Explosion files)</span></span></div>
+<div class="q"><b>What is stored per word?</b><span>Index, text, lemma, part of speech, label, head, morphology, trailing space.<span class="src">preds.py from_spacy()</span></span></div>
+<div class="q"><b>How is this part of the tree built?</b><span>Left to right with a stack and a buffer (Honnibal and Johnson 2015, non-monotonic arc-eager). At each step a small network picks one action: shift, reduce, attach left or right with a label, or break the sentence. It is greedy: one guess per step, no beam. The models have 106 actions in English and 48 in French.<span class="src">Counted from parser/moves in each 3.8.0 model; beam_width 1 in parser/cfg and the code default</span></span></div>
+<div class="q"><b>Can it make crossing arcs?</b><span>English yes, French no. Training trees are made projective and the output is lifted back (Nivre and Nilsson 2005); the English model has 27 lifted labels, the French model none. Checked a second way on our parses: 1 English sentence of 110 has crossing arcs, 0 French.<span class="src">parser/moves; nonproj.pyx; our mac_parses.json</span></span></div>
+<div class="q"><b>How does it look through the words? What does it see?</b><span>Hashed word features (normalized form, prefix, suffix, shape) plus a 300-dimension word vector, through 4 convolution layers of width 96, each seeing one word to the left and right. The action network looks at 8 positions on the stack and buffer, with 64 hidden units.<span class="src">config.cfg in each 3.8.0 wheel (tok2vec MaxoutWindowEncoder depth 4, window 1; TransitionBasedParser hidden_width 64)</span></span></div>
+<div class="q"><b>Which label set?</b><span>English: ClearNLP, 45 labels (dobj, prep, pobj, nsubjpass, relcl). French: UD, 36 labels (obj, case, obl:arg, obl:mod, nsubj:pass). In our parses 40 English and 35 French labels occur.<span class="src">model meta, 2 files; our parses</span></span></div>
+<div class="q"><b>How does the result change after?</b><span>It does not. The rules read the tree into lines; the tree is never edited.</span></div></div>
+        </div>
+      </div>
+      <!-- Stanza -->
+      <div class="branch"><div class="down"></div>
+        <div class="node main">
+          <h3><span class="step">Step 3b</span>Stanza dependency</h3>
+          <div class="ex" data-for="en"><span class="lab">Main arcs</span>
+            <span class="ln">report nsubj → contains</span><span class="ln">recommendations obj → contains</span><span class="ln">creation nmod → recommendations</span><span class="ln"><b>consolidate acl → legislation</b></span><span class="ln">facilities obl → consolidate</span></div>
+          <div class="ex" data-for="fr"><span class="lab">Main arcs</span>
+            <span class="ln">projet nsubj → visait</span><span class="ln">encourager xcomp → visait</span><span class="ln">citoyens obj → encourager</span><span class="ln"><b>collaborer xcomp → encourager</b></span><span class="ln">administration obl:arg → collaborer</span></div>
+          <div class="qa" id="qa-stanza"><div class="q"><b>What does it receive?</b><span>The same cleaned text, in batches of 32. It tokenizes, expands French multiword tokens (du becomes de le), tags part of speech and lemma, and does not re-split (<code>tokenize_no_ssplit=True</code>).<span class="src">Stanza docs (tokenize, mwt); parse_corpus_v5.py</span></span></div>
+<div class="q"><b>Built on, trained on?</b><span>Stanza 1.15 package <code>combined_charlm</code>, built on UD 2.18. English: EWT, GUM, GUMReddit, plus PUD, Pronouns and a hand-parsed set; tested on EWT. French: GSD, ParisStories, Rhapsodie, Sequoia, plus a hand-parsed set; tested on GSD. No published score for these combined models; the nearest single-treebank models score LAS 86.77 (EWT) and 91.28 (GSD).<span class="src">resources_1.15.0.json; combined_models docs; performance page</span></span></div>
+<div class="q"><b>How is this part of the tree built?</b><span>Deep biaffine (Dozat and Manning 2017): one score for "word j is the head of word i" for every pair, a second score for the label, then the best whole tree is picked (Chu-Liu/Edmonds, one root). Stanza adds terms for word order and distance. Inputs per word: the word, lemma, part of speech, features, pretrained vectors and a character language model; 3 BiLSTM layers, 400 units each way. No transformer in the default package.<span class="src">Dozat and Manning 2017; Qi et al. 2020; stanza depparse model.py, parser.py, chuliu_edmonds.py</span></span></div>
+<div class="q"><b>Can it make crossing arcs?</b><span>Yes, the tree search allows it. In our parses: 2 English and 8 French sentences of 110 each have crossing arcs.<span class="src">chuliu_edmonds.py; our mac_parses.json</span></span></div>
+<div class="q"><b>Labels?</b><span>UD in both languages: nsubj, obj, obl, ccomp, advcl, acl:relcl, conj, aux, case, mark. In our parses 41 English and 45 French labels occur.<span class="src">de Marneffe et al. 2021, Computational Linguistics 47(2)</span></span></div></div>
+        </div>
+      </div>
+      <!-- Constituency -->
+      <div class="branch"><div class="down"></div>
+        <div class="node main">
+          <h3><span class="step">Step 3c</span>Constituency</h3>
+          <div class="ex" data-for="en"><span class="lab">Tree, shortened</span>
+            <span class="ln">(S (NP This report) (VP contains (NP 12 recommendations , (PP including (NP the creation (PP of (NP <b>new legislation (SBAR to consolidate</b> (PP under one roof) (NP out-of-hospital and independent health facilities)))))))))</span></div>
+          <div class="ex" data-for="fr"><span class="lab">Tree, shortened</span>
+            <span class="ln">(SENT (NP Ce projet de loi) (VN visait) ainsi (PP à (VPinf (VN encourager) (NP les citoyens) (PP à (VPinf (VN collaborer) (PP avec (NP l'administration de la justice))))))) .)</span></div>
+          <div class="qa" id="qa-const"><div class="q"><b>How is it built, for both?</b><span>English (Stanza, <code>ptb3-revised_charlm</code>): shift-reduce over phrases with in-order transitions (Liu and Zhang 2017), on Stanza's words; published F1 93.16. French (Berkeley <code>benepar_fr2</code>, XLM-R encoder): every span gets a score for each label and a CKY chart search finds the best nested set (Kitaev and Klein 2018); it reads spaCy's words and spaCy's sentence breaks; published F1 88.43 on the SPMRL French test set.<span class="src">Stanza constituency docs; resources_1.15.0.json; Kitaev and Klein 2018; benepar README (1 source for 88.43)</span></span></div>
+<div class="q"><b>French vs English labels?</b><span>English Penn Treebank: S, SBAR, VP, NP, PP. French Treebank: SENT, Ssub, Srel, VPinf, VPpart, and VN (the verb group, which holds clitics and ne ... pas). They do not line up one to one, so there are two tree rule files.</span></div>
+<div class="q"><b>What would constituency give me that dependency won't?</b><span>Explicit phrase boundaries: where the subject and object start and end, and how far "and" reaches. Dependency already gives the roles (nsubj, obj), and a phrase can be read off the head's subtree. For predication it is mainly a check on boundaries.</span></div>
+<div class="q"><b>Apples to apples?</b><span>Not today: different algorithm, encoder and labels per language. Berkeley's English model (<code>benepar_en3</code>, T5-small encoder, F1 95.40) gives the same algorithm in both languages: with it the English vote finds 109/119 on the sample and 29/36 held-out, checked two ways on the current rules. The encoders still differ (T5 against XLM-R).<span class="src">parity_score.py --const en3 and combine_lib path, both 109/119 and 29/36</span></span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="down"></div>
+    <div class="node">
+      <h3>spaCy compared with Stanza</h3>
+      <div class="qa" id="qa-compare"><div class="q"><b>Differences and trade-offs?</b><span>spaCy decides one step at a time and never revisits a step: fast, but an early mistake carries forward. Stanza scores every head for every word at once and picks the best whole tree: slower, and can make crossing arcs. Greedy parsers are known to lose accuracy on long sentences and long arcs (McDonald and Nivre 2007, studied on older parsers, not spaCy itself).<span class="src">McDonald and Nivre 2007</span></span></div>
+<div class="q"><b>Does one or the other use a transformer?</b><span>Neither by default. spaCy (lg) uses convolutions; Stanza uses BiLSTMs plus a character language model. The transformers in the pipeline are Berkeley French (XLM-R) and the discourse parser (xlm-roberta-large). So French constituency has a transformer and English constituency does not.<span class="src">config.cfg; resources_1.15.0.json; benepar README</span></span></div>
+<div class="q"><b>Sequoia?</b><span>Both spaCy French and Stanza French train on UD French Sequoia. In French those two votes are not independent, which may be why both made the same mistake in sample #74.</span></div></div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Rules</span>The rules read each parse into lines</h3>
+      <dl class="spec">
+        <dt>Input</dt><dd>One parse. The rules run three times, once per parse, and never see the other two.</dd>
+        <dt>Output</dt><dd>A list of lines: subject | verb | object, kind (stated, embedded, reported), negated, hedged, the rule used (<code>how</code>), and the verb's word position.</dd>
+        <dt>Files</dt><dd><code>preds.py</code> (both dependency parses, and English trees), <code>const_fr.py</code> (French trees), <code>lexicon.py</code> (every word list, paired English and French).</dd>
+      </dl>
+      <div class="qa">
+        <div class="q"><b>What published method is this closest to?</b><span>ClausIE (Del Corro and Gemulla 2013): clause-by-clause rules over a dependency parse, with the clause type deciding what is stated.</span></div>
+        <div class="q"><b>How do you find the main verb?</b><span>The root of the tree. When the root is a noun or adjective with is / est, the predicate is that copula phrase. Auxiliaries, negation and particles join the verb ("did not pass", "refused to act").</span></div>
+        <div class="q"><b>Which words have a predication?</b><span>A verb or copula phrase attached as root, conj, advcl, acl, acl:relcl (relcl in spaCy English), ccomp, parataxis, pcomp, csubj or xcomp, or any verb that has its own subject. An xcomp with no subject of its own joins its parent's verb chain instead ("refused to act"), unless it hangs on an object ("urge the doctors to act").<span class="src">preds.py is_pred_head()</span></span></div>
+        <div class="q"><b>How does nsubj, obj, verb each come out?</b><span>Subject: the nsubj (or passive or clausal subject); with none, it is inherited from the verb it is joined to and marked (inherited). Object: the obj; else a complement; else an oblique ("to the moon"). Verb: the head word plus its chain.<span class="src">preds.py subject_of(), object_of(), chain()</span></span></div>
+        <div class="q"><b>Result of the labeling?</b><span>Stated, embedded or reported, plus the rule that decided it. There are 23 outcomes checked in order, first match wins: inside a quote; said after a colon; according to / selon; cause, purpose or condition phrase; main clause; joined to another clause (takes its label); the speaker's own framing (I think / je pense); what is said; other complement; relative clause; example; means (by / en); describes a noun; adverbial cause, condition or time, purpose, means, or no linking word; xcomp complement; clause as subject; other.<span class="src">preds.py kind_of()</span></span></div>
+        <div class="q"><b>Negated and hedged words?</b><span>Negated: not, n't, never, no longer, nor, neither, hardly, nobody, nothing, none, no / ne ... pas, jamais, plus, guère, rien, personne, aucun, nul. Hedged: would, could, might, may, 'd, probably, perhaps, maybe, possibly, likely, apparently / the conditional of any verb (except devoir, falloir), pourrait, puisse, peut-être, probablement, sans doute. Not hedges: should, must / devrait, doit.<span class="src">lexicon.py; preds.py negated(), hedged()</span></span></div>
+        <div class="q"><b>What gets thrown out?</b><span>Questions, sentences under 3 words, and lines with neither a subject nor an object.</span></div>
+        <div class="q"><b>Same in English and French?</b><span>Every word list comes from one paired file: each meaning has an English and a French side, and <code>check_parity()</code> fails if a side is missing. It returns no mismatches today. 16 mismatches were fixed on October 19 (devrait was a hedge in French only; French trees had no "said that" rule; the stop list was missing 34 function words, mostly French), more on October 20.</span></div>
+      </div>
+    </div>
+    <div class="forkbar"></div>
+
+    <div class="fork">
+      <div class="branch"><div class="down"></div>
+        <div class="node">
+          <h3>Subject | verb | object from spaCy</h3>
+          <div class="ex" data-for="en">
+            <span class="ln">This report | contains | 12 recommendations, including the creation of new legislation <span class="tag">stated</span></span>
+            <span class="ln">the creation | to consolidate | out-of-hospital and independent health facilities <span class="tag">embedded</span></span></div>
+          <div class="ex" data-for="fr">
+            <span class="ln">Ce projet de loi | visait à encourager | les citoyens <span class="tag">stated</span></span>
+            <span class="ln">les citoyens | collaborer | avec l'administration de la justice <span class="tag">embedded</span></span></div>
+        </div></div>
+      <div class="branch"><div class="down"></div>
+        <div class="node">
+          <h3>Subject | verb | object from Stanza</h3>
+          <div class="ex" data-for="en">
+            <span class="ln">This report | contains | 12 recommendations, including the creation of new legislation <span class="tag">stated</span></span>
+            <span class="ln">new legislation | consolidate | under one roof out-of-hospital and independent health facilities <span class="tag">embedded</span></span></div>
+          <div class="ex" data-for="fr">
+            <span class="ln">Ce projet de loi | visait à encourager | les citoyens <span class="tag">stated</span></span>
+            <span class="ln">les citoyens (inherited) | collaborer | avec l'administration de la justice <span class="tag">embedded</span></span></div>
+        </div></div>
+      <div class="branch"><div class="down"></div>
+        <div class="node">
+          <h3>Subject | verb | object from the tree</h3>
+          <div class="ex" data-for="en">
+            <span class="ln">This report | contains | 12 recommendations, including the creation of new legislation <span class="tag">stated</span></span>
+            <span class="ln">new legislation (inherited) | to consolidate | under one roof <span class="tag">embedded</span></span></div>
+          <div class="ex" data-for="fr">
+            <span class="ln">Ce projet de loi | visait | à encourager les citoyens à collaborer avec l'administration de la justice <span class="tag">stated</span></span>
+            <span class="ln">Ce projet de loi (inherited) | encourager | les citoyens <span class="tag">embedded</span></span>
+            <span class="ln">Ce projet de loi (inherited) | collaborer | avec l'administration de la justice <span class="tag">embedded</span></span></div>
+        </div></div>
+    </div>
+    <p class="muted" style="text-align:center;font-size:.84rem">Three lists of lines per sentence. They never touch until the vote.</p>
+    <div class="joinbar"></div>
+    <div class="down"></div>
+
+    <div class="side">
+      <div class="node main">
+        <h3><span class="step">Step 4</span>Two-of-three vote</h3>
+        <dl class="spec">
+          <dt>Input</dt><dd>The three lists of lines.</dd>
+          <dt>Output</dt><dd>The kept lines, each with <code>found_by</code> (which parsers agreed) and its verb's position in each parse. <code>combine_lib.vote()</code></dd>
+        </dl>
+        <div class="ex" data-for="en"><span class="lab">What happened</span>
+          <span class="ln">This report | contains | 12 recommendations, including the creation of new legislation <span class="tag">3 of 3</span></span>
+          <span class="ln">new legislation | consolidate | under one roof out-of-hospital and independent health facilities <span class="tag">Stanza + tree</span></span>
+          <span>spaCy attached "to consolidate" to "creation"; Stanza and the tree attached it to "new legislation". The subjects share no content word, so spaCy's line found no partner and the other two outvoted it. The wording comes from Stanza, the first parser in that group.</span></div>
+        <div class="ex" data-for="fr"><span class="lab">What happened</span>
+          <span class="ln">Ce projet de loi | visait à encourager | les citoyens <span class="tag">3 of 3</span></span>
+          <span class="ln">les citoyens | collaborer | avec l'administration de la justice <span class="tag">spaCy + Stanza</span></span>
+          <span>The tree's "visait" matched "visait à encourager" on the verb, and its long object shares "citoyens". The tree rules gave "collaborer" the bill as subject instead of the citizens, so that line matched nobody.</span></div>
+        <div class="qa">
+          <div class="q"><b>What's the order of comparison? Is one greedy?</b><span>spaCy, then Stanza, then constituency. Yes, greedy: each line takes the first unused match in the next list, not the best one, and each line can be used once.</span></div>
+          <div class="q"><b>What does a match really mean?</b><span>Same polarity; the verbs share a word, or a word's first four letters; the subjects share a content word; the objects share a content word or are both empty. A passive with by / par matches its active form. This is the same test used to score lines against the answer key, which is why Monday's "sending | their premiums" counted as right even though "not to themselves but off to others" was missing (see the strict score in Monday's section). It is loose: of the lines kept, the parsers' wording was identical for 54% in English (66 of 123) and 37% in French (45 of 121).<span class="src">preds.py matches(), verb_match(); sample, v6b</span></span></div>
+          <div class="q"><b>What is kept, what is left out, why?</b><span>Kept: lines that two or three parsers produced, in the wording of the first parser in the group. When all three found a line, its label and hedge are the majority's. Left out: one-parser lines, held for review. On the sample, English review held 39 lines with 4 key lines the vote missed; French review held 84 lines with 14.</span></div>
+          <div class="q"><b>Is 2-of-3 still right given the parsing differences?</b><span>English: the vote finds 108/119 (91%, 95% interval 84 to 95) with 87% of its lines in the key; spaCy alone finds 104/119 (87%, interval 80 to 92). French: the vote finds 94/116 (81%, 73 to 87) with 78% of its lines in the key; Stanza alone finds 95/116 (82%, 74 to 88) with 71%. The intervals overlap, so with about 120 key lines per language the vote cannot be shown to find more lines than the best single parser. What it does show is fewer wrong lines. Detecting a 3 to 4 point difference would take roughly 300 to 700 key lines. Published work supports majority voting, but over one kind of structure (see the comparison section).</span></div>
+          <div class="q"><b>What about just 1 parser?</b><span>That is the baseline, and design 2. Best single parser: spaCy in English (104/119), Stanza in French (95/116).</span></div>
+        </div>
+      </div>
+      <div class="node review">
+        <h3><span class="step">Step 4r</span>One parser only</h3>
+        <p style="font-size:.86rem">Held for review in <code>for_review</code>, left out of the output.</p>
+        <div class="ex" data-for="en">
+          <span class="ln drop">the creation | to consolidate | out-of-hospital and independent health facilities</span><span class="k" style="font-size:.78rem">spaCy only</span></div>
+        <div class="ex" data-for="fr">
+          <span class="ln drop">Ce projet de loi (inherited) | encourager | les citoyens</span>
+          <span class="ln drop">Ce projet de loi (inherited) | collaborer | avec l'administration de la justice</span><span class="k" style="font-size:.78rem">tree only</span></div>
+        <p class="muted" style="font-size:.82rem">On the sample: English 90 lines kept by all three, 33 by two, 39 to review. French 66, 55, 84.</p>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Step 5</span>Discourse re-read</h3>
+      <dl class="spec">
+        <dt>Input</dt><dd>The raw sentence text (not the parses), and the kept lines.</dd>
+        <dt>Output</dt><dd>EDUs (clause-sized units) with character positions and relations between them; each kept line gets <code>kind_rst</code> and the reason <code>rst</code>.</dd>
+      </dl>
+      <div class="ex" data-for="en"><span class="lab">What happened</span>
+        <span class="ln">unit 0: This report contains 12 recommendations,</span>
+        <span class="ln">unit 1: including the creation of new legislation</span>
+        <span class="ln">unit 2: to consolidate under one roof out-of-hospital and independent health facilities.</span>
+        <span class="ln k">relations: 1 → 2 elaboration; 0 → (1, 2) elaboration</span>
+        <span>It ran because the vote kept two lines. The stated line sits in unit 0, which is no one's attribution, so it stays stated. The other line was already embedded, and embedded lines are not re-read. Nothing changed.</span></div>
+      <div class="ex" data-for="fr"><span class="lab">What happened</span>
+        <span class="ln">unit 0: the whole sentence</span><span class="ln k">relations: none</span>
+        <span>It ran because the vote kept two lines. With one unit and no relations there is nothing to re-read. Nothing changed.</span></div>
+      <div class="qa" id="qa-disc"><div class="q"><b>UniRST vs RST?</b><span>RST is the theory (Mann and Thompson 1988): text is split into minimal units linked by relations, where the nucleus carries the main point and the satellite supports it. UniRST (Chistova 2025, CODI) is the parser that produces those trees.<span class="src">Mann and Thompson 1988; Chistova 2025</span></span></div>
+<div class="q"><b>Built on what? How was it trained?</b><span><code>tchewik/isanlp_rst_v3</code>, version unirst. An xlm-roberta-large encoder; an LSTM-CRF cuts the units; a pointer network builds the tree; a biaffine classifier picks nuclearity and relation. Trained on 18 corpora in 11 languages, with one shared label set and a mask per corpus. English labels from RST-DT (42 in the model's inventory), French from ANNODIS (20).<span class="src">Chistova 2025 Table 1; Hugging Face model card</span></span></div>
+<div class="q"><b>How accurate is it?</b><span>Published end to end on the test sets: English RST-DT units 98.1, relations 55.2, full 53.6. French ANNODIS units 91.3, relations 30.6, full 30.3. So French relation labels are right less than a third of the time.<span class="src">isanlp-rst README and model card (2 copies); paper Table 5 gives 55.2 and 31.1</span></span></div>
+<div class="q"><b>When does it run?</b><span>Only on sentences where the vote kept 2 or more lines, or that contain a speech or source word. Elsewhere it could change nothing. On the sample it ran on 35 of 50 English and 33 of 50 French sentences.<span class="src">parse_corpus_v5.py needs_rst(), default --rst multi</span></span></div>
+<div class="q"><b>What is it receiving from above?</b><span>The raw sentence text only, not the parses.</span></div>
+<div class="q"><b>What does its output mean?</b><span>Units with character positions, and relations between them (attribution, condition, elaboration ...). Each kept line is placed in the unit that holds its verb.<span class="src">combine_lib.py edu_of()</span></span></div>
+<div class="q"><b>What can change, for us?</b><span>Only stated lines: inside the content of an attribution it becomes reported; inside a condition, a time or purpose unit opening with a subordinator, or a relative unit, it becomes embedded. On the sample it changed 0 English lines and 1 French line (#74).<span class="src">combine_lib.py rst_kind()</span></span></div>
+<div class="q"><b>Found on Oct 19</b><span>French attribution comes out with the opposite nucleus to English ("Le ministre a dit | que ..." NS, "The minister said | that ..." SN), so the speech verb itself was being re-labeled. Fixed Oct 20: the source side is found by its words (said, dit, according to, selon).<span class="src">test D1</span></span></div></div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Output</span>Final lines</h3>
+      <dl class="spec">
+        <dt>File</dt><dd><code>statements_v5.jsonl</code>, one row per sentence.</dd>
+        <dt>Fields</dt><dd>methods; per line: subject, verb, object, kind, kind_parser, how, rst, negated, hedged, found_by; plus for_review. Appositions ("X, the minister,") are read off spaCy and added as their own lines.</dd>
+        <dt>Full run</dt><dd>US (v5 rules): 778,411 predications, 357,424 stated. Ontario and Quebec are not finished.</dd>
+        <dt>Now</dt><dd>Each kept line also carries every argument, negation inside arguments, inherited time, unstated objects, and links between lines (see Monday's section). <code>full.py</code></dd>
+      </dl>
+      <div class="ex" data-for="en"><span class="lab">This example, against the answer key</span>
+        <span class="ln">This report | contains | 12 recommendations, including the creation of new legislation <span class="tag">stated</span></span>
+        <span class="ln">new legislation | consolidate | under one roof out-of-hospital and independent health facilities <span class="tag">embedded</span></span>
+        <span><span class="pill ok">2 of 2 key lines</span> both with the right label, no extra lines.</span></div>
+      <div class="ex" data-for="fr"><span class="lab">This example, against the answer key</span>
+        <span class="ln">Ce projet de loi | visait à encourager | les citoyens <span class="tag">stated</span></span>
+        <span class="ln">les citoyens | collaborer | avec l'administration de la justice <span class="tag">embedded</span></span>
+        <span><span class="pill ok">2 of 2 key lines</span> both with the right label, no extra lines. The key's object for the first line is longer ("les citoyens à collaborer avec ..."); it counts as found because they share "citoyens".</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TREE 2 ============================== -->
+<section id="proposal">
+  <div class="treehead">
+    <div class="eyebrow">Page 2 of the drawing</div>
+    <h2 style="border:0;padding:0">Different proposal</h2>
+    <div class="flowline">sentences → one parse (Stanza dep, UD) → checks → one set of rules → discourse → output → testing</div>
+  </div>
+  <div class="tree">
+
+    <div class="node">
+      <h3>Simple sentence all the way through, then 2, 3, other complex</h3>
+      <p style="font-size:.86rem">That is the test plan, built as 45 sentence pairs: each construction once in English and once in French (one clause, two clauses, negation, hedges, reported speech, condition and time clauses, relative clauses). Drafted with AI assistance; Caprice checks the English half, Joanie the French.</p>
+      <div class="scroll"><table>
+        <thead><tr><th>Rules</th><th>EN passed</th><th>FR passed</th></tr></thead>
+        <tbody>
+          <tr><td>v5 (full corpus)</td><td class="n">39/45</td><td class="n">31/45</td></tr>
+          <tr><td>v6 (paired word list, Oct 19)</td><td class="n">41/45</td><td class="n">32/45</td></tr>
+          <tr class="best"><td>v6b (Oct 20)</td><td class="n">44/45</td><td class="n">45/45</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="font-size:.84rem">The fixes were found on these pairs, so the pass rate is optimistic. The fair check is the held-out key, never used to write rules: key lines found unchanged (EN 30/36, FR 25/33), right labels up by 2 in each language. The one failing pair is English "by closing clinics": all three English parsers read "closing clinics" as a noun phrase.</p>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">One parse</span>Stanza dependency, UD</h3>
+      <div class="ex" data-for="en"><span class="lab">This example</span><span>The same Stanza parse as step 3b, so the same two lines come out, including "new legislation | consolidate | ...".</span></div>
+      <div class="ex" data-for="fr"><span class="lab">This example</span><span>The same Stanza parse as step 3b, so the same two lines come out.</span></div>
+      <div class="qa">
+        <div class="q"><b>Probably Stanza dependency: same model family for FR and EN, so probably best?</b><span>Yes on symmetry: the same architecture, UD labels and training recipe in both languages, and the best single French parser on our key. In English it is the weakest of the three parsers on our key.</span></div>
+        <div class="q"><b>Everything coming from one structure?</b><span>Yes: every line comes from this parse, and the others only check it. The cost is English: Stanza English finds 102/119 against the vote's 108/119.</span></div>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Checks</span>2 checks, or one, instead of 3 different parses?</h3>
+      <dl class="spec"><dt>Built</dt><dd>UDPipe 1.4 with the UD 2.5 models (English EWT, French GSD), run on Stanza's own words so the two parses line up word by word. <code>udpipe_parse.py</code>, <code>design2_full.py</code></dd></dl>
+      <div class="ex" data-for="en"><span class="lab">This example</span>
+        <span class="ln">This report | contains | 12 recommendations ... <span class="tag">confirmed</span></span>
+        <span class="ln">new legislation | consolidate | under one roof ... <span class="tag">not confirmed</span></span>
+        <span>UDPipe attached "consolidate" to "contains" as an adverbial clause, while Stanza attached it to "legislation". 3 of the 5 checked arcs agree, so the second line gets a low-confidence flag.</span></div>
+      <div class="ex" data-for="fr"><span class="lab">This example</span>
+        <span class="ln">Ce projet de loi | visait à encourager | les citoyens <span class="tag">confirmed</span></span>
+        <span class="ln">les citoyens | collaborer | avec l'administration de la justice <span class="tag">confirmed</span></span>
+        <span>UDPipe gave every word the same head and relation as Stanza. Both lines are confirmed.</span></div>
+      <div class="qa">
+        <div class="q"><b>At least a Universal Dependencies one?</b><span>Yes. UDPipe outputs UD, the same parser type in both languages.</span></div>
+        <div class="q"><b>How much do the two UD parsers agree?</b><span>Same head and same relation for 83% of English words and 87% of French words. A line is confirmed when the predicate and every core argument match: 60% of English lines, 62% of French lines.</span></div>
+        <div class="q"><b>Is the check worth having?</b><span>Yes, the same way in both languages: confirmed lines are in the key more often (English 86% against 71%, French 78% against 61%). As a filter it throws away too much (2c in the comparison), so it works as a confidence flag on each line, not as a vote.</span></div>
+        <div class="q"><b>Overlap</b><span>UDPipe English trains on EWT and French on GSD; Stanza trains on those too, plus others. So the check is not fully independent, and the overlap is the same kind in both languages.</span></div>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node">
+      <h3><span class="step">Optional</span>Constituency as a check</h3>
+      <div class="ex" data-for="en"><span class="lab">This example</span><span>Neither object is exactly one phrase of the tree (the tree puts "to consolidate ..." inside the first object's noun phrase, and "under one roof" sits apart from the second object's noun phrase), so neither is confirmed, though both lines are right.</span></div>
+      <div class="ex" data-for="fr"><span class="lab">This example</span><span>Both objects are exactly one phrase of the tree, so both are confirmed.</span></div>
+      <div class="qa">
+        <div class="q"><b>Could be good to confirm where phrases start and end. Is this necessary?</b><span>Measured as a check only (it never changes a line): an object counts as confirmed when it is exactly one phrase of the tree. English: 82% of objects confirmed, and confirmed lines are in the key a little more often (85% against 80%). French: 69% confirmed, and confirmed lines are in the key less often (70% against 77%).</span></div>
+        <div class="q"><b>Don't want it changing, just checking. But is this truly fair?</b><span>No. The trees come from different parser families in the two languages, and the check helps a little in English and not in French. Recommendation: drop constituency from design 2 and give these numbers as the reason.</span></div>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Rules</span>One set of rules, plus a PropBank-style frame</h3>
+      <div class="ex" data-for="en"><span class="lab">This example</span>
+        <span class="ln">contains: ARG0 This report · ARG1 12 recommendations, including the creation of new legislation</span>
+        <span class="ln">consolidate: ARGM-under under one roof out-of-hospital and independent health facilities</span>
+        <span>The second frame has no ARG0: the subject is inherited, and the frame reads only words attached to the verb.</span></div>
+      <div class="ex" data-for="fr"><span class="lab">This example</span>
+        <span class="ln">visait à encourager: ARG0 Ce projet de loi · ARGM-ADV ainsi · ARG1 encourager les citoyens collaborer avec l'administration de la justice</span>
+        <span class="ln">collaborer: ARGM-avec avec l'administration de la justice</span></div>
+      <div class="qa">
+        <div class="q"><b>Input is the prior parse?</b><span>Yes, the one Stanza parse.</span></div>
+        <div class="q"><b>Output one standard frame per predicate?</b><span>Built (<code>frames.py</code>): PropBank-style roles read from the UD tree, one mapping for both languages. Active subject ARG0, passive subject ARG1, object ARG1, the controlled object ARG2 (urge [the doctors] to ...), the by / par agent ARG0, time words ARGM-TMP, negation ARGM-NEG, modal or French conditional ARGM-MOD. Verbs with no ARG0 in any PropBank sense ("the program failed") get ARG1 subjects, read from the English PropBank frame files in both languages.</span></div>
+        <div class="q"><b>Is the mapping right? (the field's standard check)</b><span>Scored against Universal Proposition Bank 1.0 on its own gold UD trees, so this measures the mapping alone, not a parser. English (PropBank roles on the English Web Treebank): 70% of verb arguments get the gold role (test and dev both); ARG0 97%, ARG1 76%, ARGM-MOD 100%, ARGM-NEG 92%, ARG2 only 8%. French (roles projected from English, not hand-checked): 78% test, 79% dev; ARG0 100%, ARG1 71%. French precision is not meaningful, because the projected gold misses many arguments.<span class="src">eval_roles.py; roles_test.txt, roles_dev.txt</span></span></div>
+        <div class="q"><b>Known gap</b><span>ARG2 and higher depend on each verb's sense (give X to Y, move from X to Y). Getting them right needs sense disambiguation against the PropBank frame files, in both languages. <span class="pill warnp">open</span></span></div>
+        <div class="q"><b>Hedges are what here?</b><span>Epistemic only, the same list in both languages (see Rules in page 1). Should, must / devrait, doit are obligation, not hedges. Open policy: seems / semble, and whether I think / je pense is a hedge.</span></div>
+        <div class="q"><b>Cause clauses?</b><span>Stated: because / parce que, since / puisque, given that / vu que. Not stated: condition, time, concession, whether (if / si, when / quand, until / jusqu'à ce que, unless / à moins que, although / bien que). Open policy: as / comme opening a clause.</span></div>
+        <div class="q"><b>How to test? How to show for both EN and FR?</b><span>The 45 pairs with a pass or fail per language for each construction, then the held-out and 100-sentence keys per language, with precision as well as recall.</span></div>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Discourse</span>Same re-read, on a window</h3>
+      <div class="ex" data-for="en"><span class="lab">This example</span><span>Same as step 5: nothing changes.</span></div>
+      <div class="ex" data-for="fr"><span class="lab">This example</span><span>Same as step 5: nothing changes.</span></div>
+      <div class="qa" id="qa-disc2"><div class="q"><b>Built on what? Labels include? How was it trained?</b><span>The same UniRST parser as step 5 (see page 1).</span></div>
+<div class="q"><b>Same labels for both?</b><span>Can be: the model predicts one shared set and each corpus's labels are a mask, so French can be read with the RST-DT labels. Tested: on the 155 key lines both runs find, French with RST-DT labels changed 2 lines (both right) against 1 with ANNODIS.<span class="src">discourse_window.json</span></span></div>
+<div class="q"><b>Should the input be the sentence or the surrounding sentences?</b><span>Run Oct 20: the 130 answer-key sentences again with the sentence before and after each (130 parsed). Over the 155 key lines both runs find, the discourse step changes: one sentence, English 0 and French 1 (right); three sentences, English 0 and French 2 (both right); three sentences with RST-DT labels for French, French 3 (2 right, 1 wrong). The window helps a little in French and never hurts English.<span class="src">discourse_window.py; window_log.txt</span></span></div>
+<div class="q"><b>So what does discourse add?</b><span>Very little now: once the syntax rules handle attribution, conditions and time clauses the same way in both languages, the discourse step changes at most 3 of 155 labels. Recommendation: keep it for attribution only, run it on a three-sentence window, and say plainly that the syntax does most of the work.</span></div>
+<div class="q"><b>Output is what?</b><span>Units and relations, used to correct stated lines (mainly attribution).</span></div></div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Output</span>One record per sentence</h3>
+      <div class="qa">
+        <div class="q"><b>One record per sentence, not a triple?</b><span>Right: frames (predicate plus role-labeled arguments), kinds, flags, confidence from the checks, and links to the clauses around it.</span></div>
+        <div class="q"><b>Needs to be identical for FR and EN?</b><span>Same fields, same labels, same rules. The paired word list and the parallel test pairs are how that is shown.</span></div>
+      </div>
+    </div>
+    <div class="down"></div>
+
+    <div class="node main">
+      <h3><span class="step">Testing</span>Against what?</h3>
+      <div class="qa">
+        <div class="q"><b>Against what?</b><span>Our gold standard: the answer key (100 sentences, 235 lines: 119 English, 116 French), the held-out key (30 sentences, 69 lines), and the 45 parallel pairs. All drafted with AI assistance and being confirmed by Caprice and Joanie. The vote is not the gold standard; it is what gets tested.</span></div>
+        <div class="q"><b>A standard gold set too</b><span>Frames are also scored against the Universal Proposition Bank, the field's shared multilingual role labels (see Rules above). Its newer release (2.0) has a hand-labeled French test set of 1,001 European Parliament sentences, which is not in the two French repositories (GSD, Sequoia) public on GitHub.</span></div>
+        <div class="q"><b>Still to do</b><span>Written guidelines (one rulebook for both languages), agreement between annotators (each labels the other's 20 sentences), and an exact-match score next to the loose match. <span class="pill warnp">open</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section id="compare">
+  <h2>The two designs on the same parses</h2>
+  <p class="col">All rows use the current rules on the parses saved on October 19. "Share in key" is how much of the output is right (precision). Checked two ways: the combiner path and the full-run path give the same numbers.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Design</th><th>Sample EN</th><th>Share in key</th><th>Sample FR</th><th>Share in key</th><th>Held-out EN</th><th>Held-out FR</th></tr></thead>
+    <tbody>
+      <tr class="best"><td>1 · three parsers, 2-of-3 vote (now)</td><td class="n">108/119</td><td class="n">87%</td><td class="n">94/116</td><td class="n">78%</td><td class="n">30/36</td><td class="n">25/33</td></tr>
+      <tr><td>2a · Stanza backbone, keep every line</td><td class="n">102/119</td><td class="n">81%</td><td class="n">95/116</td><td class="n">71%</td><td class="n">28/36</td><td class="n">25/33</td></tr>
+      <tr><td>2c · Stanza backbone, keep only if UDPipe agrees</td><td class="n">61/119</td><td class="n">87%</td><td class="n">55/116</td><td class="n">81%</td><td class="n">16/36</td><td class="n">14/33</td></tr>
+      <tr><td>1 with Berkeley English trees (same parser family both languages)</td><td class="n">109/119</td><td class="n"></td><td class="n">94/116</td><td class="n"></td><td class="n">29/36</td><td class="n">25/33</td></tr>
+      <tr><td>Best single parser (baseline)</td><td class="n">spaCy 104/119</td><td class="n">88%</td><td class="n">Stanza 95/116</td><td class="n">71%</td><td class="n">spaCy 30/36</td><td class="n">Stanza 25/33</td></tr>
+    </tbody>
+  </table></div>
+  <div class="col" style="display:flex;flex-direction:column;gap:10px">
+    <p>The vote is best in English and close to best in French. The backbone design loses English lines because Stanza English is weaker than spaCy English on our key. The UD check is too strict as a filter but useful as a confidence flag, the same way in both languages. What design 2 adds: one structure, role-labeled frames scored against a standard gold set, and a check that treats English and French alike.</p>
+    <h3>What published work does</h3>
+    <p>Henderson and Brill (1999) kept a constituent when at least 2 of 3 parsers proposed it and beat every single parser. Zeman and Žabokrtský (2005) voted on each word's head over 7 dependency parsers; weak parsers still helped, and voting needs at least 3. Sagae and Lavie (2006) merged the outputs into one weighted graph and re-parsed it into one tree. Surdeanu and Manning (2010) found simple voting did as well as complex models, and that the diversity of the parsers mattered most.</p>
+    <h3>The gap, and design 3</h3>
+    <p>All four vote on one kind of structure (constituents, or each word's head). This pipeline votes on extracted lines across two formalisms, which none of them do. The defensible version: parsers that all output UD, a vote on each word's head and relation, a re-parse into one tree, then the rules once. That needs a second UD parser for English.</p>
+  </div>
+</section>
+
+<section id="more">
+  <h2>More real sentences, including where it goes wrong</h2>
+  <p class="col">The two examples above came out right. These show the other cases David will ask about: a passive, a sentence where the vote throws away a right line, and a sentence where two parsers make the same mistake.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Sentence (sample #, source)</th><th>What happened</th><th>Key lines found</th></tr></thead>
+    <tbody>
+      <tr><td>The bill that is before us today claims to establish administrative proceedings to ensure that a woman's decision to have an abortion is based on informed choice. <span class="muted">(#37, Ontario 1988)</span></td><td>All four key lines found by all three parsers, labels right. One extra line, "a woman's decision | have | an abortion", from Stanza and the tree, which gave the infinitive the wrong subject.</td><td class="n"><span class="pill ok">4/4</span></td></tr>
+      <tr><td>Alors qu'il se vantait d'obtenir le financement du gouvernement fédéral pour notre système de santé, une proportion de 90 % de l'argent qu'il y a injecté provient d'une entente négociée par le gouvernement péquiste qui l'a précédé. <span class="muted">(#57, Quebec 2005)</span></td><td>All five found. "une entente | négociée | par le gouvernement péquiste" matches the key's "le gouvernement péquiste | a négocié | une entente" through the passive rule. Four lines had all three votes, one had two.</td><td class="n"><span class="pill ok">5/5</span></td></tr>
+      <tr><td>Last year the House passed legislation identical to H.R. 5, but the Senate refused to act. <span class="muted">(David's sentence, test A8)</span></td><td>Both lines found by all three parsers. The tree rules split "refused to act" in two; the extra half was tree-only and went to review. In the French version the vote kept spaCy's shorter object "un projet de loi identique" because spaCy comes first.</td><td class="n"><span class="pill ok">2/2</span></td></tr>
+      <tr><td>My Republican friends say repeal these health care rights and protections that were extended last year. <span class="muted">(#17, US House 2011)</span></td><td>The reported line "(unstated) | repeal | these health care rights" came only from the tree, so the vote dropped it to review. Both dependency parses read "say repeal" as one verb. This is the cost of the vote.</td><td class="n"><span class="pill warnp">2/3</span></td></tr>
+      <tr><td>Avec ce projet de loi, notre gouvernement veut permettre aux catégories d'électeurs dont l'exercice du vote est le plus susceptible d'être affecté par la COVID-19 d'exercer leur droit de vote. <span class="muted">(#74, Quebec 2022)</span></td><td>Both dependency parses tangled the relative clause into "est d'être affecté d'exercer", and since they agreed, that wrong line passed the vote. The tree had the right relative-clause line, alone. This is also the one sample line the discourse step changed (stated to embedded, as a relative unit), on a line that was wrong anyway.</td><td class="n"><span class="pill badp">1/3</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="col muted">#17 and #74 are the two failure patterns: a right line from one parser is lost (recall), and a wrong line from two parsers that share a mistake is kept (precision). In French, spaCy and Stanza both train on Sequoia, so they share mistakes more often.</p>
+</section>
+
+<section id="ptb">
+  <h2>Penn Treebank examples</h2>
+  <p class="col">David suggested the Wall Street Journal sentences. The tree rules were run on the treebank's own gold trees for the first two, so any mistake there is the rules' fault. The dependency rules ran on a UDPipe parse of the same words, since spaCy and Stanza are on the laptop. The gold trees were typed in from the first treebank file and should be checked against the LDC copy.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>WSJ sentence</th><th>Tree rules on the gold tree</th><th>Dependency rules on UDPipe</th></tr></thead>
+    <tbody>
+      <tr><td>Pierre Vinken, 61 years old, will join the board as a nonexecutive director Nov. 29.</td><td>Pierre Vinken, 61 years old | will join | the board</td><td>same line</td></tr>
+      <tr><td>Mr. Vinken is chairman of Elsevier N.V., the Dutch publishing group.</td><td>Mr. Vinken | is | chairman of Elsevier N.V., the Dutch publishing group</td><td>Mr. Vinken | is | chairman of Elsevier N.V.<br>plus Elsevier N.V. | is (apposition) | the Dutch publishing group</td></tr>
+      <tr><td>A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago, researchers reported.</td><td class="muted">gold tree not typed in</td><td><span class="pill badp">wrong</span> UDPipe made "used" the main verb, so every line is off. The right output is A form of asbestos | has caused | a high percentage of cancer deaths, reported, with researchers as the source.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="col">When the tree is right, the rules are right. When a parser misreads a long sentence, the rules carry the mistake forward, which is what the vote is meant to catch.</p>
+</section>
+
+<section id="accuracy">
+  <h2>How correctness is judged, and the accuracy</h2>
+  <div class="col" style="display:flex;flex-direction:column;gap:10px">
+    <p>Every output line is compared with an answer key using the same match test as the vote. The label is scored separately. The same test is used for every parser and every stage, so the rows can be set side by side. There are three keys: the 100-sentence sample (50 English, 50 French random debate sentences), the held-out set (30 sentences never used while writing rules), and the 45 parallel pairs.</p>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>Set</th><th>Lang</th><th>spaCy alone</th><th>Stanza alone</th><th>Tree alone</th><th>Vote</th><th>Final</th><th>Right label</th></tr></thead>
+    <tbody>
+      <tr><td>Sample</td><td>EN</td><td class="n">104/119</td><td class="n">102/119</td><td class="n">104/119</td><td class="n">108/119</td><td class="n">108/119</td><td class="n">106</td></tr>
+      <tr><td>Sample</td><td>FR</td><td class="n">88/116</td><td class="n">95/116</td><td class="n">77/116</td><td class="n">94/116</td><td class="n">94/116</td><td class="n">87</td></tr>
+      <tr><td>Held-out</td><td>EN</td><td class="n">30/36</td><td class="n">28/36</td><td class="n">28/36</td><td class="n">30/36</td><td class="n">30/36</td><td class="n">28</td></tr>
+      <tr><td>Held-out</td><td>FR</td><td class="n">22/33</td><td class="n">25/33</td><td class="n">22/33</td><td class="n">25/33</td><td class="n">25/33</td><td class="n">25</td></tr>
+    </tbody>
+  </table></div>
+  <div class="scroll"><table>
+    <thead><tr><th>Set</th><th>Lang</th><th>Vote: found</th><th>Vote: not in key</th><th>Keep every line: found</th><th>Keep every line: not in key</th></tr></thead>
+    <tbody>
+      <tr><td>Sample</td><td>EN</td><td class="n">108/119</td><td class="n">16</td><td class="n">112/119</td><td class="n">51</td></tr>
+      <tr><td>Sample</td><td>FR</td><td class="n">94/116</td><td class="n">27</td><td class="n">108/116</td><td class="n">97</td></tr>
+      <tr><td>Held-out</td><td>EN</td><td class="n">30/36</td><td class="n">10</td><td class="n">34/36</td><td class="n">23</td></tr>
+      <tr><td>Held-out</td><td>FR</td><td class="n">25/33</td><td class="n">10</td><td class="n">30/33</td><td class="n">38</td></tr>
+    </tbody>
+  </table></div>
+  <p class="col">Every number in these two tables is a loose count. Under exact matching of all three slots, the sample is 60 of 119 English lines (50%) and 34 of 116 French lines (29%); see Monday's section for why, and what the key needs.</p>
+  <p class="col muted">The stage table was checked two ways (the scorer and the combiner's own path gave the same lines on all 90 test sentences); both share the rules file, so this confirms the scoring and the vote, not the rules. The keep-every-line columns were computed one way only.</p>
+  <p class="note col">The answer keys and test sentences were drafted with AI assistance from the labeling policy, and AI assistance also helped write the code. Caprice is checking the English keys and Joanie the French keys. Until both are done and their agreement is measured, the accuracy numbers are provisional.</p>
+</section>
+
+<section id="david">
+  <h2>What David asked, and where it is answered</h2>
+  <div class="check">
+    <div>"How the dependency parts, the constituency parts, RST parts are being reconciled to extract predications"</div><div>Page 1 of the flow: the rules turn each parse into lines, the vote reconciles the three lists, the discourse step re-labels kept lines only.</div>
+    <div>"There's two out of three voting. What does that even mean? What is it producing?"</div><div>Step 4: the match test, the order, what is kept, whose words win, the review box and the sample counts.</div>
+    <div>"What data is being transformed into what data… where is it plugging back in?"</div><div>Every box lists its input and output, and the example shows the actual data leaving it.</div>
+    <div>"The actual input and output for each of these parsers… on an example to example basis… what it's based off of"</div><div>Two real sentences at every box, with the method and training data for each parser; five more in the table.</div>
+    <div>Simple sentences that change one thing at a time</div><div>The 45 English and French test pairs, one construction each.</div>
+    <div>"Look at the Penn Treebank… the Wall Street Journal corpus"</div><div>Penn Treebank section: two gold-tree checks and one failure.</div>
+    <div>"Here's why it's a valid technique… its accuracy… how can we judge that they are correct?"</div><div>Accuracy, the comparison of the two designs, the published work, and PropBank.</div>
+    <div>"We're not at the factuality. We're at how are you actually getting the predications out"</div><div>The page stops at step 5.</div>
+    <div>"Write out what you're doing… for the presentation in November"</div><div>This page is the written version; each box can become a slide.</div>
+  </div>
+</section>
+
+<section id="decide" class="col">
+  <h2>To decide on Thursday</h2>
+  <p><b>Design.</b> Keep the vote, move to one backbone, or build design 3 (vote on UD structure)? Keep constituency as a check, or drop it? Which second UD parser: UDPipe 2 or Trankit? Should the vote take the majority's wording instead of spaCy's?</p>
+  <p><b>Labeling policy.</b> as / comme opening a clause: stated or not (set to not stated)? I think / je pense: content stated (set), but hedged or not? seems / semble: hedge or not? Should pronoun subjects ("they", "il") be resolved to who they refer to?</p>
+  <p><b>Data and gold standard.</b> Compare Ontario English with Quebec French? Annotation guidelines and agreement between annotators. Hand-check the sentence split. Rerun the corpus once the rules are settled: every full-run number until then is v5.</p>
+</section>
+
+</div>
+<script>
+(function(){
+  var box=document.getElementById('trees');
+  var btns=box.querySelectorAll('.switch button');
+  function show(x){
+    box.setAttribute('data-show',x);
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-ex')===x));});
+    try{localStorage.setItem('ex',x);}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-ex'));});});
+  try{var s=localStorage.getItem('ex'); if(s==='en'||s==='fr') show(s);}catch(e){}
+})();
+</script>

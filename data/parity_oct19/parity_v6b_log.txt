@@ -1,0 +1,58 @@
+== rules .   discourse inventory: native   English constituency: prod   discourse policy: multi
+
+-- parallel tests (final output; P = every expected line found with the right label and hedge, and no extra lines)
+  A1   one clause                                       EN P  FR P
+  A2   passive with by / par                            EN P  FR P
+  A3   two subjects joined by and / et                  EN P  FR P
+  A4   two clauses with a comma only                    EN P  FR P
+  A5   two verbs share one subject                      EN P  FR P
+  A6   shared subject, two objects                      EN P  FR P
+  A7   contrast with but / mais                         EN P  FR P
+  A8   David's sentence (D6)                            EN P  FR P
+  A9   form of address before the subject               EN P  FR P
+  A10  apposition                                       EN P  FR P
+  A11  question (skipped by design)                     EN P  FR P
+  B1   not / ne ... pas                                 EN P  FR P
+  B2   never / ne ... jamais                            EN P  FR P
+  B3   nobody / personne as subject                     EN P  FR P
+  B4   nothing / rien as object                         EN P  FR P
+  B5   no longer / ne ... plus                          EN P  FR P
+  B6   no / aucun on the subject                        EN P  FR P
+  B7   only / ne ... que is not negation                EN P  FR P
+  C1   would / conditional                              EN P  FR P
+  C2   could / pourrait                                 EN P  FR P
+  C3   probably / probablement                          EN P  FR P
+  C4   should / devrait is obligation, not a hedge      EN P  FR P
+  C5   must / doit is obligation, not a hedge           EN P  FR P
+  C6   seems / semble (hedge policy open)               EN P  FR P
+  D1   said that / a dit que                            EN P  FR P
+  D2   told X that / a dit à X que                      EN P  FR P
+  D3   according to / selon                             EN P  FR P
+  D4   direct quotation                                 EN P  FR P
+  D5   the speaker's own framing (I think / je pense)   EN P  FR P
+  E1   condition: if / si                               EN P  FR P
+  E2   time: when / quand                               EN P  FR P
+  E3   time: before / avant que                         EN P  FR P
+  E4   until / jusqu'à ce que                           EN P  FR P
+  E5   unless / à moins que                             EN P  FR P
+  E6   whether / si (indirect question)                 EN P  FR P
+  E7   purpose: to / pour                               EN P  FR P
+  E8   cause: because / parce que (stated)              EN P  FR P
+  E9   cause: since / puisque (stated)                  EN P  FR P
+  E10  concession: although / bien que                  EN P  FR P
+  E11  as / comme opening a clause (policy: not stated) EN P  FR P
+  E12  means: by -ing / en -ant (stated)                EN -  FR P   <-- the languages differ
+  F1   subject relative: who / qui                      EN P  FR P
+  F2   object relative: that / que                      EN P  FR P
+  F3   participle describing a noun                     EN P  FR P
+  F4   object control: urge X to / exhorter X à         EN P  FR P
+
+  by group:   structure: EN 11/11 FR 11/11   negation: EN 7/7 FR 7/7   hedge: EN 6/6 FR 6/6   reported: EN 5/5 FR 5/5   clauses: EN 11/12 FR 12/12   relative: EN 4/4 FR 4/4
+
+-- heldout: key lines found / produced / right label (of found)
+  en  spacy 30/36 p38 l26   stanza 28/36 p39 l27   const 28/36 p39 l26   vote 30/36 p40 l28   final 30/36 p40 l28
+  fr  spacy 22/33 p36 l21   stanza 25/33 p39 l24   const 22/33 p41 l19   vote 25/33 p35 l24   final 25/33 p35 l25
+
+-- sample: key lines found / produced / right label (of found)
+  en  spacy 104/119 p118 l101   stanza 102/119 p126 l99   const 104/119 p131 l94   vote 108/119 p124 l106   final 108/119 p124 l106
+  fr  spacy 88/116 p129 l81   stanza 95/116 p133 l89   const 77/116 p130 l60   vote 94/116 p121 l87   final 94/116 p121 l87

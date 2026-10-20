@@ -1,0 +1,18 @@
+== en: 2552 verbs, 6346 gold arguments, 5493 of them direct dependents of the verb
+   recall on direct dependents: 3846/5493 = 70.0%   precision of our roles: 3846/5402 = 71.2%
+   ARG0        1071/1106 96.8%   most often given instead: ARGM-by 19, ARG1 8, none 4
+   ARG1        1444/1893 76.3%   most often given instead: ARG0 212, ARG2 63, none 47
+   ARG2          34/438   7.8%   most often given instead: ARG1 127, ARGM-to 55, none 30
+   ARGM-TMP     245/396  61.9%   most often given instead: ARGM-ADV 66, none 26, ARGM-in 17
+   ARGM-NEG     132/143  92.3%   most often given instead: ARGM-ADV 11
+   ARGM-MOD     308/308  100.0%   most often given instead: 
+   ARGM-other   612/943  64.9%   most often given instead: none 236, ARG1 71, ARGM-TMP 20
+   other core     0/266   0.0%   most often given instead: ARG0 62, ARG1 53, ARGM-to 39
+== fr: 635 verbs, 895 gold arguments, 663 of them direct dependents of the verb
+   recall on direct dependents: 515/663 = 77.7%   precision of our roles: 515/1203 = 42.8%
+   ARG0         263/263  100.0%   most often given instead: 
+   ARG1         216/303  71.3%   most often given instead: ARG0 43, ARGM-ADV 16, ARGM-de 12
+   ARG2           0/12    0.0%   most often given instead: ARG1 8, ARGM-TMP 3, ARGM-ADV 1
+   ARGM-TMP       9/50   18.0%   most often given instead: ARGM-ADV 30, ARG1 11
+   ARGM-other    27/32   84.4%   most often given instead: ARGM-TMP 5
+   other core     0/3     0.0%   most often given instead: ARG1 3

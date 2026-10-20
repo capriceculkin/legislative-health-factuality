@@ -1,0 +1,58 @@
+== rules v5   discourse inventory: native   English constituency: prod   discourse policy: multi
+
+-- parallel tests (final output; P = every expected line found with the right label and hedge, and no extra lines)
+  A1   one clause                                       EN P  FR P
+  A2   passive with by / par                            EN P  FR P
+  A3   two subjects joined by and / et                  EN P  FR P
+  A4   two clauses with a comma only                    EN -  FR P   <-- the languages differ
+  A5   two verbs share one subject                      EN P  FR P
+  A6   shared subject, two objects                      EN P  FR P
+  A7   contrast with but / mais                         EN P  FR P
+  A8   David's sentence (D6)                            EN P  FR P
+  A9   form of address before the subject               EN P  FR P
+  A10  apposition                                       EN P  FR -   <-- the languages differ
+  A11  question (skipped by design)                     EN P  FR P
+  B1   not / ne ... pas                                 EN P  FR P
+  B2   never / ne ... jamais                            EN P  FR P
+  B3   nobody / personne as subject                     EN -  FR P   <-- the languages differ
+  B4   nothing / rien as object                         EN P  FR P
+  B5   no longer / ne ... plus                          EN P  FR P
+  B6   no / aucun on the subject                        EN -  FR P   <-- the languages differ
+  B7   only / ne ... que is not negation                EN P  FR P
+  C1   would / conditional                              EN P  FR -   <-- the languages differ
+  C2   could / pourrait                                 EN P  FR P
+  C3   probably / probablement                          EN P  FR P
+  C4   should / devrait is obligation, not a hedge      EN P  FR -   <-- the languages differ
+  C5   must / doit is obligation, not a hedge           EN P  FR P
+  C6   seems / semble (hedge policy open)               EN P  FR P
+  D1   said that / a dit que                            EN P  FR -   <-- the languages differ
+  D2   told X that / a dit à X que                      EN P  FR P
+  D3   according to / selon                             EN -  FR -
+  D4   direct quotation                                 EN P  FR -   <-- the languages differ
+  D5   the speaker's own framing (I think / je pense)   EN -  FR -
+  E1   condition: if / si                               EN P  FR P
+  E2   time: when / quand                               EN P  FR P
+  E3   time: before / avant que                         EN P  FR P
+  E4   until / jusqu'à ce que                           EN P  FR -   <-- the languages differ
+  E5   unless / à moins que                             EN P  FR -   <-- the languages differ
+  E6   whether / si (indirect question)                 EN P  FR -   <-- the languages differ
+  E7   purpose: to / pour                               EN P  FR P
+  E8   cause: because / parce que (stated)              EN P  FR -   <-- the languages differ
+  E9   cause: since / puisque (stated)                  EN P  FR -   <-- the languages differ
+  E10  concession: although / bien que                  EN P  FR P
+  E11  as / comme opening a clause (policy: not stated) EN P  FR -   <-- the languages differ
+  E12  means: by -ing / en -ant (stated)                EN -  FR P   <-- the languages differ
+  F1   subject relative: who / qui                      EN P  FR -   <-- the languages differ
+  F2   object relative: that / que                      EN P  FR P
+  F3   participle describing a noun                     EN P  FR P
+  F4   object control: urge X to / exhorter X à         EN P  FR P
+
+  by group:   structure: EN 10/11 FR 10/11   negation: EN 5/7 FR 7/7   hedge: EN 6/6 FR 4/6   reported: EN 3/5 FR 1/5   clauses: EN 11/12 FR 6/12   relative: EN 4/4 FR 3/4
+
+-- heldout: key lines found / produced / right label (of found)
+  en  spacy 29/36 p38 l26   stanza 28/36 p39 l27   const 27/36 p39 l26   vote 29/36 p38 l26   final 29/36 p38 l26
+  fr  spacy 22/33 p36 l21   stanza 25/33 p39 l23   const 22/33 p41 l19   vote 25/33 p35 l24   final 25/33 p35 l23
+
+-- sample: key lines found / produced / right label (of found)
+  en  spacy 103/119 p118 l98   stanza 100/119 p126 l96   const 102/119 p131 l82   vote 107/119 p123 l102   final 107/119 p123 l102
+  fr  spacy 88/116 p129 l80   stanza 95/116 p133 l88   const 77/116 p130 l60   vote 93/116 p118 l85   final 93/116 p118 l84

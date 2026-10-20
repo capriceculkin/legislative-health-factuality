@@ -1,0 +1,6418 @@
+{
+ "settings": {
+  "rules": "/Users/caprice/.parity_v6",
+  "parses": "/Users/caprice/Desktop/next_steps/oct20/parity_parses.json",
+  "disc": "native",
+  "const": "prod",
+  "rst": "multi",
+  "json": "/Users/caprice/Desktop/next_steps/oct20/parity_scores.json"
+ },
+ "tests": [
+  {
+   "id": "A1",
+   "group": "structure",
+   "construction": "one clause",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The committee",
+      "approved",
+      "the bill",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le comité",
+      "a approuvé",
+      "le projet de loi",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A2",
+   "group": "structure",
+   "construction": "passive with by / par",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The bill",
+      "was approved",
+      "by the committee",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le projet de loi",
+      "a été approuvé",
+      "par le comité",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A3",
+   "group": "structure",
+   "construction": "two subjects joined by and / et",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Dick and Jane",
+      "go",
+      "to the moon",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Dick et Jane",
+      "vont",
+      "sur la Lune",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A4",
+   "group": "structure",
+   "construction": "two clauses with a comma only",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Dick and Jane",
+      "go",
+      "to the moon",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "Spock",
+      "goes",
+      "to Mars",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Dick et Jane",
+      "vont",
+      "sur la Lune",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "Spock",
+      "va",
+      "sur Mars",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A5",
+   "group": "structure",
+   "construction": "two verbs share one subject",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Dick and Jane",
+      "go",
+      "to the moon",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "Dick and Jane (inh)",
+      "go",
+      "to Mars",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Dick et Jane",
+      "vont",
+      "sur la Lune",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "Dick et Jane (inh)",
+      "vont",
+      "sur Mars",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A6",
+   "group": "structure",
+   "construction": "shared subject, two objects",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The House",
+      "passed",
+      "the bill",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "The House (inh)",
+      "sent",
+      "the report",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "La Chambre",
+      "a adopté",
+      "le projet de loi",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "La Chambre (inh)",
+      "a envoyé",
+      "le rapport au Sénat",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A7",
+   "group": "structure",
+   "construction": "contrast with but / mais",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The House",
+      "passed",
+      "the bill",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the Senate",
+      "rejected",
+      "the amendment",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "La Chambre",
+      "a adopté",
+      "le projet de loi",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "le Sénat",
+      "a rejeté",
+      "l'amendement",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A8",
+   "group": "structure",
+   "construction": "David's sentence (D6)",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 3,
+     "extra": 1,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the House",
+      "passed",
+      "legislation identical to H.R. 5",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the Senate",
+      "refused to act",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "la Chambre",
+      "a adopté",
+      "un projet de loi identique",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "le Sénat",
+      "a refusé d'agir",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A9",
+   "group": "structure",
+   "construction": "form of address before the subject",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the minister",
+      "broke",
+      "his promise",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "le ministre",
+      "a rompu",
+      "sa promesse",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "A10",
+   "group": "structure",
+   "construction": "apposition",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Jean Martin",
+      "tabled",
+      "the bill",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "Jean Martin",
+      "is (apposition)",
+      "the health minister",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Jean Martin",
+      "a déposé",
+      "le projet de loi",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "A11",
+   "group": "structure",
+   "construction": "question (skipped by design)",
+   "en": {
+    "spacy": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "stanza": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "const": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "vote": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "final": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "skipped": "question",
+    "final_lines": [],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "stanza": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "const": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "vote": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "final": {
+     "key": 0,
+     "produced": 0,
+     "extra": 0
+    },
+    "skipped": "question",
+    "final_lines": [],
+    "pass": true
+   }
+  },
+  {
+   "id": "B1",
+   "group": "negation",
+   "construction": "not / ne ... pas",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The Senate",
+      "did not pass",
+      "the bill",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le Sénat",
+      "n'a pas adopté",
+      "le projet de loi",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "B2",
+   "group": "negation",
+   "construction": "never / ne ... jamais",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The government",
+      "never consulted",
+      "the nurses",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le gouvernement",
+      "n'a jamais consulté",
+      "les infirmières",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "B3",
+   "group": "negation",
+   "construction": "nobody / personne as subject",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Nobody",
+      "supports",
+      "this amendment",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Personne",
+      "n'appuie",
+      "cet amendement",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "B4",
+   "group": "negation",
+   "construction": "nothing / rien as object",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The minister",
+      "did",
+      "nothing",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le ministre",
+      "n'a fait",
+      "pour les hôpitaux",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "B5",
+   "group": "negation",
+   "construction": "no longer / ne ... plus",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Patients",
+      "no longer receive",
+      "this service",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Les patients",
+      "ne reçoivent plus",
+      "ce service",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "B6",
+   "group": "negation",
+   "construction": "no / aucun on the subject",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "No member",
+      "opposed",
+      "the motion",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 0,
+     "extra": 0
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Aucun député",
+      "ne s'est opposé",
+      "à la motion",
+      "asserted",
+      "negated",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "B7",
+   "group": "negation",
+   "construction": "only / ne ... que is not negation",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The program",
+      "helps",
+      "seniors",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le programme",
+      "n'aide",
+      "les aînés",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "C1",
+   "group": "hedge",
+   "construction": "would / conditional",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The bill",
+      "would lower",
+      "drug costs",
+      "asserted",
+      "",
+      "hedged"
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 0,
+     "all_right": 0
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 0,
+     "all_right": 0
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 0,
+     "all_right": 0
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le projet de loi",
+      "réduirait",
+      "le coût des médicaments",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "C2",
+   "group": "hedge",
+   "construction": "could / pourrait",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The plan",
+      "could save",
+      "money",
+      "asserted",
+      "",
+      "hedged"
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le plan",
+      "pourrait économiser",
+      "de l'argent",
+      "asserted",
+      "",
+      "hedged"
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "C3",
+   "group": "hedge",
+   "construction": "probably / probablement",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 0,
+     "all_right": 0
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The minister",
+      "made",
+      "a mistake",
+      "asserted",
+      "",
+      "hedged"
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le ministre",
+      "a fait",
+      "une erreur",
+      "asserted",
+      "",
+      "hedged"
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "C4",
+   "group": "hedge",
+   "construction": "should / devrait is obligation, not a hedge",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The government",
+      "should fund",
+      "the clinics",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le gouvernement",
+      "devrait financer",
+      "les cliniques",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "C5",
+   "group": "hedge",
+   "construction": "must / doit is obligation, not a hedge",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The province",
+      "must fund",
+      "the clinics",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "La province",
+      "doit financer",
+      "les cliniques",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "C6",
+   "group": "hedge",
+   "construction": "seems / semble (hedge policy open)",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The program",
+      "seems to work",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le programme",
+      "semble fonctionner",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "D1",
+   "group": "reported",
+   "construction": "said that / a dit que",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The minister",
+      "said",
+      "that the bill lowers costs",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the bill",
+      "lowers",
+      "costs",
+      "reported",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le ministre",
+      "a dit",
+      "que le projet de loi réduit les coûts",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "le projet de loi",
+      "réduit",
+      "les coûts",
+      "reported",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "D2",
+   "group": "reported",
+   "construction": "told X that / a dit à X que",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The doctors",
+      "told",
+      "the minister",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the wait times",
+      "are rising",
+      "",
+      "reported",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Les médecins",
+      "ont dit",
+      "au ministre",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "les délais",
+      "augmentent",
+      "",
+      "reported",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "D3",
+   "group": "reported",
+   "construction": "according to / selon",
+   "en": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the program",
+      "failed",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   },
+   "fr": {
+    "spacy": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "stanza": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "const": {
+     "key": 1,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "vote": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "final": {
+     "key": 1,
+     "produced": 1,
+     "extra": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "le programme",
+      "a échoué",
+      "Selon le rapport",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "D4",
+   "group": "reported",
+   "construction": "direct quotation",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The doctor",
+      "said",
+      "The wait times are too long",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "The wait times",
+      "are",
+      "too long",
+      "reported",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le médecin",
+      "a dit",
+      "Les délais sont trop longs",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "Les délais",
+      "sont",
+      "longs",
+      "reported",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "D5",
+   "group": "reported",
+   "construction": "the speaker's own framing (I think / je pense)",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "I",
+      "think",
+      "the bill lowers costs",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the bill",
+      "lowers",
+      "costs",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Je",
+      "pense",
+      "que le projet de loi réduit les coûts",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "le projet de loi",
+      "réduit",
+      "les coûts",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "E1",
+   "group": "clauses",
+   "construction": "condition: if / si",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the bill",
+      "passes",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "costs",
+      "will fall",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "le projet de loi",
+      "est adopté",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "les coûts",
+      "vont baisser",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "E2",
+   "group": "clauses",
+   "construction": "time: when / quand",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the minister",
+      "arrived",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "the debate",
+      "began",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "le ministre",
+      "est arrivé",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "le débat",
+      "a commencé",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "E3",
+   "group": "clauses",
+   "construction": "time: before / avant que",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The minister",
+      "resigned",
+      "",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the report",
+      "came out",
+      "",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le ministre",
+      "a démissionné",
+      "",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "le rapport",
+      "soit publié",
+      "",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "E4",
+   "group": "clauses",
+   "construction": "until / jusqu'à ce que",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The clinic",
+      "stays",
+      "open",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the province",
+      "pays",
+      "",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "La clinique",
+      "reste ouverte",
+      "jusqu'à ce",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "la province",
+      "paie",
+      "",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "E5",
+   "group": "clauses",
+   "construction": "unless / à moins que",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the Senate",
+      "acts",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "the program",
+      "ends",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "le Sénat",
+      "agisse",
+      "",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "le programme",
+      "prend",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "E6",
+   "group": "clauses",
+   "construction": "whether / si (indirect question)",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The committee",
+      "will decide",
+      "whether the bill proceeds",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the bill",
+      "proceeds",
+      "",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le comité",
+      "décidera",
+      "si le projet de loi va de l'avant",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "le projet de loi",
+      "va",
+      "de l'avant",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "E7",
+   "group": "clauses",
+   "construction": "purpose: to / pour",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The government",
+      "cut",
+      "taxes",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "The government (inh)",
+      "to help",
+      "families",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le gouvernement",
+      "a réduit",
+      "les impôts",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "Le gouvernement (inh)",
+      "aider",
+      "les familles",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "E8",
+   "group": "clauses",
+   "construction": "cause: because / parce que (stated)",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The program",
+      "failed",
+      "",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the province",
+      "cut",
+      "its budget",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 0,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 0
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le programme",
+      "a échoué",
+      "parce que la province a réduit son budget",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "la province",
+      "a réduit",
+      "son budget",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "E9",
+   "group": "clauses",
+   "construction": "cause: since / puisque (stated)",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The bill",
+      "is",
+      "urgent",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the clinics",
+      "are closing",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le projet de loi",
+      "est",
+      "urgent",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "les cliniques",
+      "ferment",
+      "",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "E10",
+   "group": "clauses",
+   "construction": "concession: although / bien que",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the bill",
+      "passed",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "the clinics",
+      "closed",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "le projet de loi",
+      "ait été adopté",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "les cliniques",
+      "ont fermé",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "E11",
+   "group": "clauses",
+   "construction": "as / comme opening a clause (policy: not stated)",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the debate",
+      "continued",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "members",
+      "left",
+      "the chamber",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 1,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "le débat",
+      "poursuivait",
+      "",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "les députés",
+      "ont quitté",
+      "la salle",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "E12",
+   "group": "clauses",
+   "construction": "means: by -ing / en -ant (stated)",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The province",
+      "saved",
+      "money",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "La province",
+      "a économisé",
+      "de l'argent",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "La province (inh)",
+      "fermant",
+      "des cliniques",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "F1",
+   "group": "relative",
+   "construction": "subject relative: who / qui",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The nurses",
+      "work",
+      "nights",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "The nurses",
+      "earn",
+      "less",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Les infirmières",
+      "travaillent",
+      "la nuit",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "Les infirmières",
+      "gagnent",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "F2",
+   "group": "relative",
+   "construction": "object relative: that / que",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 1,
+     "extra": 0,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "the House",
+      "passed",
+      "The bill",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "The bill",
+      "lowers",
+      "costs",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le projet de loi",
+      "réduit",
+      "les coûts",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "la Chambre",
+      "a adopté",
+      "Le projet de loi",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  },
+  {
+   "id": "F3",
+   "group": "relative",
+   "construction": "participle describing a noun",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Families",
+      "living",
+      "in rural areas",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "Families",
+      "pay",
+      "more",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Les familles",
+      "vivant",
+      "en région",
+      "embedded",
+      "",
+      ""
+     ],
+     [
+      "Les familles",
+      "paient",
+      "",
+      "asserted",
+      "",
+      ""
+     ]
+    ],
+    "pass": false
+   }
+  },
+  {
+   "id": "F4",
+   "group": "relative",
+   "construction": "object control: urge X to / exhorter X à",
+   "en": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 1,
+     "extra": 1
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "The minister",
+      "urged",
+      "the doctors",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "the doctors (inh)",
+      "to accept",
+      "the deal",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   },
+   "fr": {
+    "spacy": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "stanza": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "const": {
+     "key": 2,
+     "produced": 2,
+     "extra": 1,
+     "found": 1,
+     "label": 1,
+     "hedge_n": 1,
+     "hedge": 1,
+     "all_right": 1
+    },
+    "vote": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "final": {
+     "key": 2,
+     "produced": 2,
+     "extra": 0,
+     "found": 2,
+     "label": 2,
+     "hedge_n": 2,
+     "hedge": 2,
+     "all_right": 2
+    },
+    "skipped": null,
+    "final_lines": [
+     [
+      "Le ministre",
+      "a exhorté",
+      "les médecins",
+      "asserted",
+      "",
+      ""
+     ],
+     [
+      "les médecins (inh)",
+      "accepter",
+      "l'entente",
+      "embedded",
+      "",
+      ""
+     ]
+    ],
+    "pass": true
+   }
+  }
+ ],
+ "heldout": {
+  "en.spacy": {
+   "key": 36,
+   "produced": 38,
+   "extra": 8,
+   "found": 30,
+   "label": 26,
+   "hedge_n": 30,
+   "hedge": 30,
+   "all_right": 26
+  },
+  "en.stanza": {
+   "key": 36,
+   "produced": 39,
+   "extra": 11,
+   "found": 28,
+   "label": 27,
+   "hedge_n": 28,
+   "hedge": 28,
+   "all_right": 27
+  },
+  "en.const": {
+   "key": 36,
+   "produced": 39,
+   "extra": 11,
+   "found": 28,
+   "label": 26,
+   "hedge_n": 28,
+   "hedge": 28,
+   "all_right": 26
+  },
+  "en.vote": {
+   "key": 36,
+   "produced": 40,
+   "extra": 10,
+   "found": 30,
+   "label": 26,
+   "hedge_n": 30,
+   "hedge": 30,
+   "all_right": 26
+  },
+  "en.final": {
+   "key": 36,
+   "produced": 40,
+   "extra": 10,
+   "found": 30,
+   "label": 26,
+   "hedge_n": 30,
+   "hedge": 30,
+   "all_right": 26
+  },
+  "fr.spacy": {
+   "key": 33,
+   "produced": 36,
+   "extra": 14,
+   "found": 22,
+   "label": 21,
+   "hedge_n": 22,
+   "hedge": 20,
+   "all_right": 19
+  },
+  "fr.stanza": {
+   "key": 33,
+   "produced": 39,
+   "extra": 14,
+   "found": 25,
+   "label": 24,
+   "hedge_n": 25,
+   "hedge": 24,
+   "all_right": 23
+  },
+  "fr.const": {
+   "key": 33,
+   "produced": 41,
+   "extra": 19,
+   "found": 22,
+   "label": 19,
+   "hedge_n": 22,
+   "hedge": 21,
+   "all_right": 18
+  },
+  "fr.vote": {
+   "key": 33,
+   "produced": 35,
+   "extra": 10,
+   "found": 25,
+   "label": 24,
+   "hedge_n": 25,
+   "hedge": 23,
+   "all_right": 22
+  },
+  "fr.final": {
+   "key": 33,
+   "produced": 35,
+   "extra": 10,
+   "found": 25,
+   "label": 23,
+   "hedge_n": 25,
+   "hedge": 23,
+   "all_right": 22
+  }
+ },
+ "sample": {
+  "en.spacy": {
+   "key": 119,
+   "produced": 118,
+   "extra": 14,
+   "found": 104,
+   "label": 99,
+   "hedge_n": 104,
+   "hedge": 103,
+   "all_right": 98
+  },
+  "en.stanza": {
+   "key": 119,
+   "produced": 126,
+   "extra": 25,
+   "found": 101,
+   "label": 97,
+   "hedge_n": 101,
+   "hedge": 100,
+   "all_right": 96
+  },
+  "en.const": {
+   "key": 119,
+   "produced": 131,
+   "extra": 27,
+   "found": 104,
+   "label": 91,
+   "hedge_n": 104,
+   "hedge": 101,
+   "all_right": 89
+  },
+  "en.vote": {
+   "key": 119,
+   "produced": 124,
+   "extra": 16,
+   "found": 108,
+   "label": 103,
+   "hedge_n": 108,
+   "hedge": 107,
+   "all_right": 102
+  },
+  "en.final": {
+   "key": 119,
+   "produced": 124,
+   "extra": 16,
+   "found": 108,
+   "label": 103,
+   "hedge_n": 108,
+   "hedge": 107,
+   "all_right": 102
+  },
+  "fr.spacy": {
+   "key": 116,
+   "produced": 129,
+   "extra": 41,
+   "found": 88,
+   "label": 80,
+   "hedge_n": 88,
+   "hedge": 88,
+   "all_right": 80
+  },
+  "fr.stanza": {
+   "key": 116,
+   "produced": 133,
+   "extra": 38,
+   "found": 95,
+   "label": 88,
+   "hedge_n": 95,
+   "hedge": 95,
+   "all_right": 88
+  },
+  "fr.const": {
+   "key": 116,
+   "produced": 130,
+   "extra": 53,
+   "found": 77,
+   "label": 60,
+   "hedge_n": 77,
+   "hedge": 76,
+   "all_right": 60
+  },
+  "fr.vote": {
+   "key": 116,
+   "produced": 120,
+   "extra": 27,
+   "found": 93,
+   "label": 85,
+   "hedge_n": 93,
+   "hedge": 93,
+   "all_right": 85
+  },
+  "fr.final": {
+   "key": 116,
+   "produced": 120,
+   "extra": 27,
+   "found": 93,
+   "label": 84,
+   "hedge_n": 93,
+   "hedge": 93,
+   "all_right": 84
+  }
+ }
+}

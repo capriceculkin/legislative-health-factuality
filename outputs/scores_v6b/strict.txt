@@ -1,0 +1,28 @@
+set       lang  output             key  found  exact(all 3 slots)  object exact  word F1 subj / verb / obj   right label  extra
+heldout   en    full predication     36     30     21 ( 58% of key)      24      0.92 / 0.99 / 0.90         28     10   key object words covered 76/95 (80%)
+heldout   en    lines (now)          36     30     19 ( 53% of key)      22      0.91 / 0.99 / 0.87         28     10   key object words covered 72/95 (76%)
+heldout   fr    full predication     33     25      9 ( 27% of key)      13      0.96 / 0.88 / 0.85         25     10   key object words covered 63/78 (81%)
+heldout   fr    lines (now)          33     25      9 ( 27% of key)      15      0.96 / 0.89 / 0.86         25     10   key object words covered 63/78 (81%)
+sample    en    full predication    119    108     61 ( 51% of key)      78      0.93 / 0.92 / 0.89        107     15   key object words covered 309/365 (85%)
+sample    en    lines (now)         119    108     56 ( 47% of key)      72      0.93 / 0.92 / 0.86        106     16   key object words covered 288/365 (79%)
+sample    fr    full predication    116     94     34 ( 29% of key)      58      0.90 / 0.91 / 0.85         87     27   key object words covered 293/327 (90%)
+sample    fr    lines (now)         116     94     26 ( 22% of key)      54      0.90 / 0.91 / 0.81         87     27   key object words covered 260/327 (80%)
+test      en    full predication     70     69     64 ( 91% of key)      66      1.00 / 0.99 / 0.98         69      0   key object words covered 67/67 (100%)
+test      en    lines (now)          70     69     67 ( 96% of key)      69      1.00 / 0.99 / 1.00         69      0   key object words covered 67/67 (100%)
+test      fr    full predication     70     70     64 ( 91% of key)      67      1.00 / 0.99 / 0.98         70      0   key object words covered 81/82 (99%)
+test      fr    lines (now)          70     70     63 ( 90% of key)      66      1.00 / 0.99 / 0.98         70      0   key object words covered 80/82 (98%)
+
+objects the full predication completes (key | three-slot line | full predication), first 12 of the sample:
+   ('sample|1', 'their premiums not to themselves but off to others', 'their premiums', 'their premiums not to themselves but off to others')
+   ('sample|2', 'fetal tissue for research', 'fetal tissue', 'fetal tissue for research')
+   ('sample|7', "politics with people's lives", 'politics', 'politics with people’s lives')
+   ('sample|7', 'my colleagues to reject the amendment', 'my colleagues', 'my colleagues to reject the amendment')
+   ('sample|11', 'clinics at risk of being shut down', 'clinics', 'clinics at risk')
+   ('sample|15', 'us adult stem cell research works', 'adult stem cell research works', 'adult stem cell research works us')
+   ('sample|19', 'the current economic situation as a crisis', 'the current economic situation', 'the current economic situation as a crisis')
+   ('sample|32', '22 former health agencies and organizations into a single organization', '22 former health agencies and organizations, such as Cancer Care Ontario, eHealth Ontario, Health Quality Ontario and others', '22 former health agencies and organizations, such as Cancer Care Ontario, eHealth Ontario, Health Quality Ontario and others into a single organization')
+   ('sample|34', 'products in a safe, responsible manner', 'products including strict requirements for age verification, as well as', 'products in a safe, responsible manner including strict requirements for age verification')
+   ('sample|39', 'the challenges in long-term-care facilities', 'the challenges', 'the challenges in long-term-care facilities')
+   ('sample|39', 'to the table with a plan', 'to the table', 'to the table with a plan')
+   ('sample|47', 'a notice that the licensee is entitled to a hearing by the board', 'a notice', 'a notice with the notice under subsection')
+count: {'test': 1, 'heldout': 2, 'sample': 30}

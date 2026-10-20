@@ -1,0 +1,55 @@
+== test pairs passed, of 45
+  design 1 (vote)                            EN 44   FR 45
+  design 2a (backbone, all lines)            EN 41   FR 43
+  design 2c (backbone, structure-confirmed)  EN 31   FR 37
+
+== heldout: found/key   produced   share in key   right label
+  en d1:  30/36   p40    75%   label 28/30
+  en 2a:  28/36   p39    72%   label 27/28
+  en 2c:  16/36   p20    80%   label 15/16
+  fr d1:  25/33   p35    71%   label 25/25
+  fr 2a:  25/33   p39    64%   label 24/25
+  fr 2c:  14/33   p20    70%   label 13/14
+
+== sample: found/key   produced   share in key   right label
+  en d1: 108/119  p124   87%   label 106/108
+  en 2a: 102/119  p126   81%   label 99/102
+  en 2c:  61/119  p70    87%   label 61/61
+  fr d1:  94/116  p121   78%   label 87/94
+  fr 2a:  95/116  p133   71%   label 89/95
+  fr 2c:  55/116  p68    81%   label 54/55
+
+== the checks themselves (all 220 sentences)
+  en: 232 backbone lines; UDPipe confirms 140 (60%); core arcs the same 501/645 (78%); objects that are exactly a phrase of the tree 161/197 (82%)
+  fr: 241 backbone lines; UDPipe confirms 149 (62%); core arcs the same 552/683 (81%); objects that are exactly a phrase of the tree 144/209 (69%)
+
+== is each check informative? share of lines that are in the key (held-out + sample)
+  en confirmed                77/90  86%
+  en not confirmed            53/75  71%
+  en object is a phrase       97/114  85%
+  en object is not a phrase   28/35  80%
+  fr confirmed                69/88  78%
+  fr not confirmed            51/84  61%
+  fr object is a phrase       67/96  70%
+  fr object is not a phrase   48/62  77%
+
+== example frames
+  test|A2|en The bill was approved by the committee.
+      was approved | asserted  | ARG1: The bill; ARG0: by the committee
+  test|A2|fr Le projet de loi a été approuvé par le comité.
+      a été approuvé | asserted  | ARG1: Le projet de loi; ARG0: par le comité
+  test|C1|en The bill would lower drug costs.
+      would lower | asserted | hedged | ARG0: The bill; ARG1: drug costs; ARGM-MOD: would
+  test|C1|fr Le projet de loi réduirait le coût des médicaments.
+      réduirait | asserted | hedged | ARG0: Le projet de loi; ARG1: le coût des médicaments; ARGM-MOD: réduirait (conditional)
+  test|D1|en The minister said that the bill lowers costs.
+      said | asserted  | ARG0: The minister; ARG1: the bill lowers costs
+      lowers | reported  | ARG0: the bill; ARG1: costs
+  test|D1|fr Le ministre a dit que le projet de loi réduit les coûts.
+      a dit | asserted  | ARG0: Le ministre; ARG1: le projet de loi réduit les coûts
+      réduit | reported  | ARG0: le projet de loi; ARG1: les coûts
+  test|F4|en The minister urged the doctors to accept the deal.
+      urged to accept | asserted  | ARG0: The minister; ARG2: the doctors; ARG1: accept the deal
+  test|F4|fr Le ministre a exhorté les médecins à accepter l'entente.
+      a exhorté | asserted  | ARG0: Le ministre; ARG2: les médecins; ARG1: accepter l'entente
+      accepter | embedded  | ARG1: l'entente

@@ -1,0 +1,8 @@
+en | Dick and Jane go to the moon , their dog goes to Mars . | [('Dick and Jane', 'go', 'to the moon', 'asserted'), ('their dog', 'goes', 'to Mars', 'asserted')]
+en | Dick and Jane go to the moon , their house is on Mars . | [('Dick and Jane', 'go', 'to the moon', 'asserted'), ('their house', 'is', 'on Mars', 'asserted')]
+en | Dick and Jane go to the moon and then go to Mars . | [('Dick and Jane', 'go', 'to the moon', 'asserted'), ('Dick and Jane (inh)', 'go', 'to Mars', 'asserted')]
+en | Dick and Jane go to the moon , then they go to Mars . | [('Dick and Jane', 'go', 'to the moon', 'asserted'), ('they', 'go', 'to Mars', 'asserted')]
+fr | Dick et Jane vont sur la Lune , leur chien va sur Mars . | [('Dick et Jane', 'vont', 'sur la Lune', 'asserted'), ('leur chien', 'va', 'sur Mars', 'asserted')]
+fr | Dick et Jane vont sur la Lune , leur maison est sur Mars . | [('Dick et Jane', 'vont', 'sur la Lune', 'asserted'), ('leur maison', 'est', 'sur Mars', 'asserted')]
+fr | Dick et Jane vont sur la Lune et vont ensuite sur Mars . | [('Dick et Jane', 'vont', 'sur la Lune', 'asserted'), ('Dick et Jane (inh)', 'vont', 'sur Mars', 'asserted')]
+fr | Dick et Jane vont sur la Lune , puis ils vont sur Mars . | [('Dick et Jane', 'vont', 'sur la Lune', 'asserted'), ('ils', 'vont', 'sur Mars', 'asserted')]

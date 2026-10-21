@@ -163,7 +163,7 @@ def internal_links(wb, flow_all, flow_at, sents):
     flow_name = flow_all.title
     step_sheets = {"F": "5 Lines by parser", "G": "5 Lines by parser", "H": "5 Lines by parser", "I": "6 Vote", "J": "7 Output triples"}
     first = {}
-    for name in ("1 spaCy parse", "2 Stanza parse", "3 Tree", "4 Discourse", "5 Lines by parser", "6 Vote", "7 Output triples", "7b Tree-first output"):
+    for name in ("1 spaCy parse", "2 Stanza parse", "3 Tree", "4 Discourse", "5 Lines by parser", "6 Vote", "7 Output triples", "7b Tree-first output", "Check together"):
         ws = wb[name]
         for r in range(ws._r0 + 1, ws._next):
             n = ws.cell(row=r, column=1).value
@@ -335,7 +335,7 @@ def main():
                    [13, 9, 60, 22, 26, 14, 34, 18, 22, 16, 26, 14, 34, 18],
                    "Gold: the Penn Treebank's hand annotation (Marcus et al. 1993), turned into lines by ptb_gold.py. 'Tree rules on gold tree' runs our rules "
                    "on the treebank's own tree with the marks removed, so a wrong line is a rule error; the tree rules have no recipient label, so they put a recipient in the object slot. "
-                   "'Vote' rows (only when built with the treebank parses) use our parsers on the plain text.")
+                   "'Tree first' rows (the proposed design) and 'vote' rows (the first design) use our parsers on the plain text; they appear only when the workbook is built with the treebank parses.")
         gold = {(f, k): root for f, k, root in G.treebank_sentences(A.treebank)}
         wr = {}
         if A.wsj and Path(A.wsj).exists():
@@ -348,6 +348,8 @@ def main():
             variants = [("tree rules on gold tree", [{"subject": o["subject"], "verb": o["verb"], "object": o["object"], "recipient": ""}
                                                      for o in P.from_constituency("(ROOT " + G.to_str(G.strip_marks(root)) + ")", "en")])]
             if (f, k) in wr:
+                variants.append(("tree first (our parsers)", [{"subject": L["subject"], "verb": L["verb"], "object": L["object"], "recipient": L.get("recipient") or ""}
+                                                         for L in F.full_row(wr[(f, k)], method="tree_plus")["lines"]]))
                 variants.append(("vote (our parsers)", [{"subject": L["subject"], "verb": L["verb"], "object": L["object"], "recipient": L.get("recipient") or ""}
                                                          for L in F.full_row(wr[(f, k)])["lines"]]))
             for g in gl:
@@ -378,15 +380,17 @@ def main():
         add(rf, list(row_))
     import parallel_tests as PT
     import ast as _ast2
-    ss = sheet(wb, "Simple sentences", ["Pair", "Group", "Construction", "Language", "Sentence", "Expected lines (written key)", "Our output",
-                                        "Found (loose match)", "Exactly right (subject, verb, object)", "Negation and status as expected"],
-               [7, 11, 26, 9, 46, 48, 62, 11, 13, 13],
+    ss = sheet(wb, "Simple sentences", ["Pair", "Group", "Construction", "Language", "Sentence", "Expected lines (written key)", "Tree-first output",
+                                        "Found (loose match)", "Exactly right (subject, verb, object)", "Negation and status as expected", "Vote: exactly right (for comparison)"],
+               [7, 11, 26, 9, 46, 48, 62, 11, 13, 13, 13],
                "45 pairs, one construction each, in English and French, built to change one thing at a time. The expected lines were drafted with AI assistance and are being checked by hand. "
-               "Found (loose match): every expected line has an output line sharing a content word in subject, verb and object (the vote's test). Exactly right: the same three slots word for word, where the output's object slot also holds its recipient and other parts, as compare3.py scores it. "
+               "The output shown and marked is the tree-first design (the proposed one); the last column gives the vote's exact mark for comparison. Found (loose match): every expected line has an output line sharing a content word in subject, verb and object (the vote's test). Exactly right: the same three slots word for word, where the output's object slot also holds its recipient and other parts, as compare3.py scores it. "
                "Negation and status: the matched line has the expected polarity and stated / reported / embedded. "
                "Pair D2 (told the minister that ...) counts as not found in both languages: the key was written before the recipient slot and puts the person told in the object slot, "
                "while the output puts him in the recipient slot and points the object to what was told. The run script (parity_score.txt), which scores the earlier three-slot lines, passes D2.")
     import compare3 as K3
+    import collections as _col
+    tally = _col.Counter()
     for t in PT.T:
         for L_ in ("en", "fr"):
             n = f"test|{t['id']}|{L_}"
@@ -398,7 +402,7 @@ def main():
                 key = []
             res_ = S.analyze(P, C, rows[n], "native", "prod", "multi")
             al = P.align(key, res_["final"]) if key else []
-            fr_ = F.full_row(rows[n])
+            fr_ = F.full_row(rows[n], method="tree_plus")
             def show_(x):
                 rc = x["record"]
                 obj = rc["object"] or (f"(not stated; inferred: {rc['object_inferred']})" if rc["object_inferred"] else "(none)")
@@ -410,20 +414,55 @@ def main():
                 neg = P.gold_negated(k)
                 kind = {"asserted": "stated"}.get(k[3], k[3]) if len(k) > 3 else ""
                 return " | ".join(str(v) for v in k[:3]) + "   [" + ", ".join(x for x in ("NEGATED" if neg else "", kind) if x) + "]"
-            # marks computed on the same full-predication lines the 'Our output' column shows, the way compare3.py scores them
-            Lf = K3.as_lines(fr_)
-            alf = P.align(key, Lf) if key else []
-            exact_set = {(K3.norm(x["subject"]), K3.norm(x["verb"]), K3.norm(x["full"])) for x in Lf}
-            if key:
-                found_ = "yes" if all(a is not None for a in alf) else "no"
-                exact_ = "yes" if all((K3.norm(k[0]), K3.norm(k[1]), K3.norm(k[2])) in exact_set for k in key) else "no"
-                lab_ = "yes" if all(a is not None and Lf[a].get("kind") == k[3] and bool(Lf[a].get("negated")) == P.gold_negated(k)
-                                    for k, a in zip(key, alf)) else "no"
-            else:
-                found_ = exact_ = lab_ = "yes (none expected, none produced)" if not fr_["lines"] else "no (none expected)"
+            # marks computed on the same full-predication lines the output column shows, the way compare3.py scores them
+            def marks(frx):
+                Lf = K3.as_lines(frx)
+                alf = P.align(key, Lf) if key else []
+                exact_set = {(K3.norm(x["subject"]), K3.norm(x["verb"]), K3.norm(x["full"])) for x in Lf}
+                if not key:
+                    v = "yes (none expected, none produced)" if not frx["lines"] else "no (none expected)"
+                    return v, v, v
+                return ("yes" if all(a is not None for a in alf) else "no",
+                        "yes" if all((K3.norm(k[0]), K3.norm(k[1]), K3.norm(k[2])) in exact_set for k in key) else "no",
+                        "yes" if all(a is not None and Lf[a].get("kind") == k[3] and bool(Lf[a].get("negated")) == P.gold_negated(k)
+                                     for k, a in zip(key, alf)) else "no")
+            found_, exact_, lab_ = marks(fr_)
+            vote_exact = marks(F.full_row(rows[n]))[1]
+            tally[(L_, "tree")] += exact_.startswith("yes"); tally[(L_, "vote")] += vote_exact.startswith("yes"); tally[L_] += 1
             add(ss, [t["id"], t.get("group", ""), t.get("construction", ""), L_, t[L_]["text"],
-                     "\n".join(keyshow(k) for k in key) or "(none: a question is not a claim)", outl or "(none)", found_, exact_, lab_], t["id"])
+                     "\n".join(keyshow(k) for k in key) or "(none: a question is not a claim)", outl or "(none)", found_, exact_, lab_, vote_exact], t["id"])
     finish(ss); finish(rl); finish(rf)
+    sh = wb["Start here"]                # the comparison note on Start here, with the simple-sentence counts just computed
+    note = ("On the 45 simple test pairs the vote does better. Exactly right: vote {ve} of {ne} English and {vf} of {nf} French pairs, tree first {te} and {tf} "
+            "(Simple sentences sheet); tree first misses, for example, the apposition lines the vote adds (Jean Martin | is | the health minister). "
+            "On the debate keys the two designs are close; those keys were drafted with AI assistance (Scores sheet: compare3.txt).").format(
+        ve=tally[("en", "vote")], vf=tally[("fr", "vote")], te=tally[("en", "tree")], tf=tally[("fr", "tree")], ne=tally["en"], nf=tally["fr"])
+    for row_ in sh.iter_rows():
+        for c_ in row_:
+            if isinstance(c_.value, str) and c_.value.startswith("On the debate keys the two designs are close"):
+                c_.value = note
+                c_.alignment = Alignment(wrap_text=True, vertical="top")
+                sh.merge_cells(start_row=c_.row, start_column=1, end_row=c_.row, end_column=3)
+                sh.row_dimensions[c_.row].height = 45
+    # a sheet to fill in together: each tree-first line on the English debate examples, marked right or wrong by people
+    from openpyxl.worksheet.datavalidation import DataValidation
+    ck = sheet(wb, "Check together", ["ID", "Sentence", "Line #", "Tree-first output (subject | verb | object)", "Right?", "What it should be", "Notes"],
+               [14, 60, 7, 60, 10, 50, 30],
+               "For going through the output in a meeting: for each line, choose yes, no or partly in 'Right?', and write the correct line when it is not right. "
+               "This is a review of the output, not a gold standard: the reviewers see the output first.")
+    dv = DataValidation(type="list", formula1='"yes,no,partly"', allow_blank=True); ck.add_data_validation(dv)
+    for n_, why_ in DEBATE:
+        r_ = rows.get(n_)
+        if not r_ or r_["lang"] != "en" or r_["set"] != "sample":
+            continue
+        frx = F.full_row(r_, method="tree_plus")
+        for i_, L_ in enumerate(frx["lines"] or [None], 1):
+            rc_ = L_["record"] if L_ else None
+            txt_ = (f"{rc_['subject']} | {rc_['predicate']} | {rc_['object'] or '(none)'}" + (f"   to whom: {rc_['recipient']}" if rc_["recipient"] else "")) if rc_ else "(no lines)"
+            rr_ = add(ck, [n_, r_["text"] if i_ == 1 else "", i_, txt_, "", "", ""], n_)
+            dv.add(f"E{rr_}")
+    finish(ck)
+    wb.move_sheet("Check together", offset=wb.sheetnames.index("How it works") - wb.sheetnames.index("Check together"))
     lab = sheet(wb, "Labels", ["Where it appears", "Label", "What it means"], [30, 46, 90], "Every label used in the parse sheets, in plain words.")
     for row_ in D.LABELS:
         add(lab, list(row_))
@@ -512,6 +551,7 @@ def main():
         ("Start here: the pipeline, one box per step, with the file and code for each.", False),
         ("Flow 1 to 5: one real sentence each, from the debate record to the output triples, top to bottom.", False),
         ("Questions: what a reviewer is likely to ask, each with its answer and the sheet that shows it.", False),
+        ("Check together: the tree-first output on the English debate examples, to mark right or wrong together.", False),
         ("", False),
         ("Click any sentence ID to jump to that sentence's flow. Blue file names open the file on GitHub.", False),
         ("", False),

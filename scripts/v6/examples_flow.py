@@ -227,4 +227,4 @@ def overview(ws, gh=None, link=None, scores=None):
             for j in (1, 2, 3):
                 ws.cell(row=r, column=j).border = LINE
             r += 1
-        ws.cell(row=r, column=1, value="On the debate keys the two designs are close; those keys were drafted with AI assistance (Scores sheet: compare3.txt).").font = Font(name=FONT, size=10, italic=True)
+    ws.cell(row=r, column=1, value="On the debate keys the two designs are close; those keys were drafted with AI assistance (Scores sheet: compare3.txt).").font = Font(name=FONT, size=10, italic=True)

@@ -219,6 +219,23 @@ def head_word(toks, t):
     return ("ROOT", 0) if t[5] is None or t[5] >= len(toks) else (toks[t[5]][1], toks[t[5]][0] + 1)
 
 
+def plain(wb):
+    """Standard Excel look: Calibri 11 in black, bold only where it was bold (titles, headers, step names), no fills,
+    no italics, gridlines on, no arrow rows. Links stay underlined."""
+    from openpyxl.styles import PatternFill as _PF, Border as _B
+    for ws in wb:
+        ws.sheet_view.showGridLines = True
+        for row in ws.iter_rows():
+            for c in row:
+                if c.value == "↓":
+                    c.value = None
+                f = c.font
+                link = bool(c.hyperlink) or str(c.value or "").startswith("=HYPERLINK(")
+                c.font = Font(name="Calibri", size=11, bold=bool(f.bold), underline="single" if link else None, color="000000")
+                c.fill = _PF(fill_type=None)
+                c.border = _B()
+
+
 def main():
     rows = {r["n"]: r for r in json.load(open(A.parses, encoding="utf-8"))["rows"]}
     wb = Workbook(); wb.remove(wb.active)
@@ -446,8 +463,8 @@ def main():
                 sh.row_dimensions[c_.row].height = 45
     # a sheet to fill in together: each tree-first line on the English debate examples, marked right or wrong by people
     from openpyxl.worksheet.datavalidation import DataValidation
-    ck = sheet(wb, "Check together", ["ID", "Sentence", "Line #", "Tree-first output (subject | verb | object)", "Right?", "What it should be", "Notes"],
-               [14, 60, 7, 60, 10, 50, 30],
+    ck = sheet(wb, "Check together", ["ID", "Sentence", "Line #", "Subject", "Verb", "Object", "To whom", "Right?", "What it should be", "Notes"],
+               [14, 50, 7, 28, 20, 36, 16, 9, 40, 26],
                "For going through the output in a meeting: for each line, choose yes, no or partly in 'Right?', and write the correct line when it is not right. "
                "This is a review of the output, not a gold standard: the reviewers see the output first.")
     dv = DataValidation(type="list", formula1='"yes,no,partly"', allow_blank=True); ck.add_data_validation(dv)
@@ -458,9 +475,9 @@ def main():
         frx = F.full_row(r_, method="tree_plus")
         for i_, L_ in enumerate(frx["lines"] or [None], 1):
             rc_ = L_["record"] if L_ else None
-            txt_ = (f"{rc_['subject']} | {rc_['predicate']} | {rc_['object'] or '(none)'}" + (f"   to whom: {rc_['recipient']}" if rc_["recipient"] else "")) if rc_ else "(no lines)"
-            rr_ = add(ck, [n_, r_["text"] if i_ == 1 else "", i_, txt_, "", "", ""], n_)
-            dv.add(f"E{rr_}")
+            vals_ = [rc_["subject"], rc_["predicate"], rc_["object"] or "(none)", rc_["recipient"] or ""] if rc_ else ["(no lines)", "", "", ""]
+            rr_ = add(ck, [n_, r_["text"] if i_ == 1 else "", str(i_)] + vals_ + ["", "", ""], n_)
+            dv.add(f"H{rr_}")
     finish(ck)
     wb.move_sheet("Check together", offset=wb.sheetnames.index("How it works") - wb.sheetnames.index("Check together"))
     lab = sheet(wb, "Labels", ["Where it appears", "Label", "What it means"], [30, 46, 90], "Every label used in the parse sheets, in plain words.")
@@ -569,6 +586,7 @@ def main():
         c = readme.cell(row=i, column=1, value=t)
         c.font = Font(name=FONT, size=12 if b else 10, bold=b)
         c.alignment = Alignment(wrap_text=True, vertical="top")
+    plain(wb)
     wb.save(A.out)
     print("wrote", A.out, "with", len(wb.sheetnames), "sheets")
 

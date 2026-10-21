@@ -34,8 +34,11 @@ def f1(gold, out):
 def full_lines(fr):
     out = []
     for r in fr["lines"]:
-        extra = [q["text"] for q in r["parts"] if q["role"] not in ("ARGM-TMP", "ARGM-MOD", "ARGM-ADV", "ARGM-NEG", "OPENING")]
-        out.append(dict(subject=r["subject"], verb=r["verb"], object=r["object"] or "", object_full=" ".join([r["object"] or ""] + extra).strip(),
+        extra = [q["text"] for q in r["parts"] if q["role"] not in ("ARGM-TMP", "ARGM-MOD", "ARGM-ADV", "ARGM-NEG", "OPENING") and q.get("ref") is None]
+        if r.get("recipient"):
+            extra = [r.get("recipient_words") or r["recipient"]] + extra                # the same object the comparison script scores (compare3.as_lines)
+        obj = (r.get("object_words") or "") if (r["object"] or "").startswith("[what is said") else (r["object"] or "")
+        out.append(dict(subject=r["subject"], verb=r["verb"], object=obj, object_full=" ".join([obj] + extra).strip(),
                         kind=r["kind"], negated=r.get("negated"), hedged=r.get("hedged")))
     return out
 

@@ -1,0 +1,32 @@
+== en
+   subjects                                                      159
+   subjects: pronoun                                              33  (21%)
+   subjects: role or institution (the minister, ce gouvernement)   22  (14%)
+   objects                                                       147
+   objects: pronoun                                                1  (1%)
+   objects: role or institution (the minister, ce gouvernement)    1  (1%)
+   most common pronouns: [('i', 11), ('we', 8), ('it', 7), ('they', 5), ('this', 1), ('you', 1), ('those', 1)]
+     e.g. ('heldout|1', 'subject', 'they', 'are')
+     e.g. ('heldout|2', 'subject', 'I', 'thank')
+     e.g. ('heldout|2', 'subject', 'I', 'rise')
+     e.g. ('heldout|3', 'subject', 'I', 'do not want to discount')
+     e.g. ('heldout|3', 'subject', 'I', 'am')
+     e.g. ('heldout|3', 'subject', 'I', 'know')
+     e.g. ('heldout|3', 'subject', 'we', 'are setting up')
+     e.g. ('heldout|5', 'subject', 'It', 'would be')
+== fr
+   subjects                                                      153
+   subjects: pronoun                                              31  (20%)
+   subjects: role or institution (the minister, ce gouvernement)   29  (19%)
+   objects                                                       147
+   objects: pronoun                                                4  (3%)
+   objects: role or institution (the minister, ce gouvernement)    4  (3%)
+   most common pronouns: [('je', 8), ('il', 7), ('ils', 5), ('nous', 3), ('vous', 3), ('ce', 2), ('elle', 2), ('la', 2)]
+     e.g. ('heldout|16', 'subject', 'ce', "n'est")
+     e.g. ('heldout|16', 'object', 'ce', "n'est")
+     e.g. ('heldout|17', 'subject', 'Je', "demanderais d'appeler")
+     e.g. ('heldout|17', 'subject', 'il', 'plaît')
+     e.g. ('heldout|18', 'subject', 'je', 'vais adresser')
+     e.g. ('heldout|18', 'subject', 'je', 'salue')
+     e.g. ('heldout|19', 'subject', 'je', 'demande')
+     e.g. ('heldout|24', 'subject', 'Nous', 'allons adopter')

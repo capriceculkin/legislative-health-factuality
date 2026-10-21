@@ -1,0 +1,44 @@
+== test|A8|en Last year the House passed legislation identical to H.R. 5, but the Senate refused to act.
+  [0] the House | passed | legislation identical to H.R. 5   asserted  found by 3
+        adjunct when: Last year
+        needs referent: subject 'the House' is a role or institution (which one depends on the legislature and date); who it means must be found before DBpedia
+        triple: (the House, passed, legislation identical to H.R. 5)  polarity positive, asserted, when Last year
+  [1] the Senate | refused to act | (object not stated)   asserted  found by 3
+        adjunct when: Last year (inherited)
+        link -> [0] contrast ('but'); discourse: contrast (model label: adversative)
+        note: time phrase opens the sentence; it may cover this clause too
+        note: refers back to: legislation identical to H.R. 5 (inferred, not in the words)
+        needs referent: subject 'the Senate' is a role or institution (which one depends on the legislature and date); who it means must be found before DBpedia
+        triple: (the Senate, refused to act, legislation identical to H.R. 5 [inferred])  polarity positive, asserted, when Last year
+== test|A8|fr L'an dernier, la Chambre a adopté un projet de loi identique au projet de loi 5, mais le Sénat a refusé d'agir.
+  [0] la Chambre | a adopté | un projet de loi identique au projet de loi 5   asserted  found by 3
+        adjunct when: L'an dernier
+        note: object: majority wording ('un projet de loi identique' was the first parser's)
+        needs referent: subject 'la Chambre' is a role or institution (which one depends on the legislature and date); who it means must be found before DBpedia
+        triple: (la Chambre, a adopté, un projet de loi identique au projet de loi 5)  polarity positive, asserted, when L'an dernier
+  [1] le Sénat | a refusé d'agir | (object not stated)   asserted  found by 2
+        adjunct when: L'an dernier (inherited)
+        link -> [0] contrast ('mais'); discourse: contrast
+        note: time phrase opens the sentence; it may cover this clause too
+        note: refers back to: un projet de loi identique au projet de loi 5 (inferred, not in the words)
+        needs referent: subject 'le Sénat' is a role or institution (which one depends on the legislature and date); who it means must be found before DBpedia
+        triple: (le Sénat, a refusé d'agir, un projet de loi identique au projet de loi 5 [inferred])  polarity positive, asserted, when L'an dernier
+== sample|1 A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.
+  [0] A small hardware store in an AHP | would be joining | an association   asserted HEDGED  found by 3
+        modal modal: would
+        triple: (A small hardware store in an AHP, would be joining, an association)  polarity positive, asserted, hedged
+  [1] A small hardware store in an AHP (inh) | sending | their premiums   asserted HEDGED  found by 3
+        recipient: to others  (recipient, prepositional complement)
+        link -> [0] adverbial; discourse: elaboration
+        note: recipient split: not to 'themselves' (negated) but to others (asserted)
+        needs referent: object 'their premiums' is a possessive pronoun inside; who it means must be found before DBpedia
+        needs referent: recipient 'to others' is a pronoun; who it means must be found before DBpedia
+        needs referent: recipient_not 'themselves' is a pronoun; who it means must be found before DBpedia
+        triple: (A small hardware store in an AHP, sending, their premiums)  polarity positive, asserted, hedged, recipient: to others, not to: themselves
+  [2] we | need | the check   asserted  found by 3
+        link -> [0] result ('that is why'); discourse: explanation
+        note: stated: it is what the speaker concludes (that is why ...)
+        needs referent: subject 'we' is a pronoun; who it means must be found before DBpedia
+        triple: (we, need, the check)  polarity positive, asserted
+  folded into a link: ['is']
+3 sentences

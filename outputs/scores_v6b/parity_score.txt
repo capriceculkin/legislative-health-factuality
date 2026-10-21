@@ -8,7 +8,7 @@
   A5   two verbs share one subject                      EN P  FR P
   A6   shared subject, two objects                      EN P  FR P
   A7   contrast with but / mais                         EN P  FR P
-  A8   David's sentence (D6)                            EN P  FR P
+  A8   the Senate sentence (D6)                         EN P  FR P
   A9   form of address before the subject               EN P  FR P
   A10  apposition                                       EN P  FR P
   A11  question (skipped by design)                     EN P  FR P

@@ -1,0 +1,161 @@
+method tree_plus: gold lines that changed between scripts/v6/_before_recipient and scripts/v6
+
+== exactly right before, not now: 4
+-- wsj_0035.mrg|6: But a Soviet bank here would be crippled unless Moscow found a way to settle the $188 million debt, which was lent to the country's short-lived democratic Kerensky government before the Communists seized power in 1917.
+   gold: the $188 million debt | was lent | to the country's short-lived democratic Kerensky government
+   old:  the $188 million debt | was lent | to the country's short-lived democratic Kerensky government
+   new:  the $188 million debt | was lent | 
+-- wsj_0048.mrg|18: Mr. Jennison said Northeast Bancorp also fared well because takeover stocks have returned to favor among investors.
+   gold: takeover stocks | have returned | to favor
+   old:  takeover stocks | have returned | to favor
+   new:  takeover stocks | have returned | 
+-- wsj_0063.mrg|7: About $490 million of that would be allocated to the buy-back, leaving about $130 million, he said.
+   gold: About $490 million of that | would be allocated | to the buy-back
+   old:  About $490 million of that | would be allocated | to the buy-back
+   new:  About $490 million of that | would be allocated | 
+-- wsj_0118.mrg|100: We have to have a system that says to those largest investors
+   gold: a system | says | to those largest investors
+   old:  a system | says | to those largest investors
+   new:  a system | says | 
+
+== exactly right now, not before: 35
+-- wsj_0003.mrg|1: A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago, researchers reported.
+   gold: researchers | reported | A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago
+   old:  researchers | reported | 
+   new:  researchers | reported | A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago
+-- wsj_0010.mrg|19: More than a few CEOs say the red-carpet treatment tempts them to return to a heartland city for future meetings.
+   gold: them | to return | 
+   old:  them (inh) | to return | to a heartland city
+   new:  them (inh) | to return | 
+-- wsj_0027.mrg|1: Magna International Inc.'s chief financial officer, James McAlpine, resigned and its chairman, Frank Stronach, is stepping in to help turn the automotive-parts manufacturer around, the company said.
+   gold: the company | said | Magna International Inc.'s chief financial officer, James McAlpine, resigned and its chairman, Frank Stronach, is stepping in to help turn the automotive-parts manufacturer around
+   old:  the company | said | 
+   new:  the company | said | Magna International Inc.'s chief financial officer, James McAlpine, resigned and its chairman, Frank Stronach, is stepping in to help turn the automotive-parts manufacturer around
+-- wsj_0035.mrg|1: The U.S. and Soviet Union are holding technical talks about possible repayment by Moscow of $188 million in pre-Communist Russian debts owed to the U.S. government, the State Department said.
+   gold: the State Department | said | The U.S. and Soviet Union are holding technical talks about possible repayment by Moscow of $188 million in pre-Communist Russian debts owed to the U.S. government
+   old:  the State Department | said | 
+   new:  the State Department | said | The U.S. and Soviet Union are holding technical talks about possible repayment by Moscow of $188 million in pre-Communist Russian debts owed to the U.S. government
+-- wsj_0037.mrg|52: Yasser Arafat has written to the chairman of the International Olympic Committee asking him to back a Palestinian bid to join the committee, the Palestine Liberation Organization news agency WAFA said.
+   gold: Yasser Arafat | has written | 
+   old:  Yasser Arafat | has written | to the chairman of the International Olympic Committee
+   new:  Yasser Arafat | has written | 
+-- wsj_0037.mrg|57: Once the disease was confirmed, all the man's associates and family were tested, but none have so far been found to have AIDS, the newspaper said.
+   gold: the newspaper | said | Once the disease was confirmed, all the man's associates and family were tested, but none have so far been found to have AIDS
+   old:  the newspaper | said | 
+   new:  the newspaper | said | Once the disease was confirmed, all the man's associates and family were tested, but none have so far been found to have AIDS
+-- wsj_0039.mrg|17: At night he returns to the condemned building he calls home.
+   gold: he | returns | 
+   old:  he | returns | to the condemned building
+   new:  he | returns | 
+-- wsj_0044.mrg|76: Friends told her she was pushing too hard.
+   gold: Friends | told | she was pushing too hard   [recipient: her]
+   old:  Friends | told | her
+   new:  Friends | told | she was pushing too hard
+-- wsj_0044.mrg|77: Because of deteriorating hearing, she told colleagues she feared she might not be able to teach much longer.
+   gold: she | told | she feared she might not be able to teach much longer   [recipient: colleagues]
+   old:  she | told | colleagues
+   new:  she | told | she feared she might not be able to teach much longer
+-- wsj_0044.mrg|102: Do I have much sympathy for her?'' Mr. Watson asks.
+   gold: Mr. Watson | asks | Do I have much sympathy for her?
+   old:  Mr. Watson | asks | 
+   new:  Mr. Watson | asks | Do I have much sympathy for her?
+-- wsj_0049.mrg|19: At that meeting, he said, the Justice Department assured him that enforcement procedures wouldn't be threatened against attorneys without further review and advance notice.
+   gold: the Justice Department | assured | that enforcement procedures wouldn't be threatened against attorneys without further review and advance notice   [recipient: him]
+   old:  the Justice Department | assured | him
+   new:  the Justice Department | assured | that enforcement procedures wouldn't be threatened against attorneys without further review and advance notice
+-- wsj_0049.mrg|21: But in the letters sent in recent days, Christopher J. Lezovich of the IRS computing center in Detroit, told attorneys that `` failing to voluntarily submit the requested information could result in summons enforcement action being initiated.
+   gold: Christopher J. Lezovich of the IRS computing center in Detroit | told | that `` failing to voluntarily submit the requested information could result in summons enforcement action being initiated   [recipient: attorneys]
+   old:  Christopher J. Lezovich of the IRS computing center in Detroit | told | attorneys
+   new:  Christopher J. Lezovich of the IRS computing center in Detroit | told | that " failing to voluntarily submit the requested information could result in summons enforcement action being initiated
+-- wsj_0049.mrg|23: A spokesman for the IRS confirmed that `` there has been correspondence mailed about incomplete 8300s,'' but he declined to say why the letters were sent to lawyers now.
+   gold: the letters | were sent | 
+   old:  the letters | were sent | to lawyers
+   new:  the letters | were sent | 
+-- wsj_0060.mrg|10: But, says the general manager of a network affiliate in the Midwest, `` I think if I tell them I need more time, they'll take ` Cosby' across the street
+   gold: I | tell | I need more time   [recipient: them]
+   old:  I | tell | them
+   new:  I | tell | I need more time
+-- wsj_0076.mrg|3: Reames, a maker and marketer of frozen noodles and pre-cooked pasta based in Clive, Iowa, has annual sales of about $11 million, Lancaster said.
+   gold: Lancaster | said | Reames, a maker and marketer of frozen noodles and pre-cooked pasta based in Clive, Iowa, has annual sales of about $11 million
+   old:  Lancaster | said | 
+   new:  Lancaster | said | Reames, a maker and marketer of frozen noodles and pre-cooked pasta based in Clive, Iowa, has annual sales of about $11 million
+-- wsj_0083.mrg|24: The deal is chiefly designed to give Mitsubishi a window on the U.S. glass industry, says Ichiro Wakui, an executive in Mitsubishi's general merchandise department in New York.
+   gold: The deal | to give | a window on the U.S. glass industry   [recipient: Mitsubishi]
+   old:  The deal (inh) | to give | Mitsubishi
+   new:  The deal (inh) | to give | a window on the U.S. glass industry
+-- wsj_0088.mrg|2: Separately, John Phelan told a closed House subcommittee meeting in Washington that he would support Securities and Exchange Commission halts of program trading during market emergencies.
+   gold: John Phelan | told | that he would support Securities and Exchange Commission halts of program trading during market emergencies   [recipient: a closed House subcommittee meeting in Washington]
+   old:  John Phelan | told | a closed House subcommittee meeting in Washington
+   new:  John Phelan | told | that he would support Securities and Exchange Commission halts of program trading during market emergencies
+-- wsj_0088.mrg|18: In Washington, House aides said Mr. Phelan told congressmen that the collar, which banned program trades through the Big Board's computer when the Dow Jones Industrial Average moved 50 points, didn't work well.
+   gold: Mr. Phelan | told | that the collar, which banned program trades through the Big Board's computer when the Dow Jones Industrial Average moved 50 points, didn't work well   [recipient: congressmen]
+   old:  Mr. Phelan | told | congressmen
+   new:  Mr. Phelan | told | that the collar, which banned program trades through the Big Board's computer when the Dow Jones Industrial Average moved 50 points, didn't work well
+-- wsj_0090.mrg|51: Having the dividend increases is a supportive element in the market outlook, but I don't think it's a main consideration,'' he says.
+   gold: he | says | Having the dividend increases is a supportive element in the market outlook, but I don't think it's a main consideration
+   old:  he | says | 
+   new:  he | says | Having the dividend increases is a supportive element in the market outlook, but I don't think it's a main consideration
+-- wsj_0093.mrg|8: Instead, Mr. Nixon reminded his host, Chinese President Yang Shangkun, that Americans haven't forgiven China's leaders for the military assault of June 3-4 that killed hundreds, and perhaps thousands, of demonstrators.
+   gold: Mr. Nixon | reminded | that Americans haven't forgiven China's leaders for the military assault of June 3-4 that killed hundreds, and perhaps thousands, of demonstrators   [recipient: his host, Chinese President Yang Shangkun]
+   old:  Mr. Nixon | reminded | his host, Chinese President Yang Shangkun
+   new:  Mr. Nixon | reminded | that Americans haven't forgiven China's leaders for the military assault of June 3-4 that killed hundreds, and perhaps thousands, of demonstrators
+-- wsj_0102.mrg|42: Grain elevators built in the 1920s and'30s have six-inch concrete walls and a tubular shape that would easily contain semicircular cells with a control point in the middle, the New York firm says.
+   gold: the New York firm | says | Grain elevators built in the 1920s and'30s have six-inch concrete walls and a tubular shape that would easily contain semicircular cells with a control point in the middle
+   old:  the New York firm | says | 
+   new:  the New York firm | says | Grain elevators built in the 1920s and'30s have six-inch concrete walls and a tubular shape that would easily contain semicircular cells with a control point in the middle
+-- wsj_0108.mrg|50: But neither of us can copy the material on a Xerox machine or have it sent to us.
+   gold: it | sent |    [recipient: to us]
+   old:  it | sent | to us
+   new:  it | sent | 
+-- wsj_0108.mrg|56: If those words weren't there, the nice people at the Voice would be able to send you the information or, at the very least, let you photocopy it.
+   gold: the nice people at the Voice | to send | the information   [recipient: you]
+   old:  the nice people at the Voice (inh) | to send | you
+   new:  the nice people at the Voice (inh) | to send | the information
+-- wsj_0111.mrg|22: When Ms. Evans took her job, several important divisions that had reported to her predecessor weren't included partly because she didn't wish to be a full-time administrator.
+   gold: several important divisions | had reported | 
+   old:  several important divisions | had reported | to her predecessor
+   new:  several important divisions | had reported | 
+-- wsj_0112.mrg|6: The prevailing interpretation of the clause on Capitol Hill is that it gives Congress an omnipresent veto over every conceivable action of the president through the ability to withhold funding.
+   gold: it | gives | an omnipresent veto over every conceivable action of the president   [recipient: Congress]
+   old:  it | gives | Congress
+   new:  it | gives | an omnipresent veto over every conceivable action of the president
+-- wsj_0114.mrg|35: I'm doing the main story, and I'm already two beers drunk,'' said reporter Andy Furillo, whom the Times hired away several years ago but who returned to the Herald out of preference.
+   gold: who | returned | 
+   old:  who | returned | to the Herald
+   new:  who | returned | 
+-- wsj_0120.mrg|39: Concerned about shrinking landfills and the safety of chemicals used in super-absorbent disposables, parents are returning to the cloth diaper.
+   gold: parents | are returning | 
+   old:  parents | are returning | to the cloth diaper
+   new:  parents | are returning | 
+-- wsj_0155.mrg|8: According to reports carried by various news services, the Brazilian government told its sugar producers that they won't be allowed to export sugar during the current 1989-90 season, which began May 1, and the 1990-91 season so that it can be used to produce alcohol for automobile fuel.
+   gold: the Brazilian government | told | that they won't be allowed to export sugar during the current 1989-90 season, which began May 1, and the 1990-91 season so that it can be used to produce alcohol for automobile fuel   [recipient: its sugar producers]
+   old:  the Brazilian government | told | its sugar producers
+   new:  the Brazilian government | told | that they won't be allowed to export sugar during the current 1989-90 season, which began May 1, and the 1990-91 season so that it can be used to produce alcohol for automobile fuel
+-- wsj_0155.mrg|50: Buying for the most part carried over from the previous session, and traders apparently ignored reports that a Chilean mine strike may have ended almost before it began, an analyst said.
+   gold: an analyst | said | Buying for the most part carried over from the previous session, and traders apparently ignored reports that a Chilean mine strike may have ended almost before it began
+   old:  an analyst | said | 
+   new:  an analyst | said | Buying for the most part carried over from the previous session, and traders apparently ignored reports that a Chilean mine strike may have ended almost before it began
+-- wsj_0174.mrg|27: In his first state of the nation address, Salinas pledged to continue his program of modernization and warned opposition politicians that impeding progress could cost them popular support.
+   gold: Salinas | warned | that impeding progress could cost them popular support   [recipient: opposition politicians]
+   old:  Salinas (inh) | warned | opposition politicians
+   new:  Salinas (inh) | warned | that impeding progress could cost them popular support
+-- wsj_0176.mrg|1: Xerox Corp. has told employees in its Crum & Forster personal insurance operations that it is laying off about 300 people, or 25% of the staff.
+   gold: Xerox Corp. | has told | that it is laying off about 300 people, or 25% of the staff   [recipient: employees in its Crum & Forster personal insurance operations]
+   old:  Xerox Corp. | has told | employees in its Crum & Forster personal insurance operations
+   new:  Xerox Corp. | has told | that it is laying off about 300 people, or 25% of the staff
+-- wsj_0176.mrg|2: A spokeswoman for Crum & Forster said employees were told early this week that numerous staff functions for the personal insurance lines were going to be centralized as a cost-cutting move.
+   gold: employees | were told | that numerous staff functions for the personal insurance lines were going to be centralized as a cost-cutting move
+   old:  employees | were told | early this week
+   new:  employees | were told | that numerous staff functions for the personal insurance lines were going to be centralized as a cost-cutting move
+-- wsj_0179.mrg|14: Indeed, Columbia executives recently told reporters they were interested in creating a separate unit to hold Columbia's junk bonds and perhaps do merchant banking.
+   gold: Columbia executives | told | they were interested in creating a separate unit to hold Columbia's junk bonds and perhaps do merchant banking   [recipient: reporters]
+   old:  Columbia executives | told | reporters
+   new:  Columbia executives | told | they were interested in creating a separate unit to hold Columbia's junk bonds and perhaps do merchant banking
+-- wsj_0186.mrg|8: This is a Johnson-era, Great Society creation that mandates certain government contracts be awarded noncompetitively to minority businesses.
+   gold: certain government contracts | be awarded |    [recipient: to minority businesses]
+   old:  certain government contracts | be awarded | to minority businesses
+   new:  certain government contracts | be awarded | 
+-- wsj_0187.mrg|6: Subcontractors will be offered a settlement and a swift transition to new management is expected to avert an exodus of skilled workers from Waertsilae Marine's two big shipyards, government officials said.
+   gold: government officials | said | Subcontractors will be offered a settlement and a swift transition to new management is expected to avert an exodus of skilled workers from Waertsilae Marine's two big shipyards
+   old:  government officials | said | 
+   new:  government officials | said | Subcontractors will be offered a settlement and a swift transition to new management is expected to avert an exodus of skilled workers from Waertsilae Marine's two big shipyards

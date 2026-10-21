@@ -1,0 +1,14 @@
+computer      Mac16,1  (Model Name: MacBook Pro; Chip: Apple M4; Memory: 16 GB)
+processor     Apple M4, 10 cores
+memory        16 GB
+system        macOS 26.6.2 (arm64)
+python        3.10.7  (/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/bin/python3)
+spacy         3.8.14
+en_core_web_lg 3.8.0
+fr_core_news_lg 3.8.0
+stanza        1.15.0
+benepar       0.2.0
+torch         2.13.0
+transformers  5.14.1
+isanlp_rst    3.2.2
+GPU (Apple MPS) available to torch: True; CUDA: False

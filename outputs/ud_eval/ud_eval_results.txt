@@ -1,0 +1,11 @@
+Gold words and sentence breaks given; scored by our scorer and by conll18_ud_eval.py
+spacy   en_ewt        words  25094   ours: UAS 56.91  LAS not comparable (ClearNLP labels)   official: UAS 56.91   (7s)
+stanza  en_ewt        words  25094   ours: UAS 92.00  LAS 89.74  LAS base 89.85   official: UAS 92.00  LAS (base labels) 89.85   (37s)
+spacy   en_gum        words  28397   ours: UAS 54.48  LAS not comparable (ClearNLP labels)   official: UAS 54.48   (5s)
+stanza  en_gum        words  28397   ours: UAS 92.12  LAS 90.03  LAS base 90.14   official: UAS 92.12  LAS (base labels) 90.14   (46s)
+spacy   fr_gsd        words  10017   ours: UAS 79.99  LAS 72.79  LAS base 74.69   official: UAS 79.99  LAS (base labels) 74.69   (4s)
+stanza  fr_gsd        words  10017   ours: UAS 94.18  LAS 91.40  LAS base 92.11   official: UAS 94.18  LAS (base labels) 92.11   (15s)
+spacy   fr_sequoia    words  10044   ours: UAS 85.61  LAS 80.52  LAS base 81.82   official: UAS 85.61  LAS (base labels) 81.82   (3s)
+stanza  fr_sequoia    words  10044   ours: UAS 93.97  LAS 90.91  LAS base 91.92   official: UAS 93.97  LAS (base labels) 91.92   (16s)
+spacy   fr_rhapsodie  words  12189   ours: UAS 70.94  LAS 62.79  LAS base 64.09   official: UAS 70.94  LAS (base labels) 64.09   (3s)
+stanza  fr_rhapsodie  words  12189   ours: UAS 86.78  LAS 82.54  LAS base 83.53   official: UAS 86.78  LAS (base labels) 83.53   (18s)

@@ -46,7 +46,7 @@ t("A7", "structure", "contrast with but / mais",
   [("The House", "passed", "the bill", "asserted", ""), ("the Senate", "rejected", "the amendment", "asserted", "")],
   "La Chambre a adopté le projet de loi, mais le Sénat a rejeté l'amendement.",
   [("La Chambre", "a adopté", "le projet de loi", "asserted", ""), ("le Sénat", "a rejeté", "l'amendement", "asserted", "")])
-t("A8", "structure", "David's sentence (D6)",
+t("A8", "structure", "the Senate sentence (D6)",
   "Last year the House passed legislation identical to H.R. 5, but the Senate refused to act.",
   [("the House", "passed", "legislation identical to H.R. 5", "asserted", ""), ("the Senate", "refused to act", "", "asserted", "")],
   "L'an dernier, la Chambre a adopté un projet de loi identique au projet de loi 5, mais le Sénat a refusé d'agir.",

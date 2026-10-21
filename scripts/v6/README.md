@@ -37,7 +37,7 @@ headline numbers next to the values the page states. No parser runs; parsing aga
    - "recommends / shows / finds that X" makes X reported in both languages (answer key #38), and a stray closing
      quotation mark at the start of a sentence no longer marks the whole sentence as a quote.
 
-4. **Full predications (Oct 20), `full.py`.** Prompted by the two sentences David walked through on Oct 19. Each kept
+4. **Full predications (Oct 20), `full.py`.** Prompted by the two sentences walked through in the Oct 19 meeting. Each kept
    line now carries every argument of its verb (to whom, for what, when, how), negation inside an argument ("not to
    themselves but off to others"), a time phrase that opens the sentence carried to the clauses joined to it (marked
    inherited), an unstated object marked as unstated (with the object of a contrasting clause as an inferred

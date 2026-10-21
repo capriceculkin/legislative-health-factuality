@@ -186,6 +186,184 @@ def tree_parts(row, at, obj):
     return out
 
 
+
+# Complements and adjuncts (Huddleston and Pullum, ch. 4): a complement is licensed by the verb (the object, the person
+# something is given or said to, what is said), an adjunct can go with almost any verb (time, place, manner, reason).
+# Verbs that take a recipient, paired English / French (lemmas):
+RECIP_VERBS = [
+    (["give", "send", "offer", "provide", "grant", "pay", "sell", "transfer", "deliver", "lend", "owe", "award", "allocate", "assign", "submit", "present", "return"],
+     ["donner", "envoyer", "offrir", "fournir", "accorder", "payer", "verser", "vendre", "transférer", "remettre", "prêter", "devoir", "attribuer", "allouer", "soumettre", "présenter", "rendre"]),
+    (["say", "tell", "explain", "write", "show", "report", "announce", "ask", "promise", "propose", "recommend", "suggest", "declare", "repeat", "mention"],
+     ["dire", "expliquer", "écrire", "montrer", "rapporter", "annoncer", "demander", "promettre", "proposer", "recommander", "suggérer", "déclarer", "répéter", "mentionner"]),
+]
+# Verbs whose direct object is the person told and whose clause is what is told
+TELL_PERSON = [(["tell", "inform", "notify", "remind", "assure", "warn", "advise", "convince", "persuade"],
+                ["informer", "aviser", "avertir", "prévenir", "assurer", "convaincre", "persuader"])]
+RECIP_PREP = [(["to"], ["à", "au", "aux"])]
+# Prepositions that usually start an adjunct when they hang on a verb (a guess where UD does not say: English obl)
+ADJUNCT_PREP = [(["in", "at", "during", "under", "after", "before", "since", "despite", "throughout", "within", "across", "until", "because", "as"],
+                 ["dans", "en", "pendant", "sous", "après", "avant", "depuis", "malgré", "lors", "durant", "parmi", "comme"])]
+for _en, _fr in RECIP_VERBS + TELL_PERSON + RECIP_PREP + ADJUNCT_PREP:
+    assert _en and _fr
+_both = lambda L: {w for en, fr in L for w in en + fr}
+RV, TP, RP, AP = _both(RECIP_VERBS), _both(TELL_PERSON), _both(RECIP_PREP), _both(ADJUNCT_PREP)
+
+
+def _not_recipient(text, verb):
+    """The same filter the vote path uses for parts (NOT_ARG: clitics such as se, en, y, t'), plus any word already
+    inside the verb's wording ("vous vous doutiez", "s'en vont")."""
+    ft = fold(text)
+    return not ft or ft in NOT_ARG or ft in {fold(w) for w in NOT_ARG} or set(ft.split(" ")) <= set(fold(verb).split(" "))
+
+
+def dep_recipient(rec, at, Swhere, SP, Dwhere, DP):
+    """Tree-first designs: the tree has no label for an indirect object, so read it from the dependency parses matched
+    to this line (Stanza iobj, spaCy dative). Kept only when every matched parse marks the same recipient: both, when
+    both parses were matched to the line (the same rule as the rest of this design). Stanza's iobj:agent, the person
+    made to act in a causative ("t'a fait signer"), is not a recipient, so a spaCy iobj there is not taken.
+    If the tree had put the recipient in the object slot ("gave | the chefs"), the object is taken from the same parse
+    ("a standing ovation"). The verb's lemma is copied too, so the word-list rules for to-phrases can apply."""
+    found, matched = [], 0
+    rec.setdefault("nominal_to", set())
+    for src, where, parse in (("stanza", Swhere, SP), ("spacy", Dwhere, DP)):
+        if src in at and at[src] in where:
+            matched += 1
+            si, wi = where[at[src]]
+            toks = parse[si]
+            t = toks[wi]
+            vw = set(fold(rec["verb"]).split(" "))
+            for x in [c for c in (chain_tokens(t) or [t]) if fold(c.text) in vw] or [t]:      # only the line's own verb words
+                rec.setdefault("lemma", x.lemma)
+                for c in x.kids:                     # "to X" / "à X" hanging on the verb, where X is a noun or pronoun
+                    n = c
+                    if c.dep == "prep" or (c.dep == "dative" and c.upos == "ADP"):
+                        n = next((k for k in c.kids if k.dep == "pobj"), None)
+                        prep = fold(c.text)
+                    else:
+                        prep = next((fold(k.text) for k in c.kids if k.dep in ("case", "fixed")), "")
+                    if n is not None and prep in RP and n.upos in ("NOUN", "PROPN", "PRON"):
+                        rec["nominal_to"].add(fold(n.text))
+                io = next((c for c in x.kids if c.dep in ("iobj", "dative") and not _not_recipient(P.span(toks, c), rec["verb"])), None)
+                if io is not None:
+                    ob = next((c for c in x.kids if c.dep in P.OBJ), None)
+                    found.append((P.span(toks, io), P.span(toks, ob) if ob is not None else "", src))
+                    break
+    if not found:
+        return
+    if len(found) < matched:
+        rec["notes"].append(f"only {found[0][2]} marks a recipient ({found[0][0]!r}); not taken, both parses must agree")
+        return
+    if len(found) == 2 and fold(found[0][0]) != fold(found[1][0]):
+        rec["notes"].append(f"the dependency parses disagree on the recipient ({found[0][0]!r}, {found[1][0]!r}); none taken")
+        return
+    io_text, ob_text, src = found[0]
+    if ob_text and fold(rec["object"]) in (fold(io_text), fold(io_text + " " + ob_text)):     # the tree put the recipient in the object slot
+        rec["object"] = ob_text
+    rec["parts"] = [q for q in rec["parts"] if fold(q["text"]) != fold(io_text)]
+    rec["parts"].append({"role": "ARG2", "label": "to whom", "text": io_text, "tok": None, "dep": "iobj"})
+    rec["notes"].append(f"recipient read from the dependency parse ({', '.join(f[2] for f in found)}): the tree has no indirect-object label")
+
+
+def _to_ok(rec, text):
+    """Lines read from a dependency parse: as before. Tree lines: the to-phrase counts as a recipient only when a matched
+    dependency parse shows a noun or pronoun after "to" / "à" ("to others", "au ministre"), not a verb ("to withdraw")."""
+    if not rec.get("tree_line"):
+        return True
+    return bool(set(fold(text).split(" ")) & rec.get("nominal_to", set()))
+
+
+def complements(rec, content=None, content_words=""):
+    """Recipient, complements and adjuncts for one line (changes rec in place). content: the number of the line that
+    is this verb's clause ("what is said / told"), when that clause is its own predication."""
+    lem = (rec.get("lemma") or "").lower()
+    first = lambda x: fold(x).split(" ")[0] if x else ""
+    parts = rec["parts"]
+    clause = next((q for q in parts if q["role"] == "ARG1" and q.get("dep") in ("ccomp", "xcomp", "")), None)
+    if clause is None and content is not None and (not rec["object"] or lem in TP | {"tell"} or first(rec["object"]) in RP):
+        clause = {"role": "ARG1", "label": "what is said", "text": f"[what is said: predication {content + 1}]", "dep": "ccomp", "ref": content, "words": content_words}
+        parts.append(clause)
+    io = next((q for q in parts if q.get("dep") in ("iobj", "dative")), None)    # dative: spaCy English's label
+    if io is not None:                                    # the parse itself marks the indirect object
+        rec["recipient"] = io["text"]; parts.remove(io)
+    is_clause = bool(content_words) and fold(rec["object"]) in (fold(content_words), fold("that " + content_words), fold("que " + content_words))
+    # the object slot holds "to X" / "au X" for a giving or saying verb: X is the recipient
+    if "recipient" in rec:
+        pass
+    elif rec["object"] and first(rec["object"]) in RP and lem in RV and _to_ok(rec, rec["object"]):
+        rec["recipient"] = rec["object"]; rec["object"] = ""
+        rec["notes"].append("recipient moved out of the object slot")
+    # tell X that ...: X is the person told, the clause is what is told
+    elif rec["object"] and lem in TP | {"tell"} and clause is not None and not is_clause and first(rec["object"]) not in ("that", "que", "qu'"):
+        rec["recipient"] = rec["object"]; rec["object"] = clause["text"]; rec["object_words"] = clause.get("words", ""); parts.remove(clause)
+        rec["notes"].append("the person told is the recipient; what is told is the object")
+    if not rec["object"] and clause is not None and lem in RV:
+        rec["object"] = clause["text"]; rec["object_words"] = clause.get("words", ""); parts.remove(clause)
+    for q in list(parts):
+        dep, w = q.get("dep", ""), first(q["text"])
+        if w in {"not", "ne", "pas"}:
+            w = next((x for x in fold(q["text"]).split(" ") if x not in NEGW), w)
+        if "recipient" not in rec and (dep in ("iobj", "dative") or (w in RP and lem in RV and _to_ok(rec, q["text"]))):
+            rec["recipient"] = q["text"]; parts.remove(q); continue
+        if q["role"] in ("ARGM-TMP", "ARGM-ADV", "OPENING", "ARGM-MOD"):
+            q["kind"], q["why"] = ("adjunct", "time, manner or scene") if q["role"] != "ARGM-MOD" else ("modal", "helper verb")
+        elif dep == "obl:arg":
+            q["kind"], q["why"] = "complement", "UD label obl:arg (required by the verb)"
+        elif dep in ("obl:mod", "advmod", "advcl", "obl:tmod", "nmod:tmod", "npadvmod"):
+            q["kind"], q["why"] = "adjunct", f"UD label {dep}"
+        elif q["role"] in ("ARG0", "ARG1", "ARG2"):
+            q["kind"], q["why"] = "complement", "core argument"
+        elif w in AP:
+            q["kind"], q["why"] = "adjunct", f"starts with '{w}' (word-list guess)"
+        else:
+            q["kind"], q["why"] = "complement", f"starts with '{w}' (word-list guess)"
+    rec["parts"] = [q for q in parts if not (q.get("ref") is not None and rec["object"])]     # an unused "what is said" pointer
+    rec["triple"] = [(rec["subject"] or "").replace(" (inh)", ""), rec["verb"], rec.get("object_words") or rec["object"] or rec.get("candidate", "")]
+
+
+def tree_backbone(out3, plus=False):
+    """The tree-first design (proposed Oct 20): the constituency tree is the backbone; the two dependency parses only find its errors.
+    Every tree line is kept, in the tree's own wording. For each one, the dependency lines with the same verb are found
+    (one per parse, first unused match, the vote's order). When both dependency parses agree with each other on that
+    verb's subject or object and the tree differs, the tree's subject or object is corrected to theirs and marked.
+    Tree lines no dependency parse has at all are kept but marked unconfirmed. With plus=True, lines that both dependency
+    parses produce and the tree does not are added, marked as missed by the tree."""
+    used = {"spacy": set(), "stanza": set()}
+    out = []
+    for t in out3.get("const", []):
+        rec = dict(t, found_by=["const"], at_by={"const": t["at"]}, notes=[])
+        cand = {}
+        for m in ("spacy", "stanza"):
+            j = next((j for j, q in enumerate(out3[m]) if j not in used[m] and P.verb_match(t["verb"], q["verb"])
+                      and bool(q["negated"]) == bool(t["negated"])), None)
+            if j is not None:
+                cand[m] = j
+        for m, j in cand.items():
+            used[m].add(j)
+            rec["at_by"][m] = out3[m][j]["at"]
+            if C.same(t, out3[m][j]):
+                rec["found_by"].append(m)
+        if len(cand) == 2:
+            a, b = out3["spacy"][cand["spacy"]], out3["stanza"][cand["stanza"]]
+            for f in ("subject", "object"):
+                fa, fb, ft = fold(a[f]), fold(b[f]), fold(t[f])
+                if fa and fa == fb and fa != ft:
+                    rec["notes"].append(f"{f} corrected by both dependency parses (tree had {t[f]!r})")
+                    rec[f] = a[f]
+        if len(rec["found_by"]) == 1:
+            rec["notes"].append("no dependency parse has this line (unconfirmed)")
+        out.append(rec)
+    if plus:
+        for i, a in enumerate(out3["spacy"]):
+            if i in used["spacy"]:
+                continue
+            j = next((j for j, q in enumerate(out3["stanza"]) if j not in used["stanza"] and C.same(a, q)), None)
+            if j is not None:
+                used["stanza"].add(j)
+                out.append(dict(a, found_by=["spacy", "stanza"], at_by={"spacy": a["at"], "stanza": out3["stanza"][j]["at"]},
+                                notes=["missed by the tree; both dependency parses have it"]))
+    return out
+
+
 def full_row(row, policy="multi", method="vote", wording="majority"):
     """method: "vote" (the kept lines of the two-of-three vote) or one parser alone: "spacy", "stanza", "const"."""
     res = S.analyze(P, C, row, "native", "prod", policy)
@@ -198,6 +376,11 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
     out3 = C.run(row, P)
     if method == "vote":
         base = res["final"]
+    elif method in ("tree_fixed", "tree_plus"):
+        base = tree_backbone(out3, plus=(method == "tree_plus"))
+        r_ = {"n": row["n"], "lang": lang, "text": row["text"], "deps_spacy": row["deps_spacy"], "deps_stanza": row["deps_stanza"], "trees": row.get("trees", [])}
+        S.apply_rst(P, C, base, [], r_, d)
+        base = [dict(p, kind=p.get("kind_rst", p["kind"])) for p in base]
     else:
         base = [dict(p, found_by=[method], at_by={method: p["at"]}) for p in out3[method]]
         r_ = {"n": row["n"], "lang": lang, "text": row["text"], "deps_spacy": row["deps_spacy"], "deps_stanza": row["deps_stanza"], "trees": row.get("trees", [])}
@@ -214,6 +397,8 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
                 for f in ("subject", "verb", "object"):
                     rec[f] = q[f]
                 mem = []
+        if method.startswith("tree"):
+            mem = []                                       # the backbone keeps the tree's own wording
         if len(mem) >= 2:                                  # the wording most of the parsers agree on, not just the first parser's
             for f in ("subject", "verb", "object"):
                 vals = [q[f] for q in mem]
@@ -221,11 +406,13 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
                 if vals.count(top) >= 2 and top != rec[f]:
                     rec["notes"] = rec.get("notes", []) + [f"{f}: majority wording ({rec[f]!r} was the first parser's)"]
                     rec[f] = top
-        rec.update(parts=[], links=[], notes=rec.get("notes", []), edu=p.get("edu"), source=None, head=None)
+        rec.update(parts=[], links=[], notes=rec.get("notes", []) + list(p.get("notes") or []), edu=p.get("edu"), source=None, head=None,
+                   at_by=dict(p.get("at_by") or {}))
         if "apposition" in (p.get("verb") or ""):
             rec["source"] = "apposition"; lines.append(rec); continue
         at = p.get("at_by", {})
-        if "stanza" in at and at["stanza"] in Swhere and method in ("vote", "stanza"):
+        tree_m = method.startswith("tree")
+        if "stanza" in at and at["stanza"] in Swhere and (method in ("vote", "stanza") or (tree_m and "const" not in at)):
             si, wi = Swhere[at["stanza"]]; toks = SP[si]; rec["source"] = "stanza"
         elif "spacy" in at and at["spacy"] in Dwhere and method in ("vote", "spacy"):
             si, wi = Dwhere[at["spacy"]]; toks = DP[si]; rec["source"] = "spacy"
@@ -237,11 +424,19 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
                     core_ = [q for q in rec["parts"] if not q["role"] in ("ARGM-TMP", "ARGM-ADV", "OPENING")]
                     if core_:
                         rec["object"] = core_[0]["text"]; rec["parts"].remove(core_[0])
+            if tree_m and "stanza" in at and at["stanza"] in Swhere:
+                si, wi = Swhere[at["stanza"]]
+                rec["head"] = ("stanza", si, wi)            # ties between clauses read from the dependency parse
+                rec["source"] = "tree (ties from Stanza)"
+            if tree_m:
+                rec["tree_line"] = True              # recipients come from the parses' labels only, not from the to-phrase word list
+                dep_recipient(rec, at, Swhere, SP, Dwhere, DP)
             lines.append(rec); continue
         P._TOKS["toks"] = toks
         t = toks[wi]
         rec["head"] = (rec["source"], si, wi)
         chained = chain_tokens(t)
+        rec["lemma"] = chained[-1].lemma if chained else t.lemma
         cids = {x.i for x in chained}
         obj_f = fold(rec["object"])
         for x in chained:
@@ -264,16 +459,36 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
                 if role in ("ARG1",) and not rec["object"]:
                     rec["object"] = text; obj_f = ft; continue
                 lab = LABEL.get(role, role.replace("ARGM-", "") if role.startswith("ARGM-") else role)
-                part = {"role": role, "label": lab, "text": text, "tok": ti}
+                part = {"role": role, "label": lab, "text": text, "tok": ti, "dep": toks[ti].dep if ti is not None else ""}
                 if ft.split(" ")[0] in NEGW:
                     part["negated"] = True
                 if not any(fold(q["text"]) == ft for q in rec["parts"]):
                     rec["parts"].append(part)
         lines.append(rec)
+    so_, _x = C.offsets(row["deps_spacy"])
+    sto_, _y = C.offsets([t_ for sent in row["deps_stanza"] for t_ in sent])
+    by_off = {"spacy": {o: k for k, o in enumerate(so_)}, "stanza": {o: k for k, o in enumerate(sto_)}}
+    pos_off = {"spacy": so_, "stanza": sto_}
+
+    def spots(rec):
+        """Every position of this line's verb, in each dependency parse that has it (so lines kept from different parses
+        can still be tied to each other)."""
+        out = [rec["head"]] if rec["head"] else []
+        at_ = dict(rec.get("at_by", {}))
+        for m, o in (("stanza", "spacy"), ("spacy", "stanza")):    # the same word in the other parse, by its place in the text
+            if m not in at_ and o in at_ and at_[o] < len(pos_off[o]):
+                k = by_off[m].get(pos_off[o][at_[o]])
+                if k is not None:
+                    at_[m] = k
+        for m, where in (("stanza", Swhere), ("spacy", Dwhere)):
+            k = at_.get(m)
+            if k is not None and k in where:
+                out.append((m,) + where[k])
+        return out
     own = {}
     for rec in lines:
-        if rec["head"]:
-            own.setdefault(rec["head"][:2], set()).add(rec["head"][2])
+        for sp_ in spots(rec):
+            own.setdefault(sp_[:2], set()).add(sp_[2])
     for rec in lines:
         if rec["head"]:
             src, si, wi = rec["head"]
@@ -282,7 +497,10 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
             rec["parts"] = [q for q in rec["parts"] if q.get("tok") not in heads_here]
 
     # links between lines: the nearest line above in the tree
-    heads = {rec["head"]: i for i, rec in enumerate(lines) if rec["head"]}
+    heads = {}
+    for i, rec in enumerate(lines):
+        for sp_ in spots(rec):
+            heads.setdefault(sp_, i)
     for i, rec in enumerate(lines):
         if not rec["head"]:
             continue
@@ -293,7 +511,7 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
         while x.head is not None:
             x = toks[x.head]
             j = heads.get((src, si, x.i))
-            if j is not None:
+            if j is not None and j != i:
                 gov = j; break
         if gov is None:
             continue
@@ -348,12 +566,113 @@ def full_row(row, policy="multi", method="vote", wording="majority"):
                 if l["relation"] == "contrast" and g["object"]:
                     rec["candidate"] = g["object"]
                     rec["notes"].append(f"refers back to: {g['object']} (inferred, not in the words)")
+    for k, r in enumerate(lines):
+        if r["source"] != "apposition":
+            cont = next((j for j, q in enumerate(lines) if j not in drop and any(l["to"] == k and l["relation"] == "content" for l in q["links"])), None)
+            words = ""
+            if cont is not None and lines[cont]["head"]:
+                src_, si_, wi_ = lines[cont]["head"]
+                tk_ = (SP if src_ == "stanza" else DP)[si_]
+                words = P.span(tk_, tk_[wi_], drop_clauses=False, limit=60)
+            complements(r, cont, words)
     out = [r for i, r in enumerate(lines) if i not in drop]
     remap = {old: new for new, old in enumerate(i for i in range(len(lines)) if i not in drop)}
     for r in out:
         for l in r["links"]:
             l["to"] = remap.get(l["to"], l["to"])
+    for r in out:
+        for l in r["links"]:
+            l["discourse_shared"] = DISC_SHARED.get(l.get("discourse"), l.get("discourse"))
+        if r.get("recipient"):
+            m = re.match(r"^(?:not|non pas|pas)\s+(?:to|à|au|aux)\s+(.+?),?\s+(?:but|mais)\s+(?:off\s+)?((?:to|à|au|aux)\s+.+)$", r["recipient"], re.I)
+            if m:
+                r["recipient_words"] = r["recipient"]           # the sentence's own words, used when the line is flattened for scoring
+                r["recipient_not"] = m.group(1)
+                r["recipient"] = m.group(2)
+                r["notes"].append(f"recipient split: not to '{m.group(1)}' (negated) but {m.group(2)} (asserted)")
+        r["needs_referent"] = needs_referent(r, lang)
+        if r.get("recipient_not") and _referent_kind(r["recipient_not"]):
+            r["needs_referent"].append({"slot": "recipient_not", "words": r["recipient_not"], "kind": _referent_kind(r["recipient_not"])})
+        if r.get("recipient"):
+            r["recipient_function"] = recipient_function(r["recipient"])
+        r["record"] = record(r)
     return {"n": row["n"], "text": row["text"], "lang": lang, "lines": out, "dropped": [lines[i]["verb"] for i in drop]}
+
+
+# The English and French discourse parsers were trained on different treebanks with different label sets
+# (English: GUM-style labels such as adversative, joint; French: labels such as e-elaboration, continuation).
+# Both are mapped to one shared set so the same relation reads the same in both languages. The model's own label is kept.
+DISC_SHARED = {
+    "elaboration": "elaboration", "e-elaboration": "elaboration", "background": "background", "circumstance": "background",
+    "frame": "background", "attribution": "attribution", "adversative": "contrast", "contrast": "contrast", "concession": "contrast",
+    "causal": "cause-result", "result": "cause-result", "explanation": "explanation", "condition": "condition",
+    "temporal": "time-sequence", "sequence": "time-sequence", "enablement": "purpose", "purpose": "purpose",
+    "joint": "joint", "continuation": "joint", "same-unit": "same-unit", "evaluation": "evaluation", "topic-comment": "evaluation",
+}
+
+# Words that stand in for a name: the entity behind them must be found before a DBpedia lookup.
+PRONOUN_WORDS = {"i", "we", "you", "they", "he", "she", "it", "this", "that", "these", "those", "who", "which", "us", "them", "him", "her",
+                 "me", "their", "its", "our", "his", "themselves", "itself", "ourselves", "others", "everyone", "everybody", "someone",
+                 "je", "nous", "vous", "on", "ils", "elles", "il", "elle", "ce", "c'", "cela", "ça", "ceci", "celui", "celle", "ceux", "qui",
+                 "que", "lui", "leur", "eux", "me", "te", "se", "moi", "toi", "soi", "autres", "l'", "l", "le", "la", "les", "y", "en", "c", "s", "m", "t", "j", "qu"}
+# (le, la, les count as pronouns only when they are the whole slot: "qui l'a précédé", object "l'")
+STAND_IN_HEADS = {"government", "minister", "member", "members", "bill", "committee", "house", "senate", "department", "agency", "party",
+                  "administration", "speaker", "gouvernement", "ministre", "député", "députée", "projet", "commission", "chambre", "sénat",
+                  "ministère", "agence", "parti", "président", "présidente", "opposition",
+                  "treasurer", "premier", "leader", "friends", "colleagues", "colleague", "trésorier", "chef", "collègues", "amis"}
+_DET = {"the", "this", "that", "our", "my", "your", "their", "his", "her", "le", "la", "l'", "les", "ce", "cette", "notre", "votre", "leur",
+        "mon", "ma", "son", "sa", "au", "aux", "du", "des", "de", "to", "à", "a", "an", "un", "une"}
+
+
+def _referent_kind(text):
+    w = [x for x in P.fold((text or "").replace("(inh)", " ")) if x not in (",", ".")]
+    w = [x for x in w if x not in ("not", "but", "off", "pas", "mais")]
+    if not w:
+        return None
+    if all(x in PRONOUN_WORDS or x in ("to", "à", "au", "aux") for x in w) or (len(w) == 1 and w[0] in PRONOUN_WORDS):
+        return "pronoun"
+    if any(x in PRONOUN_WORDS for x in w if x in ("themselves", "others", "eux", "autres")):
+        return "pronoun"
+    core = [x for x in w if x not in _DET]
+    heads = {P.fold(h)[0] for h in STAND_IN_HEADS}
+    # a short phrase headed by a role or institution: "the minister", "the health minister", "le ministre de la Santé"
+    if core and len(core) <= 3 and (core[0] in heads or core[-1] in heads):
+        return "role or institution (which one depends on the legislature and date)"
+    if w[0] in ("their", "its", "our", "his", "her", "leur", "leurs", "son", "sa", "ses", "notre", "nos"):
+        return "possessive pronoun inside"
+    return None
+
+
+def needs_referent(r, lang):
+    """Slots whose words point to an entity without naming it (named entities masked by pronouns or other replacements, Oct 20)."""
+    out = []
+    for slot in ("subject", "object", "recipient"):
+        t = r.get(slot)
+        if not t or t.startswith("[what is said"):
+            continue
+        k = _referent_kind(t)
+        if k:
+            out.append({"slot": slot, "words": t.replace(" (inh)", ""), "kind": k})
+    return out
+
+
+def recipient_function(text):
+    """Huddleston and Pullum, ch. 4: an indirect object is a bare noun phrase (told the minister); with a preposition
+    (to the minister, au ministre) it is a prepositional complement that names the recipient, not an indirect object."""
+    first = (P.fold(text) or [""])[0]
+    return "recipient, prepositional complement" if first in ("to", "à", "au", "aux", "not", "for", "pour") else "indirect object"
+
+
+def record(r):
+    """The subject / predicate / object triple to pass on toward DBpedia, with what is needed to use it correctly."""
+    obj = r.get("object") or ""
+    if obj.startswith("[what is said"):
+        obj = "(the clause that is said; see link)"
+    when = [q["text"] for q in r["parts"] if q["role"] == "ARGM-TMP"]
+    return {"subject": (r["subject"] or "").replace(" (inh)", ""), "predicate": r["verb"], "object": obj or None,
+            "object_inferred": r.get("candidate"), "when_inherited": any(q.get("inherited") for q in r["parts"] if q["role"] == "ARGM-TMP"), "recipient": r.get("recipient"), "recipient_not": r.get("recipient_not"), "when": when[0] if when else None,
+            "polarity": "negative" if r.get("negated") else "positive", "status": r["kind"] + (", hedged" if r.get("hedged") else ""),
+            "needs_referent": [x["slot"] for x in r.get("needs_referent", [])], "parsers_agreeing": len(r.get("found_by") or [])}
 
 
 def _sub(t):
@@ -369,12 +688,19 @@ def show(fr):
         neg = " NEGATED" if r.get("negated") else ""
         hed = " HEDGED" if r.get("hedged") else ""
         print(f"  [{i}] {r['subject']} | {r['verb']} | {r['object'] or '(' + r.get('unstated', 'no object') + ')'}   {r['kind']}{neg}{hed}  found by {len(r.get('found_by') or [])}")
+        if r.get("recipient"):
+            print(f"        recipient: {r['recipient']}  ({r.get('recipient_function', '')})")
         for q in r["parts"]:
-            print(f"        {q['label']}: {q['text']}" + (" (inherited)" if q.get("inherited") else "") + (" [negated part]" if q.get("negated") else ""))
+            print(f"        {q.get('kind', '')} {q['label']}: {q['text']}" + (" (inherited)" if q.get("inherited") else "") + (" [negated part]" if q.get("negated") else ""))
         for l in r["links"]:
-            print(f"        link -> [{l['to']}] {l['relation']}" + (f" ('{l['word']}')" if l["word"] else "") + (f"; discourse: {l['discourse']}" if l["discourse"] else ""))
+            print(f"        link -> [{l['to']}] {l['relation']}" + (f" ('{l['word']}')" if l["word"] else "") + (f"; discourse: {l['discourse_shared']}" + (f" (model label: {l['discourse']})" if l["discourse"] != l.get("discourse_shared") else "") if l["discourse"] else ""))
         for nt in r["notes"]:
             print("        note:", nt)
+        for x in r.get("needs_referent", []):
+            print(f"        needs referent: {x['slot']} '{x['words']}' is a {x['kind']}; who it means must be found before DBpedia")
+        rc = r["record"]
+        print(f"        triple: ({rc['subject']}, {rc['predicate']}, {rc['object'] or ((rc['object_inferred'] + ' [inferred]') if rc['object_inferred'] else '-')})"
+              f"  polarity {rc['polarity']}, {rc['status']}" + (f", when {rc['when']}" if rc["when"] else "") + (f", recipient: {rc['recipient']}" if rc["recipient"] else "") + (f", not to: {rc['recipient_not']}" if rc.get("recipient_not") else ""))
     if fr.get("dropped"):
         print("  folded into a link:", fr["dropped"])
 

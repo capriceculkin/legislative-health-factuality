@@ -1,4 +1,4 @@
-"""All three parses together (David, Oct 8): keep a predication when at least two of the syntactic parses produce it
+"""All three parses together (proposed in the Oct 8 meeting): keep a predication when at least two of the syntactic parses produce it
 (spaCy dependency, Stanza dependency, constituency), then use the discourse (RST) parse to decide how each one is
 used in the sentence: stated, embedded (condition, time, purpose, relative clause) or reported (attribution)."""
 import json, sys, collections, os

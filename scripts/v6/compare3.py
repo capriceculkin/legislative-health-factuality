@@ -18,8 +18,8 @@ import full as F                                 # noqa: E402
 S, P, C = F.S, F.P, F.C
 import gold_heldout as GH                        # noqa: E402
 
-METHODS = ("spacy", "stanza", "const", "vote", "vote_sw")
-NAMES = {"spacy": "spaCy alone", "stanza": "Stanza alone", "const": "tree alone", "vote": "vote", "vote_sw": "vote, Stanza words"}
+METHODS = ("spacy", "stanza", "const", "tree_fixed", "tree_plus", "vote")
+NAMES = {"spacy": "spaCy alone", "stanza": "Stanza alone", "const": "tree alone", "tree_fixed": "tree, fixed by deps", "tree_plus": "tree + deps add", "vote": "vote"}
 
 
 def norm(x):
@@ -32,8 +32,11 @@ def norm(x):
 def as_lines(fr):
     out = []
     for r in fr["lines"]:
-        extra = [q["text"] for q in r["parts"] if q["role"] not in ("ARGM-TMP", "ARGM-MOD", "ARGM-ADV", "ARGM-NEG", "OPENING")]
-        out.append(dict(subject=r["subject"], verb=r["verb"], object=r["object"] or "", full=" ".join([r["object"] or ""] + extra).strip(),
+        extra = [q["text"] for q in r["parts"] if q["role"] not in ("ARGM-TMP", "ARGM-MOD", "ARGM-ADV", "ARGM-NEG", "OPENING") and not q.get("ref") is not None]
+        if r.get("recipient"):
+            extra = [r.get("recipient_words") or r["recipient"]] + extra
+        obj = r.get("object_words") or "" if (r["object"] or "").startswith("[what is said") else (r["object"] or "")
+        out.append(dict(subject=r["subject"], verb=r["verb"], object=obj, full=" ".join([obj] + extra).strip(),
                         kind=r["kind"], negated=r.get("negated"), hedged=r.get("hedged")))
     return out
 
@@ -67,7 +70,7 @@ def main():
         sent = {}
         outs = {}
         for m in METHODS:
-            L = as_lines(F.full_row(r, method="vote", wording="stanza") if m == "vote_sw" else F.full_row(r, method=m))
+            L = as_lines(F.full_row(r, method=m))
             outs[m] = L
             al = P.align(gold, L) if gold else []
             exact_set = {(norm(x["subject"]), norm(x["verb"]), norm(x["full"])) for x in L}
@@ -107,7 +110,7 @@ def main():
     for st in ("sample", "heldout"):
         for lang in ("en", "fr"):
             sents = per[(st, lang)]
-            for m in ("spacy", "stanza", "const", "vote_sw"):
+            for m in ("spacy", "stanza", "const", "tree_fixed", "tree_plus"):
                 for which, idx in (("loose found", 0), ("exact", 1)):
                     b = c_ = 0
                     for s in sents:

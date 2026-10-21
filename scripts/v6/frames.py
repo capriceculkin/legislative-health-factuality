@@ -34,7 +34,7 @@ def no_arg0(lemma, lang):
 
 
 def make(P):
-    CORE = P.SUBJ | P.OBJ | {"iobj", "obl", "obl:arg", "obl:agent", "obl:mod", "obl:tmod", "ccomp", "xcomp", "agent"}
+    CORE = P.SUBJ | P.OBJ | {"iobj", "dative", "obl", "obl:arg", "obl:agent", "obl:mod", "obl:tmod", "ccomp", "xcomp", "agent"}
     TIME_ADV, TIME_NOUN = X.both(X.TIME_ADV), X.both(X.TIME_NOUN)
     TIME_MARK = X.both(X.TIME_FIRST) - {"if", "si", "s'", "s’", "unless", "moins", "as", "comme"}
     TIME_CASE = {"during", "since", "after", "before", "until", "pendant", "depuis", "après", "avant", "jusqu'", "jusqu’", "lors"}
@@ -51,11 +51,11 @@ def make(P):
         for c in sorted(t.kids, key=lambda x: x.i):
             d = c.dep
             xs = [k for k in t.kids if k.dep == "xcomp"]
-            controlled = bool(xs) and any(k.dep in (P.OBJ | {"iobj"}) and k.i < xs[0].i for k in t.kids) and t.lemma not in X.both(X.RAISING)
+            controlled = bool(xs) and any(k.dep in (P.OBJ | {"iobj", "dative"}) and k.i < xs[0].i for k in t.kids) and t.lemma not in X.both(X.RAISING)
             if d in P.SUBJ:
                 r = "ARG1" if (passive or copula or no_arg0(t.lemma, line.get("lang", "en"))) else "ARG0"
-            elif d in P.OBJ or d == "iobj":
-                r = "ARG2" if (controlled or d == "iobj") else "ARG1"     # urge [the doctors]ARG2 [to accept]ARG1
+            elif d in P.OBJ or d in ("iobj", "dative"):          # dative: spaCy English's label for the indirect object
+                r = "ARG2" if (controlled or d in ("iobj", "dative")) else "ARG1"     # urge [the doctors]ARG2 [to accept]ARG1
             elif d in ("obl:agent", "agent"):
                 r = "ARG0"
             elif d in ("ccomp", "xcomp") and not P.adverbial_marks(c):

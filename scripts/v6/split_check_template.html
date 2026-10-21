@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sentence Break Check</title>
+<style>
+:root{--bg:#f4f6f5;--panel:#fff;--ink:#1c2321;--muted:#5c6763;--line:#d5dcd8;--accent:#2f6f5e;--soft:#e1eee8;--bad:#a63b3b;--badsoft:#f7e3e3;--mid:#93600f;--midsoft:#f7ecd9}
+@media (prefers-color-scheme:dark){:root{--bg:#131817;--panel:#1b2220;--ink:#e3e8e5;--muted:#9aa6a0;--line:#323c37;--accent:#7cc4ad;--soft:#1f3830;--bad:#e89292;--badsoft:#3d2323;--mid:#e2b26a;--midsoft:#3a2e1b;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,"Times New Roman",serif;padding:20px max(16px,4vw) 60px}
+.wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+h1{font:600 1.6rem/1.2 Georgia,serif;margin:0}.sans{font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.howto{font:14px/1.55 -apple-system,"Segoe UI",sans-serif}.howto li{margin:3px 0}
+.meta{font:500 12px -apple-system,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.para{line-height:2.1}
+.w{cursor:pointer;border-radius:3px;padding:1px 0}.w:hover{background:var(--soft)}
+.w.brk::after{content:"‖";color:var(--bad);font-weight:700;margin:0 3px}
+.w.ours{box-shadow:inset 0 -3px 0 var(--accent)}
+.w.miss{background:var(--badsoft)}.w.extra{background:var(--midsoft)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font:14px -apple-system,sans-serif;margin-top:10px}
+button{font:14px -apple-system,sans-serif;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:6px 12px;cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+button:disabled{opacity:.5;cursor:default}
+.done{color:var(--accent);font-weight:600}
+.stats{font:14px/1.6 -apple-system,sans-serif}.stats table{border-collapse:collapse;width:100%}.stats td,.stats th{border-bottom:1px solid var(--line);padding:5px 8px;text-align:left}.stats td.n{text-align:right;font-variant-numeric:tabular-nums}
+.top{position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;font:14px -apple-system,sans-serif}
+</style></head><body><div class="wrap">
+<h1>Sentence break check</h1>
+<div class="card howto"><b>How to do it.</b> Each box is one real paragraph from the debates, exactly as the pipeline received it, with no breaks shown.
+<ol>
+<li>Read it and <b>click the last word of every sentence</b>. A red ‖ appears after it. Click again to remove it. The last word of the paragraph is always the end, so you don't need to mark it.</li>
+<li>Mark where a reader would say a sentence ends. A colon or semicolon is usually <b>not</b> a break; break there only if what follows is clearly a new sentence. A quotation that ends with a period inside the quote marks ends the sentence.</li>
+<li>Abbreviations like Mr., M., H.R., S.O. or a.m. are not breaks unless the sentence really ends there.</li>
+<li>If text is not a sentence at all (a heading, a vote count, "Some hon. Members: Hear, hear!"), tick <i>has text that is not a sentence</i> and still mark where it stops.</li>
+<li>Press <b>Done</b> on each paragraph. When all are done, <b>Compare with the splitter</b> shows where the pipeline's splitter agrees with you. It stays hidden until then, so your marks are your own.</li>
+<li>Your marks are kept in this browser. Press <b>Save my marks</b> at the end and send the file to Claude.</li>
+</ol>The French paragraphs are best done by Joanie: send her this same file.</div>
+<div class="top"><span id="prog"></span><span class="row" style="margin:0"><button id="cmp" class="primary" disabled>Compare with the splitter</button><button id="save">Save my marks</button></span></div>
+<div id="list" class="wrap" style="gap:14px"></div>
+<div id="stats" class="card stats" hidden></div>
+</div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+var D=JSON.parse(document.getElementById('data').textContent), K='splitcheck_'+(D.made||'');
+var S={}; try{S=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+function keep(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+function st(id){return S[id]||(S[id]={b:[],done:false,ns:false})}
+var shown=false;
+function render(){
+  var L=document.getElementById('list');L.textContent='';
+  var done=0;
+  D.items.forEach(function(it,ix){
+    var s=st(it.id); if(s.done)done++;
+    var c=document.createElement('div');c.className='card';
+    var m=document.createElement('div');m.className='meta';m.textContent=(ix+1)+' of '+D.items.length+' · '+it.group+' · '+it.id;c.appendChild(m);
+    var p=document.createElement('div');p.className='para';
+    var ours=new Set(it.ours), mine=new Set(s.b);
+    it.words.forEach(function(w,i){
+      var sp=document.createElement('span');sp.className='w';sp.textContent=w;
+      if(mine.has(i))sp.classList.add('brk');
+      if(shown){ if(ours.has(i))sp.classList.add('ours'); if(ours.has(i)&&!mine.has(i))sp.classList.add('extra'); if(mine.has(i)&&!ours.has(i))sp.classList.add('miss'); }
+      if(i<it.words.length-1)sp.addEventListener('click',function(){var k=s.b.indexOf(i);if(k>=0)s.b.splice(k,1);else s.b.push(i);s.done=false;keep();render();});
+      p.appendChild(sp);p.appendChild(document.createTextNode(' '));
+    });
+    c.appendChild(p);
+    var r=document.createElement('div');r.className='row';
+    var lab=document.createElement('label');var cb=document.createElement('input');cb.type='checkbox';cb.checked=s.ns;cb.addEventListener('change',function(){s.ns=cb.checked;keep();});lab.appendChild(cb);lab.appendChild(document.createTextNode(' has text that is not a sentence'));r.appendChild(lab);
+    var b=document.createElement('button');b.textContent=s.done?'Done ✓':'Done';if(s.done)b.className='done';b.addEventListener('click',function(){s.done=!s.done;keep();render();});r.appendChild(b);
+    var n=document.createElement('span');n.textContent=(s.b.length+1)+' sentence'+(s.b.length?'s':'')+' marked';n.style.color='var(--muted)';r.appendChild(n);
+    if(shown){var o=document.createElement('span');o.textContent='splitter: '+(it.ours.length+1)+(it.dropped.length?(' (dropped as under 20 characters: "'+it.dropped.join('", "')+'")'):'');o.style.color='var(--muted)';r.appendChild(o);}
+    c.appendChild(r);L.appendChild(c);
+  });
+  document.getElementById('prog').textContent=done+' of '+D.items.length+' paragraphs done';
+  document.getElementById('cmp').disabled=done<D.items.length;
+}
+function compare(){
+  shown=true;render();
+  var g={};var T={you:0,ours:0,both:0};
+  D.items.forEach(function(it){var s=st(it.id),ours=new Set(it.ours),mine=new Set(s.b);var x=g[it.group]||(g[it.group]={you:0,ours:0,both:0,n:0});x.n++;
+    x.you+=mine.size;x.ours+=ours.size;mine.forEach(function(i){if(ours.has(i))x.both++;});});
+  var h='<b>Splitter against your marks</b> (breaks inside paragraphs; the end of each paragraph is not counted). Precision: of the splitter\'s breaks, the share you also marked. Recall: of your breaks, the share the splitter found. Red shading: a break you marked that the splitter missed. Yellow: a break the splitter made that you did not. Green underline: every splitter break.<table><tr><th>Group</th><th>Paragraphs</th><th>Your breaks</th><th>Splitter breaks</th><th>Both</th><th>Precision</th><th>Recall</th></tr>';
+  Object.keys(g).sort().forEach(function(k){var x=g[k];T.you+=x.you;T.ours+=x.ours;T.both+=x.both;
+    h+='<tr><td>'+k+'</td><td class="n">'+x.n+'</td><td class="n">'+x.you+'</td><td class="n">'+x.ours+'</td><td class="n">'+x.both+'</td><td class="n">'+(x.ours?Math.round(100*x.both/x.ours)+'%':'-')+'</td><td class="n">'+(x.you?Math.round(100*x.both/x.you)+'%':'-')+'</td></tr>';});
+  h+='<tr><td><b>All</b></td><td></td><td class="n">'+T.you+'</td><td class="n">'+T.ours+'</td><td class="n">'+T.both+'</td><td class="n">'+(T.ours?Math.round(100*T.both/T.ours)+'%':'-')+'</td><td class="n">'+(T.you?Math.round(100*T.both/T.you)+'%':'-')+'</td></tr></table><p>This is a first look, counted one way. Send the saved file so it can be checked a second way and broken down by kind of error.</p>';
+  var el=document.getElementById('stats');el.innerHTML=h;el.hidden=false;el.scrollIntoView();
+}
+document.getElementById('cmp').addEventListener('click',compare);
+document.getElementById('save').addEventListener('click',function(){
+  var out={made:D.made,saved:new Date().toISOString(),marks:D.items.map(function(it){var s=st(it.id);return {id:it.id,group:it.group,breaks:s.b.slice().sort(function(a,b){return a-b}),done:s.done,not_sentence:s.ns}})};
+  var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:'application/json'}));a.download='split_check_marks.json';document.body.appendChild(a);a.click();a.remove();
+});
+render();
+</script></body></html>

@@ -1,0 +1,42 @@
+== 1/9 paired English-French word list
+rows missing a side: none
+== 2/9 loose score, every stage
+== 3/9 strict score
+== 4/9 the three parsers compared
+== 5/9 the two walked-through sentences
+== 6/9 every full predication
+== 7/9 pronouns and stand-ins in place of names
+== 8/9 tree rules on the Penn Treebank gold trees
+== 9/9 the two dependency parses: agree, disagree, who is right
+
+== check these against the page (minutes: 0)
+-- parallel tests (page: EN 11/11 7/7 6/6 5/5 11/12 4/4, FR all full)
+  by group:   structure: EN 11/11 FR 11/11   negation: EN 7/7 FR 7/7   hedge: EN 6/6 FR 6/6   reported: EN 5/5 FR 5/5   clauses: EN 11/12 FR 12/12   relative: EN 4/4 FR 4/4
+-- sample, loose (page: vote EN 108/119, FR 94/116)
+  en  spacy 104/119 p118 l101   ... vote 108/119 p124 l106   final 108/119 p124 l106
+  fr  spacy 88/116 p129 l81   ... vote 94/116 p121 l87   final 94/116 p121 l87
+-- exact, all three slots (page: sample EN 60, FR 34; held-out EN 21, FR 9)
+sample   en    vote           108/119 ( 84- 95)    60/119 =  50% ( 42- 59)      76%        15    107
+sample   fr    vote            94/116 ( 73- 87)    34/116 =  29% ( 22- 38)      71%        27     87
+heldout  en    vote            30/ 36 ( 68- 92)    21/ 36 =  58% ( 42- 73)      67%        10     28
+heldout  fr    vote            25/ 33 ( 59- 87)     9/ 33 =  27% ( 15- 44)      65%        10     25
+-- Stanza alone exact (page: sample EN 63, FR 42)
+sample   en    Stanza alone   103/119 ( 79- 92)    63/119 =  53% ( 44- 62)      77%        22    100
+sample   fr    Stanza alone    96/116 ( 75- 89)    42/116 =  36% ( 28- 45)      72%        37     89
+-- vote against Stanza, French exact (page: only vote 3, only stanza 11, p = 0.06)
+sample   fr  vote vs Stanza alone       exact        only vote  3, only stanza 11   McNemar p = 0.06   difference -12.8 to  -1.5 points
+-- Tree-first design: tree as backbone, fixed by the dependency parses (sample, exact: EN 53, FR 30; with lines added: EN 54, FR 32)
+sample   en    tree alone     104/119 ( 80- 92)    53/119 =  45% ( 36- 53)      75%        27     96
+sample   en    tree, fixed by deps 106/119 ( 82- 94)    53/119 =  45% ( 36- 53)      77%        24    100
+sample   en    tree + deps add 107/119 ( 83- 94)    54/119 =  45% ( 37- 54)      79%        26    101
+sample   fr    tree alone      77/116 ( 57- 74)    32/116 =  28% ( 20- 36)      64%        53     59
+sample   fr    tree, fixed by deps  78/116 ( 58- 75)    30/116 =  26% ( 19- 35)      65%        52     60
+sample   fr    tree + deps add  96/116 ( 75- 89)    32/116 =  28% ( 20- 36)      74%        52     77
+-- subjects that are pronouns (EN 33 of 159, FR 31 of 153)
+   subjects: pronoun                                              33  (21%)
+   subjects: pronoun                                              31  (20%)
+-- The two walked-through sentences (page: recipient split 'not to themselves' / 'to others', 'result (that is why)', 'object not stated' twice)
+   lines found (expect 4): 4
+-- Penn Treebank, tree rules on gold trees (expect: all 9520 lines, found 74.5%, heads 65.8%, exact 52.7%)
+all                                  9520   7093  74.5%  65.8%    52.7%            93.8%           20.6%
+== done. Outputs are in outputs/scores_v6b/

@@ -33,6 +33,7 @@ STEPS = [
     ("5  VOTE", "Lines that two or three parsers share are kept; one-parser lines are dropped for review."),
     ("6  DISCOURSE CHECK", "Whether the discourse parse changed the status of any kept line."),
     ("7  OUTPUT", "One triple per clause, with the parts the DBpedia step will need. This step can rework a kept line: majority wording, recipient moved out of the object, 'that is why' folded into a tie."),
+    ("8  TREE FIRST", "The proposed design on the same sentence: every line the tree gave and what the two dependency parses did to it, then the output triples it gives."),
 ]
 
 
@@ -109,28 +110,34 @@ def block(ws, r, row, why, note, F, S, P, C, kind_map, gold=None, gh=None, link=
     ch = [f"{line_text(a, kind_map)}:  {kind_map.get(a.get('kind_parser'), a.get('kind_parser'))} -> {kind_map.get(b.get('kind_rst'), b.get('kind_rst'))}"
           for a, b in zip(res["vote"], res["final"]) if a.get("kind_parser") and b.get("kind_rst") and a.get("kind_parser") != b.get("kind_rst")]
     dchk = ("Changed:\n" + "\n".join(ch)) if ch else ("No line changed." if d and d.get("edus") else "Not run, so nothing changed.")
-    outs = []
-    for i, L in enumerate(fr["lines"], 1):
-        rc = L["record"]
-        obj = rc["object"] or (f"(not stated; refers back to: {rc['object_inferred']}, inferred)" if rc["object_inferred"] else "(none)")
-        bits = [f"{i}.  {rc['subject']}  |  {rc['predicate']}  |  {obj}"]
-        if rc["recipient"]:
-            bits.append(f"to whom: {rc['recipient']} ({L.get('recipient_function', '')})" + (f"; not to: {rc['recipient_not']}" if rc.get("recipient_not") else ""))
-        if rc["when"]:
-            bits.append(f"when: {rc['when']}" + (" (inherited from the start of the sentence)" if rc.get("when_inherited") else ""))
-        bits.append(f"{rc['polarity']}, {rc['status'].replace('asserted', 'stated')}; found by {rc['parsers_agreeing']} of 3 parsers")
-        if L["links"]:
-            bits.append("tied to " + "; ".join(f"line {l['to'] + 1} as {l['relation']}" + (f" ('{l['word']}')" if l["word"] else "") for l in L["links"]))
-        if L["needs_referent"]:
-            bits.append("needs a referent before DBpedia: " + "; ".join(f"{x['words']}" for x in L["needs_referent"]))
-        outs.append("\n      ".join(bits))
-    output = "\n".join(outs) or "(no output)"
-    if fr.get("dropped"):
-        output += "\n(folded into a tie, not a line of its own: " + ", ".join(fr["dropped"]) + ")"
-    contents = [src, row["text"], spa, sta, trees, disc, rules, vote, dchk, output]
+    def fmt(fr):
+      outs = []
+      for i, L in enumerate(fr["lines"], 1):
+          rc = L["record"]
+          obj = rc["object"] or (f"(not stated; refers back to: {rc['object_inferred']}, inferred)" if rc["object_inferred"] else "(none)")
+          bits = [f"{i}.  {rc['subject']}  |  {rc['predicate']}  |  {obj}"]
+          if rc["recipient"]:
+              bits.append(f"to whom: {rc['recipient']} ({L.get('recipient_function', '')})" + (f"; not to: {rc['recipient_not']}" if rc.get("recipient_not") else ""))
+          if rc["when"]:
+              bits.append(f"when: {rc['when']}" + (" (inherited from the start of the sentence)" if rc.get("when_inherited") else ""))
+          bits.append(f"{rc['polarity']}, {rc['status'].replace('asserted', 'stated')}; found by {rc['parsers_agreeing']} of 3 parsers")
+          if L["links"]:
+              bits.append("tied to " + "; ".join(f"line {l['to'] + 1} as {l['relation']}" + (f" ('{l['word']}')" if l["word"] else "") for l in L["links"]))
+          if L["needs_referent"]:
+              bits.append("needs a referent before DBpedia: " + "; ".join(f"{x['words']}" for x in L["needs_referent"]))
+          outs.append("\n      ".join(bits))
+      output = "\n".join(outs) or "(no output)"
+      if fr.get("dropped"):
+          output += "\n(folded into a tie, not a line of its own: " + ", ".join(fr["dropped"]) + ")"
+      return output
+    output = fmt(fr)
+    tf = F.tree_backbone(C.run(row, P), plus=True)
+    tf_lines = "\n".join(f"{line_text(x, kind_map)}     " + ("; ".join(x.get("notes") or []) or "kept as the tree has it; a dependency parse agrees") for x in tf) or "(the tree gave no lines)"
+    tree_first = "What the dependency parses did to each tree line:\n" + tf_lines + "\n\nOutput triples, tree-first design:\n" + fmt(F.full_row(row, method="tree_plus"))
+    contents = [src, row["text"], spa, sta, trees, disc, rules, vote, dchk, output, tree_first]
     if gold is not None:
         contents.append("\n".join(f"{g['subject'] or '(unstated)'}  |  {g['verb']}  |  {g['object'] or '(none)'}" + (f"     to whom: {g['recipient']}" if g["recipient"] else "") for g in gold))
-    steps = STEPS + ([("8  GOLD", "The Penn Treebank annotators' answer for the same sentence, to compare with step 7.")] if gold is not None else [])
+    steps = STEPS + ([("9  GOLD", "The Penn Treebank annotators' answer for the same sentence, to compare with steps 7 and 8.")] if gold is not None else [])
     for (label, what), content in zip(steps, contents):
         a = ws.cell(row=r, column=1, value=label); a.font = STEP_FONT; a.fill = STEP_FILL; a.alignment = Alignment(vertical="top")
         b = ws.cell(row=r, column=2, value=what); b.font = WHAT_FONT; b.alignment = Alignment(wrap_text=True, vertical="top")
@@ -140,11 +147,11 @@ def block(ws, r, row, why, note, F, S, P, C, kind_map, gold=None, gh=None, link=
         ws.row_dimensions[r].height = min(409, max(16, 12.5 * lines + 4))
         for j in (1, 2, 3):
             ws.cell(row=r, column=j).border = LINE
-        if gh and link and label.startswith(("1 ", "3a", "3b", "3c", "3d", "4 ", "5 ", "7 ")):
+        if gh and link and label.startswith(("1 ", "3a", "3b", "3c", "3d", "4 ", "5 ", "7 ", "8 ")):
             # step 1 links the sentence file; parse steps link the saved parses; rules, vote and output link their code
             pf = "outputs/wsj/wsj_parses.json" if row.get("set") == "wsj" else "data/parity_oct19/parity_parses.json"
             target = {"1 ": src, "3a": pf, "3b": pf, "3c": pf, "3d": pf,
-                      "4 ": "scripts/v6/preds.py", "5 ": "scripts/v6/combine_lib.py", "7 ": "scripts/v6/full.py"}[label[:2]]
+                      "4 ": "scripts/v6/preds.py", "5 ": "scripts/v6/combine_lib.py", "7 ": "scripts/v6/full.py", "8 ": "scripts/v6/full.py"}[label[:2]]
             u = gh(target)
             if u:
                 bcell = ws.cell(row=r, column=2)
@@ -168,16 +175,17 @@ def setup(ws):
 OVERVIEW = [
     ("Debate record", "US House, Ontario, Quebec: the official record of what was said", "scripts/v3/build_sentences_v3.py"),
     ("Sentences", "each paragraph split into sentences, each with an ID", "data/dbpedia_pipeline/*/sentences_v3.json"),
-    ("Three parsers, separately", "spaCy (dependency), Stanza (dependency), a constituency parser; plus a discourse parser", "scripts/v6/parity_collect.py -> data/parity_oct19/parity_parses.json"),
-    ("Rules, once per parse", "read subject | verb | object lines from each parse, with stated / reported / embedded", "scripts/v6/preds.py, const_fr.py, lexicon.py"),
-    ("2-of-3 vote", "keep the lines two or three parsers share; drop one-parser lines for review", "scripts/v6/combine_lib.py vote()"),
-    ("Discourse check", "can relabel a kept line as reported or embedded; names the relation on ties", "combine_lib.py rst_kind()"),
+    ("Parse each sentence", "the constituency tree, which is the backbone; spaCy and Stanza dependency parses, which check it; a discourse parse, for status and the ties between clauses", "scripts/v6/parity_collect.py -> data/parity_oct19/parity_parses.json"),
+    ("Read the lines", "rules read subject | verb | object lines, with stated / reported / embedded, from the tree, and the same from each dependency parse so they can be compared with it", "scripts/v6/preds.py, const_fr.py, lexicon.py"),
+    ("Combine, tree first (proposed)", "start from the tree's lines; where spaCy and Stanza agree on a different subject or object, theirs replaces the tree's; lines both of them found and the tree missed are added", "scripts/v6/full.py tree_backbone()"),
+    ("Discourse check", "can relabel a line as reported or embedded, and names the relation on ties; not yet used to find errors", "scripts/v6/combine_lib.py rst_kind()"),
     ("Output: one triple per clause", "subject | predicate | object, plus to whom, when, polarity, status, ties, slots needing a referent", "scripts/v6/full.py record()"),
-    ("Next (not built): DBpedia", "link each slot to an entity; pronouns and roles need coreference first", ""),
+    ("Next (not built)", "the discourse parse used to find errors in the tree; then DBpedia: each slot linked to an entity, pronouns and roles resolved first", ""),
 ]
+FIRST_DESIGN = ("The first design, kept for comparison", "2-of-3 vote: keep the lines two or three parsers share (scripts/v6/combine_lib.py vote()). The Flow sheets show it at steps 5 to 7 and the tree-first design at step 8.")
 
 
-def overview(ws, gh=None, link=None):
+def overview(ws, gh=None, link=None, scores=None):
     setup(ws)
     ws.column_dimensions["B"].width = 70
     ws.column_dimensions["C"].width = 60
@@ -197,4 +205,26 @@ def overview(ws, gh=None, link=None):
             ar = ws.cell(row=r, column=1, value="↓"); ar.font = ARROW_FONT; ar.alignment = Alignment(horizontal="center")
             r += 1
     r += 1
-    ws.cell(row=r, column=1, value="The alternative design (proposed Oct 20): build from the tree; where both dependency parses agree on a different subject or object, they correct it. Scored side by side with the vote (Scores sheet).").font = Font(name=FONT, size=10, italic=True)
+    a = ws.cell(row=r, column=1, value=FIRST_DESIGN[0]); a.font = Font(name=FONT, bold=True, size=10); a.alignment = Alignment(wrap_text=True, vertical="center")
+    b = ws.cell(row=r, column=2, value=FIRST_DESIGN[1]); b.font = OUT_FONT; b.alignment = Alignment(wrap_text=True, vertical="center")
+    ws.row_dimensions[r].height = 32
+    r += 2
+    if scores:                       # the two designs on the Penn Treebank, read from the score file this workbook ships with
+        ws.cell(row=r, column=1, value="Both designs on the Penn Treebank").font = Font(name=FONT, bold=True, size=11)
+        n = scores.get("vote", {}).get("all", {}).get("n", 0)
+        ws.cell(row=r, column=2, value=f"{n:,} gold lines from the annotators' marks. Found: the loose match. Exact: subject, verb and object word for word. From outputs/wsj/wsj_score.txt.").font = WHAT_FONT
+        r += 1
+        for j, h in enumerate(("Design", "Found", "Exact"), 1):
+            c = ws.cell(row=r, column=j, value=h); c.font = STEP_FONT; c.fill = STEP_FILL
+        r += 1
+        for m, name in (("tree_plus", "Tree first, deps correct and add (proposed)"), ("tree_fixed", "Tree first, deps correct only"), ("vote", "2-of-3 vote (first design)")):
+            c = scores.get(m, {}).get("all", {})
+            if not c.get("n"):
+                continue
+            ws.cell(row=r, column=1, value=name).font = OUT_FONT
+            ws.cell(row=r, column=2, value=f"{100 * c['found'] / c['n']:.1f}%").font = OUT_FONT
+            ws.cell(row=r, column=3, value=f"{100 * c['exact'] / c['n']:.1f}%").font = OUT_FONT
+            for j in (1, 2, 3):
+                ws.cell(row=r, column=j).border = LINE
+            r += 1
+        ws.cell(row=r, column=1, value="On the debate keys the two designs are close; those keys were drafted with AI assistance (Scores sheet: compare3.txt).").font = Font(name=FONT, size=10, italic=True)

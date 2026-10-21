@@ -163,7 +163,7 @@ def internal_links(wb, flow_all, flow_at, sents):
     flow_name = flow_all.title
     step_sheets = {"F": "5 Lines by parser", "G": "5 Lines by parser", "H": "5 Lines by parser", "I": "6 Vote", "J": "7 Output triples"}
     first = {}
-    for name in ("1 spaCy parse", "2 Stanza parse", "3 Tree", "4 Discourse", "5 Lines by parser", "6 Vote", "7 Output triples"):
+    for name in ("1 spaCy parse", "2 Stanza parse", "3 Tree", "4 Discourse", "5 Lines by parser", "6 Vote", "7 Output triples", "7b Tree-first output"):
         ws = wb[name]
         for r in range(ws._r0 + 1, ws._next):
             n = ws.cell(row=r, column=1).value
@@ -223,7 +223,8 @@ def main():
     rows = {r["n"]: r for r in json.load(open(A.parses, encoding="utf-8"))["rows"]}
     wb = Workbook(); wb.remove(wb.active)
     readme = wb.create_sheet("Read me")
-    FL.overview(wb.create_sheet("Start here"), gh, link)
+    _sc = Path(A.outputs) / "wsj" / "wsj_score.json" if A.outputs else None
+    FL.overview(wb.create_sheet("Start here"), gh, link, scores=json.load(open(_sc, encoding="utf-8")) if _sc and _sc.exists() else None)
     feat_ws = []
     for n, title, note in FEATURED:
         if n in rows:
@@ -259,6 +260,12 @@ def main():
                                         "Parsers agreeing", "Tied to (line, how)", "Discourse (shared label)"],
                [14, 7, 30, 20, 36, 26, 20, 22, 16, 16, 10, 10, 14, 30, 10, 30, 16],
                "full.py record(): one triple per clause, the record passed toward DBpedia. Line numbers count from 1 within each sentence.")
+    OUT_COLS = ["ID", "Line #", "Subject", "Predicate", "Object", "Object inferred (not in the words)", "Recipient", "Recipient kind",
+                "Not to (negated recipient)", "When", "When inherited", "Polarity", "Status", "Needs a referent before DBpedia",
+                "Parsers agreeing", "Tied to (line, how)", "Discourse (shared label)"]
+    ou2 = sheet(wb, "7b Tree-first output", OUT_COLS, [14, 7, 30, 20, 36, 26, 20, 22, 16, 16, 10, 10, 14, 30, 10, 30, 16],
+                "The proposed design (full.py tree_backbone(), method tree_plus): the tree's lines, corrected where spaCy and Stanza agree on a different subject or object, "
+                "plus lines both of them found and the tree missed; then the same record as sheet 7. Sheet 7 is the 2-of-3 vote's output, for comparison.")
 
     for n, why in DEBATE:
         r = rows.get(n)
@@ -299,15 +306,15 @@ def main():
         for x in res["review"]:
             add(vo, [n, "dropped (one parser only)", x.get("subject"), x.get("verb"), x.get("object") or "", KIND.get(x.get("kind"), x.get("kind")),
                      ", ".join(x.get("found_by") or [])], n)
-        fr = F.full_row(r)
-        for i, L in enumerate(fr["lines"], 1):
-            rc = L["record"]
-            ties = "; ".join(f"line {l['to'] + 1}, {l['relation']}" + (f" ('{l['word']}')" if l["word"] else "") for l in L["links"])
-            disc = "; ".join(l.get("discourse_shared") or "" for l in L["links"] if l.get("discourse"))
-            add(ou, [n, i, rc["subject"], rc["predicate"], rc["object"] or "", rc["object_inferred"] or "", rc["recipient"] or "",
-                     L.get("recipient_function", "") if rc["recipient"] else "", rc.get("recipient_not") or "", rc["when"] or "",
-                     "yes" if rc.get("when_inherited") else "", rc["polarity"], rc["status"].replace("asserted", "stated"),
-                     "; ".join(f"{SLOT.get(x['slot'], x['slot'])}: {x['words']}" for x in L["needs_referent"]), rc["parsers_agreeing"], ties, disc], n)
+        for target, fr in ((ou, F.full_row(r)), (ou2, F.full_row(r, method="tree_plus"))):
+          for i, L in enumerate(fr["lines"], 1):
+              rc = L["record"]
+              ties = "; ".join(f"line {l['to'] + 1}, {l['relation']}" + (f" ('{l['word']}')" if l["word"] else "") for l in L["links"])
+              disc = "; ".join(l.get("discourse_shared") or "" for l in L["links"] if l.get("discourse"))
+              add(target, [n, i, rc["subject"], rc["predicate"], rc["object"] or "", rc["object_inferred"] or "", rc["recipient"] or "",
+                         L.get("recipient_function", "") if rc["recipient"] else "", rc.get("recipient_not") or "", rc["when"] or "",
+                         "yes" if rc.get("when_inherited") else "", rc["polarity"], rc["status"].replace("asserted", "stated"),
+                         "; ".join(f"{SLOT.get(x['slot'], x['slot'])}: {x['words']}" for x in L["needs_referent"]), rc["parsers_agreeing"], ties, disc], n)
     # counts per sentence, as formulas over the step sheets
     r0 = sents._r0
     for row in range(r0 + 1, sents._next):
@@ -354,7 +361,7 @@ def main():
 
     import ast as _ast
     rl = sheet(wb, "Rules", ["File", "Function", "What it does (from the code's own description)"], [26, 30, 120],
-               "Every rule function, with the description written in the code (a description can be shorter than the code: matches() says 'same verb', and the code's verb test is verb_match(), a shared word or its first 4 letters). The bottleneck is the vote: combine_lib.py vote() with the match test in preds.py matches() and verb_match().")
+               "Every rule function, with the description written in the code (a description can be shorter than the code: matches() says 'same verb', and the code's verb test is verb_match(), a shared word or its first 4 letters). The bottleneck is the step that combines the three parses: in the proposed design full.py tree_backbone(), in the first design combine_lib.py vote() with the match test in preds.py matches() and verb_match().")
     for fn in ("preds.py", "const_fr.py", "lexicon.py", "frames.py", "combine_lib.py", "full.py"):
         fp = Path(A.rules) / fn
         if not fp.exists():
@@ -502,34 +509,21 @@ def main():
     readme.column_dimensions["A"].width = 120
     lines = [
         ("Parser examples, step by step", True),
-        ("Start with 'Start here' (the pipeline as boxes), then the Flow sheets: each one follows one real sentence from the record to the output triple, top to bottom. 'Flow, every sentence' does the same for all of them. The numbered sheets after that hold the same data as tables, for sorting and filtering.", False),
-        ("Each example sentence goes through every step of the pipeline. One sheet per step; the ID column links the rows of one sentence across sheets.", False),
+        ("Start here: the pipeline, one box per step, with the file and code for each.", False),
+        ("Flow 1 to 5: one real sentence each, from the debate record to the output triples, top to bottom.", False),
+        ("Questions: what a reviewer is likely to ask, each with its answer and the sheet that shows it.", False),
         ("", False),
-        ("How it works: every step, its input file, its code, its output, how it is checked and its known limits.", False),
-        ("Files: where every file comes from.", False),
-        ("Sentences: the example sentences, where each comes from (sentence ID and file), and how many lines each step produced (counted by formula from the other sheets).", False),
-        ("1 spaCy parse, 2 Stanza parse: every word, its relation, and the word it attaches to.", False),
-        ("3 Tree: the constituency tree for each sentence.", False),
-        ("4 Discourse: the discourse units and the relations between them.", False),
-        ("5 Lines by parser: the subject | verb | object lines our rules read from each parse, separately.", False),
-        ("6 Vote: which lines the 2-of-3 vote kept and which it dropped.", False),
-        ("7 Output triples: one triple per clause with recipient, time, polarity, status, slots that need a referent, and ties between clauses.", False),
-        ("8 Treebank gold: Wall Street Journal sentences, the annotators' gold lines next to ours.", False),
-        ("Simple sentences: 45 English-French pairs, one construction each, with the expected lines and ours.", False),
-        ("Rules: every rule function in the code, with its own description; the bottleneck is the vote.", False),
-        ("Record fields: why each part of the output is what it is (the grammatical function behind each field).", False),
-        ("Labels: every label in the parse sheets, in plain words.", False),
-        ("Questions: what a reviewer is likely to ask, the answer, and where to look.", False),
-        ("Scores: the score files copied in line by line, each with its file name and date.", False),
-        ("Sources: each parser's version, model and code.", False),
+        ("Click any sentence ID to jump to that sentence's flow. Blue file names open the file on GitHub.", False),
         ("", False),
-        ("How this file was made: printed by scripts/v6/examples_xlsx.py from the parses saved on Oct 19 (debate) and the Penn Treebank sample. "
-         "Every parse, line, triple, count and score file is printed by the scripts. The explanations (step descriptions, flow notes, answers in Questions) are written text; "
-         "where an answer quotes a number, it comes from one of the score files in the Scores sheet (compare3, strict, ptb_rules, ud_eval, machine), except the 88% and 93% for the treebank conversion, which come from the two review checks described in Questions. The code was written by Caprice with AI assistance. The debate answer keys used for scoring elsewhere were drafted "
-         "with AI assistance and are not a gold standard; the Penn Treebank marks are human annotation.", False),
-        ("Filters are on every sheet: filter the ID column to follow one sentence.", False),
-        ("Every sentence ID (sample|1, test|A8|fr ...) is a link: click it to jump to that sentence's flow, top to bottom. On the Sentences sheet, the counts jump to that sentence's rows in each step sheet, and each flow's title jumps back to the Sentences list.", False),
-        ("Blue underlined file names are links to that file in the project's GitHub repository. Files that are not in the repository (the Penn Treebank sample, under its license) have no link.", False),
+        ("How this file was made", True),
+        ("Every parse, line, triple, count and score in it is printed by scripts/v6/examples_xlsx.py from the saved parses (Oct 19) and the score files. "
+         "The explanations are written text, and any number they quote comes from a score file in the Scores sheet, except the 88% and 93% for the treebank conversion, which come from the two review checks described in Questions. The code was written by Caprice with AI assistance. "
+         "The debate answer keys were drafted with AI assistance and are not a gold standard; the Penn Treebank marks are human annotation.", False),
+        ("", False),
+        ("All sheets", True),
+        ("Flow, every sentence: the same top-to-bottom view for every example.  How it works: each step's input, code, output and checks.  Files: where every file comes from.", False),
+        ("Sentences, then 1 to 8: the same data as tables, one sheet per step (7 is the vote's output, 7b the tree-first output).  Simple sentences: 45 English-French test pairs.", False),
+        ("Rules, Record fields, Labels: every rule, every output field and every parse label, in plain words.  Scores and Sources: every score file, and each parser's version and training data.", False),
     ]
     for i, (t, b) in enumerate(lines, 1):
         c = readme.cell(row=i, column=1, value=t)

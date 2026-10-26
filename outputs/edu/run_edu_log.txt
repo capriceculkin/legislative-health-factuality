@@ -1,0 +1,58 @@
+== 1/5 parse every discourse unit on its own, and 20 new sentences per legislature
+10:48:31 == edu_collect: 220 saved sentences; rules /Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v6/preds.py
+10:48:44    loaded Stanza en 1.15.0 (constituency: yes) in 3.6s
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+10:48:59    loaded the Berkeley parser (benepar_fr2) in 15.0s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+10:49:01    loaded spaCy fr (core_news_lg 3.8.0) in 2.4s
+10:49:04    20/220 sentences, every unit parsed (1.6s each)
+10:49:05    40/220 sentences, every unit parsed (0.9s each)
+10:49:10    60/220 sentences, every unit parsed (0.6s each)
+10:49:15    80/220 sentences, every unit parsed (0.5s each)
+10:49:18    100/220 sentences, every unit parsed (0.5s each)
+10:49:25    120/220 sentences, every unit parsed (0.4s each)
+10:49:30    140/220 sentences, every unit parsed (0.4s each)
+10:49:36    160/220 sentences, every unit parsed (0.4s each)
+10:49:42    180/220 sentences, every unit parsed (0.4s each)
+10:49:48    200/220 sentences, every unit parsed (0.4s each)
+10:49:59    220/220 sentences, every unit parsed (0.4s each)
+10:50:00    us: 20 new sentences drawn from 278021
+10:50:03    ontario: 20 new sentences drawn from 415843
+10:50:07    quebec: 20 new sentences drawn from 348753
+10:50:21    loaded the discourse parser (UniRST) in 13.5s
+10:50:28    10 new sentences parsed
+10:50:32    20 new sentences parsed
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+10:50:40    30 new sentences parsed
+10:50:46    40 new sentences parsed
+10:50:52    50 new sentences parsed
+10:50:57    60 new sentences parsed
+10:50:57 == wrote /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/edu_trees.json (280 sentences) and /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/more_parses.json (60 new)
+== 2/5 lines from each unit's own tree, connected through the discourse parse
+wrote outputs/edu/edu_reparsed.json: 220 sentences, 508 units, 465 lines
+wrote outputs/edu/more_reparsed.json: 60 sentences, 171 units, 171 lines
+wrote outputs/edu/edu_with_sentence_tree.json: 220 sentences, 508 units, 459 lines
+== 3/5 scores against the answer keys
+heldout en         discourse first      27/36    75%   17/36    47%      8 of 35
+heldout fr         discourse first      18/33    55%   10/33    30%     23 of 41
+sample en          discourse first      96/119   81%   50/119   42%     27 of 123
+sample fr          discourse first      86/116   74%   44/116   38%     44 of 130
+simple tests en    discourse first      66/70    94%   63/70    90%      2 of 68
+simple tests fr    discourse first      63/70    90%   62/70    89%      5 of 68
+== 4/5 figures (tree inside a tree)
+wrote docs/discourse_first_figures.html with 8 sentences
+wrote docs/discourse_first_new_sentences.html with 12 sentences
+== 5/5 the notebook: every step, more sentences per legislature, the data files, and the tests (about 10 minutes)
+wrote notebooks/discourse_first.ipynb
+checks and rule tests: 37 pass, 0 fail
+trees: parsed now
+            set  found %  exact % exact 95% interval
+     heldout en       75       47           32 to 63
+     heldout fr       55       30           17 to 47
+      sample en       81       42           34 to 51
+      sample fr       75       38           30 to 47
+simple tests en       94       90           81 to 95
+simple tests fr       89       86           76 to 92
+
+== done: outputs/edu/, docs/discourse_first_*.html, notebooks/discourse_first.ipynb

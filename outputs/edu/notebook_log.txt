@@ -1,0 +1,23 @@
+cell 1 done
+cell 2 done
+cell 4 done
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+cell 6 done
+cell 8 done
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+cell 10 done
+cell 11 done
+cell 13 done
+cell 15 done
+cell 17 done
+cell 19 done
+cell 21 done
+cell 22 done
+cell 24 done
+cell 26 done
+cell 28 done
+cell 30 done
+cell 32 done
+cell 34 done

@@ -1,0 +1,11 @@
+wrote notebooks/discourse_first.ipynb
+checks and rule tests: 38 pass, 0 fail
+trees: parsed now
+            set  found %  exact % exact 95% interval
+     heldout en       75       47           32 to 63
+     heldout fr       55       30           17 to 47
+      sample en       81       42           34 to 51
+      sample fr       74       38           30 to 47
+simple tests en       94       90           81 to 95
+simple tests fr       90       89           79 to 94
+

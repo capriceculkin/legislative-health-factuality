@@ -50,6 +50,13 @@ sys.path.insert(0, str(RULES))
 import edu_pipeline as E          # the steps below call this file's functions
 import edu_draw as D              # the tree-inside-a-tree figure
 P = E.P
+# every rule and key file is loaded from scripts/v6 now, before the parsers are imported: the parser module puts
+# scripts/v4 (older copies of some of these files) at the front of Python's search path
+import importlib
+RULE_MODULES = ["preds", "lexicon", "const_fr", "combine_lib", "frames", "parity_score", "full", "compare3", "gold", "gold2",
+                "gold_heldout", "parallel_tests", "edu_pipeline", "edu_draw"]
+for m in RULE_MODULES:
+    importlib.import_module(m)
 E.OPT["units_only"] = True        # the Oct 22 design: only each unit's own tree and the discourse parse
 
 ROWS = json.load(open(PARSES, encoding="utf-8"))["rows"]
@@ -66,9 +73,14 @@ if os.environ.get("LHF_LIVE", "1") != "0":
         LIVE = True
     except Exception as ex:                       # noqa: BLE001
         WHY = f"{type(ex).__name__}: {ex}"
+    finally:
+        v4 = str(PROJECT / "scripts" / "v4")
+        sys.path[:] = [x for x in sys.path if x != v4] + [v4]      # scripts/v6 first again; v4 only for the parsers
 print("parsers:", "live (isanlp_rst, Stanza, Berkeley benepar_fr2)" if LIVE else f"not loaded here ({WHY[:80]}); using the parses saved Oct 19")
 print("units parsed on their own, saved:", f"{len(REPARSED)} sentences" if REPARSED else "none yet (run_edu.sh makes them)")
 print(f"saved sentences: {len(ROWS)}")
+WRONG = {m: sys.modules[m].__file__ for m in RULE_MODULES if Path(sys.modules[m].__file__).resolve().parent != RULES.resolve()}
+print("rules and keys loaded from:", RULES, "(all of them)" if not WRONG else f"-- NOT ALL: {WRONG}")
 """)
 
 code(r"""
@@ -340,6 +352,11 @@ def check(name, ok, detail=""):
 
 TREES = {r["n"]: step2(r)[0] for r in ROWS}
 OUT = {r["n"]: run(r, TREES[r["n"]]) for r in ROWS}
+
+# every rule and key file comes from scripts/v6, including the French rules, which load only when first needed
+import const_fr as _cf
+WRONG = {m: sys.modules[m].__file__ for m in RULE_MODULES if Path(sys.modules[m].__file__).resolve().parent != RULES.resolve()}
+check("every rule and key file is the scripts/v6 copy (" + ", ".join(RULE_MODULES) + ")", not WRONG, WRONG)
 
 # no dependency parse: the saved dependency parses are removed and every output stays the same
 no_deps = {r["n"]: run({k: v for k, v in r.items() if not k.startswith("deps")}, TREES[r["n"]]) for r in ROWS}

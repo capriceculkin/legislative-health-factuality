@@ -45,6 +45,7 @@ OPT = {"collapse": True,          # merge a verb phrase that holds only another 
        "verb_join": True,         # 'refused to act' as one verb
        "control_list": True,      # 'X to do' takes X as subject only after verbs like urge, require (not purpose: cut taxes to help)
        "apposition": True,        # 'Jean Martin, the health minister,': its own line, and the name as the subject
+       "apposition_across": True,  # an apposition split over two units, read through their elaboration relation
        "questions": True,         # a unit that is a question is not a claim
        "neg_particles": True,     # ne ... plus / pas after the verb is part of the verb; ne ... que is not negation
        "adverbial_object": True,  # 'resigned before the report came out': the time clause is not the object
@@ -855,7 +856,68 @@ def unit_inf_has_object(pieces):
     return False
 
 
-def main_units(span, rels, toward):
+SAID_START = re.compile(r"""^\W*(that|whether|if|que|qu'|qu’|si|s'|«|"|“|:)""", re.I)
+
+
+def speaks(sp, units):
+    "Whether a span has a verb of saying in one of its lines."
+    return any(any(w in SPEECH_WORDS or w.rstrip("s") in SPEECH_WORDS for w in ln["verb"].lower().split())
+               for v in units[sp[0]:sp[1] + 1] for ln in v["lines"])
+
+
+def attribution_sides(r, units, lang):
+    """(the side that does the saying, the side that is said), for an attribution relation. Read from the sentence: the
+    side with a verb of saying, or the side that does not open the reported part ('that', 'que', 'whether', 'si', a
+    quote mark, a colon before it). Only when the words do not tell, the parser's main part: the English model marks
+    what is said as the main part, the French one the sayer."""
+    L, R = r["left"], r["right"]
+    sl, sr = speaks(L, units), speaks(R, units)
+    if sl != sr:
+        return (L, R) if sl else (R, L)
+    if SAID_START.match(units[R[0]]["text"]) or units[L[1]]["text"].rstrip().endswith(":"):
+        return L, R
+    if SAID_START.match(units[L[0]]["text"]):
+        return R, L
+    main = r["main"] or R
+    other = L if main == R else R
+    return (other, main) if lang == "en" else (main, other)
+
+
+def unit_appositions(pieces):
+    "'Jean Martin, the health minister,' inside one unit's tree: (word number of the name, name, description, whole)."
+    out = []
+    for t, idx in pieces:
+        for pos, name, desc, whole in appositions({"trees": [t]}, None):
+            out.append((idx[pos] if pos < len(idx) else None, name, desc, whole))
+    return out
+
+
+def lone_np(pieces):
+    "The noun phrase a unit consists of, when it is nothing else (punctuation aside); else None."
+    for t, _ in pieces:
+        n = t
+        while not isinstance(n, str):
+            kids = [k for k in n[1] if not isinstance(k, str) and k[0] not in (",", "PONCT", ".", ":", "``", "''")]
+            if len(kids) != 1:
+                return None
+            if kids[0][0].split("-")[0] == "NP":
+                return kids[0]
+            n = kids[0]
+    return None
+
+
+def has_name(np):
+    "Whether a noun phrase holds a proper name."
+    def walk(n):
+        if isinstance(n, str):
+            return False
+        if n[0] in ("NNP", "NNPS", "NPP") and len(n[1]) == 1:
+            return True
+        return any(walk(k) for k in n[1])
+    return walk(np)
+
+
+def main_units(span, rels, toward, units=None, lang="en"):
     """The units that carry the main part of a span: inside it, follow each relation to its main side ('SB-8 ... bars
     abortion | after a fetal heartbeat can be detected': unit 0, not the time clause); when both sides are equal,
     the side nearer to the unit asking."""
@@ -864,8 +926,10 @@ def main_units(span, rels, toward):
         r = next((r for r in rels if r["left"][0] == a and r["right"][1] == b), None)
         if r is None:
             break
-        if r["shared"] == "attribution" and r["main"] is not None:
-            side = r["left"] if r["main"] == r["right"] else r["right"]   # 'the proposal would ensure | that ...': the sayer
+        if r["shared"] == "attribution" and units is not None:
+            side = attribution_sides(r, units, lang)[0]              # 'the proposal would ensure | that ...': the sayer
+        elif r["shared"] == "attribution" and r["main"] is not None:
+            side = r["left"] if r["main"] == r["right"] else r["right"]
         else:
             side = r["main"] if r["main"] is not None else (r["right"] if toward > b else r["left"])
         a, b = side
@@ -1081,6 +1145,31 @@ def process(row, edu_trees=None):
                     ln["subject"] = ln["subject"].strip() or ln["verb"][:len(m.group(1))]
                     ln["verb"] = ln["verb"][m.end():]
         u["lines"] = [l for l in u["lines"] if not any(re.search(rx, u["text"], re.I) and l["verb"].lower().split()[-1:] == [vb] for rx, vb in IDIOMS)]
+        for ln in u["lines"]:
+            if ln["object"].strip() in ("ce (que)", "ce (qu')") and re.search(r"(jusqu'|jusqu’|à|de|pour|parce) ce qu", u["text"].lower()):
+                ln["object"], ln["how"] = "", (ln["how"] + "; 'ce que' is part of the conjunction").strip("; ")
+    if OPT["units_only"] and OPT["apposition"]:
+        for u in units:
+            for leaf, name, desc, whole in unit_appositions(pieces_all[u["unit"]]):
+                if is_address(desc):                                        # 'Bill 87, Speaker,': someone spoken to
+                    for ln in u["lines"]:
+                        if re.search(r",\s*" + re.escape(desc) + r"\W*$", ln["object"]):
+                            ln["object"] = re.sub(r",\s*" + re.escape(desc) + r"\W*$", "", ln["object"])
+                            ln["how"] = (ln["how"] + "; the form of address after the comma is not part of the object").strip("; ")
+                    continue
+                for ln in u["lines"]:
+                    if ln["subject"].replace("(inh)", "").strip().replace(" ,", ",").rstrip(",") in (whole, name + ", " + desc, name + " " + desc):
+                        ln["subject"] = name
+                u["lines"].append({"subject": name, "verb": "is (apposition)", "object": desc, "kind": "asserted", "negated": False, "hedged": False,
+                                   "how": "apposition in the unit's tree: the phrase after the comma renames the name", "leaf": leaf, "subject_from": "", "implied_verb": True})
+                u["lines"].sort(key=lambda l: l.get("leaf") if l.get("leaf") is not None else 10 ** 6)
+    if OPT["units_only"] and OPT["bare_lines"]:
+        for u in units:
+            m = re.match(r"^\W*(by|en)\s+([\w'’-]+(?:ing|ant))\b\s*(.*)$", u["text"], re.I)
+            if m and not u["lines"] and not has_verb(pieces_all[u["unit"]]):
+                g = next((gi for gi, w, _ in ULEAVES[u["unit"]] if w.lower() == m.group(2).lower()), None)
+                u["lines"].append({"subject": "", "verb": m.group(2), "object": m.group(3).strip(" .,;:"), "kind": "asserted", "negated": False,
+                                   "hedged": False, "how": f"means ({m.group(1).lower()} + -ing / -ant): the parser read the verb as a noun", "leaf": g})
     # 'qu'est-ce qui justifie la difference' (what justifies the difference): the French tree rules read the question
     # word as a clause of its own (qu' | est | -ce) and give '-ce' as the subject; it is one word, qu'est-ce, = what
     if row["lang"] == "fr":
@@ -1145,7 +1234,7 @@ def process(row, edu_trees=None):
                     if ln["subject"].replace("(inh)", "").strip().replace(" ,", ",") in (whole, name + ", " + desc, name + " " + desc):
                         ln["subject"] = name
             u["lines"].append({"subject": name, "verb": "is (apposition)", "object": desc, "kind": "asserted", "negated": False,
-                               "hedged": False, "how": "apposition: the phrase after the comma renames the name", "leaf": pos, "subject_from": ""})
+                               "hedged": False, "how": "apposition: the phrase after the comma renames the name", "leaf": pos, "subject_from": "", "implied_verb": True})
             u["lines"].sort(key=lambda l: l.get("leaf") if l.get("leaf") is not None else 10 ** 6)
     rels = []
     for x in d.get("relations", []):
@@ -1157,25 +1246,40 @@ def process(row, edu_trees=None):
                      "main": list(main) if main else None,
                      "reads": f"{span(L)} to {span(R)}: {sh}; " + (f"main part {span(main)}" if main else "both equally important")
                               + (f"; {span(R if main == L else L)} {agree(MEANING.get(sh, 'is related to'), R if main == L else L)} {span(main)}" if main else "")})
+    if OPT["units_only"] and OPT["apposition"] and OPT["apposition_across"]:
+        for r in rels:
+            k = r["right"][0]
+            if r["shared"] == "elaboration" and r["left"] == [k - 1, k - 1] and r["right"] == [k, k] and not units[k]["lines"] and not units[k - 1]["lines"]:
+                a, b = lone_np(pieces_all[k - 1]), lone_np(pieces_all[k])
+                if a is not None and b is not None and has_name(a) and not has_name(b) and not is_address(units[k - 1]["text"]) \
+                        and not units[k - 1]["text"].rstrip().endswith(":") and not is_address(P.text(b)):   # 'M. Brassard:' names who speaks
+                    units[k]["lines"].append({"subject": np_text(a), "verb": "is (apposition)", "object": P.text(b), "kind": "asserted", "negated": False,
+                                              "hedged": False, "how": f"apposition across units: unit {k} renames the name in unit {k - 1} (elaboration)",
+                                              "leaf": None, "fixed_from": f"unit {k - 1} (apposition, elaboration)", "implied_verb": True})
     if OPT["said_object"]:
         for u in units:
             for ln in u["lines"]:
                 speech = any(w in SPEECH_WORDS or w.rstrip("s") in SPEECH_WORDS for w in ln["verb"].lower().split())
                 if ln["object"] or not (speech or (OPT["units_only"] and ln is u["lines"][-1])):
                     continue
-                for r in rels:
-                    if r["shared"] == "attribution" and r["main"] is not None:
-                        side = r["left"] if r["main"] == r["right"] else r["right"]
-                        if side[0] <= u["unit"] <= side[1]:
-                            m = r["main"]
-                            ln["object"] = " ".join(v["text"] for v in units[m[0]:m[1] + 1]).strip(" “”\"«»")
-                            ln["object_from"] = f"discourse: what is said, {span(m)}"
-                            break
+                for r in sorted(rels, key=lambda r: r["right"][1] - r["left"][0]):
+                    if r["shared"] != "attribution":
+                        continue
+                    sayer, said = attribution_sides(r, units, row["lang"]) if OPT["units_only"] else \
+                        ((r["left"] if r["main"] == r["right"] else r["right"]), r["main"]) if r["main"] is not None else (None, None)
+                    k_ = u["unit"]
+                    aside = k_ > 0 and units[k_ - 1]["text"].rstrip().endswith(",") and u["text"].rstrip().endswith(",") and len(u["text"].split()) <= 4
+                    if aside:                       # 'qui, je constate, a choisi': an aside between commas reports nothing
+                        break
+                    if sayer and sayer[0] <= u["unit"] <= sayer[1]:
+                        ln["object"] = " ".join(v["text"] for v in units[said[0]:said[1] + 1]).strip(" “”\"«».")
+                        ln["object_from"] = f"discourse: what is said, {span(said)}"
+                        break
     # subjects across units: a line without a subject takes the subject of the main part of the smallest relation
     # that attaches its unit to another one
     for u in units:
         for ln in u["lines"]:
-            ln["subject_from"] = ""
+            ln["subject_from"] = ln.pop("fixed_from", "")              # set by a rule that already read it from another unit
             s0 = ln["subject"].replace("(inh)", "").strip()
             lp = leaf_paths[ln["leaf"]] if ln.get("leaf") is not None and ln["leaf"] < len(leaf_paths) else None
             first = re.split(r"[\s']", s0.lower())[0] if s0 else ""
@@ -1250,7 +1354,7 @@ def process(row, edu_trees=None):
                     continue                                    # this unit is the main part: nothing to inherit from
                 cands.append((other[1] - other[0] + mine[1] - mine[0], other, r))
             for _, other, r in sorted(cands, key=lambda c: c[0]):
-                core = main_units(other, rels, u["unit"])
+                core = main_units(other, rels, u["unit"], units, row["lang"])
                 pool = [(v, l2) for i in core for v in [units[i]] for l2 in v["lines"] if good_source(l2)]
                 if other[1] < u["unit"]:
                     pool = pool[::-1]                   # in the main part, the nearest clause before this one
@@ -1352,6 +1456,9 @@ def process(row, edu_trees=None):
                       "from_text": txt(L), "to_text": txt(R), "reads": r["reads"]})
     for u in units:
         u.pop("context_used", None)
+        for ln in u["lines"]:
+            if OPT["units_only"] and row["lang"] == "en" and re.match(r"^to\s+\S", ln["verb"], re.I):
+                ln["verb"], ln["infinitive"] = ln["verb"][3:].strip(), True      # 'to accept' -> accept (infinitive)
     return {"n": row["n"], "set": row.get("set"), "lang": row["lang"], "text": row["text"], "tree_source": source,
             "design": "units only (Oct 22)" if OPT["units_only"] else "units, with help from the sentence's tree",
             "discourse_status": row.get("disc_native_status"), "units": units, "relations": rels, "connections": conns,

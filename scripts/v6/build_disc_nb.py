@@ -119,7 +119,7 @@ def step2(row):
     # stand-in until run_edu.sh has run: the sentence's saved tree cut down to each unit's words
     return [[t for t, _ in ps] for ps in E.unit_trees(row, edus_of(row))], "STAND-IN: the sentence's tree cut to each unit (run_edu.sh parses each unit alone)"
 
-WITHIN_ONLY = {"discourse_subject": False, "demonstrative": False, "said_object": False, "frame_context": False, "relpron": False}
+WITHIN_ONLY = {"discourse_subject": False, "demonstrative": False, "said_object": False, "frame_context": False, "relpron": False, "apposition_across": False}
 
 def run(row, trees, opt=None):
     saved = dict(E.OPT)
@@ -136,7 +136,7 @@ def relation_table(rec):
 def lines_table(rec, with_source=True):
     out = []
     for l in rec["lines"]:
-        d = {"unit": l["unit"], "subject": l["subject"], "verb": l["verb"], "object": l["object"]}
+        d = {"unit": l["unit"], "subject": l["subject"], "verb": l["verb"], "verb form": "to-infinitive" if l.get("infinitive") else "", "object": l["object"]}
         if with_source:
             d["where the subject came from"] = l.get("subject_from") or "its own unit"
             d["object from"] = l.get("object_from") or ""
@@ -380,8 +380,10 @@ check("each unit's tree holds that unit's words and nothing else", not bad, bad[
 
 # connections within a unit: a line's verb is in its own unit
 bad = [(n, l["unit"], l["verb"]) for n, x in OUT.items() for l in x["lines"]
-       if not all(w in x["units"][l["unit"]]["text"].lower().replace("’", "'") for w in E.tokens((l.get("verb_as_written") or l["verb"]).lower().replace("’", "'")) if w)]
+       if not l.get("implied_verb") and not all(w in x["units"][l["unit"]]["text"].lower().replace("’", "'") for w in E.tokens((l.get("verb_as_written") or l["verb"]).lower().replace("’", "'")) if w)]
 check("every verb is in its own unit", not bad, bad[:5])
+bad = [(n, l["unit"], l["verb"]) for n, x in OUT.items() for l in x["lines"] if l.get("implied_verb") and l["verb"] != "is (apposition)"]
+check("the only verb not written in the text is the implied 'is' of an apposition", not bad, bad[:5])
 
 # connections between units: anything taken from another unit says which one and through which relation
 bad = []
@@ -506,6 +508,10 @@ Each case below is one problem found in the runs on the Mac, with the tree writt
 - French: 'n'aient pas', 'Il | y a', 'n'est pas' as written; 'peu importe' and 'what have you' are not claims; 'Mme la Présidente' is not an object
 - a question sentence gives no claims; 'If passed,' stays context; 'Mr. Speaker,' is never context
 - new sentences leave out quoted bill text
+- round 5: what is said, read from the words ('a dit | que ...', 'a dit : « ... »', 'décidera | si ...'), because the French discourse model marks the sayer as the main part and the English one marks what is said; a short aside ('qui, | je constate, |') says nothing
+- round 5: appositions in a unit's own tree ('Jean Martin, the health minister,') and across two units joined by elaboration ('Jean Martin, | le ministre de la Santé,'); never a form of address ('Bill 87, Speaker,') or a speaker label ('M. Brassard: | ...')
+- round 5: 'by closing clinics' when the unit's parser read 'closing' as a noun; 'jusqu'à ce que' is a conjunction, not an object 'ce (que)'
+- round 5: an English to-infinitive is written as the bare verb ('accept', 'stop') and marked to-infinitive in its own column, so it matches the key word for word
 """)
 
 code(r"""
@@ -517,7 +523,7 @@ def row_of(text, lang, units, rels):
     return {"n": "t", "set": "typed", "lang": lang, "text": text, "trees": [], "disc_native": {"edus": edus, "relations": rels}}
 
 def show(rec):
-    return [(l["unit"], l["subject"], l["verb"], l["object"], l.get("subject_from", ""), l.get("context"), l.get("refers_to")) for l in rec["lines"]]
+    return [(l["unit"], l["subject"], l["verb"], l["object"], l.get("subject_from", ""), l.get("context"), l.get("refers_to"), bool(l.get("infinitive"))) for l in rec["lines"]]
 
 def process(r, trees):
     return run(r, trees)
@@ -594,7 +600,7 @@ txt = "It is time to stop playing politics with people's lives."
 r = row_of(txt, "en", ["It is time", "to stop playing politics with people's lives."], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}])
 L = show(process(r, [[T("(ROOT (S (NP (PRP It)) (VP (VBZ is) (NP (NN time)))))")],
                        [T("(ROOT (S (VP (TO to) (VP (VB stop) (S (VP (VBG playing) (NP (NNS politics)) (PP (IN with) (NP (NP (NNS people) (POS 's)) (NNS lives))))))) (. .)))")]]))
-check("It is time | to stop: who stops is not stated", any(l[2] == "to stop" and l[1] == "(unstated)" for l in L), L)
+check("It is time | to stop: who stops is not stated (verb 'stop', marked to-infinitive)", any(l[2] == "stop" and l[7] and l[1] == "(unstated)" for l in L), L)
 r = row_of("The government cut taxes to help families.", "en", ["The government cut taxes", "to help families."], [{"left": [0, 0], "right": [1, 1], "relation": "purpose", "nuclearity": "NS"}])
 L = show(process(r, [[T("(ROOT (S (NP (DT The) (NN government)) (VP (VBD cut) (NP (NNS taxes)))))")], [T("(ROOT (S (VP (TO to) (VP (VB help) (NP (NNS families)))) (. .)))")]]))
 check("cut taxes | to help families -> The government", any(l[1] == "The government" and "help" in l[2] for l in L), L)
@@ -653,13 +659,13 @@ check("a unit that is only a verb gets a line: The resources | are | the people 
 check("'are the people | to carry out those goals': the people | to carry out", any(l[0] == 3 and l[1] == "the people" for l in L), L)
 txt = "It makes economic sense to do so."
 L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (NP (NP (PRP it))) (VP (VBZ makes) (S (NP (JJ economic) (NN sense)) (VP (TO to) (VP (VB do) (ADVP (RB so))))))))")]]))
-check("an infinitive with no object of its own on the noun before it: (unstated) | to do (it makes economic sense to do so)", any(l[2] == "to do" and l[1] == "(unstated)" for l in L), L)
+check("an infinitive with no object of its own on the noun before it: (unstated) | to do (it makes economic sense to do so)", any(l[2] == "do" and l[7] and l[1] == "(unstated)" for l in L), L)
 txt = "It's the right thing to do in terms of health policy."
 L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (NP (PRP It)) (VP (VBZ 's) (NP (NP (DT the) (JJ right) (NN thing)) (SBAR (S (VP (TO to) (VP (VB do) (PP (IN in) (NP (NP (NNS terms)) (PP (IN of) (NP (NN health) (NN policy))))))))))) (. .)))")]]))
-check("the right thing | to do: (unstated), not the thing", any(l[2] == "to do" and l[1] == "(unstated)" for l in L), L)
+check("the right thing | to do: (unstated), not the thing", any(l[2] == "do" and l[7] and l[1] == "(unstated)" for l in L), L)
 txt = "We need measures to help us."
 L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (NP (PRP We)) (VP (VBP need) (NP (NP (NNS measures)) (S (VP (TO to) (VP (VB help) (NP (PRP us))))))) (. .)))")]]))
-check("an infinitive WITH its own object keeps the noun: measures | to help | us", not any(l[2] == "to help" and l[1] == "(unstated)" for l in L), L)
+check("an infinitive WITH its own object keeps the noun: measures | to help | us", not any(l[2] == "help" and l[1] == "(unstated)" for l in L), L)
 txt = "There would be an adequate base of healthy seniors to offset the portion."
 L = show(process(row_of(txt, "en", ["There would be an adequate base of healthy seniors", "to offset the portion."], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}]),
                    [[T("(ROOT (S (NP (EX There)) (VP (MD would) (VP (VB be) (NP (NP (DT an) (JJ adequate) (NN base)) (PP (IN of) (NP (JJ healthy) (NNS seniors))))))))")],
@@ -740,6 +746,77 @@ L = show(process(row_of(txt, "en", ["This matter was defeated,", "which is why i
                     [T("(ROOT (S (CC and) (VP (VBZ is) (VP (VBN moved) (ADVP (RB again)) (PP (IN by) (NP (DT the) (NN member))))) (. .)))")]]))
 check("'which is why ...': which = the whole of unit 0", any(l[0] == 1 and l[1] == "which" and (l[6] or "").startswith("unit 0:") for l in L), L)
 check("a real 'it is in front of this forum' can lend its subject: it | is moved", any(l[0] == 2 and l[1] == "it" and l[2] == "is moved" for l in L), L)
+
+# round 5: every tree below is the shape the Mac's parsers gave for that unit alone (Oct 26 run, outputs/edu/edu_trees.json)
+ATT_FR = [{"left": [0, 0], "right": [1, 1], "relation": "attribution", "nuclearity": "NS"}]     # the French model: the sayer is the main part
+ATT_EN = [{"left": [0, 0], "right": [1, 1], "relation": "attribution", "nuclearity": "SN"}]     # the English model: what is said is the main part
+txt = "Le ministre a dit que le projet de loi réduit les coûts."
+L = show(process(row_of(txt, "fr", ["Le ministre a dit", "que le projet de loi réduit les coûts."], ATT_FR),
+                   [[T("(TOP (SENT (NP (DET Le) (NC ministre)) (VN (V a) (VPP dit))))")],
+                    [T("(TOP (SENT (Ssub (CS que) (Sint (NP (DET le) (NC+ (NC projet) (P de) (NC loi))) (VN (V réduit)) (NP (DET les) (NC coûts)))) (PONCT .)))")]]))
+check("French 'a dit | que ...': the object of 'a dit' is what is said, though the parser marks the sayer as main", (0, "Le ministre", "a dit", "que le projet de loi réduit les coûts") in [l[:4] for l in L], L)
+check("and the said unit keeps its own line: le projet de loi | réduit | les coûts", (1, "le projet de loi", "réduit", "les coûts") in [l[:4] for l in L], L)
+txt = "Le médecin a dit : « Les délais sont trop longs. »"
+L = show(process(row_of(txt, "fr", ["Le médecin a dit :", "« Les délais sont trop longs. »"], ATT_FR),
+                   [[T("(TOP (SENT (NP (DET Le) (NC médecin)) (VN (V a) (VPP dit)) (PONCT :)))")],
+                    [T("(TOP (SENT (PONCT «) (NP (DET Les) (NC délais)) (VN (V sont)) (AP (ADV trop) (ADJ longs)) (PONCT .)))"), T("(TOP (SENT (PONCT »)))")]]))
+check("a quotation after a colon: Le médecin | a dit | Les délais sont trop longs (quote marks and the period left out)", (0, "Le médecin", "a dit", "Les délais sont trop longs") in [l[:4] for l in L], L)
+txt = "Le comité décidera si le projet de loi va de l'avant."
+L = show(process(row_of(txt, "fr", ["Le comité décidera", "si le projet de loi va de l'avant."], ATT_FR),
+                   [[T("(TOP (SENT (NP (DET Le) (NC comité)) (VN (V décidera))))")],
+                    [T("(TOP (SENT (Ssub (CS si) (Sint (NP (DET le) (NC+ (NC projet) (P de) (NC loi))) (VN (V va)) (PP (P de) (NP (DET l') (NC avant))))) (PONCT .)))")]]))
+check("'décidera | si ...': the object is the 'si' clause", (0, "Le comité", "décidera", "si le projet de loi va de l'avant") in [l[:4] for l in L], L)
+txt = "The minister said that the bill lowers costs."
+L = show(process(row_of(txt, "en", ["The minister said", "that the bill lowers costs."], ATT_EN),
+                   [[T("(ROOT (S (NP (DT The) (NN minister)) (VP (VBD said))))")], [T("(ROOT (SBAR (IN that) (S (NP (DT the) (NN bill)) (VP (VBZ lowers) (NP (NNS costs)))) (. .)))")]]))
+check("control, English: The minister | said | that the bill lowers costs (still right with the English main part)", any(l[:3] == (0, "The minister", "said") and l[3].rstrip(".") == "that the bill lowers costs" for l in L), L)
+txt = "Mais je vais m'adresser plus particulièrement à ma vis-à-vis, qui, je constate, a choisi aujourd'hui d'agir avec un adjoint, le député de René-Lévesque, que je salue d'autre part."
+L = show(process(row_of(txt, "fr", ["Mais je vais m'adresser plus particulièrement à ma vis-à-vis,", "qui,", "je constate,", "a choisi aujourd'hui d'agir avec un adjoint,", "le député de René-Lévesque,", "que je salue d'autre part."],
+                       [{"left": [1, 1], "right": [2, 2], "relation": "attribution", "nuclearity": "SN"}, {"left": [1, 2], "right": [3, 3], "relation": "same-unit", "nuclearity": "NN"},
+                        {"left": [4, 4], "right": [5, 5], "relation": "elaboration", "nuclearity": "NS"}, {"left": [1, 3], "right": [4, 5], "relation": "elaboration", "nuclearity": "NS"},
+                        {"left": [0, 0], "right": [1, 5], "relation": "elaboration", "nuclearity": "NS"}]),
+                   [[T("(TOP (SENT (CC Mais) (VN (CLS je) (V vais)) (VPinf (VN (CLR m') (VINF adresser)) (AdP (ADV plus) (ADV particulièrement)) (PP (P à) (NP (DET ma) (NC vis-à-vis)))) (PONCT ,)))")],
+                    [T("(TOP (SENT (NP (PROWH qui)) (PONCT ,)))")], [T("(TOP (SENT (VN (CLS je) (V constate)) (PONCT ,)))")],
+                    [T("(TOP (SENT (VN (V a) (VPP choisi)) (NC aujourd'hui) (PP (P d') (VPinf (VN (VINF agir)) (PP (P avec) (NP (DET un) (NC adjoint))))) (PONCT ,)))")],
+                    [T("(TOP (SENT (NP (DET le) (NC député) (PP (P de) (NP (NPP+ (NPP René) (PONCT -) (NPP Lévesque))))) (PONCT ,)))")],
+                    [T("(TOP (SENT (Srel (NP (PROREL que)) (VN (CLS je) (V salue)) (ADV+ (P d') (ADJ autre) (NC part))) (PONCT .)))")]]))
+check("an aside between commas ('qui, | je constate, |') takes no object", (2, "je", "constate", "") in [l[:4] for l in L], L)
+txt = "Jean Martin, the health minister, tabled the bill."
+L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (NP (NP (NNP Jean) (NNP Martin)) (, ,) (NP (DT the) (NN health) (NN minister)) (, ,)) (VP (VBD tabled) (NP (DT the) (NN bill))) (. .)))")]]))
+check("apposition in one unit's tree: Jean Martin | is (apposition) | the health minister", (0, "Jean Martin", "is (apposition)", "the health minister") in [l[:4] for l in L], L)
+check("and the name alone is the subject: Jean Martin | tabled | the bill", (0, "Jean Martin", "tabled", "the bill") in [l[:4] for l in L], L)
+txt = "Jean Martin, le ministre de la Santé, a déposé le projet de loi."
+r = row_of(txt, "fr", ["Jean Martin,", "le ministre de la Santé,", "a déposé le projet de loi."],
+           [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}, {"left": [0, 1], "right": [2, 2], "relation": "same-unit", "nuclearity": "NN"}])
+A10FR = [[T("(TOP (SENT (NP (NPP Jean) (NPP Martin)) (PONCT ,)))")], [T("(TOP (SENT (NP (DET le) (NC ministre) (PP (P de) (NP (DET la) (NC Santé)))) (PONCT ,)))")],
+         [T("(TOP (SENT (VN (V a) (VPP déposé)) (NP (DET le) (NC+ (NC projet) (P de) (NC loi))) (PONCT .)))")]]
+L = show(process(r, A10FR))
+check("apposition across two units (elaboration): Jean Martin | is (apposition) | le ministre de la Santé", (1, "Jean Martin", "is (apposition)", "le ministre de la Santé") in [l[:4] for l in L], L)
+check("and same-unit still gives: Jean Martin | a déposé | le projet de loi", (2, "Jean Martin", "a déposé", "le projet de loi") in [l[:4] for l in L], L)
+check("Step 3 (within units only) does not read the apposition across units", not any(l["verb"] == "is (apposition)" for l in run(r, A10FR, WITHIN_ONLY)["lines"]), "")
+txt = "If we look at Bill 87, Speaker, you'll see it has five schedules."
+L = show(process(row_of(txt, "en", ["If we look at Bill 87, Speaker,", "you'll see", "it has five schedules."],
+                       [{"left": [1, 1], "right": [2, 2], "relation": "attribution", "nuclearity": "SN"}, {"left": [0, 0], "right": [1, 2], "relation": "condition", "nuclearity": "SN"}]),
+                   [[T("(ROOT (S (SBAR (IN If) (S (NP (PRP we)) (VP (VBP look) (PP (IN at) (NP (NP (NNP Bill) (CD 87)) (, ,) (NP (NNP Speaker))))))) (, ,)))")],
+                    [T("(ROOT (S (NP (PRP you)) (VP (MD 'll) (VP (VB see)))))")], [T("(ROOT (S (NP (PRP it)) (VP (VBZ has) (NP (CD five) (NNS schedules))) (. .)))")]]))
+check("'Bill 87, Speaker,': someone addressed is not an apposition (control) and no longer part of the object (fix)", not any(l[2] == "is (apposition)" for l in L) and (0, "we", "look", "at Bill 87") in [l[:4] for l in L], L)
+txt = "M. Brassard: Des dommages aux propriétés, aux immeubles."
+L = show(process(row_of(txt, "fr", ["M. Brassard:", "Des dommages aux propriétés, aux immeubles."], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}]),
+                   [[T("(TOP (SENT (NP (NC M.) (NPP Brassard)) (PONCT :)))")],
+                    [T("(TOP (SENT (NP (DET Des) (NC dommages) (PP (P+D aux) (NP (NC propriétés))) (PONCT ,) (PP (P+D aux) (NP (NC immeubles)))) (PONCT .)))")]]))
+check("control: a speaker label 'M. Brassard:' is not renamed by what he says", not any(l[2] == "is (apposition)" for l in L), L)
+txt = "The province saved money by closing clinics."
+L = show(process(row_of(txt, "en", ["The province saved money", "by closing clinics."], [{"left": [0, 0], "right": [1, 1], "relation": "manner-means", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (DT The) (NN province)) (VP (VBD saved) (NP (NN money)))))")], [T("(ROOT (FRAG (PP (IN by) (NP (NN closing) (NNS clinics))) (. .)))")]]))
+check("'by closing clinics' with 'closing' tagged as a noun: The province | closing | clinics", (1, "The province", "closing", "clinics") in [l[:4] for l in L], L)
+txt = "La clinique reste ouverte jusqu'à ce que la province paie."
+L = show(process(row_of(txt, "fr", ["La clinique reste ouverte", "jusqu'à ce que la province paie."], [{"left": [0, 0], "right": [1, 1], "relation": "frame", "nuclearity": "NS"}]),
+                   [[T("(TOP (SENT (NP (DET La) (NC clinique)) (VN (V reste)) (AP (ADJ ouverte))))")],
+                    [T("(TOP (SENT (PP (P+ (P jusqu') (P à)) (NP (PRO ce) (Srel (NP (PROREL que)) (NP (DET la) (NC province)) (VN (V paie))))) (PONCT .)))")]]))
+check("'jusqu'à ce que' is a conjunction: la province | paie, with no object 'ce (que)'", (1, "la province", "paie", "") in [l[:4] for l in L], L)
+L = show(process(row_of("I urge every Member to support this amendment.", "en", ["I urge every Member to support this amendment."], []),
+                   [[T("(ROOT (S (NP (PRP I)) (VP (VBP urge) (S (NP (DT every) (NNP Member)) (VP (TO to) (VP (VB support) (NP (DT this) (NN amendment)))))) (. .)))")]]))
+check("a to-infinitive is written bare and marked: every Member | support (to-infinitive) | this amendment", any(l[1:4] == ("every Member", "support", "this amendment") and l[7] for l in L), L)
 """)
 
 md(r"""

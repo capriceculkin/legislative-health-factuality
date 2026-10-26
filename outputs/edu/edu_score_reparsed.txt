@@ -10,31 +10,31 @@ heldout en         discourse first      29/36    81%   18/36    50%      7 of 36
 
 heldout fr         2-of-3 vote          25/33    76%    9/33    27%     10 of 35
 heldout fr         tree + deps add      26/33    79%   14/33    42%     16 of 42
-heldout fr         discourse first      19/33    58%   11/33    33%     23 of 42
-                   exact, discourse first vs 2-of-3 vote: only discourse first 6, only 2-of-3 vote 4, McNemar p = 0.75
-                   exact, discourse first vs tree + deps add: only discourse first 3, only tree + deps add 6, McNemar p = 0.51
+heldout fr         discourse first      23/33    70%   14/33    42%     19 of 42
+                   exact, discourse first vs 2-of-3 vote: only discourse first 7, only 2-of-3 vote 2, McNemar p = 0.18
+                   exact, discourse first vs tree + deps add: only discourse first 3, only tree + deps add 3, McNemar p = 1.00
 
 sample en          2-of-3 vote         108/119   91%   55/119   46%     15 of 123
 sample en          tree + deps add     107/119   90%   52/119   44%     26 of 133
-sample en          discourse first     103/119   87%   53/119   45%     28 of 131
-                   exact, discourse first vs 2-of-3 vote: only discourse first 6, only 2-of-3 vote 8, McNemar p = 0.79
-                   exact, discourse first vs tree + deps add: only discourse first 9, only tree + deps add 8, McNemar p = 1.00
+sample en          discourse first     103/119   87%   56/119   47%     29 of 132
+                   exact, discourse first vs 2-of-3 vote: only discourse first 9, only 2-of-3 vote 8, McNemar p = 1.00
+                   exact, discourse first vs tree + deps add: only discourse first 12, only tree + deps add 8, McNemar p = 0.50
 
 sample fr          2-of-3 vote          94/116   81%   33/116   28%     27 of 121
 sample fr          tree + deps add      96/116   83%   36/116   31%     52 of 148
-sample fr          discourse first      92/116   79%   48/116   41%     41 of 133
+sample fr          discourse first      94/116   81%   48/116   41%     40 of 134
                    exact, discourse first vs 2-of-3 vote: only discourse first 19, only 2-of-3 vote 4, McNemar p = 0.00
                    exact, discourse first vs tree + deps add: only discourse first 16, only tree + deps add 4, McNemar p = 0.01
 
 simple tests en    2-of-3 vote          68/70    97%   66/70    94%      1 of 69
 simple tests en    tree + deps add      65/70    93%   61/70    87%      7 of 72
-simple tests en    discourse first      68/70    97%   65/70    93%      0 of 68
-                   exact, discourse first vs 2-of-3 vote: only discourse first 1, only 2-of-3 vote 2, McNemar p = 1.00
-                   exact, discourse first vs tree + deps add: only discourse first 5, only tree + deps add 1, McNemar p = 0.22
+simple tests en    discourse first      70/70   100%   70/70   100%      0 of 70
+                   exact, discourse first vs 2-of-3 vote: only discourse first 4, only 2-of-3 vote 0, McNemar p = 0.12
+                   exact, discourse first vs tree + deps add: only discourse first 9, only tree + deps add 0, McNemar p = 0.00
 
 simple tests fr    2-of-3 vote          69/70    99%   63/70    90%      1 of 70
 simple tests fr    tree + deps add      64/70    91%   60/70    86%      7 of 71
-simple tests fr    discourse first      66/70    94%   65/70    93%      3 of 69
-                   exact, discourse first vs 2-of-3 vote: only discourse first 7, only 2-of-3 vote 5, McNemar p = 0.77
-                   exact, discourse first vs tree + deps add: only discourse first 9, only tree + deps add 4, McNemar p = 0.27
+simple tests fr    discourse first      70/70   100%   70/70   100%      0 of 70
+                   exact, discourse first vs 2-of-3 vote: only discourse first 7, only 2-of-3 vote 0, McNemar p = 0.02
+                   exact, discourse first vs tree + deps add: only discourse first 10, only tree + deps add 0, McNemar p = 0.00
 

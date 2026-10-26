@@ -34,7 +34,7 @@ simple tests en    discourse first      67/70    96%   64/70    91%      1 of 68
 
 simple tests fr    2-of-3 vote          69/70    99%   63/70    90%      1 of 70
 simple tests fr    tree + deps add      64/70    91%   60/70    86%      7 of 71
-simple tests fr    discourse first      66/70    94%   64/70    91%      2 of 68
-                   exact, discourse first vs 2-of-3 vote: only discourse first 7, only 2-of-3 vote 6, McNemar p = 1.00
-                   exact, discourse first vs tree + deps add: only discourse first 9, only tree + deps add 5, McNemar p = 0.42
+simple tests fr    discourse first      66/70    94%   65/70    93%      2 of 68
+                   exact, discourse first vs 2-of-3 vote: only discourse first 7, only 2-of-3 vote 5, McNemar p = 0.77
+                   exact, discourse first vs tree + deps add: only discourse first 9, only tree + deps add 4, McNemar p = 0.27
 

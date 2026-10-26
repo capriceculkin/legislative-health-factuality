@@ -1,0 +1,58 @@
+better  test|A10|en | key: Jean Martin | tabled | the bill
+   before ('Jean Martin, the health minister', 'tabled', 'the bill', '', '')
+   after  ('Jean Martin', 'tabled', 'the bill', '', '')
+better  test|A10|en | key: Jean Martin | is (apposition) | the health minister
+   before None
+   after  ('Jean Martin', 'is (apposition)', 'the health minister', '', '')
+better  test|A10|fr | key: Jean Martin | is (apposition) | le ministre de la Santé
+   before None
+   after  ('Jean Martin', 'is (apposition)', 'le ministre de la Santé', 'unit 0 (apposition, elaboration)', '')
+better  test|D1|fr | key: Le ministre | a dit | que le projet de loi réduit les coûts
+   before None
+   after  ('Le ministre', 'a dit', 'que le projet de loi réduit les coûts', '', 'discourse: what is said, unit ')
+better  test|D4|fr | key: Le médecin | a dit | Les délais sont trop longs
+   before None
+   after  ('Le médecin', 'a dit', 'Les délais sont trop longs', '', 'discourse: what is said, unit ')
+better  test|E4|fr | key: la province | paie | 
+   before ('la province', 'paie', 'ce (que)', '', '')
+   after  ('la province', 'paie', '', '', '')
+better  test|E6|fr | key: Le comité | décidera | si le projet de loi va de l'avant
+   before None
+   after  ('Le comité', 'décidera', "si le projet de loi va de l'avant", '', 'discourse: what is said, unit ')
+better (only the to) test|E7|en | key: The government (inh) | help | families
+   before ('The government', 'to help', 'families', 'unit 0 (purpose)', '')
+   after  ('The government', 'help', 'families', 'unit 0 (purpose)', '')
+better  test|E12|en | key: The province (inh) | closing | clinics
+   before None
+   after  ('The province', 'closing', 'clinics', 'unit 0 (manner-means)', '')
+better (only the to) test|F4|en | key: the doctors | accept | the deal
+   before ('the doctors', 'to accept', 'the deal', 'unit tree: the object of the verb before it d', '')
+   after  ('the doctors', 'accept', 'the deal', 'unit tree: the object of the verb before it d', '')
+better  heldout|25 | key: Vous | vous doutiez | que Daniel est loin d'être le seul dans cette situation
+   before None
+   after  ('Vous', 'vous doutiez', "que Daniel est loin d'être le seul dans cette situ", '', 'discourse: what is said, unit ')
+better  heldout|26 | key: elle | a dit | Je veux maintenant collaborer
+   before None
+   after  ('elle', 'a dit', 'Je veux maintenant collaborer', '', 'discourse: what is said, unit ')
+better  heldout|26 | key: Je (elle) | veux collaborer | 
+   before None
+   after  ('Je', 'veux collaborer', '', '', '')
+better  heldout|29 | key: j' | ai dit | Les résidences de personnes âgées sont un milieu de vie permanent
+   before None
+   after  ("j'", 'ai dit', 'Les résidences de personnes âgées sont, pour la pl', '', 'discourse: what is said, unit ')
+better (only the to) sample|7 | key: my colleagues | reject | the amendment
+   before ('my colleagues', 'to reject', 'the amendment', 'unit tree: the object of the verb before it d', '')
+   after  ('my colleagues', 'reject', 'the amendment', 'unit tree: the object of the verb before it d', '')
+better (only the to) sample|32 | key: Ontario Health (inh) | support | a more connected, high-quality health care system
+   before ('Ontario Health', 'to support', 'a more connected, high-quality health care system', 'unit 1 (purpose)', '')
+   after  ('Ontario Health', 'support', 'a more connected, high-quality health care system', 'unit 1 (purpose)', '')
+better  sample|37 | key: The bill (inh) | ensure | that a woman's decision to have an abortion is based on informed
+   before ('The bill', 'to ensure', 'that a woman’s decision to have an abortion is bas', 'unit 2 (purpose)', 'discourse: what is said, unit ')
+   after  ('The bill', 'ensure', 'that a woman’s decision to have an abortion is bas', 'unit 2 (purpose)', 'discourse: what is said, unit ')
+better  sample|52 | key: je | ne sais pas | s'il a voulu que ça corresponde avec le numéro de son projet de loi
+   before None
+   after  ('je', 'ne sais pas', "s'il a voulu que ça corresponde avec le numéro de ", '', 'discourse: what is said, unit ')
+better  sample|83 | key: Le projet de loi (inh) | prévoyant | qu'il est interdit d'en posséder sur les terrains d'u
+   before None
+   after  ('Le projet de loi', 'prévoyant', "qu'il est interdit d'en posséder sur les terrains,", 'unit 0 (elaboration)', 'discourse: what is said, unit ')
+19 better (4 of them only from writing the verb without 'to'), 0 worse

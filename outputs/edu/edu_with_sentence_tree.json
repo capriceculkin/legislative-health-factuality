@@ -11949,11 +11949,11 @@
       {
        "subject": "la province",
        "verb": "paie",
-       "object": "ce (que)",
+       "object": "",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "relative clause",
+       "how": "relative clause; 'ce que' is part of the conjunction",
        "leaf": 10,
        "subject_from": ""
       }
@@ -12014,11 +12014,11 @@
     {
      "subject": "la province",
      "verb": "paie",
-     "object": "ce (que)",
+     "object": "",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "relative clause",
+     "how": "relative clause; 'ce que' is part of the conjunction",
      "leaf": 10,
      "subject_from": "",
      "unit": 1

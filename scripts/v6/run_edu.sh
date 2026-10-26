@@ -3,11 +3,16 @@
 # parsed on its own by the constituency parser, 20 new sentences per legislature, the lines, the scores, the figures and
 # the notebook. About 30 to 50 minutes, most of it parsing.
 #   cd ~/MiscellaneousProjects/legislative-health-factuality && source venv/bin/activate && bash scripts/v6/run_edu.sh
+#   SKIP_PARSE=1 bash scripts/v6/run_edu.sh   reuses the saved unit parses (when only the rules changed; about 15 minutes)
 set -e
 R=scripts/v6; O=outputs/edu; D=data/parity_oct19/parity_parses.json
 mkdir -p $O docs notebooks
 echo "== 1/5 parse every discourse unit on its own, and 20 new sentences per legislature"
-python3 $R/edu_collect.py --more "${MORE:-20}"
+if [ "${SKIP_PARSE:-0}" = 1 ] && [ -s $O/edu_trees.json ] && [ -s $O/more_parses.json ]; then
+  echo "   SKIP_PARSE=1: reusing the saved unit parses in $O/edu_trees.json and $O/more_parses.json"
+else
+  python3 $R/edu_collect.py --more "${MORE:-20}"
+fi
 echo "== 2/5 lines from each unit's own tree, connected through the discourse parse"
 python3 $R/edu_pipeline.py $R $D $O/edu_reparsed.json --edu-trees $O/edu_trees.json
 python3 $R/edu_pipeline.py $R $O/more_parses.json $O/more_reparsed.json --edu-trees $O/edu_trees.json

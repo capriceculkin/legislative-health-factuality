@@ -519,7 +519,7 @@
       {
        "subject": "you",
        "verb": "believe",
-       "object": "that there are not tragic gaps in our mental health system.",
+       "object": "that there are not tragic gaps in our mental health system",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -850,7 +850,7 @@
     {
      "subject": "you",
      "verb": "believe",
-     "object": "that there are not tragic gaps in our mental health system.",
+     "object": "that there are not tragic gaps in our mental health system",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -1395,14 +1395,15 @@
      "lines": [
       {
        "subject": "(unstated)",
-       "verb": "to get",
+       "verb": "get",
        "object": "back to work",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 4,
-       "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words"
+       "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+       "infinitive": true
       }
      ]
     },
@@ -1833,7 +1834,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to get",
+     "verb": "get",
      "object": "back to work",
      "kind": "asserted",
      "negated": false,
@@ -1841,6 +1842,7 @@
      "how": "main clause",
      "leaf": 4,
      "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -2769,14 +2771,15 @@
       },
       {
        "subject": "(unstated)",
-       "verb": "to recommit",
+       "verb": "recommit",
        "object": "",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 12,
-       "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words"
+       "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words",
+       "infinitive": true
       }
      ]
     }
@@ -2798,7 +2801,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to recommit",
+     "verb": "recommit",
      "object": "",
      "kind": "asserted",
      "negated": false,
@@ -2806,6 +2809,7 @@
      "how": "main clause",
      "leaf": 12,
      "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words",
+     "infinitive": true,
      "unit": 0
     }
    ]
@@ -3818,14 +3822,15 @@
      "lines": [
       {
        "subject": "(unstated)",
-       "verb": "to assure",
+       "verb": "assure",
        "object": "that the formula",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 5,
-       "subject_from": "'are necessary | to ...': an infinitive on a noun or adjective; who does it is not in the words"
+       "subject_from": "'are necessary | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+       "infinitive": true
       }
      ]
     },
@@ -4262,7 +4267,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to assure",
+     "verb": "assure",
      "object": "that the formula",
      "kind": "asserted",
      "negated": false,
@@ -4270,6 +4275,7 @@
      "how": "main clause",
      "leaf": 5,
      "subject_from": "'are necessary | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -4388,7 +4394,7 @@
       {
        "subject": "The bill's sponsors",
        "verb": "reply",
-       "object": "that by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit.",
+       "object": "that by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -4740,7 +4746,7 @@
       {
        "subject": "the proposal",
        "verb": "would ensure",
-       "object": "that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit.",
+       "object": "that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit",
        "kind": "asserted",
        "negated": false,
        "hedged": true,
@@ -5019,14 +5025,15 @@
      "lines": [
       {
        "subject": "an adequate base of healthy seniors",
-       "verb": "to offset",
+       "verb": "offset",
        "object": "the portion in greatest need of the benefit",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 42,
-       "subject_from": "'would be an adequate base of healthy seniors | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')"
+       "subject_from": "'would be an adequate base of healthy seniors | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')",
+       "infinitive": true
       }
      ]
     }
@@ -5216,7 +5223,7 @@
     {
      "subject": "The bill's sponsors",
      "verb": "reply",
-     "object": "that by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit.",
+     "object": "that by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -5241,7 +5248,7 @@
     {
      "subject": "the proposal",
      "verb": "would ensure",
-     "object": "that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit.",
+     "object": "that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit",
      "kind": "asserted",
      "negated": false,
      "hedged": true,
@@ -5265,7 +5272,7 @@
     },
     {
      "subject": "an adequate base of healthy seniors",
-     "verb": "to offset",
+     "verb": "offset",
      "object": "the portion in greatest need of the benefit",
      "kind": "asserted",
      "negated": false,
@@ -5273,6 +5280,7 @@
      "how": "main clause",
      "leaf": 42,
      "subject_from": "'would be an adequate base of healthy seniors | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')",
+     "infinitive": true,
      "unit": 5
     }
    ]
@@ -5605,14 +5613,15 @@
      "lines": [
       {
        "subject": "a system",
-       "verb": "to administer",
+       "verb": "administer",
        "object": "services",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 17,
-       "subject_from": "unit 1 (purpose)"
+       "subject_from": "unit 1 (purpose)",
+       "infinitive": true
       }
      ]
     }
@@ -5717,7 +5726,7 @@
     },
     {
      "subject": "a system",
-     "verb": "to administer",
+     "verb": "administer",
      "object": "services",
      "kind": "asserted",
      "negated": false,
@@ -5725,6 +5734,7 @@
      "how": "main clause",
      "leaf": 17,
      "subject_from": "unit 1 (purpose)",
+     "infinitive": true,
      "unit": 2
     }
    ]
@@ -6931,15 +6941,16 @@
      "lines": [
       {
        "subject": "it",
-       "verb": "to ensure",
-       "object": "that they all have the resources that they need to raise their children.",
+       "verb": "ensure",
+       "object": "that they all have the resources that they need to raise their children",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "a verb the tree rules gave no line for; read from the unit's tree",
        "leaf": 17,
        "object_from": "discourse: what is said, unit 3, unit 4 and unit 5",
-       "subject_from": "unit 1 (purpose)"
+       "subject_from": "unit 1 (purpose)",
+       "infinitive": true
       }
      ]
     },
@@ -7179,14 +7190,15 @@
      "lines": [
       {
        "subject": "they",
-       "verb": "to raise",
+       "verb": "raise",
        "object": "their children",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 28,
-       "subject_from": "unit 4 (purpose)"
+       "subject_from": "unit 4 (purpose)",
+       "infinitive": true
       }
      ]
     }
@@ -7399,8 +7411,8 @@
     },
     {
      "subject": "it",
-     "verb": "to ensure",
-     "object": "that they all have the resources that they need to raise their children.",
+     "verb": "ensure",
+     "object": "that they all have the resources that they need to raise their children",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -7408,6 +7420,7 @@
      "leaf": 17,
      "object_from": "discourse: what is said, unit 3, unit 4 and unit 5",
      "subject_from": "unit 1 (purpose)",
+     "infinitive": true,
      "unit": 2
     },
     {
@@ -7437,7 +7450,7 @@
     },
     {
      "subject": "they",
-     "verb": "to raise",
+     "verb": "raise",
      "object": "their children",
      "kind": "asserted",
      "negated": false,
@@ -7445,6 +7458,7 @@
      "how": "main clause",
      "leaf": 28,
      "subject_from": "unit 4 (purpose)",
+     "infinitive": true,
      "unit": 5
     }
    ]
@@ -8292,14 +8306,15 @@
      "lines": [
       {
        "subject": "my colleagues",
-       "verb": "to bring",
+       "verb": "bring",
        "object": "this bill",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 25,
-       "subject_from": "unit 1 (purpose)"
+       "subject_from": "unit 1 (purpose)",
+       "infinitive": true
       }
      ]
     }
@@ -8404,7 +8419,7 @@
     },
     {
      "subject": "my colleagues",
-     "verb": "to bring",
+     "verb": "bring",
      "object": "this bill",
      "kind": "asserted",
      "negated": false,
@@ -8412,6 +8427,7 @@
      "how": "main clause",
      "leaf": 25,
      "subject_from": "unit 1 (purpose)",
+     "infinitive": true,
      "unit": 2
     }
    ]
@@ -8548,14 +8564,15 @@
       },
       {
        "subject": "every Member",
-       "verb": "to support",
+       "verb": "support",
        "object": "this amendment",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "complement of urge",
        "leaf": 5,
-       "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)"
+       "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)",
+       "infinitive": true
       }
      ]
     }
@@ -8577,7 +8594,7 @@
     },
     {
      "subject": "every Member",
-     "verb": "to support",
+     "verb": "support",
      "object": "this amendment",
      "kind": "embedded",
      "negated": false,
@@ -8585,6 +8602,7 @@
      "how": "complement of urge",
      "leaf": 5,
      "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)",
+     "infinitive": true,
      "unit": 0
     }
    ]
@@ -9110,14 +9128,15 @@
      "lines": [
       {
        "subject": "the many other Members and organizations",
-       "verb": "to offer",
+       "verb": "offer",
        "object": "feedback, suggestions, and, at times, criticism",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 34,
-       "subject_from": "unit 1 (purpose)"
+       "subject_from": "unit 1 (purpose)",
+       "infinitive": true
       }
      ]
     }
@@ -9222,7 +9241,7 @@
     },
     {
      "subject": "the many other Members and organizations",
-     "verb": "to offer",
+     "verb": "offer",
      "object": "feedback, suggestions, and, at times, criticism",
      "kind": "asserted",
      "negated": false,
@@ -9230,6 +9249,7 @@
      "how": "main clause",
      "leaf": 34,
      "subject_from": "unit 1 (purpose)",
+     "infinitive": true,
      "unit": 2
     }
    ]
@@ -9518,14 +9538,15 @@
      "lines": [
       {
        "subject": "My goal",
-       "verb": "to help",
+       "verb": "help",
        "object": "reduce all this excessive and unnecessary paperwork on doctors and healthcare workers",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 9,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "unit 0 (elaboration)",
+       "infinitive": true
       },
       {
        "subject": "My goal",
@@ -9594,7 +9615,7 @@
     },
     {
      "subject": "My goal",
-     "verb": "to help",
+     "verb": "help",
      "object": "reduce all this excessive and unnecessary paperwork on doctors and healthcare workers",
      "kind": "asserted",
      "negated": false,
@@ -9602,6 +9623,7 @@
      "how": "main clause",
      "leaf": 9,
      "subject_from": "unit 0 (elaboration)",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -9778,7 +9800,7 @@
       {
        "subject": "we",
        "verb": "know",
-       "object": "it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services.",
+       "object": "it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
@@ -9905,14 +9927,15 @@
       },
       {
        "subject": "(unstated)",
-       "verb": "to do",
+       "verb": "do",
        "object": "so",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "complement of makes",
        "leaf": 13,
-       "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words"
+       "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words",
+       "infinitive": true
       }
      ]
     },
@@ -10197,14 +10220,15 @@
       },
       {
        "subject": "(unstated)",
-       "verb": "to do",
+       "verb": "do",
        "object": "in terms of health policy",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "relative clause",
        "leaf": 23,
-       "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words"
+       "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words",
+       "infinitive": true
       },
       {
        "subject": "the public",
@@ -10475,7 +10499,7 @@
     {
      "subject": "we",
      "verb": "know",
-     "object": "it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services.",
+     "object": "it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
@@ -10499,7 +10523,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to do",
+     "verb": "do",
      "object": "so",
      "kind": "embedded",
      "negated": false,
@@ -10507,6 +10531,7 @@
      "how": "complement of makes",
      "leaf": 13,
      "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words",
+     "infinitive": true,
      "unit": 2
     },
     {
@@ -10524,7 +10549,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to do",
+     "verb": "do",
      "object": "in terms of health policy",
      "kind": "embedded",
      "negated": false,
@@ -10532,6 +10557,7 @@
      "how": "relative clause",
      "leaf": 23,
      "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words",
+     "infinitive": true,
      "unit": 3
     },
     {
@@ -10693,7 +10719,7 @@
       {
        "subject": "we",
        "verb": "are going to say",
-       "object": "You can only practise so much at such and such a rate, and then after that we control you.",
+       "object": "You can only practise so much at such and such a rate, and then after that we control you",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -11181,7 +11207,7 @@
     {
      "subject": "we",
      "verb": "are going to say",
-     "object": "You can only practise so much at such and such a rate, and then after that we control you.",
+     "object": "You can only practise so much at such and such a rate, and then after that we control you",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -14397,7 +14423,7 @@
       {
        "subject": "The people",
        "verb": "said",
-       "object": "that they would like to see the HST removed from heating, electricity and energy.",
+       "object": "that they would like to see the HST removed from heating, electricity and energy",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -14732,7 +14758,7 @@
     {
      "subject": "The people",
      "verb": "said",
-     "object": "that they would like to see the HST removed from heating, electricity and energy.",
+     "object": "that they would like to see the HST removed from heating, electricity and energy",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -16518,14 +16544,15 @@
       },
       {
        "subject": "the intent",
-       "verb": "to reduce",
+       "verb": "reduce",
        "object": "standards",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "complement clause",
        "leaf": 22,
-       "subject_from": "unit tree: the subject of the clause the verb sits in"
+       "subject_from": "unit tree: the subject of the clause the verb sits in",
+       "infinitive": true
       }
      ]
     },
@@ -16745,7 +16772,7 @@
     },
     {
      "subject": "the intent",
-     "verb": "to reduce",
+     "verb": "reduce",
      "object": "standards",
      "kind": "embedded",
      "negated": false,
@@ -16753,6 +16780,7 @@
      "how": "complement clause",
      "leaf": 22,
      "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -18171,14 +18199,15 @@
       },
       {
        "subject": "(unstated)",
-       "verb": "to do",
+       "verb": "do",
        "object": "",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "condition or time (as)",
        "leaf": 53,
-       "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words"
+       "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words",
+       "infinitive": true
       }
      ]
     }
@@ -18445,7 +18474,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to do",
+     "verb": "do",
      "object": "",
      "kind": "embedded",
      "negated": false,
@@ -18453,6 +18482,7 @@
      "how": "condition or time (as)",
      "leaf": 53,
      "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words",
+     "infinitive": true,
      "unit": 5
     }
    ]
@@ -19101,14 +19131,15 @@
      "lines": [
       {
        "subject": "the people",
-       "verb": "to carry out",
+       "verb": "carry out",
        "object": "those goals",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 9,
-       "subject_from": "'are the people | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')"
+       "subject_from": "'are the people | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')",
+       "infinitive": true
       }
      ]
     },
@@ -19401,7 +19432,7 @@
     },
     {
      "subject": "the people",
-     "verb": "to carry out",
+     "verb": "carry out",
      "object": "those goals",
      "kind": "asserted",
      "negated": false,
@@ -19409,6 +19440,7 @@
      "how": "main clause",
      "leaf": 9,
      "subject_from": "'are the people | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')",
+     "infinitive": true,
      "unit": 3
     },
     {
@@ -19561,14 +19593,15 @@
       },
       {
        "subject": "We",
-       "verb": "to be looking",
+       "verb": "be looking",
        "object": "for ways",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 5,
-       "subject_from": "unit tree: the subject of the clause the verb sits in"
+       "subject_from": "unit tree: the subject of the clause the verb sits in",
+       "infinitive": true
       }
      ]
     },
@@ -19640,14 +19673,15 @@
      "lines": [
       {
        "subject": "We",
-       "verb": "to improve",
+       "verb": "improve",
        "object": "that system",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 9,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "unit 0 (elaboration)",
+       "infinitive": true
       }
      ]
     },
@@ -19921,11 +19955,11 @@
       {
        "subject": "we",
        "verb": "look",
-       "object": "at Bill 87, Speaker",
+       "object": "at Bill 87",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "condition or time (if)",
+       "how": "condition or time (if); the form of address after the comma is not part of the object",
        "leaf": 26,
        "subject_from": ""
       }
@@ -19988,7 +20022,7 @@
       {
        "subject": "you",
        "verb": "will see",
-       "object": "it has five schedules.",
+       "object": "it has five schedules",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -20306,7 +20340,7 @@
     },
     {
      "subject": "We",
-     "verb": "to be looking",
+     "verb": "be looking",
      "object": "for ways",
      "kind": "asserted",
      "negated": false,
@@ -20314,11 +20348,12 @@
      "how": "main clause",
      "leaf": 5,
      "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "infinitive": true,
      "unit": 0
     },
     {
      "subject": "We",
-     "verb": "to improve",
+     "verb": "improve",
      "object": "that system",
      "kind": "asserted",
      "negated": false,
@@ -20326,6 +20361,7 @@
      "how": "main clause",
      "leaf": 9,
      "subject_from": "unit 0 (elaboration)",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -20343,11 +20379,11 @@
     {
      "subject": "we",
      "verb": "look",
-     "object": "at Bill 87, Speaker",
+     "object": "at Bill 87",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "condition or time (if)",
+     "how": "condition or time (if); the form of address after the comma is not part of the object",
      "leaf": 26,
      "subject_from": "",
      "unit": 4
@@ -20355,7 +20391,7 @@
     {
      "subject": "you",
      "verb": "will see",
-     "object": "it has five schedules.",
+     "object": "it has five schedules",
      "kind": "asserted",
      "negated": false,
      "hedged": false,

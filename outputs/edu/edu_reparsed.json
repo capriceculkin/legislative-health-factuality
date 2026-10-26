@@ -4147,7 +4147,19 @@
      ],
      "lines": [
       {
-       "subject": "Jean Martin, the health minister",
+       "subject": "Jean Martin",
+       "verb": "is (apposition)",
+       "object": "the health minister",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "apposition in the unit's tree: the phrase after the comma renames the name",
+       "leaf": 0,
+       "subject_from": "",
+       "implied_verb": true
+      },
+      {
+       "subject": "Jean Martin",
        "verb": "tabled",
        "object": "the bill",
        "kind": "asserted",
@@ -4164,7 +4176,20 @@
    "connections": [],
    "lines": [
     {
-     "subject": "Jean Martin, the health minister",
+     "subject": "Jean Martin",
+     "verb": "is (apposition)",
+     "object": "the health minister",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "apposition in the unit's tree: the phrase after the comma renames the name",
+     "leaf": 0,
+     "subject_from": "",
+     "implied_verb": true,
+     "unit": 0
+    },
+    {
+     "subject": "Jean Martin",
      "verb": "tabled",
      "object": "the bill",
      "kind": "asserted",
@@ -4302,7 +4327,20 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "Jean Martin",
+       "verb": "is (apposition)",
+       "object": "le ministre de la Santé",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "apposition across units: unit 1 renames the name in unit 0 (elaboration)",
+       "leaf": null,
+       "implied_verb": true,
+       "subject_from": "unit 0 (apposition, elaboration)"
+      }
+     ]
     },
     {
      "unit": 2,
@@ -4467,6 +4505,19 @@
     }
    ],
    "lines": [
+    {
+     "subject": "Jean Martin",
+     "verb": "is (apposition)",
+     "object": "le ministre de la Santé",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "apposition across units: unit 1 renames the name in unit 0 (elaboration)",
+     "leaf": null,
+     "implied_verb": true,
+     "subject_from": "unit 0 (apposition, elaboration)",
+     "unit": 1
+    },
     {
      "subject": "Jean Martin",
      "verb": "a déposé",
@@ -7998,7 +8049,7 @@
       {
        "subject": "The minister",
        "verb": "said",
-       "object": "that the bill lowers costs.",
+       "object": "that the bill lowers costs",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -8142,7 +8193,7 @@
     {
      "subject": "The minister",
      "verb": "said",
-     "object": "that the bill lowers costs.",
+     "object": "that the bill lowers costs",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -8233,12 +8284,13 @@
       {
        "subject": "Le ministre",
        "verb": "a dit",
-       "object": "",
+       "object": "que le projet de loi réduit les coûts",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 2,
+       "object_from": "discourse: what is said, unit 1",
        "subject_from": ""
       }
      ]
@@ -8404,12 +8456,13 @@
     {
      "subject": "Le ministre",
      "verb": "a dit",
-     "object": "",
+     "object": "que le projet de loi réduit les coûts",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause",
      "leaf": 2,
+     "object_from": "discourse: what is said, unit 1",
      "subject_from": "",
      "unit": 0
     },
@@ -9268,7 +9321,7 @@
       {
        "subject": "The doctor",
        "verb": "said",
-       "object": "The wait times are too long.",
+       "object": "The wait times are too long",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -9425,7 +9478,7 @@
     {
      "subject": "The doctor",
      "verb": "said",
-     "object": "The wait times are too long.",
+     "object": "The wait times are too long",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -9522,12 +9575,13 @@
       {
        "subject": "Le médecin",
        "verb": "a dit",
-       "object": "",
+       "object": "Les délais sont trop longs",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 2,
+       "object_from": "discourse: what is said, unit 1",
        "subject_from": ""
       }
      ]
@@ -9683,12 +9737,13 @@
     {
      "subject": "Le médecin",
      "verb": "a dit",
-     "object": "",
+     "object": "Les délais sont trop longs",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause",
      "leaf": 2,
+     "object_from": "discourse: what is said, unit 1",
      "subject_from": "",
      "unit": 0
     },
@@ -9761,7 +9816,7 @@
       {
        "subject": "I",
        "verb": "think",
-       "object": "the bill lowers costs.",
+       "object": "the bill lowers costs",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -9894,7 +9949,7 @@
     {
      "subject": "I",
      "verb": "think",
-     "object": "the bill lowers costs.",
+     "object": "the bill lowers costs",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -11945,11 +12000,11 @@
       {
        "subject": "la province",
        "verb": "paie",
-       "object": "ce (que)",
+       "object": "",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "relative clause",
+       "how": "relative clause; 'ce que' is part of the conjunction",
        "leaf": 10,
        "subject_from": ""
       }
@@ -12010,11 +12065,11 @@
     {
      "subject": "la province",
      "verb": "paie",
-     "object": "ce (que)",
+     "object": "",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "relative clause",
+     "how": "relative clause; 'ce que' is part of the conjunction",
      "leaf": 10,
      "subject_from": "",
      "unit": 1
@@ -12570,7 +12625,7 @@
       {
        "subject": "The committee",
        "verb": "will decide",
-       "object": "whether the bill proceeds.",
+       "object": "whether the bill proceeds",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -12703,7 +12758,7 @@
     {
      "subject": "The committee",
      "verb": "will decide",
-     "object": "whether the bill proceeds.",
+     "object": "whether the bill proceeds",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -12788,12 +12843,13 @@
       {
        "subject": "Le comité",
        "verb": "décidera",
-       "object": "",
+       "object": "si le projet de loi va de l'avant",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 2,
+       "object_from": "discourse: what is said, unit 1",
        "subject_from": ""
       }
      ]
@@ -12970,12 +13026,13 @@
     {
      "subject": "Le comité",
      "verb": "décidera",
-     "object": "",
+     "object": "si le projet de loi va de l'avant",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause",
      "leaf": 2,
+     "object_from": "discourse: what is said, unit 1",
      "subject_from": "",
      "unit": 0
     },
@@ -13137,14 +13194,15 @@
      "lines": [
       {
        "subject": "The government",
-       "verb": "to help",
+       "verb": "help",
        "object": "families",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 5,
-       "subject_from": "unit 0 (purpose)"
+       "subject_from": "unit 0 (purpose)",
+       "infinitive": true
       }
      ]
     }
@@ -13202,7 +13260,7 @@
     },
     {
      "subject": "The government",
-     "verb": "to help",
+     "verb": "help",
      "object": "families",
      "kind": "asserted",
      "negated": false,
@@ -13210,6 +13268,7 @@
      "how": "main clause",
      "leaf": 5,
      "subject_from": "unit 0 (purpose)",
+     "infinitive": true,
      "unit": 1
     }
    ]
@@ -15505,10 +15564,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 2,
-       "subject_from": "",
-       "context": [
-        "by closing clinics. (manner-means, unit 1)"
-       ]
+       "subject_from": ""
       }
      ]
     },
@@ -15566,7 +15622,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "The province",
+       "verb": "closing",
+       "object": "clinics",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "means (by + -ing / -ant): the parser read the verb as a noun",
+       "leaf": 5,
+       "subject_from": "unit 0 (manner-means)"
+      }
+     ]
     }
    ],
    "relations": [
@@ -15618,10 +15686,19 @@
      "how": "main clause",
      "leaf": 2,
      "subject_from": "",
-     "context": [
-      "by closing clinics. (manner-means, unit 1)"
-     ],
      "unit": 0
+    },
+    {
+     "subject": "The province",
+     "verb": "closing",
+     "object": "clinics",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "means (by + -ing / -ant): the parser read the verb as a noun",
+     "leaf": 5,
+     "subject_from": "unit 0 (manner-means)",
+     "unit": 1
     }
    ]
   },
@@ -17534,14 +17611,15 @@
       },
       {
        "subject": "the doctors",
-       "verb": "to accept",
+       "verb": "accept",
        "object": "the deal",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "complement of urged",
        "leaf": 6,
-       "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)"
+       "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)",
+       "infinitive": true
       }
      ]
     }
@@ -17563,7 +17641,7 @@
     },
     {
      "subject": "the doctors",
-     "verb": "to accept",
+     "verb": "accept",
      "object": "the deal",
      "kind": "embedded",
      "negated": false,
@@ -17571,6 +17649,7 @@
      "how": "complement of urged",
      "leaf": 6,
      "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)",
+     "infinitive": true,
      "unit": 0
     }
    ]
@@ -20435,7 +20514,7 @@
      "lines": [
       {
        "subject": "this proposed Animal Health Act",
-       "verb": "to help",
+       "verb": "help",
        "object": "us",
        "kind": "asserted",
        "negated": false,
@@ -20445,7 +20524,8 @@
        "subject_from": "unit 1 (elaboration)",
        "context": [
         "If passed (condition, unit 0)"
-       ]
+       ],
+       "infinitive": true
       },
       {
        "subject": "this proposed Animal Health Act",
@@ -20555,7 +20635,7 @@
     },
     {
      "subject": "this proposed Animal Health Act",
-     "verb": "to help",
+     "verb": "help",
      "object": "us",
      "kind": "asserted",
      "negated": false,
@@ -20566,6 +20646,7 @@
      "context": [
       "If passed (condition, unit 0)"
      ],
+     "infinitive": true,
      "unit": 2
     },
     {
@@ -23359,15 +23440,16 @@
      "lines": [
       {
        "subject": "We",
-       "verb": "to ensure",
-       "object": "that patients have access to emergency care and to specialists.",
+       "verb": "ensure",
+       "object": "that patients have access to emergency care and to specialists",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "a verb the tree rules gave no line for; read from the unit's tree",
        "leaf": 8,
        "object_from": "discourse: what is said, unit 2",
-       "subject_from": "unit 0 (purpose)"
+       "subject_from": "unit 0 (purpose)",
+       "infinitive": true
       }
      ]
     },
@@ -23610,8 +23692,8 @@
     },
     {
      "subject": "We",
-     "verb": "to ensure",
-     "object": "that patients have access to emergency care and to specialists.",
+     "verb": "ensure",
+     "object": "that patients have access to emergency care and to specialists",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -23619,6 +23701,7 @@
      "leaf": 8,
      "object_from": "discourse: what is said, unit 2",
      "subject_from": "unit 0 (purpose)",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -23723,7 +23806,7 @@
       {
        "subject": "The member for Oriele",
        "verb": "remarked",
-       "object": "that this will become a mega-hospital, a huge corporation.",
+       "object": "that this will become a mega-hospital, a huge corporation",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -23919,7 +24002,7 @@
     {
      "subject": "The member for Oriele",
      "verb": "remarked",
-     "object": "that this will become a mega-hospital, a huge corporation.",
+     "object": "that this will become a mega-hospital, a huge corporation",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -27948,12 +28031,13 @@
       {
        "subject": "Vous",
        "verb": "vous doutiez",
-       "object": "",
+       "object": "que Daniel est loin d'être le seul dans cette situation",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause; someone spoken to is not the object",
        "leaf": 0,
+       "object_from": "discourse: what is said, unit 1",
        "subject_from": ""
       }
      ]
@@ -28173,12 +28257,13 @@
     {
      "subject": "Vous",
      "verb": "vous doutiez",
-     "object": "",
+     "object": "que Daniel est loin d'être le seul dans cette situation",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause; someone spoken to is not the object",
      "leaf": 0,
+     "object_from": "discourse: what is said, unit 1",
      "subject_from": "",
      "unit": 0
     },
@@ -28384,12 +28469,13 @@
       {
        "subject": "elle",
        "verb": "a dit",
-       "object": "",
+       "object": "Je veux maintenant collaborer",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 10,
+       "object_from": "discourse: what is said, unit 2",
        "subject_from": ""
       }
      ]
@@ -28463,13 +28549,12 @@
       {
        "subject": "Je",
        "verb": "veux collaborer",
-       "object": "elle a dit :",
+       "object": "",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 14,
-       "object_from": "discourse: what is said, unit 1",
        "subject_from": ""
       }
      ]
@@ -28564,25 +28649,25 @@
     {
      "subject": "elle",
      "verb": "a dit",
-     "object": "",
+     "object": "Je veux maintenant collaborer",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause",
      "leaf": 10,
+     "object_from": "discourse: what is said, unit 2",
      "subject_from": "",
      "unit": 1
     },
     {
      "subject": "Je",
      "verb": "veux collaborer",
-     "object": "elle a dit :",
+     "object": "",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause",
      "leaf": 14,
-     "object_from": "discourse: what is said, unit 1",
      "subject_from": "",
      "unit": 2
     }
@@ -29641,12 +29726,13 @@
       {
        "subject": "j'",
        "verb": "ai dit",
-       "object": "",
+       "object": "Les résidences de personnes âgées sont, pour la plupart, un milieu de vie permanent, O.K.?",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 5,
+       "object_from": "discourse: what is said, unit 1",
        "subject_from": ""
       }
      ]
@@ -29892,12 +29978,13 @@
     {
      "subject": "j'",
      "verb": "ai dit",
-     "object": "",
+     "object": "Les résidences de personnes âgées sont, pour la plupart, un milieu de vie permanent, O.K.?",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause",
      "leaf": 5,
+     "object_from": "discourse: what is said, unit 1",
      "subject_from": "",
      "unit": 0
     },
@@ -31289,14 +31376,15 @@
      "lines": [
       {
        "subject": "The bill",
-       "verb": "to sign",
+       "verb": "sign",
        "object": "a written consent form",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 18,
-       "subject_from": "unit 1 (same-unit)"
+       "subject_from": "unit 1 (same-unit)",
+       "infinitive": true
       }
      ]
     },
@@ -31341,7 +31429,7 @@
       {
        "subject": "The bill",
        "verb": "ensuring",
-       "object": "that the decision to have an abortion is separate and independent of that to donate fetal tissue.",
+       "object": "that the decision to have an abortion is separate and independent of that to donate fetal tissue",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -31459,14 +31547,15 @@
      "lines": [
       {
        "subject": "The bill",
-       "verb": "to have",
+       "verb": "have",
        "object": "an abortion",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 30,
-       "subject_from": "unit 3 (elaboration)"
+       "subject_from": "unit 3 (elaboration)",
+       "infinitive": true
       }
      ]
     },
@@ -31623,14 +31712,15 @@
      "lines": [
       {
        "subject": "(unstated)",
-       "verb": "to donate",
+       "verb": "donate",
        "object": "fetal tissue",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 40,
-       "subject_from": "'is separate and independent of that | to ...': an infinitive on a noun or adjective; who does it is not in the words"
+       "subject_from": "'is separate and independent of that | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+       "infinitive": true
       }
      ]
     }
@@ -31963,7 +32053,7 @@
     },
     {
      "subject": "The bill",
-     "verb": "to sign",
+     "verb": "sign",
      "object": "a written consent form",
      "kind": "asserted",
      "negated": false,
@@ -31971,12 +32061,13 @@
      "how": "main clause",
      "leaf": 18,
      "subject_from": "unit 1 (same-unit)",
+     "infinitive": true,
      "unit": 3
     },
     {
      "subject": "The bill",
      "verb": "ensuring",
-     "object": "that the decision to have an abortion is separate and independent of that to donate fetal tissue.",
+     "object": "that the decision to have an abortion is separate and independent of that to donate fetal tissue",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -31988,7 +32079,7 @@
     },
     {
      "subject": "The bill",
-     "verb": "to have",
+     "verb": "have",
      "object": "an abortion",
      "kind": "asserted",
      "negated": false,
@@ -31996,6 +32087,7 @@
      "how": "main clause",
      "leaf": 30,
      "subject_from": "unit 3 (elaboration)",
+     "infinitive": true,
      "unit": 6
     },
     {
@@ -32012,7 +32104,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to donate",
+     "verb": "donate",
      "object": "fetal tissue",
      "kind": "asserted",
      "negated": false,
@@ -32020,6 +32112,7 @@
      "how": "main clause",
      "leaf": 40,
      "subject_from": "'is separate and independent of that | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+     "infinitive": true,
      "unit": 8
     }
    ]
@@ -33049,14 +33142,15 @@
      "lines": [
       {
        "subject": "plaintiffs lawyers",
-       "verb": "to plead",
+       "verb": "plead",
        "object": "greater economic damages",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 23,
-       "subject_from": "unit 2 (elaboration)"
+       "subject_from": "unit 2 (elaboration)",
+       "infinitive": true
       }
      ]
     }
@@ -33208,7 +33302,7 @@
     },
     {
      "subject": "plaintiffs lawyers",
-     "verb": "to plead",
+     "verb": "plead",
      "object": "greater economic damages",
      "kind": "asserted",
      "negated": false,
@@ -33216,6 +33310,7 @@
      "how": "main clause",
      "leaf": 23,
      "subject_from": "unit 2 (elaboration)",
+     "infinitive": true,
      "unit": 3
     }
    ]
@@ -33384,7 +33479,7 @@
       {
        "subject": "the HMO",
        "verb": "said",
-       "object": "You need another opinion.",
+       "object": "You need another opinion",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -33573,7 +33668,7 @@
     {
      "subject": "the HMO",
      "verb": "said",
-     "object": "You need another opinion.",
+     "object": "You need another opinion",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -34119,14 +34214,15 @@
      "lines": [
       {
        "subject": "(unstated)",
-       "verb": "to stop",
+       "verb": "stop",
        "object": "playing politics with people’s lives",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 4,
-       "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words"
+       "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+       "infinitive": true
       },
       {
        "subject": "(unstated)",
@@ -34276,14 +34372,15 @@
       },
       {
        "subject": "my colleagues",
-       "verb": "to reject",
+       "verb": "reject",
        "object": "the amendment",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "complement of urge",
        "leaf": 17,
-       "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)"
+       "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)",
+       "infinitive": true
       }
      ]
     }
@@ -34408,7 +34505,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to stop",
+     "verb": "stop",
      "object": "playing politics with people’s lives",
      "kind": "asserted",
      "negated": false,
@@ -34416,6 +34513,7 @@
      "how": "main clause",
      "leaf": 4,
      "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -34444,7 +34542,7 @@
     },
     {
      "subject": "my colleagues",
-     "verb": "to reject",
+     "verb": "reject",
      "object": "the amendment",
      "kind": "embedded",
      "negated": false,
@@ -34452,6 +34550,7 @@
      "how": "complement of urge",
      "leaf": 17,
      "subject_from": "unit tree: the object of the verb before it does it (urge X to, require X to)",
+     "infinitive": true,
      "unit": 3
     }
    ]
@@ -36749,14 +36848,15 @@
       },
       {
        "subject": "My own State",
-       "verb": "to have",
+       "verb": "have",
        "object": "the highest number of meth lab seizures per capita in the Nation",
        "kind": "reported",
        "negated": false,
        "hedged": false,
        "how": "what is said (was declared)",
        "leaf": 9,
-       "subject_from": "unit tree: the subject of the clause the verb sits in"
+       "subject_from": "unit tree: the subject of the clause the verb sits in",
+       "infinitive": true
       }
      ]
     }
@@ -36778,7 +36878,7 @@
     },
     {
      "subject": "My own State",
-     "verb": "to have",
+     "verb": "have",
      "object": "the highest number of meth lab seizures per capita in the Nation",
      "kind": "reported",
      "negated": false,
@@ -36786,6 +36886,7 @@
      "how": "what is said (was declared)",
      "leaf": 9,
      "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "infinitive": true,
      "unit": 0
     }
    ]
@@ -37202,7 +37303,7 @@
       {
        "subject": "My Republican friends",
        "verb": "say",
-       "object": "repeal these health care rights and protections that were extended last year.",
+       "object": "repeal these health care rights and protections that were extended last year",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -37477,7 +37578,7 @@
     {
      "subject": "My Republican friends",
      "verb": "say",
-     "object": "repeal these health care rights and protections that were extended last year.",
+     "object": "repeal these health care rights and protections that were extended last year",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -39938,14 +40039,15 @@
      "lines": [
       {
        "subject": "One hundred and seventeen women from Cochrane district",
-       "verb": "to obtain",
+       "verb": "obtain",
        "object": "abortions",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 14,
-       "subject_from": "unit 0 (purpose)"
+       "subject_from": "unit 0 (purpose)",
+       "infinitive": true
       }
      ]
     }
@@ -40003,7 +40105,7 @@
     },
     {
      "subject": "One hundred and seventeen women from Cochrane district",
-     "verb": "to obtain",
+     "verb": "obtain",
      "object": "abortions",
      "kind": "asserted",
      "negated": false,
@@ -40011,6 +40113,7 @@
      "how": "main clause",
      "leaf": 14,
      "subject_from": "unit 0 (purpose)",
+     "infinitive": true,
      "unit": 1
     }
    ]
@@ -40309,6 +40412,18 @@
        "how": "main clause; joined with its to-clause",
        "leaf": 9,
        "subject_from": ""
+      },
+      {
+       "subject": "Brian Smith",
+       "verb": "is (apposition)",
+       "object": "the much-ad-mired Ottawa sportscaster",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "apposition in the unit's tree: the phrase after the comma renames the name",
+       "leaf": 17,
+       "subject_from": "",
+       "implied_verb": true
       }
      ]
     },
@@ -40491,6 +40606,19 @@
      "how": "main clause; joined with its to-clause",
      "leaf": 9,
      "subject_from": "",
+     "unit": 0
+    },
+    {
+     "subject": "Brian Smith",
+     "verb": "is (apposition)",
+     "object": "the much-ad-mired Ottawa sportscaster",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "apposition in the unit's tree: the phrase after the comma renames the name",
+     "leaf": 17,
+     "subject_from": "",
+     "implied_verb": true,
      "unit": 0
     },
     {
@@ -41935,14 +42063,15 @@
      "lines": [
       {
        "subject": "Ontario Health",
-       "verb": "to support",
+       "verb": "support",
        "object": "a more connected, high-quality health care system",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 42,
-       "subject_from": "unit 1 (purpose)"
+       "subject_from": "unit 1 (purpose)",
+       "infinitive": true
       }
      ]
     }
@@ -42047,7 +42176,7 @@
     },
     {
      "subject": "Ontario Health",
-     "verb": "to support",
+     "verb": "support",
      "object": "a more connected, high-quality health care system",
      "kind": "asserted",
      "negated": false,
@@ -42055,6 +42184,7 @@
      "how": "main clause",
      "leaf": 42,
      "subject_from": "unit 1 (purpose)",
+     "infinitive": true,
      "unit": 2
     }
    ]
@@ -44105,14 +44235,15 @@
      "lines": [
       {
        "subject": "The bill",
-       "verb": "to establish",
+       "verb": "establish",
        "object": "administrative proceedings",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 9,
-       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)"
+       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+       "infinitive": true
       }
      ]
     },
@@ -44161,15 +44292,16 @@
      "lines": [
       {
        "subject": "The bill",
-       "verb": "to ensure",
-       "object": "that a woman’s decision to have an abortion is based on informed choice.",
+       "verb": "ensure",
+       "object": "that a woman’s decision to have an abortion is based on informed choice",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "a verb the tree rules gave no line for; read from the unit's tree",
        "leaf": 13,
        "object_from": "discourse: what is said, unit 4, unit 5 and unit 6",
-       "subject_from": "unit 2 (purpose)"
+       "subject_from": "unit 2 (purpose)",
+       "infinitive": true
       }
      ]
     },
@@ -44307,14 +44439,15 @@
      "lines": [
       {
        "subject": "The bill",
-       "verb": "to have",
+       "verb": "have",
        "object": "an abortion",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 20,
-       "subject_from": "unit 2 (purpose)"
+       "subject_from": "unit 2 (purpose)",
+       "infinitive": true
       }
      ]
     },
@@ -44636,7 +44769,7 @@
     },
     {
      "subject": "The bill",
-     "verb": "to establish",
+     "verb": "establish",
      "object": "administrative proceedings",
      "kind": "asserted",
      "negated": false,
@@ -44644,12 +44777,13 @@
      "how": "main clause",
      "leaf": 9,
      "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+     "infinitive": true,
      "unit": 2
     },
     {
      "subject": "The bill",
-     "verb": "to ensure",
-     "object": "that a woman’s decision to have an abortion is based on informed choice.",
+     "verb": "ensure",
+     "object": "that a woman’s decision to have an abortion is based on informed choice",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -44657,11 +44791,12 @@
      "leaf": 13,
      "object_from": "discourse: what is said, unit 4, unit 5 and unit 6",
      "subject_from": "unit 2 (purpose)",
+     "infinitive": true,
      "unit": 3
     },
     {
      "subject": "The bill",
-     "verb": "to have",
+     "verb": "have",
      "object": "an abortion",
      "kind": "asserted",
      "negated": false,
@@ -44669,6 +44804,7 @@
      "how": "main clause",
      "leaf": 20,
      "subject_from": "unit 2 (purpose)",
+     "infinitive": true,
      "unit": 5
     },
     {
@@ -44969,7 +45105,7 @@
       {
        "subject": "The report",
        "verb": "recommends",
-       "object": "that the Ministry of Health and pharmacy organizations should set a target level of substitution.",
+       "object": "that the Ministry of Health and pharmacy organizations should set a target level of substitution",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -45265,7 +45401,7 @@
     {
      "subject": "The report",
      "verb": "recommends",
-     "object": "that the Ministry of Health and pharmacy organizations should set a target level of substitution.",
+     "object": "that the Ministry of Health and pharmacy organizations should set a target level of substitution",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -47011,14 +47147,15 @@
      "lines": [
       {
        "subject": "This report",
-       "verb": "to consolidate",
+       "verb": "consolidate",
        "object": "under one roof out-of-hospital and independent health facilities",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 13,
-       "subject_from": "unit 1 (elaboration)"
+       "subject_from": "unit 1 (elaboration)",
+       "infinitive": true
       }
      ]
     }
@@ -47123,7 +47260,7 @@
     },
     {
      "subject": "This report",
-     "verb": "to consolidate",
+     "verb": "consolidate",
      "object": "under one roof out-of-hospital and independent health facilities",
      "kind": "asserted",
      "negated": false,
@@ -47131,6 +47268,7 @@
      "how": "main clause",
      "leaf": 13,
      "subject_from": "unit 1 (elaboration)",
+     "infinitive": true,
      "unit": 2
     }
    ]
@@ -47373,14 +47511,15 @@
       },
       {
        "subject": "(unstated)",
-       "verb": "to support",
+       "verb": "support",
        "object": "it",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 13,
-       "subject_from": "unit tree: an infinitive on an adjective: who does it is not in the words"
+       "subject_from": "unit tree: an infinitive on an adjective: who does it is not in the words",
+       "infinitive": true
       }
      ]
     }
@@ -47450,7 +47589,7 @@
     },
     {
      "subject": "(unstated)",
-     "verb": "to support",
+     "verb": "support",
      "object": "it",
      "kind": "asserted",
      "negated": false,
@@ -47458,6 +47597,7 @@
      "how": "main clause",
      "leaf": 13,
      "subject_from": "unit tree: an infinitive on an adjective: who does it is not in the words",
+     "infinitive": true,
      "unit": 1
     }
    ]
@@ -48703,7 +48843,7 @@
       {
        "subject": "Mr Eves",
        "verb": "moves",
-       "object": "that subsection 19(4) of the bill be struck out and the following substituted therefor: “(4) The director shall deliver with the notice under subsection (3) a notice that the licensee is entitled to a hearing by the board if the licensee mails or delivers, within 15 days after the notice is served on the licensee, notice in writing requiring a hearing to the director and the board, and the licensee may so require such a hearing.",
+       "object": "that subsection 19(4) of the bill be struck out and the following substituted therefor: “(4) The director shall deliver with the notice under subsection (3) a notice that the licensee is entitled to a hearing by the board if the licensee mails or delivers, within 15 days after the notice is served on the licensee, notice in writing requiring a hearing to the director and the board, and the licensee may so require such a hearing",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
@@ -50127,7 +50267,7 @@
     {
      "subject": "Mr Eves",
      "verb": "moves",
-     "object": "that subsection 19(4) of the bill be struck out and the following substituted therefor: “(4) The director shall deliver with the notice under subsection (3) a notice that the licensee is entitled to a hearing by the board if the licensee mails or delivers, within 15 days after the notice is served on the licensee, notice in writing requiring a hearing to the director and the board, and the licensee may so require such a hearing.",
+     "object": "that subsection 19(4) of the bill be struck out and the following substituted therefor: “(4) The director shall deliver with the notice under subsection (3) a notice that the licensee is entitled to a hearing by the board if the licensee mails or delivers, within 15 days after the notice is served on the licensee, notice in writing requiring a hearing to the director and the board, and the licensee may so require such a hearing",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
@@ -51080,14 +51220,15 @@
      "lines": [
       {
        "subject": "These statements of environmental values",
-       "verb": "to act",
+       "verb": "act",
        "object": "as guiding principles",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause",
        "leaf": 16,
-       "subject_from": "unit 0 (purpose)"
+       "subject_from": "unit 0 (purpose)",
+       "infinitive": true
       }
      ]
     },
@@ -51336,7 +51477,7 @@
     },
     {
      "subject": "These statements of environmental values",
-     "verb": "to act",
+     "verb": "act",
      "object": "as guiding principles",
      "kind": "asserted",
      "negated": false,
@@ -51344,6 +51485,7 @@
      "how": "main clause",
      "leaf": 16,
      "subject_from": "unit 0 (purpose)",
+     "infinitive": true,
      "unit": 1
     },
     {
@@ -52162,12 +52304,13 @@
       {
        "subject": "je",
        "verb": "ne sais pas",
-       "object": "",
+       "object": "s'il a voulu que ça corresponde avec le numéro de son projet de loi, 35 amendements sur le projet de loi 35,",
        "kind": "asserted",
        "negated": true,
        "hedged": false,
        "how": "main clause",
        "leaf": 14,
+       "object_from": "discourse: what is said, unit 2 and unit 3",
        "subject_from": ""
       }
      ]
@@ -52733,12 +52876,13 @@
     {
      "subject": "je",
      "verb": "ne sais pas",
-     "object": "",
+     "object": "s'il a voulu que ça corresponde avec le numéro de son projet de loi, 35 amendements sur le projet de loi 35,",
      "kind": "asserted",
      "negated": true,
      "hedged": false,
      "how": "main clause",
      "leaf": 14,
+     "object_from": "discourse: what is said, unit 2 and unit 3",
      "subject_from": "",
      "unit": 1
     },
@@ -57848,7 +57992,20 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "L' AQDR",
+       "verb": "is (apposition)",
+       "object": "l' association québécoise des droits des retraités",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "apposition across units: unit 1 renames the name in unit 0 (elaboration)",
+       "leaf": null,
+       "implied_verb": true,
+       "subject_from": "unit 0 (apposition, elaboration)"
+      }
+     ]
     },
     {
      "unit": 2,
@@ -58934,6 +59091,19 @@
     }
    ],
    "lines": [
+    {
+     "subject": "L' AQDR",
+     "verb": "is (apposition)",
+     "object": "l' association québécoise des droits des retraités",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "apposition across units: unit 1 renames the name in unit 0 (elaboration)",
+     "leaf": null,
+     "implied_verb": true,
+     "subject_from": "unit 0 (apposition, elaboration)",
+     "unit": 1
+    },
     {
      "subject": "L' AQDR",
      "verb": "a parlé",
@@ -69148,12 +69318,13 @@
       {
        "subject": "Le projet de loi",
        "verb": "prévoyant",
-       "object": "",
+       "object": "qu'il est interdit d'en posséder sur les terrains, dans les locaux ou dans les bâtiments d'un établissement d'enseignement collégial ou universitaire, à l'exception des résidences universitaires",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "a verb the tree rules gave no line for; read from the unit's tree",
        "leaf": 16,
+       "object_from": "discourse: what is said, unit 2 and unit 3",
        "subject_from": "unit 0 (elaboration)"
       }
      ]
@@ -69672,12 +69843,13 @@
     {
      "subject": "Le projet de loi",
      "verb": "prévoyant",
-     "object": "",
+     "object": "qu'il est interdit d'en posséder sur les terrains, dans les locaux ou dans les bâtiments d'un établissement d'enseignement collégial ou universitaire, à l'exception des résidences universitaires",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "a verb the tree rules gave no line for; read from the unit's tree",
      "leaf": 16,
+     "object_from": "discourse: what is said, unit 2 and unit 3",
      "subject_from": "unit 0 (elaboration)",
      "unit": 1
     },
@@ -73812,13 +73984,12 @@
       {
        "subject": "Vous",
        "verb": "savez",
-       "object": "depuis des temps immémoriaux, les peuples ont toujours organisé les territoires sur lesquels ils fondaient leur société.",
+       "object": "",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "main clause; someone spoken to is not the object",
        "leaf": 0,
-       "object_from": "discourse: what is said, unit 1",
        "subject_from": ""
       }
      ]
@@ -74080,13 +74251,12 @@
     {
      "subject": "Vous",
      "verb": "savez",
-     "object": "depuis des temps immémoriaux, les peuples ont toujours organisé les territoires sur lesquels ils fondaient leur société.",
+     "object": "",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "main clause; someone spoken to is not the object",
      "leaf": 0,
-     "object_from": "discourse: what is said, unit 1",
      "subject_from": "",
      "unit": 0
     },

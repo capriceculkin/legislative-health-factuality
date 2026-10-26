@@ -1,58 +1,58 @@
 == 1/5 parse every discourse unit on its own, and 20 new sentences per legislature
-11:43:19 == edu_collect: 220 saved sentences; rules /Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v6/preds.py
-11:43:24    loaded Stanza en 1.15.0 (constituency: yes) in 2.3s
+12:11:09 == edu_collect: 220 saved sentences; rules /Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v6/preds.py
+12:11:14    loaded Stanza en 1.15.0 (constituency: yes) in 2.3s
 /Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
   super().__init__(batch_shape=batch_shape, event_shape=event_shape)
-11:43:36    loaded the Berkeley parser (benepar_fr2) in 12.6s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
-11:43:39    loaded spaCy fr (core_news_lg 3.8.0) in 2.2s
-11:43:41    20/220 sentences, every unit parsed (1.1s each)
-11:43:42    40/220 sentences, every unit parsed (0.6s each)
-11:43:44    60/220 sentences, every unit parsed (0.4s each)
-11:43:47    80/220 sentences, every unit parsed (0.4s each)
-11:43:51    100/220 sentences, every unit parsed (0.3s each)
-11:43:56    120/220 sentences, every unit parsed (0.3s each)
-11:44:01    140/220 sentences, every unit parsed (0.3s each)
-11:44:05    160/220 sentences, every unit parsed (0.3s each)
-11:44:10    180/220 sentences, every unit parsed (0.3s each)
-11:44:14    200/220 sentences, every unit parsed (0.3s each)
-11:44:18    220/220 sentences, every unit parsed (0.3s each)
-11:44:19    us: 20 new sentences drawn from 268918
-11:44:22    ontario: 20 new sentences drawn from 415657
-11:44:25    quebec: 20 new sentences drawn from 348752
-11:44:38    loaded the discourse parser (UniRST) in 13.7s
-11:44:45    10 new sentences parsed
-11:44:50    20 new sentences parsed
-11:44:57    30 new sentences parsed
-11:45:04    40 new sentences parsed
+12:11:27    loaded the Berkeley parser (benepar_fr2) in 12.9s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+12:11:29    loaded spaCy fr (core_news_lg 3.8.0) in 2.2s
+12:11:32    20/220 sentences, every unit parsed (1.1s each)
+12:11:33    40/220 sentences, every unit parsed (0.6s each)
+12:11:35    60/220 sentences, every unit parsed (0.4s each)
+12:11:37    80/220 sentences, every unit parsed (0.3s each)
+12:11:41    100/220 sentences, every unit parsed (0.3s each)
+12:11:45    120/220 sentences, every unit parsed (0.3s each)
+12:11:49    140/220 sentences, every unit parsed (0.3s each)
+12:11:54    160/220 sentences, every unit parsed (0.3s each)
+12:11:59    180/220 sentences, every unit parsed (0.3s each)
+12:12:03    200/220 sentences, every unit parsed (0.3s each)
+12:12:07    220/220 sentences, every unit parsed (0.3s each)
+12:12:09    us: 20 new sentences drawn from 268918
+12:12:11    ontario: 20 new sentences drawn from 415657
+12:12:13    quebec: 20 new sentences drawn from 348752
+12:12:26    loaded the discourse parser (UniRST) in 12.3s
+12:12:31    10 new sentences parsed
+12:12:36    20 new sentences parsed
+12:12:41    30 new sentences parsed
+12:12:47    40 new sentences parsed
 /Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
   super().__init__(batch_shape=batch_shape, event_shape=event_shape)
-11:45:12    50 new sentences parsed
-11:45:15    60 new sentences parsed
-11:45:15 == wrote /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/edu_trees.json (280 sentences) and /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/more_parses.json (60 new)
+12:12:51    50 new sentences parsed
+12:12:55    60 new sentences parsed
+12:12:55 == wrote /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/edu_trees.json (280 sentences) and /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/more_parses.json (60 new)
 == 2/5 lines from each unit's own tree, connected through the discourse parse
-wrote outputs/edu/edu_reparsed.json: 220 sentences, 508 units, 465 lines
-wrote outputs/edu/more_reparsed.json: 60 sentences, 194 units, 188 lines
+wrote outputs/edu/edu_reparsed.json: 220 sentences, 508 units, 479 lines
+wrote outputs/edu/more_reparsed.json: 60 sentences, 194 units, 190 lines
 wrote outputs/edu/edu_with_sentence_tree.json: 220 sentences, 508 units, 458 lines
 == 3/5 scores against the answer keys
-heldout en         discourse first      26/36    72%   17/36    47%      9 of 35
-heldout fr         discourse first      19/33    58%   11/33    33%     22 of 41
-sample en          discourse first      95/119   80%   49/119   41%     28 of 123
-sample fr          discourse first      88/116   76%   45/116   39%     42 of 130
-simple tests en    discourse first      67/70    96%   64/70    91%      1 of 68
-simple tests fr    discourse first      63/70    90%   62/70    89%      5 of 68
+heldout en         discourse first      29/36    81%   18/36    50%      7 of 36
+heldout fr         discourse first      19/33    58%   11/33    33%     23 of 42
+sample en          discourse first     103/119   87%   53/119   45%     28 of 131
+sample fr          discourse first      92/116   79%   48/116   41%     41 of 133
+simple tests en    discourse first      68/70    97%   65/70    93%      0 of 68
+simple tests fr    discourse first      66/70    94%   65/70    93%      3 of 69
 == 4/5 figures (tree inside a tree)
 wrote docs/discourse_first_figures.html with 8 sentences
 wrote docs/discourse_first_new_sentences.html with 12 sentences
 == 5/5 the notebook: every step, more sentences per legislature, the data files, and the tests (about 10 minutes)
 wrote notebooks/discourse_first.ipynb
-checks and rule tests: 58 pass, 0 fail
+checks and rule tests: 94 pass, 0 fail
 trees: parsed now
             set  found %  exact % exact 95% interval
-     heldout en       72       47           32 to 63
+     heldout en       81       50           34 to 66
      heldout fr       58       33           20 to 50
-      sample en       80       41           33 to 50
-      sample fr       76       39           30 to 48
-simple tests en       96       91           83 to 96
-simple tests fr       90       89           79 to 94
+      sample en       87       45           36 to 53
+      sample fr       79       41           33 to 50
+simple tests en       97       93           84 to 97
+simple tests fr       94       93           84 to 97
 
 == done: outputs/edu/, docs/discourse_first_*.html, notebooks/discourse_first.ipynb, outputs/edu/notebook_outputs.txt (the notebook's results as text)

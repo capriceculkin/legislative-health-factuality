@@ -1,21 +1,28 @@
 noun phrase,lang,as,times
 it,en,subject,14
-It,en,subject,6
 there,en,subject,4
-These corrections,en,subject,3
+It,en,subject,4
+people,en,subject,3
 My goal,en,subject,3
 this bill,en,object,2
-people,en,subject,2
+These corrections,en,subject,2
 necessary,en,object,2
 the proposal,en,subject,2
+a system,en,subject,2
 their children,en,object,2
-H.R. 2646,en,subject,2
-Bill 78,en,subject,2
+the resources,en,object,2
+my colleagues,en,subject,2
+the many other Members and organizations,en,subject,2
+my original Bill 111,en,subject,2
 our government,en,subject,2
+which,en,subject,2
 The resources,en,subject,2
 des gens,fr,subject,2
 le,fr,object,2
 Le ministre,fr,subject,2
+les administrateurs municipaux,fr,subject,2
+des dommages beaucoup plus substantiels et importants,fr,object,2
+le menu législatif,fr,object,2
 le peu,fr,object,2
 le peu,fr,subject,2
 A small hardware store in an AHP,en,subject,2
@@ -23,13 +30,13 @@ people all over America,en,subject,1
 to the constant stories from patients and families,en,object,1
 patients and families,en,subject,1
 access to mental health care,en,object,1
+that there are not tragic gaps in our mental health system,en,object,1
 tragic gaps in our mental health system,en,object,1
 that there are no losers,en,object,1
 no losers,en,object,1
 to home health care,en,object,1
 time,en,object,1
 back to work,en,object,1
-work,en,subject,1
 America,en,object,1
 the 31st travesty,en,object,1
 my colleagues,en,object,1
@@ -50,37 +57,40 @@ abortion,en,object,1
 over 10 million cases of the seven most common chronic diseases,en,object,1
 that the formula,en,object,1
 allotments for the territories and the District,en,object,1
+the statistical assumptions,en,object,1
+the statistical assumptions,en,subject,1
 to,en,object,1
 The bill's sponsors,en,subject,1
 "that by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit",en,object,1
 part or all of the costs of those with incomes up to 150 percent of the poverty level,en,object,1
 that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit,en,object,1
 an adequate base of healthy seniors,en,object,1
+an adequate base of healthy seniors,en,subject,1
 the portion in greatest need of the benefit,en,object,1
 especially hesitant about a system,en,object,1
-a system,en,subject,1
 on HMOs and other private insurance plans,en,object,1
 services,en,object,1
 a large number of uninsured children in our communities,en,object,1
+Having a large number of uninsured children in our communities,en,subject,1
 a tremendous financial burden,en,object,1
 families,en,subject,1
 a regular doctor's visit,en,object,1
 my only reservation and objection,en,object,1
-otherwise,en,object,1
+an honorably intended revision of this measure,en,object,1
 The program,en,subject,1
 our vulnerable pregnant women,en,object,1
 alongside parents with young children,en,object,1
+that they all have the resources that they need to raise their children,en,object,1
 they all,en,subject,1
-the resources,en,object,1
 3 minutes,en,object,1
 CID,en,subject,1
 authority,en,object,1
 the distinguished chairman of the Health Subcommittee as well as all of my colleagues,en,object,1
-my colleagues,en,subject,1
 so hard,en,object,1
 every Member,en,object,1
 every Member,en,subject,1
 this amendment,en,object,1
+H.R. 2646,en,subject,1
 "a demonstration of more than 3 years of collaboration between not only myself and Congressman Tim Murphy, but the many other Members and organizations",en,object,1
 to the table,en,object,1
 "feedback, suggestions, and, at times, criticism",en,object,1
@@ -89,10 +99,8 @@ reduce all this excessive and unnecessary paperwork on doctors and healthcare wo
 all this excessive and unnecessary paperwork,en,object,1
 it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services,en,object,1
 economic sense to do so,en,object,1
-economic sense,en,subject,1
 so,en,object,1
 the right thing,en,object,1
-the right thing,en,subject,1
 in terms of health policy,en,object,1
 the public,en,subject,1
 their home care services,en,object,1
@@ -101,9 +109,8 @@ so much,en,object,1
 a very sad day,en,object,1
 them totally mess that up in social contract discussions,en,object,1
 them,en,subject,1
-that up,en,object,1
 "patience, compassion and dedication",en,object,1
-also,en,object,1
+a moral obligation,en,object,1
 that the proposed act will work towards those ends,en,object,1
 the proposed act,en,subject,1
 towards those ends,en,object,1
@@ -112,17 +119,14 @@ the support of the members of this House,en,object,1
 A great present for Canada Day,en,subject,1
 that we got the HST out of that one,en,object,1
 the HST,en,object,1
+Bill 78,en,subject,1
 an improvement,en,object,1
-my original Bill 111,en,subject,1
 on second reading,en,object,1
 on the order paper,en,object,1
 a very strong advocate for patient access to their electronic records,en,object,1
-down,en,object,1
-in an emergency ward,en,object,1
-decisions,en,object,1
-a case,en,subject,1
-urgent enough for admission,en,object,1
 from,en,object,1
+The people,en,subject,1
+"that they would like to see the HST removed from heating, electricity and energy",en,object,1
 "the HST removed from heating, electricity and energy",en,object,1
 the HST,en,subject,1
 "from heating, electricity and energy",en,object,1
@@ -134,14 +138,13 @@ on our progress in health care,en,object,1
 for the people of Ontario,en,object,1
 this bill,en,subject,1
 within the first three-year period,en,object,1
-slightly,en,object,1
+in excess of $50 million per year in revenue,en,object,1
 to me,en,object,1
 of this,en,object,1
 the intent of the government,en,subject,1
 to reduce standards to the lowest common denominator,en,object,1
 the intent,en,subject,1
 standards,en,object,1
-the lowest common denominator,en,subject,1
 a really big problem,en,object,1
 "through strong, independent institutions",en,object,1
 a question,en,object,1
@@ -150,29 +153,30 @@ it,en,object,1
 this matter,en,subject,1
 in the legislative committee,en,object,1
 in the committee,en,object,1
-the committee,en,subject,1
 why it is in front of this public forum here today,en,object,1
 in front of this public forum here today,en,object,1
-again,en,object,1
+by the member,en,object,1
 her proper right,en,object,1
 "the public sector, not the broader public sector",en,object,1
 "arm’s-length agencies, boards, commissions",en,object,1
-"arm’s-length agencies, boards, commissions",en,subject,1
+the people,en,object,1
+the people,en,subject,1
 those goals,en,object,1
 investment,en,object,1
 to be constantly looking for ways,en,object,1
 for ways,en,object,1
 that system,en,object,1
+in the House,en,object,1
 "at Bill 87, Speaker",en,object,1
 it has five schedules,en,object,1
 five schedules,en,object,1
 néfaste,fr,object,1
 négatif,fr,object,1
 un ministre responsable,fr,object,1
+corriger,fr,object,1
 que les gens ne soient pas pénalisés,fr,object,1
 les gens,fr,subject,1
 quels (qu'),fr,object,1
-la municipalité,fr,subject,1
 Les nouveaux élus,fr,subject,1
 l'importance des débats,fr,object,1
 débats (qu'),fr,object,1
@@ -194,7 +198,6 @@ son travail,fr,object,1
 un projet de loi de 59 articles,fr,object,1
 72 amendements,fr,object,1
 que les administrateurs municipaux n'aient pas le beau sourire,fr,object,1
-les administrateurs municipaux,fr,subject,1
 le beau sourire,fr,object,1
 un engagement extraordinaire vis-à-vis,fr,object,1
 vers le gouvernement,fr,object,1
@@ -203,13 +206,10 @@ un travail incroyable de plusieurs ministres de l'ancien gouvernement,fr,object,
 le travail incroyable,fr,object,1
 le travail incroyable,fr,subject,1
 par Mme Louise Laborit et son équipe au niveau du comité de citoyens à Anjou,fr,object,1
-des dommages beaucoup plus substantiels et importants,fr,object,1
 le ministre,fr,subject,1
 de courage,fr,object,1
 insensibles,fr,object,1
 de coeur,fr,object,1
-le menu législatif,fr,object,1
-Mme la Présidente,fr,object,1
 dans les 18 mois au pouvoir du Parti québécois,fr,object,1
 énormément d'autres,fr,object,1
 un certain nombre,fr,object,1
@@ -217,13 +217,14 @@ les choses en plan,fr,object,1
 un projet,fr,object,1
 Le présent projet de loi,fr,subject,1
 une solution à cette problématique,fr,object,1
+Cette législation,fr,subject,1
 l'entreprise,fr,subject,1
 un chiffre d'affaires de plus de 2 500 000 $,fr,object,1
 les petites PME,fr,object,1
 une indemnité,fr,subject,1
 à une semaine par année de service,fr,object,1
-tous,fr,object,1
-qui,fr,subject,1
+la véritable raison,fr,object,1
+la véritable raison,fr,subject,1
 la décision du gouvernement,fr,object,1
 de l'avant,fr,object,1
 an association,en,object,1

@@ -52,6 +52,8 @@ OPT = {"collapse": True,          # merge a verb phrase that holds only another 
        "reanchor": True,          # unit offsets checked against the sentence (the parser may have seen spaced dashes)
        "frame_context": True,     # a unit with no clause ('L'an dernier,') is attached as context to the lines it frames
        "time_subject": True,      # 'Last year the House passed': a time is not the subject
+       "bare_lines": True,        # a unit with a verb the tree rules gave no line for ('said', 'prévoit') gets one to fill
+       "better_object": True,     # an adverb is not the object ('is also a moral obligation'); 'mess that up' = mess up
        "units_only": False}       # the Oct 22 design exactly: only each unit's own tree and the discourse parse are used;
                                   # nothing is read from the whole sentence's tree (switches off object_fill, backfill,
                                   # participles, apposition, tree_subject, and finds 'which'/'qui' through the discourse parse)
@@ -201,7 +203,7 @@ def paths(trees):
     return out
 
 
-CLAUSE = {"S", "SINV", "SQ", "SBAR", "SENT", "Ssub", "Srel", "Sint", "VPinf", "VPpart"}
+CLAUSE = {"S", "SINV", "SQ", "SBAR", "SENT", "Ssub", "Srel", "Sint", "VPinf", "VPpart", "FRAG"}   # a unit parsed alone is often FRAG
 
 
 def np_text(n):
@@ -241,6 +243,9 @@ def subject_from_tree(path, lang):
         if plab == "NP" and lab in ("VP", "S", "VPpart", "VPinf", "SBAR", "Srel"):
             nouns = [k for k in parent[1][:parent[1].index(node)] if not isinstance(k, str) and k[0].split("-")[0] in ("NP", "NN", "NNS", "NNP", "NNPS", "NC", "NPP", "DET", "DT", "JJ", "ADJ", "AP", "PRP$")]
             if lab == "VPinf" or (lab in ("S", "VP") and any(not isinstance(k, str) and k[0] == "TO" for k in P_iter(node))):
+                head = (leaves_of(["NP", nouns])[-1:] or [""])[0].lower() if nouns else ""
+                if OPT["units_only"] and nouns and head not in COMPLEMENT_NOUNS and clause_inf_has_object(node):
+                    return P.text(["NP", nouns]), "an infinitive with its own object on a noun: the noun does it ('measures to help us')"
                 return "(unstated)", "an infinitive on a noun: who does it is not in the words"
             if nouns:
                 return P.text(["NP", nouns]), "a clause on a noun: the noun does it"
@@ -250,7 +255,10 @@ def subject_from_tree(path, lang):
             i = next((j for j, k in enumerate(kids) if k is below), len(kids))
             vi = next((j for j, k in enumerate(kids) if not isinstance(k, str) and k[0].split("-")[0] in ("VP", "VN")), None)
             if vi is not None and vi <= i:
-                subj = next((k for k in reversed(kids[:vi]) if not isinstance(k, str) and k[0].split("-")[0] in ("NP", "CLS")), None)
+                subj = next((k for k in reversed(kids[:vi]) if not isinstance(k, str) and (k[0].split("-")[0] in ("NP", "CLS")
+                             or (k[0].split("-")[0] == "S" and first_tag(k) == "VBG"))), None)   # 'Having a large number ... places'
+                if subj is not None and subj[0].split("-")[0] == "S":
+                    return P.text(subj), "the clause the verb sits in has a gerund clause as its subject"
                 if subj is not None and not P.ADDRESS & {w.lower() for w in leaves_of(subj)}:
                     return np_text(subj), "the subject of the clause the verb sits in"
     return None
@@ -307,8 +315,10 @@ CONTRACT = {"m": "am", "'m": "am", "re": "are", "'re": "are", "ve": "have", "'ve
             "d": "would", "'d": "would", "s": "is", "'s": "is"}
 
 
-def expand_contractions(ln):
+def expand_contractions(ln, unit_text=""):
     "'I'm sure' gives the verb 'm (or m once the apostrophe is split off): written out as 'am', the form as written kept."
+    if re.search(r"\bcan not\b", ln["verb"]) and re.search(r"\bcannot\b", unit_text, re.I):
+        ln["verb"] = re.sub(r"\bcan not\b", "cannot", ln["verb"])      # as written: 'cannot'
     ws = ln["verb"].replace("’", "'").split()
     if ws and ws[0].lower() in CONTRACT:
         ln["verb_as_written"] = ln["verb"]
@@ -530,6 +540,60 @@ def appositions(row, starts):
     return out
 
 
+VERB_LABELS = {"VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "MD", "V", "VPP", "VINF", "VPR", "VS", "VIMP"}
+ADDRESS_WORDS = {"mr", "mr.", "mrs", "mrs.", "ms", "ms.", "madam", "madame", "m.", "monsieur", "mme", "speaker", "président",
+                 "présidente", "chair", "chairman", "chairwoman", "honourable", "hon.", "the", "le", "la", "member", "members"}
+
+
+QUESTION_START = re.compile(r"""^\W*((and|but|so|then|et|mais|alors|donc|or)\W+)?(why|how|what|when|where|who|whom|which|whose|is|are|was|were|do|does|did|can|could|would|should|will|shall|has|have|had|isn't|aren't|doesn't|don't|didn't|won't|wouldn't|shouldn't|couldn't|pourquoi|comment|quand|où|combien|quel|quelle|quels|quelles|qui|que|qu'est-ce|est-ce|lequel|laquelle)\b""", re.I | re.X)
+
+
+def is_question_sentence(text):
+    "'Et pourquoi ... la municipalité paierait ... ?': the whole sentence is a question (a tag question like ', O.K.?' is not)."
+    t = (text or "").strip().rstrip(" »”\"'")
+    if not t.endswith("?") or re.search(r",\s*(o\.?\s?k\.?|okay|right|hein|n['’]est-ce pas|non|oui|eh)\s*\?$", t, re.I):
+        return False
+    return bool(QUESTION_START.match(t.replace("’", "'")))
+
+
+def has_verb(pieces):
+    "Whether the unit's tree has a verb anywhere in it."
+    def walk(n):
+        if isinstance(n, str):
+            return False
+        if len(n[1]) == 1 and isinstance(n[1][0], str):
+            return n[0] in VERB_LABELS
+        return any(walk(k) for k in n[1])
+    return any(walk(t) for t, _ in pieces)
+
+
+def has_clause(pieces):
+    """Whether the unit's tree has a full clause: a subject (noun phrase or clitic) before a verb in the same clause.
+    'and then after that we control you' has one and is not context; 'If passed,' and 'tel que demandé par ...' have a
+    verb but no subject of their own, and are."""
+    def walk(n):
+        if isinstance(n, str):
+            return False
+        kids = [k for k in n[1] if not isinstance(k, str)]
+        if n[0].split("-")[0] in ("S", "SINV", "SQ", "SENT", "Sint", "Ssub", "Srel", "VN"):
+            labs = [k[0].split("-")[0] for k in kids]
+            for i, lab in enumerate(labs):
+                if lab in ("VP", "VN") and any(l2 in ("NP", "CLS") for l2 in labs[:i]):
+                    return True
+            if n[0] == "VN" and any(l2 == "CLS" for l2 in labs):
+                return True
+        return any(walk(k) for k in kids)
+    return any(walk(t) for t, _ in pieces)
+
+
+def is_address(text):
+    "'Mr. Speaker,' 'M. le Président,': someone spoken to, not the time or place of anything."
+    ws = re.findall(r"[\w.']+", (text or "").lower())
+    core = {"speaker", "président", "présidente", "chair", "chairman", "chairwoman", "madam", "madame", "monsieur", "mr", "mr.",
+            "mrs", "mrs.", "m.", "mme", "honourable"} | set(P.ADDRESS)
+    return bool(ws) and all(w in ADDRESS_WORDS or w in P.ADDRESS for w in ws) and any(w in core for w in ws)
+
+
 FRAMES = {"background", "circumstance", "condition", "time-sequence", "temporal", "manner-means"}
 
 
@@ -579,22 +643,36 @@ def strict_subject(u, units, rels, pieces_all):
         a = antecedent_by_discourse(k, rels, pieces_all)
         if a:
             return a[0], f"'{first}' stands for the last noun phrase of {a[1]} (discourse: {a[2]})"
-    tag = first_tag(pieces_all[k][0][0]) if pieces_all[k] else ""
-    prev_lines = units[k - 1]["lines"] if k > 0 else []
-    if tag == "TO" and prev_lines and not re.search(r"[,;:]\s*$", units[k - 1]["text"]) and \
-            re.fullmatch(r"(is|was|are|were|be|been|being|'s|’s)", prev_lines[-1]["verb"].lower().split()[-1] if prev_lines[-1]["verb"] else "") and prev_lines[-1]["object"]:
-        return "(unstated)", f"'{prev_lines[-1]['verb']} {prev_lines[-1]['object']} | to ...': an infinitive on a noun or adjective; who does it is not in the words"
-    if k > 0 and tag in ("VBG", "VBN", "VPP", "VPR") and not re.search(r"[,;:]\s*$", units[k - 1]["text"]):
-        a = antecedent_by_discourse(k, rels, pieces_all)
-        if a:
-            return a[0], f"describes the last noun phrase of {a[1]} (no comma between them; discourse: {a[2]})"
+    # the rest of a unit split by an insertion comes first: the discourse parse says whose sentence it is
     for r in sorted(rels, key=lambda r: r["right"][1] - r["left"][0]):
-        if r["shared"] == "same-unit" and r["right"][0] <= k <= r["right"][1]:
+        if r["shared"] == "same-unit" and r["right"][0] == k:
             head = units[r["left"][0]]
             if not head["lines"] and pieces_all[head["unit"]]:
                 np = top_np(pieces_all[head["unit"]][0][0])
                 if np is not None:
                     return np_text(np), f"unit {head['unit']} (same-unit: the sentence goes on after an insertion)"
+    tag = first_tag(pieces_all[k][0][0]) if pieces_all[k] else ""
+    tags2 = [pth[-1][0] for _, _, pth in unit_leaves(pieces_all[k])[:2]] if pieces_all[k] else []
+    prev_lines = units[k - 1]["lines"] if k > 0 else []
+    no_comma = k > 0 and not re.search(r"[,;:]\s*$", units[k - 1]["text"])
+    jr = joined_by(k, rels)
+    if tag == "TO" and prev_lines and no_comma and \
+            re.fullmatch(r"(is|was|are|were|be|been|being|'s|’s)", prev_lines[-1]["verb"].lower().split()[-1] if prev_lines[-1]["verb"] else "") and prev_lines[-1]["object"]:
+        po = prev_lines[-1]["object"]
+        adj = word_tag(pieces_all[k - 1], po.split()[0]).startswith(("JJ", "ADJ", "RB", "ADV"))
+        if not adj and unit_inf_has_object(pieces_all[k]) and (re.findall(r"\w+", po.lower()) or [""])[-1] not in COMPLEMENT_NOUNS:
+            return po, f"'{prev_lines[-1]['verb']} {po} | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')"
+        return "(unstated)", f"'{prev_lines[-1]['verb']} {po} | to ...': an infinitive on a noun or adjective; who does it is not in the words"
+    if no_comma and tags2[:2] == ["IN", "VBG"] and jr and jr["shared"] == "elaboration":
+        return "(unstated)", "a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words"
+    if no_comma and prev_lines and prev_lines[-1]["object"] and re.match(r"^(d'|d’|de |à )", u["text"].lower()) and \
+            any(pth and pth[-1][0] == "VINF" for _, _, pth in unit_leaves(pieces_all[k])) and \
+            not any(w.startswith(st) for w in prev_lines[-1]["verb"].lower().split() for st in CONTROL_STEMS):
+        return "(unstated)", "an infinitive on the noun before it ('la décision du gouvernement | d'aller'): who does it is not in the words"
+    if no_comma and (tag in ("VBG", "VBN", "VPP", "VPR") or (tag == "VBD" and re.search(r"\bby\b", u["text"]))):
+        a = antecedent_by_discourse(k, rels, pieces_all, no_pp=True)
+        if a:
+            return a[0], f"describes the last noun phrase of {a[1]} (no comma between them; discourse: {a[2]})"
     return None
 
 
@@ -630,9 +708,9 @@ def resolve_relative(u, word, lp, rels, pieces_all):
     the question word in 'qu'est-ce qui' is not one. And the antecedent must be a noun phrase, not another pronoun
     ('ce qui' = what)."""
     w = word.split()[0]
-    tag = word_tag(pieces_all[u["unit"]], w)
-    if tag and tag not in REL_TAGS:
-        return None
+    if re.search(r"qu['’]est-ce|est-ce qu", u["text"].lower()) and w.lower().replace("’", "'") in ("qu'", "que", "qui"):
+        return None                             # 'qu'est-ce qui' is a question word; a fragment parsed alone can tag
+                                                # a relative as a question word or a demonstrative, so tags are not used
     ok = lambda a: a and a.lower().strip(" ,") not in NOT_ANTECEDENT and not a.strip().startswith("-")
     a = antecedent(lp) if lp else None
     if ok(a):
@@ -645,23 +723,255 @@ def resolve_relative(u, word, lp, rels, pieces_all):
     return None
 
 
-def antecedent_by_discourse(k, rels, pieces_all):
+def antecedent_by_discourse(k, rels, pieces_all, no_pp=False):
     """'which' / 'qui' opening unit k: the last noun phrase of the unit just before it, when the discourse parse joins
-    the two (the smallest relation that has unit k on one side and the unit before it on the other)."""
+    the two (the smallest relation that has unit k on one side and the unit before it on the other). With no_pp, a noun
+    phrase inside a prepositional phrase does not count ('to get back to work | putting America ...': not 'work')."""
     for r in sorted(rels, key=lambda r: r["right"][1] - r["left"][0]):
         if r["right"][0] == k and r["left"][1] == k - 1:
-            nps = []
+            nps, pp_nps = [], []
             for t, _ in pieces_all[k - 1]:
-                def walk(n):
+                def walk(n, in_pp=False):
                     if isinstance(n, str):
                         return
-                    if n[0].split("-")[0] == "NP":
+                    lab = n[0].split("-")[0]
+                    if lab == "NP":
                         nps.append(n)
+                        if in_pp:
+                            pp_nps.append(n)
                     for c in n[1]:
-                        walk(c)
+                        walk(c, lab == "PP")         # only a noun phrase that is the preposition's own object ('to work')
                 walk(t)
+            if no_pp:
+                nps = [n for n in nps if not (any(n is q for q in pp_nps) and len(leaves_of(n)) == 1 and leaves_of(n)[0][:1].islower())]
             if nps:
                 return np_text(nps[-1]) if not isinstance(nps[-1], str) else nps[-1], f"unit {k - 1}", r["shared"]
+    return None
+
+
+ADV_LABELS = {"ADVP", "RB", "ADV", "RBR", "RBS", "WHADVP"}
+FLOATING = {"tous", "toutes", "tout", "all", "both", "each"}
+OBJ_LABELS = ("NP", "ADJP", "AP", "PP", "S", "SBAR", "Ssub", "VPinf", "QP", "Sint")
+PARTICLES = {"up", "down", "out", "off", "back", "over", "away", "through"}
+IDIOMS = [(r"\bwhat have you\b", "have"), (r"\bso to speak\b", "speak"), (r"\bif you will\b", "will"), (r"\bas it were\b", "were"),
+          (r"\bmind you\b", "mind"), (r"\bthank you\b", "thank"), (r"\bpeu importe\b", "importe"), (r"\bn'importe\b", "importe")]
+POINT_C = {"explanation", "evaluation", "cause-result"}      # 'c'est pourquoi', 'c'est dommage': c' / ce point back only here
+
+
+def _norm(x):
+    return re.sub(r"[^\w]+", "", (x or "").lower())
+
+
+def unit_leaves(pieces):
+    "Every word of a unit's tree(s) in order: (global word number, word, chain of nodes from the root to its label)."
+    out = []
+    for t, idx in pieces:
+        for i, (w, pth) in enumerate(zip(leaves_of(t), paths([t]))):
+            out.append((idx[i] if i < len(idx) else None, w, pth))
+    return out
+
+
+def verb_paths(ln, ul):
+    "The chains above the verb's own words, last word first (the main verb, then any auxiliary)."
+    vws = [w.lower().replace("’", "'") for w in tokens(ln.get("verb_as_written") or ln["verb"]) if w]
+    start = next((j for j, (g, _, _) in enumerate(ul) if g == ln.get("leaf")), None)
+    if start is None:
+        start = next((j for j, (_, w, _) in enumerate(ul) if vws and w.lower().replace("’", "'") == vws[0]), None)
+    if start is None:
+        return []
+    got = [pth for g, w, pth in ul[max(0, start - 3):start + 8] if w.lower().replace("’", "'") in vws and pth and pth[-1][0] in VERB_LABELS]
+    return list(reversed(got))
+
+
+def better_object(ln, ul):
+    """'it is also a moral obligation', 'we will lose slightly in excess of ...', 'Nous comprenons tous la raison': the
+    tree rules took the adverb (or a floating 'tous') as the object. In the verb's clause, the phrase after it is the
+    object; with nothing after it, there is no object."""
+    if not ln["object"]:
+        return
+    for path in verb_paths(ln, ul):
+        for depth in range(len(path) - 2, -1, -1):
+            node, child = path[depth], path[depth + 1]
+            i = next((j for j, k in enumerate(node[1]) if k is child), None)
+            if i is None:
+                break
+            after = [k for k in node[1][i + 1:] if not isinstance(k, str) and k[0] not in (",", "PONCT", ".", ":")]
+            if not after:
+                continue
+            first = after[0]
+            if _norm(P.text(first)) != _norm(ln["object"]):
+                return
+            lab = first[0].split("-")[0]
+            ft = P.text(first).lower().strip()
+            if ft in ("pas", "plus", "jamais", "guère", "point") and re.search(r"(^|\s)(ne|n'|n’)", ln["verb"].lower()):
+                nxt = next((k for k in after[1:] if k[0].split("-")[0] in OBJ_LABELS), None)
+                ln["verb"], ln["negated"] = ln["verb"] + " " + ft, True       # 'ne reçoivent plus | ce service'
+                ln["object"] = P.text(nxt) if nxt is not None else ""
+                return
+            if ft in ("so much", "much", "more", "less", "a lot", "plus", "moins", "beaucoup", "autant", "davantage"):
+                return                              # 'practise so much', 'gagnent moins': the amount is what is done
+            if lab in ADV_LABELS or (lab == "NP" and P.text(first).lower().strip() in FLOATING):
+                nxt = next((k for k in after[1:] if k[0].split("-")[0] in OBJ_LABELS), None)
+                if nxt is not None:                 # with nothing after it, the adverb stays ('gagnent | moins', 'went | underground')
+                    ln["object"] = P.text(nxt)
+                    ln["how"] = (ln["how"] + "; an adverb is not the object; the phrase after it is").strip("; ")
+            return
+
+
+def move_particle(ln, ul):
+    "'mess that up': the particle belongs to the verb (mess up | that)."
+    ws = ln["object"].split()
+    if len(ws) >= 2 and ws[-1].lower() in PARTICLES and any(w.lower() == ws[-1].lower() and pth and pth[-1][0] in ("RP", "PRT") for _, w, pth in ul):
+        ln["verb"] = ln["verb"] + " " + ws[-1]
+        ln["object"] = " ".join(ws[:-1])
+        ln["how"] = (ln["how"] + "; the particle goes with the verb").strip("; ")
+
+
+def inf_vp_has_object(path):
+    "Whether the infinitive's own verb phrase has a noun phrase object ('to offset the portion' yes; 'to do so' no)."
+    if not path or len(path) < 2:
+        return False
+    vp = path[-2]
+    return any(not isinstance(k, str) and k[0].split("-")[0] == "NP" for k in vp[1])
+
+
+def unit_inf_has_object(pieces):
+    "The same for a unit that is a to-infinitive: the verb phrase under 'to' has a noun phrase object."
+    for t, _ in pieces:
+        found = []
+        def walk(n):
+            if isinstance(n, str) or found:
+                return
+            kids = [k for k in n[1] if not isinstance(k, str)]
+            if n[0].split("-")[0] == "VP" and kids and kids[0][0] == "TO":
+                vp = next((k for k in kids[1:] if k[0].split("-")[0] == "VP"), None)
+                found.append(vp is not None and any(not isinstance(k, str) and k[0].split("-")[0] == "NP" for k in vp[1]))
+                return
+            for k in kids:
+                walk(k)
+        walk(t)
+        if found:
+            return found[0]
+    return False
+
+
+def main_units(span, rels, toward):
+    """The units that carry the main part of a span: inside it, follow each relation to its main side ('SB-8 ... bars
+    abortion | after a fetal heartbeat can be detected': unit 0, not the time clause); when both sides are equal,
+    the side nearer to the unit asking."""
+    a, b = span
+    while a < b:
+        r = next((r for r in rels if r["left"][0] == a and r["right"][1] == b), None)
+        if r is None:
+            break
+        if r["shared"] == "attribution" and r["main"] is not None:
+            side = r["left"] if r["main"] == r["right"] else r["right"]   # 'the proposal would ensure | that ...': the sayer
+        else:
+            side = r["main"] if r["main"] is not None else (r["right"] if toward > b else r["left"])
+        a, b = side
+    return list(range(a, b + 1))
+
+
+DUMMY_HEADS = {"time", "important", "necessary", "essential", "clear", "possible", "impossible", "hard", "easy", "difficult",
+               "true", "good", "best", "right", "wrong", "unfortunate", "crucial", "vital", "likely", "unlikely", "obvious",
+               "temps", "important", "nécessaire", "essentiel", "clair", "possible", "impossible", "difficile", "vrai", "dommage", "évident"}
+CONTENT_NOUNS = {"fact", "idea", "notion", "claim", "belief", "hope", "news", "argument", "possibility", "assumption", "view",
+                 "suggestion", "concern", "fear", "statement", "assurance", "promise", "sense", "feeling", "impression", "point",
+                 "fait", "idée", "notion", "espoir", "argument", "possibilité", "crainte", "impression", "sentiment"}
+
+
+COMPLEMENT_NOUNS = {"decision", "decisions", "plan", "plans", "right", "rights", "time", "way", "ways", "ability", "chance", "chances",
+                    "effort", "efforts", "attempt", "attempts", "opportunity", "opportunities", "need", "desire", "intention",
+                    "power", "authority", "responsibility", "obligation", "duty", "freedom", "choice", "permission",
+                    "commitment", "goal", "aim", "purpose", "reason", "proposal", "promise", "request", "order", "motion",
+                    "willingness", "refusal", "failure", "capacity", "means", "order", "bid", "move", "push", "pressure",
+                    "décision", "plan", "droit", "temps", "moyen", "moyens", "façon", "capacité", "chance", "effort", "tentative",
+                    "occasion", "besoin", "désir", "intention", "pouvoir", "responsabilité", "obligation", "devoir", "liberté",
+                    "choix", "permission", "engagement", "objectif", "but", "raison", "proposition", "promesse", "demande"}
+
+
+def clause_inf_has_object(node):
+    "In an infinitive clause on a noun ('measures to help us'): whether the verb after 'to' has a noun phrase object."
+    def find(n):
+        if isinstance(n, str):
+            return None
+        kids = [k for k in n[1] if not isinstance(k, str)]
+        if n[0].split("-")[0] == "VP" and kids and kids[0][0] == "TO":
+            return next((k for k in kids[1:] if k[0].split("-")[0] == "VP"), None)
+        for k in kids:
+            got = find(k)
+            if got is not None:
+                return got
+        return None
+    vp = find(node)
+    return vp is not None and any(not isinstance(k, str) and k[0].split("-")[0] == "NP" for k in vp[1])
+
+
+def good_source(l2):
+    """A line whose subject another unit can take: it has a real subject (its own, or one already found for it), not
+    '(unstated)', not 'that' pointing to units, and not the empty 'it' of 'It is time' / 'Il est temps'."""
+    s0 = l2["subject"].replace("(inh)", "").strip()
+    if not s0 or s0 == "(unstated)" or l2.get("refers_to"):
+        return False
+    if s0.lower() in ("it", "il", "ce", "c'") and re.search(r"(^|\s)(is|was|'s|’s|est|était|sera)(\s|$)", l2["verb"].lower()) and \
+            (not l2["object"] or set(re.findall(r"\w+", l2["object"].lower())[-1:]) & DUMMY_HEADS):
+        return False                                # 'It is time', 'It is important': nobody; 'it is in front of the forum': the matter
+    return True
+
+
+def joined_by(k, rels):
+    "The relation that joins unit k to the unit right before it (the smallest one), or None."
+    for r in sorted(rels, key=lambda r: r["right"][1] - r["left"][0]):
+        if r["right"][0] == k and r["left"][1] == k - 1:
+            return r
+    return None
+
+
+SUBORD_START = re.compile(r"^\W*(if|unless|when|whenever|while|although|though|once|until|because|as|since|before|after|si|s'|quand|lorsque|lorsqu'|bien que|tel que|telle que|tels que|comme|avant|après|pendant|dès)\b")
+
+
+def bare_line(pieces, lang):
+    """A unit whose tree has a verb but gave no line ('said', 'prévoit,', 'that answer to the people', 'are the people'):
+    the tree rules drop a verb with neither subject nor object of its own. The line is built from the unit's tree with
+    an empty subject, so the discourse parse can fill it."""
+    for t, idx in pieces:
+        leaves = leaves_of(t); ps = paths([t])
+        for i, pth in enumerate(ps):
+            if not pth or pth[-1][0] not in VERB_LABELS:
+                continue
+            parent = pth[-2] if len(pth) >= 2 else None
+            if parent is None:
+                return None
+            if lang == "fr" and parent[0] == "VN":
+                words = [" ".join(leaves_of(k)) for k in parent[1] if not isinstance(k, str) and k[0] not in ("CLS",)]
+                joined = ""
+                for w_ in words:                    # n' est -> n'est
+                    joined = joined + w_ if joined.endswith(("'", "’")) else (joined + " " + w_ if joined else w_)
+                words = [joined]
+                subj = next((P.text(k) for k in parent[1] if not isinstance(k, str) and k[0] == "CLS"), "")
+                holder, at = (pth[-3], next((j for j, k in enumerate(pth[-3][1]) if k is parent), 0)) if len(pth) >= 3 else (parent, 0)
+            else:
+                at = next(j for j, k in enumerate(parent[1]) if k is pth[-1])
+                words, subj, j = [], "", at
+                holder = parent
+                while j < len(holder[1]):
+                    k = holder[1][j]
+                    if not isinstance(k, str) and (k[0] in VERB_LABELS or (k[0] == "RB" and P.text(k).lower() in ("not", "n't", "never"))):
+                        words.append(P.text(k)); j += 1
+                    elif not isinstance(k, str) and k[0].split("-")[0] == "VP" and words:
+                        holder, j = k, 0
+                    else:
+                        break
+                at = j - 1
+                if len(pth) >= 3 and any(not isinstance(k, str) and k[0] == "TO" for k in pth[-3][1][:1]):
+                    words = ["to"] + words          # (VP (TO to) (VP (VB ensure)))
+            obj = next((P.text(k) for k in holder[1][at + 1:] if not isinstance(k, str) and k[0].split("-")[0] in OBJ_LABELS), "")
+            if not obj and len(pth) >= 3:           # (SINV (VP (VBP are)) (NP the people)): the object sits beside the verb phrase
+                gp = pth[-3]; pi = next((j for j, k in enumerate(gp[1]) if k is parent), None)
+                if pi is not None:
+                    obj = next((P.text(k) for k in gp[1][pi + 1:] if not isinstance(k, str) and k[0].split("-")[0] in OBJ_LABELS), "")
+            return {"subject": subj, "verb": " ".join(words), "object": obj, "kind": "asserted", "negated": False, "hedged": False,
+                    "how": "a verb the tree rules gave no line for; read from the unit's tree", "leaf": idx[i] if i < len(idx) else None}
     return None
 
 
@@ -725,6 +1035,13 @@ def process(row, edu_trees=None):
         units.append({"unit": i, "text": txt.strip(), "start": e["start"], "end": e["end"],
                       "tree": [bracket(p) for p, _ in pieces], "tree_nodes": [p for p, _ in pieces],
                       "lines": lines_from(pieces, row["lang"])})
+    if OPT["units_only"] and OPT["bare_lines"]:
+        for u, ps in zip(units, pieces_all):
+            if not u["lines"] and ps and has_verb(ps) and not SUBORD_START.match(u["text"].lower().replace("’", "'")):
+                b = bare_line(ps, row["lang"])
+                if b and b["verb"]:
+                    u["lines"].append(b)
+    ULEAVES = [unit_leaves(ps) for ps in pieces_all]
     # where a unit is too short to read on its own ("explicitly ensuring"), or its object sits in the next unit
     # ("the HMO said," | "You need another opinion"), the line comes from the sentence's whole tree
     have = {l["leaf"] for u in units for l in u["lines"] if l.get("leaf") is not None}
@@ -752,7 +1069,18 @@ def process(row, edu_trees=None):
         for ln in u["lines"]:
             if OPT["fix_verb"]:
                 fix_verb(ln, u["text"])
-                expand_contractions(ln)
+                expand_contractions(ln, u["text"])
+            if OPT["units_only"] and OPT["better_object"]:
+                better_object(ln, ULEAVES[u["unit"]])
+                move_particle(ln, ULEAVES[u["unit"]])
+            if is_address(ln["object"]):
+                ln["object"], ln["how"] = "", (ln["how"] + "; someone spoken to is not the object").strip("; ")
+            if row["lang"] == "fr":
+                m = re.match(r"^(je|j'|tu|il|elle|on|nous|vous|ils|elles)\s+(?=\S)", ln["verb"].replace("’", "'"), re.I)
+                if m and (not ln["subject"].strip() or ln["subject"].strip().lower() == m.group(1).lower()):
+                    ln["subject"] = ln["subject"].strip() or ln["verb"][:len(m.group(1))]
+                    ln["verb"] = ln["verb"][m.end():]
+        u["lines"] = [l for l in u["lines"] if not any(re.search(rx, u["text"], re.I) and l["verb"].lower().split()[-1:] == [vb] for rx, vb in IDIOMS)]
     # 'qu'est-ce qui justifie la difference' (what justifies the difference): the French tree rules read the question
     # word as a clause of its own (qu' | est | -ce) and give '-ce' as the subject; it is one word, qu'est-ce, = what
     if row["lang"] == "fr":
@@ -767,6 +1095,10 @@ def process(row, edu_trees=None):
                     l["subject"] = "qu'est-ce"
                     l["how"] = (l["how"] + "; qu'est-ce qui = what (one question word)").strip("; ")
     # questions are not claims
+    if OPT["questions"] and units and is_question_sentence(row["text"]):
+        for u in units:
+            u["question"] = True
+            u["lines"] = []
     if OPT["questions"]:
         for u in units:
             t = u["text"].rstrip(" »”\"'")
@@ -784,6 +1116,12 @@ def process(row, edu_trees=None):
                     ln["verb"] = ln["verb"] + " " + m.group(1); ln["object"] = ln["object"][m.end():]; ln["negated"] = True
                 low = " " + u["text"].lower().replace("’", "'") + " "
                 last = vw.split()[-1] if vw.split() else ""
+                vw = ln["verb"].lower().replace("’", "'")
+                last = vw.split()[-1] if vw.split() else ""
+                m2 = re.search(r"(^|\s|')" + re.escape(last) + r"\s+(pas|plus|jamais|rien|guère|point)\b", low) if last else None
+                if has_ne and m2 and not re.search(r"\b(pas|jamais|plus|guère|point|rien)\b", vw):
+                    ln["verb"] = ln["verb"] + " " + m2.group(2); ln["negated"] = True
+                    vw = ln["verb"].lower().replace("’", "'")
                 if has_ne and not re.search(r"\b(pas|jamais|plus|guère|point|aucun|aucune|personne|rien|nul)\b", vw + " " + ln["object"].lower()) \
                         and re.search(re.escape(last) + r"\s+qu", low):
                     ln["verb"] = re.sub(r"(^|\s)(ne|n')\s*", r"\1", ln["verb"], flags=re.I).strip()
@@ -849,6 +1187,15 @@ def process(row, edu_trees=None):
                     ln["subject"], ln["subject_from"] = got[0], f"unit tree: '{got[1]}' is when, not who; the subject is the noun phrase after it"
                     ln.setdefault("context", []).append(f"{got[1]} (time, unit {u['unit']})")
                     continue
+            jr = joined_by(u["unit"], rels)
+            w0 = s0.lower() or (re.split(r"\s+", u["text"].lower().strip(" ,"))[0] if ln is u["lines"][0] else "")
+            if OPT["relpron"] and OPT["units_only"] and (w0 in ("which", "ce qui", "ce que", "ce qu'") or u["text"].lower().startswith(("ce qui", "ce que"))) and jr and \
+                    (jr["shared"] in POINT_C or ln["object"].lower().startswith(("why", "the reason"))):
+                L = jr["left"]
+                ln["refers_to"] = f"{span(L)}: " + " ".join(v["text"] for v in units[L[0]:L[1] + 1])
+                ln["subject"] = ln["subject"] or "which"
+                ln["subject_from"] = f"'{ln['subject']}' stands for the whole of {span(L)} ({jr['shared']})"
+                continue
             if OPT["relpron"] and OPT["units_only"] and is_rel:
                 got = resolve_relative(u, s0, lp, rels, pieces_all)
                 if got:
@@ -862,8 +1209,10 @@ def process(row, edu_trees=None):
             if OPT["demonstrative"] and s0.lower() in DEMONSTR:
                 for r in sorted(rels, key=lambda r: r["right"][1] - r["left"][0]):
                     L, R = r["left"], r["right"]
-                    if L[0] <= u["unit"] <= L[1] or R[0] <= u["unit"] <= R[1]:
-                        other = R if L[0] <= u["unit"] <= L[1] else L
+                    if s0.lower() in ("c'", "ce") and r["shared"] not in POINT_C:
+                        continue
+                    if R[0] <= u["unit"] <= R[1]:           # it points back, to what came before it
+                        other = L
                         ln["refers_to"] = f"{span(other)}: " + " ".join(v["text"] for v in units[other[0]:other[1] + 1])
                         ln["subject_from"] = f"'{s0}' points to {span(other)} ({r['shared']})"
                         break
@@ -901,10 +1250,14 @@ def process(row, edu_trees=None):
                     continue                                    # this unit is the main part: nothing to inherit from
                 cands.append((other[1] - other[0] + mine[1] - mine[0], other, r))
             for _, other, r in sorted(cands, key=lambda c: c[0]):
-                src = next((v for v in units[other[0]:other[1] + 1] for l2 in v["lines"] if l2["subject"] and not l2.get("subject_from")), None)
-                if src:
-                    subj = next(l2["subject"] for l2 in src["lines"] if l2["subject"] and not l2.get("subject_from"))
-                    ln["subject"], ln["subject_from"] = subj, f"unit {src['unit']} ({r['shared']})"
+                core = main_units(other, rels, u["unit"])
+                pool = [(v, l2) for i in core for v in [units[i]] for l2 in v["lines"] if good_source(l2)]
+                if other[1] < u["unit"]:
+                    pool = pool[::-1]                   # in the main part, the nearest clause before this one
+                pool += [(v, l2) for v in units[other[0]:other[1] + 1] if v["unit"] not in core for l2 in v["lines"] if good_source(l2)]
+                if pool:
+                    v, l2 = pool[0]
+                    ln["subject"], ln["subject_from"] = l2["subject"].replace("(inh)", "").strip(), f"unit {v['unit']} ({r['shared']})"
                     break
     # purpose, not control: "cut taxes to help families" -- the tree rules give "taxes" as the subject of "to help";
     # only after verbs like urge, require, ask is the object the one who does the next verb
@@ -916,6 +1269,45 @@ def process(row, edu_trees=None):
                         K_norm(ln["subject"]) == K_norm(prev["object"]) and not any(w.startswith(st) for w in prev["verb"].lower().split() for st in CONTROL_STEMS) and \
                         not re.search(r"\b(is|are|was|were|be|been|need\w*|want\w*|use\w*|est|sont|faut|besoin|veu\w*)\b", prev["verb"].lower()):
                     ln["subject"], ln["subject_from"] = prev["subject"], "purpose: the subject of the verb before it (not urge X to)"
+    if OPT["units_only"]:
+        for u in units:
+            ul = ULEAVES[u["unit"]]
+            low = " " + u["text"].lower().replace("’", "'") + " "
+            for ln in u["lines"]:
+                # D1. 'the right thing to do', 'it makes economic sense to do so': an infinitive on the noun right before it,
+                # with no object of its own, is not done by that noun
+                if ln["verb"].lower().startswith("to ") and ln["subject"] not in ("", "(unstated)") and "(inh)" not in ln["subject"] and \
+                        (not ln.get("subject_from") or "a clause on a noun" in ln.get("subject_from", "")):
+                    sj = ln["subject"].lower().replace("’", "'")
+                    vw = ln["verb"].lower().split()
+                    at = low.find(" " + sj + " " + " ".join(vw[:2]) + " ") if len(vw) >= 2 else -1
+                    if at < 0 and len(vw) >= 2:
+                        at = low.find(" " + sj + " " + " ".join(vw[:2]))
+                    before = low[:at].split()[-1:] if at >= 0 else []
+                    if at >= 0 and not any(b.startswith(st) for b in before for st in CONTROL_STEMS) and \
+                            not any(inf_vp_has_object(pth) for pth in verb_paths(ln, ul)):
+                        ln["subject"], ln["subject_from"] = "(unstated)", "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words"
+                # R. object relatives: 'the resources | that they need', 'des dommages | que le ministre veut éviter'
+                if not ln["object"] and ln["subject"] and ln["subject"].lower() not in RELPRON:
+                    m = re.match(r"^\W*(that|which|whom|que|qu')\s*", u["text"].lower().replace("’", "'"))
+                    a = None
+                    if m and u["unit"] > 0 and not re.search(r"[,;:]\s*$", units[u["unit"] - 1]["text"]):
+                        jr = joined_by(u["unit"], rels)
+                        tg = word_tag(pieces_all[u["unit"]], m.group(1))
+                        passive = bool(re.search(r"\b(be|been|being|is|are|was|were|am)\b(\s+\w+)*\s+\w+(ed|en)$", ln["verb"].lower()))
+                        prev_head = (re.findall(r"\w+", units[u["unit"] - 1]["text"].lower()) or [""])[-1]
+                        english_ok = tg in REL_TAGS or (tg in ("IN", "DT") and not passive and prev_head not in CONTENT_NOUNS)
+                        if jr and jr["shared"] in ("elaboration", "same-unit") and (row["lang"] == "fr" or english_ok):
+                            got = antecedent_by_discourse(u["unit"], rels, pieces_all)
+                            a = (got[0], f"object relative: '{m.group(1)}' stands for the last noun phrase of {got[1]} (discourse: {got[2]})") if got else None
+                    if a and a[0].lower().strip() not in NOT_ANTECEDENT and _norm(a[0]) != _norm(ln["subject"]):
+                        ln["object"], ln["object_from"] = a
+                # N. an infinitive or gerund with no subject anywhere: say so
+                if not ln["subject"].strip():
+                    vw0 = (ln.get("verb_as_written") or ln["verb"]).split()[:1]
+                    t0 = word_tag(pieces_all[u["unit"]], vw0[0]) if vw0 else ""
+                    if ln["verb"].lower().startswith("to ") or t0 in ("VINF", "VBG", "VPR"):
+                        ln["subject"], ln["subject_from"] = "(unstated)", "an infinitive or gerund with no subject in the words"
     # a verb chained with to / de ("refused to act", "a refuse d'agir") is one action, as in the dependency
     # convention: when a line's object is just the to-clause of the next line, with the same subject, they are one line
     for u in units:
@@ -943,7 +1335,8 @@ def process(row, edu_trees=None):
                 continue
             for side, other in ((r["left"], r["right"]), (r["right"], r["left"])):
                 us = units[side[0]:side[1] + 1]
-                if side[0] == side[1] and not us[0]["lines"] and not us[0].get("question") and not us[0].get("context_used"):
+                if side[0] == side[1] and not us[0]["lines"] and not us[0].get("question") and not us[0].get("context_used") \
+                        and not has_clause(pieces_all[side[0]]) and not is_address(us[0]["text"]):
                     us[0]["context_used"] = True
                     for v in units[other[0]:other[1] + 1]:
                         for ln in v["lines"]:

@@ -4,7 +4,7 @@ saved sentences: 220
 rules and keys loaded from: /Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v6 (all of them)
 
 
-11:45:39    loaded the discourse parser (UniRST) in 14.4s
+12:13:17    loaded the discourse parser (UniRST) in 14.2s
 Sentence: A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.
 
 STEP 1. Discourse parse (parsed now): the units
@@ -22,7 +22,7 @@ STEP 1. Discourse parse (parsed now): the units
 0             unit 0 to unit 1  elaboration        elaboration    unit 0                  elaboration; main part unit 0; unit 1 adds detail to unit 0
 1  unit 0 and unit 1 to unit 2  explanation        explanation    unit 2  explanation; main part unit 2; unit 0 and unit 1 give the reason for unit 2
 
-11:45:40    loaded Stanza en 1.15.0 (constituency: yes) in 1.4s
+12:13:19    loaded Stanza en 1.15.0 (constituency: yes) in 1.4s
 
 STEP 2. A constituency tree for each unit (each unit parsed now)
    unit 0: (ROOT (S (NP (NP (DT A) (JJ small) (NN hardware) (NN store)) (PP (IN in) (NP (DT an) (NNP AHP)))) (VP (MD would) (VP (VB be) (VP (VBG joining) (NP (DT an) (NN association))))) (, ,)))
@@ -34,7 +34,7 @@ STEP 3. Subject | verb | object read from each unit's own tree (connections with
 
    unit                           subject              verb                 object
 0     0  A small hardware store in an AHP  would be joining         an association
-1     1                                             sending         their premiums
+1     1                        (unstated)           sending         their premiums
 2     2                              that                is  why we need the check
 3     2                                we              need              the check
 
@@ -71,8 +71,8 @@ STEP 1. Discourse parse (parsed now): the units
 0             unit 1 to unit 2    contrast           contrast      both                                                       contrast; both equally important
 1  unit 0 to unit 1 and unit 2  background              frame    unit 0  background; main part unit 0; unit 1 and unit 2 give background or context for unit 0
 
-11:45:50    loaded the Berkeley parser (benepar_fr2) in 9.0s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
-11:45:52    loaded spaCy fr (core_news_lg 3.8.0) in 2.3s
+12:13:27    loaded the Berkeley parser (benepar_fr2) in 8.5s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+12:13:30    loaded spaCy fr (core_news_lg 3.8.0) in 2.3s
 
 STEP 2. A constituency tree for each unit (each unit parsed now)
    unit 0: (TOP (SENT (NP (DET L') (NC an) (AP (ADJ dernier))) (PONCT ,)))
@@ -144,19 +144,19 @@ STEP 5. The tree inside a tree
 
 <SVG>
 
-   10 new sentences parsed (1.1s each)
-   20 new sentences parsed (0.7s each)
-   30 new sentences parsed (0.6s each)
-   40 new sentences parsed (0.5s each)
-   50 new sentences parsed (0.5s each)
+   10 new sentences parsed (1.4s each)
+   20 new sentences parsed (0.9s each)
+   30 new sentences parsed (0.7s each)
+   40 new sentences parsed (0.6s each)
+   50 new sentences parsed (0.6s each)
    60 new sentences parsed (0.5s each)
 60 sentences (parsed now)
 
 
   legislature  sentences  units per sentence  lines per sentence  units with no line  subjects found through the discourse parse  'that' pointing to units                                most common relations
-0    US House         20                3.05                2.95                   8                                          25                         1    elaboration 19, purpose 7, attribution 4, joint 3
-1     Ontario         20                3.40                3.45                  11                                          13                         2  elaboration 13, attribution 9, joint 8, same-unit 4
-2      Quebec         20                3.25                2.90                  19                                          14                         6  elaboration 16, joint 10, background 6, same-unit 5
+0    US House         20                3.05                3.10                   5                                          28                         0    elaboration 19, purpose 7, attribution 4, joint 3
+1     Ontario         20                3.40                3.30                  13                                          14                         2  elaboration 13, attribution 9, joint 8, same-unit 4
+2      Quebec         20                3.25                3.05                  16                                          12                         1  elaboration 16, joint 10, background 6, same-unit 5
 
 
 US House  more|US|2: Mr. Speaker, you cannot listen to the constant stories from patients and families who have been denied access to mental health care and believe that there are not tragic gaps in our mental health system.
@@ -168,10 +168,11 @@ US House  more|US|2: Mr. Speaker, you cannot listen to the constant stories from
 2       unit 1 and unit 2 to unit 3 and unit 4  elaboration        elaboration                  unit 1 and unit 2                                        elaboration; main part unit 1 and unit 2; unit 3 and unit 4 add detail to unit 1 and unit 2
 3  unit 0 to unit 1, unit 2, unit 3 and unit 4   background         background  unit 1, unit 2, unit 3 and unit 4  background; main part unit 1, unit 2, unit 3 and unit 4; unit 0 gives background or context for unit 1, unit 2, unit 3 and unit 4
 
-   unit                subject              verb                                              object                                               where the subject came from object from                   context that = 
-0     1                    you    can not listen  to the constant stories from patients and families                                                              its own unit              Mr. (background, unit 0)        
-1     2  patients and families  have been denied                        access to mental health care  'who' stands for the last noun phrase of unit 1 (discourse: elaboration)              Mr. (background, unit 0)        
-2     4                  there           are not             tragic gaps in our mental health system                                                              its own unit              Mr. (background, unit 0)        
+   unit                subject              verb                                                       object                                               where the subject came from                      object from context that = 
+0     1                    you     cannot listen           to the constant stories from patients and families                                                              its own unit                                                 
+1     2  patients and families  have been denied                                 access to mental health care  'who' stands for the last noun phrase of unit 1 (discourse: elaboration)                                                 
+2     3                    you           believe  that there are not tragic gaps in our mental health system.                                                      unit 1 (elaboration)  discourse: what is said, unit 4                
+3     4                  there           are not                      tragic gaps in our mental health system                                                              its own unit                                                 
 
 <SVG>
 
@@ -199,15 +200,15 @@ Ontario  more|ON|1: They refuse to invest, when we know it makes economic sense 
 2          unit 1 to unit 2, unit 3 and unit 4  attribution        attribution  unit 2, unit 3 and unit 4       attribution; main part unit 2, unit 3 and unit 4; unit 1 says who says unit 2, unit 3 and unit 4
 3  unit 0 to unit 1, unit 2, unit 3 and unit 4   background         background                     unit 0  background; main part unit 0; unit 1, unit 2, unit 3 and unit 4 give background or context for unit 0
 
-   unit          subject              verb                                                                                                                                                                 object                      where the subject came from                                         object from context that = 
-0     0             They  refuse to invest                                                                                                                                                                                                            its own unit                                                                    
-1     1               we              know  it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services.                                     its own unit  discourse: what is said, unit 2, unit 3 and unit 4                
-2     2               it             makes                                                                                                                                                economic sense to do so                                     its own unit                                                                    
-3     2   economic sense             to do                                                                                                                                                                     so                                     its own unit                                                                    
-4     3               it                is                                                                                                                                                        the right thing                                     its own unit                                                                    
-5     3  the right thing             to do                                                                                                                                              in terms of health policy  unit tree: a clause on a noun: the noun does it                                                                    
-6     3       the public       wants to go                                                                                                                                                                                                            its own unit                                                                    
-7     4               it         receiving                                                                                                                                               their home care services                             unit 3 (elaboration)                                                                    
+   unit     subject              verb                                                                                                                                                                 object                                                                                                 where the subject came from                                         object from context that = 
+0     0        They  refuse to invest                                                                                                                                                                                                                                                                                       its own unit                                                                    
+1     1          we              know  it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services.                                                                                                                its own unit  discourse: what is said, unit 2, unit 3 and unit 4                
+2     2          it             makes                                                                                                                                                economic sense to do so                                                                                                                its own unit                                                                    
+3     2  (unstated)             to do                                                                                                                                                                     so    an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words                                                                    
+4     3          it                is                                                                                                                                                        the right thing                                                                                                                its own unit                                                                    
+5     3  (unstated)             to do                                                                                                                                              in terms of health policy    an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words                                                                    
+6     3  the public       wants to go                                                                                                                                                                                                                                                                                       its own unit                                                                    
+7     4  (unstated)         receiving                                                                                                                                               their home care services  a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words                                                                    
 
 <SVG>
 
@@ -220,10 +221,11 @@ Ontario  more|ON|2: Instead of that, we are going to say, "You can only practise
 1          unit 0 to unit 1 and unit 2    attribution        attribution          unit 1 and unit 2               attribution; main part unit 1 and unit 2; unit 0 says who says unit 1 and unit 2
 2  unit 0, unit 1 and unit 2 to unit 3     evaluation         evaluation  unit 0, unit 1 and unit 2  evaluation; main part unit 0, unit 1 and unit 2; unit 3 comments on unit 0, unit 1 and unit 2
 
-   unit subject              verb                                                                                      object where the subject came from object from                                                       context that = 
-0     0      we  are going to say  You can only practise so much at such and such a rate, and then after that we control you.                its own unit                                                                                  
-1     1     You      can practise                                                                                     so much                its own unit              and then after that we control you." (time-sequence, unit 2)        
-2     3      It                is                                                                              a very sad day                its own unit                                                                                  
+   unit subject              verb                                                                                      object                            where the subject came from object from context that = 
+0     0      we  are going to say  You can only practise so much at such and such a rate, and then after that we control you.                                           its own unit                            
+1     1     You      can practise                                                                                     so much                                           its own unit                            
+2     2      we           control                                                                                         you  unit tree: the subject of the clause the verb sits in                            
+3     3      It                is                                                                              a very sad day                                           its own unit                            
 
 <SVG>
 
@@ -238,8 +240,9 @@ Quebec  more|QC|2: Et pourquoi, dans les deux premiers cas, la municipalité pai
 3                             unit 3 to unit 4 and unit 5  background              frame                     unit 3                            background; main part unit 3; unit 4 and unit 5 give background or context for unit 3
 4  unit 0, unit 1 and unit 2 to unit 3, unit 4 and unit 5       joint       continuation  unit 0, unit 1 and unit 2  joint; main part unit 0, unit 1 and unit 2; unit 3, unit 4 and unit 5 are listed with unit 0, unit 1 and unit 2
 
-   unit          subject      verb object where the subject came from object from context that = 
-0     2  la municipalité  paierait                       its own unit                            
+Empty DataFrame
+Columns: []
+Index: []
 
 <SVG>
 
@@ -272,9 +275,9 @@ Quebec  more|QC|3: Les nouveaux élus, peu importe de la formation politique, de
 10                            connections[]                   the same relations written as 'unit 0 and unit 1 to unit 2', with the text on each side
 
 wrote /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_records.json (62 sentences)
-      /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_lines.csv (192 lines)
+      /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_lines.csv (195 lines)
       /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_connections.csv (138 connections)
-      /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_noun_phrases.csv (234 noun phrases to look up)
+      /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_noun_phrases.csv (235 noun phrases to look up)
 
 One record, the English sentence from the meeting (trees shortened):
 {
@@ -466,21 +469,57 @@ One record, the English sentence from the meeting (trees shortened):
 [PASS] qu'est-ce qui justifie: qu'est-ce | justifie | la différence, and no 'qu' | est | -ce' line
 [PASS] It is time | to stop: who stops is not stated
 [PASS] cut taxes | to help families -> The government
+[PASS] a fragment's 'that' tagged DT is still the relative: -> mental health coverage | does not drive up
+[PASS] 'Mr. Speaker,' is not context, and 'cannot' is written as in the text
+[PASS] a unit with its own subject and verb is a clause; 'If passed,' is not; 'L'an dernier,' is not
+[PASS] 'If passed,' is still context for the claim it conditions
+[PASS] has_verb sees a verb; is_address sees 'Mr. Speaker,' and 'M. le Président,'
+[PASS] Et pourquoi ... paierait? is a question: no claims
+[PASS] a statement ending in a tag question keeps its claim
+[PASS] a statement is not a question
+[PASS] an adverb is not the object: it | is | a moral obligation
+[PASS] an adverb with nothing after it stays: Nurses | earn | less
+[PASS] the particle goes with the verb: them | mess up | that
+[PASS] a FRAG with a subject before its verb: we | control | you (not borrowed)
+[PASS] 'so much' stays the object of 'practise'
+[PASS] a unit that is only a verb gets a line: The resources | are | the people (same-unit)
+[PASS] 'are the people | to carry out those goals': the people | to carry out
+[PASS] an infinitive with no object of its own on the noun before it: (unstated) | to do (it makes economic sense to do so)
+[PASS] the right thing | to do: (unstated), not the thing
+[PASS] an infinitive WITH its own object keeps the noun: measures | to help | us
+[PASS] 'is an adequate base | to offset the portion': the base does it
+[PASS] 'back to work | putting America': not 'work', and not the empty 'It' of 'It's time'
+[PASS] 'requiring women | donating': women, even inside 'by requiring women'
+[PASS] a gerund clause is the subject: Having a large number of uninsured children | places
+[PASS] 'That' does not point forward to the next unit
+[PASS] 'what have you' is not a claim
+[PASS] 'which is a really big problem' (evaluation): which = the whole of unit 0, not 'standards'
+[PASS] object relative: the resources | that they need -> they | need | the resources
+[PASS] 'the fact | that health care needs to be improved' is not an object relative
+[PASS] French object relative tagged CS, and 'Mme la Présidente' is not the object: on | a fait passer | le menu législatif
+[PASS] ne ... plus: Les patients | ne reçoivent plus | ce service
+[PASS] a French verb built from the tree keeps its apostrophe: n'est pas
+[PASS] same-unit comes before the participle rule: Le projet de loi | réduit | les coûts
+[PASS] and the object relative: la Chambre | a adopté | Le projet de loi
+[PASS] 'peu importe' is not a claim
+[PASS] 'by covering' takes the subject of the clause that does the saying: the proposal (not 'there')
+[PASS] 'which is why ...': which = the whole of unit 0
+[PASS] a real 'it is in front of this forum' can lend its subject: it | is moved
 
 
                set                           design  key lines  found %  exact % exact 95% interval
-0       heldout en  discourse first (Oct 22 design)         36       72       47           32 to 63
+0       heldout en  discourse first (Oct 22 design)         36       81       50           34 to 66
 1       heldout fr  discourse first (Oct 22 design)         33       58       33           20 to 50
-2        sample en  discourse first (Oct 22 design)        119       80       41           33 to 50
-3        sample fr  discourse first (Oct 22 design)        116       76       39           30 to 48
-4  simple tests en  discourse first (Oct 22 design)         70       96       91           83 to 96
-5  simple tests fr  discourse first (Oct 22 design)         70       90       89           79 to 94
+2        sample en  discourse first (Oct 22 design)        119       87       45           36 to 53
+3        sample fr  discourse first (Oct 22 design)        116       79       41           33 to 50
+4  simple tests en  discourse first (Oct 22 design)         70       97       93           84 to 97
+5  simple tests fr  discourse first (Oct 22 design)         70       94       93           84 to 97
 
 held-out sentences never looked at while writing the rules (22):
 
 
           set                           design  key lines  found %  exact % exact 95% interval
-0  heldout en  discourse first (Oct 22 design)         26       69       46           29 to 65
+0  heldout en  discourse first (Oct 22 design)         26       81       50           32 to 68
 1  heldout fr  discourse first (Oct 22 design)         18       61       28           12 to 51
 
 <Figure>
@@ -492,9 +531,9 @@ clauses   en     92.0   83.0
 hedge     en    100.0  100.0
           fr    100.0  100.0
 negation  en    100.0  100.0
-          fr     86.0   86.0
-relative  en     75.0   50.0
-          fr     75.0   75.0
+          fr    100.0  100.0
+relative  en    100.0   75.0
+          fr    100.0  100.0
 reported  en    100.0  100.0
           fr     60.0   60.0
 structure en     91.0   91.0
@@ -506,24 +545,21 @@ pairs not exactly right:
    pair lang                              construction                                                                                             expected                                                                   output
 18  A10   en                                apposition                Jean Martin | tabled | the bill / Jean Martin | is (apposition) | the health minister                     Jean Martin, the health minister | tabled | the bill
 19  A10   fr                                apposition  Jean Martin | a déposé | le projet de loi / Jean Martin | is (apposition) | le ministre de la Santé                                Jean Martin | a déposé | le projet de loi
-31   B5   fr                   no longer / ne ... plus                                                        Les patients | ne reçoivent plus | ce service                                      Les patients | ne reçoivent plus | 
 49   D1   fr                     said that / a dit que  Le ministre | a dit | que le projet de loi réduit les coûts / le projet de loi | réduit | les coûts           Le ministre | a dit |  / le projet de loi | réduit | les coûts
 55   D4   fr                          direct quotation                     Le médecin | a dit | Les délais sont trop longs / Les délais | sont | trop longs                   Le médecin | a dit |  / Les délais | sont | trop longs
 65   E4   fr                    until / jusqu'à ce que                                                La clinique | reste | ouverte / la province | paie |             La clinique | reste | ouverte / la province | paie | ce (que)
 69   E6   fr          whether / si (indirect question)        Le comité | décidera | si le projet de loi va de l'avant / le projet de loi | va | de l'avant             Le comité | décidera |  / le projet de loi | va | de l'avant
 70   E7   en                        purpose: to / pour                                The government | cut | taxes / The government (inh) | help | families       The government | cut | taxes / The government | to help | families
 80  E12   en         means: by -ing / en -ant (stated)                                The province | saved | money / The province (inh) | closing | clinics                                             The province | saved | money
-84   F2   en               object relative: that / que                                            The bill | lowers | costs / the House | passed | The bill                        the House | passed |  / The bill | lowers | costs
-85   F2   fr               object relative: that / que                     Le projet de loi | réduit | les coûts / la Chambre | a adopté | Le projet de loi                                                 la Chambre | a adopté | 
 88   F4   en  object control: urge X to / exhorter X à                                 The minister | urged | the doctors / the doctors | accept | the deal  The minister | urged | the doctors / the doctors | to accept | the deal
 
                  exact  right words, not word for word  no line with that verb  object wrong  subject wrong  subject and object wrong  negation differs
-simple tests en     64                               3                       2             1              0                         0                 0
-simple tests fr     62                               0                       2             6              0                         0                 0
-heldout en          17                              10                       2             2              4                         1                 0
-heldout fr          11                               8                       1             9              3                         1                 0
-sample en           49                              42                      11             6              9                         1                 1
-sample fr           45                              37                      13             8             10                         2                 1
+simple tests en     65                               3                       2             0              0                         0                 0
+simple tests fr     65                               0                       1             4              0                         0                 0
+heldout en          18                              11                       1             2              3                         1                 0
+heldout fr          11                               8                       0            10              3                         1                 0
+sample en           53                              45                       7             6              7                         0                 1
+sample fr           48                              40                       8             9              7                         2                 2
 
 
 right words, not word for word (first 5):
@@ -537,32 +573,32 @@ no line with that verb (first 5):
    test|A10|en    key: Jean Martin | is (apposition) | the health minister
    test|A10|fr    key: Jean Martin | is (apposition) | le ministre de la Santé
    test|E12|en    key: The province (inh) | closing | clinics
-   test|F2|fr     key: Le projet de loi | réduit | les coûts
    heldout|8      key: the members of this committee | supported | by people in the community
+   sample|11      key: clinics | being shut down | 
 
 object wrong (first 5):
-   test|B5|fr     key: Les patients | ne reçoivent plus | ce service
    test|D1|fr     key: Le ministre | a dit | que le projet de loi réduit les coûts
    test|D4|fr     key: Le médecin | a dit | Les délais sont trop longs
    test|E4|fr     key: la province | paie | 
    test|E6|fr     key: Le comité | décidera | si le projet de loi va de l'avant
+   heldout|1      key: They | are not staffed | like they are on the units
 
 subject wrong (first 5):
-   heldout|6      key: Repealing the Liberals' 2009 Green Energy Act | will make | life more affordable in this province
    heldout|7      key: important measures (inh) | help | us better prevent, detect and respond to animal health issues in Ontario
-   heldout|10     key: the maximum level of mental health coverage | does not drive up | the premium costs for others
    heldout|13     key: The gentleman from Pennsylvania (Mr. Pitts) and the gentleman from New Jersey (Mr. Pallone) | will control | 3
+   heldout|14     key: the Norwood-Dingell bill (inh) | ensure | that patients have access to emergency care and to specialists
    heldout|17     key: vous (inh) | appeler | l'article c du feuilleton
+   heldout|18     key: ma vis-à-vis | a choisi | d'agir avec un adjoint
 
 subject and object wrong (first 5):
    heldout|7      key: us | prevent | animal health issues in Ontario
    heldout|20     key: certains journaux | l'ont dit | 
-   sample|37      key: The bill (that) | is | before us today
    sample|57      key: le gouvernement péquiste | a négocié | une entente
    sample|62      key: le projet de loi n° 83 | introduit | un système à deux vitesses (qu')
 
 negation differs (first 5):
    sample|9       key: The costs (inh) | will go | towards sustaining doctor unionization and salary hikes
+   sample|60      key: un concert d'intérêts divergents | guidés | par la poursuite du bien commun
    sample|62      key: le propriétaire d'une résidence privée | pourra demander ou ne pas demander | la (la certification)
 
 
@@ -570,42 +606,44 @@ change in key lines when the rule is off (negative = the rule helps):
 
 
     rule switched off           step  sample found  sample exact  held-out found  held-out exact  simple tests found  simple tests exact
-0   discourse_subject  4 (discourse)           -28           -11              -5              -3                 -14                 -13
+0   discourse_subject  4 (discourse)           -36           -11              -5              -3                 -15                 -14
 1       demonstrative  4 (discourse)             0             0               0               0                   0                   0
-2             relpron  4 (discourse)            -3            -2              -1              -1                   0                   0
-3         said_object  4 (discourse)            -3            -1               0               0                  -4                  -4
+2             relpron  4 (discourse)            -6            -5              -2              -1                   0                   0
+3         said_object  4 (discourse)            -6            -2               0               0                  -4                  -4
 4       frame_context  4 (discourse)             0             0               0               0                   0                   0
 5            collapse  3 (unit tree)             0             0               0               0                   0                   0
 6        drop_address  3 (unit tree)             0             0              -3              -2                  -1                  -1
-7        unwrap_coord  3 (unit tree)            -4             0               0               0                  -3                  -3
-8            fix_verb  3 (unit tree)            -9             0               0               0                  -4                  -2
-9        tree_subject  3 (unit tree)             2             1              -1              -1                  -1                  -1
+7        unwrap_coord  3 (unit tree)            -3             0               0               0                   0                   0
+8            fix_verb  3 (unit tree)            -5             0              -1              -1                  -4                  -2
+9        tree_subject  3 (unit tree)            -2            -1              -2              -1                  -1                  -1
 10          verb_join  3 (unit tree)             0            -4               1               0                   0                  -3
 11       control_list  3 (unit tree)            -1            -1               0               0                  -1                  -1
 12          questions  3 (unit tree)             0             0               0               0                   0                   0
-13      neg_particles  3 (unit tree)             0             0               0               0                  -1                  -1
+13      neg_particles  3 (unit tree)             0            -2               0               0                  -1                  -1
 14   adverbial_object  3 (unit tree)             1             0               0               0                   0                   0
 15           reanchor  3 (unit tree)             0             0               0               0                   0                   0
 16       time_subject  3 (unit tree)            -1            -1               0               0                  -1                  -1
+17         bare_lines  3 (unit tree)            -4            -1               0               0                  -1                  -1
+18      better_object  3 (unit tree)            -1             0               0               0                  -1                  -1
 
-all of step 4 off (units read alone, nothing connected): {'sample': 'found -34, exact -14', 'held-out': 'found -6, exact -4', 'simple tests': 'found -18, exact -17'}
+all of step 4 off (units read alone, nothing connected): {'sample': 'found -46, exact -18', 'held-out': 'found -7, exact -4', 'simple tests': 'found -19, exact -18'}
 
 
                set                           design  key lines  found %  exact % exact 95% interval
-0       heldout en  stand-in: cut from the sentence         36       75       47           32 to 63
-0       heldout en        units parsed on their own         36       72       47           32 to 63
+0       heldout en  stand-in: cut from the sentence         36       81       50           34 to 66
+0       heldout en        units parsed on their own         36       81       50           34 to 66
 1       heldout fr  stand-in: cut from the sentence         33       61       33           20 to 50
 1       heldout fr        units parsed on their own         33       58       33           20 to 50
-2        sample en  stand-in: cut from the sentence        119       84       45           37 to 54
-2        sample en        units parsed on their own        119       80       41           33 to 50
-3        sample fr  stand-in: cut from the sentence        116       77       39           30 to 48
-3        sample fr        units parsed on their own        116       76       39           30 to 48
-4  simple tests en  stand-in: cut from the sentence         70       96       91           83 to 96
-4  simple tests en        units parsed on their own         70       96       91           83 to 96
-5  simple tests fr  stand-in: cut from the sentence         70       90       90           81 to 95
-5  simple tests fr        units parsed on their own         70       90       89           79 to 94
+2        sample en  stand-in: cut from the sentence        119       87       46           38 to 55
+2        sample en        units parsed on their own        119       87       45           36 to 53
+3        sample fr  stand-in: cut from the sentence        116       78       41           32 to 50
+3        sample fr        units parsed on their own        116       79       41           33 to 50
+4  simple tests en  stand-in: cut from the sentence         70       97       93           84 to 97
+4  simple tests en        units parsed on their own         70       97       93           84 to 97
+5  simple tests fr  stand-in: cut from the sentence         70       91       91           83 to 96
+5  simple tests fr        units parsed on their own         70       94       93           84 to 97
 
-sentences whose lines differ: 31 of 220
+sentences whose lines differ: 27 of 220
 
 test|E4|fr: La clinique reste ouverte jusqu'à ce que la province paie.
    parsed alone: [('La clinique', 'reste', 'ouverte'), ('la province', 'paie', 'ce (que)')]
@@ -616,16 +654,12 @@ test|E6|fr: Le comité décidera si le projet de loi va de l'avant.
    cut:          [('Le comité', 'décidera', ''), ('le projet de loi', 'va', 'Le comité décidera')]
 
 test|F2|fr: Le projet de loi que la Chambre a adopté réduit les coûts.
-   parsed alone: [('la Chambre', 'a adopté', '')]
+   parsed alone: [('la Chambre', 'a adopté', 'Le projet de loi'), ('Le projet de loi', 'réduit', 'les coûts')]
    cut:          [('la Chambre', 'a adopté', 'que la Chambre a adopté (que)'), ('Le projet de loi', 'réduit', 'les coûts')]
 
 heldout|7: If passed, this proposed Animal Health Act would provide important measures to help us better prevent, detect 
    parsed alone: [('this proposed Animal Health Act', 'would provide', 'important measures'), ('this proposed Animal Health Act', 'to help', 'us'), ('this proposed Animal Health Act', 'prevent detect respond', 'to')]
    cut:          [('this proposed Animal Health Act', 'would provide', 'important measures'), ('(unstated)', 'to help prevent detect respond', 'to')]
-
-heldout|10: Mr. Dingell's motion asks for the maximum level of mental health coverage that does not drive up the premium c
-   parsed alone: [("Mr. Dingell's motion", 'asks', 'for the maximum level of mental health coverage'), ('that', 'does not drive up', 'the premium costs for others'), ('I', 'am', 'supportive of this motion')]
-   cut:          [("Mr. Dingell's motion", 'asks', 'for the maximum level of mental health coverage'), ('mental health coverage', 'does not drive up', 'the premium costs for others'), ('I', 'am', 'supportive of this motion')]
 
 heldout|18: Mais je vais m'adresser plus particulièrement à ma vis-à-vis, qui, je constate, a choisi aujourd'hui d'agir av
    parsed alone: [('je', "vais m'adresser", 'plus particulièrement'), ('je', 'constate', ''), ('qui', "a choisi d'agir", 'avec un adjoint'), ('je', 'salue', '')]
@@ -639,8 +673,12 @@ heldout|24: Dans le fond, c'est ça, mon message de conclusion, c'est: Nous allo
    parsed alone: [("c'", 'est', 'ça'), ("c'", 'est', ''), ('Nous', 'allons adopter', 'ce projet de loi'), ('Nous', 'pensant', 'à ceux et celles'), ('ceux et celles', 'ont été', 'des victimes du scandale du sang'), ('sang', 'contaminé', '')]
    cut:          [("c'", 'est', 'ça'), ('mon message de conclusion', 'est', ''), ('Nous', 'allons adopter', 'ce projet de loi'), ('Nous', 'pensant', 'à ceux et celles'), ('ceux et celles', 'ont été', 'des victimes du scandale du sang')]
 
+heldout|27: Alors, je vais attendre d'avoir sa réponse pour voir qu'est-ce qui justifie la différence entre de le faire pa
+   parsed alone: [('je', "vais attendre d'avoir", 'sa réponse'), ("qu'", 'est', ''), ('qui', 'justifie', 'la différence entre de le faire par règlement versus, ici, de le faire par la loi'), ('qui', 'faire', 'par règlement'), ('qui', 'faire', 'par la loi')]
+   cut:          [('je', "vais attendre d'avoir", 'sa réponse'), ('je', 'voir', "qu'est -ce qui justifie la différence entre de le faire par règlement versus, ici, de le faire par la loi"), ("qu'est-ce", 'justifie', 'la différence entre de le faire par règlement versus, ici, de le faire par la loi'), ('qui', 'faire', 'par règlement'), ('qui', 'faire', 'par la loi')]
 
-saved /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/hand_check.csv (69 rows from 15 sentences)
+
+saved /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/hand_check.csv (71 rows from 15 sentences)
 
 
             ID                                         Unit                                                        Unit text                     Subject                     Verb                                               Object                                                               Where the subject came from Right? What it should be
@@ -654,23 +692,23 @@ saved /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs
 7    heldout|3       unit 0 and unit 1 to unit 2 and unit 3                                                                                                              contrast                                                                                                                                discourse parse                         
 8   heldout|23                                            0                            Mais voilà, les engagements libéraux,                                                voilà                             les engagements libéraux                                                                              its own unit                         
 9   heldout|23                                            1              alors que le Parti libéral du Québec s'est présenté  le Parti libéral du Québec           s'est présenté                                                                                                                                   its own unit                         
-10  heldout|23                                            3                           Pour nous, la santé sera une priorité,                    la santé                     sera                                         une priorité                                                                              its own unit                         
-11  heldout|23                                            4                           ça a marqué les gens, M. le Président.                          ça                 a marqué                                             les gens                                             'ça' points to unit 2 and unit 3 (evaluation)                         
-12  heldout|23                             unit 2 to unit 3                                                                                                           attribution                                                                                                                                discourse parse                         
-13  heldout|23                  unit 2 and unit 3 to unit 4                                                                                                            evaluation                                                                                                                                discourse parse                         
-14  heldout|23          unit 1 to unit 2, unit 3 and unit 4                                                                                                           elaboration                                                                                                                                discourse parse                         
-15  heldout|23  unit 0 to unit 1, unit 2, unit 3 and unit 4                                                                                                                 joint                                                                                                                                discourse parse                         
-16  heldout|30                                            0                      Nous entamons aujourd'hui la dernière étape                        Nous                 entamons                                    la dernière étape                                                                              its own unit                         
-17  heldout|30                                            1                      menant à l'adoption du projet de loi n° 101           la dernière étape                   menant                 à l'adoption du projet de loi n° 101  describes the last noun phrase of unit 0 (no comma between them; discourse: elaboration)                         
-18  heldout|30                                            2              visant l'amélioration de certaines lois du travail.        projet de loi n° 101                   visant          l'amélioration de certaines lois du travail  describes the last noun phrase of unit 1 (no comma between them; discourse: elaboration)                         
-19  heldout|30                             unit 1 to unit 2                                                                                                           elaboration                                                                                                                                discourse parse                         
+10  heldout|23                                            2                                                       en disant:  le Parti libéral du Québec                   disant               Pour nous, la santé sera une priorité,                                                                      unit 1 (elaboration)                         
+11  heldout|23                                            3                           Pour nous, la santé sera une priorité,                    la santé                     sera                                         une priorité                                                                              its own unit                         
+12  heldout|23                                            4                           ça a marqué les gens, M. le Président.                          ça                 a marqué                                             les gens                                             'ça' points to unit 2 and unit 3 (evaluation)                         
+13  heldout|23                             unit 2 to unit 3                                                                                                           attribution                                                                                                                                discourse parse                         
+14  heldout|23                  unit 2 and unit 3 to unit 4                                                                                                            evaluation                                                                                                                                discourse parse                         
+15  heldout|23          unit 1 to unit 2, unit 3 and unit 4                                                                                                           elaboration                                                                                                                                discourse parse                         
+16  heldout|23  unit 0 to unit 1, unit 2, unit 3 and unit 4                                                                                                                 joint                                                                                                                                discourse parse                         
+17  heldout|30                                            0                      Nous entamons aujourd'hui la dernière étape                        Nous                 entamons                                    la dernière étape                                                                              its own unit                         
+18  heldout|30                                            1                      menant à l'adoption du projet de loi n° 101           la dernière étape                   menant                 à l'adoption du projet de loi n° 101  describes the last noun phrase of unit 0 (no comma between them; discourse: elaboration)                         
+19  heldout|30                                            2              visant l'amélioration de certaines lois du travail.        projet de loi n° 101                   visant          l'amélioration de certaines lois du travail  describes the last noun phrase of unit 1 (no comma between them; discourse: elaboration)                         
 
-checks and rule tests: 58 pass, 0 fail
+checks and rule tests: 94 pass, 0 fail
 trees: parsed now
             set  found %  exact % exact 95% interval
-     heldout en       72       47           32 to 63
+     heldout en       81       50           34 to 66
      heldout fr       58       33           20 to 50
-      sample en       80       41           33 to 50
-      sample fr       76       39           30 to 48
-simple tests en       96       91           83 to 96
-simple tests fr       90       89           79 to 94
+      sample en       87       45           36 to 53
+      sample fr       79       41           33 to 50
+simple tests en       97       93           84 to 97
+simple tests fr       94       93           84 to 97

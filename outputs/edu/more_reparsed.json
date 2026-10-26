@@ -334,17 +334,14 @@
      "lines": [
       {
        "subject": "you",
-       "verb": "can not listen",
+       "verb": "cannot listen",
        "object": "to the constant stories from patients and families",
        "kind": "asserted",
        "negated": true,
        "hedged": false,
        "how": "main clause",
        "leaf": 4,
-       "subject_from": "",
-       "context": [
-        "Mr. (background, unit 0)"
-       ]
+       "subject_from": ""
       }
      ]
     },
@@ -477,10 +474,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 18,
-       "subject_from": "'who' stands for the last noun phrase of unit 1 (discourse: elaboration)",
-       "context": [
-        "Mr. (background, unit 0)"
-       ]
+       "subject_from": "'who' stands for the last noun phrase of unit 1 (discourse: elaboration)"
       }
      ]
     },
@@ -521,7 +515,20 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "you",
+       "verb": "believe",
+       "object": "that there are not tragic gaps in our mental health system.",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 25,
+       "object_from": "discourse: what is said, unit 4",
+       "subject_from": "unit 1 (elaboration)"
+      }
+     ]
     },
     {
      "unit": 4,
@@ -665,10 +672,7 @@
        "hedged": false,
        "how": "complement clause",
        "leaf": 28,
-       "subject_from": "",
-       "context": [
-        "Mr. (background, unit 0)"
-       ]
+       "subject_from": ""
       }
      ]
     }
@@ -821,7 +825,7 @@
    "lines": [
     {
      "subject": "you",
-     "verb": "can not listen",
+     "verb": "cannot listen",
      "object": "to the constant stories from patients and families",
      "kind": "asserted",
      "negated": true,
@@ -829,9 +833,6 @@
      "how": "main clause",
      "leaf": 4,
      "subject_from": "",
-     "context": [
-      "Mr. (background, unit 0)"
-     ],
      "unit": 1
     },
     {
@@ -844,10 +845,20 @@
      "how": "relative clause",
      "leaf": 18,
      "subject_from": "'who' stands for the last noun phrase of unit 1 (discourse: elaboration)",
-     "context": [
-      "Mr. (background, unit 0)"
-     ],
      "unit": 2
+    },
+    {
+     "subject": "you",
+     "verb": "believe",
+     "object": "that there are not tragic gaps in our mental health system.",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 25,
+     "object_from": "discourse: what is said, unit 4",
+     "subject_from": "unit 1 (elaboration)",
+     "unit": 3
     },
     {
      "subject": "there",
@@ -859,9 +870,6 @@
      "how": "complement clause",
      "leaf": 28,
      "subject_from": "",
-     "context": [
-      "Mr. (background, unit 0)"
-     ],
      "unit": 4
     }
    ]
@@ -1475,7 +1483,7 @@
      ],
      "lines": [
       {
-       "subject": "work",
+       "subject": "(unstated)",
        "verb": "putting",
        "object": "America",
        "kind": "asserted",
@@ -1483,7 +1491,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 8,
-       "subject_from": "describes the last noun phrase of unit 1 (no comma between them; discourse: elaboration)"
+       "subject_from": "an infinitive or gerund with no subject in the words"
       }
      ]
     },
@@ -1549,7 +1557,7 @@
      ],
      "lines": [
       {
-       "subject": "It",
+       "subject": "",
        "verb": "end",
        "object": "the 31st travesty",
        "kind": "asserted",
@@ -1557,7 +1565,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 14,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": ""
       }
      ]
     },
@@ -1655,7 +1663,7 @@
      ],
      "lines": [
       {
-       "subject": "It",
+       "subject": "(unstated)",
        "verb": "trying to repeal",
        "object": "this bill",
        "kind": "embedded",
@@ -1663,7 +1671,7 @@
        "hedged": false,
        "how": "after 'of'; joined with its to-clause",
        "leaf": 19,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words"
       }
      ]
     }
@@ -1836,7 +1844,7 @@
      "unit": 1
     },
     {
-     "subject": "work",
+     "subject": "(unstated)",
      "verb": "putting",
      "object": "America",
      "kind": "asserted",
@@ -1844,11 +1852,11 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 8,
-     "subject_from": "describes the last noun phrase of unit 1 (no comma between them; discourse: elaboration)",
+     "subject_from": "an infinitive or gerund with no subject in the words",
      "unit": 2
     },
     {
-     "subject": "It",
+     "subject": "",
      "verb": "end",
      "object": "the 31st travesty",
      "kind": "asserted",
@@ -1856,11 +1864,11 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 14,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "",
      "unit": 3
     },
     {
-     "subject": "It",
+     "subject": "(unstated)",
      "verb": "trying to repeal",
      "object": "this bill",
      "kind": "embedded",
@@ -1868,7 +1876,7 @@
      "hedged": false,
      "how": "after 'of'; joined with its to-clause",
      "leaf": 19,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words",
      "unit": 4
     }
    ]
@@ -2188,7 +2196,7 @@
      ],
      "lines": [
       {
-       "subject": "I",
+       "subject": "people",
        "verb": "lost",
        "object": "their limbs",
        "kind": "asserted",
@@ -2196,7 +2204,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 17,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "unit 1 (joint)"
       }
      ]
     },
@@ -2547,7 +2555,7 @@
      "unit": 1
     },
     {
-     "subject": "I",
+     "subject": "people",
      "verb": "lost",
      "object": "their limbs",
      "kind": "asserted",
@@ -2555,7 +2563,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 17,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "unit 1 (joint)",
      "unit": 2
     },
     {
@@ -3937,7 +3945,7 @@
      ],
      "lines": [
       {
-       "subject": "These corrections",
+       "subject": "(unstated)",
        "verb": "determining",
        "object": "allotments for the territories and the District",
        "kind": "embedded",
@@ -3945,7 +3953,7 @@
        "hedged": false,
        "how": "after 'for'",
        "leaf": 10,
-       "subject_from": "unit 0 (purpose)"
+       "subject_from": "a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words"
       }
      ]
     },
@@ -3998,7 +4006,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "These corrections",
+       "verb": "reflect",
+       "object": "the statistical assumptions",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 18,
+       "subject_from": "unit 0 (purpose)"
+      }
+     ]
     },
     {
      "unit": 4,
@@ -4072,7 +4092,7 @@
      ],
      "lines": [
       {
-       "subject": "These corrections",
+       "subject": "the statistical assumptions",
        "verb": "agreed",
        "object": "to",
        "kind": "asserted",
@@ -4080,7 +4100,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 22,
-       "subject_from": "unit 0 (purpose)"
+       "subject_from": "describes the last noun phrase of unit 3 (no comma between them; discourse: elaboration)"
       }
      ]
     }
@@ -4253,7 +4273,7 @@
      "unit": 1
     },
     {
-     "subject": "These corrections",
+     "subject": "(unstated)",
      "verb": "determining",
      "object": "allotments for the territories and the District",
      "kind": "embedded",
@@ -4261,11 +4281,23 @@
      "hedged": false,
      "how": "after 'for'",
      "leaf": 10,
-     "subject_from": "unit 0 (purpose)",
+     "subject_from": "a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words",
      "unit": 2
     },
     {
      "subject": "These corrections",
+     "verb": "reflect",
+     "object": "the statistical assumptions",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 18,
+     "subject_from": "unit 0 (purpose)",
+     "unit": 3
+    },
+    {
+     "subject": "the statistical assumptions",
      "verb": "agreed",
      "object": "to",
      "kind": "asserted",
@@ -4273,7 +4305,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 22,
-     "subject_from": "unit 0 (purpose)",
+     "subject_from": "describes the last noun phrase of unit 3 (no comma between them; discourse: elaboration)",
      "unit": 4
     }
    ]
@@ -4986,7 +5018,7 @@
      ],
      "lines": [
       {
-       "subject": "(unstated)",
+       "subject": "an adequate base of healthy seniors",
        "verb": "to offset",
        "object": "the portion in greatest need of the benefit",
        "kind": "asserted",
@@ -4994,7 +5026,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 42,
-       "subject_from": "'would be an adequate base of healthy seniors | to ...': an infinitive on a noun or adjective; who does it is not in the words"
+       "subject_from": "'would be an adequate base of healthy seniors | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')"
       }
      ]
     }
@@ -5232,7 +5264,7 @@
      "unit": 4
     },
     {
-     "subject": "(unstated)",
+     "subject": "an adequate base of healthy seniors",
      "verb": "to offset",
      "object": "the portion in greatest need of the benefit",
      "kind": "asserted",
@@ -5240,7 +5272,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 42,
-     "subject_from": "'would be an adequate base of healthy seniors | to ...': an infinitive on a noun or adjective; who does it is not in the words",
+     "subject_from": "'would be an adequate base of healthy seniors | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')",
      "unit": 5
     }
    ]
@@ -5572,7 +5604,7 @@
      ],
      "lines": [
       {
-       "subject": "I",
+       "subject": "a system",
        "verb": "to administer",
        "object": "services",
        "kind": "asserted",
@@ -5580,7 +5612,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 17,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "unit 1 (purpose)"
       }
      ]
     }
@@ -5684,7 +5716,7 @@
      "unit": 1
     },
     {
-     "subject": "I",
+     "subject": "a system",
      "verb": "to administer",
      "object": "services",
      "kind": "asserted",
@@ -5692,7 +5724,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 17,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "unit 1 (purpose)",
      "unit": 2
     }
    ]
@@ -5924,7 +5956,7 @@
      ],
      "lines": [
       {
-       "subject": "",
+       "subject": "(unstated)",
        "verb": "Having",
        "object": "a large number of uninsured children in our communities",
        "kind": "asserted",
@@ -5932,10 +5964,10 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 0,
-       "subject_from": ""
+       "subject_from": "an infinitive or gerund with no subject in the words"
       },
       {
-       "subject": "",
+       "subject": "Having a large number of uninsured children in our communities",
        "verb": "places",
        "object": "a tremendous financial burden",
        "kind": "asserted",
@@ -5943,7 +5975,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 10,
-       "subject_from": ""
+       "subject_from": "unit tree: the clause the verb sits in has a gerund clause as its subject"
       }
      ]
     },
@@ -6222,7 +6254,7 @@
      "lines": [
       {
        "subject": "they",
-       "verb": "can not afford",
+       "verb": "cannot afford",
        "object": "a regular doctor's visit",
        "kind": "asserted",
        "negated": true,
@@ -6309,7 +6341,7 @@
    ],
    "lines": [
     {
-     "subject": "",
+     "subject": "(unstated)",
      "verb": "Having",
      "object": "a large number of uninsured children in our communities",
      "kind": "asserted",
@@ -6317,11 +6349,11 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 0,
-     "subject_from": "",
+     "subject_from": "an infinitive or gerund with no subject in the words",
      "unit": 0
     },
     {
-     "subject": "",
+     "subject": "Having a large number of uninsured children in our communities",
      "verb": "places",
      "object": "a tremendous financial burden",
      "kind": "asserted",
@@ -6329,7 +6361,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 10,
-     "subject_from": "",
+     "subject_from": "unit tree: the clause the verb sits in has a gerund clause as its subject",
      "unit": 0
     },
     {
@@ -6346,7 +6378,7 @@
     },
     {
      "subject": "they",
-     "verb": "can not afford",
+     "verb": "cannot afford",
      "object": "a regular doctor's visit",
      "kind": "asserted",
      "negated": true,
@@ -6591,11 +6623,11 @@
       {
        "subject": "That (inh)",
        "verb": "is",
-       "object": "otherwise",
+       "object": "an honorably intended revision of this measure",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "relative clause",
+       "how": "relative clause; an adverb is not the object; the phrase after it is",
        "leaf": 9,
        "subject_from": ""
       }
@@ -6620,11 +6652,11 @@
     {
      "subject": "That (inh)",
      "verb": "is",
-     "object": "otherwise",
+     "object": "an honorably intended revision of this measure",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "relative clause",
+     "how": "relative clause; an adverb is not the object; the phrase after it is",
      "leaf": 9,
      "subject_from": "",
      "unit": 0
@@ -6896,7 +6928,20 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "it",
+       "verb": "to ensure",
+       "object": "that they all have the resources that they need to raise their children.",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 17,
+       "object_from": "discourse: what is said, unit 3, unit 4 and unit 5",
+       "subject_from": "unit 1 (purpose)"
+      }
+     ]
     },
     {
      "unit": 3,
@@ -7055,13 +7100,14 @@
       {
        "subject": "they",
        "verb": "need",
-       "object": "",
+       "object": "the resources",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "complement clause",
        "leaf": 26,
-       "subject_from": ""
+       "subject_from": "",
+       "object_from": "object relative: 'that' stands for the last noun phrase of unit 3 (discourse: elaboration)"
       }
      ]
     },
@@ -7352,6 +7398,19 @@
      "unit": 1
     },
     {
+     "subject": "it",
+     "verb": "to ensure",
+     "object": "that they all have the resources that they need to raise their children.",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 17,
+     "object_from": "discourse: what is said, unit 3, unit 4 and unit 5",
+     "subject_from": "unit 1 (purpose)",
+     "unit": 2
+    },
+    {
      "subject": "they all",
      "verb": "have",
      "object": "the resources",
@@ -7366,13 +7425,14 @@
     {
      "subject": "they",
      "verb": "need",
-     "object": "",
+     "object": "the resources",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
      "how": "complement clause",
      "leaf": 26,
      "subject_from": "",
+     "object_from": "object relative: 'that' stands for the last noun phrase of unit 3 (discourse: elaboration)",
      "unit": 4
     },
     {
@@ -8231,7 +8291,7 @@
      ],
      "lines": [
       {
-       "subject": "I",
+       "subject": "my colleagues",
        "verb": "to bring",
        "object": "this bill",
        "kind": "asserted",
@@ -8239,7 +8299,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 25,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "unit 1 (purpose)"
       }
      ]
     }
@@ -8343,7 +8403,7 @@
      "unit": 1
     },
     {
-     "subject": "I",
+     "subject": "my colleagues",
      "verb": "to bring",
      "object": "this bill",
      "kind": "asserted",
@@ -8351,7 +8411,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 25,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "unit 1 (purpose)",
      "unit": 2
     }
    ]
@@ -8897,7 +8957,7 @@
      ],
      "lines": [
       {
-       "subject": "that",
+       "subject": "the many other Members and organizations",
        "verb": "came",
        "object": "to the table",
        "kind": "asserted",
@@ -8905,8 +8965,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 29,
-       "subject_from": "'that' points to unit 2 (purpose)",
-       "refers_to": "unit 2: to offer feedback, suggestions, and, at times, criticism."
+       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)"
       }
      ]
     },
@@ -9050,7 +9109,7 @@
      ],
      "lines": [
       {
-       "subject": "H.R. 2646",
+       "subject": "the many other Members and organizations",
        "verb": "to offer",
        "object": "feedback, suggestions, and, at times, criticism",
        "kind": "asserted",
@@ -9058,7 +9117,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 34,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "unit 1 (purpose)"
       }
      ]
     }
@@ -9150,7 +9209,7 @@
      "unit": 0
     },
     {
-     "subject": "that",
+     "subject": "the many other Members and organizations",
      "verb": "came",
      "object": "to the table",
      "kind": "asserted",
@@ -9158,12 +9217,11 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 29,
-     "subject_from": "'that' points to unit 2 (purpose)",
-     "refers_to": "unit 2: to offer feedback, suggestions, and, at times, criticism.",
+     "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "unit": 1
     },
     {
-     "subject": "H.R. 2646",
+     "subject": "the many other Members and organizations",
      "verb": "to offer",
      "object": "feedback, suggestions, and, at times, criticism",
      "kind": "asserted",
@@ -9171,7 +9229,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 34,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "unit 1 (purpose)",
      "unit": 2
     }
    ]
@@ -9846,7 +9904,7 @@
        "subject_from": ""
       },
       {
-       "subject": "economic sense",
+       "subject": "(unstated)",
        "verb": "to do",
        "object": "so",
        "kind": "embedded",
@@ -9854,7 +9912,7 @@
        "hedged": false,
        "how": "complement of makes",
        "leaf": 13,
-       "subject_from": ""
+       "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words"
       }
      ]
     },
@@ -10138,7 +10196,7 @@
        "subject_from": ""
       },
       {
-       "subject": "the right thing",
+       "subject": "(unstated)",
        "verb": "to do",
        "object": "in terms of health policy",
        "kind": "embedded",
@@ -10146,7 +10204,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 23,
-       "subject_from": "unit tree: a clause on a noun: the noun does it"
+       "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words"
       },
       {
        "subject": "the public",
@@ -10245,7 +10303,7 @@
      ],
      "lines": [
       {
-       "subject": "it",
+       "subject": "(unstated)",
        "verb": "receiving",
        "object": "their home care services",
        "kind": "embedded",
@@ -10253,7 +10311,7 @@
        "hedged": false,
        "how": "after 'in'",
        "leaf": 37,
-       "subject_from": "unit 3 (elaboration)"
+       "subject_from": "a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words"
       }
      ]
     }
@@ -10440,7 +10498,7 @@
      "unit": 2
     },
     {
-     "subject": "economic sense",
+     "subject": "(unstated)",
      "verb": "to do",
      "object": "so",
      "kind": "embedded",
@@ -10448,7 +10506,7 @@
      "hedged": false,
      "how": "complement of makes",
      "leaf": 13,
-     "subject_from": "",
+     "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words",
      "unit": 2
     },
     {
@@ -10465,7 +10523,7 @@
      "unit": 3
     },
     {
-     "subject": "the right thing",
+     "subject": "(unstated)",
      "verb": "to do",
      "object": "in terms of health policy",
      "kind": "embedded",
@@ -10473,7 +10531,7 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 23,
-     "subject_from": "unit tree: a clause on a noun: the noun does it",
+     "subject_from": "an infinitive on the noun before it with no object of its own ('the right thing to do'): who does it is not in the words",
      "unit": 3
     },
     {
@@ -10489,7 +10547,7 @@
      "unit": 3
     },
     {
-     "subject": "it",
+     "subject": "(unstated)",
      "verb": "receiving",
      "object": "their home care services",
      "kind": "embedded",
@@ -10497,7 +10555,7 @@
      "hedged": false,
      "how": "after 'in'",
      "leaf": 37,
-     "subject_from": "unit 3 (elaboration)",
+     "subject_from": "a gerund after a preposition, on the noun before it ('the formula | for determining ...'): who does it is not in the words",
      "unit": 4
     }
    ]
@@ -10799,10 +10857,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 14,
-       "subject_from": "",
-       "context": [
-        "and then after that we control you.\" (time-sequence, unit 2)"
-       ]
+       "subject_from": ""
       }
      ]
     },
@@ -10905,7 +10960,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "we",
+       "verb": "control",
+       "object": "you",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 29,
+       "subject_from": "unit tree: the subject of the clause the verb sits in"
+      }
+     ]
     },
     {
      "unit": 3,
@@ -11133,10 +11200,19 @@
      "how": "main clause",
      "leaf": 14,
      "subject_from": "",
-     "context": [
-      "and then after that we control you.\" (time-sequence, unit 2)"
-     ],
      "unit": 1
+    },
+    {
+     "subject": "we",
+     "verb": "control",
+     "object": "you",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 29,
+     "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "unit": 2
     },
     {
      "subject": "It",
@@ -11329,12 +11405,12 @@
       },
       {
        "subject": "them",
-       "verb": "mess",
-       "object": "that up",
+       "verb": "mess up",
+       "object": "that",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "complement of ve seen",
+       "how": "complement of ve seen; the particle goes with the verb",
        "leaf": 5,
        "subject_from": ""
       }
@@ -11359,12 +11435,12 @@
     },
     {
      "subject": "them",
-     "verb": "mess",
-     "object": "that up",
+     "verb": "mess up",
+     "object": "that",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "complement of ve seen",
+     "how": "complement of ve seen; the particle goes with the verb",
      "leaf": 5,
      "subject_from": "",
      "unit": 0
@@ -11569,11 +11645,11 @@
       {
        "subject": "it",
        "verb": "is",
-       "object": "also",
+       "object": "a moral obligation",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; an adverb is not the object; the phrase after it is",
        "leaf": 10,
        "subject_from": ""
       }
@@ -11631,11 +11707,11 @@
     {
      "subject": "it",
      "verb": "is",
-     "object": "also",
+     "object": "a moral obligation",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; an adverb is not the object; the phrase after it is",
      "leaf": 10,
      "subject_from": "",
      "unit": 1
@@ -12857,7 +12933,7 @@
      ],
      "lines": [
       {
-       "subject": "Bill 78",
+       "subject": "my original Bill 111",
        "verb": "died",
        "object": "on the order paper",
        "kind": "asserted",
@@ -12865,7 +12941,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 21,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "unit 1 (joint)"
       }
      ]
     }
@@ -12966,7 +13042,7 @@
      "unit": 1
     },
     {
-     "subject": "Bill 78",
+     "subject": "my original Bill 111",
      "verb": "died",
      "object": "on the order paper",
      "kind": "asserted",
@@ -12974,7 +13050,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 21,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "unit 1 (joint)",
      "unit": 2
     }
    ]
@@ -13337,7 +13413,8 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [],
+     "question": true
     },
     {
      "unit": 1,
@@ -13393,20 +13470,8 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "this",
-       "verb": "happened",
-       "object": "",
-       "kind": "asserted",
-       "negated": false,
-       "hedged": false,
-       "how": "main clause",
-       "leaf": 13,
-       "subject_from": "'this' points to unit 0 (explanation)",
-       "refers_to": "unit 0: Is all this skirmishing here the answer to a doctor,"
-      }
-     ]
+     "lines": [],
+     "question": true
     },
     {
      "unit": 2,
@@ -13466,19 +13531,8 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "this",
-       "verb": "breaks",
-       "object": "down",
-       "kind": "embedded",
-       "negated": false,
-       "hedged": false,
-       "how": "relative clause",
-       "leaf": 16,
-       "subject_from": "'who' stands for the last noun phrase of unit 1 (discourse: elaboration)"
-      }
-     ]
+     "lines": [],
+     "question": true
     },
     {
      "unit": 3,
@@ -13551,19 +13605,8 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "",
-       "verb": "cries",
-       "object": "in an emergency ward",
-       "kind": "asserted",
-       "negated": false,
-       "hedged": false,
-       "how": "main clause",
-       "leaf": 19,
-       "subject_from": ""
-      }
-     ]
+     "lines": [],
+     "question": true
     },
     {
      "unit": 4,
@@ -13656,19 +13699,8 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "she",
-       "verb": "has to make",
-       "object": "decisions",
-       "kind": "asserted",
-       "negated": false,
-       "hedged": false,
-       "how": "cause (because); joined with its to-clause",
-       "leaf": 26,
-       "subject_from": ""
-      }
-     ]
+     "lines": [],
+     "question": true
     },
     {
      "unit": 5,
@@ -13756,19 +13788,8 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "she",
-       "verb": "does not want to make",
-       "object": "",
-       "kind": "asserted",
-       "negated": true,
-       "hedged": false,
-       "how": "main clause; joined with its to-clause",
-       "leaf": 33,
-       "subject_from": ""
-      }
-     ]
+     "lines": [],
+     "question": true
     },
     {
      "unit": 6,
@@ -13890,19 +13911,8 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "a case",
-       "verb": "is",
-       "object": "urgent enough for admission",
-       "kind": "embedded",
-       "negated": false,
-       "hedged": false,
-       "how": "condition or time (whether)",
-       "leaf": 41,
-       "subject_from": ""
-      }
-     ]
+     "lines": [],
+     "question": true
     },
     {
      "unit": 7,
@@ -14250,81 +14260,7 @@
      "reads": "unit 0 and unit 1 to unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7: elaboration; main part unit 0 and unit 1; unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7 add detail to unit 0 and unit 1"
     }
    ],
-   "lines": [
-    {
-     "subject": "this",
-     "verb": "happened",
-     "object": "",
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "how": "main clause",
-     "leaf": 13,
-     "subject_from": "'this' points to unit 0 (explanation)",
-     "refers_to": "unit 0: Is all this skirmishing here the answer to a doctor,",
-     "unit": 1
-    },
-    {
-     "subject": "this",
-     "verb": "breaks",
-     "object": "down",
-     "kind": "embedded",
-     "negated": false,
-     "hedged": false,
-     "how": "relative clause",
-     "leaf": 16,
-     "subject_from": "'who' stands for the last noun phrase of unit 1 (discourse: elaboration)",
-     "unit": 2
-    },
-    {
-     "subject": "",
-     "verb": "cries",
-     "object": "in an emergency ward",
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "how": "main clause",
-     "leaf": 19,
-     "subject_from": "",
-     "unit": 3
-    },
-    {
-     "subject": "she",
-     "verb": "has to make",
-     "object": "decisions",
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "how": "cause (because); joined with its to-clause",
-     "leaf": 26,
-     "subject_from": "",
-     "unit": 4
-    },
-    {
-     "subject": "she",
-     "verb": "does not want to make",
-     "object": "",
-     "kind": "asserted",
-     "negated": true,
-     "hedged": false,
-     "how": "main clause; joined with its to-clause",
-     "leaf": 33,
-     "subject_from": "",
-     "unit": 5
-    },
-    {
-     "subject": "a case",
-     "verb": "is",
-     "object": "urgent enough for admission",
-     "kind": "embedded",
-     "negated": false,
-     "hedged": false,
-     "how": "condition or time (whether)",
-     "leaf": 41,
-     "subject_from": "",
-     "unit": 6
-    }
-   ]
+   "lines": []
   },
   {
    "n": "more|ON|10",
@@ -14457,7 +14393,20 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "The people",
+       "verb": "said",
+       "object": "that they would like to see the HST removed from heating, electricity and energy.",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 5,
+       "object_from": "discourse: what is said, unit 3",
+       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)"
+      }
+     ]
     },
     {
      "unit": 3,
@@ -14779,6 +14728,19 @@
      "leaf": 3,
      "subject_from": "",
      "unit": 1
+    },
+    {
+     "subject": "The people",
+     "verb": "said",
+     "object": "that they would like to see the HST removed from heating, electricity and energy.",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 5,
+     "object_from": "discourse: what is said, unit 3",
+     "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+     "unit": 2
     },
     {
      "subject": "they",
@@ -16086,11 +16048,11 @@
       {
        "subject": "we",
        "verb": "will lose",
-       "object": "slightly",
+       "object": "in excess of $50 million per year in revenue",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; an adverb is not the object; the phrase after it is",
        "leaf": 15,
        "subject_from": ""
       }
@@ -16151,11 +16113,11 @@
     {
      "subject": "we",
      "verb": "will lose",
-     "object": "slightly",
+     "object": "in excess of $50 million per year in revenue",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; an adverb is not the object; the phrase after it is",
      "leaf": 15,
      "subject_from": "",
      "unit": 1
@@ -16656,7 +16618,7 @@
      ],
      "lines": [
       {
-       "subject": "the lowest common denominator",
+       "subject": "which",
        "verb": "is",
        "object": "a really big problem",
        "kind": "embedded",
@@ -16664,7 +16626,8 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 31,
-       "subject_from": "'which' stands for the last noun phrase of unit 1 (discourse: evaluation)"
+       "subject_from": "'which' stands for the whole of unit 1 (evaluation)",
+       "refers_to": "unit 1: that the intent of the government is to reduce standards to the lowest common denominator,"
       }
      ]
     }
@@ -16793,7 +16756,7 @@
      "unit": 1
     },
     {
-     "subject": "the lowest common denominator",
+     "subject": "which",
      "verb": "is",
      "object": "a really big problem",
      "kind": "embedded",
@@ -16801,7 +16764,8 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 31,
-     "subject_from": "'which' stands for the last noun phrase of unit 1 (discourse: evaluation)",
+     "subject_from": "'which' stands for the whole of unit 1 (evaluation)",
+     "refers_to": "unit 1: that the intent of the government is to reduce standards to the lowest common denominator,",
      "unit": 2
     }
    ]
@@ -17925,7 +17889,7 @@
      ],
      "lines": [
       {
-       "subject": "the committee",
+       "subject": "which",
        "verb": "is",
        "object": "why it is in front of this public forum here today",
        "kind": "embedded",
@@ -17933,7 +17897,8 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 23,
-       "subject_from": "'which' stands for the last noun phrase of unit 2 (discourse: cause-result)"
+       "subject_from": "'which' stands for the whole of unit 0, unit 1 and unit 2 (cause-result)",
+       "refers_to": "unit 0, unit 1 and unit 2: As I understand it, this matter was fully debated in the legislative committee and it was defeated in the committee,"
       },
       {
        "subject": "it",
@@ -18073,11 +18038,11 @@
       {
        "subject": "it",
        "verb": "is moved",
-       "object": "again",
+       "object": "by the member",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; an adverb is not the object; the phrase after it is",
        "leaf": 37,
        "subject_from": "unit 3 (joint)"
       }
@@ -18430,7 +18395,7 @@
      "unit": 2
     },
     {
-     "subject": "the committee",
+     "subject": "which",
      "verb": "is",
      "object": "why it is in front of this public forum here today",
      "kind": "embedded",
@@ -18438,7 +18403,8 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 23,
-     "subject_from": "'which' stands for the last noun phrase of unit 2 (discourse: cause-result)",
+     "subject_from": "'which' stands for the whole of unit 0, unit 1 and unit 2 (cause-result)",
+     "refers_to": "unit 0, unit 1 and unit 2: As I understand it, this matter was fully debated in the legislative committee and it was defeated in the committee,",
      "unit": 3
     },
     {
@@ -18456,11 +18422,11 @@
     {
      "subject": "it",
      "verb": "is moved",
-     "object": "again",
+     "object": "by the member",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; an adverb is not the object; the phrase after it is",
      "leaf": 37,
      "subject_from": "unit 3 (joint)",
      "unit": 4
@@ -18628,8 +18594,7 @@
        "how": "main clause",
        "leaf": 1,
        "verb_as_written": "’s",
-       "subject_from": "'That' points to unit 1 (cause-result)",
-       "refers_to": "unit 1: so it excludes arm’s-length agencies, boards, commissions, what have you."
+       "subject_from": ""
       }
      ]
     },
@@ -18816,17 +18781,6 @@
        "how": "main clause",
        "leaf": 14,
        "subject_from": ""
-      },
-      {
-       "subject": "arm’s-length agencies, boards, commissions",
-       "verb": "have",
-       "object": "you",
-       "kind": "embedded",
-       "negated": false,
-       "hedged": false,
-       "how": "relative clause",
-       "leaf": 26,
-       "subject_from": "unit tree: a clause on a noun: the noun does it"
       }
      ]
     }
@@ -18880,8 +18834,7 @@
      "how": "main clause",
      "leaf": 1,
      "verb_as_written": "’s",
-     "subject_from": "'That' points to unit 1 (cause-result)",
-     "refers_to": "unit 1: so it excludes arm’s-length agencies, boards, commissions, what have you.",
+     "subject_from": "",
      "unit": 0
     },
     {
@@ -18894,18 +18847,6 @@
      "how": "main clause",
      "leaf": 14,
      "subject_from": "",
-     "unit": 1
-    },
-    {
-     "subject": "arm’s-length agencies, boards, commissions",
-     "verb": "have",
-     "object": "you",
-     "kind": "embedded",
-     "negated": false,
-     "hedged": false,
-     "how": "relative clause",
-     "leaf": 26,
-     "subject_from": "unit tree: a clause on a noun: the noun does it",
      "unit": 1
     }
    ]
@@ -19073,7 +19014,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "The resources",
+       "verb": "are",
+       "object": "the people",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 5,
+       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)"
+      }
+     ]
     },
     {
      "unit": 3,
@@ -19147,7 +19100,7 @@
      ],
      "lines": [
       {
-       "subject": "The resources",
+       "subject": "the people",
        "verb": "to carry out",
        "object": "those goals",
        "kind": "asserted",
@@ -19155,7 +19108,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 9,
-       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)"
+       "subject_from": "'are the people | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')"
       }
      ]
     },
@@ -19436,6 +19389,18 @@
     },
     {
      "subject": "The resources",
+     "verb": "are",
+     "object": "the people",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 5,
+     "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+     "unit": 2
+    },
+    {
+     "subject": "the people",
      "verb": "to carry out",
      "object": "those goals",
      "kind": "asserted",
@@ -19443,7 +19408,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 9,
-     "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+     "subject_from": "'are the people | to ... <object>': the noun does it ('an adequate base of seniors | to offset the portion')",
      "unit": 3
     },
     {
@@ -19801,7 +19766,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "that",
+       "verb": "should be debated",
+       "object": "in the House",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 16,
+       "subject_from": "unit tree: the subject of the clause the verb sits in"
+      }
+     ]
     },
     {
      "unit": 3,
@@ -20352,6 +20329,18 @@
      "unit": 1
     },
     {
+     "subject": "that",
+     "verb": "should be debated",
+     "object": "in the House",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 16,
+     "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "unit": 2
+    },
+    {
      "subject": "we",
      "verb": "look",
      "object": "at Bill 87, Speaker",
@@ -20470,8 +20459,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 1,
-       "subject_from": "'c'' points to unit 1 (elaboration)",
-       "refers_to": "unit 1: si c'est négatif pour certains groupes de la population"
+       "subject_from": ""
       }
      ]
     },
@@ -20600,8 +20588,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 6,
-       "subject_from": "'c'' points to unit 0 (elaboration)",
-       "refers_to": "unit 0: 51 c'est néfaste,"
+       "subject_from": ""
       }
      ]
     },
@@ -20847,7 +20834,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "je",
+       "verb": "pouvoir",
+       "object": "corriger",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 27,
+       "subject_from": "unit 3 (joint)"
+      }
+     ]
     },
     {
      "unit": 5,
@@ -20991,7 +20990,7 @@
        "hedged": false,
        "how": "joined (coordination)",
        "leaf": 30,
-       "subject_from": "unit 3 (joint)"
+       "subject_from": "unit 4 (joint)"
       },
       {
        "subject": "les gens",
@@ -21320,8 +21319,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 1,
-     "subject_from": "'c'' points to unit 1 (elaboration)",
-     "refers_to": "unit 1: si c'est négatif pour certains groupes de la population",
+     "subject_from": "",
      "unit": 0
     },
     {
@@ -21333,8 +21331,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 6,
-     "subject_from": "'c'' points to unit 0 (elaboration)",
-     "refers_to": "unit 0: 51 c'est néfaste,",
+     "subject_from": "",
      "unit": 1
     },
     {
@@ -21363,6 +21360,18 @@
     },
     {
      "subject": "je",
+     "verb": "pouvoir",
+     "object": "corriger",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 27,
+     "subject_from": "unit 3 (joint)",
+     "unit": 4
+    },
+    {
+     "subject": "je",
      "verb": "faire en sorte",
      "object": "que les gens ne soient pas pénalisés",
      "kind": "asserted",
@@ -21370,7 +21379,7 @@
      "hedged": false,
      "how": "joined (coordination)",
      "leaf": 30,
-     "subject_from": "unit 3 (joint)",
+     "subject_from": "unit 4 (joint)",
      "unit": 5
     },
     {
@@ -21468,7 +21477,8 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [],
+     "question": true
     },
     {
      "unit": 1,
@@ -21547,7 +21557,8 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [],
+     "question": true
     },
     {
      "unit": 2,
@@ -21597,19 +21608,8 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "la municipalité",
-       "verb": "paierait",
-       "object": "",
-       "kind": "asserted",
-       "negated": false,
-       "hedged": true,
-       "how": "main clause",
-       "leaf": 11,
-       "subject_from": ""
-      }
-     ]
+     "lines": [],
+     "question": true
     },
     {
      "unit": 3,
@@ -21643,7 +21643,8 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [],
+     "question": true
     },
     {
      "unit": 4,
@@ -21711,7 +21712,8 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [],
+     "question": true
     },
     {
      "unit": 5,
@@ -22023,20 +22025,7 @@
      "reads": "unit 0, unit 1 and unit 2 to unit 3, unit 4 and unit 5: joint; main part unit 0, unit 1 and unit 2; unit 3, unit 4 and unit 5 are listed with unit 0, unit 1 and unit 2"
     }
    ],
-   "lines": [
-    {
-     "subject": "la municipalité",
-     "verb": "paierait",
-     "object": "",
-     "kind": "asserted",
-     "negated": false,
-     "hedged": true,
-     "how": "main clause",
-     "leaf": 11,
-     "subject_from": "",
-     "unit": 2
-    }
-   ]
+   "lines": []
   },
   {
    "n": "more|QC|3",
@@ -22825,7 +22814,7 @@
      ],
      "lines": [
       {
-       "subject": "",
+       "subject": "(unstated)",
        "verb": "Établir",
        "object": "des corridors de services prioritaires",
        "kind": "embedded",
@@ -22833,7 +22822,7 @@
        "hedged": false,
        "how": "infinitive or participle",
        "leaf": 0,
-       "subject_from": ""
+       "subject_from": "an infinitive or gerund with no subject in the words"
       }
      ]
     },
@@ -23068,7 +23057,7 @@
    ],
    "lines": [
     {
-     "subject": "",
+     "subject": "(unstated)",
      "verb": "Établir",
      "object": "des corridors de services prioritaires",
      "kind": "embedded",
@@ -23076,7 +23065,7 @@
      "hedged": false,
      "how": "infinitive or participle",
      "leaf": 0,
-     "subject_from": "",
+     "subject_from": "an infinitive or gerund with no subject in the words",
      "unit": 0
     },
     {
@@ -23314,8 +23303,8 @@
      ],
      "lines": [
       {
-       "subject": "",
-       "verb": "Il y a",
+       "subject": "Il",
+       "verb": "y a",
        "object": "des gens",
        "kind": "asserted",
        "negated": false,
@@ -23546,8 +23535,8 @@
    ],
    "lines": [
     {
-     "subject": "",
-     "verb": "Il y a",
+     "subject": "Il",
+     "verb": "y a",
      "object": "des gens",
      "kind": "asserted",
      "negated": false,
@@ -23835,7 +23824,7 @@
      ],
      "lines": [
       {
-       "subject": "that (inh)",
+       "subject": "something",
        "verb": "addressed",
        "object": "",
        "kind": "asserted",
@@ -23843,11 +23832,10 @@
        "hedged": false,
        "how": "joined: main clause",
        "leaf": 7,
-       "subject_from": "'that' points to unit 0 (elaboration)",
-       "refers_to": "unit 0: Contracts has been something"
+       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)"
       },
       {
-       "subject": "that (inh)",
+       "subject": "something",
        "verb": "spoken",
        "object": "about again and again",
        "kind": "asserted",
@@ -23855,8 +23843,7 @@
        "hedged": false,
        "how": "joined: main clause",
        "leaf": 9,
-       "subject_from": "'that' points to unit 0 (elaboration)",
-       "refers_to": "unit 0: Contracts has been something"
+       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)"
       }
      ]
     },
@@ -24060,7 +24047,7 @@
      "unit": 0
     },
     {
-     "subject": "that (inh)",
+     "subject": "something",
      "verb": "addressed",
      "object": "",
      "kind": "asserted",
@@ -24068,12 +24055,11 @@
      "hedged": false,
      "how": "joined: main clause",
      "leaf": 7,
-     "subject_from": "'that' points to unit 0 (elaboration)",
-     "refers_to": "unit 0: Contracts has been something",
+     "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "unit": 1
     },
     {
-     "subject": "that (inh)",
+     "subject": "something",
      "verb": "spoken",
      "object": "about again and again",
      "kind": "asserted",
@@ -24081,8 +24067,7 @@
      "hedged": false,
      "how": "joined: main clause",
      "leaf": 9,
-     "subject_from": "'that' points to unit 0 (elaboration)",
-     "refers_to": "unit 0: Contracts has been something",
+     "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "unit": 1
     },
     {
@@ -24985,7 +24970,7 @@
       },
       {
        "subject": "les administrateurs municipaux",
-       "verb": "n'aient",
+       "verb": "n'aient pas",
        "object": "le beau sourire",
        "kind": "asserted",
        "negated": true,
@@ -25087,8 +25072,8 @@
      ],
      "lines": [
       {
-       "subject": "On",
-       "verb": "n'aient",
+       "subject": "les administrateurs municipaux",
+       "verb": "n'aient pas",
        "object": "un engagement extraordinaire vis-à-vis",
        "kind": "asserted",
        "negated": true,
@@ -25471,7 +25456,7 @@
     },
     {
      "subject": "les administrateurs municipaux",
-     "verb": "n'aient",
+     "verb": "n'aient pas",
      "object": "le beau sourire",
      "kind": "asserted",
      "negated": true,
@@ -25482,8 +25467,8 @@
      "unit": 0
     },
     {
-     "subject": "On",
-     "verb": "n'aient",
+     "subject": "les administrateurs municipaux",
+     "verb": "n'aient pas",
      "object": "un engagement extraordinaire vis-à-vis",
      "kind": "asserted",
      "negated": true,
@@ -25776,7 +25761,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "Ce",
+       "verb": "n'est pas uniquement dû",
+       "object": "",
+       "kind": "asserted",
+       "negated": true,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 2,
+       "subject_from": ""
+      }
+     ]
     },
     {
      "unit": 1,
@@ -25903,8 +25900,7 @@
        "hedged": true,
        "how": "main clause",
        "leaf": 7,
-       "subject_from": "'ce' points to unit 0 (elaboration)",
-       "refers_to": "unit 0: Ce n'est pas uniquement dû"
+       "subject_from": ""
       },
       {
        "subject": "ce (inh)",
@@ -25915,8 +25911,7 @@
        "hedged": false,
        "how": "after 'de'",
        "leaf": 13,
-       "subject_from": "'ce' points to unit 0 (elaboration)",
-       "refers_to": "unit 0: Ce n'est pas uniquement dû"
+       "subject_from": ""
       }
      ]
     },
@@ -26162,6 +26157,18 @@
    ],
    "lines": [
     {
+     "subject": "Ce",
+     "verb": "n'est pas uniquement dû",
+     "object": "",
+     "kind": "asserted",
+     "negated": true,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 2,
+     "subject_from": "",
+     "unit": 0
+    },
+    {
      "subject": "ce",
      "verb": "serait se berner",
      "object": "",
@@ -26170,8 +26177,7 @@
      "hedged": true,
      "how": "main clause",
      "leaf": 7,
-     "subject_from": "'ce' points to unit 0 (elaboration)",
-     "refers_to": "unit 0: Ce n'est pas uniquement dû",
+     "subject_from": "",
      "unit": 1
     },
     {
@@ -26183,8 +26189,7 @@
      "hedged": false,
      "how": "after 'de'",
      "leaf": 13,
-     "subject_from": "'ce' points to unit 0 (elaboration)",
-     "refers_to": "unit 0: Ce n'est pas uniquement dû",
+     "subject_from": "",
      "unit": 1
     },
     {
@@ -26872,13 +26877,14 @@
       {
        "subject": "le ministre",
        "verb": "veut éviter",
-       "object": "",
+       "object": "des dommages beaucoup plus substantiels et importants",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
        "how": "relative clause",
        "leaf": 16,
-       "subject_from": ""
+       "subject_from": "",
+       "object_from": "object relative: 'que' stands for the last noun phrase of unit 0 (discourse: elaboration)"
       }
      ]
     }
@@ -26937,13 +26943,14 @@
     {
      "subject": "le ministre",
      "verb": "veut éviter",
-     "object": "",
+     "object": "des dommages beaucoup plus substantiels et importants",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
      "how": "relative clause",
      "leaf": 16,
      "subject_from": "",
+     "object_from": "object relative: 'que' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "unit": 1
     }
    ]
@@ -27055,7 +27062,7 @@
      "lines": [
       {
        "subject": "vous",
-       "verb": "n'avez",
+       "verb": "n'avez pas",
        "object": "de courage",
        "kind": "asserted",
        "negated": true,
@@ -27290,7 +27297,7 @@
    "lines": [
     {
      "subject": "vous",
-     "verb": "n'avez",
+     "verb": "n'avez pas",
      "object": "de courage",
      "kind": "asserted",
      "negated": true,
@@ -27552,13 +27559,14 @@
       {
        "subject": "on",
        "verb": "a fait passer",
-       "object": "Mme la Présidente",
+       "object": "le menu législatif",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "subordinate (qu')",
+       "how": "subordinate (qu'); someone spoken to is not the object",
        "leaf": 7,
-       "subject_from": ""
+       "subject_from": "",
+       "object_from": "object relative: 'qu'' stands for the last noun phrase of unit 0 (discourse: elaboration)"
       }
      ]
     },
@@ -28144,13 +28152,14 @@
     {
      "subject": "on",
      "verb": "a fait passer",
-     "object": "Mme la Présidente",
+     "object": "le menu législatif",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "subordinate (qu')",
+     "how": "subordinate (qu'); someone spoken to is not the object",
      "leaf": 7,
      "subject_from": "",
+     "object_from": "object relative: 'qu'' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "unit": 1
     },
     {
@@ -28317,7 +28326,7 @@
      "lines": [
       {
        "subject": "Il",
-       "verb": "n'y en a",
+       "verb": "n'y en a pas",
        "object": "énormément d'autres",
        "kind": "asserted",
        "negated": true,
@@ -28429,15 +28438,15 @@
      ],
      "lines": [
       {
-       "subject": "Il",
-       "verb": "il y en a",
+       "subject": "il",
+       "verb": "y en a",
        "object": "un certain nombre",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
        "how": "joined (coordination)",
        "leaf": 11,
-       "subject_from": "unit 0 (contrast)"
+       "subject_from": ""
       }
      ]
     }
@@ -28480,7 +28489,7 @@
    "lines": [
     {
      "subject": "Il",
-     "verb": "n'y en a",
+     "verb": "n'y en a pas",
      "object": "énormément d'autres",
      "kind": "asserted",
      "negated": true,
@@ -28491,15 +28500,15 @@
      "unit": 0
     },
     {
-     "subject": "Il",
-     "verb": "il y en a",
+     "subject": "il",
+     "verb": "y en a",
      "object": "un certain nombre",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
      "how": "joined (coordination)",
      "leaf": 11,
-     "subject_from": "unit 0 (contrast)",
+     "subject_from": "",
      "unit": 1
     }
    ]
@@ -29136,7 +29145,19 @@
        ]
       ]
      ],
-     "lines": []
+     "lines": [
+      {
+       "subject": "Cette législation",
+       "verb": "prévoit",
+       "object": "",
+       "kind": "asserted",
+       "negated": false,
+       "hedged": false,
+       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "leaf": 6,
+       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)"
+      }
+     ]
     },
     {
      "unit": 3,
@@ -29446,8 +29467,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 24,
-       "subject_from": "'c'' points to unit 3 (elaboration)",
-       "refers_to": "unit 3: lorsque l'entreprise a un chiffre d'affaires de plus de 2 500 000 $"
+       "subject_from": ""
       }
      ]
     },
@@ -29864,6 +29884,18 @@
    ],
    "lines": [
     {
+     "subject": "Cette législation",
+     "verb": "prévoit",
+     "object": "",
+     "kind": "asserted",
+     "negated": false,
+     "hedged": false,
+     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "leaf": 6,
+     "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+     "unit": 2
+    },
+    {
      "subject": "l'entreprise",
      "verb": "a",
      "object": "un chiffre d'affaires de plus de 2 500 000 $",
@@ -29884,8 +29916,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 24,
-     "subject_from": "'c'' points to unit 3 (elaboration)",
-     "refers_to": "unit 3: lorsque l'entreprise a un chiffre d'affaires de plus de 2 500 000 $",
+     "subject_from": "",
      "unit": 4
     },
     {
@@ -30176,11 +30207,11 @@
       {
        "subject": "Nous",
        "verb": "comprenons",
-       "object": "tous",
+       "object": "la véritable raison",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; an adverb is not the object; the phrase after it is",
        "leaf": 0,
        "subject_from": ""
       }
@@ -30269,7 +30300,7 @@
      ],
      "lines": [
       {
-       "subject": "qui",
+       "subject": "la véritable raison",
        "verb": "justifie",
        "object": "la décision du gouvernement",
        "kind": "embedded",
@@ -30277,7 +30308,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 7,
-       "subject_from": "unit tree: the subject of the clause the verb sits in"
+       "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: elaboration)"
       }
      ]
     },
@@ -30364,7 +30395,7 @@
      ],
      "lines": [
       {
-       "subject": "Nous",
+       "subject": "(unstated)",
        "verb": "aller",
        "object": "de l'avant",
        "kind": "embedded",
@@ -30372,7 +30403,7 @@
        "hedged": false,
        "how": "after 'd''",
        "leaf": 13,
-       "subject_from": "unit 0 (elaboration)"
+       "subject_from": "an infinitive on the noun before it ('la décision du gouvernement | d'aller'): who does it is not in the words"
       }
      ]
     },
@@ -30614,17 +30645,17 @@
     {
      "subject": "Nous",
      "verb": "comprenons",
-     "object": "tous",
+     "object": "la véritable raison",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; an adverb is not the object; the phrase after it is",
      "leaf": 0,
      "subject_from": "",
      "unit": 0
     },
     {
-     "subject": "qui",
+     "subject": "la véritable raison",
      "verb": "justifie",
      "object": "la décision du gouvernement",
      "kind": "embedded",
@@ -30632,11 +30663,11 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 7,
-     "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "unit": 1
     },
     {
-     "subject": "Nous",
+     "subject": "(unstated)",
      "verb": "aller",
      "object": "de l'avant",
      "kind": "embedded",
@@ -30644,7 +30675,7 @@
      "hedged": false,
      "how": "after 'd''",
      "leaf": 13,
-     "subject_from": "unit 0 (elaboration)",
+     "subject_from": "an infinitive on the noun before it ('la décision du gouvernement | d'aller'): who does it is not in the words",
      "unit": 2
     }
    ]

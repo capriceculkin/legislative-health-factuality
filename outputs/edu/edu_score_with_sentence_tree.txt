@@ -4,9 +4,9 @@ Keys for sample and held-out were drafted with AI assistance; they are working k
 set                method                    found        exact  extra lines
 heldout en         2-of-3 vote          30/36    83%   20/36    56%     10 of 40
 heldout en         tree + deps add      31/36    86%   19/36    53%     12 of 43
-heldout en         discourse first      28/36    78%   18/36    50%      7 of 35
-                   exact, discourse first vs 2-of-3 vote: only discourse first 2, only 2-of-3 vote 4, McNemar p = 0.69
-                   exact, discourse first vs tree + deps add: only discourse first 1, only tree + deps add 2, McNemar p = 1.00
+heldout en         discourse first      30/36    83%   19/36    53%      5 of 35
+                   exact, discourse first vs 2-of-3 vote: only discourse first 2, only 2-of-3 vote 3, McNemar p = 1.00
+                   exact, discourse first vs tree + deps add: only discourse first 1, only tree + deps add 1, McNemar p = 1.00
 
 heldout fr         2-of-3 vote          25/33    76%    9/33    27%     10 of 35
 heldout fr         tree + deps add      26/33    79%   14/33    42%     16 of 42
@@ -22,9 +22,9 @@ sample en          discourse first      97/119   82%   52/119   44%     26 of 12
 
 sample fr          2-of-3 vote          94/116   81%   33/116   28%     27 of 121
 sample fr          tree + deps add      96/116   83%   36/116   31%     52 of 148
-sample fr          discourse first      84/116   72%   40/116   34%     41 of 125
-                   exact, discourse first vs 2-of-3 vote: only discourse first 13, only 2-of-3 vote 6, McNemar p = 0.17
-                   exact, discourse first vs tree + deps add: only discourse first 10, only tree + deps add 6, McNemar p = 0.45
+sample fr          discourse first      84/116   72%   42/116   36%     41 of 125
+                   exact, discourse first vs 2-of-3 vote: only discourse first 14, only 2-of-3 vote 5, McNemar p = 0.06
+                   exact, discourse first vs tree + deps add: only discourse first 12, only tree + deps add 6, McNemar p = 0.24
 
 simple tests en    2-of-3 vote          68/70    97%   66/70    94%      1 of 69
 simple tests en    tree + deps add      65/70    93%   61/70    87%      7 of 72

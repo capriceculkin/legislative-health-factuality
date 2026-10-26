@@ -491,16 +491,21 @@ check("discourse: a verbless unit is context only for background-type relations 
 """)
 
 md(r"""
-### The fixes from the Oct 26 run
+### The fixes from the Oct 26 runs
 
-Each case below is one problem found in the first run on the Mac, with the tree written out by hand in the shape the parser gave. Before the fix each of these failed; the controls (a subject that only looks like a time, 'that' still pointing back, purpose still working) passed before and after.
+Each case below is one problem found in the runs on the Mac, with the tree written out in the shape the Mac's parser gave. Each one failed before its fix; the controls (a subject that only looks like a time, 'that' still pointing back, purpose still working, 'the fact that ...', 'measures to help us', a real 'it') passed before and after.
 
-- a time is not the subject: 'Last year the House passed ...' parsed alone
-- contractions: I'm -> am, we're -> are (the form as written is kept)
-- 'it' is an ordinary pronoun: only that / this / ça / cela / ceci point to whole units
-- who / which / qui: the noun it hangs on inside the same unit, or through the discourse parse when the unit starts with it; never a question word (qu'est-ce qui = what) and never another pronoun
-- 'It is time | to stop': who stops is not stated
-- quoted bill text ('(A) Employer coverage ...--In the case of') is left out when new sentences are drawn; a member's motion that quotes a bill is kept
+- a time is not the subject ('Last year the House passed'); I'm -> am; cannot as written
+- 'it' never points to units; 'that' / 'ça' point back only, never forward; 'c'' / 'ce' only for explanation, evaluation, cause
+- who / which / qui: the noun it hangs on; never a question word ('qu'est-ce qui'); 'which is why' and an evaluating 'which' stand for the whole clause
+- object relatives: 'the resources | that they need', 'le menu législatif | qu'on a fait passer'; not 'the fact | that ...'
+- infinitives: 'It is time | to stop', 'the right thing to do', 'economic sense to do so' have no stated doer; 'measures to help us', 'a base | to offset the portion' do
+- a unit that is only a verb ('said', 'prévoit', 'are the people') gets a line for the discourse parse to fill; a FRAG with a subject is a clause
+- a borrowed subject comes from the main part of the earlier span, the nearest clause in it, or the clause doing the saying in an attribution; never the empty 'It' of 'It is time'
+- an adverb is not the object when a phrase follows it ('is also a moral obligation'); 'ne reçoivent plus | ce service'; 'mess up | that'
+- French: 'n'aient pas', 'Il | y a', 'n'est pas' as written; 'peu importe' and 'what have you' are not claims; 'Mme la Présidente' is not an object
+- a question sentence gives no claims; 'If passed,' stays context; 'Mr. Speaker,' is never context
+- new sentences leave out quoted bill text
 """)
 
 code(r"""
@@ -593,6 +598,148 @@ check("It is time | to stop: who stops is not stated", any(l[2] == "to stop" and
 r = row_of("The government cut taxes to help families.", "en", ["The government cut taxes", "to help families."], [{"left": [0, 0], "right": [1, 1], "relation": "purpose", "nuclearity": "NS"}])
 L = show(process(r, [[T("(ROOT (S (NP (DT The) (NN government)) (VP (VBD cut) (NP (NNS taxes)))))")], [T("(ROOT (S (VP (TO to) (VP (VB help) (NP (NNS families)))) (. .)))")]]))
 check("cut taxes | to help families -> The government", any(l[1] == "The government" and "help" in l[2] for l in L), L)
+
+# round 3: from the second Mac run
+txt = "Mr. Dingell's motion asks for the maximum level of mental health coverage that does not drive up the premium costs for others."
+r = row_of(txt, "en", ["Mr. Dingell's motion asks for the maximum level of mental health coverage", "that does not drive up the premium costs for others."],
+        [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}])
+L = show(process(r, [[T("(ROOT (S (NP (NP (NNP Mr.) (NNP Dingell) (POS 's)) (NN motion)) (VP (VBZ asks) (PP (IN for) (NP (NP (DT the) (JJ maximum) (NN level)) (PP (IN of) (NP (NN mental) (NN health) (NN coverage))))))))")],
+                       [T("(ROOT (S (NP (DT that)) (VP (VBZ does) (RB not) (VP (VB drive) (PRT (RP up)) (NP (NP (DT the) (NN premium) (NNS costs)) (PP (IN for) (NP (NNS others)))))) (. .)))")]]))
+check("a fragment's 'that' tagged DT is still the relative: -> mental health coverage | does not drive up", any("coverage" in l[1] and "drive up" in l[2] for l in L), L)
+txt = "Mr. Speaker, you cannot listen to these stories."
+r = row_of(txt, "en", ["Mr. Speaker,", "you cannot listen to these stories."], [{"left": [0, 0], "right": [1, 1], "relation": "background", "nuclearity": "SN"}])
+L = show(process(r, [[T("(ROOT (NP (NNP Mr.) (NNP Speaker) (, ,)))")], [T("(ROOT (S (NP (PRP you)) (VP (MD can) (RB not) (VP (VB listen) (PP (IN to) (NP (DT these) (NNS stories))))) (. .)))")]]))
+check("'Mr. Speaker,' is not context, and 'cannot' is written as in the text", L and not L[0][5] and L[0][2] == "cannot listen", L)
+pieces_verb = [(T("(ROOT (S (NP (PRP we)) (VP (VBP control) (NP (PRP you)))))"), [])]
+check("a unit with its own subject and verb is a clause; 'If passed,' is not; 'L'an dernier,' is not",
+      E.has_clause(pieces_verb) and not E.has_clause([(T("(ROOT (SBAR (IN If) (S (VP (VBN passed))) (, ,)))"), [])])
+      and not E.has_clause([(T("(TOP (SENT (NP (DET L') (NC an) (AP (ADJ dernier))) (PONCT ,)))"), [])])
+      and E.has_clause([(T("(TOP (SENT (CC et) (VN (CLS elle) (V obtiendrait)) (PONCT ?)))"), [])]), "")
+txt = "If passed, the act would provide measures."
+r = row_of(txt, "en", ["If passed,", "the act would provide measures."], [{"left": [0, 0], "right": [1, 1], "relation": "condition", "nuclearity": "SN"}])
+L = show(process(r, [[T("(ROOT (SBAR (IN If) (S (VP (VBN passed))) (, ,)))")], [T("(ROOT (S (NP (DT the) (NN act)) (VP (MD would) (VP (VB provide) (NP (NNS measures)))) (. .)))")]]))
+check("'If passed,' is still context for the claim it conditions", L and any("If passed" in c for c in (L[0][5] or [])), L)
+check("has_verb sees a verb; is_address sees 'Mr. Speaker,' and 'M. le Président,'", E.has_verb(pieces_verb) and E.is_address("Mr. Speaker,") and E.is_address("M. le Président,") and not E.is_address("L'an dernier,"), "")
+txt = "Et pourquoi la municipalité paierait et elle obtiendrait tout gratuitement?"
+r = row_of(txt, "fr", ["Et pourquoi la municipalité paierait", "et elle obtiendrait tout gratuitement?"], [{"left": [0, 0], "right": [1, 1], "relation": "continuation", "nuclearity": "NN"}])
+L = show(process(r, [[T("(TOP (SENT (CC Et) (ADVWH (ADV pourquoi)) (NP (DET la) (NC municipalité)) (VN (V paierait))))")],
+                       [T("(TOP (SENT (CC et) (VN (CLS elle) (V obtiendrait)) (NP (PRO tout)) (ADV gratuitement) (PONCT ?)))")]]))
+check("Et pourquoi ... paierait? is a question: no claims", L == [], L)
+check("a statement ending in a tag question keeps its claim", not E.is_question_sentence("Je l'ai dit, hein?") and not E.is_question_sentence("We passed the bill, O.K.?"), "")
+check("a statement is not a question", not E.is_question_sentence("Why we need the check is clear."), "")
+
+# round 4: each tree below is the shape the Mac's parsers gave (Oct 26 run)
+L = show(process(row_of("It requires patience, but it is also a moral obligation.", "en", ["It requires patience,", "but it is also a moral obligation."], [{"left": [0, 0], "right": [1, 1], "relation": "contrast", "nuclearity": "NN"}]),
+                   [[T("(ROOT (S (NP (PRP It)) (VP (VBZ requires) (NP (NN patience))) (, ,)))")], [T("(ROOT (S (CC but) (NP (PRP it)) (VP (VBZ is) (ADVP (RB also)) (NP (DT a) (JJ moral) (NN obligation))) (. .)))")]]))
+check("an adverb is not the object: it | is | a moral obligation", (1, "it", "is", "a moral obligation") in [l[:4] for l in L], L)
+L = show(process(row_of("Nurses earn less.", "en", ["Nurses earn less."], []), [[T("(ROOT (S (NP (NNS Nurses)) (VP (VBP earn) (ADVP (RBR less))) (. .)))")]]))
+check("an adverb with nothing after it stays: Nurses | earn | less", L and L[0][3] == "less", L)
+L = show(process(row_of("We've seen them totally mess that up.", "en", ["We've seen them totally mess that up."], []),
+                   [[T("(ROOT (S (NP (PRP We)) (VP (VBP 've) (VP (VBN seen) (S (NP (PRP them)) (ADVP (RB totally)) (VP (VB mess) (NP (DT that)) (PRT (RP up)))))) (. .)))")]]))
+check("the particle goes with the verb: them | mess up | that", any(l[1] == "them" and l[2] == "mess up" and l[3] == "that" for l in L), L)
+txt = "You can only practise so much, and then after that we control you."
+L = show(process(row_of(txt, "en", ["You can only practise so much,", "and then after that we control you."], [{"left": [0, 0], "right": [1, 1], "relation": "temporal", "nuclearity": "NN"}]),
+                   [[T("(ROOT (S (NP (PRP You)) (VP (MD can) (ADVP (RB only)) (VP (VB practise) (ADVP (RB so) (RB much)))) (, ,)))")],
+                    [T("(ROOT (FRAG (CC and) (RB then) (PP (IN after) (NP (IN that))) (NP (PRP we)) (VP (VBP control) (NP (PRP you))) (. .)))")]]))
+check("a FRAG with a subject before its verb: we | control | you (not borrowed)", (1, "we", "control", "you") in [l[:4] for l in L], L)
+check("'so much' stays the object of 'practise'", (0, "You", "can practise", "so much") in [l[:4] for l in L], L)
+txt = "The resources that are necessary are the people to carry out those goals."
+L = show(process(row_of(txt, "en", ["The resources", "that are necessary", "are the people", "to carry out those goals."],
+                       [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}, {"left": [2, 2], "right": [3, 3], "relation": "elaboration", "nuclearity": "NS"},
+                        {"left": [0, 1], "right": [2, 3], "relation": "same-unit", "nuclearity": "NN"}]),
+                   [[T("(ROOT (NP (DT The) (NNS resources)))")], [T("(ROOT (SBAR (WHNP (WDT that)) (S (VP (VBP are) (ADJP (JJ necessary))))))")],
+                    [T("(ROOT (SINV (VP (VBP are)) (NP (DT the) (NNS people))))")], [T("(ROOT (S (VP (TO to) (VP (VB carry) (PRT (RP out)) (NP (DT those) (NNS goals))))))")]]))
+check("a unit that is only a verb gets a line: The resources | are | the people (same-unit)", (2, "The resources", "are", "the people") in [l[:4] for l in L], L)
+check("'are the people | to carry out those goals': the people | to carry out", any(l[0] == 3 and l[1] == "the people" for l in L), L)
+txt = "It makes economic sense to do so."
+L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (NP (NP (PRP it))) (VP (VBZ makes) (S (NP (JJ economic) (NN sense)) (VP (TO to) (VP (VB do) (ADVP (RB so))))))))")]]))
+check("an infinitive with no object of its own on the noun before it: (unstated) | to do (it makes economic sense to do so)", any(l[2] == "to do" and l[1] == "(unstated)" for l in L), L)
+txt = "It's the right thing to do in terms of health policy."
+L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (NP (PRP It)) (VP (VBZ 's) (NP (NP (DT the) (JJ right) (NN thing)) (SBAR (S (VP (TO to) (VP (VB do) (PP (IN in) (NP (NP (NNS terms)) (PP (IN of) (NP (NN health) (NN policy))))))))))) (. .)))")]]))
+check("the right thing | to do: (unstated), not the thing", any(l[2] == "to do" and l[1] == "(unstated)" for l in L), L)
+txt = "We need measures to help us."
+L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (NP (PRP We)) (VP (VBP need) (NP (NP (NNS measures)) (S (VP (TO to) (VP (VB help) (NP (PRP us))))))) (. .)))")]]))
+check("an infinitive WITH its own object keeps the noun: measures | to help | us", not any(l[2] == "to help" and l[1] == "(unstated)" for l in L), L)
+txt = "There would be an adequate base of healthy seniors to offset the portion."
+L = show(process(row_of(txt, "en", ["There would be an adequate base of healthy seniors", "to offset the portion."], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (EX There)) (VP (MD would) (VP (VB be) (NP (NP (DT an) (JJ adequate) (NN base)) (PP (IN of) (NP (JJ healthy) (NNS seniors))))))))")],
+                    [T("(ROOT (S (VP (TO to) (VP (VB offset) (NP (DT the) (NN portion)))) (. .)))")]]))
+check("'is an adequate base | to offset the portion': the base does it", any(l[0] == 1 and l[1] == "an adequate base of healthy seniors" for l in L), L)
+txt = "It's time to get back to work putting America back to work."
+L = show(process(row_of(txt, "en", ["It's time", "to get back to work", "putting America back to work."],
+                       [{"left": [0, 0], "right": [1, 1], "relation": "purpose", "nuclearity": "NS"}, {"left": [0, 1], "right": [2, 2], "relation": "elaboration", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (PRP It)) (VP (VBZ 's) (NP (NN time)))))")], [T("(ROOT (S (VP (TO to) (VP (VB get) (ADVP (RB back) (PP (IN to) (NP (NN work))))))))")],
+                    [T("(ROOT (S (VP (VBG putting) (NP (NNP America)) (ADVP (RB back) (PP (IN to) (NP (NN work))))) (. .)))")]]))
+check("'back to work | putting America': not 'work', and not the empty 'It' of 'It's time'", not any(l[1] in ("work", "It") and l[0] == 2 for l in L), L)
+txt = "The bill contains protections by requiring women donating fetal tissue to sign forms."
+L = show(process(row_of(txt, "en", ["The bill contains protections by requiring women", "donating fetal tissue"], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (DT The) (NN bill)) (VP (VBZ contains) (NP (NNS protections)) (PP (IN by) (S (VP (VBG requiring) (NP (NNS women))))))))")],
+                    [T("(ROOT (S (VP (VBG donating) (NP (JJ fetal) (NN tissue)))))")]]))
+check("'requiring women | donating': women, even inside 'by requiring women'", any(l[0] == 1 and l[1] == "women" for l in L), L)
+txt = "Having a large number of uninsured children places a burden on hospitals."
+L = show(process(row_of(txt, "en", [txt], []), [[T("(ROOT (S (S (VP (VBG Having) (NP (NP (DT a) (JJ large) (NN number)) (PP (IN of) (NP (JJ uninsured) (NNS children)))))) (VP (VBZ places) (NP (DT a) (NN burden)) (PP (IN on) (NP (NNS hospitals)))) (. .)))")]]))
+check("a gerund clause is the subject: Having a large number of uninsured children | places", any(l[2] == "places" and l[1].startswith("Having") for l in L), L)
+txt = "That's the public sector, so it excludes agencies, boards, what have you."
+L = show(process(row_of(txt, "en", ["That's the public sector,", "so it excludes agencies, boards, what have you."], [{"left": [0, 0], "right": [1, 1], "relation": "causal", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (DT That)) (VP (VBZ 's) (NP (DT the) (JJ public) (NN sector))) (, ,)))")],
+                    [T("(ROOT (S (IN so) (NP (PRP it)) (VP (VBZ excludes) (NP (NP (NNS agencies)) (, ,) (NP (NNS boards)) (, ,) (SBAR (WHNP (WP what)) (S (VP (VBP have) (NP (PRP you))))))) (. .)))")]]))
+check("'That' does not point forward to the next unit", not L[0][6], L)
+check("'what have you' is not a claim", not any(l[2] == "have" for l in L), L)
+txt = "The intent is to reduce standards, which is a really big problem."
+L = show(process(row_of(txt, "en", ["The intent is to reduce standards,", "which is a really big problem."], [{"left": [0, 0], "right": [1, 1], "relation": "evaluation", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (DT The) (NN intent)) (VP (VBZ is) (S (VP (TO to) (VP (VB reduce) (NP (NNS standards)))))) (, ,)))")],
+                    [T("(ROOT (SBAR (WHNP (WDT which)) (S (VP (VBZ is) (NP (DT a) (RB really) (JJ big) (NN problem)))) (. .)))")]]))
+check("'which is a really big problem' (evaluation): which = the whole of unit 0, not 'standards'", any(l[0] == 1 and l[1] == "which" and (l[6] or "").startswith("unit 0:") for l in L), L)
+txt = "The program ensures that they have the resources that they need."
+L = show(process(row_of(txt, "en", ["The program ensures that they have the resources", "that they need."], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (DT The) (NN program)) (VP (VBZ ensures) (SBAR (IN that) (S (NP (PRP they)) (VP (VBP have) (NP (DT the) (NNS resources))))))))")],
+                    [T("(ROOT (SBAR (IN that) (S (NP (PRP they)) (VP (VBP need)))))")]]))
+check("object relative: the resources | that they need -> they | need | the resources", any(l[0] == 1 and l[2] == "need" and l[3] == "the resources" for l in L), L)
+txt = "And I do not want to discount the fact that health care needs to be improved."
+L = show(process(row_of(txt, "en", ["And I do not want to discount the fact", "that health care needs to be improved."], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (CC And) (NP (PRP I)) (VP (VBP do) (RB not) (VP (VB want) (S (VP (TO to) (VP (VB discount) (NP (DT the) (NN fact)))))))))")],
+                    [T("(ROOT (SBAR (IN that) (S (NP (NN health) (NN care)) (VP (VBZ needs) (S (VP (TO to) (VP (VB be) (VP (VBN improved)))))))) (. .)))")]]))
+check("'the fact | that health care needs to be improved' is not an object relative", not any(l[0] == 1 and l[3] == "the fact" for l in L), L)
+txt = "Quand on regarde le menu législatif qu'on a fait passer, Mme la Présidente, en santé."
+L = show(process(row_of(txt, "fr", ["Quand on regarde le menu législatif", "qu'on a fait passer, Mme la Présidente, en santé."], [{"left": [0, 0], "right": [1, 1], "relation": "e-elaboration", "nuclearity": "NS"}]),
+                   [[T("(TOP (Ssub (CS Quand) (VN (CLS on) (V regarde)) (NP (DET le) (NC menu) (AP (ADJ législatif)))))")],
+                    [T("(TOP (Ssub (Ssub (CS qu') (VN (CLS on) (V a) (VPP fait) (VINF passer)) (PONCT ,) (NP (NC Mme) (DET la) (NC Présidente)) (PONCT ,) (PP (P en) (NP (NC santé)))) (PONCT .)))")]]))
+check("French object relative tagged CS, and 'Mme la Présidente' is not the object: on | a fait passer | le menu législatif", any(l[0] == 1 and l[3] == "le menu législatif" for l in L), L)
+L = show(process(row_of("Les patients ne reçoivent plus ce service.", "fr", ["Les patients ne reçoivent plus ce service."], []),
+                   [[T("(TOP (SENT (NP (DET Les) (NC patients)) (VN (ADV ne) (V reçoivent)) (ADV plus) (NP (DET ce) (NC service)) (PONCT .)))")]]))
+check("ne ... plus: Les patients | ne reçoivent plus | ce service", L and L[0][1:4] == ("Les patients", "ne reçoivent plus", "ce service"), L)
+L = show(process(row_of("Ce n'est pas uniquement dû", "fr", ["Ce n'est pas uniquement dû"], []), [[T("(TOP (VN (CLS Ce) (ADV n') (V est) (ADV pas) (ADV uniquement) (VPP dû)))")]]))
+check("a French verb built from the tree keeps its apostrophe: n'est pas", L and L[0][2].startswith("n'est pas"), L)
+txt = "Le projet de loi que la Chambre a adopté réduit les coûts."
+L = show(process(row_of(txt, "fr", ["Le projet de loi", "que la Chambre a adopté", "réduit les coûts."],
+                       [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}, {"left": [0, 1], "right": [2, 2], "relation": "same-unit", "nuclearity": "NN"}]),
+                   [[T("(TOP (SENT (NP (DET Le) (NC+ (NC projet) (P de) (NC loi)))))")], [T("(TOP (Srel (NP (PROREL que)) (NP (DET la) (NC Chambre)) (VN (V a) (VPP adopté))))")],
+                    [T("(TOP (SENT (VPP réduit) (NP (DET les) (NC coûts)) (PONCT .)))")]]))
+check("same-unit comes before the participle rule: Le projet de loi | réduit | les coûts", (2, "Le projet de loi", "réduit", "les coûts") in [l[:4] for l in L], L)
+check("and the object relative: la Chambre | a adopté | Le projet de loi", (1, "la Chambre", "a adopté", "Le projet de loi") in [l[:4] for l in L], L)
+txt = "Les nouveaux élus, peu importe de la formation politique, commencent à comprendre."
+L = show(process(row_of(txt, "fr", ["Les nouveaux élus,", "peu importe de la formation politique,", "commencent à comprendre."],
+                       [{"left": [0, 0], "right": [1, 1], "relation": "e-elaboration", "nuclearity": "NS"}, {"left": [0, 1], "right": [2, 2], "relation": "same-unit", "nuclearity": "NN"}]),
+                   [[T("(TOP (SENT (NP (DET Les) (ADJ nouveaux) (NC élus)) (PONCT ,)))")], [T("(TOP (SENT (ADV peu) (VN (V importe)) (PP (P de) (NP (DET la) (NC formation) (AP (ADJ politique)))) (PONCT ,)))")],
+                    [T("(TOP (SENT (VN (V commencent)) (VPinf (P à) (VN (VINF comprendre))) (PONCT .)))")]]))
+check("'peu importe' is not a claim", not any(l[2] == "importe" for l in L), L)
+txt = "The bill's sponsors reply that by covering the costs, the proposal would ensure that there would be a base."
+L = show(process(row_of(txt, "en", ["The bill's sponsors reply that", "by covering the costs,", "the proposal would ensure", "that there would be a base."],
+                       [{"left": [2, 2], "right": [3, 3], "relation": "attribution", "nuclearity": "SN"}, {"left": [1, 1], "right": [2, 3], "relation": "manner-means", "nuclearity": "SN"},
+                        {"left": [0, 0], "right": [1, 3], "relation": "attribution", "nuclearity": "SN"}]),
+                   [[T("(ROOT (S (NP (DT The) (NN bill) (POS 's) (NNS sponsors)) (VP (VBP reply) (SBAR (IN that)))))")],
+                    [T("(ROOT (PP (IN by) (S (VP (VBG covering) (NP (DT the) (NNS costs)))) (, ,)))")],
+                    [T("(ROOT (S (NP (DT the) (NN proposal)) (VP (MD would) (VP (VB ensure)))))")],
+                    [T("(ROOT (SBAR (IN that) (S (NP (EX there)) (VP (MD would) (VP (VB be) (NP (DT a) (NN base))))) (. .)))")]]))
+check("'by covering' takes the subject of the clause that does the saying: the proposal (not 'there')", any(l[0] == 1 and l[1] == "the proposal" for l in L), L)
+txt = "This matter was defeated, which is why it is in front of this forum and is moved again by the member."
+L = show(process(row_of(txt, "en", ["This matter was defeated,", "which is why it is in front of this forum", "and is moved again by the member."],
+                       [{"left": [1, 1], "right": [2, 2], "relation": "joint", "nuclearity": "NN"}, {"left": [0, 0], "right": [1, 2], "relation": "causal", "nuclearity": "NS"}]),
+                   [[T("(ROOT (S (NP (DT This) (NN matter)) (VP (VBD was) (VP (VBN defeated))) (, ,)))")],
+                    [T("(ROOT (SBAR (WHNP (WDT which)) (S (VP (VBZ is) (SBAR (WHADVP (WRB why)) (S (NP (PRP it)) (VP (VBZ is) (PP (IN in) (NP (NP (NN front)) (PP (IN of) (NP (DT this) (NN forum))))))))))))")],
+                    [T("(ROOT (S (CC and) (VP (VBZ is) (VP (VBN moved) (ADVP (RB again)) (PP (IN by) (NP (DT the) (NN member))))) (. .)))")]]))
+check("'which is why ...': which = the whole of unit 0", any(l[0] == 1 and l[1] == "which" and (l[6] or "").startswith("unit 0:") for l in L), L)
+check("a real 'it is in front of this forum' can lend its subject: it | is moved", any(l[0] == 2 and l[1] == "it" and l[2] == "is moved" for l in L), L)
 """)
 
 md(r"""

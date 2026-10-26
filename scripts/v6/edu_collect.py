@@ -7,7 +7,8 @@
    parsed again on its own by the constituency parser (Stanza for English, Berkeley benepar_fr2 for French), so each
    unit has its own tree instead of a piece of the sentence's tree.
 2. With --more N: N new sentences from each legislature (US House, Ontario, Quebec), drawn at random (seed 20261026)
-   from data/dbpedia_pipeline/*/sentences_v3.json, leaving out sentences already in the answer keys. Each one gets the
+   from data/dbpedia_pipeline/*/sentences_v3.json, leaving out sentences already in the answer keys and quoted bill
+   text ('(A) Employer coverage ...--In the case of'). Each one gets the
    discourse parse, the sentence's constituency tree, and a tree for every unit. These have no answer key; they are for
    looking at by hand and for the figures.
 
@@ -21,6 +22,7 @@ PROJECT = Path.cwd() if (Path.cwd() / "data").exists() else Path.home() / "Misce
 sys.path.insert(0, str(HERE))
 import preds as P            # noqa: E402   the v6 rules, loaded first so parse_corpus_v5 uses them
 import combine_lib as C      # noqa: E402
+import edu_pipeline as E     # noqa: E402   only for is_bill_text, shared with the notebook so both draw the same sentences
 sys.path.insert(1, str(PROJECT / "scripts" / "v4"))
 import parse_corpus_v5 as V  # noqa: E402   the same models and settings as the full run
 assert V.P is P, "parse_corpus_v5 picked up another copy of the rules"
@@ -74,7 +76,7 @@ def more_sentences(n, taken):
     for code, j in JUR.items():
         p = PROJECT / "data" / "dbpedia_pipeline" / j / "sentences_v3.json"
         recs = [x for x in json.load(open(p, encoding="utf-8")) if x.get("sentence_id") and x.get("text")]
-        recs = [x for x in recs if x["sentence_id"] not in taken and 8 <= len(x["text"].split()) <= 60]
+        recs = [x for x in recs if x["sentence_id"] not in taken and 8 <= len(x["text"].split()) <= 60 and not E.is_bill_text(x["text"])]
         rnd.shuffle(recs)
         lang = "fr" if j == "quebec" else "en"
         for k, x in enumerate(recs[:n], 1):

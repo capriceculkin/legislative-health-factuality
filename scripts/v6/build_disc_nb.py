@@ -208,7 +208,7 @@ _ = walk_through(TEXT, LANG)
 md(r"""
 ## Part 4. More sentences from each legislature
 
-On the Mac, `N_MORE` new sentences are drawn at random from each legislature's debate sentences (US House, Ontario, Quebec; seed 20261026; 8 to 60 words; none already in the answer keys) and run through steps 1 to 4. Without the parsers, the saved sentences are used, grouped by legislature, plus any new ones `run_edu.sh` saved.
+On the Mac, `N_MORE` new sentences are drawn at random from each legislature's debate sentences (US House, Ontario, Quebec; seed 20261026; 8 to 60 words; none already in the answer keys; no quoted bill text) and run through steps 1 to 4. Without the parsers, the saved sentences are used, grouped by legislature, plus any new ones `run_edu.sh` saved.
 """)
 
 code(r"""
@@ -223,7 +223,8 @@ def draw_new(n):
     rnd = random.Random(20261026); taken = {r.get("sentence_id") for r in ROWS}; out = []
     for code_, (j, lang, name) in JUR.items():
         recs = json.load(open(PROJECT / "data" / "dbpedia_pipeline" / j / "sentences_v3.json", encoding="utf-8"))
-        recs = [x for x in recs if x.get("sentence_id") and x.get("text") and x["sentence_id"] not in taken and 8 <= len(x["text"].split()) <= 60]
+        recs = [x for x in recs if x.get("sentence_id") and x.get("text") and x["sentence_id"] not in taken and 8 <= len(x["text"].split()) <= 60
+                and not E.is_bill_text(x["text"])]
         rnd.shuffle(recs)
         out += [(f"more|{code_}|{k}", V.clean(x["text"]), lang, x["sentence_id"], name) for k, x in enumerate(recs[:n], 1)]
     return out
@@ -379,7 +380,7 @@ check("each unit's tree holds that unit's words and nothing else", not bad, bad[
 
 # connections within a unit: a line's verb is in its own unit
 bad = [(n, l["unit"], l["verb"]) for n, x in OUT.items() for l in x["lines"]
-       if not all(w in x["units"][l["unit"]]["text"].lower().replace("’", "'") for w in E.tokens(l["verb"].lower().replace("’", "'")) if w)]
+       if not all(w in x["units"][l["unit"]]["text"].lower().replace("’", "'") for w in E.tokens((l.get("verb_as_written") or l["verb"]).lower().replace("’", "'")) if w)]
 check("every verb is in its own unit", not bad, bad[:5])
 
 # connections between units: anything taken from another unit says which one and through which relation
@@ -487,6 +488,111 @@ check("discourse: 'cut taxes' | 'to help families' -> the government (purpose; t
       any(l[0] == "The government" and "help" in l[1] for l in lines_of("test|E7|en")), lines_of("test|E7|en"))
 check("discourse: a verbless unit is context only for background-type relations (no context in sample|37)",
       not any(l.get("context") for l in OUT["sample|37"]["lines"]))
+""")
+
+md(r"""
+### The fixes from the Oct 26 run
+
+Each case below is one problem found in the first run on the Mac, with the tree written out by hand in the shape the parser gave. Before the fix each of these failed; the controls (a subject that only looks like a time, 'that' still pointing back, purpose still working) passed before and after.
+
+- a time is not the subject: 'Last year the House passed ...' parsed alone
+- contractions: I'm -> am, we're -> are (the form as written is kept)
+- 'it' is an ordinary pronoun: only that / this / ça / cela / ceci point to whole units
+- who / which / qui: the noun it hangs on inside the same unit, or through the discourse parse when the unit starts with it; never a question word (qu'est-ce qui = what) and never another pronoun
+- 'It is time | to stop': who stops is not stated
+- quoted bill text ('(A) Employer coverage ...--In the case of') is left out when new sentences are drawn; a member's motion that quotes a bill is kept
+""")
+
+code(r"""
+def row_of(text, lang, units, rels):
+    "A sentence typed in, with its units and relations given, to test one rule on trees written out by hand."
+    edus, pos = [], 0
+    for u_ in units:
+        i = text.index(u_, pos); edus.append({"text": u_, "start": i, "end": i + len(u_)}); pos = i + len(u_)
+    return {"n": "t", "set": "typed", "lang": lang, "text": text, "trees": [], "disc_native": {"edus": edus, "relations": rels}}
+
+def show(rec):
+    return [(l["unit"], l["subject"], l["verb"], l["object"], l.get("subject_from", ""), l.get("context"), l.get("refers_to")) for l in rec["lines"]]
+
+def process(r, trees):
+    return run(r, trees)
+
+
+
+
+# 5. a time as subject, in the two shapes the parser can give for the unit alone
+txt = "Last year the House passed legislation identical to H.R. 5, but the Senate refused to act."
+rels = [{"left": [0, 0], "right": [1, 1], "relation": "adversative", "nuclearity": "NN"}]
+senate = "(ROOT (S (CC but) (NP (DT the) (NNP Senate)) (VP (VBD refused) (S (VP (TO to) (VP (VB act))))) (. .)))"
+for shape in ["(ROOT (S (NP (JJ Last) (NN year)) (NP (DT the) (NNP House)) (VP (VBD passed) (NP (NP (NN legislation)) (ADJP (JJ identical) (PP (IN to) (NP (NNP H.R.) (CD 5)))))) (, ,)))",
+              "(ROOT (S (NP (NP (JJ Last) (NN year)) (NP (DT the) (NNP House))) (VP (VBD passed) (NP (NP (NN legislation)) (ADJP (JJ identical) (PP (IN to) (NP (NNP H.R.) (CD 5)))))) (, ,)))"]:
+    r = row_of(txt, "en", ["Last year the House passed legislation identical to H.R. 5,", "but the Senate refused to act."], rels)
+    L = show(process(r, [[T(shape)], [T(senate)]]))
+    check("time is not the subject: " + shape[12:60], L[0][1] == "the House" and L[0][2] == "passed" and any("Last year" in c for c in (L[0][5] or [])), L)
+r = row_of("The year of the budget was hard.", "en", ["The year of the budget was hard."], [])
+L = show(process(r, [[T("(ROOT (S (NP (NP (DT The) (NN year)) (PP (IN of) (NP (DT the) (NN budget)))) (VP (VBD was) (ADJP (JJ hard))) (. .)))")]]))
+check("a noun phrase about a year is still a subject", L[0][1] == "The year of the budget", L)
+r = row_of("Last year was hard.", "en", ["Last year was hard."], [])
+L = show(process(r, [[T("(ROOT (S (NP (JJ Last) (NN year)) (VP (VBD was) (ADJP (JJ hard))) (. .)))")]]))
+check("'Last year was hard': a time alone before the verb stays the subject", L[0][1] == "Last year", L)
+r = row_of("L'an dernier la Chambre a adopté le projet de loi.", "fr", ["L'an dernier la Chambre a adopté le projet de loi."], [])
+L = show(process(r, [[T("(TOP (SENT (NP (DET L') (NC an) (AP (ADJ dernier))) (NP (DET la) (NC Chambre)) (VN (V a) (VPP adopté)) (NP (DET le) (NC+ (NC projet) (P de) (NC loi))) (PONCT .)))")]]))
+check("French: L'an dernier is not the subject", L and L[0][1] == "la Chambre", L)
+
+# 2. contractions
+r = row_of("I'm sure up north I can give you examples.", "en", ["I'm sure up north I can give you examples."], [])
+rec = process(r, [[T("(ROOT (S (S (NP (PRP I)) (VP (VBP 'm) (ADJP (JJ sure)) (ADVP (RB up) (RB north)))) (S (NP (PRP I)) (VP (MD can) (VP (VB give) (NP (PRP you)) (NP (NNS examples))))) (. .)))")]])
+L = show(rec)
+check("I'm: the verb is 'am', the form as written kept", L[0][2] == "am" and rec["lines"][0].get("verb_as_written", "").replace("’", "'") in ("'m", "m"), L)
+r = row_of("We're cutting the program.", "en", ["We're cutting the program."], [])
+L = show(process(r, [[T("(ROOT (S (NP (PRP We)) (VP (VBP 're) (VP (VBG cutting) (NP (DT the) (NN program)))) (. .)))")]]))
+check("We're cutting: are cutting", L[0][2] == "are cutting", L)
+
+# 3. 'it' does not point to units
+r = row_of("Republicans say it is about cost containment.", "en", ["Republicans say", "it is about cost containment."],
+        [{"left": [0, 0], "right": [1, 1], "relation": "attribution", "nuclearity": "SN"}])
+L = show(process(r, [[T("(ROOT (S (NP (NNPS Republicans)) (VP (VBP say))))")],
+                       [T("(ROOT (S (NP (PRP it)) (VP (VBZ is) (PP (IN about) (NP (NN cost) (NN containment)))) (. .)))")]]))
+check("'it' stays 'it' and does not point to 'Republicans say'", L[1][1] == "it" and not L[1][6] and "points" not in (L[1][4] or ""), L)
+check("'Republicans say': the object is what unit 1 says", L[0][3].startswith("it is about cost containment"), L)
+r = row_of("We cut taxes, and that is why families are better off.", "en", ["We cut taxes,", "and that is why families are better off."],
+        [{"left": [0, 0], "right": [1, 1], "relation": "explanation", "nuclearity": "SN"}])
+rec = process(r, [[T("(ROOT (S (NP (PRP We)) (VP (VBD cut) (NP (NNS taxes))) (, ,)))")],
+                    [T("(ROOT (S (CC and) (NP (DT that)) (VP (VBZ is) (SBAR (WHADVP (WRB why)) (S (NP (NNS families)) (VP (VBP are) (ADJP (JJR better) (RB off)))))) (. .)))")]])
+check("'that' still points to the unit it explains", any((l.get("refers_to") or "").startswith("unit 0:") for l in rec["lines"]), show(rec))
+
+# 1. qui inside one unit, and qui opening a unit
+r = row_of("Il y a un dossier qui sera constitué.", "fr", ["Il y a un dossier qui sera constitué."], [])
+L = show(process(r, [[T("(TOP (SENT (VN (CLS Il) (CLO y) (V a)) (NP (DET un) (NC dossier) (Srel (NP (PROREL qui)) (VN (V sera) (VPP constitué)))) (PONCT .)))")]]))
+check("qui inside the unit -> un dossier", any(l[1] == "un dossier" and "constitu" in l[2] for l in L), L)
+r = row_of("Je consens à ce qu'il y ait un dossier qui soit constitué pour moi.", "fr", ["Je consens à ce qu'il y ait un dossier", "qui soit constitué pour moi."],
+        [{"left": [0, 0], "right": [1, 1], "relation": "e-elaboration", "nuclearity": "NS"}])
+L = show(process(r, [[T("(TOP (SENT (NP (CLS Je)) (VN (V consens)) (PP (P à) (NP (PRO ce) (Ssub (CS qu') (VN (CLS il) (CLO y) (V ait)) (NP (DET un) (NC dossier)))))))")],
+                       [T("(TOP (SENT (Srel (NP (PROREL qui)) (VN (V soit) (VPP constitué)) (PP (P pour) (NP (PRO moi)))) (PONCT .)))")]]))
+check("qui opening a unit -> un dossier, through the discourse parse", any(l[1] == "un dossier" and "constitu" in l[2] for l in L), L)
+r = row_of("The miners who went underground were exposed.", "en", ["The miners who went underground were exposed."], [])
+L = show(process(r, [[T("(ROOT (S (NP (NP (DT The) (NNS miners)) (SBAR (WHNP (WP who)) (S (VP (VBD went) (ADVP (RB underground)))))) (VP (VBD were) (VP (VBN exposed))) (. .)))")]]))
+check("who inside the unit -> The miners", any(l[1] == "The miners" and l[2] == "went" for l in L), L)
+
+# 4. bill text
+check("bill text is left out of new draws", E.is_bill_text("“(A) Employer coverage at time of initial general enrollment period.--In the case of an individual who--"), "")
+check("an amending instruction is left out", E.is_bill_text("Section 1862(a) of the Social Security Act is amended by adding at the end the following"), "")
+check("a spoken motion is kept", not E.is_bill_text("Mr Eves moves that subsection 19(4) of the bill be struck out and the following substituted therefor"), "")
+check("ordinary speech is kept", not any(E.is_bill_text(t) for t in ["I was going to say--", "Republicans say it is about cost containment; I say it is about cost shifting.",
+                                                                     "I think -- and I mean this -- we should act.", "Mr. Speaker, I yield myself such time as I may consume."]), "")
+
+# follow-ups found by the regression run
+r = row_of("Je veux voir qu'est-ce qui justifie la différence.", "fr", ["Je veux voir qu'est-ce qui justifie la différence."], [])
+L = show(process(r, [[T("(TOP (SENT (NP (CLS Je)) (VN (V veux)) (VPinf (VN (VINF voir)) (Ssub (NP (PROWH qu')) (VN (V est)) (NP (PRO -ce) (Srel (NP (PROREL qui)) (VN (V justifie)) (NP (DET la) (NC différence)))))) (PONCT .)))")]]))
+check("qu'est-ce qui justifie: qu'est-ce | justifie | la différence, and no 'qu' | est | -ce' line", (0, "qu'est-ce", "justifie", "la différence") in [l[:4] for l in L] and not any(l[1] in ("-ce", "qu'", "sa réponse") for l in L), L)
+txt = "It is time to stop playing politics with people's lives."
+r = row_of(txt, "en", ["It is time", "to stop playing politics with people's lives."], [{"left": [0, 0], "right": [1, 1], "relation": "elaboration", "nuclearity": "NS"}])
+L = show(process(r, [[T("(ROOT (S (NP (PRP It)) (VP (VBZ is) (NP (NN time)))))")],
+                       [T("(ROOT (S (VP (TO to) (VP (VB stop) (S (VP (VBG playing) (NP (NNS politics)) (PP (IN with) (NP (NP (NNS people) (POS 's)) (NNS lives))))))) (. .)))")]]))
+check("It is time | to stop: who stops is not stated", any(l[2] == "to stop" and l[1] == "(unstated)" for l in L), L)
+r = row_of("The government cut taxes to help families.", "en", ["The government cut taxes", "to help families."], [{"left": [0, 0], "right": [1, 1], "relation": "purpose", "nuclearity": "NS"}])
+L = show(process(r, [[T("(ROOT (S (NP (DT The) (NN government)) (VP (VBD cut) (NP (NNS taxes)))))")], [T("(ROOT (S (VP (TO to) (VP (VB help) (NP (NNS families)))) (. .)))")]]))
+check("cut taxes | to help families -> The government", any(l[1] == "The government" and "help" in l[2] for l in L), L)
 """)
 
 md(r"""

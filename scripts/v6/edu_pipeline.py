@@ -51,6 +51,7 @@ OPT = {"collapse": True,          # merge a verb phrase that holds only another 
        "said_object": True,       # 'the HMO said,' | 'You need another opinion': the object is what the next unit says
        "reanchor": True,          # unit offsets checked against the sentence (the parser may have seen spaced dashes)
        "frame_context": True,     # a unit with no clause ('L'an dernier,') is attached as context to the lines it frames
+       "time_subject": True,      # 'Last year the House passed': a time is not the subject
        "units_only": False}       # the Oct 22 design exactly: only each unit's own tree and the discourse parse are used;
                                   # nothing is read from the whole sentence's tree (switches off object_fill, backfill,
                                   # participles, apposition, tree_subject, and finds 'which'/'qui' through the discourse parse)
@@ -256,7 +257,74 @@ def subject_from_tree(path, lang):
 
 
 RELPRON = {"who", "which", "that", "whom", "qui", "que", "qu'", "lequel", "laquelle", "dont"}
-DEMONSTR = {"that", "this", "it", "cela", "ce", "c'", "ça", "ceci"}
+DEMONSTR = {"that", "this", "cela", "ce", "c'", "ça", "ceci"}   # 'it' / 'il' stand for a noun, not for a stretch of discourse
+
+
+TIME_HEADS = {"year", "years", "week", "weeks", "month", "months", "day", "days", "session", "sessions", "time", "night", "morning",
+              "afternoon", "evening", "decade", "century", "spring", "summer", "fall", "autumn", "winter", "today", "yesterday",
+              "tomorrow", "tonight", "january", "february", "march", "april", "may", "june", "july", "august", "september",
+              "october", "november", "december", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
+              "an", "année", "années", "semaine", "semaines", "mois", "jour", "jours", "hier", "aujourd'hui", "demain", "soir",
+              "matin", "printemps", "été", "automne", "hiver", "janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+              "août", "septembre", "octobre", "novembre", "décembre", "lundi", "mardi", "mercredi", "jeudi", "vendredi"}
+TIME_FIRST = {"last", "next", "this", "that", "every", "each", "earlier", "later", "yesterday", "today", "tomorrow", "tonight",
+              "l'", "cette", "ce", "chaque", "hier", "aujourd'hui", "demain", "dernier", "dernière", "prochain", "prochaine"}
+
+
+def is_time_phrase(text):
+    "'Last year', 'This week', 'Yesterday', 'L'an dernier', 'Cette semaine': a time, which cannot be who does the verb."
+    t = (text or "").lower().replace("’", "'").strip(" ,")
+    ws = [w for w in re.split(r"\s+|(?<=')", t) if w]
+    if not 1 <= len(ws) <= 4 or not any(w in TIME_HEADS for w in ws):
+        return False
+    if len(ws) == 1:                     # one word only when it cannot be a name ('May' can)
+        return ws[0] in {"yesterday", "today", "tomorrow", "tonight", "hier", "aujourd'hui", "demain"}
+    return ws[0] in TIME_FIRST
+
+
+def time_subject(path):
+    """'Last year the House passed ...' parsed alone can give (S (NP Last year) (NP the House) (VP passed ...)), and the
+    tree rules take the first noun phrase. In the clause the verb sits in: when the first noun phrase before the verb is
+    a time and another noun phrase follows it, the later one is the subject and the time is context."""
+    for depth in range(len(path) - 2, -1, -1):
+        node, child = path[depth], path[depth + 1]
+        if node[0].split("-")[0] not in ("S", "SINV", "SQ", "SENT", "Sint", "Ssub"):
+            continue
+        idx = next((i for i, k in enumerate(node[1]) if k is child), None)
+        if idx is None:
+            return None
+        nps = [k for k in node[1][:idx] if not isinstance(k, str) and k[0].split("-")[0] == "NP"]
+        if len(nps) == 1:                       # both inside one noun phrase: (NP (NP Last year) (NP the House))
+            inner = [k for k in nps[0][1] if not isinstance(k, str) and k[0].split("-")[0] == "NP"]
+            nps = inner if inner and len(inner) == len(nps[0][1]) else nps
+        if len(nps) >= 2 and is_time_phrase(P.text(nps[0])) and not is_time_phrase(P.text(nps[-1])):
+            return np_text(nps[-1]), P.text(nps[0])
+        return None
+    return None
+
+
+CONTRACT = {"m": "am", "'m": "am", "re": "are", "'re": "are", "ve": "have", "'ve": "have", "ll": "will", "'ll": "will",
+            "d": "would", "'d": "would", "s": "is", "'s": "is"}
+
+
+def expand_contractions(ln):
+    "'I'm sure' gives the verb 'm (or m once the apostrophe is split off): written out as 'am', the form as written kept."
+    ws = ln["verb"].replace("’", "'").split()
+    if ws and ws[0].lower() in CONTRACT:
+        ln["verb_as_written"] = ln["verb"]
+        ln["verb"] = " ".join([CONTRACT[ws[0].lower()]] + ws[1:])
+
+
+BILL_TEXT = re.compile(r"""^\W{0,2}\(\w{1,4}\)\s | \.--\S | ^\W{0,2}(SEC\.|SECTION\s+\d|Sec\.\s*\d|TITLE\s+[IVX]+\b)
+                       | \bis\ amended\b | ^\W{0,2}(in\ )?(subparagraph|paragraph|subsection|section)\ \(\w{1,4}\)""", re.X)
+# a member's motion that quotes a bill ('Mr Eves moves that subsection 19(4) of the bill be struck out ...') is kept:
+# moving it is something said in the debate
+
+
+def is_bill_text(text):
+    """Quoted statute text in the debate record ('(A) Employer coverage at time of ...--In the case of'), which is not
+    something a member said; left out when new sentences are drawn."""
+    return bool(BILL_TEXT.search(text or ""))
 
 
 def antecedent(path):
@@ -512,6 +580,10 @@ def strict_subject(u, units, rels, pieces_all):
         if a:
             return a[0], f"'{first}' stands for the last noun phrase of {a[1]} (discourse: {a[2]})"
     tag = first_tag(pieces_all[k][0][0]) if pieces_all[k] else ""
+    prev_lines = units[k - 1]["lines"] if k > 0 else []
+    if tag == "TO" and prev_lines and not re.search(r"[,;:]\s*$", units[k - 1]["text"]) and \
+            re.fullmatch(r"(is|was|are|were|be|been|being|'s|’s)", prev_lines[-1]["verb"].lower().split()[-1] if prev_lines[-1]["verb"] else "") and prev_lines[-1]["object"]:
+        return "(unstated)", f"'{prev_lines[-1]['verb']} {prev_lines[-1]['object']} | to ...': an infinitive on a noun or adjective; who does it is not in the words"
     if k > 0 and tag in ("VBG", "VBN", "VPP", "VPR") and not re.search(r"[,;:]\s*$", units[k - 1]["text"]):
         a = antecedent_by_discourse(k, rels, pieces_all)
         if a:
@@ -523,6 +595,53 @@ def strict_subject(u, units, rels, pieces_all):
                 np = top_np(pieces_all[head["unit"]][0][0])
                 if np is not None:
                     return np_text(np), f"unit {head['unit']} (same-unit: the sentence goes on after an insertion)"
+    return None
+
+
+REL_TAGS = {"PROREL", "WDT", "WP", "WP$"}
+NOT_ANTECEDENT = {"ce", "-ce", "c'", "ça", "cela", "ceci", "celui", "celle", "ceux", "celles", "that", "this", "those", "what",
+                  "it", "il", "elle", "qu'", "que", "qui", "who", "which"}
+
+
+def word_tag(pieces, word):
+    "The part-of-speech label the unit's tree gives the first occurrence of word ('' when it is not there)."
+    w = word.lower().replace("’", "'")
+    for t, _ in pieces:
+        def walk(n):
+            if isinstance(n, str):
+                return None
+            if len(n[1]) == 1 and isinstance(n[1][0], str):
+                return n[0] if n[1][0].lower().replace("’", "'") == w else None
+            for k in n[1]:
+                got = walk(k)
+                if got:
+                    return got
+            return None
+        got = walk(t)
+        if got:
+            return got
+    return ""
+
+
+def resolve_relative(u, word, lp, rels, pieces_all):
+    """who / which / qui / que at the start of a clause (units_only mode): first the noun phrase it hangs on inside the
+    same unit's tree ('un dossier qui soit constitue'); when the unit starts with it, the last noun phrase of the unit
+    before it, through the discourse parse. Only a word the unit's tree marks as a relative pronoun (PROREL, WDT, WP):
+    the question word in 'qu'est-ce qui' is not one. And the antecedent must be a noun phrase, not another pronoun
+    ('ce qui' = what)."""
+    w = word.split()[0]
+    tag = word_tag(pieces_all[u["unit"]], w)
+    if tag and tag not in REL_TAGS:
+        return None
+    ok = lambda a: a and a.lower().strip(" ,") not in NOT_ANTECEDENT and not a.strip().startswith("-")
+    a = antecedent(lp) if lp else None
+    if ok(a):
+        return a, f"unit tree: '{w}' stands for the noun before it"
+    if a:                                        # it hangs on a pronoun: what it stands for is not stated
+        return None
+    a = antecedent_by_discourse(u["unit"], rels, pieces_all)
+    if a and ok(a[0]):
+        return a[0], f"'{w}' stands for the last noun phrase of {a[1]} (discourse: {a[2]})"
     return None
 
 
@@ -633,6 +752,20 @@ def process(row, edu_trees=None):
         for ln in u["lines"]:
             if OPT["fix_verb"]:
                 fix_verb(ln, u["text"])
+                expand_contractions(ln)
+    # 'qu'est-ce qui justifie la difference' (what justifies the difference): the French tree rules read the question
+    # word as a clause of its own (qu' | est | -ce) and give '-ce' as the subject; it is one word, qu'est-ce, = what
+    if row["lang"] == "fr":
+        for u in units:
+            low = u["text"].lower().replace("’", "'")
+            if "qu'est-ce" not in low and "qu'est -ce" not in low:
+                continue
+            u["lines"] = [l for l in u["lines"] if not (l["subject"].lower().replace("’", "'") in ("qu'", "que") and l["verb"].lower() == "est"
+                                                         and l["object"].lower().strip() in ("-ce", "ce"))]
+            for l in u["lines"]:
+                if l["subject"].strip() in ("-ce", "ce"):
+                    l["subject"] = "qu'est-ce"
+                    l["how"] = (l["how"] + "; qu'est-ce qui = what (one question word)").strip("; ")
     # questions are not claims
     if OPT["questions"]:
         for u in units:
@@ -710,10 +843,16 @@ def process(row, edu_trees=None):
             first = re.split(r"[\s']", s0.lower())[0] if s0 else ""
             starts_rel = u["unit"] > 0 and u["text"].lower().startswith(first) and not re.search(r"[,.;:!?]\s*$", units[u["unit"] - 1]["text"]) if first else False
             is_rel = (s0.lower() in RELPRON and (s0.lower() not in DEMONSTR or starts_rel)) or (first in RELPRON and len(s0.split()) > 1 and first != "that")
+            if OPT["time_subject"] and lp and is_time_phrase(s0):
+                got = time_subject(lp)
+                if got:
+                    ln["subject"], ln["subject_from"] = got[0], f"unit tree: '{got[1]}' is when, not who; the subject is the noun phrase after it"
+                    ln.setdefault("context", []).append(f"{got[1]} (time, unit {u['unit']})")
+                    continue
             if OPT["relpron"] and OPT["units_only"] and is_rel:
-                a = antecedent_by_discourse(u["unit"], rels, pieces_all)
-                if a:
-                    ln["subject"], ln["subject_from"] = a[0], f"'{s0.split()[0]}' stands for the last noun phrase of {a[1]} (discourse: {a[2]})"
+                got = resolve_relative(u, s0, lp, rels, pieces_all)
+                if got:
+                    ln["subject"], ln["subject_from"] = got
                     continue
             if OPT["relpron"] and not OPT["units_only"] and (s0.lower() in RELPRON or (first in RELPRON and len(s0.split()) > 1 and first != "that")) and lp:
                 a = antecedent(lp)
@@ -735,6 +874,12 @@ def process(row, edu_trees=None):
             got = subject_from_tree(leaf_paths[ln["leaf"]], row["lang"]) if on("tree_subject") and ln.get("leaf") is not None and ln["leaf"] < len(leaf_paths) else None
             if got:
                 ln["subject"], ln["subject_from"] = got[0], ("unit tree: " if OPT["units_only"] else "sentence tree: ") + got[1]
+                g0 = got[0].lower().strip()
+                if OPT["relpron"] and OPT["units_only"] and g0 in RELPRON and g0 not in DEMONSTR:
+                    # the clause's subject is itself 'qui' / 'who': what it stands for, from the unit tree or the discourse parse
+                    rel = resolve_relative(u, got[0], lp, rels, pieces_all)
+                    if rel:
+                        ln["subject"], ln["subject_from"] = rel
                 continue
             if OPT["units_only"] and OPT["discourse_subject"] and (not s0 or "(inh)" in ln["subject"]):
                 got = strict_subject(u, units, rels, pieces_all)

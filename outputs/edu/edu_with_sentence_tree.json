@@ -17833,7 +17833,7 @@
      "lines": [
       {
        "subject": "They",
-       "verb": "’re not staffed",
+       "verb": "are not staffed",
        "object": "like they are on the units, for 24-hour care",
        "kind": "asserted",
        "negated": true,
@@ -17841,6 +17841,7 @@
        "how": "main clause",
        "leaf": 3,
        "object_from": "sentence tree: the object runs into the next unit",
+       "verb_as_written": "’re not staffed",
        "subject_from": ""
       }
      ]
@@ -18039,7 +18040,7 @@
    "lines": [
     {
      "subject": "They",
-     "verb": "’re not staffed",
+     "verb": "are not staffed",
      "object": "like they are on the units, for 24-hour care",
      "kind": "asserted",
      "negated": true,
@@ -18047,6 +18048,7 @@
      "how": "main clause",
      "leaf": 3,
      "object_from": "sentence tree: the object runs into the next unit",
+     "verb_as_written": "’re not staffed",
      "subject_from": "",
      "unit": 0
     },
@@ -19511,8 +19513,7 @@
        "hedged": true,
        "how": "main clause",
        "leaf": 2,
-       "subject_from": "'It' points to unit 1 and unit 2 (evaluation)",
-       "refers_to": "unit 1 and unit 2: it could not work, if our conferees cannot have any flexibility whatsoever."
+       "subject_from": ""
       }
      ]
     },
@@ -19591,8 +19592,7 @@
        "hedged": true,
        "how": "main clause",
        "leaf": 8,
-       "subject_from": "'it' points to unit 2 (condition)",
-       "refers_to": "unit 2: if our conferees cannot have any flexibility whatsoever."
+       "subject_from": ""
       }
      ]
     },
@@ -19799,8 +19799,7 @@
      "hedged": true,
      "how": "main clause",
      "leaf": 2,
-     "subject_from": "'It' points to unit 1 and unit 2 (evaluation)",
-     "refers_to": "unit 1 and unit 2: it could not work, if our conferees cannot have any flexibility whatsoever.",
+     "subject_from": "",
      "unit": 0
     },
     {
@@ -19812,8 +19811,7 @@
      "hedged": true,
      "how": "main clause",
      "leaf": 8,
-     "subject_from": "'it' points to unit 2 (condition)",
-     "refers_to": "unit 2: if our conferees cannot have any flexibility whatsoever.",
+     "subject_from": "",
      "unit": 1
     },
     {
@@ -28957,18 +28955,6 @@
      ],
      "lines": [
       {
-       "subject": "qu'",
-       "verb": "est",
-       "object": "-ce",
-       "kind": "embedded",
-       "negated": false,
-       "hedged": false,
-       "how": "after 'pour'",
-       "leaf": 12,
-       "object_from": "sentence tree: the object runs into the next unit",
-       "subject_from": ""
-      },
-      {
        "subject": "-ce",
        "verb": "justifie",
        "object": "la différence entre de le faire par règlement versus, ici, de le faire par la loi",
@@ -29054,19 +29040,6 @@
      "leaf": 2,
      "subject_from": "",
      "unit": 0
-    },
-    {
-     "subject": "qu'",
-     "verb": "est",
-     "object": "-ce",
-     "kind": "embedded",
-     "negated": false,
-     "hedged": false,
-     "how": "after 'pour'",
-     "leaf": 12,
-     "object_from": "sentence tree: the object runs into the next unit",
-     "subject_from": "",
-     "unit": 1
     },
     {
      "subject": "-ce",
@@ -33855,8 +33828,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 1,
-       "subject_from": "'It' points to unit 1 (elaboration)",
-       "refers_to": "unit 1: to stop playing politics with people’s lives."
+       "subject_from": ""
       }
      ]
     },
@@ -34271,8 +34243,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 1,
-     "subject_from": "'It' points to unit 1 (elaboration)",
-     "refers_to": "unit 1: to stop playing politics with people’s lives.",
+     "subject_from": "",
      "unit": 0
     },
     {
@@ -42350,8 +42321,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 21,
-       "subject_from": "'it' points to unit 0, unit 1 and unit 2 (joint)",
-       "refers_to": "unit 0, unit 1 and unit 2: Quebec’s bill, and I read some of it out, allows for the reunification of families,"
+       "subject_from": ""
       }
      ]
     }
@@ -42493,8 +42463,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 21,
-     "subject_from": "'it' points to unit 0, unit 1 and unit 2 (joint)",
-     "refers_to": "unit 0, unit 1 and unit 2: Quebec’s bill, and I read some of it out, allows for the reunification of families,",
+     "subject_from": "",
      "unit": 3
     }
    ]
@@ -45699,11 +45668,10 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 35,
-       "subject_from": "'it' points to unit 5 (elaboration)",
-       "refers_to": "unit 5: that will address those needs."
+       "subject_from": ""
       },
       {
-       "subject": "it (inh)",
+       "subject": "it",
        "verb": "coming",
        "object": "to the table",
        "kind": "embedded",
@@ -45711,8 +45679,7 @@
        "hedged": false,
        "how": "joined: relative clause",
        "leaf": 40,
-       "subject_from": "'it' points to unit 5 (elaboration)",
-       "refers_to": "unit 5: that will address those needs."
+       "subject_from": "sentence tree: the subject of the clause the verb sits in"
       }
      ]
     },
@@ -46031,12 +45998,11 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 35,
-     "subject_from": "'it' points to unit 5 (elaboration)",
-     "refers_to": "unit 5: that will address those needs.",
+     "subject_from": "",
      "unit": 4
     },
     {
-     "subject": "it (inh)",
+     "subject": "it",
      "verb": "coming",
      "object": "to the table",
      "kind": "embedded",
@@ -46044,8 +46010,7 @@
      "hedged": false,
      "how": "joined: relative clause",
      "leaf": 40,
-     "subject_from": "'it' points to unit 5 (elaboration)",
-     "refers_to": "unit 5: that will address those needs.",
+     "subject_from": "sentence tree: the subject of the clause the verb sits in",
      "unit": 4
     },
     {

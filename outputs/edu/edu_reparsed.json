@@ -3029,7 +3029,7 @@
      ],
      "lines": [
       {
-       "subject": "Last year",
+       "subject": "the House",
        "verb": "passed",
        "object": "legislation identical to H.R. 5",
        "kind": "asserted",
@@ -3037,7 +3037,10 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 4,
-       "subject_from": ""
+       "subject_from": "unit tree: 'Last year' is when, not who; the subject is the noun phrase after it",
+       "context": [
+        "Last year (time, unit 0)"
+       ]
       }
      ]
     },
@@ -3180,7 +3183,7 @@
    ],
    "lines": [
     {
-     "subject": "Last year",
+     "subject": "the House",
      "verb": "passed",
      "object": "legislation identical to H.R. 5",
      "kind": "asserted",
@@ -3188,7 +3191,10 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 4,
-     "subject_from": "",
+     "subject_from": "unit tree: 'Last year' is when, not who; the subject is the noun phrase after it",
+     "context": [
+      "Last year (time, unit 0)"
+     ],
      "unit": 0
     },
     {
@@ -17809,13 +17815,14 @@
      "lines": [
       {
        "subject": "They",
-       "verb": "’re not staffed",
+       "verb": "are not staffed",
        "object": "",
        "kind": "asserted",
        "negated": true,
        "hedged": false,
        "how": "main clause",
        "leaf": 3,
+       "verb_as_written": "’re not staffed",
        "subject_from": ""
       }
      ]
@@ -18014,13 +18021,14 @@
    "lines": [
     {
      "subject": "They",
-     "verb": "’re not staffed",
+     "verb": "are not staffed",
      "object": "",
      "kind": "asserted",
      "negated": true,
      "hedged": false,
      "how": "main clause",
      "leaf": 3,
+     "verb_as_written": "’re not staffed",
      "subject_from": "",
      "unit": 0
     },
@@ -19485,8 +19493,7 @@
        "hedged": true,
        "how": "main clause",
        "leaf": 2,
-       "subject_from": "'It' points to unit 1 and unit 2 (evaluation)",
-       "refers_to": "unit 1 and unit 2: it could not work, if our conferees cannot have any flexibility whatsoever."
+       "subject_from": ""
       }
      ]
     },
@@ -19565,8 +19572,7 @@
        "hedged": true,
        "how": "main clause",
        "leaf": 8,
-       "subject_from": "'it' points to unit 2 (condition)",
-       "refers_to": "unit 2: if our conferees cannot have any flexibility whatsoever."
+       "subject_from": ""
       }
      ]
     },
@@ -19773,8 +19779,7 @@
      "hedged": true,
      "how": "main clause",
      "leaf": 2,
-     "subject_from": "'It' points to unit 1 and unit 2 (evaluation)",
-     "refers_to": "unit 1 and unit 2: it could not work, if our conferees cannot have any flexibility whatsoever.",
+     "subject_from": "",
      "unit": 0
     },
     {
@@ -19786,8 +19791,7 @@
      "hedged": true,
      "how": "main clause",
      "leaf": 8,
-     "subject_from": "'it' points to unit 2 (condition)",
-     "refers_to": "unit 2: if our conferees cannot have any flexibility whatsoever.",
+     "subject_from": "",
      "unit": 1
     },
     {
@@ -21680,7 +21684,7 @@
      ],
      "lines": [
       {
-       "subject": "mental health coverage",
+       "subject": "that",
        "verb": "does not drive up",
        "object": "the premium costs for others",
        "kind": "asserted",
@@ -21688,7 +21692,8 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 16,
-       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)"
+       "subject_from": "'that' points to unit 0 (elaboration)",
+       "refers_to": "unit 0: Mr. Dingell's motion asks for the maximum level of mental health coverage"
       }
      ]
     },
@@ -21887,7 +21892,7 @@
      "unit": 0
     },
     {
-     "subject": "mental health coverage",
+     "subject": "that",
      "verb": "does not drive up",
      "object": "the premium costs for others",
      "kind": "asserted",
@@ -21895,7 +21900,8 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 16,
-     "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
+     "subject_from": "'that' points to unit 0 (elaboration)",
+     "refers_to": "unit 0: Mr. Dingell's motion asks for the maximum level of mental health coverage",
      "unit": 1
     },
     {
@@ -28948,7 +28954,7 @@
      ],
      "lines": [
       {
-       "subject": "sa réponse",
+       "subject": "qu'",
        "verb": "est",
        "object": "",
        "kind": "embedded",
@@ -28956,7 +28962,7 @@
        "hedged": false,
        "how": "after 'pour'",
        "leaf": 12,
-       "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)"
+       "subject_from": ""
       },
       {
        "subject": "sa réponse",
@@ -28967,7 +28973,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 15,
-       "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)"
+       "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: purpose)"
       },
       {
        "subject": "sa réponse",
@@ -28978,7 +28984,7 @@
        "hedged": false,
        "how": "after 'de'",
        "leaf": 20,
-       "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)"
+       "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: purpose)"
       },
       {
        "subject": "sa réponse",
@@ -28989,7 +28995,7 @@
        "hedged": false,
        "how": "after 'de'",
        "leaf": 29,
-       "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)"
+       "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: purpose)"
       }
      ]
     }
@@ -29046,7 +29052,7 @@
      "unit": 0
     },
     {
-     "subject": "sa réponse",
+     "subject": "qu'",
      "verb": "est",
      "object": "",
      "kind": "embedded",
@@ -29054,7 +29060,7 @@
      "hedged": false,
      "how": "after 'pour'",
      "leaf": 12,
-     "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)",
+     "subject_from": "",
      "unit": 1
     },
     {
@@ -29066,7 +29072,7 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 15,
-     "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)",
+     "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: purpose)",
      "unit": 1
     },
     {
@@ -29078,7 +29084,7 @@
      "hedged": false,
      "how": "after 'de'",
      "leaf": 20,
-     "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)",
+     "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: purpose)",
      "unit": 1
     },
     {
@@ -29090,7 +29096,7 @@
      "hedged": false,
      "how": "after 'de'",
      "leaf": 29,
-     "subject_from": "'qu'' stands for the last noun phrase of unit 0 (discourse: purpose)",
+     "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: purpose)",
      "unit": 1
     }
    ]
@@ -29262,7 +29268,7 @@
      ],
      "lines": [
       {
-       "subject": "qui",
+       "subject": "un type",
        "verb": "a",
        "object": "une carrière absolument formidable",
        "kind": "embedded",
@@ -29270,7 +29276,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 5,
-       "subject_from": "unit tree: the subject of the clause the verb sits in",
+       "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: elaboration)",
        "context": [
         "maintenant gouverneur de la Banque d'Angleterre. (time-sequence, unit 2)"
        ]
@@ -29464,7 +29470,7 @@
      "unit": 0
     },
     {
-     "subject": "qui",
+     "subject": "un type",
      "verb": "a",
      "object": "une carrière absolument formidable",
      "kind": "embedded",
@@ -29472,7 +29478,7 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 5,
-     "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "context": [
       "maintenant gouverneur de la Banque d'Angleterre. (time-sequence, unit 2)"
      ],
@@ -33594,7 +33600,7 @@
      ],
      "lines": [
       {
-       "subject": "Last year",
+       "subject": "the House",
        "verb": "passed",
        "object": "legislation identical to H.R. 5",
        "kind": "asserted",
@@ -33602,7 +33608,10 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 4,
-       "subject_from": ""
+       "subject_from": "unit tree: 'Last year' is when, not who; the subject is the noun phrase after it",
+       "context": [
+        "Last year (time, unit 0)"
+       ]
       }
      ]
     },
@@ -33745,7 +33754,7 @@
    ],
    "lines": [
     {
-     "subject": "Last year",
+     "subject": "the House",
      "verb": "passed",
      "object": "legislation identical to H.R. 5",
      "kind": "asserted",
@@ -33753,7 +33762,10 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 4,
-     "subject_from": "",
+     "subject_from": "unit tree: 'Last year' is when, not who; the subject is the noun phrase after it",
+     "context": [
+      "Last year (time, unit 0)"
+     ],
      "unit": 0
     },
     {
@@ -33842,8 +33854,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 1,
-       "subject_from": "'It' points to unit 1 (elaboration)",
-       "refers_to": "unit 1: to stop playing politics with people’s lives."
+       "subject_from": ""
       }
      ]
     },
@@ -33973,7 +33984,7 @@
      ],
      "lines": [
       {
-       "subject": "my colleagues (inh)",
+       "subject": "(unstated)",
        "verb": "to stop",
        "object": "playing politics with people’s lives",
        "kind": "asserted",
@@ -33981,10 +33992,10 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 4,
-       "subject_from": "unit 3 (explanation)"
+       "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words"
       },
       {
-       "subject": "my colleagues (inh)",
+       "subject": "(unstated)",
        "verb": "playing",
        "object": "politics",
        "kind": "asserted",
@@ -33992,7 +34003,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 5,
-       "subject_from": "unit 3 (explanation)"
+       "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words"
       }
      ]
     },
@@ -34258,12 +34269,11 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 1,
-     "subject_from": "'It' points to unit 1 (elaboration)",
-     "refers_to": "unit 1: to stop playing politics with people’s lives.",
+     "subject_from": "",
      "unit": 0
     },
     {
-     "subject": "my colleagues (inh)",
+     "subject": "(unstated)",
      "verb": "to stop",
      "object": "playing politics with people’s lives",
      "kind": "asserted",
@@ -34271,11 +34281,11 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 4,
-     "subject_from": "unit 3 (explanation)",
+     "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words",
      "unit": 1
     },
     {
-     "subject": "my colleagues (inh)",
+     "subject": "(unstated)",
      "verb": "playing",
      "object": "politics",
      "kind": "asserted",
@@ -34283,7 +34293,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 5,
-     "subject_from": "unit 3 (explanation)",
+     "subject_from": "'is time | to ...': an infinitive on a noun or adjective; who does it is not in the words",
      "unit": 1
     },
     {
@@ -37757,7 +37767,7 @@
      ],
      "lines": [
       {
-       "subject": "a crisis",
+       "subject": "that",
        "verb": "requires",
        "object": "emergency measures",
        "kind": "asserted",
@@ -37765,7 +37775,8 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 12,
-       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)"
+       "subject_from": "'that' points to unit 0 (elaboration)",
+       "refers_to": "unit 0: The Administration has labeled the current economic situation as a crisis"
       }
      ]
     }
@@ -37822,7 +37833,7 @@
      "unit": 0
     },
     {
-     "subject": "a crisis",
+     "subject": "that",
      "verb": "requires",
      "object": "emergency measures",
      "kind": "asserted",
@@ -37830,7 +37841,8 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 12,
-     "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
+     "subject_from": "'that' points to unit 0 (elaboration)",
+     "refers_to": "unit 0: The Administration has labeled the current economic situation as a crisis",
      "unit": 1
     }
    ]
@@ -42337,8 +42349,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 21,
-       "subject_from": "'it' points to unit 0, unit 1 and unit 2 (joint)",
-       "refers_to": "unit 0, unit 1 and unit 2: Quebec’s bill, and I read some of it out, allows for the reunification of families,"
+       "subject_from": ""
       }
      ]
     }
@@ -42480,8 +42491,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 21,
-     "subject_from": "'it' points to unit 0, unit 1 and unit 2 (joint)",
-     "refers_to": "unit 0, unit 1 and unit 2: Quebec’s bill, and I read some of it out, allows for the reunification of families,",
+     "subject_from": "",
      "unit": 3
     }
    ]
@@ -43811,7 +43821,7 @@
      ],
      "lines": [
       {
-       "subject": "The bill",
+       "subject": "that",
        "verb": "is",
        "object": "",
        "kind": "asserted",
@@ -43820,7 +43830,8 @@
        "how": "main clause; an adverbial clause is an adjunct, not the object",
        "leaf": 3,
        "adjunct": "before us",
-       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)"
+       "subject_from": "'that' points to unit 0 (elaboration)",
+       "refers_to": "unit 0: The bill"
       }
      ]
     },
@@ -44401,7 +44412,7 @@
    ],
    "lines": [
     {
-     "subject": "The bill",
+     "subject": "that",
      "verb": "is",
      "object": "",
      "kind": "asserted",
@@ -44410,7 +44421,8 @@
      "how": "main clause; an adverbial clause is an adjunct, not the object",
      "leaf": 3,
      "adjunct": "before us",
-     "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
+     "subject_from": "'that' points to unit 0 (elaboration)",
+     "refers_to": "unit 0: The bill",
      "unit": 1
     },
     {
@@ -45685,11 +45697,10 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 35,
-       "subject_from": "'it' points to unit 5 (elaboration)",
-       "refers_to": "unit 5: that will address those needs."
+       "subject_from": ""
       },
       {
-       "subject": "it (inh)",
+       "subject": "it",
        "verb": "coming",
        "object": "to the table",
        "kind": "embedded",
@@ -45697,8 +45708,7 @@
        "hedged": false,
        "how": "joined: relative clause",
        "leaf": 40,
-       "subject_from": "'it' points to unit 5 (elaboration)",
-       "refers_to": "unit 5: that will address those needs."
+       "subject_from": "unit tree: the subject of the clause the verb sits in"
       }
      ]
     },
@@ -45780,7 +45790,7 @@
      ],
      "lines": [
       {
-       "subject": "a plan",
+       "subject": "that",
        "verb": "will address",
        "object": "those needs",
        "kind": "asserted",
@@ -45788,7 +45798,8 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 49,
-       "subject_from": "'that' stands for the last noun phrase of unit 4 (discourse: elaboration)"
+       "subject_from": "'that' points to unit 4 (elaboration)",
+       "refers_to": "unit 4: when it comes to funding and actually coming to the table with a plan"
       }
      ]
     }
@@ -46016,12 +46027,11 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 35,
-     "subject_from": "'it' points to unit 5 (elaboration)",
-     "refers_to": "unit 5: that will address those needs.",
+     "subject_from": "",
      "unit": 4
     },
     {
-     "subject": "it (inh)",
+     "subject": "it",
      "verb": "coming",
      "object": "to the table",
      "kind": "embedded",
@@ -46029,12 +46039,11 @@
      "hedged": false,
      "how": "joined: relative clause",
      "leaf": 40,
-     "subject_from": "'it' points to unit 5 (elaboration)",
-     "refers_to": "unit 5: that will address those needs.",
+     "subject_from": "unit tree: the subject of the clause the verb sits in",
      "unit": 4
     },
     {
-     "subject": "a plan",
+     "subject": "that",
      "verb": "will address",
      "object": "those needs",
      "kind": "asserted",
@@ -46042,7 +46051,8 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 49,
-     "subject_from": "'that' stands for the last noun phrase of unit 4 (discourse: elaboration)",
+     "subject_from": "'that' points to unit 4 (elaboration)",
+     "refers_to": "unit 4: when it comes to funding and actually coming to the table with a plan",
      "unit": 5
     }
    ]
@@ -54280,7 +54290,7 @@
      ],
      "lines": [
       {
-       "subject": "qui",
+       "subject": "Groulx",
        "verb": "est",
        "object": "du niveau des juristes",
        "kind": "embedded",
@@ -54288,7 +54298,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 9,
-       "subject_from": "unit tree: the subject of the clause the verb sits in"
+       "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: elaboration)"
       }
      ]
     },
@@ -54949,7 +54959,7 @@
    ],
    "lines": [
     {
-     "subject": "qui",
+     "subject": "Groulx",
      "verb": "est",
      "object": "du niveau des juristes",
      "kind": "embedded",
@@ -54957,7 +54967,7 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 9,
-     "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "subject_from": "'qui' stands for the last noun phrase of unit 0 (discourse: elaboration)",
      "unit": 1
     },
     {
@@ -55590,7 +55600,7 @@
      ],
      "lines": [
       {
-       "subject": "le gouvernement péquiste",
+       "subject": "qui",
        "verb": "a précédé",
        "object": "l'",
        "kind": "asserted",
@@ -55598,7 +55608,7 @@
        "hedged": false,
        "how": "main clause",
        "leaf": 41,
-       "subject_from": "'qui' stands for the last noun phrase of unit 3 (discourse: elaboration)"
+       "subject_from": ""
       }
      ]
     }
@@ -55795,7 +55805,7 @@
      "unit": 3
     },
     {
-     "subject": "le gouvernement péquiste",
+     "subject": "qui",
      "verb": "a précédé",
      "object": "l'",
      "kind": "asserted",
@@ -55803,7 +55813,7 @@
      "hedged": false,
      "how": "main clause",
      "leaf": 41,
-     "subject_from": "'qui' stands for the last noun phrase of unit 3 (discourse: elaboration)",
+     "subject_from": "",
      "unit": 4
     }
    ]
@@ -57981,7 +57991,7 @@
      ],
      "lines": [
       {
-       "subject": "qui",
+       "subject": "le projet de loi n° 83",
        "verb": "est",
        "object": "devant nous",
        "kind": "embedded",
@@ -57989,7 +57999,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 42,
-       "subject_from": "unit tree: the subject of the clause the verb sits in"
+       "subject_from": "'qui' stands for the last noun phrase of unit 4 (discourse: elaboration)"
       }
      ]
     },
@@ -58657,7 +58667,7 @@
      "unit": 4
     },
     {
-     "subject": "qui",
+     "subject": "le projet de loi n° 83",
      "verb": "est",
      "object": "devant nous",
      "kind": "embedded",
@@ -58665,7 +58675,7 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 42,
-     "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "subject_from": "'qui' stands for the last noun phrase of unit 4 (discourse: elaboration)",
      "unit": 5
     },
     {
@@ -77772,7 +77782,7 @@
      ],
      "lines": [
       {
-       "subject": "qui",
+       "subject": "des mesures",
        "verb": "sont contenues",
        "object": "dans le projet de loi",
        "kind": "embedded",
@@ -77780,7 +77790,7 @@
        "hedged": false,
        "how": "relative clause",
        "leaf": 32,
-       "subject_from": "unit tree: the subject of the clause the verb sits in"
+       "subject_from": "'qui' stands for the last noun phrase of unit 2 (discourse: elaboration)"
       }
      ]
     },
@@ -78123,7 +78133,7 @@
      "unit": 1
     },
     {
-     "subject": "qui",
+     "subject": "des mesures",
      "verb": "sont contenues",
      "object": "dans le projet de loi",
      "kind": "embedded",
@@ -78131,7 +78141,7 @@
      "hedged": false,
      "how": "relative clause",
      "leaf": 32,
-     "subject_from": "unit tree: the subject of the clause the verb sits in",
+     "subject_from": "'qui' stands for the last noun phrase of unit 2 (discourse: elaboration)",
      "unit": 3
     },
     {

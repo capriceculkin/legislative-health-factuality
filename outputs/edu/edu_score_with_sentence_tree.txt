@@ -10,7 +10,7 @@ heldout en         discourse first      28/36    78%   18/36    50%      7 of 35
 
 heldout fr         2-of-3 vote          25/33    76%    9/33    27%     10 of 35
 heldout fr         tree + deps add      26/33    79%   14/33    42%     16 of 42
-heldout fr         discourse first      23/33    70%   11/33    33%     17 of 40
+heldout fr         discourse first      23/33    70%   11/33    33%     16 of 39
                    exact, discourse first vs 2-of-3 vote: only discourse first 5, only 2-of-3 vote 3, McNemar p = 0.73
                    exact, discourse first vs tree + deps add: only discourse first 2, only tree + deps add 5, McNemar p = 0.45
 

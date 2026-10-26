@@ -1,115 +1,138 @@
 n,legislature,connection,relation,parser's own label,main part,from text,to text
-more|US|1,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,“(A) Employer coverage at time of initial general enrollment period.,--In the case of an individual who--
-more|US|2,US House,unit 0 to unit 1,attribution,attribution,unit 1,Republicans say,it is about cost containment;
-more|US|2,US House,unit 2 to unit 3,attribution,attribution,unit 3,I say,it is about cost shifting.
-more|US|2,US House,unit 0 and unit 1 to unit 2 and unit 3,contrast,adversative,both,Republicans say it is about cost containment;,I say it is about cost shifting.
-more|US|3,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,Conference Agreement,The conference agreement does not include the House bill.
-more|US|5,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,This is voluntary on your part;,you do not have to do it.
-more|US|6,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,Democrats have made it clear for weeks,that the pay-fors in this bill are problematic.
-more|US|8,US House,unit 0 to unit 1,attribution,attribution,unit 1,"Mr. Speaker, does that mean",we discuss the reservation now?
-more|US|9,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,"Congressional Record, Volume 150 Issue 69","(Monday, May 17, 2004)"
-more|US|10,US House,unit 2 to unit 3,purpose,enablement,unit 2,we can do,to insure the health of all of our children.
-more|US|10,US House,unit 1 to unit 2 and unit 3,elaboration,elaboration,unit 1,it is the least,we can do to insure the health of all of our children.
-more|US|10,US House,"unit 0 to unit 1, unit 2 and unit 3",contrast,adversative,"unit 1, unit 2 and unit 3",Doing this is not only the right thing to do,it is the least we can do to insure the health of all of our children.
-more|US|11,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,Some States cannot find enough doctors,"to write prescriptions for needed medications,"
-more|US|11,US House,unit 0 and unit 1 to unit 2,joint,joint,both,"Some States cannot find enough doctors to write prescriptions for needed medications,",while others are paying for buddy and companion services.
-more|US|13,US House,unit 0 to unit 1,background,background,unit 1,Mr.,"Speaker, I yield myself the balance of my time."
-more|US|14,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,He spoke about how better tracking and treatment could have helped catch his sister's problem earlier,"and, perhaps, made counseling more effective."
-more|US|16,US House,unit 1 to unit 2,joint,joint,both,"that the embryos must have been created for the purpose of fertility treatment,",and no money may have exchanged hands.
-more|US|16,US House,unit 0 to unit 1 and unit 2,attribution,attribution,unit 1 and unit 2,Our bill specifically states,"that the embryos must have been created for the purpose of fertility treatment, and no money may have exchanged hands."
-more|US|17,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,These centers provide invaluable services to millions,who lack access to basic primary and preventive health care.
-more|US|18,US House,unit 1 to unit 2,joint,joint,both,and it is time to stop talking,and act.
-more|US|18,US House,unit 0 to unit 1 and unit 2,background,background,unit 1 and unit 2,We have a lot of work to do,and it is time to stop talking and act.
-more|US|19,US House,unit 1 to unit 2,purpose,enablement,unit 1,"but rather it took Prop 103, an insurance reform initiative,",to stabilize the rates there.
-more|US|19,US House,unit 0 to unit 1 and unit 2,contrast,adversative,both,"MICRA's caps on pain and suffering damages have not reduced insurance rates for doctors in my State,","but rather it took Prop 103, an insurance reform initiative, to stabilize the rates there."
-more|US|20,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,"The measure provides local governments with their most generous round of COVID-related funding yet,",and it comes with fewer spending restrictions than last year's aid.
-more|ON|1,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,I'm sure up north I can give you examples,-- include Toronto.
-more|ON|2,Ontario,unit 1 to unit 2,attribution,attribution,unit 2,I would say,that we are in deficit.
-more|ON|2,Ontario,unit 0 to unit 1 and unit 2,background,background,unit 1 and unit 2,"If I might address that,",I would say that we are in deficit.
-more|ON|3,Ontario,unit 1 to unit 2,elaboration,elaboration,unit 1,and providing cessation programs and other kinds of education and supports for people,who are trying to stop these things.
-more|ON|3,Ontario,unit 0 to unit 1 and unit 2,joint,joint,both,"On this side of the House, we agree with the stopping of smoking",and providing cessation programs and other kinds of education and supports for people who are trying to stop these things.
-more|ON|4,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,"Take the budget, with the Stronger, Healthier Ontario",—and the health care budget is half of our total budget.
-more|ON|5,Ontario,unit 1 to unit 2,background,background,unit 1,and she died of a brain hemorrhage from a fall,while at work
-more|ON|5,Ontario,unit 1 and unit 2 to unit 3,same-unit,same-unit,both,and she died of a brain hemorrhage from a fall while at work,"in December of last year,"
-more|ON|5,Ontario,"unit 1, unit 2 and unit 3 to unit 4",cause-result,causal,unit 4,"and she died of a brain hemorrhage from a fall while at work in December of last year,",so she was here about four months.
-more|ON|5,Ontario,"unit 0 to unit 1, unit 2, unit 3 and unit 4",time-sequence,temporal,both,"She started work as a live-in caregiver in Toronto in August 2014, not too long ago,","and she died of a brain hemorrhage from a fall while at work in December of last year, so she was here about four months."
-more|ON|6,Ontario,unit 2 to unit 3,joint,joint,both,who sits in at estimates,and sits in on those committees
-more|ON|6,Ontario,unit 1 to unit 2 and unit 3,elaboration,elaboration,unit 1,but the clerk,who sits in at estimates and sits in on those committees
-more|ON|6,Ontario,unit 4 to unit 5,elaboration,elaboration,unit 4,wrote the series of questions,"that were left unanswered,"
-more|ON|6,Ontario,"unit 1, unit 2 and unit 3 to unit 4 and unit 5",same-unit,same-unit,both,but the clerk who sits in at estimates and sits in on those committees,"wrote the series of questions that were left unanswered,"
-more|ON|6,Ontario,unit 6 to unit 7,attribution,attribution,unit 7,to which the minister had agreed,she would do follow-up.
-more|ON|6,Ontario,"unit 1, unit 2, unit 3, unit 4 and unit 5 to unit 6 and unit 7",elaboration,elaboration,"unit 1, unit 2, unit 3, unit 4 and unit 5","but the clerk who sits in at estimates and sits in on those committees wrote the series of questions that were left unanswered,",to which the minister had agreed she would do follow-up.
-more|ON|6,Ontario,"unit 0 to unit 1, unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7",joint,joint,both,"Not only did that happen,","but the clerk who sits in at estimates and sits in on those committees wrote the series of questions that were left unanswered, to which the minister had agreed she would do follow-up."
-more|ON|7,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,"This piece of legislation,","if passed,"
-more|ON|7,Ontario,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,"This piece of legislation, if passed,",will make information on payments from the medical industry to health care professionals and organizations available to the public.
-more|ON|8,Ontario,unit 1 to unit 2,attribution,attribution,unit 2,and I think,"it's been said, at least by the government side and by our side,"
-more|ON|8,Ontario,unit 1 and unit 2 to unit 3,attribution,attribution,unit 3,"and I think it's been said, at least by the government side and by our side,","that we all share, all three parties, in that liability."
-more|ON|8,Ontario,"unit 0 to unit 1, unit 2 and unit 3",joint,joint,both,"We all want to address that unfunded liability,","and I think it's been said, at least by the government side and by our side, that we all share, all three parties, in that liability."
-more|ON|9,Ontario,unit 2 to unit 3,joint,joint,both,that could investigate the financials of the organization,and investigate complaints.
-more|ON|9,Ontario,unit 1 to unit 2 and unit 3,elaboration,elaboration,unit 1,and that resident bill of rights set up committees within those long-term-care homes,that could investigate the financials of the organization and investigate complaints.
-more|ON|9,Ontario,"unit 0 to unit 1, unit 2 and unit 3",elaboration,elaboration,unit 0,"They introduced a residents’ bill of rights,",and that resident bill of rights set up committees within those long-term-care homes that could investigate the financials of the organization and investigate complaints.
-more|ON|11,Ontario,unit 0 to unit 1,attribution,attribution,unit 1,"Wouldn’t you say, Speaker,",that this deserves a bill in itself?
-more|ON|13,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,"The government plans on adopting the Friedland formula,","and that is 75% of the consumer price index minus 1%, with a cap of 4% per year."
-more|ON|14,Ontario,unit 2 to unit 3,elaboration,elaboration,unit 2,so there is little reason,to fix what hasn’t been broken for them.
-more|ON|14,Ontario,unit 1 to unit 2 and unit 3,explanation,explanation,unit 2 and unit 3,"This government and previous governments have benefited from for-profit long-term care,",so there is little reason to fix what hasn’t been broken for them.
-more|ON|14,Ontario,"unit 0 to unit 1, unit 2 and unit 3",background,background,"unit 1, unit 2 and unit 3",Let’s face it:,"This government and previous governments have benefited from for-profit long-term care, so there is little reason to fix what hasn’t been broken for them."
-more|ON|15,Ontario,unit 0 to unit 1,contrast,adversative,both,"No one wants red tape for the sake of red tape,",but regulations have a purpose.
-more|ON|16,Ontario,unit 1 to unit 2,attribution,attribution,unit 2,the Minister of Tourism thinks,that it’s funny that people are suffering;
-more|ON|16,Ontario,unit 0 to unit 1 and unit 2,attribution,attribution,unit 1 and unit 2,I see,the Minister of Tourism thinks that it’s funny that people are suffering;
-more|ON|16,Ontario,unit 4 to unit 5,elaboration,elaboration,unit 4,and that they will not be able to find a warm place in January,to take their medication.
-more|ON|16,Ontario,unit 3 to unit 4 and unit 5,joint,joint,both,it’s funny that people are suffering,and that they will not be able to find a warm place in January to take their medication.
-more|ON|16,Ontario,"unit 0, unit 1 and unit 2 to unit 3, unit 4 and unit 5",attribution,attribution,"unit 3, unit 4 and unit 5",I see the Minister of Tourism thinks that it’s funny that people are suffering;,it’s funny that people are suffering and that they will not be able to find a warm place in January to take their medication.
-more|ON|17,Ontario,unit 0 to unit 1,background,background,unit 1,"I had never heard of a space cake before,",and I’m happy to learn about it.
-more|ON|19,Ontario,unit 1 to unit 2,attribution,attribution,unit 2,-- I believe,I was just around this point --
-more|ON|19,Ontario,unit 0 to unit 1 and unit 2,background,background,unit 0,"""As concerned as I am about the above issue""",-- I believe I was just around this point --
-more|ON|19,Ontario,"unit 0, unit 1 and unit 2 to unit 3",attribution,attribution,unit 3,"""As concerned as I am about the above issue"" -- I believe I was just around this point --","""as a citizen of a free society, I attach much more importance to the effects of the proposed legislation on my personal freedom."
-more|ON|20,Ontario,unit 0 to unit 1,purpose,enablement,unit 0,We need to decrease the number of accidents overall,so as to reduce the financial demand on the system
-more|ON|20,Ontario,unit 2 to unit 3,background,background,unit 2,and we need to support the return to work of injured employees,after they've gotten better.
-more|ON|20,Ontario,unit 0 and unit 1 to unit 2 and unit 3,joint,joint,both,We need to decrease the number of accidents overall so as to reduce the financial demand on the system,and we need to support the return to work of injured employees after they've gotten better.
-more|QC|1,Quebec,unit 1 to unit 2,elaboration,e-elaboration,unit 1,"Finalement, je consens à ce qu'il y ait un dossier","qui soit constitué, au niveau du DSQ, pour moi."
-more|QC|1,Quebec,unit 0 to unit 1 and unit 2,background,background,unit 1 and unit 2,Vous dites:,"Finalement, je consens à ce qu'il y ait un dossier qui soit constitué, au niveau du DSQ, pour moi."
-more|QC|2,Quebec,unit 0 to unit 1,attribution,attribution,unit 1,J'espère,que le ministre a reçu les réactions des divers groupes.
-more|QC|4,Quebec,unit 1 to unit 2,background,background,unit 1,"alors que la loi actuelle,","lorsqu'elle définit des établissements,"
-more|QC|4,Quebec,unit 3 to unit 4,elaboration,e-elaboration,unit 3,se réfère d'abord aux installations,"où sont dispensés des services,"
-more|QC|4,Quebec,unit 1 and unit 2 to unit 3 and unit 4,same-unit,same-unit,both,"alors que la loi actuelle, lorsqu'elle définit des établissements,","se réfère d'abord aux installations où sont dispensés des services,"
-more|QC|4,Quebec,"unit 1, unit 2, unit 3 and unit 4 to unit 5",elaboration,elaboration,"unit 1, unit 2, unit 3 and unit 4","alors que la loi actuelle, lorsqu'elle définit des établissements, se réfère d'abord aux installations où sont dispensés des services,","tels les centres hospitaliers ou les centres d'accueil,"
-more|QC|4,Quebec,unit 6 to unit 7,elaboration,e-elaboration,unit 6,la loi 120 n'utilise le mot «établissement» que pour viser l'entité généralement constituée en corporation,qui fournit des services à la population.
-more|QC|4,Quebec,"unit 1, unit 2, unit 3, unit 4 and unit 5 to unit 6 and unit 7",contrast,contrast,both,"alors que la loi actuelle, lorsqu'elle définit des établissements, se réfère d'abord aux installations où sont dispensés des services, tels les centres hospitaliers ou les centres d'accueil,",la loi 120 n'utilise le mot «établissement» que pour viser l'entité généralement constituée en corporation qui fournit des services à la population.
-more|QC|4,Quebec,"unit 0 to unit 1, unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7",background,frame,unit 0,"Par ailleurs,","alors que la loi actuelle, lorsqu'elle définit des établissements, se réfère d'abord aux installations où sont dispensés des services, tels les centres hospitaliers ou les centres d'accueil, la loi 120 n'utilise le mot «établissement» que pour viser l'entité généralement constituée en corporation qui fournit des services à la population."
-more|QC|6,Quebec,unit 0 to unit 1,background,frame,unit 0,Le Vice-Président:,Je vais maintenant reconnaître M. le député de Gouin.
-more|QC|7,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,Je vais informer la Chambre de l'entente sur le partage du temps,qu'il y a eu entre les groupes parlementaires.
-more|QC|8,Quebec,unit 2 to unit 3,purpose,purpose,unit 2,qu'est-ce qui pouvait être fait,pour améliorer ce projet de loi.
-more|QC|8,Quebec,unit 1 to unit 2 and unit 3,attribution,attribution,unit 1,ils nous ont demandé de voir,qu'est-ce qui pouvait être fait pour améliorer ce projet de loi.
-more|QC|8,Quebec,"unit 0 to unit 1, unit 2 and unit 3",background,frame,unit 0,"Donc,",ils nous ont demandé de voir qu'est-ce qui pouvait être fait pour améliorer ce projet de loi.
-more|QC|9,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,"Je demande donc,","M. le Président, aux membres de cette Assemblée d'adopter le principe du projet de loi modifiant la Loi sur la qualité de l'environnement"
-more|QC|9,Quebec,unit 0 and unit 1 to unit 2,elaboration,elaboration,unit 0 and unit 1,"Je demande donc, M. le Président, aux membres de cette Assemblée d'adopter le principe du projet de loi modifiant la Loi sur la qualité de l'environnement","qui permet aux industries, au gouvernement et à l'environnement de sortir tous trois gagnants de cette initiative."
-more|QC|10,Quebec,unit 1 to unit 2,elaboration,elaboration,unit 1,et je pense,qu'on a un excellent projet de loi devant nous.
-more|QC|10,Quebec,unit 0 to unit 1 and unit 2,joint,continuation,unit 0,"Et c'est ce qu'on a réussi à faire,",et je pense qu'on a un excellent projet de loi devant nous.
-more|QC|11,Quebec,unit 0 to unit 1,background,frame,unit 0,"Mais, dans la documentation du Conseil canadien d'accréditation,",on met en lumière un élément
-more|QC|11,Quebec,unit 2 to unit 3,attribution,attribution,unit 3,"qui doit,","je pense,"
-more|QC|11,Quebec,unit 4 to unit 5,joint,continuation,unit 4,nous guider,et nous accompagner dans l'étude du projet de loi.
-more|QC|11,Quebec,unit 2 and unit 3 to unit 4 and unit 5,same-unit,same-unit,both,"qui doit, je pense,",nous guider et nous accompagner dans l'étude du projet de loi.
-more|QC|11,Quebec,"unit 0 and unit 1 to unit 2, unit 3, unit 4 and unit 5",elaboration,e-elaboration,unit 0 and unit 1,"Mais, dans la documentation du Conseil canadien d'accréditation, on met en lumière un élément","qui doit, je pense, nous guider et nous accompagner dans l'étude du projet de loi."
-more|QC|12,Quebec,unit 0 to unit 1,background,frame,unit 0,"Dans d'autres dossiers,","M. le Président,"
-more|QC|12,Quebec,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,"Dans d'autres dossiers, M. le Président,","on avait promis la défusion,"
-more|QC|12,Quebec,"unit 0, unit 1 and unit 2 to unit 3",contrast,contrast,both,"Dans d'autres dossiers, M. le Président, on avait promis la défusion,","mais tout ce qu'on propose maintenant, c'est une nébuleuse reconfiguration."
-more|QC|13,Quebec,unit 0 to unit 1,contrast,contrast,both,Parce qu'on a souvent autre chose à faire,"que d'attendre des heures, et des heures, et des heures qu'on daigne bien nous donner une consultation."
-more|QC|14,Quebec,unit 1 to unit 2,elaboration,e-elaboration,unit 1,auxquelles peut avoir droit toute personne en vertu de la loi,que la Commission administre
-more|QC|14,Quebec,unit 1 and unit 2 to unit 3,joint,conjunction,both,auxquelles peut avoir droit toute personne en vertu de la loi que la Commission administre,ainsi qu'à l'atteinte de toute autre fin prévue par ces lois.
-more|QC|14,Quebec,"unit 0 to unit 1, unit 2 and unit 3",elaboration,e-elaboration,unit 0,Le patrimoine de ce fonds est affecté au versement des sommes ou prestations,auxquelles peut avoir droit toute personne en vertu de la loi que la Commission administre ainsi qu'à l'atteinte de toute autre fin prévue par ces lois.
-more|QC|15,Quebec,unit 4 to unit 5,elaboration,e-elaboration,unit 4,"qui avait réduit, coupé de 20 % les ententes","qui avaient été signées avant le référendum,"
-more|QC|15,Quebec,unit 3 to unit 4 and unit 5,elaboration,e-elaboration,unit 3,"que le négociateur du gouvernement du Québec en 1982,","qui avait réduit, coupé de 20 % les ententes qui avaient été signées avant le référendum,"
-more|QC|15,Quebec,unit 6 to unit 7,elaboration,e-elaboration,unit 6,"c'était justement Lucien Bouchard,",M. le Président.
-more|QC|15,Quebec,"unit 3, unit 4 and unit 5 to unit 6 and unit 7",same-unit,same-unit,both,"que le négociateur du gouvernement du Québec en 1982, qui avait réduit, coupé de 20 % les ententes qui avaient été signées avant le référendum,","c'était justement Lucien Bouchard, M. le Président."
-more|QC|15,Quebec,"unit 2 to unit 3, unit 4, unit 5, unit 6 and unit 7",joint,continuation,unit 2,c'est peut-être parce que les infirmières du Québec se rappellent,"que le négociateur du gouvernement du Québec en 1982, qui avait réduit, coupé de 20 % les ententes qui avaient été signées avant le référendum, c'était justement Lucien Bouchard, M. le Président."
-more|QC|15,Quebec,"unit 1 to unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7",background,background,"unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7","quand les infirmières disent ne pas lui faire confiance,","c'est peut-être parce que les infirmières du Québec se rappellent que le négociateur du gouvernement du Québec en 1982, qui avait réduit, coupé de 20 % les ententes qui avaient été signées avant le référendum, c'était justement Lucien Bouchard, M. le Président."
-more|QC|15,Quebec,"unit 0 to unit 1, unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7",background,frame,unit 0,"Et,","quand les infirmières disent ne pas lui faire confiance, c'est peut-être parce que les infirmières du Québec se rappellent que le négociateur du gouvernement du Québec en 1982, qui avait réduit, coupé de 20 % les ententes qui avaient été signées avant le référendum, c'était justement Lucien Bouchard, M. le Président."
-more|QC|16,Quebec,unit 0 to unit 1,background,frame,unit 0,"Il y avait,","après ce thème et ces 12 sous-thèmes,"
-more|QC|16,Quebec,unit 0 and unit 1 to unit 2,background,frame,unit 0 and unit 1,"Il y avait, après ce thème et ces 12 sous-thèmes,",l'adoption de 300 articles de la loi.
-more|QC|18,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,J'ai noté avec le Directeur général des élections hier une pratique fédérale,"que tout le monde connaît ici,"
-more|QC|18,Quebec,unit 0 and unit 1 to unit 2,elaboration,e-elaboration,unit 0 and unit 1,"J'ai noté avec le Directeur général des élections hier une pratique fédérale que tout le monde connaît ici,",qui permet d'aller voter sur une longue période.
-more|QC|19,Quebec,unit 0 to unit 1,purpose,purpose,unit 0,Je vous laisse au moins la chance de faire une petite démarche personnelle en ce qui vous concerne,pour que vous puissiez être un tantinet au courant de ce sur quoi vous allez voter tout à l'heure.
-more|QC|20,Quebec,unit 0 to unit 1,attribution,attribution,unit 1,On a parlé,de la baisse du niveau de services.
+more|US|2,US House,unit 1 to unit 2,elaboration,elaboration,unit 1,"Speaker, you cannot listen to the constant stories from patients and families",who have been denied access to mental health care
+more|US|2,US House,unit 3 to unit 4,attribution,attribution,unit 4,and believe,that there are not tragic gaps in our mental health system.
+more|US|2,US House,unit 1 and unit 2 to unit 3 and unit 4,elaboration,elaboration,unit 1 and unit 2,"Speaker, you cannot listen to the constant stories from patients and families who have been denied access to mental health care",and believe that there are not tragic gaps in our mental health system.
+more|US|2,US House,"unit 0 to unit 1, unit 2, unit 3 and unit 4",background,background,"unit 1, unit 2, unit 3 and unit 4",Mr.,"Speaker, you cannot listen to the constant stories from patients and families who have been denied access to mental health care and believe that there are not tragic gaps in our mental health system."
+more|US|3,US House,unit 0 to unit 1,background,background,unit 0,It has been said that there are no losers,as it relates to home health care in this bill.
+more|US|4,US House,unit 0 to unit 1,purpose,enablement,unit 0,It's time,to get back to work
+more|US|4,US House,unit 3 to unit 4,elaboration,elaboration,unit 3,and end the 31st travesty,of trying to repeal this bill.
+more|US|4,US House,unit 2 to unit 3 and unit 4,joint,joint,both,putting America back to work,and end the 31st travesty of trying to repeal this bill.
+more|US|4,US House,"unit 0 and unit 1 to unit 2, unit 3 and unit 4",elaboration,elaboration,unit 0 and unit 1,It's time to get back to work,putting America back to work and end the 31st travesty of trying to repeal this bill.
+more|US|5,US House,unit 1 to unit 2,joint,joint,both,"that have lost their lives,",lost their limbs in product liability suits
+more|US|5,US House,unit 3 to unit 4,elaboration,elaboration,unit 3,that were treated by a doctor,who was drunk.
+more|US|5,US House,unit 1 and unit 2 to unit 3 and unit 4,elaboration,elaboration,unit 1 and unit 2,"that have lost their lives, lost their limbs in product liability suits",that were treated by a doctor who was drunk.
+more|US|5,US House,"unit 0 to unit 1, unit 2, unit 3 and unit 4",elaboration,elaboration,unit 0,"Mr. Chairman, I can show my colleagues cases of people","that have lost their lives, lost their limbs in product liability suits that were treated by a doctor who was drunk."
+more|US|7,US House,unit 1 to unit 2,elaboration,elaboration,unit 1,that offer their employees insurance plans,that cover abortion.
+more|US|7,US House,unit 0 to unit 1 and unit 2,elaboration,elaboration,unit 0,H.R. 3 would also deny tax credits to small businesses,that offer their employees insurance plans that cover abortion.
+more|US|8,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,"In Florida alone, there are over 10 million cases of the seven most common chronic diseases","--cancer, diabetes, heart disease, hypertension, stroke, mental disorders and pulmonary conditions."
+more|US|9,US House,unit 1 to unit 2,elaboration,elaboration,unit 1,to assure that the formula,for determining allotments for the territories and the District
+more|US|9,US House,unit 3 to unit 4,elaboration,elaboration,unit 3,reflect the statistical assumptions,agreed to by conferees.
+more|US|9,US House,unit 1 and unit 2 to unit 3 and unit 4,same-unit,same-unit,both,to assure that the formula for determining allotments for the territories and the District,reflect the statistical assumptions agreed to by conferees.
+more|US|9,US House,"unit 0 to unit 1, unit 2, unit 3 and unit 4",purpose,enablement,unit 0,These corrections are necessary,to assure that the formula for determining allotments for the territories and the District reflect the statistical assumptions agreed to by conferees.
+more|US|10,US House,unit 4 to unit 5,elaboration,elaboration,unit 4,that there would be an adequate base of healthy seniors,to offset the portion in greatest need of the benefit.
+more|US|10,US House,unit 3 to unit 4 and unit 5,attribution,attribution,unit 4 and unit 5,the proposal would ensure,that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit.
+more|US|10,US House,"unit 2 to unit 3, unit 4 and unit 5",manner-means,manner-means,"unit 3, unit 4 and unit 5","by covering part or all of the costs of those with incomes up to 150 percent of the poverty level,",the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit.
+more|US|10,US House,"unit 1 to unit 2, unit 3, unit 4 and unit 5",same-unit,same-unit,both,that,"by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit."
+more|US|10,US House,"unit 0 to unit 1, unit 2, unit 3, unit 4 and unit 5",attribution,attribution,"unit 1, unit 2, unit 3, unit 4 and unit 5",The bill's sponsors reply,"that by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit."
+more|US|11,US House,unit 1 to unit 2,purpose,enablement,unit 1,that relies on HMOs and other private insurance plans,to administer services to our seniors.
+more|US|11,US House,unit 0 to unit 1 and unit 2,elaboration,elaboration,unit 0,I am especially hesitant about a system,that relies on HMOs and other private insurance plans to administer services to our seniors.
+more|US|12,US House,unit 1 to unit 2,cause-result,causal,unit 1,as families are forced to send their children to the emergency room,because they cannot afford a regular doctor's visit.
+more|US|12,US House,unit 0 to unit 1 and unit 2,explanation,explanation,unit 0,"Having a large number of uninsured children in our communities places a tremendous financial burden on parents and local hospitals,",as families are forced to send their children to the emergency room because they cannot afford a regular doctor's visit.
+more|US|14,US House,unit 4 to unit 5,purpose,enablement,unit 4,that they need,to raise their children.
+more|US|14,US House,unit 3 to unit 4 and unit 5,elaboration,elaboration,unit 3,that they all have the resources,that they need to raise their children.
+more|US|14,US House,"unit 2 to unit 3, unit 4 and unit 5",attribution,attribution,"unit 3, unit 4 and unit 5",to ensure,that they all have the resources that they need to raise their children.
+more|US|14,US House,"unit 1 to unit 2, unit 3, unit 4 and unit 5",purpose,enablement,unit 1,and it comes alongside parents with young children,to ensure that they all have the resources that they need to raise their children.
+more|US|14,US House,"unit 0 to unit 1, unit 2, unit 3, unit 4 and unit 5",joint,joint,both,"The program supports our vulnerable pregnant women,",and it comes alongside parents with young children to ensure that they all have the resources that they need to raise their children.
+more|US|15,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,"Mr. Speaker, I yield 3 minutes to the gentleman from California",[Mr. Mineta].
+more|US|16,US House,unit 0 to unit 1,contrast,adversative,both,*CID has review authority,but not approval authority over these filings
+more|US|17,US House,unit 1 to unit 2,purpose,enablement,unit 1,that have worked so hard,to bring this bill forward.
+more|US|17,US House,unit 0 to unit 1 and unit 2,elaboration,elaboration,unit 0,"Mr. Speaker, I thank the distinguished chairman of the Health Subcommittee as well as all of my colleagues",that have worked so hard to bring this bill forward.
+more|US|19,US House,unit 1 to unit 2,purpose,enablement,unit 1,that came to the table,"to offer feedback, suggestions, and, at times, criticism."
+more|US|19,US House,unit 0 to unit 1 and unit 2,elaboration,elaboration,unit 0,"H.R. 2646 is a demonstration of more than 3 years of collaboration between not only myself and Congressman Tim Murphy, but the many other Members and organizations","that came to the table to offer feedback, suggestions, and, at times, criticism."
+more|US|20,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,My goal is to create a grants program,to help reduce all this excessive and unnecessary paperwork on doctors and healthcare workers.
+more|ON|1,Ontario,unit 3 to unit 4,elaboration,elaboration,unit 3,and that it's the right thing to do in terms of health policy in where the public wants to go,in receiving their home care services.
+more|ON|1,Ontario,unit 2 to unit 3 and unit 4,joint,joint,both,it makes economic sense to do so,and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services.
+more|ON|1,Ontario,"unit 1 to unit 2, unit 3 and unit 4",attribution,attribution,"unit 2, unit 3 and unit 4",when we know,it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services.
+more|ON|1,Ontario,"unit 0 to unit 1, unit 2, unit 3 and unit 4",background,background,unit 0,"They refuse to invest,",when we know it makes economic sense to do so and that it's the right thing to do in terms of health policy in where the public wants to go in receiving their home care services.
+more|ON|2,Ontario,unit 1 to unit 2,time-sequence,temporal,both,"""You can only practise so much at such and such a rate,","and then after that we control you."""
+more|ON|2,Ontario,unit 0 to unit 1 and unit 2,attribution,attribution,unit 1 and unit 2,"Instead of that, we are going to say,","""You can only practise so much at such and such a rate, and then after that we control you."""
+more|ON|2,Ontario,"unit 0, unit 1 and unit 2 to unit 3",evaluation,evaluation,"unit 0, unit 1 and unit 2","Instead of that, we are going to say, ""You can only practise so much at such and such a rate, and then after that we control you.""",It is a very sad day.
+more|ON|4,Ontario,unit 0 to unit 1,contrast,adversative,both,"It requires patience, compassion and dedication,",but it is also a moral obligation.
+more|ON|5,Ontario,unit 0 to unit 1,attribution,attribution,unit 1,In so far as we find,"that the proposed act will work towards those ends,"
+more|ON|5,Ontario,unit 2 to unit 3,attribution,attribution,unit 3,I am sure,it will get the support of the members of this House.
+more|ON|5,Ontario,unit 0 and unit 1 to unit 2 and unit 3,condition,condition,unit 2 and unit 3,"In so far as we find that the proposed act will work towards those ends,",I am sure it will get the support of the members of this House.
+more|ON|7,Ontario,unit 1 to unit 2,joint,joint,both,which was passed on second reading,but died on the order paper.
+more|ON|7,Ontario,unit 0 to unit 1 and unit 2,elaboration,elaboration,unit 0,"Bill 78 is an improvement in two ways on my original Bill 111,",which was passed on second reading but died on the order paper.
+more|ON|9,Ontario,unit 0 to unit 1,explanation,explanation,unit 1,"Is all this skirmishing here the answer to a doctor,","and this happened,"
+more|ON|9,Ontario,unit 2 to unit 3,joint,joint,both,who breaks down,and cries in an emergency ward
+more|ON|9,Ontario,unit 4 to unit 5,elaboration,elaboration,unit 4,because she has to make decisions,she does not want to make
+more|ON|9,Ontario,unit 6 to unit 7,joint,joint,both,as to whether a case is urgent enough for admission,or should be sent to another emergency department?
+more|ON|9,Ontario,unit 4 and unit 5 to unit 6 and unit 7,elaboration,elaboration,unit 4 and unit 5,because she has to make decisions she does not want to make,as to whether a case is urgent enough for admission or should be sent to another emergency department?
+more|ON|9,Ontario,"unit 2 and unit 3 to unit 4, unit 5, unit 6 and unit 7",cause-result,causal,unit 2 and unit 3,who breaks down and cries in an emergency ward,because she has to make decisions she does not want to make as to whether a case is urgent enough for admission or should be sent to another emergency department?
+more|ON|9,Ontario,"unit 0 and unit 1 to unit 2, unit 3, unit 4, unit 5, unit 6 and unit 7",elaboration,elaboration,unit 0 and unit 1,"Is all this skirmishing here the answer to a doctor, and this happened,",who breaks down and cries in an emergency ward because she has to make decisions she does not want to make as to whether a case is urgent enough for admission or should be sent to another emergency department?
+more|ON|10,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,The people,we heard from
+more|ON|10,Ontario,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,The people we heard from,said
+more|ON|10,Ontario,"unit 0, unit 1 and unit 2 to unit 3",attribution,attribution,unit 3,The people we heard from said,"that they would like to see the HST removed from heating, electricity and energy."
+more|ON|11,Ontario,unit 0 to unit 1,attribution,attribution,unit 0,"I had a meeting with a Mr Henry Dumouchelle and his partner,","oh, I'd say initially"
+more|ON|11,Ontario,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,"I had a meeting with a Mr Henry Dumouchelle and his partner, oh, I'd say initially",about two months ago.
+more|ON|12,Ontario,unit 1 to unit 2,joint,joint,both,our government is building on our progress in health care,and getting it done for the people of Ontario.
+more|ON|12,Ontario,unit 0 to unit 1 and unit 2,elaboration,elaboration,unit 0,The proposed Primary Care Act is another important way,our government is building on our progress in health care and getting it done for the people of Ontario.
+more|ON|13,Ontario,unit 0 to unit 1,condition,condition,unit 1,"Unless this bill is carried within the first three-year period,",we will lose slightly in excess of $50 million per year in revenue for Ontario.
+more|ON|14,Ontario,unit 1 to unit 2,evaluation,evaluation,unit 1,"that the intent of the government is to reduce standards to the lowest common denominator,",which is a really big problem.
+more|ON|14,Ontario,unit 0 to unit 1 and unit 2,attribution,attribution,unit 1 and unit 2,"But it seems to me, from what I've seen of this,","that the intent of the government is to reduce standards to the lowest common denominator, which is a really big problem."
+more|ON|15,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,"They’re protected through strong, independent institutions","that answer to the people, not to politics."
+more|ON|16,Ontario,unit 0 to unit 1,joint,joint,both,"Yesterday during question period, I asked a question,",and I misspoke about the address to a particular property.
+more|ON|17,Ontario,unit 1 to unit 2,time-sequence,temporal,both,this matter was fully debated in the legislative committee,"and it was defeated in the committee,"
+more|ON|17,Ontario,unit 0 to unit 1 and unit 2,attribution,attribution,unit 1 and unit 2,"As I understand it,","this matter was fully debated in the legislative committee and it was defeated in the committee,"
+more|ON|17,Ontario,unit 4 to unit 5,elaboration,elaboration,unit 4,"and is moved again by the member for Ottawa Centre,",as it is her proper right to do.
+more|ON|17,Ontario,unit 3 to unit 4 and unit 5,joint,joint,both,which is why it is in front of this public forum here today,"and is moved again by the member for Ottawa Centre, as it is her proper right to do."
+more|ON|17,Ontario,"unit 0, unit 1 and unit 2 to unit 3, unit 4 and unit 5",cause-result,causal,"unit 3, unit 4 and unit 5","As I understand it, this matter was fully debated in the legislative committee and it was defeated in the committee,","which is why it is in front of this public forum here today and is moved again by the member for Ottawa Centre, as it is her proper right to do."
+more|ON|18,Ontario,unit 0 to unit 1,cause-result,causal,unit 1,"That’s the public sector, not the broader public sector,","so it excludes arm’s-length agencies, boards, commissions, what have you."
+more|ON|19,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,The resources,that are necessary
+more|ON|19,Ontario,unit 2 to unit 3,elaboration,elaboration,unit 2,are the people,to carry out those goals
+more|ON|19,Ontario,unit 0 and unit 1 to unit 2 and unit 3,same-unit,same-unit,both,The resources that are necessary,are the people to carry out those goals
+more|ON|19,Ontario,"unit 0, unit 1, unit 2 and unit 3 to unit 4",elaboration,elaboration,"unit 0, unit 1, unit 2 and unit 3",The resources that are necessary are the people to carry out those goals,"and, like everything else, people require investment."
+more|ON|20,Ontario,unit 0 to unit 1,elaboration,elaboration,unit 0,We need to be constantly looking for ways,"to improve that system,"
+more|ON|20,Ontario,unit 0 and unit 1 to unit 2,joint,joint,both,"We need to be constantly looking for ways to improve that system,","and certainly that should be debated in the House,"
+more|ON|20,Ontario,unit 5 to unit 6,attribution,attribution,unit 6,you’ll see,it has five schedules.
+more|ON|20,Ontario,unit 4 to unit 5 and unit 6,condition,condition,unit 5 and unit 6,"if we look at Bill 87, Speaker,",you’ll see it has five schedules.
+more|ON|20,Ontario,"unit 3 to unit 4, unit 5 and unit 6",same-unit,same-unit,both,but,"if we look at Bill 87, Speaker, you’ll see it has five schedules."
+more|ON|20,Ontario,"unit 0, unit 1 and unit 2 to unit 3, unit 4, unit 5 and unit 6",contrast,adversative,"unit 3, unit 4, unit 5 and unit 6","We need to be constantly looking for ways to improve that system, and certainly that should be debated in the House,","but if we look at Bill 87, Speaker, you’ll see it has five schedules."
+more|QC|1,Quebec,unit 0 to unit 1,elaboration,elaboration,unit 0,"51 c'est néfaste,",si c'est négatif pour certains groupes de la population
+more|QC|1,Quebec,unit 5 to unit 6,elaboration,elaboration,unit 5,"et faire en sorte que les gens ne soient pas pénalisés,",quels qu'ils soient.
+more|QC|1,Quebec,unit 4 to unit 5 and unit 6,joint,continuation,unit 4,et pouvoir corriger,"et faire en sorte que les gens ne soient pas pénalisés, quels qu'ils soient."
+more|QC|1,Quebec,"unit 3 to unit 4, unit 5 and unit 6",joint,continuation,unit 3,je vais reconnaître,"et pouvoir corriger et faire en sorte que les gens ne soient pas pénalisés, quels qu'ils soient."
+more|QC|1,Quebec,"unit 2 to unit 3, unit 4, unit 5 and unit 6",cause-result,result,unit 2,"et si je suis un ministre responsable,","je vais reconnaître et pouvoir corriger et faire en sorte que les gens ne soient pas pénalisés, quels qu'ils soient."
+more|QC|1,Quebec,"unit 0 and unit 1 to unit 2, unit 3, unit 4, unit 5 and unit 6",joint,continuation,unit 0 and unit 1,"51 c'est néfaste, si c'est négatif pour certains groupes de la population","et si je suis un ministre responsable, je vais reconnaître et pouvoir corriger et faire en sorte que les gens ne soient pas pénalisés, quels qu'ils soient."
+more|QC|2,Quebec,unit 0 to unit 1,background,frame,unit 0,"Et pourquoi,","dans les deux premiers cas,"
+more|QC|2,Quebec,unit 0 and unit 1 to unit 2,background,frame,unit 0 and unit 1,"Et pourquoi, dans les deux premiers cas,",la municipalité paierait
+more|QC|2,Quebec,unit 4 to unit 5,background,frame,unit 4,"dans le troisième cas,",elle se verrait conférer le privilège de tout obtenir gratuitement?
+more|QC|2,Quebec,unit 3 to unit 4 and unit 5,background,frame,unit 3,"et,","dans le troisième cas, elle se verrait conférer le privilège de tout obtenir gratuitement?"
+more|QC|2,Quebec,"unit 0, unit 1 and unit 2 to unit 3, unit 4 and unit 5",joint,continuation,"unit 0, unit 1 and unit 2","Et pourquoi, dans les deux premiers cas, la municipalité paierait","et, dans le troisième cas, elle se verrait conférer le privilège de tout obtenir gratuitement?"
+more|QC|3,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,"Les nouveaux élus,","peu importe de la formation politique, de la nôtre, de la leur, des autres,"
+more|QC|3,Quebec,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,"Les nouveaux élus, peu importe de la formation politique, de la nôtre, de la leur, des autres,","commencent à comprendre l'importance des débats qu'on a en commission parlementaire,"
+more|QC|3,Quebec,"unit 0, unit 1 and unit 2 to unit 3",joint,continuation,"unit 0, unit 1 and unit 2","Les nouveaux élus, peu importe de la formation politique, de la nôtre, de la leur, des autres, commencent à comprendre l'importance des débats qu'on a en commission parlementaire,",l'importance de l'étude article par article.
+more|QC|4,Quebec,unit 0 to unit 1,purpose,purpose,unit 0,Établir des corridors de services prioritaires,pour que les médecins spécialistes traitent les patients référés par les médecins de famille.
+more|QC|5,Quebec,unit 0 to unit 1,cause-result,result,unit 0,"Il y a des gens qui ont de la misère à faire la différence entre les deux,",ça fait qu'il faut que je le précise.
+more|QC|6,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,Contracts has been something,"that has been addressed and spoken about again and again,"
+more|QC|6,Quebec,unit 0 and unit 1 to unit 2,elaboration,e-elaboration,unit 0 and unit 1,"Contracts has been something that has been addressed and spoken about again and again,",that many contracts were offered without tender.
+more|QC|7,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,"Le ministre,","qui a fait supposé-ment son travail,"
+more|QC|7,Quebec,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,"Le ministre, qui a fait supposé-ment son travail,",a présenté un projet de loi de 59 articles
+more|QC|7,Quebec,unit 3 to unit 4,background,frame,unit 3,"et, en quatorze jours de commission parlementaire,",il a lui-même présenté 72 amendements à son projet de loi de 59 articles.
+more|QC|7,Quebec,"unit 0, unit 1 and unit 2 to unit 3 and unit 4",time-sequence,sequence,both,"Le ministre, qui a fait supposé-ment son travail, a présenté un projet de loi de 59 articles","et, en quatorze jours de commission parlementaire, il a lui-même présenté 72 amendements à son projet de loi de 59 articles."
+more|QC|8,Quebec,unit 0 to unit 1,joint,continuation,unit 0,On est tout surpris que les administrateurs municipaux n'aient pas le beau sourire,et n'aient pas un engagement extraordinaire vis-à-vis...
+more|QC|8,Quebec,unit 2 to unit 3,purpose,purpose,unit 2,qu'ils ne soient pas portés vers le gouvernement,pour le féliciter de sa réforme ou de ses propositions.
+more|QC|8,Quebec,unit 0 and unit 1 to unit 2 and unit 3,joint,continuation,unit 0 and unit 1,On est tout surpris que les administrateurs municipaux n'aient pas le beau sourire et n'aient pas un engagement extraordinaire vis-à-vis...,qu'ils ne soient pas portés vers le gouvernement pour le féliciter de sa réforme ou de ses propositions.
+more|QC|10,Quebec,unit 0 to unit 1,elaboration,elaboration,unit 0,Ce n'est pas uniquement dû,"et ce serait se berner que de le croire,"
+more|QC|10,Quebec,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,"Ce n'est pas uniquement dû et ce serait se berner que de le croire,","au fait que nous avons adopté, des mesures extrêmement sévères au printemps."
+more|QC|12,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,Et ainsi ils vont s'occasionner des dommages beaucoup plus substantiels et importants,que le ministre veut en toute bonne foi éviter.
+more|QC|13,Quebec,unit 1 to unit 2,joint,continuation,unit 1,"vous êtes insensibles,",vous manquez de coeur.
+more|QC|13,Quebec,unit 0 to unit 1 and unit 2,joint,continuation,unit 0,"Bien non, vous n'avez pas de courage,","vous êtes insensibles, vous manquez de coeur."
+more|QC|14,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,Quand on regarde le menu législatif,"qu'on a fait passer, Mme la Présidente, en santé,"
+more|QC|14,Quebec,unit 3 to unit 4,elaboration,elaboration,unit 3,"pas on imagine,",on constate le peu qui a été fait dans les 18 mois au pouvoir du Parti québécois.
+more|QC|14,Quebec,unit 2 to unit 3 and unit 4,contrast,contrast,both,"là, bien, on imagine le peu qui a été fait...","pas on imagine, on constate le peu qui a été fait dans les 18 mois au pouvoir du Parti québécois."
+more|QC|14,Quebec,"unit 0 and unit 1 to unit 2, unit 3 and unit 4",elaboration,elaboration,unit 0 and unit 1,"Quand on regarde le menu législatif qu'on a fait passer, Mme la Présidente, en santé,","là, bien, on imagine le peu qui a été fait... pas on imagine, on constate le peu qui a été fait dans les 18 mois au pouvoir du Parti québécois."
+more|QC|15,Quebec,unit 0 to unit 1,contrast,contrast,both,"Il n'y en a pas énormément d'autres,",mais il y en a un certain nombre.
+more|QC|16,Quebec,unit 0 to unit 1,condition,condition,unit 0,On ne peut pas laisser les choses en plan comme ça,si on veut un projet à Québec.
+more|QC|18,Quebec,unit 0 to unit 1,elaboration,e-elaboration,unit 0,"Cette législation,","en Ontario,"
+more|QC|18,Quebec,unit 0 and unit 1 to unit 2,same-unit,same-unit,both,"Cette législation, en Ontario,","prévoit,"
+more|QC|18,Quebec,unit 3 to unit 4,elaboration,elaboration,unit 3,lorsque l'entreprise a un chiffre d'affaires de plus de 2 500 000 $,"- c'est les petites PME, ça, M. le Président -"
+more|QC|18,Quebec,"unit 0, unit 1 and unit 2 to unit 3 and unit 4",background,background,"unit 0, unit 1 and unit 2","Cette législation, en Ontario, prévoit,","lorsque l'entreprise a un chiffre d'affaires de plus de 2 500 000 $ - c'est les petites PME, ça, M. le Président -"
+more|QC|18,Quebec,"unit 0, unit 1, unit 2, unit 3 and unit 4 to unit 5",same-unit,same-unit,both,"Cette législation, en Ontario, prévoit, lorsque l'entreprise a un chiffre d'affaires de plus de 2 500 000 $ - c'est les petites PME, ça, M. le Président -","une indemnité de départ équivalant à une semaine par année de service, jusqu'à concurrence de 26 semaines."
+more|QC|19,Quebec,unit 0 to unit 1,elaboration,elaboration,unit 0,M. Brassard:,"Des dommages aux propriétés, aux immeubles."
+more|QC|20,Quebec,unit 2 to unit 3,joint,continuation,unit 2,"d'aller de l'avant,","et avec tant d'empressement, avec ce nouveau régime."
+more|QC|20,Quebec,unit 1 to unit 2 and unit 3,elaboration,e-elaboration,unit 1,qui justifie la décision du gouvernement,"d'aller de l'avant, et avec tant d'empressement, avec ce nouveau régime."
+more|QC|20,Quebec,"unit 0 to unit 1, unit 2 and unit 3",elaboration,e-elaboration,unit 0,Nous comprenons tous la véritable raison,"qui justifie la décision du gouvernement d'aller de l'avant, et avec tant d'empressement, avec ce nouveau régime."
 sample|1,US House,unit 0 to unit 1,elaboration,elaboration,unit 0,"A small hardware store in an AHP would be joining an association,","sending their premiums not to themselves but off to others,"
 sample|1,US House,unit 0 and unit 1 to unit 2,explanation,explanation,unit 2,"A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others,",and that is why we need the check.
 test|A8|fr,,unit 1 to unit 2,contrast,contrast,both,"la Chambre a adopté un projet de loi identique au projet de loi 5,",mais le Sénat a refusé d'agir.

@@ -22,4 +22,5 @@ python3 $R/edu_figures.py $O/edu_reparsed.json docs/discourse_first_figures.html
 python3 $R/edu_figures.py $O/more_reparsed.json docs/discourse_first_new_sentences.html --rows first:4
 echo "== 5/5 the notebook: every step, more sentences per legislature, the data files, and the tests (about 10 minutes)"
 python3 $R/build_disc_nb.py notebooks/discourse_first.ipynb --run 2> $O/notebook_log.txt || { echo "   the notebook did not run here (see $O/notebook_log.txt); writing it without outputs so it can be run in Jupyter"; python3 $R/build_disc_nb.py notebooks/discourse_first.ipynb; }
-echo "== done: outputs/edu/, docs/discourse_first_*.html, notebooks/discourse_first.ipynb"
+python3 -c "import json; nb=json.load(open('notebooks/discourse_first.ipynb')); open('$O/notebook_outputs.txt','w').write('\n\n'.join(''.join(o.get('text') or o.get('data',{}).get('text/plain',[])) for c in nb['cells'] if c['cell_type']=='code' for o in c['outputs']))" || true
+echo "== done: outputs/edu/, docs/discourse_first_*.html, notebooks/discourse_first.ipynb, $O/notebook_outputs.txt (the notebook's results as text)"

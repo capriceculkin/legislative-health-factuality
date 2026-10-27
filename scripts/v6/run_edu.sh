@@ -7,25 +7,28 @@
 set -e
 R=scripts/v6; O=outputs/edu; D=data/parity_oct19/parity_parses.json
 mkdir -p $O docs notebooks
-echo "== 1/5 parse every discourse unit on its own, and 20 new sentences per legislature"
+echo "== 1/6 parse every discourse unit on its own, and 20 new sentences per legislature"
 if [ "${SKIP_PARSE:-0}" = 1 ] && [ -s $O/edu_trees.json ] && [ -s $O/more_parses.json ]; then
   echo "   SKIP_PARSE=1: reusing the saved unit parses in $O/edu_trees.json and $O/more_parses.json"
 else
   python3 $R/edu_collect.py --more "${MORE:-20}"
 fi
-echo "== 2/5 lines from each unit's own tree, connected through the discourse parse"
+echo "== 2/6 lines from each unit's own tree, connected through the discourse parse"
 python3 $R/edu_pipeline.py $R $D $O/edu_reparsed.json --edu-trees $O/edu_trees.json
 python3 $R/edu_pipeline.py $R $O/more_parses.json $O/more_reparsed.json --edu-trees $O/edu_trees.json
 #    for comparison only (not part of the design): the same, with the whole sentence's tree allowed to fill gaps
 python3 $R/edu_pipeline.py $R $D $O/edu_with_sentence_tree.json --edu-trees $O/edu_trees.json --with-sentence-tree
-echo "== 3/5 scores against the answer keys"
+echo "== 3/6 scores against the answer keys"
 python3 $R/edu_score.py $R $D $O/edu_reparsed.json > $O/edu_score_reparsed.txt
 python3 $R/edu_score.py $R $D $O/edu_with_sentence_tree.json > $O/edu_score_with_sentence_tree.txt
 grep -E "discourse first" $O/edu_score_reparsed.txt | grep -v McNemar || true
-echo "== 4/5 figures (tree inside a tree)"
+echo "== 4/6 figures (tree inside a tree)"
 python3 $R/edu_figures.py $O/edu_reparsed.json docs/discourse_first_figures.html
 python3 $R/edu_figures.py $O/more_reparsed.json docs/discourse_first_new_sentences.html --rows first:4
-echo "== 5/5 the notebook: every step, more sentences per legislature, the data files, and the tests (about 10 minutes)"
+python3 $R/edu_figure_files.py docs/figures $O/edu_reparsed.json $O/more_reparsed.json
+echo "== 5/6 the notebook: every step, more sentences per legislature, the data files, and the tests (about 10 minutes)"
 python3 $R/build_disc_nb.py notebooks/discourse_first.ipynb --run 2> $O/notebook_log.txt || { echo "   the notebook did not run here (see $O/notebook_log.txt); writing it without outputs so it can be run in Jupyter"; python3 $R/build_disc_nb.py notebooks/discourse_first.ipynb; }
 python3 -c "import json; nb=json.load(open('notebooks/discourse_first.ipynb')); open('$O/notebook_outputs.txt','w').write('\n\n'.join(''.join(o.get('text') or o.get('data',{}).get('text/plain',[])) for c in nb['cells'] if c['cell_type']=='code' for o in c['outputs']))" || true
-echo "== done: outputs/edu/, docs/discourse_first_*.html, notebooks/discourse_first.ipynb, $O/notebook_outputs.txt (the notebook's results as text)"
+echo "== 6/6 the workbook (docs/discourse_first_examples.xlsx)"
+python3 $R/edu_xlsx.py docs/discourse_first_examples.xlsx --project . $( [ -f $O/french_misses_round5.csv ] && echo --misses $O/french_misses_round5.csv ) || echo "   the workbook was not built (see above)"
+echo "== done: outputs/edu/, docs/discourse_first_*.html, docs/figures/, docs/discourse_first_examples.xlsx, notebooks/discourse_first.ipynb, $O/notebook_outputs.txt (the notebook's results as text)"

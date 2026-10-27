@@ -133,7 +133,7 @@ def sentence_block(r):
 <p class="sent">{esc(r["text"])}</p>
 <h3>Units and how the discourse parse connects them</h3>
 <ul class="rels">{rel_rows}</ul>
-<div class="scroll">{DRAW.figure(r)}</div>
+<div class="scroll">{DRAW.figure(r, simple=True)}</div>
 <h3>Lines</h3>
 <div class="scroll"><table><tr><th>Unit</th><th>Subject</th><th>Verb</th><th>Object</th><th>Where a part came from</th></tr>{rows}</table></div>
 </section>'''

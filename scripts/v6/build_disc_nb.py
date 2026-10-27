@@ -165,7 +165,7 @@ def walk_through(text, lang, n=None):
     print("\nSTEP 4. The discourse parse connects the units: a gap in a unit is filled from the unit it is connected to, and 'that' is read as the units it points to")
     display(lines_table(rec))
     print("\nSTEP 5. The tree inside a tree")
-    display(SVG(D.figure(rec)))
+    display(SVG(D.figure(rec, simple=True)))
     return rec
 """)
 
@@ -272,7 +272,7 @@ for n, x in RECS.items():
         shown[x["legislature"]] += 1
         print(f"\n{x['legislature']}  {n}: {x['text']}")
         display(relation_table(x)); display(lines_table(x))
-        display(SVG(D.figure(x)))
+        display(SVG(D.figure(x, simple=True)))
 """)
 
 md(r"""

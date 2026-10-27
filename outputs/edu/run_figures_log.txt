@@ -1,0 +1,36 @@
+== 1/6 parse every discourse unit on its own, and 20 new sentences per legislature
+   SKIP_PARSE=1: reusing the saved unit parses in outputs/edu/edu_trees.json and outputs/edu/more_parses.json
+== 2/6 lines from each unit's own tree, connected through the discourse parse
+wrote outputs/edu/edu_reparsed.json: 220 sentences, 508 units, 484 lines
+wrote outputs/edu/more_reparsed.json: 60 sentences, 194 units, 190 lines
+wrote outputs/edu/edu_with_sentence_tree.json: 220 sentences, 508 units, 458 lines
+== 3/6 scores against the answer keys
+heldout en         discourse first      29/36    81%   18/36    50%      7 of 36
+heldout fr         discourse first      23/33    70%   14/33    42%     19 of 42
+sample en          discourse first     103/119   87%   56/119   47%     29 of 132
+sample fr          discourse first      94/116   81%   48/116   41%     40 of 134
+simple tests en    discourse first      70/70   100%   70/70   100%      0 of 70
+simple tests fr    discourse first      70/70   100%   70/70   100%      0 of 70
+== 4/6 figures (tree inside a tree)
+wrote docs/discourse_first_figures.html with 8 sentences
+wrote docs/discourse_first_new_sentences.html with 12 sentences
+wrote 3 SVG figures to docs/figures/
+wrote 3 PNG figures with playwright
+== 5/6 the notebook: every step, more sentences per legislature, the data files, and the tests (about 10 minutes)
+wrote notebooks/discourse_first.ipynb
+checks and rule tests: 111 pass, 0 fail
+trees: parsed now
+            set  found %  exact % exact 95% interval
+     heldout en       81       50           34 to 66
+     heldout fr       70       42           27 to 59
+      sample en       87       47           38 to 56
+      sample fr       81       41           33 to 50
+simple tests en      100      100          95 to 100
+simple tests fr      100      100          95 to 100
+
+== 6/6 the workbook (docs/discourse_first_examples.xlsx)
+rerun here vs outputs/edu: 280 of 280 sentences give the same lines
+scores here match outputs/edu/edu_score_reparsed.txt for all six sets
+figures: using the PNGs in docs/figures
+wrote docs/discourse_first_examples.xlsx with 11 tabs: Start here, Check together, Flow 1 hardware store, Flow 2 Senat (French), Flow 3 where it fails, Step 1 Discourse parse, Step 2 Unit trees, Step 3-4 Lines, Step 5 Records for DBpedia, Key vs output, French misses
+== done: outputs/edu/, docs/discourse_first_*.html, docs/figures/, docs/discourse_first_examples.xlsx, notebooks/discourse_first.ipynb, outputs/edu/notebook_outputs.txt (the notebook's results as text)

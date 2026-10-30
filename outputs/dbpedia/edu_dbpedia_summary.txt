@@ -1,0 +1,83 @@
+DBpedia concepts in the discourse-first claims (concept step: concepts_v3 version 1, as on Oct 15; graph mappingbased-objects_2022.12.01_en.ttl.bz2.merged.graph.npz)
+sentences: 190 (sample 100, heldout 30, more 60); Spotlight: live, through the tunnel
+parts of speech for the noun check: 100 sentences from the saved spaCy parse (as on Oct 15); 90 sentences from the unit trees
+
+All claims: 534 claims
+   both ends in DBpedia        69/534 (13%)
+   one end in DBpedia          202/534 (38%)
+   neither end in DBpedia      263/534 (49%)
+   a walk links the two ends   54/534 (10%)
+
+Claims the speaker asserts (kind = asserted): 373 claims
+   both ends in DBpedia        51/373 (14%)
+   one end in DBpedia          143/373 (38%)
+   neither end in DBpedia      179/373 (48%)
+   a walk links the two ends   39/373 (10%)
+
+US House: 144 claims
+   both ends in DBpedia        28/144 (19%)
+   one end in DBpedia          80/144 (56%)
+   neither end in DBpedia      36/144 (25%)
+   a walk links the two ends   21/144 (15%)
+
+Ontario: 152 claims
+   both ends in DBpedia        36/152 (24%)
+   one end in DBpedia          63/152 (41%)
+   neither end in DBpedia      53/152 (35%)
+   a walk links the two ends   30/152 (20%)
+
+Quebec: 238 claims
+   both ends in DBpedia        5/238 (2%)
+   one end in DBpedia          59/238 (25%)
+   neither end in DBpedia      174/238 (73%)
+   a walk links the two ends   3/238 (1%)
+
+English: 300 claims
+   both ends in DBpedia        65/300 (22%)
+   one end in DBpedia          144/300 (48%)
+   neither end in DBpedia      91/300 (30%)
+   a walk links the two ends   51/300 (17%)
+
+French: 234 claims
+   both ends in DBpedia        4/234 (2%)
+   one end in DBpedia          58/234 (25%)
+   neither end in DBpedia      172/234 (74%)
+   a walk links the two ends   3/234 (1%)
+
+Why a subject has no concept (all 534 claims)
+   pronoun                       196
+   Spotlight spotted nothing     155
+   in DBpedia                    126
+   the bill under debate         32
+   page not in the graph         8
+   senses rejected               6
+   not a noun or a name          5
+   nothing to link               5
+   no content word               1
+
+Why a object has no concept (all 534 claims)
+   in DBpedia                    214
+   Spotlight spotted nothing     173
+   nothing to link               43
+   pronoun                       21
+   a clause                      19
+   page not in the graph         19
+   the bill under debate         18
+   not a noun or a name          15
+   senses rejected               6
+   no content word               4
+   a number or an amount         2
+
+Concepts whose page name shares no word with the words spotted (worth a look, like AHP -> Krasue): 8
+   more|US|1         'America' -> United_States
+   more|US|11        'HMOs' -> Health_maintenance_organization
+   more|US|19        'Congressman' -> United_States_House_of_Representatives
+   more|US|4         'America' -> United_States
+   sample|20         'AIDS' -> HIV
+   sample|35         'Migrants' -> Immigration
+   sample|40         'Queen' -> Elizabeth_II
+   sample|5          'HMO' -> Health_maintenance_organization
+
+Claims whose unit has a DBpedia concept at neither end of the claim (in the verb or an adjunct): 84/534 (16%)
+
+(no Oct 15 comparison: /Users/caprice/Desktop/next_steps/oct15/concepts_v3.json was not found; pass --oct15 with that folder)

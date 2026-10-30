@@ -333,9 +333,8 @@ FLOWS = [
     ("sample|1", "Flow 1 hardware store", "The English sentence from Oct 22. 'that is why' is read through the explanation relation: 'that' stands for "
      "unit 0 and unit 1 together, the reason for unit 2. 'sending' has no subject in its unit and takes it from unit 0 through elaboration."),
     ("test|A8|fr", "Flow 2 Senat (French)", "The French sentence from Oct 22. 'L'an dernier' is a frame, not a subject, and is kept as the "
-     "context of both claims. Each unit gets its own claim, read from its own tree. The French parser marks unit 0 as the main part of the frame "
-     "relation, so its reading on the connection line comes out backwards; the context rule does not use the main part (a unit with no clause of "
-     "its own that frames the others becomes their context)."),
+     "context of both claims. Each unit gets its own claim, read from its own tree. The French discourse parse makes unit 0 the main part of the frame "
+     "relation: 'L'an dernier' contextualizes the whole sentence, and the chamber adopting the bill and the Senate refusing to act are set against it."),
     ("sample|58", "Flow 3 where it fails", "Where the design still goes wrong. The unit tree reads 'n'importe quoi' as a compound pronoun with a verb "
      "inside it, and the object is dropped (key: les libéraux | disent | n'importe quoi). The object of 'se rendent compte' stops at the end of its "
      "unit, though the coordinated verb in unit 2 belongs to it. The key also drops the negation in 'ne remplissent', unlike other keys."),

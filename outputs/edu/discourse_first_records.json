@@ -1,6 +1,6 @@
 {
  "design": "discourse first, then a constituency tree per unit (Oct 22)",
- "made": "2026-10-26 20:40",
+ "made": "2026-10-30 12:37",
  "trees": "parsed now",
  "rows": [
   {
@@ -21982,7 +21982,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     },
     {
      "left": [
@@ -22000,7 +22000,7 @@
       0,
       1
      ],
-     "reads": "unit 0 and unit 1 to unit 2: background; main part unit 0 and unit 1; unit 2 gives background or context for unit 0 and unit 1"
+     "reads": "unit 0 and unit 1 to unit 2: background; main part unit 0 and unit 1; unit 0 and unit 1 frame unit 2 (the setting is the main part)"
     },
     {
      "left": [
@@ -22018,7 +22018,7 @@
       4,
       4
      ],
-     "reads": "unit 4 to unit 5: background; main part unit 4; unit 5 gives background or context for unit 4"
+     "reads": "unit 4 to unit 5: background; main part unit 4; unit 4 frames unit 5 (the setting is the main part)"
     },
     {
      "left": [
@@ -22036,7 +22036,7 @@
       3,
       3
      ],
-     "reads": "unit 3 to unit 4 and unit 5: background; main part unit 3; unit 4 and unit 5 give background or context for unit 3"
+     "reads": "unit 3 to unit 4 and unit 5: background; main part unit 3; unit 3 frames unit 4 and unit 5 (the setting is the main part)"
     },
     {
      "left": [
@@ -22072,7 +22072,7 @@
      ],
      "from_text": "Et pourquoi,",
      "to_text": "dans les deux premiers cas,",
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     },
     {
      "from": "unit 0 and unit 1",
@@ -22089,7 +22089,7 @@
      ],
      "from_text": "Et pourquoi, dans les deux premiers cas,",
      "to_text": "la municipalité paierait",
-     "reads": "unit 0 and unit 1 to unit 2: background; main part unit 0 and unit 1; unit 2 gives background or context for unit 0 and unit 1"
+     "reads": "unit 0 and unit 1 to unit 2: background; main part unit 0 and unit 1; unit 0 and unit 1 frame unit 2 (the setting is the main part)"
     },
     {
      "from": "unit 4",
@@ -22105,7 +22105,7 @@
      ],
      "from_text": "dans le troisième cas,",
      "to_text": "elle se verrait conférer le privilège de tout obtenir gratuitement?",
-     "reads": "unit 4 to unit 5: background; main part unit 4; unit 5 gives background or context for unit 4"
+     "reads": "unit 4 to unit 5: background; main part unit 4; unit 4 frames unit 5 (the setting is the main part)"
     },
     {
      "from": "unit 3",
@@ -22122,7 +22122,7 @@
      ],
      "from_text": "et,",
      "to_text": "dans le troisième cas, elle se verrait conférer le privilège de tout obtenir gratuitement?",
-     "reads": "unit 3 to unit 4 and unit 5: background; main part unit 3; unit 4 and unit 5 give background or context for unit 3"
+     "reads": "unit 3 to unit 4 and unit 5: background; main part unit 3; unit 3 frames unit 4 and unit 5 (the setting is the main part)"
     },
     {
      "from": "unit 0, unit 1 and unit 2",
@@ -24760,7 +24760,7 @@
       3,
       3
      ],
-     "reads": "unit 3 to unit 4: background; main part unit 3; unit 4 gives background or context for unit 3"
+     "reads": "unit 3 to unit 4: background; main part unit 3; unit 3 frames unit 4 (the setting is the main part)"
     },
     {
      "left": [
@@ -24826,7 +24826,7 @@
      ],
      "from_text": "et, en quatorze jours de commission parlementaire,",
      "to_text": "il a lui-même présenté 72 amendements à son projet de loi de 59 articles.",
-     "reads": "unit 3 to unit 4: background; main part unit 3; unit 4 gives background or context for unit 3"
+     "reads": "unit 3 to unit 4: background; main part unit 3; unit 3 frames unit 4 (the setting is the main part)"
     },
     {
      "from": "unit 0, unit 1 and unit 2",
@@ -31744,7 +31744,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 1 and unit 2 give background or context for unit 0"
+     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)"
     }
    ],
    "connections": [
@@ -31779,7 +31779,7 @@
      ],
      "from_text": "L'an dernier,",
      "to_text": "la Chambre a adopté un projet de loi identique au projet de loi 5, mais le Sénat a refusé d'agir.",
-     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 1 and unit 2 give background or context for unit 0"
+     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)"
     }
    ],
    "lines": [

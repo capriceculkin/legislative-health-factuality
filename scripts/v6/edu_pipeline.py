@@ -1245,7 +1245,9 @@ def process(row, edu_trees=None):
         rels.append({"left": list(L), "right": list(R), "relation": x["relation"], "shared": sh, "nuclearity": nuc,
                      "main": list(main) if main else None,
                      "reads": f"{span(L)} to {span(R)}: {sh}; " + (f"main part {span(main)}" if main else "both equally important")
-                              + (f"; {span(R if main == L else L)} {agree(MEANING.get(sh, 'is related to'), R if main == L else L)} {span(main)}" if main else "")})
+                              + (f"; {span(main)} {agree('frames', main)} {span(R if main == L else L)} (the setting is the main part)"
+                                 if main and x["relation"] == "frame" else       # French 'frame': the main part is the setting ('L'an dernier')
+                                 f"; {span(R if main == L else L)} {agree(MEANING.get(sh, 'is related to'), R if main == L else L)} {span(main)}" if main else "")})
     if OPT["units_only"] and OPT["apposition"] and OPT["apposition_across"]:
         for r in rels:
             k = r["right"][0]

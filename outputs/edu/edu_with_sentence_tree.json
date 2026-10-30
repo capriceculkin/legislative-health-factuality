@@ -3590,7 +3590,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 1 and unit 2 give background or context for unit 0"
+     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)"
     }
    ],
    "connections": [
@@ -3625,7 +3625,7 @@
      ],
      "from_text": "L'an dernier,",
      "to_text": "la Chambre a adopté un projet de loi identique au projet de loi 5, mais le Sénat a refusé d'agir.",
-     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 1 and unit 2 give background or context for unit 0"
+     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)"
     }
    ],
    "lines": [
@@ -3983,7 +3983,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     }
    ],
    "connections": [
@@ -4001,7 +4001,7 @@
      ],
      "from_text": "M.",
      "to_text": "le Président, le ministre a rompu sa promesse.",
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     }
    ],
    "lines": [
@@ -25437,7 +25437,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     }
    ],
    "connections": [
@@ -25455,7 +25455,7 @@
      ],
      "from_text": "M. Derraji :",
      "to_text": "Mme la Présidente, je demande un appel par vote nominal.",
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     }
    ],
    "lines": [
@@ -52949,7 +52949,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 1, unit 2, unit 3 and unit 4 give background or context for unit 0"
+     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 0 frames unit 1, unit 2, unit 3 and unit 4 (the setting is the main part)"
     }
    ],
    "connections": [
@@ -53021,7 +53021,7 @@
      ],
      "from_text": "Le 4 novembre 1971,",
      "to_text": "l'Assemblée nationale du Québec, cette Assemblée, M. le Président, adoptait la Loi sur l'indemnisation des victimes d'actes criminels.",
-     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 1, unit 2, unit 3 and unit 4 give background or context for unit 0"
+     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 0 frames unit 1, unit 2, unit 3 and unit 4 (the setting is the main part)"
     }
    ],
    "lines": [
@@ -62204,7 +62204,7 @@
       4,
       4
      ],
-     "reads": "unit 4 to unit 5: background; main part unit 4; unit 5 gives background or context for unit 4"
+     "reads": "unit 4 to unit 5: background; main part unit 4; unit 4 frames unit 5 (the setting is the main part)"
     },
     {
      "left": [
@@ -62291,7 +62291,7 @@
      ],
      "from_text": "troisièmement,",
      "to_text": "il se propose de rendre disponible un plus grand nombre de lieux d'hébergement adaptés pour les personnes adultes atteintes de séquelles ou de déficiences.",
-     "reads": "unit 4 to unit 5: background; main part unit 4; unit 5 gives background or context for unit 4"
+     "reads": "unit 4 to unit 5: background; main part unit 4; unit 4 frames unit 5 (the setting is the main part)"
     },
     {
      "from": "unit 3",
@@ -68403,7 +68403,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     },
     {
      "left": [
@@ -68436,7 +68436,7 @@
      ],
      "from_text": "D'autre part,",
      "to_text": "M. le Président,",
-     "reads": "unit 0 to unit 1: background; main part unit 0; unit 1 gives background or context for unit 0"
+     "reads": "unit 0 to unit 1: background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)"
     },
     {
      "from": "unit 0 and unit 1",
@@ -70863,7 +70863,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1, unit 2 and unit 3: background; main part unit 0; unit 1, unit 2 and unit 3 give background or context for unit 0"
+     "reads": "unit 0 to unit 1, unit 2 and unit 3: background; main part unit 0; unit 0 frames unit 1, unit 2 and unit 3 (the setting is the main part)"
     }
    ],
    "connections": [
@@ -70916,7 +70916,7 @@
      ],
      "from_text": "A l'article 28,",
      "to_text": "tel que demandé par M. le leader adjoint du gouvernement, M. le ministre du Travail propose l'adoption du principe du projet de loi 35, Loi modifiant la Loi sur les accidents du travail et les maladies professionnelles, la Loi sur la santé et la sécurité du travail et la Loi sur l'assurance-maladie.",
-     "reads": "unit 0 to unit 1, unit 2 and unit 3: background; main part unit 0; unit 1, unit 2 and unit 3 give background or context for unit 0"
+     "reads": "unit 0 to unit 1, unit 2 and unit 3: background; main part unit 0; unit 0 frames unit 1, unit 2 and unit 3 (the setting is the main part)"
     }
    ],
    "lines": [
@@ -72646,7 +72646,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 1 and unit 2 give background or context for unit 0"
+     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)"
     },
     {
      "left": [
@@ -72696,7 +72696,7 @@
      ],
      "from_text": "Maintenant,",
      "to_text": "l'Assemblée prend en considération le rapport de la commission des affaires sociales sur le projet de loi n° 7, Loi modifiant la Loi sur les services de santé et les services sociaux,",
-     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 1 and unit 2 give background or context for unit 0"
+     "reads": "unit 0 to unit 1 and unit 2: background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)"
     },
     {
      "from": "unit 0, unit 1 and unit 2",
@@ -76990,7 +76990,7 @@
       1,
       1
      ],
-     "reads": "unit 1 to unit 2, unit 3 and unit 4: background; main part unit 1; unit 2, unit 3 and unit 4 give background or context for unit 1"
+     "reads": "unit 1 to unit 2, unit 3 and unit 4: background; main part unit 1; unit 1 frames unit 2, unit 3 and unit 4 (the setting is the main part)"
     },
     {
      "left": [
@@ -77008,7 +77008,7 @@
       0,
       0
      ],
-     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 1, unit 2, unit 3 and unit 4 give background or context for unit 0"
+     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 0 frames unit 1, unit 2, unit 3 and unit 4 (the setting is the main part)"
     }
    ],
    "connections": [
@@ -77061,7 +77061,7 @@
      ],
      "from_text": "À l'article 4 de notre feuilleton,",
      "to_text": "le ministre de la Justice propose l'adoption du principe du projet de loi 10, Loi modifiant la Loi sur les tribunaux judiciaires et d'autres dispositions législatives en vue d'instituer la Cour unifiée.",
-     "reads": "unit 1 to unit 2, unit 3 and unit 4: background; main part unit 1; unit 2, unit 3 and unit 4 give background or context for unit 1"
+     "reads": "unit 1 to unit 2, unit 3 and unit 4: background; main part unit 1; unit 1 frames unit 2, unit 3 and unit 4 (the setting is the main part)"
     },
     {
      "from": "unit 0",
@@ -77080,7 +77080,7 @@
      ],
      "from_text": "La Vice-Présidente:",
      "to_text": "À l'article 4 de notre feuilleton, le ministre de la Justice propose l'adoption du principe du projet de loi 10, Loi modifiant la Loi sur les tribunaux judiciaires et d'autres dispositions législatives en vue d'instituer la Cour unifiée.",
-     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 1, unit 2, unit 3 and unit 4 give background or context for unit 0"
+     "reads": "unit 0 to unit 1, unit 2, unit 3 and unit 4: background; main part unit 0; unit 0 frames unit 1, unit 2, unit 3 and unit 4 (the setting is the main part)"
     }
    ],
    "lines": [

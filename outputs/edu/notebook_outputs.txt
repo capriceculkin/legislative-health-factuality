@@ -4,7 +4,7 @@ saved sentences: 220
 rules and keys loaded from: /Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v6 (all of them)
 
 
-20:39:49    loaded the discourse parser (UniRST) in 15.2s
+12:37:01    loaded the discourse parser (UniRST) in 22.4s
 Sentence: A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.
 
 STEP 1. Discourse parse (parsed now): the units
@@ -22,7 +22,7 @@ STEP 1. Discourse parse (parsed now): the units
 0             unit 0 to unit 1  elaboration        elaboration    unit 0                  elaboration; main part unit 0; unit 1 adds detail to unit 0
 1  unit 0 and unit 1 to unit 2  explanation        explanation    unit 2  explanation; main part unit 2; unit 0 and unit 1 give the reason for unit 2
 
-20:39:50    loaded Stanza en 1.15.0 (constituency: yes) in 1.4s
+12:37:03    loaded Stanza en 1.15.0 (constituency: yes) in 1.6s
 
 STEP 2. A constituency tree for each unit (each unit parsed now)
    unit 0: (ROOT (S (NP (NP (DT A) (JJ small) (NN hardware) (NN store)) (PP (IN in) (NP (DT an) (NNP AHP)))) (VP (MD would) (VP (VB be) (VP (VBG joining) (NP (DT an) (NN association))))) (, ,)))
@@ -67,12 +67,12 @@ STEP 1. Discourse parse (parsed now): the units
         and how the discourse parse connects them
 
 
-                    connection    relation parser's own label main part                                                                           how it reads
-0             unit 1 to unit 2    contrast           contrast      both                                                       contrast; both equally important
-1  unit 0 to unit 1 and unit 2  background              frame    unit 0  background; main part unit 0; unit 1 and unit 2 give background or context for unit 0
+                    connection    relation parser's own label main part                                                                                  how it reads
+0             unit 1 to unit 2    contrast           contrast      both                                                              contrast; both equally important
+1  unit 0 to unit 1 and unit 2  background              frame    unit 0  background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)
 
-20:40:00    loaded the Berkeley parser (benepar_fr2) in 9.5s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
-20:40:03    loaded spaCy fr (core_news_lg 3.8.0) in 2.4s
+12:37:16    loaded the Berkeley parser (benepar_fr2) in 11.7s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+12:37:18    loaded spaCy fr (core_news_lg 3.8.0) in 2.7s
 
 STEP 2. A constituency tree for each unit (each unit parsed now)
    unit 0: (TOP (SENT (NP (DET L') (NC an) (AP (ADJ dernier))) (PONCT ,)))
@@ -144,12 +144,12 @@ STEP 5. The tree inside a tree
 
 <SVG>
 
-   10 new sentences parsed (1.0s each)
-   20 new sentences parsed (0.6s each)
-   30 new sentences parsed (0.5s each)
-   40 new sentences parsed (0.5s each)
-   50 new sentences parsed (0.5s each)
-   60 new sentences parsed (0.5s each)
+   10 new sentences parsed (1.2s each)
+   20 new sentences parsed (0.8s each)
+   30 new sentences parsed (0.7s each)
+   40 new sentences parsed (0.6s each)
+   50 new sentences parsed (0.6s each)
+   60 new sentences parsed (0.6s each)
 60 sentences (parsed now)
 
 
@@ -234,10 +234,10 @@ Quebec  more|QC|2: Et pourquoi, dans les deux premiers cas, la municipalité pai
 
 
                                                connection    relation parser's own label                  main part                                                                                                     how it reads
-0                                        unit 0 to unit 1  background              frame                     unit 0                                      background; main part unit 0; unit 1 gives background or context for unit 0
-1                             unit 0 and unit 1 to unit 2  background              frame          unit 0 and unit 1                background; main part unit 0 and unit 1; unit 2 gives background or context for unit 0 and unit 1
-2                                        unit 4 to unit 5  background              frame                     unit 4                                      background; main part unit 4; unit 5 gives background or context for unit 4
-3                             unit 3 to unit 4 and unit 5  background              frame                     unit 3                            background; main part unit 3; unit 4 and unit 5 give background or context for unit 3
+0                                        unit 0 to unit 1  background              frame                     unit 0                                background; main part unit 0; unit 0 frames unit 1 (the setting is the main part)
+1                             unit 0 and unit 1 to unit 2  background              frame          unit 0 and unit 1           background; main part unit 0 and unit 1; unit 0 and unit 1 frame unit 2 (the setting is the main part)
+2                                        unit 4 to unit 5  background              frame                     unit 4                                background; main part unit 4; unit 4 frames unit 5 (the setting is the main part)
+3                             unit 3 to unit 4 and unit 5  background              frame                     unit 3                     background; main part unit 3; unit 3 frames unit 4 and unit 5 (the setting is the main part)
 4  unit 0, unit 1 and unit 2 to unit 3, unit 4 and unit 5       joint       continuation  unit 0, unit 1 and unit 2  joint; main part unit 0, unit 1 and unit 2; unit 3, unit 4 and unit 5 are listed with unit 0, unit 1 and unit 2
 
 Empty DataFrame

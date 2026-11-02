@@ -1,0 +1,478 @@
+{
+ "real_pairs": 41,
+ "shuffled_pairs": 1981,
+ "real_median_tau": 0.093,
+ "shuffled_median_tau": 0.0886,
+ "real_share_with_walk": 0.8292682926829268,
+ "shuffled_share_with_walk": 0.8359414437152953,
+ "auc_real_over_shuffled": 0.5064453774270201,
+ "real": [
+  {
+   "n": "sample|13",
+   "claim": "this Republican bill | offers | a false choice",
+   "s": [
+    "Republican_Party_(United_States)"
+   ],
+   "o": [
+    "False_dilemma"
+   ],
+   "tau": 0.0
+  },
+  {
+   "n": "sample|14",
+   "claim": "My own State of Arkansas | was declared | to have the highest number of meth lab seizures per capita in the Nation",
+   "s": [
+    "U.S._state",
+    "Arkansas"
+   ],
+   "o": [
+    "United_States",
+    "Number"
+   ],
+   "tau": 1.0
+  },
+  {
+   "n": "sample|14",
+   "claim": "My own State | have | the highest number of meth lab seizures per capita in the Nation",
+   "s": [
+    "U.S._state"
+   ],
+   "o": [
+    "United_States",
+    "Number"
+   ],
+   "tau": 0.4191
+  },
+  {
+   "n": "sample|17",
+   "claim": "My Republican friends | say | repeal these health care rights and protections that were extended last year",
+   "s": [
+    "Republican_Party_(United_States)"
+   ],
+   "o": [
+    "Health_care"
+   ],
+   "tau": 0.1871
+  },
+  {
+   "n": "sample|27",
+   "claim": "One hundred and seventeen women from Cochrane district | obtain | abortions",
+   "s": [
+    "Cochrane_District"
+   ],
+   "o": [
+    "Abortion"
+   ],
+   "tau": 0.0587
+  },
+  {
+   "n": "sample|28",
+   "claim": "The government | has chosen to call | this Brian's Law",
+   "s": [
+    "Government_of_Ontario"
+   ],
+   "o": [
+    "Law"
+   ],
+   "tau": 0.093
+  },
+  {
+   "n": "sample|3",
+   "claim": "physicians | serve | Medicare patients",
+   "s": [
+    "Physician"
+   ],
+   "o": [
+    "Medicare_(United_States)",
+    "Patient"
+   ],
+   "tau": 0.1046
+  },
+  {
+   "n": "sample|30",
+   "claim": "Shelter organizations and folks | work | on the front lines of communities across the province",
+   "s": [
+    "Organization"
+   ],
+   "o": [
+    "Ontario"
+   ],
+   "tau": 0.0972
+  },
+  {
+   "n": "sample|33",
+   "claim": "Quebec | allows | for the reunification of families",
+   "s": [
+    "Quebec"
+   ],
+   "o": [
+    "Family"
+   ],
+   "tau": 0.1282
+  },
+  {
+   "n": "sample|34",
+   "claim": "Stores | would have trained | knowledgeable staff",
+   "s": [
+    "Retail"
+   ],
+   "o": [
+    "Employment"
+   ],
+   "tau": 0.1147
+  },
+  {
+   "n": "sample|36",
+   "claim": "Immigrants | make up | only 22% of our population",
+   "s": [
+    "Immigration"
+   ],
+   "o": [
+    "Population"
+   ],
+   "tau": 0.0
+  },
+  {
+   "n": "sample|37",
+   "claim": "a woman | is based | on informed choice",
+   "s": [
+    "Woman"
+   ],
+   "o": [
+    "Choice"
+   ],
+   "tau": 0.0783
+  },
+  {
+   "n": "sample|38",
+   "claim": "Pharmacies | should continue to be restricted | to the lowest price in inventory on product selected prescriptions",
+   "s": [
+    "Pharmacy"
+   ],
+   "o": [
+    "Prescription_drug",
+    "Price"
+   ],
+   "tau": 0.1039
+  },
+  {
+   "n": "sample|38",
+   "claim": "The report | recommends | that the Ministry of Health and pharmacy organizations should set a target level of substitution",
+   "s": [
+    "Report"
+   ],
+   "o": [
+    "Ministry_of_Health_(Ontario)",
+    "Pharmacy",
+    "Organization"
+   ],
+   "tau": 0.0772
+  },
+  {
+   "n": "sample|4",
+   "claim": "plaintiffs lawyers | plead | greater economic damages",
+   "s": [
+    "Lawyer",
+    "Plaintiff"
+   ],
+   "o": [
+    "Damages"
+   ],
+   "tau": 0.0
+  },
+  {
+   "n": "sample|43",
+   "claim": "miners | were exposed | to various types of carcinogens",
+   "s": [
+    "Mining"
+   ],
+   "o": [
+    "Carcinogen"
+   ],
+   "tau": 0.0892
+  },
+  {
+   "n": "sample|45",
+   "claim": "Strokes | account | for 20,000 emergency visits and 15,350 in-patient hospital admissions",
+   "s": [
+    "Stroke"
+   ],
+   "o": [
+    "Hospital",
+    "Patient",
+    "Emergency_department"
+   ],
+   "tau": 0.1028
+  },
+  {
+   "n": "sample|46",
+   "claim": "my father | was diagnosed | with an inoperable oral cancer",
+   "s": [
+    "Father"
+   ],
+   "o": [
+    "Oral_cancer"
+   ],
+   "tau": 0.0646
+  },
+  {
+   "n": "sample|48",
+   "claim": "People | no longer go | to that lodge on Lake Simcoe",
+   "s": [
+    "People"
+   ],
+   "o": [
+    "Lake_Simcoe"
+   ],
+   "tau": 0.0514
+  },
+  {
+   "n": "sample|49",
+   "claim": "These statements of environmental values | must be developed | by 14 affected ministries of the government",
+   "s": [
+    "Natural_environment"
+   ],
+   "o": [
+    "Government_of_Ontario"
+   ],
+   "tau": 0.0727
+  },
+  {
+   "n": "sample|5",
+   "claim": "His doctor | prescribed | the medication",
+   "s": [
+    "Physician"
+   ],
+   "o": [
+    "Medication"
+   ],
+   "tau": 0.1535
+  },
+  {
+   "n": "sample|50",
+   "claim": "90,000 Ontarians | are n't paying | any tax",
+   "s": [
+    "Ontario"
+   ],
+   "o": [
+    "Tax"
+   ],
+   "tau": 0.2805
+  },
+  {
+   "n": "sample|64",
+   "claim": "les parents | devraient laisser | leurs enfants",
+   "s": [
+    "Parent"
+   ],
+   "o": [
+    "Child"
+   ],
+   "tau": 0.0792
+  },
+  {
+   "n": "sample|74",
+   "claim": "notre gouvernement | veut permettre | aux catégories d'électeurs",
+   "s": [
+    "Government_of_Quebec"
+   ],
+   "o": [
+    "Voting"
+   ],
+   "tau": 0.0663
+  },
+  {
+   "n": "sample|8",
+   "claim": "this House | passed | the 21st Century Cures Act",
+   "s": [
+    "United_States_House_of_Representatives"
+   ],
+   "o": [
+    "21st_Century_Cures_Act"
+   ],
+   "tau": 0.0
+  },
+  {
+   "n": "heldout|10",
+   "claim": "Mr. Dingell's motion | asks | for the maximum level of mental health coverage",
+   "s": [
+    "Mr."
+   ],
+   "o": [
+    "Mental_health"
+   ],
+   "tau": 0.0699
+  },
+  {
+   "n": "heldout|14",
+   "claim": "patients | have | access to emergency care and to specialists",
+   "s": [
+    "Patient"
+   ],
+   "o": [
+    "Emergency_medicine"
+   ],
+   "tau": 0.0
+  },
+  {
+   "n": "heldout|15",
+   "claim": "The member for Oriele | remarked | that this will become a mega-hospital, a huge corporation",
+   "s": [
+    "Member_of_parliament"
+   ],
+   "o": [
+    "Hospital"
+   ],
+   "tau": 0.127
+  },
+  {
+   "n": "heldout|23",
+   "claim": "le Parti libéral du Québec | disant | Pour nous, la santé sera une priorité,",
+   "s": [
+    "Quebec"
+   ],
+   "o": [
+    "Health"
+   ],
+   "tau": 0.3395
+  },
+  {
+   "n": "more|ON|10",
+   "claim": "The people | said | that they would like to see the HST removed from heating, electricity and energy",
+   "s": [
+    "People"
+   ],
+   "o": [
+    "Energy",
+    "Central_heating"
+   ],
+   "tau": 0.0702
+  },
+  {
+   "n": "more|ON|12",
+   "claim": "our government | is building | on our progress in health care",
+   "s": [
+    "Government_of_Ontario"
+   ],
+   "o": [
+    "Health_care",
+    "Progress"
+   ],
+   "tau": 0.1246
+  },
+  {
+   "n": "more|QC|4",
+   "claim": "les médecins spécialistes | traitent | les patients",
+   "s": [
+    "Physician"
+   ],
+   "o": [
+    "Patient"
+   ],
+   "tau": 0.0
+  },
+  {
+   "n": "more|QC|6",
+   "claim": "many contracts | were offered | without tender",
+   "s": [
+    "Contract"
+   ],
+   "o": [
+    "Invitation_to_tender"
+   ],
+   "tau": 0.0
+  },
+  {
+   "n": "more|US|11",
+   "claim": "a system | relies | on HMOs and other private insurance plans",
+   "s": [
+    "System"
+   ],
+   "o": [
+    "Insurance",
+    "Health_maintenance_organization"
+   ],
+   "tau": 0.106
+  },
+  {
+   "n": "more|US|11",
+   "claim": "a system | administer | services",
+   "s": [
+    "System"
+   ],
+   "o": [
+    "Public_service"
+   ],
+   "tau": 0.0607
+  },
+  {
+   "n": "more|US|12",
+   "claim": "families | are forced to send | their children",
+   "s": [
+    "Family"
+   ],
+   "o": [
+    "Child"
+   ],
+   "tau": 0.2348
+  },
+  {
+   "n": "more|US|19",
+   "claim": "the many other Members and organizations | offer | feedback, suggestions, and, at times, criticism",
+   "s": [
+    "Organization"
+   ],
+   "o": [
+    "Suggestion",
+    "Criticism"
+   ],
+   "tau": 0.0917
+  },
+  {
+   "n": "more|US|2",
+   "claim": "patients and families | have been denied | access to mental health care",
+   "s": [
+    "Patient",
+    "Family"
+   ],
+   "o": [
+    "Mental_health"
+   ],
+   "tau": 0.1501
+  },
+  {
+   "n": "more|US|5",
+   "claim": "product liability suits | were treated | by a doctor",
+   "s": [
+    "Lawsuit",
+    "Product_liability"
+   ],
+   "o": [
+    "Physician"
+   ],
+   "tau": 0.0996
+  },
+  {
+   "n": "more|US|7",
+   "claim": "small businesses | offer | their employees insurance plans",
+   "s": [
+    "Small_business"
+   ],
+   "o": [
+    "Insurance"
+   ],
+   "tau": 0.3128
+  },
+  {
+   "n": "more|US|7",
+   "claim": "their employees insurance plans | cover | abortion",
+   "s": [
+    "Insurance"
+   ],
+   "o": [
+    "Abortion"
+   ],
+   "tau": 0.0977
+  }
+ ]
+}

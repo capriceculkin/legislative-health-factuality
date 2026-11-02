@@ -277,6 +277,10 @@ def why_not(phrase, side, line, r, unit, found, sent_cands, diag):
         content = [t for t in toks(phrase) if re.match(r"[\wÀ-ÿ]", t) and t not in C.STOP and t not in DETS[lang]]
         if not content:
             return "no content word", "only small words (articles, prepositions)"
+        lex = [(t, C.LEX[t]) for t in content if t in C.LEX]
+        if lex:
+            return "page not in the graph", (f"Spotlight spotted no phrase here; the common-noun list gives {lex[0][1]} for '{lex[0][0]}', "
+                                             f"which is not in the 2022 graph")
         return "Spotlight spotted nothing", "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list"
     if diag["rejected"]:
         return "senses rejected", "; ".join(diag["rejected"][:2])
@@ -363,6 +367,8 @@ def side_record(phrase, side, line, r, unit, jur, cands):
     for s, page in diag["kept"]:
         if not any(f[0].lower() == s.lower() for f in found) and not any(s.lower() in f[0].lower() or f[0].lower() in s.lower() for f in found):
             AGREE["replay kept a sense the concept step did not"] += 1
+            MISMATCH.append({"sentence": r["n"], "side": side, "phrase": phrase, "replay_kept": [s, page],
+                             "concept_step_found": [list(f[:2]) for f in found]})
     concepts = []
     for s, page, how in found:
         old = CHECKED.get((r["n"].split("|")[1], s.lower())) if r["n"].startswith("sample|") else None
@@ -378,6 +384,7 @@ def side_record(phrase, side, line, r, unit, jur, cands):
 
 
 AGREE = collections.Counter()
+MISMATCH = []
 say("== 3. concepts at both ends of every claim, and the walk between them")
 out_rows, flat = [], []
 t0 = time.time()
@@ -425,6 +432,8 @@ for r in recs:
 say(f"   {len(flat)} claims in {len(out_rows)} sentences ({time.time() - t0:.0f}s)")
 if AGREE:
     say(f"   WARNING: the why-not replay disagreed with the concept step {sum(AGREE.values())} times; the reasons for those may be off")
+    for m in MISMATCH:
+        say(f"      {m['sentence']} {m['side']} '{m['phrase'][:60]}': replay kept {m['replay_kept']}, the concept step found {m['concept_step_found']}")
 
 # ------------------------------------------------------------------ summary
 L = []
@@ -463,6 +472,21 @@ odd = [(r["n"], cc["surface"], cc["page"]) for r, c, _j in flat for s in ("subje
 L.append(f"\nConcepts whose page name shares no word with the words spotted (worth a look, like AHP -> Krasue): {len(set(odd))}")
 for x in sorted(set(odd))[:40]:
     L.append(f"   {x[0]:<18}{x[1]!r} -> {x[2]}")
+L.append("\nWhat Spotlight spotted, by language (phrases with at least one candidate sense, per sentence)")
+for lang in ("en", "fr"):
+    ns = [len(raw[r["n"]]["candidates"]) for r in out_rows if r["lang"] == lang]
+    if ns:
+        L.append(f"   {'English' if lang == 'en' else 'French':<10}{len(ns)} sentences; {sum(ns) / len(ns):.1f} phrases per sentence; "
+                 f"none at all in {sum(1 for x in ns if x == 0)}")
+ng = collections.Counter(cc["page"] for _r, c, _j in flat for s in ("subject", "object") if c[s]["status"] == "page not in the graph"
+                         for cc in c[s]["concepts"] if not cc["in_graph"])
+if ng:
+    L.append("\nPages given but not in the 2022 graph (the graph holds only pages with infobox links): "
+             + ", ".join(f"{p} ({v})" if v > 1 else p for p, v in ng.most_common()))
+if MISMATCH:
+    L.append(f"\nThe why-not replay disagreed with the concept step {len(MISMATCH)} times (the concepts are the concept step's; only the reason may be off):")
+    for m in MISMATCH:
+        L.append(f"   {m['sentence']} {m['side']} '{m['phrase'][:60]}': replay kept {m['replay_kept']}, concept step found {m['concept_step_found']}")
 eu = sum(1 for _r, c, _j in flat if c["unit_concepts_not_in_claim"])
 L.append(f"\nClaims whose unit has a DBpedia concept at neither end of the claim (in the verb or an adjunct): {pct(eu, len(flat))}")
 
@@ -521,7 +545,7 @@ else:
     L.append(f"\n(no Oct 15 comparison: {O15 / 'concepts_v3.json'} was not found; pass --oct15 with that folder)")
 
 res = {"version": "edu_dbpedia (Oct 30): concepts_v3 version 1 on the discourse-first claims", "graph": os.path.basename(gfile),
-       "spotlight": "saved answers" if A.offline else "live", "summary": "\n".join(L), "compared_with_oct15": cmp_out, "rows": out_rows}
+       "spotlight": "saved answers" if A.offline else "live", "summary": "\n".join(L), "compared_with_oct15": cmp_out, "replay_disagreements": MISMATCH, "rows": out_rows}
 (OUT / "edu_dbpedia.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
 (OUT / "edu_dbpedia_summary.txt").write_text("\n".join(L) + "\n", encoding="utf-8")
 print("\n".join(L))

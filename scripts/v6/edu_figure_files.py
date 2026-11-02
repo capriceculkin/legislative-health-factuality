@@ -26,14 +26,19 @@ ap.add_argument("out")
 ap.add_argument("records", nargs="+")
 ap.add_argument("--rows", default=FLOWS)
 ap.add_argument("--all", action="store_true", help="every sentence in the records, not only --rows")
+ap.add_argument("--sets", default="", help="every sentence in these sets, e.g. sample,heldout,more (the real sentences)")
 A = ap.parse_args()
 
 recs = {}
 for f in A.records:
     for r in json.load(open(f, encoding="utf-8"))["rows"]:
         recs[r["n"]] = r
-want = list(recs) if A.all else [n for n in A.rows.split(",") if n in recs]
-missing = [n for n in A.rows.split(",") if n not in recs] if not A.all else []
+if A.sets:
+    want = [n for n in recs if n.split("|")[0] in A.sets.split(",")]
+    missing = []
+else:
+    want = list(recs) if A.all else [n for n in A.rows.split(",") if n in recs]
+    missing = [n for n in A.rows.split(",") if n not in recs] if not A.all else []
 out = Path(A.out)
 out.mkdir(parents=True, exist_ok=True)
 

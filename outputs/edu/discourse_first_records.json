@@ -1,6 +1,6 @@
 {
  "design": "discourse first, then a constituency tree per unit (Oct 22)",
- "made": "2026-10-30 12:37",
+ "made": "2026-11-01 21:22",
  "trees": "parsed now",
  "rows": [
   {
@@ -522,15 +522,16 @@
      "lines": [
       {
        "subject": "you",
-       "verb": "believe",
+       "verb": "cannot believe",
        "object": "that there are not tragic gaps in our mental health system",
        "kind": "asserted",
-       "negated": false,
+       "negated": true,
        "hedged": false,
-       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "how": "a verb the tree rules gave no line for; read from the unit's tree; joined by 'and' to 'cannot listen' in unit 1: it keeps 'cannot'",
        "leaf": 25,
        "object_from": "discourse: what is said, unit 4",
-       "subject_from": "unit 1 (elaboration)"
+       "subject_from": "unit 1 (elaboration)",
+       "verb_as_written": "believe"
       }
      ]
     },
@@ -853,15 +854,16 @@
     },
     {
      "subject": "you",
-     "verb": "believe",
+     "verb": "cannot believe",
      "object": "that there are not tragic gaps in our mental health system",
      "kind": "asserted",
-     "negated": false,
+     "negated": true,
      "hedged": false,
-     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "how": "a verb the tree rules gave no line for; read from the unit's tree; joined by 'and' to 'cannot listen' in unit 1: it keeps 'cannot'",
      "leaf": 25,
      "object_from": "discourse: what is said, unit 4",
      "subject_from": "unit 1 (elaboration)",
+     "verb_as_written": "believe",
      "unit": 3
     },
     {
@@ -2780,18 +2782,6 @@
        "how": "main clause",
        "leaf": 7,
        "subject_from": ""
-      },
-      {
-       "subject": "(unstated)",
-       "verb": "recommit",
-       "object": "",
-       "kind": "asserted",
-       "negated": false,
-       "hedged": false,
-       "how": "main clause",
-       "leaf": 12,
-       "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words",
-       "infinitive": true
       }
      ]
     }
@@ -2809,19 +2799,6 @@
      "how": "main clause",
      "leaf": 7,
      "subject_from": "",
-     "unit": 0
-    },
-    {
-     "subject": "(unstated)",
-     "verb": "recommit",
-     "object": "",
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "how": "main clause",
-     "leaf": 12,
-     "subject_from": "unit tree: an infinitive on a noun: who does it is not in the words",
-     "infinitive": true,
      "unit": 0
     }
    ],
@@ -4115,15 +4092,16 @@
      ],
      "lines": [
       {
-       "subject": "the statistical assumptions",
-       "verb": "agreed",
-       "object": "to",
+       "subject": "conferees",
+       "verb": "agreed to",
+       "object": "the statistical assumptions",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; a passive with 'by': the doer is after 'by', the thing done to is the noun it hangs on",
        "leaf": 22,
-       "subject_from": "describes the last noun phrase of unit 3 (no comma between them; discourse: elaboration)"
+       "subject_from": "unit tree: a passive participle; who does it is the phrase after 'by'",
+       "object_from": "what the participle hangs on (the noun before it)"
       }
      ]
     }
@@ -4321,15 +4299,16 @@
      "unit": 3
     },
     {
-     "subject": "the statistical assumptions",
-     "verb": "agreed",
-     "object": "to",
+     "subject": "conferees",
+     "verb": "agreed to",
+     "object": "the statistical assumptions",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; a passive with 'by': the doer is after 'by', the thing done to is the noun it hangs on",
      "leaf": 22,
-     "subject_from": "describes the last noun phrase of unit 3 (no comma between them; discourse: elaboration)",
+     "subject_from": "unit tree: a passive participle; who does it is the phrase after 'by'",
+     "object_from": "what the participle hangs on (the noun before it)",
      "unit": 4
     }
    ],
@@ -14447,14 +14426,15 @@
      "lines": [
       {
        "subject": "we",
-       "verb": "heard",
-       "object": "from",
+       "verb": "heard from",
+       "object": "The people",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; 'from' is a preposition left behind, part of the verb, not the object",
        "leaf": 3,
-       "subject_from": ""
+       "subject_from": "",
+       "object_from": "unit 0: the noun phrase this clause hangs on (no 'that')"
       }
      ]
     },
@@ -14805,14 +14785,15 @@
    "lines": [
     {
      "subject": "we",
-     "verb": "heard",
-     "object": "from",
+     "verb": "heard from",
+     "object": "The people",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; 'from' is a preposition left behind, part of the verb, not the object",
      "leaf": 3,
      "subject_from": "",
+     "object_from": "unit 0: the noun phrase this clause hangs on (no 'that')",
      "unit": 1
     },
     {
@@ -15102,13 +15083,15 @@
       {
        "subject": "I",
        "verb": "would say",
-       "object": "initially",
+       "object": "I had a meeting with a Mr Henry Dumouchelle and his partner,",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; 'initially' is how or when, not the object",
        "leaf": 17,
        "verb_as_written": "d say",
+       "adjunct": "initially",
+       "object_from": "discourse: what is said, unit 0",
        "subject_from": ""
       }
      ]
@@ -15262,13 +15245,15 @@
     {
      "subject": "I",
      "verb": "would say",
-     "object": "initially",
+     "object": "I had a meeting with a Mr Henry Dumouchelle and his partner,",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; 'initially' is how or when, not the object",
      "leaf": 17,
      "verb_as_written": "d say",
+     "adjunct": "initially",
+     "object_from": "discourse: what is said, unit 0",
      "subject_from": "",
      "unit": 1
     }
@@ -15651,13 +15636,15 @@
       {
        "subject": "our government",
        "verb": "getting done",
-       "object": "for the people of Ontario",
+       "object": "it",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; 'it' sits inside the verb ('getting it done'): it is the object",
        "leaf": 22,
-       "subject_from": "unit 1 (joint)"
+       "subject_from": "unit 1 (joint)",
+       "adjunct": "for the people of Ontario",
+       "object_from": "the pronoun between the verb's two words"
       }
      ]
     }
@@ -15760,13 +15747,15 @@
     {
      "subject": "our government",
      "verb": "getting done",
-     "object": "for the people of Ontario",
+     "object": "it",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; 'it' sits inside the verb ('getting it done'): it is the object",
      "leaf": 22,
      "subject_from": "unit 1 (joint)",
+     "adjunct": "for the people of Ontario",
+     "object_from": "the pronoun between the verb's two words",
      "unit": 2
     }
    ],
@@ -16400,25 +16389,28 @@
       {
        "subject": "it",
        "verb": "seems",
-       "object": "to me",
+       "object": "that the intent of the government is to reduce standards to the lowest common denominator, which is a really big problem",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; 'to me' says to whom it seems; it is not the object",
        "leaf": 2,
-       "subject_from": ""
+       "subject_from": "",
+       "adjunct": "to me",
+       "object_from": "discourse: what seems so, unit 1 and unit 2"
       },
       {
        "subject": "I",
        "verb": "have seen",
-       "object": "of this",
+       "object": "what",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "relative clause",
+       "how": "relative clause; 'what' is what is seen (a free relative); the phrase after is not the object",
        "leaf": 10,
        "verb_as_written": "ve seen",
-       "subject_from": ""
+       "subject_from": "",
+       "adjunct": "of this"
       }
      ]
     },
@@ -16804,26 +16796,29 @@
     {
      "subject": "it",
      "verb": "seems",
-     "object": "to me",
+     "object": "that the intent of the government is to reduce standards to the lowest common denominator, which is a really big problem",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; 'to me' says to whom it seems; it is not the object",
      "leaf": 2,
      "subject_from": "",
+     "adjunct": "to me",
+     "object_from": "discourse: what seems so, unit 1 and unit 2",
      "unit": 0
     },
     {
      "subject": "I",
      "verb": "have seen",
-     "object": "of this",
+     "object": "what",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "relative clause",
+     "how": "relative clause; 'what' is what is seen (a free relative); the phrase after is not the object",
      "leaf": 10,
      "verb_as_written": "ve seen",
      "subject_from": "",
+     "adjunct": "of this",
      "unit": 0
     },
     {
@@ -25991,7 +25986,7 @@
        "subject_from": ""
       },
       {
-       "subject": "ce (inh)",
+       "subject": "(unstated)",
        "verb": "croire",
        "object": "le",
        "kind": "embedded",
@@ -25999,7 +25994,7 @@
        "hedged": false,
        "how": "after 'de'",
        "leaf": 13,
-       "subject_from": ""
+       "subject_from": "an infinitive after 'it is ...' / 'il faut' / 'c'est ...': who does it is not in the words"
       }
      ]
     },
@@ -26162,13 +26157,14 @@
       {
        "subject": "nous",
        "verb": "avons adopté",
-       "object": "",
+       "object": "des mesures extrêmement sévères au printemps",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; the object comes after a comma",
        "leaf": 19,
-       "subject_from": ""
+       "subject_from": "",
+       "object_from": "the same unit, after a comma"
       }
      ]
     }
@@ -26269,7 +26265,7 @@
      "unit": 1
     },
     {
-     "subject": "ce (inh)",
+     "subject": "(unstated)",
      "verb": "croire",
      "object": "le",
      "kind": "embedded",
@@ -26277,19 +26273,20 @@
      "hedged": false,
      "how": "after 'de'",
      "leaf": 13,
-     "subject_from": "",
+     "subject_from": "an infinitive after 'it is ...' / 'il faut' / 'c'est ...': who does it is not in the words",
      "unit": 1
     },
     {
      "subject": "nous",
      "verb": "avons adopté",
-     "object": "",
+     "object": "des mesures extrêmement sévères au printemps",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; the object comes after a comma",
      "leaf": 19,
      "subject_from": "",
+     "object_from": "the same unit, after a comma",
      "unit": 2
     }
    ],
@@ -29253,13 +29250,14 @@
       {
        "subject": "Cette législation",
        "verb": "prévoit",
-       "object": "",
+       "object": "une indemnité de départ équivalant à une semaine par année de service, jusqu'à concurrence de 26 semaines",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "how": "a verb the tree rules gave no line for; read from the unit's tree; the object is unit 5, after the insertion",
        "leaf": 6,
-       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)"
+       "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+       "object_from": "unit 5: the sentence goes on after an insertion (same-unit)"
       }
      ]
     },
@@ -29990,13 +29988,14 @@
     {
      "subject": "Cette législation",
      "verb": "prévoit",
-     "object": "",
+     "object": "une indemnité de départ équivalant à une semaine par année de service, jusqu'à concurrence de 26 semaines",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "how": "a verb the tree rules gave no line for; read from the unit's tree; the object is unit 5, after the insertion",
      "leaf": 6,
      "subject_from": "unit 0 (same-unit: the sentence goes on after an insertion)",
+     "object_from": "unit 5: the sentence goes on after an insertion (same-unit)",
      "unit": 2
     },
     {

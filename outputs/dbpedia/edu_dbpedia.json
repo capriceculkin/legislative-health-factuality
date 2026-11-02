@@ -1,9 +1,26 @@
 {
  "version": "edu_dbpedia (Oct 30): concepts_v3 version 1 on the discourse-first claims",
  "graph": "mappingbased-objects_2022.12.01_en.ttl.bz2.merged.graph.npz",
- "spotlight": "live",
- "summary": "DBpedia concepts in the discourse-first claims (concept step: concepts_v3 version 1, as on Oct 15; graph mappingbased-objects_2022.12.01_en.ttl.bz2.merged.graph.npz)\nsentences: 190 (sample 100, heldout 30, more 60); Spotlight: live, through the tunnel\nparts of speech for the noun check: 100 sentences from the saved spaCy parse (as on Oct 15); 90 sentences from the unit trees\n\nAll claims: 534 claims\n   both ends in DBpedia        69/534 (13%)\n   one end in DBpedia          202/534 (38%)\n   neither end in DBpedia      263/534 (49%)\n   a walk links the two ends   54/534 (10%)\n\nClaims the speaker asserts (kind = asserted): 373 claims\n   both ends in DBpedia        51/373 (14%)\n   one end in DBpedia          143/373 (38%)\n   neither end in DBpedia      179/373 (48%)\n   a walk links the two ends   39/373 (10%)\n\nUS House: 144 claims\n   both ends in DBpedia        28/144 (19%)\n   one end in DBpedia          80/144 (56%)\n   neither end in DBpedia      36/144 (25%)\n   a walk links the two ends   21/144 (15%)\n\nOntario: 152 claims\n   both ends in DBpedia        36/152 (24%)\n   one end in DBpedia          63/152 (41%)\n   neither end in DBpedia      53/152 (35%)\n   a walk links the two ends   30/152 (20%)\n\nQuebec: 238 claims\n   both ends in DBpedia        5/238 (2%)\n   one end in DBpedia          59/238 (25%)\n   neither end in DBpedia      174/238 (73%)\n   a walk links the two ends   3/238 (1%)\n\nEnglish: 300 claims\n   both ends in DBpedia        65/300 (22%)\n   one end in DBpedia          144/300 (48%)\n   neither end in DBpedia      91/300 (30%)\n   a walk links the two ends   51/300 (17%)\n\nFrench: 234 claims\n   both ends in DBpedia        4/234 (2%)\n   one end in DBpedia          58/234 (25%)\n   neither end in DBpedia      172/234 (74%)\n   a walk links the two ends   3/234 (1%)\n\nWhy a subject has no concept (all 534 claims)\n   pronoun                       196\n   Spotlight spotted nothing     155\n   in DBpedia                    126\n   the bill under debate         32\n   page not in the graph         8\n   senses rejected               6\n   not a noun or a name          5\n   nothing to link               5\n   no content word               1\n\nWhy a object has no concept (all 534 claims)\n   in DBpedia                    214\n   Spotlight spotted nothing     173\n   nothing to link               43\n   pronoun                       21\n   a clause                      19\n   page not in the graph         19\n   the bill under debate         18\n   not a noun or a name          15\n   senses rejected               6\n   no content word               4\n   a number or an amount         2\n\nConcepts whose page name shares no word with the words spotted (worth a look, like AHP -> Krasue): 8\n   more|US|1         'America' -> United_States\n   more|US|11        'HMOs' -> Health_maintenance_organization\n   more|US|19        'Congressman' -> United_States_House_of_Representatives\n   more|US|4         'America' -> United_States\n   sample|20         'AIDS' -> HIV\n   sample|35         'Migrants' -> Immigration\n   sample|40         'Queen' -> Elizabeth_II\n   sample|5          'HMO' -> Health_maintenance_organization\n\nClaims whose unit has a DBpedia concept at neither end of the claim (in the verb or an adjunct): 84/534 (16%)\n\n(no Oct 15 comparison: /Users/caprice/Desktop/next_steps/oct15/concepts_v3.json was not found; pass --oct15 with that folder)",
+ "spotlight": "saved answers",
+ "summary": "DBpedia concepts in the discourse-first claims (concept step: concepts_v3 version 1, as on Oct 15; graph mappingbased-objects_2022.12.01_en.ttl.bz2.merged.graph.npz)\nsentences: 190 (sample 100, heldout 30, more 60); Spotlight: saved answers\nparts of speech for the noun check: 100 sentences from the saved spaCy parse (as on Oct 15); 90 sentences from the unit trees\n\nAll claims: 531 claims\n   both ends in DBpedia        68/531 (13%)\n   one end in DBpedia          207/531 (39%)\n   neither end in DBpedia      256/531 (48%)\n   a walk links the two ends   53/531 (10%)\n\nClaims the speaker asserts (kind = asserted): 370 claims\n   both ends in DBpedia        50/370 (14%)\n   one end in DBpedia          148/370 (40%)\n   neither end in DBpedia      172/370 (46%)\n   a walk links the two ends   38/370 (10%)\n\nUS House: 143 claims\n   both ends in DBpedia        28/143 (20%)\n   one end in DBpedia          80/143 (56%)\n   neither end in DBpedia      35/143 (24%)\n   a walk links the two ends   21/143 (15%)\n\nOntario: 152 claims\n   both ends in DBpedia        35/152 (23%)\n   one end in DBpedia          68/152 (45%)\n   neither end in DBpedia      49/152 (32%)\n   a walk links the two ends   29/152 (19%)\n\nQuebec: 236 claims\n   both ends in DBpedia        5/236 (2%)\n   one end in DBpedia          59/236 (25%)\n   neither end in DBpedia      172/236 (73%)\n   a walk links the two ends   3/236 (1%)\n\nEnglish: 299 claims\n   both ends in DBpedia        64/299 (21%)\n   one end in DBpedia          149/299 (50%)\n   neither end in DBpedia      86/299 (29%)\n   a walk links the two ends   50/299 (17%)\n\nFrench: 232 claims\n   both ends in DBpedia        4/232 (2%)\n   one end in DBpedia          58/232 (25%)\n   neither end in DBpedia      170/232 (73%)\n   a walk links the two ends   3/232 (1%)\n\nWhy a subject has no concept (all 531 claims)\n   pronoun                       192\n   Spotlight spotted nothing     156\n   in DBpedia                    126\n   the bill under debate         32\n   page not in the graph         8\n   senses rejected               6\n   not a noun or a name          5\n   nothing to link               5\n   no content word               1\n\nWhy a object has no concept (all 531 claims)\n   in DBpedia                    217\n   Spotlight spotted nothing     169\n   nothing to link               42\n   pronoun                       22\n   a clause                      20\n   page not in the graph         20\n   the bill under debate         18\n   not a noun or a name          15\n   senses rejected               6\n   a number or an amount         2\n\nConcepts whose page name shares no word with the words spotted (worth a look, like AHP -> Krasue): 8\n   more|US|1         'America' -> United_States\n   more|US|11        'HMOs' -> Health_maintenance_organization\n   more|US|19        'Congressman' -> United_States_House_of_Representatives\n   more|US|4         'America' -> United_States\n   sample|20         'AIDS' -> HIV\n   sample|35         'Migrants' -> Immigration\n   sample|40         'Queen' -> Elizabeth_II\n   sample|5          'HMO' -> Health_maintenance_organization\n\nWhat Spotlight spotted, by language (phrases with at least one candidate sense, per sentence)\n   English   106 sentences; 6.7 phrases per sentence; none at all in 0\n   French    84 sentences; 0.9 phrases per sentence; none at all in 37\n\nPages given but not in the 2022 graph (the graph holds only pages with infobox links): Goal (4), Cost (2), Statistical_assumption (2), Overtime, Wrongdoing, Free_module, Tax_cut, Alarm_device, Legal_case, Array_data_structure, Plan, (the bill), Central_Rook, Taxation_in_France, Undue_hardship, Slipway, Obligation, Order_Paper, Small_and_medium_enterprises, Family_(taxonomy), United_States_House_Energy_Subcommittee_on_Health, Red_tape, Petal\n\nThe why-not replay disagreed with the concept step 1 times (the concepts are the concept step's; only the reason may be off):\n   sample|57 object 'le financement du gouvernement fédéral': replay kept ['gouvernement fédéral', 'Government_of_Canada'], concept step found [['du gouvernement', 'Government_of_Quebec']]\n\nClaims whose unit has a DBpedia concept at neither end of the claim (in the verb or an adjunct): 83/531 (16%)\n\n(no Oct 15 comparison: /tmp/claude-0/-home-claude/81c4d9b9-6092-5870-904e-89ce6e1eefb1/scratchpad/mac/home/Desktop/next_steps/oct15/concepts_v3.json was not found; pass --oct15 with that folder)",
  "compared_with_oct15": {},
+ "replay_disagreements": [
+  {
+   "sentence": "sample|57",
+   "side": "object",
+   "phrase": "le financement du gouvernement fédéral",
+   "replay_kept": [
+    "gouvernement fédéral",
+    "Government_of_Canada"
+   ],
+   "concept_step_found": [
+    [
+     "du gouvernement",
+     "Government_of_Quebec"
+    ]
+   ]
+  }
+ ],
  "rows": [
   {
    "n": "sample|1",
@@ -411,8 +428,8 @@
      "hedged": false,
      "subject": {
       "phrase": "La pénurie d'infirmières",
-      "status": "Spotlight spotted nothing",
-      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
+      "status": "page not in the graph",
+      "reason": "Spotlight spotted no phrase here; the common-noun list gives Nurse for 'infirmières', which is not in the 2022 graph",
       "concepts": []
      },
      "verb": "oblige",
@@ -1040,7 +1057,7 @@
       "subject": "Arkansas",
       "object": "United_States",
       "tau_no_direct": 0.5906,
-      "path_no_direct": "Arkansas <-[location]- Arbuckle_Island (links 2) -[country]-> United_States",
+      "path_no_direct": "Arkansas <-[location]- Cache_Valley_Railroad (links 2) -[location]-> United_States",
       "claim_score": 1.0
      },
      "verdict": "both ends in DBpedia; a walk links them",
@@ -1127,11 +1144,11 @@
      "walk": {
       "tau": 0.4191,
       "links": 2,
-      "path": "U.S._state <-[jurisdiction]- Nevada_Department_of_Wildlife (links 4) -[headquarter]-> United_States",
+      "path": "U.S._state <-[jurisdiction]- South_Dakota_Department_of_Game,_Fish,_and_Parks (links 4) -[jurisdiction]-> United_States",
       "subject": "U.S._state",
       "object": "United_States",
       "tau_no_direct": 0.4191,
-      "path_no_direct": "U.S._state <-[jurisdiction]- Nevada_Department_of_Wildlife (links 4) -[headquarter]-> United_States",
+      "path_no_direct": "U.S._state <-[jurisdiction]- South_Dakota_Department_of_Game,_Fish,_and_Parks (links 4) -[jurisdiction]-> United_States",
       "claim_score": 0.4191
      },
      "verdict": "both ends in DBpedia; a walk links them",
@@ -1532,15 +1549,15 @@
      },
      "verb": "were extended",
      "object": {
-      "phrase": "last year",
-      "status": "Spotlight spotted nothing",
-      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
+      "phrase": "",
+      "status": "nothing to link",
+      "reason": "no object: the verb takes none here",
       "concepts": []
      },
      "walk": null,
      "verdict": "one end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "relative clause"
+     "how_the_claim_was_read": "relative clause; 'last year' is how or when, not the object"
     }
    ],
    "spotlight": "candidates"
@@ -2897,9 +2914,9 @@
      },
      "verb": "die",
      "object": {
-      "phrase": "each year",
-      "status": "Spotlight spotted nothing",
-      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
+      "phrase": "",
+      "status": "nothing to link",
+      "reason": "no object: the verb takes none here",
       "concepts": []
      },
      "walk": null,
@@ -2907,7 +2924,7 @@
      "unit_concepts_not_in_claim": [
       "Medical_error"
      ],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; 'each year' is how or when, not the object"
     }
    ],
    "spotlight": "candidates"
@@ -4219,11 +4236,11 @@
      "walk": {
       "tau": 0.4191,
       "links": 2,
-      "path": "Ontario <-[location]- Destination_Ontario (links 4) -[type]-> Government_agency",
+      "path": "Ontario <-[location]- The_519 (links 4) -[type]-> Government_agency",
       "subject": "Ontario",
       "object": "Government_agency",
       "tau_no_direct": 0.4191,
-      "path_no_direct": "Ontario <-[location]- Destination_Ontario (links 4) -[type]-> Government_agency",
+      "path_no_direct": "Ontario <-[location]- The_519 (links 4) -[type]-> Government_agency",
       "claim_score": 0.4191
      },
      "verdict": "both ends in DBpedia; a walk links them",
@@ -4290,11 +4307,11 @@
      "walk": {
       "tau": 0.4191,
       "links": 2,
-      "path": "Ontario <-[location]- Destination_Ontario (links 4) -[type]-> Government_agency",
+      "path": "Ontario <-[location]- The_519 (links 4) -[type]-> Government_agency",
       "subject": "Ontario",
       "object": "Government_agency",
       "tau_no_direct": 0.4191,
-      "path_no_direct": "Ontario <-[location]- Destination_Ontario (links 4) -[type]-> Government_agency",
+      "path_no_direct": "Ontario <-[location]- The_519 (links 4) -[type]-> Government_agency",
       "claim_score": 0.4191
      },
      "verdict": "both ends in DBpedia; a walk links them",
@@ -5141,7 +5158,7 @@
        }
       ]
      },
-     "verb": "compared",
+     "verb": "(is) compared",
      "object": {
       "phrase": "to 29% across Ontario",
       "status": "in DBpedia",
@@ -5170,7 +5187,7 @@
      },
      "verdict": "both ends in DBpedia; no walk links them in the graph",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "a verb the tree rules gave no line for; read from the unit's tree"
+     "how_the_claim_was_read": "a verb the tree rules gave no line for; read from the unit's tree; a past participle on the noun before it: passive (the noun is what is done to)"
     }
    ],
    "spotlight": "candidates"
@@ -5371,17 +5388,25 @@
      },
      "verb": "is",
      "object": {
-      "phrase": "",
-      "status": "nothing to link",
-      "reason": "no object: the verb takes none here",
-      "concepts": []
+      "phrase": "before us today",
+      "status": "in DBpedia",
+      "reason": "",
+      "concepts": [
+       {
+        "surface": "today",
+        "page": "Holocene",
+        "how": "Spotlight, Spotlight's first choice passes the checks",
+        "in_graph": true,
+        "dbpedia": "https://dbpedia.org/page/Holocene",
+        "page_name_unlike_words": false,
+        "hand_checked_oct13": null
+       }
+      ]
      },
      "walk": null,
-     "verdict": "neither end in DBpedia",
-     "unit_concepts_not_in_claim": [
-      "Holocene"
-     ],
-     "how_the_claim_was_read": "main clause; an adverbial clause is an adjunct, not the object"
+     "verdict": "one end in DBpedia",
+     "unit_concepts_not_in_claim": [],
+     "how_the_claim_was_read": "main clause; an adverbial clause is an adjunct, not the object; the complement of the copula"
     },
     {
      "claim": 2,
@@ -7537,15 +7562,15 @@
      },
      "verb": "got elected",
      "object": {
-      "phrase": "here",
-      "status": "pronoun",
-      "reason": "'here' stands for something named elsewhere",
+      "phrase": "",
+      "status": "nothing to link",
+      "reason": "no object: the verb takes none here",
       "concepts": []
      },
      "walk": null,
      "verdict": "neither end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "relative clause"
+     "how_the_claim_was_read": "relative clause; 'here' is how or when, not the object"
     },
     {
      "claim": 2,
@@ -8474,11 +8499,11 @@
      "walk": {
       "tau": 0.0727,
       "links": 6,
-      "path": "Natural_environment <-[industry]- First_Mile (links 5) -[industry]-> Waste_management (links 58) <-[service]- Ferrovial (links 16) <-[builder]- Nipigon_River_Bridge (links 5) -[maintainedBy]-> Ministry_of_Transportation_of_Ontario (links 15) -[jurisdiction]-> Government_of_Ontario",
+      "path": "Natural_environment <-[industry]- Saur_(company) (links 5) -[service]-> Waste_management (links 58) <-[service]- Ferrovial (links 16) <-[builder]- Nipigon_River_Bridge (links 5) -[maintainedBy]-> Ministry_of_Transportation_of_Ontario (links 15) -[jurisdiction]-> Government_of_Ontario",
       "subject": "Natural_environment",
       "object": "Government_of_Ontario",
       "tau_no_direct": 0.0727,
-      "path_no_direct": "Natural_environment <-[industry]- First_Mile (links 5) -[industry]-> Waste_management (links 58) <-[service]- Ferrovial (links 16) <-[builder]- Nipigon_River_Bridge (links 5) -[maintainedBy]-> Ministry_of_Transportation_of_Ontario (links 15) -[jurisdiction]-> Government_of_Ontario",
+      "path_no_direct": "Natural_environment <-[industry]- Saur_(company) (links 5) -[service]-> Waste_management (links 58) <-[service]- Ferrovial (links 16) <-[builder]- Nipigon_River_Bridge (links 5) -[maintainedBy]-> Ministry_of_Transportation_of_Ontario (links 15) -[jurisdiction]-> Government_of_Ontario",
       "claim_score": 0.0727
      },
      "verdict": "both ends in DBpedia; a walk links them",
@@ -9100,15 +9125,15 @@
      },
      "verb": "a amené",
      "object": {
-      "phrase": "cet après-midi",
-      "status": "Spotlight spotted nothing",
-      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
+      "phrase": "",
+      "status": "nothing to link",
+      "reason": "no object: the verb takes none here",
       "concepts": []
      },
      "walk": null,
      "verdict": "neither end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; 'cet après-midi' is how or when, not the object"
     },
     {
      "claim": 2,
@@ -12912,9 +12937,9 @@
      "negated": false,
      "hedged": false,
      "subject": {
-      "phrase": "c' (inh)",
-      "status": "pronoun",
-      "reason": "'c'' stands for something named elsewhere",
+      "phrase": "(unstated)",
+      "status": "Spotlight spotted nothing",
+      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
       "concepts": []
      },
      "verb": "mentionner",
@@ -17519,7 +17544,7 @@
       "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
       "concepts": []
      },
-     "verb": "faced",
+     "verb": "(is) faced",
      "object": {
       "phrase": "by Ontarians",
       "status": "in DBpedia",
@@ -17539,7 +17564,7 @@
      "walk": null,
      "verdict": "one end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; a past participle on the noun before it: passive (the noun is what is done to)"
     },
     {
      "claim": 3,
@@ -18740,30 +18765,6 @@
    "claims": [
     {
      "claim": 1,
-     "unit": 0,
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "subject": {
-      "phrase": "c'",
-      "status": "pronoun",
-      "reason": "'c'' stands for something named elsewhere",
-      "concepts": []
-     },
-     "verb": "était",
-     "object": {
-      "phrase": "",
-      "status": "nothing to link",
-      "reason": "no object: the verb takes none here",
-      "concepts": []
-     },
-     "walk": null,
-     "verdict": "neither end in DBpedia",
-     "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
-    },
-    {
-     "claim": 2,
      "unit": 1,
      "kind": "asserted",
      "negated": false,
@@ -19350,30 +19351,6 @@
     },
     {
      "claim": 2,
-     "unit": 1,
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "subject": {
-      "phrase": "c'",
-      "status": "pronoun",
-      "reason": "'c'' stands for something named elsewhere",
-      "concepts": []
-     },
-     "verb": "est",
-     "object": {
-      "phrase": "",
-      "status": "nothing to link",
-      "reason": "no object: the verb takes none here",
-      "concepts": []
-     },
-     "walk": null,
-     "verdict": "neither end in DBpedia",
-     "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
-    },
-    {
-     "claim": 3,
      "unit": 2,
      "kind": "asserted",
      "negated": false,
@@ -19407,7 +19384,7 @@
      "how_the_claim_was_read": "main clause"
     },
     {
-     "claim": 4,
+     "claim": 3,
      "unit": 3,
      "kind": "asserted",
      "negated": false,
@@ -19433,7 +19410,7 @@
      "how_the_claim_was_read": "means (en)"
     },
     {
-     "claim": 5,
+     "claim": 4,
      "unit": 3,
      "kind": "embedded",
      "negated": false,
@@ -19459,7 +19436,7 @@
      "how_the_claim_was_read": "relative clause"
     },
     {
-     "claim": 6,
+     "claim": 5,
      "unit": 3,
      "kind": "embedded",
      "negated": false,
@@ -21218,11 +21195,11 @@
        }
       ]
      },
-     "verb": "prevent detect respond",
+     "verb": "prevent detect respond to",
      "object": {
-      "phrase": "to",
-      "status": "no content word",
-      "reason": "only small words (articles, prepositions)",
+      "phrase": "",
+      "status": "nothing to link",
+      "reason": "no object: the verb takes none here",
       "concepts": []
      },
      "walk": null,
@@ -21230,7 +21207,7 @@
      "unit_concepts_not_in_claim": [
       "Ontario"
      ],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; 'to' is a preposition left behind, part of the verb, not the object"
     }
    ],
    "spotlight": "candidates"
@@ -22059,17 +22036,27 @@
       "reason": "'we' is the speaker's side (the government, the party or the House); the sentence does not say which",
       "concepts": []
      },
-     "verb": "heard",
+     "verb": "heard from",
      "object": {
-      "phrase": "from",
-      "status": "no content word",
-      "reason": "only small words (articles, prepositions)",
-      "concepts": []
+      "phrase": "The people",
+      "status": "in DBpedia",
+      "reason": "",
+      "concepts": [
+       {
+        "surface": "people",
+        "page": "People",
+        "how": "Spotlight, Spotlight's first choice passes the checks",
+        "in_graph": true,
+        "dbpedia": "https://dbpedia.org/page/People",
+        "page_name_unlike_words": false,
+        "hand_checked_oct13": null
+       }
+      ]
      },
      "walk": null,
-     "verdict": "neither end in DBpedia",
+     "verdict": "one end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; 'from' is a preposition left behind, part of the verb, not the object"
     },
     {
      "claim": 2,
@@ -22372,15 +22359,25 @@
      },
      "verb": "would say",
      "object": {
-      "phrase": "initially",
-      "status": "Spotlight spotted nothing",
-      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
-      "concepts": []
+      "phrase": "I had a meeting with a Mr Henry Dumouchelle and his partner,",
+      "status": "in DBpedia",
+      "reason": "",
+      "concepts": [
+       {
+        "surface": "Mr",
+        "page": "Mr.",
+        "how": "Spotlight, Spotlight's first choice passes the checks",
+        "in_graph": true,
+        "dbpedia": "https://dbpedia.org/page/Mr.",
+        "page_name_unlike_words": false,
+        "hand_checked_oct13": null
+       }
+      ]
      },
      "walk": null,
-     "verdict": "neither end in DBpedia",
+     "verdict": "one end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; 'initially' is how or when, not the object"
     }
    ],
    "spotlight": "candidates"
@@ -22603,34 +22600,17 @@
      },
      "verb": "getting done",
      "object": {
-      "phrase": "for the people of Ontario",
-      "status": "in DBpedia",
-      "reason": "",
-      "concepts": [
-       {
-        "surface": "Ontario",
-        "page": "Ontario",
-        "how": "Spotlight, Spotlight's first choice passes the checks",
-        "in_graph": true,
-        "dbpedia": "https://dbpedia.org/page/Ontario",
-        "page_name_unlike_words": false,
-        "hand_checked_oct13": null
-       }
-      ]
+      "phrase": "it",
+      "status": "pronoun",
+      "reason": "'it' stands for something named elsewhere",
+      "concepts": []
      },
-     "walk": {
-      "tau": 0.4765,
-      "links": 2,
-      "path": "Government_of_Ontario <-[jurisdiction]- Ministry_of_the_Environment,_Conservation_and_Parks (links 3) -[headquarter]-> Ontario",
-      "subject": "Government_of_Ontario",
-      "object": "Ontario",
-      "tau_no_direct": 0.4765,
-      "path_no_direct": "Government_of_Ontario <-[jurisdiction]- Ministry_of_the_Environment,_Conservation_and_Parks (links 3) -[headquarter]-> Ontario",
-      "claim_score": 0.4765
-     },
-     "verdict": "both ends in DBpedia; a walk links them",
-     "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "walk": null,
+     "verdict": "one end in DBpedia",
+     "unit_concepts_not_in_claim": [
+      "Ontario"
+     ],
+     "how_the_claim_was_read": "main clause; 'it' sits inside the verb ('getting it done'): it is the object"
     }
    ],
    "spotlight": "candidates"
@@ -22857,15 +22837,52 @@
      },
      "verb": "seems",
      "object": {
-      "phrase": "to me",
-      "status": "Spotlight spotted nothing",
-      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
-      "concepts": []
+      "phrase": "that the intent of the government is to reduce standards to the lowest common denominator, which is a really big problem",
+      "status": "in DBpedia",
+      "reason": "",
+      "concepts": [
+       {
+        "surface": "the government",
+        "page": "Government_of_Ontario",
+        "how": "institution of this legislature",
+        "in_graph": true,
+        "dbpedia": "https://dbpedia.org/page/Government_of_Ontario",
+        "page_name_unlike_words": false,
+        "hand_checked_oct13": null
+       },
+       {
+        "surface": "intent",
+        "page": "Intention",
+        "how": "Spotlight, Spotlight's first choice passes the checks",
+        "in_graph": true,
+        "dbpedia": "https://dbpedia.org/page/Intention",
+        "page_name_unlike_words": false,
+        "hand_checked_oct13": null
+       },
+       {
+        "surface": "standards",
+        "page": "Technical_standard",
+        "how": "Spotlight, Spotlight's first choice passes the checks",
+        "in_graph": true,
+        "dbpedia": "https://dbpedia.org/page/Technical_standard",
+        "page_name_unlike_words": false,
+        "hand_checked_oct13": null
+       },
+       {
+        "surface": "lowest common denominator",
+        "page": "Lowest_common_denominator",
+        "how": "Spotlight, Spotlight's first choice passes the checks",
+        "in_graph": false,
+        "dbpedia": "",
+        "page_name_unlike_words": false,
+        "hand_checked_oct13": null
+       }
+      ]
      },
      "walk": null,
-     "verdict": "neither end in DBpedia",
+     "verdict": "one end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; 'to me' says to whom it seems; it is not the object"
     },
     {
      "claim": 2,
@@ -22881,15 +22898,15 @@
      },
      "verb": "have seen",
      "object": {
-      "phrase": "of this",
-      "status": "no content word",
-      "reason": "only small words (articles, prepositions)",
+      "phrase": "what",
+      "status": "pronoun",
+      "reason": "'what' stands for something named elsewhere",
       "concepts": []
      },
      "walk": null,
      "verdict": "neither end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "relative clause"
+     "how_the_claim_was_read": "relative clause; 'what' is what is seen (a free relative); the phrase after is not the object"
     },
     {
      "claim": 3,
@@ -26207,9 +26224,9 @@
      "negated": false,
      "hedged": false,
      "subject": {
-      "phrase": "ce (inh)",
-      "status": "pronoun",
-      "reason": "'ce' stands for something named elsewhere",
+      "phrase": "(unstated)",
+      "status": "Spotlight spotted nothing",
+      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
       "concepts": []
      },
      "verb": "croire",
@@ -26238,15 +26255,15 @@
      },
      "verb": "avons adopté",
      "object": {
-      "phrase": "",
-      "status": "nothing to link",
-      "reason": "no object: the verb takes none here",
+      "phrase": "des mesures extrêmement sévères au printemps",
+      "status": "a clause",
+      "reason": "a whole statement (SENT), not a thing; its own claim is read on its own line",
       "concepts": []
      },
      "walk": null,
      "verdict": "neither end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; the object comes after a comma"
     }
    ],
    "spotlight": "candidates"
@@ -27241,15 +27258,15 @@
      },
      "verb": "prévoit",
      "object": {
-      "phrase": "",
-      "status": "nothing to link",
-      "reason": "no object: the verb takes none here",
+      "phrase": "une indemnité de départ équivalant à une semaine par année de service, jusqu'à concurrence de 26 semaines",
+      "status": "Spotlight spotted nothing",
+      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
       "concepts": []
      },
      "walk": null,
      "verdict": "neither end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "a verb the tree rules gave no line for; read from the unit's tree"
+     "how_the_claim_was_read": "a verb the tree rules gave no line for; read from the unit's tree; the object is unit 5, after the insertion"
     },
     {
      "claim": 2,
@@ -30933,11 +30950,11 @@
      "walk": {
       "tau": 0.0659,
       "links": 6,
-      "path": "Organization <-[type]- Making_Music_(organisation) (links 2) -[type]-> Nonprofit_organization (links 3011) <-[type]- United_States_Snooker_Association (links 7) -[affiliation]-> International_Billiards_and_Snooker_Federation (links 2) <-[sportGoverningBody]- Snooker (links 17) -[equipment]-> Billiard_table",
+      "path": "Organization <-[type]- Making_Music_(organisation) (links 2) -[type]-> Nonprofit_organization (links 3011) <-[type]- United_States_Snooker_Association (links 7) -[affiliation]-> World_Professional_Billiards_and_Snooker_Association (links 2) <-[sportGoverningBody]- Snooker (links 17) -[equipment]-> Billiard_table",
       "subject": "Organization",
       "object": "Billiard_table",
       "tau_no_direct": 0.0659,
-      "path_no_direct": "Organization <-[type]- Making_Music_(organisation) (links 2) -[type]-> Nonprofit_organization (links 3011) <-[type]- United_States_Snooker_Association (links 7) -[affiliation]-> International_Billiards_and_Snooker_Federation (links 2) <-[sportGoverningBody]- Snooker (links 17) -[equipment]-> Billiard_table",
+      "path_no_direct": "Organization <-[type]- Making_Music_(organisation) (links 2) -[type]-> Nonprofit_organization (links 3011) <-[type]- United_States_Snooker_Association (links 7) -[affiliation]-> World_Professional_Billiards_and_Snooker_Association (links 2) <-[sportGoverningBody]- Snooker (links 17) -[equipment]-> Billiard_table",
       "claim_score": 0.0659
      },
      "verdict": "both ends in DBpedia; a walk links them",
@@ -31313,7 +31330,7 @@
      "claim": 3,
      "unit": 3,
      "kind": "asserted",
-     "negated": false,
+     "negated": true,
      "hedged": false,
      "subject": {
       "phrase": "you",
@@ -31321,7 +31338,7 @@
       "reason": "'you' is the person spoken to",
       "concepts": []
      },
-     "verb": "believe",
+     "verb": "cannot believe",
      "object": {
       "phrase": "that there are not tragic gaps in our mental health system",
       "status": "in DBpedia",
@@ -31359,7 +31376,7 @@
      "walk": null,
      "verdict": "one end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "a verb the tree rules gave no line for; read from the unit's tree"
+     "how_the_claim_was_read": "a verb the tree rules gave no line for; read from the unit's tree; joined by 'and' to 'cannot listen' in unit 1: it keeps 'cannot'"
     },
     {
      "claim": 4,
@@ -32457,33 +32474,6 @@
      "verdict": "both ends in DBpedia; no walk links them in the graph",
      "unit_concepts_not_in_claim": [],
      "how_the_claim_was_read": "main clause"
-    },
-    {
-     "claim": 2,
-     "unit": 0,
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "subject": {
-      "phrase": "(unstated)",
-      "status": "Spotlight spotted nothing",
-      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
-      "concepts": []
-     },
-     "verb": "recommit",
-     "object": {
-      "phrase": "",
-      "status": "nothing to link",
-      "reason": "no object: the verb takes none here",
-      "concepts": []
-     },
-     "walk": null,
-     "verdict": "neither end in DBpedia",
-     "unit_concepts_not_in_claim": [
-      "Motion",
-      "Previous_question"
-     ],
-     "how_the_claim_was_read": "main clause"
     }
    ],
    "spotlight": "candidates"
@@ -33133,6 +33123,13 @@
      "negated": false,
      "hedged": false,
      "subject": {
+      "phrase": "conferees",
+      "status": "Spotlight spotted nothing",
+      "reason": "Spotlight spotted no phrase here, and the words are not in the name list or the common-noun list",
+      "concepts": []
+     },
+     "verb": "agreed to",
+     "object": {
       "phrase": "the statistical assumptions",
       "status": "page not in the graph",
       "reason": "Spotlight or the name list gave Statistical_assumption, which is not in the 2022 graph",
@@ -33148,17 +33145,10 @@
        }
       ]
      },
-     "verb": "agreed",
-     "object": {
-      "phrase": "to",
-      "status": "no content word",
-      "reason": "only small words (articles, prepositions)",
-      "concepts": []
-     },
      "walk": null,
      "verdict": "neither end in DBpedia",
      "unit_concepts_not_in_claim": [],
-     "how_the_claim_was_read": "main clause"
+     "how_the_claim_was_read": "main clause; a passive with 'by': the doer is after 'by', the thing done to is the noun it hangs on"
     }
    ],
    "spotlight": "candidates"

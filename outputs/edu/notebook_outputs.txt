@@ -1,10 +1,10 @@
 parsers: live (isanlp_rst, Stanza, Berkeley benepar_fr2)
-units parsed on their own, saved: 280 sentences
+units parsed on their own, saved: 1120 sentences
 saved sentences: 220
 rules and keys loaded from: /Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v6 (all of them)
 
 
-12:37:01    loaded the discourse parser (UniRST) in 22.4s
+21:21:16    loaded the discourse parser (UniRST) in 22.1s
 Sentence: A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.
 
 STEP 1. Discourse parse (parsed now): the units
@@ -22,7 +22,7 @@ STEP 1. Discourse parse (parsed now): the units
 0             unit 0 to unit 1  elaboration        elaboration    unit 0                  elaboration; main part unit 0; unit 1 adds detail to unit 0
 1  unit 0 and unit 1 to unit 2  explanation        explanation    unit 2  explanation; main part unit 2; unit 0 and unit 1 give the reason for unit 2
 
-12:37:03    loaded Stanza en 1.15.0 (constituency: yes) in 1.6s
+21:21:18    loaded Stanza en 1.15.0 (constituency: yes) in 1.5s
 
 STEP 2. A constituency tree for each unit (each unit parsed now)
    unit 0: (ROOT (S (NP (NP (DT A) (JJ small) (NN hardware) (NN store)) (PP (IN in) (NP (DT an) (NNP AHP)))) (VP (MD would) (VP (VB be) (VP (VBG joining) (NP (DT an) (NN association))))) (, ,)))
@@ -71,8 +71,8 @@ STEP 1. Discourse parse (parsed now): the units
 0             unit 1 to unit 2    contrast           contrast      both                                                              contrast; both equally important
 1  unit 0 to unit 1 and unit 2  background              frame    unit 0  background; main part unit 0; unit 0 frames unit 1 and unit 2 (the setting is the main part)
 
-12:37:16    loaded the Berkeley parser (benepar_fr2) in 11.7s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
-12:37:18    loaded spaCy fr (core_news_lg 3.8.0) in 2.7s
+21:21:30    loaded the Berkeley parser (benepar_fr2) in 11.5s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+21:21:32    loaded spaCy fr (core_news_lg 3.8.0) in 2.6s
 
 STEP 2. A constituency tree for each unit (each unit parsed now)
    unit 0: (TOP (SENT (NP (DET L') (NC an) (AP (ADJ dernier))) (PONCT ,)))
@@ -146,17 +146,17 @@ STEP 5. The tree inside a tree
 
    10 new sentences parsed (1.2s each)
    20 new sentences parsed (0.8s each)
-   30 new sentences parsed (0.7s each)
+   30 new sentences parsed (0.6s each)
    40 new sentences parsed (0.6s each)
-   50 new sentences parsed (0.6s each)
-   60 new sentences parsed (0.6s each)
+   50 new sentences parsed (0.5s each)
+   60 new sentences parsed (0.5s each)
 60 sentences (parsed now)
 
 
   legislature  sentences  units per sentence  lines per sentence  units with no line  subjects found through the discourse parse  'that' pointing to units                                most common relations
-0    US House         20                3.05                3.10                   5                                          28                         0    elaboration 19, purpose 7, attribution 4, joint 3
+0    US House         20                3.05                3.05                   5                                          27                         0    elaboration 19, purpose 7, attribution 4, joint 3
 1     Ontario         20                3.40                3.30                  13                                          14                         2  elaboration 13, attribution 9, joint 8, same-unit 4
-2      Quebec         20                3.25                3.05                  16                                          12                         1  elaboration 16, joint 10, background 6, same-unit 5
+2      Quebec         20                3.25                3.05                  16                                          13                         1  elaboration 16, joint 10, background 6, same-unit 5
 
 
 US House  more|US|2: Mr. Speaker, you cannot listen to the constant stories from patients and families who have been denied access to mental health care and believe that there are not tragic gaps in our mental health system.
@@ -171,7 +171,7 @@ US House  more|US|2: Mr. Speaker, you cannot listen to the constant stories from
    unit                subject              verb verb form                                                      object                                               where the subject came from                      object from context that = 
 0     1                    you     cannot listen                    to the constant stories from patients and families                                                              its own unit                                                 
 1     2  patients and families  have been denied                                          access to mental health care  'who' stands for the last noun phrase of unit 1 (discourse: elaboration)                                                 
-2     3                    you           believe            that there are not tragic gaps in our mental health system                                                      unit 1 (elaboration)  discourse: what is said, unit 4                
+2     3                    you    cannot believe            that there are not tragic gaps in our mental health system                                                      unit 1 (elaboration)  discourse: what is said, unit 4                
 3     4                  there           are not                               tragic gaps in our mental health system                                                              its own unit                                                 
 
 <SVG>
@@ -275,7 +275,7 @@ Quebec  more|QC|3: Les nouveaux élus, peu importe de la formation politique, de
 10                            connections[]                   the same relations written as 'unit 0 and unit 1 to unit 2', with the text on each side
 
 wrote /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_records.json (62 sentences)
-      /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_lines.csv (195 lines)
+      /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_lines.csv (194 lines)
       /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_connections.csv (138 connections)
       /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/discourse_first_noun_phrases.csv (235 noun phrases to look up)
 
@@ -527,7 +527,7 @@ One record, the English sentence from the meeting (trees shortened):
                set                           design  key lines  found %  exact % exact 95% interval
 0       heldout en  discourse first (Oct 22 design)         36       81       50           34 to 66
 1       heldout fr  discourse first (Oct 22 design)         33       70       42           27 to 59
-2        sample en  discourse first (Oct 22 design)        119       87       47           38 to 56
+2        sample en  discourse first (Oct 22 design)        119       86       46           38 to 55
 3        sample fr  discourse first (Oct 22 design)        116       81       41           33 to 50
 4  simple tests en  discourse first (Oct 22 design)         70      100      100          95 to 100
 5  simple tests fr  discourse first (Oct 22 design)         70      100      100          95 to 100
@@ -567,8 +567,8 @@ Index: []
 simple tests en     70             0                               0              0                         0                       0                 0
 simple tests fr     70             0                               0              0                         0                       0                 0
 heldout en          18             2                              11              3                         1                       1                 0
-heldout fr          14             6                               9              3                         1                       0                 0
-sample en           56             6                              42              7                         0                       7                 1
+heldout fr          14             5                               9              3                         1                       1                 0
+sample en           55             7                              42              7                         0                       7                 1
 sample fr           48             7                              42              7                         2                       8                 2
 
 
@@ -601,10 +601,10 @@ subject and object wrong (first 5):
 
 no line with that verb (first 5):
    heldout|8      key: the members of this committee | supported | by people in the community
+   heldout|20     key: c' | était | une coquille vide
    sample|11      key: clinics | being shut down | 
    sample|23      key: geographic trends in the disease | change | 
    sample|32      key: Ontario Health (inh) | bringing together | the expertise and experience of these former agencies
-   sample|33      key: Quebec's bill | allows for | the reunification of families
 
 negation differs (first 5):
    sample|9       key: The costs (inh) | will go | towards sustaining doctor unionization and salary hikes
@@ -616,13 +616,13 @@ change in key lines when the rule is off (negative = the rule helps):
 
 
     rule switched off           step  sample found  sample exact  held-out found  held-out exact  simple tests found  simple tests exact
-0   discourse_subject  4 (discourse)           -37           -13              -5              -3                 -16                 -16
+0   discourse_subject  4 (discourse)           -36           -12              -5              -3                 -16                 -16
 1       demonstrative  4 (discourse)             0             0               0               0                   0                   0
-2             relpron  4 (discourse)            -6            -5              -2              -1                   0                   0
+2             relpron  4 (discourse)            -6            -6              -2              -1                   0                   0
 3         said_object  4 (discourse)            -8            -3              -4              -3                  -7                  -7
 4       frame_context  4 (discourse)             0             0               0               0                   0                   0
 5            collapse  3 (unit tree)             0             0               0               0                   0                   0
-6        drop_address  3 (unit tree)             0             0              -3              -2                  -1                  -1
+6        drop_address  3 (unit tree)             0             0              -1              -1                  -1                  -1
 7        unwrap_coord  3 (unit tree)            -3             0               0               0                   0                   0
 8            fix_verb  3 (unit tree)            -5             0              -1              -2                  -4                  -2
 9        tree_subject  3 (unit tree)            -2            -1              -2              -1                  -1                  -1
@@ -631,22 +631,38 @@ change in key lines when the rule is off (negative = the rule helps):
 12  apposition_across  3 (unit tree)             0             0               0               0                  -1                  -1
 13          questions  3 (unit tree)             0             0               0               0                   0                   0
 14      neg_particles  3 (unit tree)             0            -2               0               0                  -1                  -1
-15   adverbial_object  3 (unit tree)             1             0               0               0                   0                   0
+15   adverbial_object  3 (unit tree)             0            -1               0               0                   0                   0
 16           reanchor  3 (unit tree)             0             0               0               0                   0                   0
 17       time_subject  3 (unit tree)            -1            -1               0               0                  -1                  -1
 18         bare_lines  3 (unit tree)            -5            -2               0               0                  -2                  -2
 19      better_object  3 (unit tree)            -1             0               0               0                  -1                  -1
+20        r6_stranded  3 (unit tree)             0             0               0               0                   0                   0
+21     r6_experiencer  3 (unit tree)             0             0               0               0                   0                   0
+22       r6_aux_carry  3 (unit tree)             0             0               0               0                   0                   0
+23    r6_object_after  3 (unit tree)             0             0               0               0                   0                   0
+24      r6_procedural  3 (unit tree)             0             0               0               0                   0                   0
+25      r6_split_verb  3 (unit tree)             0             0               0               0                   0                   0
+26        r6b_adjunct  3 (unit tree)             2             2               0               0                   0                   0
+27       r6b_vocative  3 (unit tree)             0             0               0               0                   0                   0
+28         r6b_copula  3 (unit tree)            -1            -1               0               0                   0                   0
+29      r6b_make_sure  3 (unit tree)             0             0               0               0                   0                   0
+30   r6b_passive_part  3 (unit tree)             0             0               0               0                   0                   0
+31    r7_subject_pron  3 (unit tree)             0             0               0               0                   0                   0
+32   r7_expletive_inf  3 (unit tree)             0             0               0               0                   0                   0
+33  r7_list_not_appos  3 (unit tree)             0             0               0               0                   0                   0
+34        r7_bare_aux  3 (unit tree)             0             0               0               0                   0                   0
+35      r6_purpose_np  3 (unit tree)             0             0               0               0                   0                   0
 
-all of step 4 off (units read alone, nothing connected): {'sample': 'found -48, exact -20', 'held-out': 'found -11, exact -7', 'simple tests': 'found -23, exact -23'}
+all of step 4 off (units read alone, nothing connected): {'sample': 'found -47, exact -20', 'held-out': 'found -11, exact -7', 'simple tests': 'found -23, exact -23'}
 
 
                set                           design  key lines  found %  exact % exact 95% interval
 0       heldout en  stand-in: cut from the sentence         36       81       50           34 to 66
 0       heldout en        units parsed on their own         36       81       50           34 to 66
-1       heldout fr  stand-in: cut from the sentence         33       73       42           27 to 59
+1       heldout fr  stand-in: cut from the sentence         33       76       42           27 to 59
 1       heldout fr        units parsed on their own         33       70       42           27 to 59
-2        sample en  stand-in: cut from the sentence        119       87       49           40 to 58
-2        sample en        units parsed on their own        119       87       47           38 to 56
+2        sample en  stand-in: cut from the sentence        119       87       48           39 to 57
+2        sample en        units parsed on their own        119       86       46           38 to 55
 3        sample fr  stand-in: cut from the sentence        116       80       41           32 to 50
 3        sample fr        units parsed on their own        116       81       41           33 to 50
 4  simple tests en  stand-in: cut from the sentence         70      100      100          95 to 100
@@ -665,8 +681,8 @@ test|F2|fr: Le projet de loi que la Chambre a adopté réduit les coûts.
    cut:          [('la Chambre', 'a adopté', 'que la Chambre a adopté (que)'), ('Le projet de loi', 'réduit', 'les coûts')]
 
 heldout|7: If passed, this proposed Animal Health Act would provide important measures to help us better prevent, detect 
-   parsed alone: [('this proposed Animal Health Act', 'would provide', 'important measures'), ('this proposed Animal Health Act', 'help', 'us'), ('this proposed Animal Health Act', 'prevent detect respond', 'to')]
-   cut:          [('this proposed Animal Health Act', 'would provide', 'important measures'), ('(unstated)', 'help prevent detect respond', 'to')]
+   parsed alone: [('this proposed Animal Health Act', 'would provide', 'important measures'), ('this proposed Animal Health Act', 'help', 'us'), ('this proposed Animal Health Act', 'prevent detect respond to', '')]
+   cut:          [('this proposed Animal Health Act', 'would provide', 'important measures'), ('(unstated)', 'help prevent detect respond to', '')]
 
 heldout|18: Mais je vais m'adresser plus particulièrement à ma vis-à-vis, qui, je constate, a choisi aujourd'hui d'agir av
    parsed alone: [('je', "vais m'adresser", 'plus particulièrement'), ('je', 'constate', ''), ('qui', "a choisi d'agir", 'avec un adjoint'), ('je', 'salue', '')]
@@ -674,10 +690,10 @@ heldout|18: Mais je vais m'adresser plus particulièrement à ma vis-à-vis, qui
 
 heldout|22: Et le ministre nous disait à ce moment-là: Vers une réforme en profondeur du Code des professions.
    parsed alone: [('le ministre', 'disait', 'à ce moment -là')]
-   cut:          [('le ministre', 'disait', 'nous')]
+   cut:          [('le ministre', 'disait', 'Vers une réforme en profondeur du Code des professions')]
 
 heldout|24: Dans le fond, c'est ça, mon message de conclusion, c'est: Nous allons adopter ce projet de loi là en pensant à
-   parsed alone: [("c'", 'est', 'ça'), ("c'", 'est', ''), ('Nous', 'allons adopter', 'ce projet de loi'), ('Nous', 'pensant', 'à ceux et celles'), ('ceux et celles', 'ont été', 'des victimes du scandale du sang'), ('sang', 'contaminé', '')]
+   parsed alone: [("c'", 'est', 'ça'), ('Nous', 'allons adopter', 'ce projet de loi'), ('Nous', 'pensant', 'à ceux et celles'), ('ceux et celles', 'ont été', 'des victimes du scandale du sang'), ('sang', 'contaminé', '')]
    cut:          [("c'", 'est', 'ça'), ('mon message de conclusion', 'est', ''), ('Nous', 'allons adopter', 'ce projet de loi'), ('Nous', 'pensant', 'à ceux et celles'), ('ceux et celles', 'ont été', 'des victimes du scandale du sang')]
 
 heldout|27: Alors, je vais attendre d'avoir sa réponse pour voir qu'est-ce qui justifie la différence entre de le faire pa
@@ -719,7 +735,7 @@ trees: parsed now
             set  found %  exact % exact 95% interval
      heldout en       81       50           34 to 66
      heldout fr       70       42           27 to 59
-      sample en       87       47           38 to 56
+      sample en       86       46           38 to 55
       sample fr       81       41           33 to 50
 simple tests en      100      100          95 to 100
 simple tests fr      100      100          95 to 100

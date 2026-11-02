@@ -20529,12 +20529,12 @@
       },
       {
        "subject": "this proposed Animal Health Act",
-       "verb": "prevent detect respond",
-       "object": "to",
+       "verb": "prevent detect respond to",
+       "object": "",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; 'to' is a preposition left behind, part of the verb, not the object",
        "leaf": 20,
        "subject_from": "unit 1 (elaboration)",
        "context": [
@@ -20651,12 +20651,12 @@
     },
     {
      "subject": "this proposed Animal Health Act",
-     "verb": "prevent detect respond",
-     "object": "to",
+     "verb": "prevent detect respond to",
+     "object": "",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; 'to' is a preposition left behind, part of the verb, not the object",
      "leaf": 20,
      "subject_from": "unit 1 (elaboration)",
      "context": [
@@ -22587,14 +22587,16 @@
      "lines": [
       {
        "subject": "the challenges",
-       "verb": "faced",
+       "verb": "(is) faced",
        "object": "by Ontarians",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; a past participle on the noun before it: passive (the noun is what is done to)",
        "leaf": 6,
-       "subject_from": "describes the last noun phrase of unit 0 (no comma between them; discourse: elaboration)"
+       "subject_from": "describes the last noun phrase of unit 0 (no comma between them; discourse: elaboration)",
+       "verb_as_written": "faced",
+       "passive": true
       }
      ]
     },
@@ -22772,14 +22774,16 @@
     },
     {
      "subject": "the challenges",
-     "verb": "faced",
+     "verb": "(is) faced",
      "object": "by Ontarians",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; a past participle on the noun before it: passive (the noun is what is done to)",
      "leaf": 6,
      "subject_from": "describes the last noun phrase of unit 0 (no comma between them; discourse: elaboration)",
+     "verb_as_written": "faced",
+     "passive": true,
      "unit": 1
     },
     {
@@ -25664,19 +25668,7 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "c'",
-       "verb": "était",
-       "object": "",
-       "kind": "asserted",
-       "negated": false,
-       "hedged": false,
-       "how": "main clause",
-       "leaf": 2,
-       "subject_from": ""
-      }
-     ]
+     "lines": []
     },
     {
      "unit": 1,
@@ -25913,18 +25905,6 @@
     }
    ],
    "lines": [
-    {
-     "subject": "c'",
-     "verb": "était",
-     "object": "",
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "how": "main clause",
-     "leaf": 2,
-     "subject_from": "",
-     "unit": 0
-    },
     {
      "subject": "",
      "verb": "ont dit",
@@ -27390,19 +27370,7 @@
        ]
       ]
      ],
-     "lines": [
-      {
-       "subject": "c'",
-       "verb": "est",
-       "object": "",
-       "kind": "asserted",
-       "negated": false,
-       "hedged": false,
-       "how": "main clause",
-       "leaf": 13,
-       "subject_from": ""
-      }
-     ]
+     "lines": []
     },
     {
      "unit": 2,
@@ -27871,18 +27839,6 @@
      "leaf": 4,
      "subject_from": "",
      "unit": 0
-    },
-    {
-     "subject": "c'",
-     "verb": "est",
-     "object": "",
-     "kind": "asserted",
-     "negated": false,
-     "hedged": false,
-     "how": "main clause",
-     "leaf": 13,
-     "subject_from": "",
-     "unit": 1
     },
     {
      "subject": "Nous",
@@ -37490,12 +37446,13 @@
       {
        "subject": "these health care rights and protections",
        "verb": "were extended",
-       "object": "last year",
+       "object": "",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "relative clause",
+       "how": "relative clause; 'last year' is how or when, not the object",
        "leaf": 13,
+       "adjunct": "last year",
        "subject_from": "'that' stands for the last noun phrase of unit 1 (discourse: elaboration)"
       }
      ]
@@ -37603,12 +37560,13 @@
     {
      "subject": "these health care rights and protections",
      "verb": "were extended",
-     "object": "last year",
+     "object": "",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "relative clause",
+     "how": "relative clause; 'last year' is how or when, not the object",
      "leaf": 13,
+     "adjunct": "last year",
      "subject_from": "'that' stands for the last noun phrase of unit 1 (discourse: elaboration)",
      "unit": 2
     }
@@ -39659,12 +39617,13 @@
       {
        "subject": "Tens of thousands of people",
        "verb": "die",
-       "object": "each year",
+       "object": "",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; 'each year' is how or when, not the object",
        "leaf": 5,
+       "adjunct": "each year",
        "subject_from": ""
       }
      ]
@@ -39676,12 +39635,13 @@
     {
      "subject": "Tens of thousands of people",
      "verb": "die",
-     "object": "each year",
+     "object": "",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; 'each year' is how or when, not the object",
      "leaf": 5,
+     "adjunct": "each year",
      "subject_from": "",
      "unit": 0
     }
@@ -43955,14 +43915,16 @@
      "lines": [
       {
        "subject": "our population",
-       "verb": "compared",
+       "verb": "(is) compared",
        "object": "to 29% across Ontario",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "a verb the tree rules gave no line for; read from the unit's tree",
+       "how": "a verb the tree rules gave no line for; read from the unit's tree; a past participle on the noun before it: passive (the noun is what is done to)",
        "leaf": 9,
-       "subject_from": "describes the last noun phrase of unit 0 (no comma between them; discourse: comparison)"
+       "subject_from": "describes the last noun phrase of unit 0 (no comma between them; discourse: comparison)",
+       "verb_as_written": "compared",
+       "passive": true
       }
      ]
     }
@@ -44017,14 +43979,16 @@
     },
     {
      "subject": "our population",
-     "verb": "compared",
+     "verb": "(is) compared",
      "object": "to 29% across Ontario",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "a verb the tree rules gave no line for; read from the unit's tree",
+     "how": "a verb the tree rules gave no line for; read from the unit's tree; a past participle on the noun before it: passive (the noun is what is done to)",
      "leaf": 9,
      "subject_from": "describes the last noun phrase of unit 0 (no comma between them; discourse: comparison)",
+     "verb_as_written": "compared",
+     "passive": true,
      "unit": 1
     }
    ]
@@ -44151,14 +44115,15 @@
       {
        "subject": "The bill",
        "verb": "is",
-       "object": "",
+       "object": "before us today",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause; an adverbial clause is an adjunct, not the object",
+       "how": "main clause; an adverbial clause is an adjunct, not the object; the complement of the copula",
        "leaf": 3,
        "adjunct": "before us",
-       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)"
+       "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
+       "object_from": "the words after the copula in the same unit"
       }
      ]
     },
@@ -44757,14 +44722,15 @@
     {
      "subject": "The bill",
      "verb": "is",
-     "object": "",
+     "object": "before us today",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause; an adverbial clause is an adjunct, not the object",
+     "how": "main clause; an adverbial clause is an adjunct, not the object; the complement of the copula",
      "leaf": 3,
      "adjunct": "before us",
      "subject_from": "'that' stands for the last noun phrase of unit 0 (discourse: elaboration)",
+     "object_from": "the words after the copula in the same unit",
      "unit": 1
     },
     {
@@ -48587,12 +48553,13 @@
       {
        "subject": "I",
        "verb": "got elected",
-       "object": "here",
+       "object": "",
        "kind": "embedded",
        "negated": false,
        "hedged": false,
-       "how": "relative clause",
+       "how": "relative clause; 'here' is how or when, not the object",
        "leaf": 5,
+       "adjunct": "here",
        "subject_from": ""
       }
      ]
@@ -48759,12 +48726,13 @@
     {
      "subject": "I",
      "verb": "got elected",
-     "object": "here",
+     "object": "",
      "kind": "embedded",
      "negated": false,
      "hedged": false,
-     "how": "relative clause",
+     "how": "relative clause; 'here' is how or when, not the object",
      "leaf": 5,
+     "adjunct": "here",
      "subject_from": "",
      "unit": 0
     },
@@ -52241,12 +52209,13 @@
       {
        "subject": "Le ministre",
        "verb": "a amené",
-       "object": "cet après-midi",
+       "object": "",
        "kind": "asserted",
        "negated": false,
        "hedged": false,
-       "how": "main clause",
+       "how": "main clause; 'cet après-midi' is how or when, not the object",
        "leaf": 2,
+       "adjunct": "cet après-midi",
        "subject_from": ""
       }
      ]
@@ -52864,12 +52833,13 @@
     {
      "subject": "Le ministre",
      "verb": "a amené",
-     "object": "cet après-midi",
+     "object": "",
      "kind": "asserted",
      "negated": false,
      "hedged": false,
-     "how": "main clause",
+     "how": "main clause; 'cet après-midi' is how or when, not the object",
      "leaf": 2,
+     "adjunct": "cet après-midi",
      "subject_from": "",
      "unit": 0
     },
@@ -64159,7 +64129,7 @@
        "subject_from": ""
       },
       {
-       "subject": "c' (inh)",
+       "subject": "(unstated)",
        "verb": "mentionner",
        "object": "le",
        "kind": "embedded",
@@ -64167,7 +64137,7 @@
        "hedged": false,
        "how": "after 'de'",
        "leaf": 8,
-       "subject_from": ""
+       "subject_from": "an infinitive after 'it is ...' / 'il faut' / 'c'est ...': who does it is not in the words"
       }
      ]
     },
@@ -64591,7 +64561,7 @@
      "unit": 1
     },
     {
-     "subject": "c' (inh)",
+     "subject": "(unstated)",
      "verb": "mentionner",
      "object": "le",
      "kind": "embedded",
@@ -64599,7 +64569,7 @@
      "hedged": false,
      "how": "after 'de'",
      "leaf": 8,
-     "subject_from": "",
+     "subject_from": "an infinitive after 'it is ...' / 'il faut' / 'c'est ...': who does it is not in the words",
      "unit": 1
     },
     {

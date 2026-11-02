@@ -1,0 +1,962 @@
+[
+{
+"n": 1,
+"sentence": "more|ON|293",
+"claim": "3",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 2,
+"sentence": "more|QC|260",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 3,
+"sentence": "more|ON|232",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 4,
+"sentence": "more|ON|221",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 5,
+"sentence": "more|QC|290",
+"claim": "1",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 6,
+"sentence": "more|ON|247",
+"claim": "5",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 7,
+"sentence": "more|ON|220",
+"claim": "1",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 8,
+"sentence": "more|QC|263",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 9,
+"sentence": "more|QC|289",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "wrong",
+"both": "disagree"
+},
+{
+"n": 10,
+"sentence": "more|US|268",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 11,
+"sentence": "more|ON|210",
+"claim": "5",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 12,
+"sentence": "more|QC|228",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 13,
+"sentence": "more|US|249",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 14,
+"sentence": "more|US|240",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 15,
+"sentence": "more|US|231",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 16,
+"sentence": "more|ON|259",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 17,
+"sentence": "more|US|291",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 18,
+"sentence": "more|QC|248",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 19,
+"sentence": "more|QC|227",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 20,
+"sentence": "more|QC|289",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 21,
+"sentence": "more|US|260",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 22,
+"sentence": "more|QC|205",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 23,
+"sentence": "more|US|276",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 24,
+"sentence": "more|US|227",
+"claim": "1",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 25,
+"sentence": "more|US|258",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 26,
+"sentence": "more|QC|255",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 27,
+"sentence": "more|ON|230",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 28,
+"sentence": "more|ON|247",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 29,
+"sentence": "more|QC|290",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 30,
+"sentence": "more|ON|247",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 31,
+"sentence": "more|ON|253",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 32,
+"sentence": "more|US|282",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 33,
+"sentence": "more|QC|268",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 34,
+"sentence": "more|US|280",
+"claim": "2",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 35,
+"sentence": "more|QC|207",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 36,
+"sentence": "more|ON|210",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 37,
+"sentence": "more|ON|251",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 38,
+"sentence": "more|ON|212",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 39,
+"sentence": "more|QC|205",
+"claim": "3",
+"reading_A": "wrong",
+"reading_B": "right",
+"both": "disagree"
+},
+{
+"n": 40,
+"sentence": "more|US|230",
+"claim": "2",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 41,
+"sentence": "more|QC|269",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 42,
+"sentence": "more|US|260",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "wrong",
+"both": "disagree"
+},
+{
+"n": 43,
+"sentence": "more|QC|220",
+"claim": "5",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 44,
+"sentence": "more|ON|229",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 45,
+"sentence": "more|QC|284",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 46,
+"sentence": "more|QC|211",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 47,
+"sentence": "more|QC|221",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 48,
+"sentence": "more|QC|237",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 49,
+"sentence": "more|ON|268",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 50,
+"sentence": "more|US|236",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 51,
+"sentence": "more|US|231",
+"claim": "5",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 52,
+"sentence": "more|ON|230",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 53,
+"sentence": "more|US|249",
+"claim": "2",
+"reading_A": "wrong",
+"reading_B": "right",
+"both": "disagree"
+},
+{
+"n": 54,
+"sentence": "more|US|203",
+"claim": "3",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 55,
+"sentence": "more|US|225",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 56,
+"sentence": "more|ON|245",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 57,
+"sentence": "more|QC|257",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 58,
+"sentence": "more|ON|281",
+"claim": "4",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 59,
+"sentence": "more|QC|214",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 60,
+"sentence": "more|ON|267",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 61,
+"sentence": "more|ON|244",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 62,
+"sentence": "more|QC|201",
+"claim": "4",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 63,
+"sentence": "more|QC|234",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 64,
+"sentence": "more|ON|253",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 65,
+"sentence": "more|US|236",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 66,
+"sentence": "more|QC|299",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 67,
+"sentence": "more|QC|268",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 68,
+"sentence": "more|ON|299",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 69,
+"sentence": "more|ON|280",
+"claim": "1",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 70,
+"sentence": "more|US|297",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 71,
+"sentence": "more|US|291",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 72,
+"sentence": "more|ON|231",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 73,
+"sentence": "more|US|263",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 74,
+"sentence": "more|QC|244",
+"claim": "1",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 75,
+"sentence": "more|US|206",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 76,
+"sentence": "more|US|211",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 77,
+"sentence": "more|US|290",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 78,
+"sentence": "more|QC|275",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 79,
+"sentence": "more|QC|227",
+"claim": "12",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 80,
+"sentence": "more|ON|230",
+"claim": "3",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 81,
+"sentence": "more|US|268",
+"claim": "1",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 82,
+"sentence": "more|ON|297",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 83,
+"sentence": "more|QC|272",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 84,
+"sentence": "more|ON|204",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 85,
+"sentence": "more|ON|204",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 86,
+"sentence": "more|QC|271",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 87,
+"sentence": "more|QC|255",
+"claim": "7",
+"reading_A": "unsure",
+"reading_B": "unsure",
+"both": "unsure"
+},
+{
+"n": 88,
+"sentence": "more|US|240",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 89,
+"sentence": "more|QC|282",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 90,
+"sentence": "more|QC|264",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 91,
+"sentence": "more|QC|275",
+"claim": "6",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 92,
+"sentence": "more|ON|207",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 93,
+"sentence": "more|QC|251",
+"claim": "5",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 94,
+"sentence": "more|US|263",
+"claim": "1",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 95,
+"sentence": "more|US|209",
+"claim": "2",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 96,
+"sentence": "more|US|227",
+"claim": "2",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 97,
+"sentence": "more|US|222",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 98,
+"sentence": "more|US|201",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 99,
+"sentence": "more|ON|242",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 100,
+"sentence": "more|ON|264",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 101,
+"sentence": "more|ON|289",
+"claim": "4",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 102,
+"sentence": "more|ON|290",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 103,
+"sentence": "more|QC|230",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 104,
+"sentence": "more|US|218",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 105,
+"sentence": "more|ON|290",
+"claim": "2",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 106,
+"sentence": "more|US|266",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 107,
+"sentence": "more|ON|229",
+"claim": "3",
+"reading_A": "wrong",
+"reading_B": "unsure",
+"both": "disagree"
+},
+{
+"n": 108,
+"sentence": "more|US|236",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 109,
+"sentence": "more|ON|211",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 110,
+"sentence": "more|US|239",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 111,
+"sentence": "more|ON|232",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 112,
+"sentence": "more|ON|298",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 113,
+"sentence": "more|US|214",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 114,
+"sentence": "more|QC|287",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 115,
+"sentence": "more|US|234",
+"claim": "2",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 116,
+"sentence": "more|QC|262",
+"claim": "3",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 117,
+"sentence": "more|US|238",
+"claim": "3",
+"reading_A": "wrong",
+"reading_B": "wrong",
+"both": "wrong"
+},
+{
+"n": 118,
+"sentence": "more|QC|208",
+"claim": "3",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+},
+{
+"n": 119,
+"sentence": "more|ON|250",
+"claim": "2",
+"reading_A": "wrong",
+"reading_B": "right",
+"both": "disagree"
+},
+{
+"n": 120,
+"sentence": "more|US|296",
+"claim": "1",
+"reading_A": "right",
+"reading_B": "right",
+"both": "right"
+}
+]

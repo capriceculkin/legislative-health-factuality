@@ -55,6 +55,22 @@ OPT = {"collapse": True,          # merge a verb phrase that holds only another 
        "time_subject": True,      # 'Last year the House passed': a time is not the subject
        "bare_lines": True,        # a unit with a verb the tree rules gave no line for ('said', 'prévoit') gets one to fill
        "better_object": True,     # an adverb is not the object ('is also a moral obligation'); 'mess that up' = mess up
+       "r6_stranded": True,       # round 6: 'we heard from', 'agreed to by conferees': a lone preposition is not the object
+       "r6_experiencer": True,    # round 6: 'it seems to me ... that': 'to me' is not the object; what seems is
+       "r6_aux_carry": True,      # round 6: 'you cannot listen ... and believe': the second verb keeps 'cannot'
+       "r6_object_after": True,   # round 6: 'nous avons adopté, des mesures', 'prévoit, | ... | une indemnité': the object after a comma or in a later unit
+       "r6_procedural": True,
+       "r6_split_verb": True,
+       "r6b_adjunct": True,       # round 6b: 'said very well', 'have heard persistently', 'a vu la semaine dernière': not the object
+       "r6b_vocative": True,      # round 6b: 'Mr. Speaker, we're doubling': the subject is 'we', not the person spoken to
+       "r6b_copula": True,        # round 6b: 'they are infected', 'on est d'accord': what follows the copula is its complement
+       "r6b_make_sure": True,     # round 6b: 'make sure that ...': the that-clause is the object, not 'sure'
+       "r6b_passive_part": True,
+       "r7_subject_pron": True,   # round 7: a line with no subject whose verb comes right after a pronoun ('I found that ...')
+       "r7_expletive_inf": True,  # round 7: 'it is important to give credit': 'it' does not do the infinitive
+       "r7_list_not_appos": True, # round 7: 'the Lung Association, the Heart and Stroke Foundation, ...' is a list, not an apposition
+       "r7_bare_aux": True,       # round 7: 'A Police Services Act | can |', 'il | est |' (a false start): not claims  # round 6b: 'a group called X', 'child support paid for': a participle on a noun is passive     # round 6: 'getting it done for the people': the pronoun inside the verb is the object     # round 6: 'a motion to recommit': the name of a motion, not a claim
+       "r6_purpose_np": False,    # round 6 (tested, see notes): 'a grants program | to help ...': the noun just before does it
        "units_only": False}       # the Oct 22 design exactly: only each unit's own tree and the discourse parse are used;
                                   # nothing is read from the whole sentence's tree (switches off object_fill, backfill,
                                   # participles, apposition, tree_subject, and finds 'which'/'qui' through the discourse parse)
@@ -1039,6 +1055,276 @@ def bare_line(pieces, lang):
     return None
 
 
+STRANDED = {"to", "from", "of", "for", "with", "about", "on", "in", "at", "into", "upon", "by"}
+EXPERIENCER = re.compile(r"^(to|for)\s+(me|us|him|her|them|you)$", re.I)
+SEEM_VERBS = {"seems", "seem", "seemed", "appears", "appear", "appeared", "sounds", "looks", "semble", "paraît", "parait"}
+MODALS = {"can", "cannot", "could", "will", "would", "shall", "should", "may", "might", "must", "do", "does", "did", "can't", "won't",
+          "wouldn't", "shouldn't", "couldn't", "don't", "doesn't", "didn't"}
+DETS_START = re.compile(r"^(the|a|an|this|these|those|our|their|its|his|her|all|some|any|des|les|le|la|l'|un|une|ces|cette|ce|cet|nos|notre|leurs|leur|ses|son|sa|plusieurs|certains|certaines)\b", re.I)
+
+
+def _note(ln, text):
+    ln["how"] = (ln["how"] + "; " + text).strip("; ")
+
+
+def _after_verb(unit_text, verb, subject=""):
+    "The text of the unit after the verb's last word (None when the word is not found); after 'subject verb' when that is there."
+    w = verb.split()[-1:] if verb.split() else []
+    if not w:
+        return None
+    sj = subject.replace("(inh)", "").strip()
+    if sj:
+        m = re.search(r"(?<![\w])" + re.escape(sj) + r"\s*(?:\S+\s+){0,3}?" + re.escape(w[0]) + r"(?![\w'’])", unit_text, re.I)
+        if m:
+            return unit_text[m.end():]
+    m = None
+    for m in re.finditer(r"(?<![\w'’])" + re.escape(w[0]) + r"(?![\w'’])", unit_text, re.I):
+        break
+    return unit_text[m.end():] if m else None
+
+
+COPULAS = {"is", "are", "was", "were", "be", "been", "being", "am", "get", "gets", "got", "become", "becomes", "became", "remain", "remains",
+           "est", "sont", "était", "étaient", "sera", "seront", "reste", "restent", "devient", "deviennent", "semble"}
+ADJUNCT_WORDS = {"well", "very well", "today", "tonight", "now", "here", "there", "then", "again", "too", "also", "already", "still",
+                 "over and over", "again and again", "always", "often", "sometimes", "the past", "in the past", "in our minds", "in my mind",
+                 "with you", "with us", "toujours", "souvent", "parfois", "par année", "par mois",
+                 "aujourd'hui", "maintenant", "hier", "demain", "ici", "là", "encore", "aussi", "déjà", "toujours", "bien", "très bien"}
+ADJUNCT_START = re.compile(r"^(at the (time|outset|moment|end|beginning)|at this (time|point|moment)|in many ways|in a way|de façon|de manière|"
+                           r"avec (justesse|raison|force|insistance)|comme (députée?|ministre|parlementaires?)|en cette chambre|la semaine (dernière|prochaine)|"
+                           r"l'an (dernier|prochain)|cet après-midi|ce matin|ce soir|un bon jour)\b", re.I)
+SAY_VERBS = {"said", "say", "says", "tell", "told", "stated", "state", "explain", "explained", "dire", "dit", "dis", "disait", "expliquer",
+             "expliquées", "expliqué", "demande", "demander", "souligné", "rappelé", "affirmé"}
+
+
+def round6_pre(row, units):
+    """Round 6b, before 'what is said' is filled in: an adverb, a time, a manner phrase or the person spoken to is not
+    the object ('The member said very well that ...', 'je vous dis que ...')."""
+    if not OPT["r6b_adjunct"]:
+        return
+    for u in units:
+        for ln in u["lines"]:
+            o = ln["object"].strip().replace("’", "'")
+            ol = o.lower()
+            if not o:
+                continue
+            adverb = ol in ADJUNCT_WORDS or (len(ol.split()) == 1 and re.fullmatch(r"[a-zà-ÿ]+ly" if row["lang"] == "en" else r"[a-zà-ÿ]+ment", ol) and ol not in ("supply", "family", "assembly", "gouvernement", "parlement", "règlement", "logement", "département", "traitement", "financement", "établissement", "amendement", "paiement", "investissement", "environnement", "enseignement", "jugement", "document", "argument", "moment", "comment", "élément", "segment", "monument", "instrument", "ministry")) \
+                or ADJUNCT_START.match(ol) or is_time_phrase(o)
+            if ol in ("into place", "in place", "en place") and len(ln["verb"].split()) >= 1:
+                ln["verb"], ln["object"] = ln["verb"] + " " + o, ""
+                _note(ln, f"'{o}' goes with the verb")
+                continue
+            spoken_to = any(w in SAY_VERBS for w in ln["verb"].lower().split()) and \
+                (re.match(r"^to\s+(my|the|our|all|you|him|her|them|us|me|members?|colleagues?)\b", ol) or ol in ("vous", "nous", "lui", "leur", "te", "me", "us", "you"))
+            if adverb or spoken_to:
+                ln["adjunct"] = o
+                ln["object"] = ""
+                _note(ln, f"'{o}' is " + ("who it is said to" if spoken_to else "how or when, not the object"))
+
+
+def round6(row, units, rels, pieces_all, ULEAVES):
+    """Round 6 (Nov 1), from the claims two readers marked wrong on the 60 new sentences. Each rule is switched by its
+    OPT flag, and each one notes what it did in the line's 'how'."""
+    lang = row["lang"]
+    for u in units:
+        k = u["unit"]
+        for ln in u["lines"]:
+            obj = ln["object"].strip()
+            # A. a lone preposition left behind by a relative or a passive is not the object
+            if OPT["r6_stranded"] and obj.lower() in STRANDED and lang == "en":
+                by = re.search(r"(?<![\w])" + re.escape(ln["verb"].split()[-1]) + r"\s+" + re.escape(obj) + r"\s+by\s+(.+?)\s*[.,;:]?$", u["text"], re.I) \
+                    if ln["verb"].split() else None
+                if by and obj.lower() != "by":
+                    # 'the statistical assumptions | agreed to by conferees': the conferees agreed to the assumptions
+                    old = ln["subject"]
+                    ln["subject"], ln["verb"], ln["object"] = by.group(1).strip(), ln["verb"] + " " + obj, old
+                    ln["subject_from"] = f"unit tree: a passive participle; who does it is the phrase after 'by'"
+                    ln["object_from"] = "what the participle hangs on (the noun before it)"
+                    _note(ln, "a passive with 'by': the doer is after 'by', the thing done to is the noun it hangs on")
+                    continue
+                ln["verb"], ln["object"] = ln["verb"] + " " + obj, ""
+                _note(ln, f"'{obj}' is a preposition left behind, part of the verb, not the object")
+                # 'The people | we heard from': a clause on the noun phrase of the unit before it (no 'that')
+                if OPT["r6b_copula"] and k > 0 and re.match(r"^\W*(that|which|whom)\b", u["text"], re.I) and \
+                        not re.search(r"[,;:]\s*$", units[k - 1]["text"]):
+                    # 'the people | that I have talked to': the relative's noun is what the preposition is about
+                    jr = joined_by(k, rels)
+                    if jr and jr["shared"] in ("elaboration", "same-unit"):
+                        got = antecedent_by_discourse(k, rels, pieces_all)
+                        if got and got[0].lower().strip() not in NOT_ANTECEDENT and _norm(got[0]) != _norm(ln["subject"]):
+                            ln["object"], ln["object_from"] = got[0], f"object relative: '{u['text'].split()[0]}' stands for the last noun phrase of {got[1]} (discourse: {got[2]})"
+                            continue
+                if k > 0 and not re.match(r"^\W*(that|which|who|whom)\b", u["text"], re.I):
+                    jr = joined_by(k, rels)
+                    prev = units[k - 1]
+                    if jr and jr["shared"] in ("elaboration", "same-unit") and not prev["lines"]:
+                        a = lone_np(pieces_all[k - 1])
+                        if a is not None:
+                            ln["object"], ln["object_from"] = np_text(a), f"unit {k - 1}: the noun phrase this clause hangs on (no 'that')"
+            # B. 'it seems to me': the experiencer is not the object; what seems is the that-clause it introduces
+            elif OPT["r6_experiencer"] and EXPERIENCER.match(obj) and any(w in SEEM_VERBS for w in ln["verb"].lower().split()):
+                ln["adjunct"] = obj
+                ln["object"] = ""
+                for r in sorted(rels, key=lambda r: r["right"][1] - r["left"][0]):
+                    if r["shared"] == "attribution" and r["left"][0] <= k <= r["left"][1] and r["right"][0] == r["left"][1] + 1:
+                        R = r["right"]
+                        ln["object"] = " ".join(v["text"] for v in units[R[0]:R[1] + 1]).strip(" .,;")
+                        ln["object_from"] = f"discourse: what seems so, {span(R)}"
+                        break
+                _note(ln, f"'{obj}' says to whom it seems; it is not the object")
+            # B2. 'from what I've seen of this': what was seen is 'what', not 'of this'
+            elif OPT["r6_experiencer"] and lang == "en" and re.match(r"^of\s+(this|that|it|these|those)$", obj, re.I) and \
+                    re.search(r"\bwhat\s+" + re.escape(ln["subject"].split()[0]) + r"\b", u["text"], re.I) if ln["subject"].split() else False:
+                ln["adjunct"], ln["object"] = obj, "what"
+                _note(ln, "'what' is what is seen (a free relative); the phrase after is not the object")
+        # C. 'you cannot listen ... and believe': a bare verb joined by 'and' to a verb with a modal keeps the modal
+        if OPT["r6_aux_carry"] and lang == "en":
+            for ln in u["lines"]:
+                m = re.match(r"^\W*(and|or|but)\s+(\w+)", u["text"], re.I)
+                src = re.match(r"^unit (\d+)", ln.get("subject_from") or "")
+                if not m or not src or len(ln["verb"].split()) != 1 or m.group(2).lower() != ln["verb"].lower():
+                    continue
+                if word_tag(pieces_all[k], ln["verb"]) not in ("VB", ""):
+                    continue
+                sl = next((l2 for l2 in units[int(src.group(1))]["lines"] if _norm(l2["subject"]) == _norm(ln["subject"])), None)
+                if not sl:
+                    continue
+                aux = [w for w in sl["verb"].split()[:-1] if w.lower() in MODALS or w.lower() in ("not", "never", "n't")]
+                if aux and aux[0].lower() in MODALS:
+                    ln.setdefault("verb_as_written", ln["verb"])          # the words in this unit; the modal is carried from the other
+                    ln["verb"] = " ".join(aux) + " " + ln["verb"]
+                    ln["negated"] = ln.get("negated") or bool(sl.get("negated")) or any(a.lower() in ("cannot", "not", "never", "n't") or a.lower().endswith("n't") for a in aux)
+                    _note(ln, f"joined by '{m.group(1).lower()}' to '{sl['verb']}' in unit {src.group(1)}: it keeps '{' '.join(aux)}'")
+        # D. an object after a comma in the same unit ('nous avons adopté, des mesures'), or in a later unit that is only
+        # a noun phrase ('prévoit, | lorsque ... | - c'est ... - | une indemnité de départ ...')
+        if OPT["r6_object_after"]:
+            for ln in u["lines"]:
+                if ln["object"].strip() or not ln["verb"].strip() or ln.get("implied_verb"):
+                    continue
+                rest = _after_verb(u["text"], ln["verb"])
+                if rest is None:
+                    continue
+                r1 = rest.strip()
+                m = re.match(r"^,\s*(.+)$", r1)
+                if m and DETS_START.match(m.group(1)) and not re.match(r"^(lorsque|quand|si|when|if|because|parce|que|qu'|that)\b", m.group(1), re.I):
+                    np_ = re.split(r"\s*[,;:.](?:\s|$)", m.group(1))[0].strip()
+                    if 1 <= len(np_.split()) <= 15:
+                        ln["object"], ln["object_from"] = np_, "the same unit, after a comma"
+                        _note(ln, "the object comes after a comma")
+                        continue
+                if r1.strip(" ,;:-–—") == "":
+                    for r in sorted(rels, key=lambda r: r["right"][1] - r["left"][0]):
+                        if r["shared"] == "same-unit" and r["left"][0] <= k <= r["left"][1] and r["right"][0] == r["right"][1] > k:
+                            j = r["right"][0]
+                            only_np = (not units[j]["lines"] and lone_np(pieces_all[j]) is not None) or \
+                                (DETS_START.match(units[j]["text"].strip()) and units[j]["lines"] and all("describes a noun" in l["how"] for l in units[j]["lines"]))
+                            if only_np:
+                                ln["object"], ln["object_from"] = units[j]["text"].strip(" .,;"), f"unit {j}: the sentence goes on after an insertion (same-unit)"
+                                _note(ln, f"the object is unit {j}, after the insertion")
+                            break
+        # G. 'getting it done for the people of Ontario': a pronoun between the two verb words is the object
+        if OPT["r6_split_verb"] and lang == "en":
+            for ln in u["lines"]:
+                vw = ln["verb"].split()
+                if len(vw) != 2:
+                    continue
+                m = re.search(r"\b" + re.escape(vw[0]) + r"\s+(it|them|this|that|him|her|everything|something|nothing)\s+" + re.escape(vw[1]) + r"\b", u["text"], re.I)
+                if m and (not ln["object"].strip() or re.match(r"^(for|to|with|in|on|at|by)\s", ln["object"], re.I)):
+                    if ln["object"].strip():
+                        ln["adjunct"] = ln["object"]
+                    ln["object"], ln["object_from"] = m.group(1), "the pronoun between the verb's two words"
+                    _note(ln, f"'{m.group(1)}' sits inside the verb ('{vw[0]} {m.group(1)} {vw[1]}'): it is the object")
+        # E. 'a motion to recommit': the name of a procedure, not a claim
+        if OPT["r6_procedural"] and lang == "en":
+            u["lines"] = [l for l in u["lines"] if not (l["verb"].split() and re.search(r"\bmotion\s+to\s+" + re.escape(l["verb"].split()[-1].lower()) + r"\b",
+                                                                                          row["text"].lower()) and len(l["verb"].split()) <= 2
+                                                                    and re.search(r"\bto\s+" + re.escape(l["verb"].split()[-1].lower()) + r"\b", u["text"].lower()))]
+        for ln in u["lines"]:
+            vlow = ln["verb"].lower().replace("’", "'")
+            # J. 'Mr. Speaker, we're doubling': the person spoken to is not the subject
+            if OPT["r6b_vocative"] and is_address(ln["subject"]):
+                m = re.search(re.escape(ln["subject"]) + r"\W*\s*(we|it|i|you|they|he|she|this|that|there|nous|je|j|il|elle|on|ils|elles|c|ce|ça|cela)(?=[\s'’,]|$)", u["text"], re.I)
+                if m:
+                    ln["subject"] = m.group(1) + ("'" if m.group(1).lower() in ("c", "j") else "")
+                    ln["subject_from"] = "the person spoken to is not the subject; the pronoun after it is"
+                    _note(ln, "someone spoken to is not the subject")
+            # L. 'make sure that ...'
+            if OPT["r6b_make_sure"] and re.search(r"\b(make|makes|making|made)$", vlow) and ln["object"].strip().lower() in ("sure", "certain"):
+                rest = re.split(r"\b(?:sure|certain)\b", u["text"], maxsplit=1, flags=re.I)
+                after = rest[1].strip(" ,.;:") if len(rest) > 1 else ""
+                if after.lower() in ("that", "que", "qu'"):
+                    after = ""
+                j = k + 1
+                while not after and j < len(units) and units[j]["text"].strip(" ,.;:").lower() in ("that", "que", "qu'"):
+                    j += 1                                  # a lone 'that' cut off as its own unit
+                if not after and j < len(units):
+                    jr = joined_by(j, rels) or joined_by(k + 1, rels)
+                    if jr and jr["shared"] in ("attribution", "elaboration", "same-unit", "purpose"):
+                        after = units[j]["text"].strip(" ,.;:")
+                        ln["object_from"] = f"unit {j}: what is made sure of"
+                ln["verb"] = ln["verb"] + " " + ln["object"].strip()
+                ln["object"] = re.sub(r"^that\s+", "", after, flags=re.I) if after else ""
+                _note(ln, "'make sure': what follows is the object")
+            # I. a copula with nothing after it in the claim: its complement is the words after it ('they are infected')
+            if OPT["r6b_copula"] and not ln["object"].strip() and vlow.split() and vlow.split()[-1] in COPULAS:
+                rest = _after_verb(u["text"], ln["verb"], ln["subject"])
+                if rest is not None:
+                    r1 = rest.strip()
+                    m = re.match(r"^([^,.;:!?()«»\"“”\-–—]+)", r1)
+                    if m and not re.match(r"^(that|if|when|because|qu|que|si|parce|lorsque|quand|to)\b", m.group(1).strip(), re.I) and 1 <= len(m.group(1).split()) <= 8:
+                        ln["object"], ln["object_from"] = m.group(1).strip(), "the words after the copula in the same unit"
+                        _note(ln, "the complement of the copula")
+            # H. 'a community group called X', 'child support paid for a family': a past participle hanging on the noun
+            # before it is passive: the noun is what is done to, not who does it
+            if OPT["r6b_passive_part"] and lang == "en" and "describes the last noun phrase" in (ln.get("subject_from") or "") and \
+                    len(ln["verb"].split()) == 1 and word_tag(pieces_all[k], ln["verb"]) == "VBN":
+                ln.setdefault("verb_as_written", ln["verb"])
+                ln["verb"] = "(is) " + ln["verb"]
+                ln["passive"] = True
+                _note(ln, "a past participle on the noun before it: passive (the noun is what is done to)")
+        for ln in u["lines"]:
+            # R7e. no subject, but a pronoun right before the verb in the same unit ('I found that ...', 'I said that ...')
+            if OPT["r7_subject_pron"] and not ln["subject"].strip() and ln["verb"].split():
+                v0 = (ln.get("verb_as_written") or ln["verb"]).split()[0]
+                m = re.search(r"(?<![\w'’])(I|we|you|he|she|they|je|j'|nous|vous|il|elle|on|ils|elles)\s+(?:\w+\s+){0,2}?" + re.escape(v0) + r"\b", u["text"], re.I)
+                if m:
+                    ln["subject"], ln["subject_from"] = m.group(1), "the pronoun right before the verb in the same unit"
+            # R7f. 'it is important to give credit': an expletive 'it' / 'il' / 'c'' does not do the infinitive
+            sj7 = ln["subject"].replace("(inh)", "").strip().lower().replace("’", "'")
+            expl_ok = sj7 in ("c'", "ce", "ça") or \
+                (sj7 == "it" and re.search(r"\bit\s+(is|was|would be|will be|'s|seems|makes)\b", row["text"], re.I)) or \
+                (sj7 == "il" and re.search(r"\bil\s+(faut|fallait|faudrait|est|était|serait)\s+(\w+\s+)?(de|d'|que)?", row["text"].replace("’", "'"), re.I) and
+                 re.search(r"\bil\s+(faut|fallait|faudrait)\b|\bil\s+(est|était|serait)\s+\w+\s+(de|d')", row["text"].replace("’", "'"), re.I))
+            if OPT["r7_expletive_inf"] and expl_ok and \
+                    (ln["verb"].lower().startswith("to ") or word_tag(pieces_all[k], (ln.get("verb_as_written") or ln["verb"]).split()[-1]) in ("VINF", "VB")) and \
+                    (("(inh)" in ln["subject"]) or "the subject of the clause" in (ln.get("subject_from") or "") or ln["verb"].lower().startswith("to ")) and \
+                    not re.search(r"\b(it|il)\s+(\w+\s+){0,2}" + re.escape(ln["verb"].split()[-1]) + r"\b", u["text"], re.I):
+                ln["subject"], ln["subject_from"] = "(unstated)", "an infinitive after 'it is ...' / 'il faut' / 'c'est ...': who does it is not in the words"
+        # R7j. a modal or auxiliary alone, or 'il est' left hanging (a false start): not a claim
+        if OPT["r7_bare_aux"]:
+            keep = []
+            for ln in u["lines"]:
+                vw = ln["verb"].lower().replace("’", "'").split()
+                bare_modal = len(vw) == 1 and vw[0] in ("can", "could", "will", "would", "shall", "should", "may", "might", "must", "pourra", "peut", "doit")
+                bare_pass = vw in (["a", "été"], ["ont", "été"], ["avait", "été"], ["has", "been"], ["have", "been"])
+                after = _after_verb(u["text"], ln["verb"], ln["subject"])
+                hanging = len(vw) == 1 and vw[0] in COPULAS and after is not None and not after.strip(" ,.;:-–—…")
+                if not ln["object"].strip() and (bare_modal or bare_pass or hanging) and not ln.get("implied_verb"):
+                    continue
+                keep.append(ln)
+            u["lines"] = keep
+        # F. (tested; off) 'a grants program | to help ...': the noun phrase at the end of the unit before does the to-verb
+        if OPT["r6_purpose_np"] and lang == "en" and k > 0 and re.match(r"^\W*to\s+\w", u["text"], re.I):
+            jr = joined_by(k, rels)
+            prev_lines = units[k - 1]["lines"]
+            if jr and jr["shared"] in ("elaboration", "purpose") and prev_lines:
+                po = prev_lines[-1]["object"].strip()
+                po = re.sub(r"^(on|with|about|upon)\s+", "", po, flags=re.I)
+                if po and DETS_START.match(po) or (po and po[:1].isupper()):
+                    for ln in u["lines"]:
+                        if (ln.get("subject_from") or "").startswith(f"unit {k - 1}"):
+                            ln["subject"], ln["subject_from"] = po, f"unit {k - 1}: the noun phrase just before the to-clause does it"
+
+
 def process(row, edu_trees=None):
     d = row.get("disc_native") or {}
     edus = d.get("edus") or [{"text": row["text"], "start": 0, "end": len(row["text"])}]
@@ -1151,6 +1437,9 @@ def process(row, edu_trees=None):
     if OPT["units_only"] and OPT["apposition"]:
         for u in units:
             for leaf, name, desc, whole in unit_appositions(pieces_all[u["unit"]]):
+                if OPT["r7_list_not_appos"] and desc[:1].isupper() and name[:1].isupper() and not re.match(r"^(the|a|an|le|la|les|l'|un|une)\s+[a-zà-ÿ]", desc, re.I) \
+                        and re.search(re.escape(desc) + r"\s*,\s*(and\s+|et\s+)?[A-ZÀ-Ý]", u["text"]):
+                    continue                            # 'the Lung Association, the Heart and Stroke Foundation, Cancer Care Ontario': a list
                 if is_address(desc):                                        # 'Bill 87, Speaker,': someone spoken to
                     for ln in u["lines"]:
                         if re.search(r",\s*" + re.escape(desc) + r"\W*$", ln["object"]):
@@ -1258,6 +1547,8 @@ def process(row, edu_trees=None):
                     units[k]["lines"].append({"subject": np_text(a), "verb": "is (apposition)", "object": P.text(b), "kind": "asserted", "negated": False,
                                               "hedged": False, "how": f"apposition across units: unit {k} renames the name in unit {k - 1} (elaboration)",
                                               "leaf": None, "fixed_from": f"unit {k - 1} (apposition, elaboration)", "implied_verb": True})
+    if OPT["units_only"]:
+        round6_pre(row, units)
     if OPT["said_object"]:
         for u in units:
             for ln in u["lines"]:
@@ -1433,6 +1724,8 @@ def process(row, edu_trees=None):
                     continue
             keep.append(ln)
         u["lines"] = keep
+    if OPT["units_only"]:
+        round6(row, units, rels, pieces_all, ULEAVES)
     # a unit with no clause of its own ("L'an dernier,", "In 1994,") is context for the lines on the other side of its
     # relation: it is attached to them rather than lost
     if OPT["frame_context"]:

@@ -7,6 +7,7 @@ My goal,en,subject,3
 this bill,en,object,2
 These corrections,en,subject,2
 necessary,en,object,2
+the statistical assumptions,en,object,2
 the proposal,en,subject,2
 a system,en,subject,2
 their children,en,object,2
@@ -15,6 +16,7 @@ my colleagues,en,subject,2
 the many other Members and organizations,en,subject,2
 my original Bill 111,en,subject,2
 our government,en,subject,2
+it,en,object,2
 which,en,subject,2
 The resources,en,subject,2
 des gens,fr,subject,2
@@ -57,9 +59,7 @@ abortion,en,object,1
 over 10 million cases of the seven most common chronic diseases,en,object,1
 that the formula,en,object,1
 allotments for the territories and the District,en,object,1
-the statistical assumptions,en,object,1
-the statistical assumptions,en,subject,1
-to,en,object,1
+conferees,en,subject,1
 The bill's sponsors,en,subject,1
 "that by covering part or all of the costs of those with incomes up to 150 percent of the poverty level, the proposal would ensure that there would be an adequate base of healthy seniors to offset the portion in greatest need of the benefit",en,object,1
 part or all of the costs of those with incomes up to 150 percent of the poverty level,en,object,1
@@ -124,23 +124,22 @@ an improvement,en,object,1
 on second reading,en,object,1
 on the order paper,en,object,1
 a very strong advocate for patient access to their electronic records,en,object,1
-from,en,object,1
+The people,en,object,1
 The people,en,subject,1
 "that they would like to see the HST removed from heating, electricity and energy",en,object,1
 "the HST removed from heating, electricity and energy",en,object,1
 the HST,en,subject,1
 "from heating, electricity and energy",en,object,1
 a meeting with a Mr Henry Dumouchelle and his partner,en,object,1
-initially,en,object,1
+I had a meeting with a Mr Henry Dumouchelle and his partner,en,object,1
 The proposed Primary Care Act,en,subject,1
 another important way,en,object,1
 on our progress in health care,en,object,1
-for the people of Ontario,en,object,1
 this bill,en,subject,1
 within the first three-year period,en,object,1
 in excess of $50 million per year in revenue,en,object,1
-to me,en,object,1
-of this,en,object,1
+"that the intent of the government is to reduce standards to the lowest common denominator, which is a really big problem",en,object,1
+what,en,object,1
 the intent of the government,en,subject,1
 to reduce standards to the lowest common denominator,en,object,1
 the intent,en,subject,1
@@ -149,7 +148,6 @@ a really big problem,en,object,1
 "through strong, independent institutions",en,object,1
 a question,en,object,1
 about the address,en,object,1
-it,en,object,1
 this matter,en,subject,1
 in the legislative committee,en,object,1
 in the committee,en,object,1
@@ -203,6 +201,7 @@ un engagement extraordinaire vis-à-vis,fr,object,1
 vers le gouvernement,fr,object,1
 de sa réforme ou de ses propositions,fr,object,1
 un travail incroyable de plusieurs ministres de l'ancien gouvernement,fr,object,1
+des mesures extrêmement sévères au printemps,fr,object,1
 le travail incroyable,fr,object,1
 le travail incroyable,fr,subject,1
 par Mme Louise Laborit et son équipe au niveau du comité de citoyens à Anjou,fr,object,1
@@ -218,6 +217,7 @@ un projet,fr,object,1
 Le présent projet de loi,fr,subject,1
 une solution à cette problématique,fr,object,1
 Cette législation,fr,subject,1
+"une indemnité de départ équivalant à une semaine par année de service, jusqu'à concurrence de 26 semaines",fr,object,1
 l'entreprise,fr,subject,1
 un chiffre d'affaires de plus de 2 500 000 $,fr,object,1
 les petites PME,fr,object,1

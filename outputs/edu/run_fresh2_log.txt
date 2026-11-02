@@ -1,0 +1,157 @@
+== 1/7 parse every discourse unit on its own, and 20 new sentences per legislature
+20:03:35 == edu_collect: 220 saved sentences; rules /Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v6/preds.py
+20:03:41    loaded Stanza en 1.15.0 (constituency: yes) in 3.0s
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+20:03:57    loaded the Berkeley parser (benepar_fr2) in 15.7s; fixes: added torch._six (removed in torch 2); rebuilt build_inputs_with_special_tokens for XLMRobertaTokenizer (removed in transformers 5); position_ids: dropped 1 extra, filled 0 missing (transformers change)
+20:04:01    loaded spaCy fr (core_news_lg 3.8.0) in 3.5s
+20:04:05    20/220 sentences, every unit parsed (1.5s each)
+20:04:14    40/220 sentences, every unit parsed (1.0s each)
+20:04:18    60/220 sentences, every unit parsed (0.7s each)
+20:04:21    80/220 sentences, every unit parsed (0.6s each)
+20:04:24    100/220 sentences, every unit parsed (0.5s each)
+20:04:29    120/220 sentences, every unit parsed (0.4s each)
+20:04:33    140/220 sentences, every unit parsed (0.4s each)
+20:04:38    160/220 sentences, every unit parsed (0.4s each)
+20:04:44    180/220 sentences, every unit parsed (0.4s each)
+20:04:48    200/220 sentences, every unit parsed (0.4s each)
+20:04:54    220/220 sentences, every unit parsed (0.4s each)
+20:04:55    us: 300 new sentences drawn from 268918
+20:04:58    ontario: 300 new sentences drawn from 415657
+20:05:00    quebec: 300 new sentences drawn from 348752
+20:05:16    loaded the discourse parser (UniRST) in 15.8s
+20:05:25    10 new sentences parsed
+20:05:31    20 new sentences parsed
+20:05:37    30 new sentences parsed
+20:05:46    40 new sentences parsed
+20:05:54    50 new sentences parsed
+20:05:59    60 new sentences parsed
+20:06:04    70 new sentences parsed
+20:06:11    80 new sentences parsed
+20:06:18    90 new sentences parsed
+20:06:25    100 new sentences parsed
+20:06:33    110 new sentences parsed
+20:06:39    120 new sentences parsed
+20:06:45    130 new sentences parsed
+20:06:49    140 new sentences parsed
+20:06:54    150 new sentences parsed
+20:06:59    160 new sentences parsed
+20:07:12    170 new sentences parsed
+20:07:17    180 new sentences parsed
+20:07:23    190 new sentences parsed
+20:07:29    200 new sentences parsed
+20:07:38    210 new sentences parsed
+20:07:47    220 new sentences parsed
+20:07:55    230 new sentences parsed
+20:08:01    240 new sentences parsed
+20:08:06    250 new sentences parsed
+20:08:11    260 new sentences parsed
+20:08:17    270 new sentences parsed
+20:08:21    280 new sentences parsed
+20:08:27    290 new sentences parsed
+20:08:32    300 new sentences parsed
+20:08:38    310 new sentences parsed
+20:08:45    320 new sentences parsed
+20:08:51    330 new sentences parsed
+20:08:57    340 new sentences parsed
+20:09:03    350 new sentences parsed
+20:09:08    360 new sentences parsed
+20:09:15    370 new sentences parsed
+20:09:19    380 new sentences parsed
+20:09:23    390 new sentences parsed
+20:09:28    400 new sentences parsed
+20:09:33    410 new sentences parsed
+/Users/caprice/MiscellaneousProjects/legislative-health-factuality/venv/lib/python3.10/site-packages/torch_struct/distributions.py:46: UserWarning: <class 'torch_struct.distributions.TreeCRF'> does not define `arg_constraints`. Please set `arg_constraints = {}` or initialize the distribution with `validate_args=False` to turn off validation.
+  super().__init__(batch_shape=batch_shape, event_shape=event_shape)
+20:09:43    420 new sentences parsed
+20:09:50    430 new sentences parsed
+20:09:56    440 new sentences parsed
+20:10:02    450 new sentences parsed
+20:10:08    460 new sentences parsed
+20:10:17    470 new sentences parsed
+20:10:24    480 new sentences parsed
+20:10:31    490 new sentences parsed
+20:10:37    500 new sentences parsed
+20:10:43    510 new sentences parsed
+20:10:49    520 new sentences parsed
+20:11:00    530 new sentences parsed
+20:11:14    540 new sentences parsed
+20:11:24    550 new sentences parsed
+20:11:31    560 new sentences parsed
+20:11:39    570 new sentences parsed
+20:11:44    580 new sentences parsed
+20:11:53    590 new sentences parsed
+20:12:04    600 new sentences parsed
+20:12:13    610 new sentences parsed
+20:12:17    620 new sentences parsed
+20:12:22    630 new sentences parsed
+20:12:28    640 new sentences parsed
+20:12:33    650 new sentences parsed
+20:12:39    660 new sentences parsed
+20:12:47    670 new sentences parsed
+20:12:51    680 new sentences parsed
+20:12:56    690 new sentences parsed
+20:13:02    700 new sentences parsed
+20:13:07    710 new sentences parsed
+20:13:14    720 new sentences parsed
+20:13:18    730 new sentences parsed
+20:13:21    740 new sentences parsed
+20:13:26    750 new sentences parsed
+20:13:31    760 new sentences parsed
+20:13:36    770 new sentences parsed
+20:13:40    780 new sentences parsed
+20:13:47    790 new sentences parsed
+20:13:54    800 new sentences parsed
+20:14:02    810 new sentences parsed
+20:14:14    820 new sentences parsed
+20:14:19    830 new sentences parsed
+20:14:24    840 new sentences parsed
+20:14:29    850 new sentences parsed
+20:14:34    860 new sentences parsed
+20:14:40    870 new sentences parsed
+20:14:44    880 new sentences parsed
+20:14:50    890 new sentences parsed
+20:14:54    900 new sentences parsed
+20:14:55 == wrote /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/edu_trees.json (1120 sentences) and /Users/caprice/MiscellaneousProjects/legislative-health-factuality/outputs/edu/more_parses.json (900 new)
+== 2/7 lines from each unit's own tree, connected through the discourse parse
+wrote outputs/edu/edu_reparsed.json: 220 sentences, 508 units, 482 lines
+wrote outputs/edu/more_reparsed.json: 900 sentences, 2727 units, 2645 lines
+wrote outputs/edu/edu_with_sentence_tree.json: 220 sentences, 508 units, 458 lines
+== 3/7 scores against the answer keys
+heldout en         discourse first      29/36    81%   18/36    50%      7 of 36
+heldout fr         discourse first      23/33    70%   14/33    42%     17 of 40
+sample en          discourse first     102/119   86%   55/119   46%     30 of 132
+sample fr          discourse first      94/116   81%   48/116   41%     40 of 134
+simple tests en    discourse first      70/70   100%   70/70   100%      0 of 70
+simple tests fr    discourse first      70/70   100%   70/70   100%      0 of 70
+== 4/7 figures (tree inside a tree)
+wrote docs/discourse_first_figures.html with 8 sentences
+wrote docs/discourse_first_new_sentences.html with 12 sentences
+wrote 3 SVG figures to docs/figures/
+wrote 3 PNG figures with playwright
+== 5/7 the notebook: every step, more sentences per legislature, the data files, and the tests (about 10 minutes)
+wrote notebooks/discourse_first.ipynb
+checks and rule tests: 111 pass, 0 fail
+trees: parsed now
+            set  found %  exact % exact 95% interval
+     heldout en       81       50           34 to 66
+     heldout fr       70       42           27 to 59
+      sample en       86       46           38 to 55
+      sample fr       81       41           33 to 50
+simple tests en      100      100          95 to 100
+simple tests fr      100      100          95 to 100
+
+== 6/7 the workbook (docs/discourse_first_examples.xlsx)
+rerun here vs outputs/edu: 1120 of 1120 sentences give the same lines
+scores here match outputs/edu/edu_score_reparsed.txt for all six sets
+figures: using the PNGs in docs/figures
+wrote docs/discourse_first_examples.xlsx with 11 tabs: Start here, Check together, Flow 1 hardware store, Flow 2 Senat (French), Flow 3 where it fails, Step 1 Discourse parse, Step 2 Unit trees, Step 3-4 Lines, Step 5 Records for DBpedia, Key vs output, French misses
+== 7/7 the check book: each new sentence on its own page, with its figure and boxes to mark each claim
+wrote docs/discourse_first_check_book.html with 900 sentences
+wrote docs/discourse_first_check_book.pdf
+wrote docs/discourse_first_check_book_all.html with 1030 sentences
+wrote docs/discourse_first_check_book_all.pdf
+wrote 1030 SVG figures to docs/figures/all/
+wrote 1030 PNG figures with playwright
+== done: outputs/edu/, docs/discourse_first_*.html, docs/discourse_first_check_book.pdf, docs/figures/, docs/discourse_first_examples.xlsx, notebooks/discourse_first.ipynb, outputs/edu/notebook_outputs.txt (the notebook's results as text)
+== finished Sun Nov  1 20:18:00 EST 2026

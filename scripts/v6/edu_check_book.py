@@ -20,6 +20,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("out")
 ap.add_argument("records", nargs="+")
 ap.add_argument("--rows", default="", help="sentence IDs to include, in order; default: every 'more|' sentence")
+ap.add_argument("--sets", default="", help="every sentence in these sets, in order, e.g. sample,heldout,more")
 A = ap.parse_args()
 
 recs = {}
@@ -27,6 +28,19 @@ for f in A.records:
     for r in json.load(open(f, encoding="utf-8"))["rows"]:
         recs[r["n"]] = r
 LEG = {"US": "US House", "ON": "Ontario", "QC": "Quebec"}
+HERE = os.path.dirname(os.path.abspath(__file__))
+JUR = {"us": "US House", "ontario": "Ontario", "quebec": "Quebec"}
+BY_TEXT, BY_HELD = {}, {}
+try:                                    # the sample sentences: their legislature is in the saved parse list
+    for x in json.load(open(os.path.join(HERE, "pc.json"), encoding="utf-8"))["rows"]:
+        BY_TEXT[x["text"]] = JUR.get(x.get("jurisdiction"), "")
+except Exception:
+    pass
+try:                                    # the held-out sentences: in their ID
+    for x in json.load(open(os.path.join(HERE, "heldout.json"), encoding="utf-8")):
+        BY_HELD[f"heldout|{x['h']}"] = LEG.get(x["sentence_id"].split("|")[0], "")
+except Exception:
+    pass
 
 
 def order_key(n):
@@ -34,7 +48,16 @@ def order_key(n):
     return (["US", "ON", "QC"].index(p[1]) if len(p) > 2 and p[1] in LEG else 9, int(p[2]) if len(p) > 2 and p[2].isdigit() else 0, n)
 
 
-want = [n for n in A.rows.split(",") if n in recs] if A.rows else sorted((n for n in recs if n.startswith("more|")), key=order_key)
+def set_key(n):
+    p = n.split("|")
+    sets = A.sets.split(",")
+    return (sets.index(p[0]), ["US", "ON", "QC"].index(p[1]) if p[0] == "more" else 0, int(p[-1]) if p[-1].isdigit() else 0, n)
+
+
+if A.sets:
+    want = sorted((n for n in recs if n.split("|")[0] in A.sets.split(",")), key=set_key)
+else:
+    want = [n for n in A.rows.split(",") if n in recs] if A.rows else sorted((n for n in recs if n.startswith("more|")), key=order_key)
 if not want:
     sys.exit("no sentences to put in the check book (check --rows or the records file)")
 esc = html.escape
@@ -45,7 +68,9 @@ def legislature(r):
     if len(p) > 2 and p[1] in LEG:
         return LEG[p[1]]
     sid = r.get("sentence_id") or ""
-    return LEG.get(sid.split("|")[0], "") if sid else ""
+    if sid:
+        return LEG.get(sid.split("|")[0], "")
+    return BY_HELD.get(r["n"]) or BY_TEXT.get(r["text"], "")
 
 
 def came_from(l):
@@ -124,7 +149,7 @@ legs = sorted({legislature(recs[n]) for n in want if legislature(recs[n])})
 cover = f"""<section class="page cover">
 <h1>Check book: claims read discourse first</h1>
 <p>{len(want)} sentences{(' from the ' + ', '.join(legs)) if legs else ''}, one per page.
-{'They were drawn at random from each legislature (20 each, seed 20261026), and no rule was written while looking at them.' if all(n.startswith('more|') for n in want) else ''}</p>
+{'They were drawn at random from each legislature (20 each, seed 20261026), and no rule was written while looking at them.' if all(n.startswith('more|') for n in want) else 'The 100 sample sentences, the 30 held-out sentences and the 60 new ones drawn at random (20 per legislature), in that order.' if A.sets else ''}</p>
 <p>Each page shows the sentence, its figure (the discourse parse drawn the Mann and Thompson way on top, each unit's own constituency tree
 under it), the units, how the discourse parse connects them, and every claim the pipeline read, with where each part of the claim came from.</p>
 <ul>
@@ -142,8 +167,17 @@ try:
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
         b = pw.chromium.launch()
-        pg = b.new_page()
+        pg = b.new_page(viewport={"width": 1536, "height": 960})
         pg.set_content(doc)
+        pg.emulate_media(media="print")
+        # a page taller than the sheet (11in less the margins, 960px) would spill onto a second sheet: shrink its figure
+        for _ in range(3):
+            over = pg.evaluate("""() => { let n = 0; for (const s of document.querySelectorAll('section.page')) {
+                const h = s.getBoundingClientRect().height; const svg = s.querySelector('.fig svg');
+                if (h > 950 && svg) { const cur = svg.getBoundingClientRect().height;
+                    svg.style.maxHeight = Math.max(90, cur - (h - 950) - 6) + 'px'; n++; } } return n; }""")
+            if not over:
+                break
         pg.pdf(path=A.out + ".pdf", width="17in", height="11in", print_background=True,
                margin={"top": "0.5in", "bottom": "0.5in", "left": "0.5in", "right": "0.5in"})
         b.close()

@@ -1,10 +1,11 @@
-"""edu_dbpedia_xlsx.py EDU_DBPEDIA.json OUT.xlsx
+"""edu_dbpedia_xlsx.py EDU_DBPEDIA.json OUT.xlsx [SENSE_CHECK.csv [ADJUSTED.json]]
 
 The DBpedia check (edu_dbpedia.py) as a workbook to read and mark: a start page, every claim with the concepts at its
 two ends and why an end has none, every concept once (word and page) to mark right or wrong, the reasons counted, and
 the comparison with the Oct 15 run. Every cell is printed from edu_dbpedia.json. Needs openpyxl.
     python3 scripts/v6/edu_dbpedia_xlsx.py outputs/dbpedia/edu_dbpedia.json docs/dbpedia_check.xlsx"""
 import collections
+import csv
 import json
 import math
 import sys
@@ -15,6 +16,11 @@ from openpyxl.utils import get_column_letter
 
 d = json.load(open(sys.argv[1], encoding="utf-8"))
 OUT = sys.argv[2]
+SENSE = {}                      # (word, page) -> the two independent readings of whether the page is what the speaker means
+if len(sys.argv) > 3:
+    for x in csv.DictReader(open(sys.argv[3], encoding="utf-8")):
+        SENSE[(x["word"], x["page"])] = x
+ADJ = json.load(open(sys.argv[4], encoding="utf-8")) if len(sys.argv) > 4 else None
 FONT = "Calibri"
 HEAD = Font(name=FONT, bold=True, size=10, color="FFFFFF")
 HEAD_FILL = PatternFill("solid", fgColor="595959")
@@ -100,6 +106,23 @@ start = [
     ("Results", None),
 ]
 start += [("", ln) for ln in d["summary"].split("\n") if ln.strip()]
+if SENSE:
+    vals = collections.Counter(x["both_readings"] for x in SENSE.values())
+    start += [("Is each page the right sense?", None),
+              ("How this was checked", f"Every distinct word and page pair ({len(SENSE)}) was read twice, independently, by two AI readers "
+               "working only from the sentence (not the web): is this page the thing the speaker means? Both readings are on the Concepts "
+               "tab. They are one kind of check done twice, not a person's check; the Right? column is for that."),
+              ("Both readings say right", str(vals["right"])), ("Both readings say wrong", str(vals["wrong"])),
+              ("The readings disagree or are unsure", str(len(SENSE) - vals["right"] - vals["wrong"]))]
+if ADJ:
+    def line(mode, g):
+        a = ADJ[mode]; n = a[f"{g}|claims"]
+        return f"{g}: both ends right {a[f'{g}|both']}/{n} ({100 * a[f'{g}|both'] / n:.0f}%), a walk between them {a[f'{g}|walk']}/{n}"
+    start += [("Counting only right senses", None),
+              ("Strict (both readings right)", "; ".join(line("strict", g) for g in ("all", "US House", "Ontario", "Quebec"))),
+              ("Lenient (either reading right)", "; ".join(line("lenient", g) for g in ("all", "US House", "Ontario", "Quebec"))),
+              ("", "The walk is recomputed between right pages only. These replace 'both ends in DBpedia' above as the share of claims "
+                   "that are encyclopedic facts, until a person has checked the senses.")]
 start += [
     ("How to check", None),
     ("Concepts tab", "Every word and page pair once. Mark Right? yes or no (is this the thing the speaker means?). One mark covers "
@@ -124,8 +147,8 @@ for a, b in start:
 
 # ------------------------------------------------------------------ concepts once
 cw = sheet(wb, "Concepts", ["Word", "Page", "How it was found", "Claims", "Sentences", "Example sentence", "DBpedia page",
-                            "Worth a look", "Right?", "Note"],
-           [24, 34, 40, 8, 26, 70, 40, 22, 9, 30],
+                            "Worth a look", "Reading A", "Reading B", "Right?", "Note"],
+           [24, 34, 40, 8, 26, 70, 40, 22, 30, 30, 9, 30],
            note="Every word and page pair the concept step gave, once. 'Worth a look': a name whose page name shares no word with it "
                 "(like AHP -> Krasue on Oct 15), or a concept judged wrong in the Oct 13 hand check.")
 pairs = collections.OrderedDict()
@@ -138,9 +161,20 @@ for r, c in claims:
             p["n"] += 1
             if r["n"] not in p["sents"]:
                 p["sents"].append(r["n"])
-for (w, pg), p in sorted(pairs.items(), key=lambda kv: (not kv[1]["odd"], kv[0][1].startswith("("), kv[0][1].lower())):
+def first(kv):
+    sx = SENSE.get(kv[0])
+    bad = 0 if sx and sx["both_readings"] == "wrong" else 1 if sx and sx["both_readings"] != "right" else 2
+    return (bad, not kv[1]["odd"], kv[0][1].startswith("("), kv[0][1].lower())
+
+
+for (w, pg), p in sorted(pairs.items(), key=first):
     look = "page name unlike the word" if p["odd"] else ("judged wrong on Oct 13" if p["old"] is False else "")
-    add(cw, [w, pg, p["how"], p["n"], ", ".join(p["sents"][:6]) + (" ..." if len(p["sents"]) > 6 else ""), p["ex"], p["link"], look, "", ""])
+    sx = SENSE.get((w, pg))
+    if sx and sx["both_readings"] != "right":
+        look = (look + "; " if look else "") + ("both readings say wrong" if sx["both_readings"] == "wrong" else "the readings disagree")
+    ra = f"{sx['reading_A']}: {sx['reason_A']}" if sx else ""
+    rb = f"{sx['reading_B']}: {sx['reason_B']}" if sx else ""
+    add(cw, [w, pg, p["how"], p["n"], ", ".join(p["sents"][:6]) + (" ..." if len(p["sents"]) > 6 else ""), p["ex"], p["link"], look, ra, rb, "", ""])
 finish(cw)
 
 # ------------------------------------------------------------------ every claim

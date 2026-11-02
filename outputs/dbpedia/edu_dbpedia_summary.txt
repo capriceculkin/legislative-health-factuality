@@ -1,52 +1,52 @@
 DBpedia concepts in the discourse-first claims (concept step: concepts_v3 version 1, as on Oct 15; graph mappingbased-objects_2022.12.01_en.ttl.bz2.merged.graph.npz)
-sentences: 190 (sample 100, heldout 30, more 60); Spotlight: live, through the tunnel
+sentences: 190 (sample 100, heldout 30, more 60); Spotlight: saved answers
 parts of speech for the noun check: 100 sentences from the saved spaCy parse (as on Oct 15); 90 sentences from the unit trees
 
-All claims: 534 claims
-   both ends in DBpedia        69/534 (13%)
-   one end in DBpedia          202/534 (38%)
-   neither end in DBpedia      263/534 (49%)
-   a walk links the two ends   54/534 (10%)
+All claims: 531 claims
+   both ends in DBpedia        68/531 (13%)
+   one end in DBpedia          207/531 (39%)
+   neither end in DBpedia      256/531 (48%)
+   a walk links the two ends   53/531 (10%)
 
-Claims the speaker asserts (kind = asserted): 373 claims
-   both ends in DBpedia        51/373 (14%)
-   one end in DBpedia          143/373 (38%)
-   neither end in DBpedia      179/373 (48%)
-   a walk links the two ends   39/373 (10%)
+Claims the speaker asserts (kind = asserted): 370 claims
+   both ends in DBpedia        50/370 (14%)
+   one end in DBpedia          148/370 (40%)
+   neither end in DBpedia      172/370 (46%)
+   a walk links the two ends   38/370 (10%)
 
-US House: 144 claims
-   both ends in DBpedia        28/144 (19%)
-   one end in DBpedia          80/144 (56%)
-   neither end in DBpedia      36/144 (25%)
-   a walk links the two ends   21/144 (15%)
+US House: 143 claims
+   both ends in DBpedia        28/143 (20%)
+   one end in DBpedia          80/143 (56%)
+   neither end in DBpedia      35/143 (24%)
+   a walk links the two ends   21/143 (15%)
 
 Ontario: 152 claims
-   both ends in DBpedia        36/152 (24%)
-   one end in DBpedia          63/152 (41%)
-   neither end in DBpedia      53/152 (35%)
-   a walk links the two ends   30/152 (20%)
+   both ends in DBpedia        35/152 (23%)
+   one end in DBpedia          68/152 (45%)
+   neither end in DBpedia      49/152 (32%)
+   a walk links the two ends   29/152 (19%)
 
-Quebec: 238 claims
-   both ends in DBpedia        5/238 (2%)
-   one end in DBpedia          59/238 (25%)
-   neither end in DBpedia      174/238 (73%)
-   a walk links the two ends   3/238 (1%)
+Quebec: 236 claims
+   both ends in DBpedia        5/236 (2%)
+   one end in DBpedia          59/236 (25%)
+   neither end in DBpedia      172/236 (73%)
+   a walk links the two ends   3/236 (1%)
 
-English: 300 claims
-   both ends in DBpedia        65/300 (22%)
-   one end in DBpedia          144/300 (48%)
-   neither end in DBpedia      91/300 (30%)
-   a walk links the two ends   51/300 (17%)
+English: 299 claims
+   both ends in DBpedia        64/299 (21%)
+   one end in DBpedia          149/299 (50%)
+   neither end in DBpedia      86/299 (29%)
+   a walk links the two ends   50/299 (17%)
 
-French: 234 claims
-   both ends in DBpedia        4/234 (2%)
-   one end in DBpedia          58/234 (25%)
-   neither end in DBpedia      172/234 (74%)
-   a walk links the two ends   3/234 (1%)
+French: 232 claims
+   both ends in DBpedia        4/232 (2%)
+   one end in DBpedia          58/232 (25%)
+   neither end in DBpedia      170/232 (73%)
+   a walk links the two ends   3/232 (1%)
 
-Why a subject has no concept (all 534 claims)
-   pronoun                       196
-   Spotlight spotted nothing     155
+Why a subject has no concept (all 531 claims)
+   pronoun                       192
+   Spotlight spotted nothing     156
    in DBpedia                    126
    the bill under debate         32
    page not in the graph         8
@@ -55,17 +55,16 @@ Why a subject has no concept (all 534 claims)
    nothing to link               5
    no content word               1
 
-Why a object has no concept (all 534 claims)
-   in DBpedia                    214
-   Spotlight spotted nothing     173
-   nothing to link               43
-   pronoun                       21
-   a clause                      19
-   page not in the graph         19
+Why a object has no concept (all 531 claims)
+   in DBpedia                    217
+   Spotlight spotted nothing     169
+   nothing to link               42
+   pronoun                       22
+   a clause                      20
+   page not in the graph         20
    the bill under debate         18
    not a noun or a name          15
    senses rejected               6
-   no content word               4
    a number or an amount         2
 
 Concepts whose page name shares no word with the words spotted (worth a look, like AHP -> Krasue): 8
@@ -78,6 +77,15 @@ Concepts whose page name shares no word with the words spotted (worth a look, li
    sample|40         'Queen' -> Elizabeth_II
    sample|5          'HMO' -> Health_maintenance_organization
 
-Claims whose unit has a DBpedia concept at neither end of the claim (in the verb or an adjunct): 84/534 (16%)
+What Spotlight spotted, by language (phrases with at least one candidate sense, per sentence)
+   English   106 sentences; 6.7 phrases per sentence; none at all in 0
+   French    84 sentences; 0.9 phrases per sentence; none at all in 37
 
-(no Oct 15 comparison: /Users/caprice/Desktop/next_steps/oct15/concepts_v3.json was not found; pass --oct15 with that folder)
+Pages given but not in the 2022 graph (the graph holds only pages with infobox links): Goal (4), Cost (2), Statistical_assumption (2), Overtime, Wrongdoing, Free_module, Tax_cut, Alarm_device, Legal_case, Array_data_structure, Plan, (the bill), Central_Rook, Taxation_in_France, Undue_hardship, Slipway, Obligation, Order_Paper, Small_and_medium_enterprises, Family_(taxonomy), United_States_House_Energy_Subcommittee_on_Health, Red_tape, Petal
+
+The why-not replay disagreed with the concept step 1 times (the concepts are the concept step's; only the reason may be off):
+   sample|57 object 'le financement du gouvernement fédéral': replay kept ['gouvernement fédéral', 'Government_of_Canada'], concept step found [['du gouvernement', 'Government_of_Quebec']]
+
+Claims whose unit has a DBpedia concept at neither end of the claim (in the verb or an adjunct): 83/531 (16%)
+
+(no Oct 15 comparison: /tmp/claude-0/-home-claude/81c4d9b9-6092-5870-904e-89ce6e1eefb1/scratchpad/mac/home/Desktop/next_steps/oct15/concepts_v3.json was not found; pass --oct15 with that folder)

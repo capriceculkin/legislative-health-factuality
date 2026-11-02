@@ -17,5 +17,10 @@ fi
 echo "== 1/2 concepts and walks for every claim (concept step from $CDIR)"
 python3 $R/edu_dbpedia.py $O outputs/edu/edu_reparsed.json outputs/edu/more_reparsed.json --concepts-dir "$CDIR" $( [ "${OFFLINE:-0}" = 1 ] && echo --offline )
 echo "== 2/2 the check workbook (docs/dbpedia_check.xlsx)"
-python3 $R/edu_dbpedia_xlsx.py $O/edu_dbpedia.json docs/dbpedia_check.xlsx
+if [ -f $O/sense_check.csv ]; then        # the two readings of each page's sense, and the counts with only right senses
+  python3 $R/edu_dbpedia_senses.py $O/edu_dbpedia.json $O/sense_check.csv $O/sense_adjusted.json --concepts-dir "$CDIR"
+  python3 $R/edu_dbpedia_xlsx.py $O/edu_dbpedia.json docs/dbpedia_check.xlsx $O/sense_check.csv $O/sense_adjusted.json
+else
+  python3 $R/edu_dbpedia_xlsx.py $O/edu_dbpedia.json docs/dbpedia_check.xlsx
+fi
 echo "== done: $O/edu_dbpedia.json, $O/edu_dbpedia_summary.txt, docs/dbpedia_check.xlsx"

@@ -39,3 +39,11 @@ data/us/hein-bound/
 data/us/hein-daily/
 data/canada/ontario/hansard_api_bill_segments_clean.json
 data/canada/ontario/hansard_api_bill_segments_clean.json.gz
+
+# the full run writes about 7 GB here
+outputs/full/
+# copies of the data from before each fix (19 GB)
+archive/data_snapshots/
+
+# python cache folders
+__pycache__/

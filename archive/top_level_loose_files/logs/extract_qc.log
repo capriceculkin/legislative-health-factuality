@@ -1,0 +1,17 @@
+quebec [en] loading en_core_web_lg for 1,730 sentences (resuming at 0)
+quebec [fr] loading fr_core_news_lg for 283,502 sentences (resuming at 0)
+   25,000/283,502 (493/s), predications so far 2,213
+   50,000/283,502 (463/s), predications so far 4,370
+   75,000/283,502 (458/s), predications so far 6,526
+   100,000/283,502 (470/s), predications so far 8,440
+   125,000/283,502 (469/s), predications so far 10,883
+   150,000/283,502 (461/s), predications so far 13,107
+   175,000/283,502 (461/s), predications so far 15,619
+   200,000/283,502 (456/s), predications so far 18,345
+   225,000/283,502 (459/s), predications so far 20,935
+   250,000/283,502 (457/s), predications so far 23,300
+   275,000/283,502 (458/s), predications so far 25,650
+quebec: 26,520 predications from 285,232 sentences (9.3%)
+   by language: {'en': 140, 'fr': 26380}
+   hedged: 5,862  negated: 1,900
+   saved /Users/caprice/MiscellaneousProjects/legislative-health-factuality/data/dbpedia_pipeline/quebec/predications_v3.json

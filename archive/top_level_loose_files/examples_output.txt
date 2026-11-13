@@ -1,0 +1,213 @@
+=== 1. SESSION-BASED BILL ALIGNMENT ===
+File: data/canada/ontario/ontario_bill_index.json
+GitHub: https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/ontario/ontario_bill_index.json
+
+Total health bills: 477
+
+  Key: 33-2-Bill94
+  Title: An Act regulating the Amounts that Persons may charge for rendering Services tha
+  Session: 33-2
+  Debate dates: ['1985-12-20', '1986-01-14', '1986-01-17']
+
+  Key: 34-2-Bill52
+  Title: An Act to amend certain Statutes of Ontario Consequent upon Enactment of the Mun
+  Session: 34-2
+  Debate dates: ['1989-07-20', '1989-10-10', '1989-12-06']
+
+  Key: 42-2-Bill175
+  Title: An Act to amend and repeal various Acts respecting home care and community servi
+  Session: 42-2
+  Debate dates: ['2020-02-25', '2020-02-26', '2020-02-27']
+
+  Key: 35-3-Bill50
+  Title: An Act to implement the Government's expenditure control plan and, in that conne
+  Session: 35-3
+  Debate dates: ['1993-11-15', '1993-11-16', '1993-11-17']
+
+  Key: 33-2-Bill113
+  Title: An Act to amend the Homemakers and Nurses Services Act
+  Session: 33-2
+  Debate dates: ['1986-07-03']
+
+=== 2. DAY-BASED BILL-SPEECH ALIGNMENT ===
+File: data/canada/ontario/hansard_api_bill_segments.json
+Yale OneDrive: https://yaleedu-my.sharepoint.com/:u:/g/personal/caprice_culkin_yale_edu/IQCAGMCyyH_0ToGTWu1erpwpAV8Bcot0NVoBJZ5BJPxiTYI?e=NO1Els
+
+Total bills: 212
+Total paragraphs: 63,615
+
+  Bill: 33-2-Bill124
+  Debate dates: 1
+    Date: 1985-11-26 | Paragraphs: 204
+    Topic: WELLINGTON COUNTY BOARD OF EDUCATION AND TEACHERS DISPUTE SETTLEMENT ACT
+    Speaker: Mr. Foulds
+    Text: I want to speak briefly on the bill. I do so both for reasons of principle and for personal reasons. I have never voted 
+    Session: 33-1 | URL: https://www.ola.org/en/legislative-business/house-documents/
+
+  Bill: 33-2-Bill54
+  Debate dates: 13
+    Date: 1985-12-05 | Paragraphs: 136
+    Topic: ONTARIO DRUG BENEFIT ACT
+    Speaker: Procedure
+    Text: Hon. Mr. Elston moved second reading of Bill 54, An Act to Authorize and Regulate the Payment by the Minister to Specifi
+    Session: 33-1 | URL: https://www.ola.org/en/legislative-business/house-documents/
+    Date: 1985-12-19 | Paragraphs: 1
+    Topic: BUSINESS OF THE HOUSE
+    Speaker: Hon. Mr. Nixon
+    Text: I would like to indicate the business of the House for the remainder of this week and the week of January 6, 1986.  Tomo
+    Session: 33-1 | URL: https://www.ola.org/en/legislative-business/house-documents/
+
+  Bill: 33-2-Bill89
+  Debate dates: 2
+    Date: 1985-12-19 | Paragraphs: 2
+    Topic: EXECUTIVE COUNCIL AMENDMENT ACT
+    Speaker: Procedure
+    Text: Hon. Mr. Nixon moved second reading of Bill 89, An Act to amend the Executive Council Act.
+    Session: 33-1 | URL: https://www.ola.org/en/legislative-business/house-documents/
+    Date: 1985-12-20 | Paragraphs: 9
+    Topic: THIRD READINGS
+    Speaker: Procedure
+    Text: Bill 89, An Act to amend the Executive Council Act.
+    Session: 33-1 | URL: https://www.ola.org/en/legislative-business/house-documents/
+
+=== 3. PREDICATIONS EXTRACTED FROM HANSARD RECORDS ===
+File: data/dbpedia_pipeline/ontario/predications.json
+
+  ONTARIO: 197,316 predications
+    sentence_id: 19850708-api-1985b32-p0-s7
+    subject: Those people
+    verb: consult
+    object: some length
+    hedged: True
+    full text: Those people who have to pay the bill also should be consulted at some length about the levels of af
+
+    sentence_id: 19850708-api-1985b32-p0-s8
+    subject: WCB benefits
+    verb: take
+    object: 1.5
+    hedged: False
+    full text: At the present time, WCB benefits take about 1.5 per cent of the average payroll.
+
+    sentence_id: 19850708-api-1985b32-p1-s5
+    subject: this party
+    verb: introduce
+    object: the first package
+    hedged: False
+    full text: The first year after that, this party introduced the first package of benefits to workers.
+
+  US: 141,186 predications
+    sentence_id: 1985-06-18-0
+    subject: GPO-CRECB-1985-pt12
+    verb: meet
+    object: o'clock noon
+    hedged: False
+    full text: --- GPO-CRECB-1985-pt12-2-2 --The House met at o'clock noon.
+
+    sentence_id: 1985-06-18-3
+    subject: Your spirit
+    verb: give
+    object: courage
+    hedged: True
+    full text: May Your spirit give courage and strength to them and to their families.
+
+    sentence_id: 1985-06-18-4
+    subject: Our hearts
+    verb: reach
+    object: the bond
+    hedged: False
+    full text: Our hearts reach out in the bond of concern to those who are anx ious, even as we pray for understan
+
+  QUEBEC: 41,718 predications
+    sentence_id: 19851219-bill3-t0-s0
+    subject: gouverneur
+    verb: prendre
+    object: connaissance
+    hedged: False
+    full text: M. le Président, l'honorable
+		lieutenant-gouverneur a pris connaissance de ce projet de loi et il e
+
+    sentence_id: 19851219-bill3-t4-s4
+    subject: Le discours
+    verb: introduire
+    object: de nouvelles mesures
+    hedged: False
+    full text: Le discours sur le budget prononcé le 23 avril 1985 a introduit,
+		à compter de cette date, de nouve
+
+    sentence_id: 19851219-bill3-t15-s3
+    subject: Des régions
+    verb: savoir
+    object: quelque chose
+    hedged: False
+    full text: Des régions comme celle que je
+		représente en savent quelque chose.
+
+=== 4. SVO TRIPLES WITH DBPEDIA ENTITY RECOGNITION ===
+
+  US: 50,500 triples
+    sentence_id: 2026-04-21-393
+    subject: Hausman
+    verb: work
+    object: legendary mathematicians
+    hedged: False
+    DBpedia URIs: ['http://dbpedia.org/resource/Ultra', 'http://dbpedia.org/resource/Alan_Turing', 'http://dbpedia.org/resource/Nazi_Germany']
+
+    sentence_id: 2026-04-21-395
+    subject: Navy
+    verb: decorate
+    object: Hausman
+    hedged: False
+    DBpedia URIs: ['http://dbpedia.org/resource/United_States_Navy', 'http://dbpedia.org/resource/Ultra', 'http://dbpedia.org/resource/Allies_of_World_War_II']
+
+    sentence_id: 2026-04-21-396
+    subject: Hausman
+    verb: earn
+    object: a master's degree
+    hedged: False
+    DBpedia URIs: ['http://dbpedia.org/resource/Engineering_physics', 'http://dbpedia.org/resource/Physics', 'http://dbpedia.org/resource/Harvard_University']
+
+  QUEBEC: 8,800 triples
+    sentence_id: 20260609-bill9-t0-s0
+    subject: la députée
+    verb: mentionner
+    object: Abitibi
+    hedged: False
+    DBpedia URIs: ['http://fr.dbpedia.org/resource/Abitibi-Ouest', 'http://fr.dbpedia.org/resource/Abitibi-Est']
+
+    sentence_id: 20260611-bill24-t6-s6
+    subject: Cryptomonnaie
+    verb: manquer
+    object: imagination
+    hedged: False
+    DBpedia URIs: ['http://fr.dbpedia.org/resource/Cryptomonnaie', 'http://fr.dbpedia.org/resource/Diabète_sucré']
+
+    sentence_id: 20260611-bill496-t25-s2
+    subject: le
+ Parti québécois
+    verb: déposer
+    object: le projet
+    hedged: False
+    DBpedia URIs: ['http://fr.dbpedia.org/resource/1999', 'http://fr.dbpedia.org/resource/Parti_québécois', 'http://fr.dbpedia.org/resource/Iris_versicolore']
+
+  ONTARIO: 48,400 triples
+    sentence_id: 19900626-api-1989b231-p44-s1
+    subject: Northern Ontario
+    verb: suffer
+    object: the hands
+    hedged: False
+    DBpedia URIs: ['http://dbpedia.org/resource/Northern_Ontario', 'http://dbpedia.org/resource/Ontario']
+
+    sentence_id: 19900626-api-1989b231-p47-s1
+    subject: Tout à l'heure je vous
+    verb: ai
+    object: parler
+    hedged: False
+    DBpedia URIs: ['http://dbpedia.org/resource/Artificial_intelligence', 'http://dbpedia.org/resource/Parler']
+
+    sentence_id: 19900626-api-1989b231-p67-s32
+    subject: my ministry
+    verb: build
+    object: two apartment buildings
+    hedged: False
+    DBpedia URIs: ['http://dbpedia.org/resource/Attawapiskat_First_Nation', 'http://dbpedia.org/resource/Fort_Albany_First_Nation']
+

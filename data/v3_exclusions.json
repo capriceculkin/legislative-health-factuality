@@ -502,5 +502,21 @@
   "reason": "section is a petition on hospital restructuring, not debate on Bill 149 (Fair Municipal Finance Act)",
   "evidence": "OLA bill status page for 36-1 Bill 149",
   "verified": "by hand against the official record: the OLA status page lists October 2, 1997 for Bill 149 only as 'Time allocated' (a procedural motion); our section for that day is a petition headed HOSPITAL RESTRUCTURING that never names the bill (checked 2026-09-27)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "33-1-Bill52",
+  "date": "1985-12-17",
+  "reason": "not a Bill 52 sitting: the Hansard text for this day is the first reading of Bill 86, another bill titled An Act to amend the Health Protection and Promotion Act (moved by Mr. D. S. Cooke); Bill 52 is not named",
+  "evidence": "the OLA Hansard paragraphs saved for this bill-day (https://www.ola.org/en/legislative-business/house-documents/parliament-33/session-1/1985-12-17/hansard#PARA305)",
+  "verified": "by hand against the official Hansard text saved in data/canada/ontario/v3 (checked 2026-10-05)"
+ },
+ {
+  "jurisdiction": "ontario",
+  "bill_key": "33-3-Bill79",
+  "date": "1987-06-29",
+  "reason": "not a Bill 79 debate: the Hansard text kept for this day is the first reading of Bill 106, another bill titled An Act to amend the Occupational Health and Safety Act (moved by Hon. Mr. Wrye); Bill 79 is not named",
+  "evidence": "the OLA Hansard paragraphs saved for this bill-day (https://www.ola.org/en/legislative-business/house-documents/parliament-33/session-3/1987-06-29/hansard#PARA392)",
+  "verified": "by hand against the official Hansard text saved in data/canada/ontario/v3 (checked 2026-10-05)"
  }
 ]

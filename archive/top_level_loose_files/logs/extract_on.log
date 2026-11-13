@@ -1,0 +1,23 @@
+ontario [en] loading en_core_web_lg for 434,803 sentences (resuming at 0)
+   25,000/434,803 (528/s), predications so far 2,783
+   50,000/434,803 (478/s), predications so far 5,646
+   75,000/434,803 (467/s), predications so far 8,252
+   100,000/434,803 (474/s), predications so far 10,641
+   125,000/434,803 (473/s), predications so far 13,134
+   150,000/434,803 (468/s), predications so far 15,982
+   175,000/434,803 (475/s), predications so far 18,676
+   200,000/434,803 (477/s), predications so far 21,162
+   225,000/434,803 (481/s), predications so far 23,546
+   250,000/434,803 (484/s), predications so far 26,235
+   275,000/434,803 (486/s), predications so far 28,800
+   300,000/434,803 (490/s), predications so far 31,474
+   325,000/434,803 (486/s), predications so far 34,095
+   350,000/434,803 (491/s), predications so far 37,257
+   375,000/434,803 (494/s), predications so far 40,357
+   400,000/434,803 (497/s), predications so far 43,563
+   425,000/434,803 (500/s), predications so far 46,633
+ontario [fr] loading fr_core_news_lg for 5,958 sentences (resuming at 0)
+ontario: 48,490 predications from 440,761 sentences (11.0%)
+   by language: {'en': 48074, 'fr': 416}
+   hedged: 8,287  negated: 2,732
+   saved /Users/caprice/MiscellaneousProjects/legislative-health-factuality/data/dbpedia_pipeline/ontario/predications_v3.json

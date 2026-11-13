@@ -1,0 +1,165 @@
+was_at	now_at	files	bytes	why
+all_quebec_health_bills.txt	archive/top_level_loose_files/all_quebec_health_bills.txt	1	40766	one-off script, old log or old output that sat at the top level
+audit_before.txt	archive/top_level_loose_files/audit_before.txt	1	16680	one-off script, old log or old output that sat at the top level
+audit_summary.csv	archive/top_level_loose_files/audit_summary.csv	1	4012	one-off script, old log or old output that sat at the top level
+check_finale_context.py	archive/top_level_loose_files/check_finale_context.py	1	275	one-off script, old log or old output that sat at the top level
+examples_output.txt	archive/top_level_loose_files/examples_output.txt	1	7750	one-off script, old log or old output that sat at the top level
+examples_output_v2.txt	archive/top_level_loose_files/examples_output_v2.txt	1	11430	one-off script, old log or old output that sat at the top level
+fix_assignment.py	archive/top_level_loose_files/fix_assignment.py	1	7344	one-off script, old log or old output that sat at the top level
+import	archive/top_level_loose_files/import	1	0	one-off script, old log or old output that sat at the top level
+ontario_v3.log	archive/top_level_loose_files/ontario_v3.log	1	48248	one-off script, old log or old output that sat at the top level
+quebec_v3.log	archive/top_level_loose_files/quebec_v3.log	1	2097	one-off script, old log or old output that sat at the top level
+us_v3.log	archive/top_level_loose_files/us_v3.log	1	26591	one-off script, old log or old output that sat at the top level
+us_v3_resume.log	archive/top_level_loose_files/us_v3_resume.log	1	26591	one-off script, old log or old output that sat at the top level
+patch_v2.py	archive/top_level_loose_files/patch_v2.py	1	827	one-off script, old log or old output that sat at the top level
+pilot_bill2.py	archive/top_level_loose_files/pilot_bill2.py	1	1327	one-off script, old log or old output that sat at the top level
+pipeline_diagram.html	archive/top_level_loose_files/pipeline_diagram.html	1	46625	one-off script, old log or old output that sat at the top level
+push_v4.sh	archive/top_level_loose_files/push_v4.sh	1	368534	one-off script, old log or old output that sat at the top level
+push_v18.sh	archive/top_level_loose_files/push_v18.sh	1	3140	one-off script, old log or old output that sat at the top level
+push_v19.sh	archive/top_level_loose_files/push_v19.sh	1	4950	one-off script, old log or old output that sat at the top level
+run_extract.sh	archive/top_level_loose_files/run_extract.sh	1	0	one-off script, old log or old output that sat at the top level
+run_fresh.sh	archive/top_level_loose_files/run_fresh.sh	1	750	one-off script, old log or old output that sat at the top level
+run_fresh2.sh	archive/top_level_loose_files/run_fresh2.sh	1	739	one-off script, old log or old output that sat at the top level
+run_more.sh	archive/top_level_loose_files/run_more.sh	1	864	one-off script, old log or old output that sat at the top level
+show_examples.py	archive/top_level_loose_files/show_examples.py	1	3461	one-off script, old log or old output that sat at the top level
+show_examples_v2.py	archive/top_level_loose_files/show_examples_v2.py	1	7148	one-off script, old log or old output that sat at the top level
+test_42.py	archive/top_level_loose_files/test_42.py	1	1663	one-off script, old log or old output that sat at the top level
+.git.bfg-report	archive/top_level_loose_files/.git.bfg-report	42	139474	one-off script, old log or old output that sat at the top level
+logs	archive/top_level_loose_files/logs	3	5073	logs of the September Spotlight extract
+data/_before_canada_fix_20260928-201755	archive/data_snapshots/data/_before_canada_fix_20260928-201755	914	387746311	copy of the data taken before a fix in Sept-Oct
+data/_before_canada_fix_20260928-224028	archive/data_snapshots/data/_before_canada_fix_20260928-224028	952	395237779	copy of the data taken before a fix in Sept-Oct
+data/_before_canada_fix_20260929-080814	archive/data_snapshots/data/_before_canada_fix_20260929-080814	950	240739203	copy of the data taken before a fix in Sept-Oct
+data/_before_canada_fix_20260929-122339	archive/data_snapshots/data/_before_canada_fix_20260929-122339	953	242060197	copy of the data taken before a fix in Sept-Oct
+data/_before_canada_fix_20260929-124456	archive/data_snapshots/data/_before_canada_fix_20260929-124456	954	241605421	copy of the data taken before a fix in Sept-Oct
+data/_before_canada_fix_20260929-131552	archive/data_snapshots/data/_before_canada_fix_20260929-131552	954	240970739	copy of the data taken before a fix in Sept-Oct
+data/_before_fix10_20261006-190533	archive/data_snapshots/data/_before_fix10_20261006-190533	12	667379907	copy of the data taken before a fix in Sept-Oct
+data/_before_fix10_20261006-192524	archive/data_snapshots/data/_before_fix10_20261006-192524	12	667379907	copy of the data taken before a fix in Sept-Oct
+data/_before_fix10_20261006-192936	archive/data_snapshots/data/_before_fix10_20261006-192936	12	667379907	copy of the data taken before a fix in Sept-Oct
+data/_before_fix10_20261006-193735	archive/data_snapshots/data/_before_fix10_20261006-193735	12	667379907	copy of the data taken before a fix in Sept-Oct
+data/_before_fix10_20261006-194408	archive/data_snapshots/data/_before_fix10_20261006-194408	12	667379907	copy of the data taken before a fix in Sept-Oct
+data/_before_fix10_20261006-195908	archive/data_snapshots/data/_before_fix10_20261006-195908	16	968030417	copy of the data taken before a fix in Sept-Oct
+data/_before_fix11_20261006-205842	archive/data_snapshots/data/_before_fix11_20261006-205842	14	591422990	copy of the data taken before a fix in Sept-Oct
+data/_before_fix12_20261006-221018	archive/data_snapshots/data/_before_fix12_20261006-221018	1596	336992461	copy of the data taken before a fix in Sept-Oct
+data/_before_fix12_20261007-104233	archive/data_snapshots/data/_before_fix12_20261007-104233	1596	337531521	copy of the data taken before a fix in Sept-Oct
+data/_before_fix13_20261007-094443	archive/data_snapshots/data/_before_fix13_20261007-094443	11	594310024	copy of the data taken before a fix in Sept-Oct
+data/_before_fix14_20261007-104808	archive/data_snapshots/data/_before_fix14_20261007-104808	10	569370214	copy of the data taken before a fix in Sept-Oct
+data/_before_fix15_20261007-124342	archive/data_snapshots/data/_before_fix15_20261007-124342	10	591609493	copy of the data taken before a fix in Sept-Oct
+data/_before_fix15_20261007-124846	archive/data_snapshots/data/_before_fix15_20261007-124846	11	591610109	copy of the data taken before a fix in Sept-Oct
+data/_before_fix17_20261007-161020	archive/data_snapshots/data/_before_fix17_20261007-161020	11	584258774	copy of the data taken before a fix in Sept-Oct
+data/_before_fix17_20261007-163218	archive/data_snapshots/data/_before_fix17_20261007-163218	10	584257978	copy of the data taken before a fix in Sept-Oct
+data/_before_fix18_20261007-203603	archive/data_snapshots/data/_before_fix18_20261007-203603	7	96409505	copy of the data taken before a fix in Sept-Oct
+data/_before_fix19_20261007-230016	archive/data_snapshots/data/_before_fix19_20261007-230016	11	576477505	copy of the data taken before a fix in Sept-Oct
+data/_before_fix19_20261008-072926	archive/data_snapshots/data/_before_fix19_20261008-072926	12	576478193	copy of the data taken before a fix in Sept-Oct
+data/_before_fix7_20261003-204514	archive/data_snapshots/data/_before_fix7_20261003-204514	3318	900209867	copy of the data taken before a fix in Sept-Oct
+data/_before_fix7b_20261004-113909	archive/data_snapshots/data/_before_fix7b_20261004-113909	2759	516422665	copy of the data taken before a fix in Sept-Oct
+data/_before_fix7c_20261004-215701	archive/data_snapshots/data/_before_fix7c_20261004-215701	1319	294333573	copy of the data taken before a fix in Sept-Oct
+data/_before_fix7d_20261004-224222	archive/data_snapshots/data/_before_fix7d_20261004-224222	1335	294404435	copy of the data taken before a fix in Sept-Oct
+data/_before_fix7e_20261004-233537	archive/data_snapshots/data/_before_fix7e_20261004-233537	1333	294658434	copy of the data taken before a fix in Sept-Oct
+data/_before_fix7f_20261005-120444	archive/data_snapshots/data/_before_fix7f_20261005-120444	1380	311299551	copy of the data taken before a fix in Sept-Oct
+data/_before_fix8_20261005-191506	archive/data_snapshots/data/_before_fix8_20261005-191506	776	583746930	copy of the data taken before a fix in Sept-Oct
+data/_before_fix9_20261006-153234	archive/data_snapshots/data/_before_fix9_20261006-153234	1563	332000313	copy of the data taken before a fix in Sept-Oct
+data/_before_ontario_fill_20260930-215216	archive/data_snapshots/data/_before_ontario_fill_20260930-215216	958	286606640	copy of the data taken before a fix in Sept-Oct
+data/_before_ontario_order_fix_20261002-115801	archive/data_snapshots/data/_before_ontario_order_fix_20261002-115801	958	314476371	copy of the data taken before a fix in Sept-Oct
+data/_before_ontario_rowid_fix_20261001-121927	archive/data_snapshots/data/_before_ontario_rowid_fix_20261001-121927	1725	424176770	copy of the data taken before a fix in Sept-Oct
+data/_before_ontario_variants_20261002-095317	archive/data_snapshots/data/_before_ontario_variants_20261002-095317	958	313568901	copy of the data taken before a fix in Sept-Oct
+data/_before_us_dedupe_20260928-235608	archive/data_snapshots/data/_before_us_dedupe_20260928-235608	3	325714006	copy of the data taken before a fix in Sept-Oct
+data/_before_us_sections2_20261002-163444	archive/data_snapshots/data/_before_us_sections2_20261002-163444	787	435602694	copy of the data taken before a fix in Sept-Oct
+data/_before_us_sections3_20261002-200420	archive/data_snapshots/data/_before_us_sections3_20261002-200420	791	423514581	copy of the data taken before a fix in Sept-Oct
+data/_before_us_sections4_20261002-210428	archive/data_snapshots/data/_before_us_sections4_20261002-210428	784	420454095	copy of the data taken before a fix in Sept-Oct
+data/_before_us_sections5_20261002-234626	archive/data_snapshots/data/_before_us_sections5_20261002-234626	787	413704172	copy of the data taken before a fix in Sept-Oct
+data/_before_us_sections_20261002-152812	archive/data_snapshots/data/_before_us_sections_20261002-152812	938	401050717	copy of the data taken before a fix in Sept-Oct
+data/_leftover_text_20261003-212301	archive/data_snapshots/data/_leftover_text_20261003-212301	52	383254	copy of the data taken before a fix in Sept-Oct
+data/_leftover_text_20261004-220144	archive/data_snapshots/data/_leftover_text_20261004-220144	6	132854	copy of the data taken before a fix in Sept-Oct
+data/_leftover_text_20261004-224752	archive/data_snapshots/data/_leftover_text_20261004-224752	4	11762	copy of the data taken before a fix in Sept-Oct
+data/_leftover_text_20261005-121114	archive/data_snapshots/data/_leftover_text_20261005-121114	52	88156	copy of the data taken before a fix in Sept-Oct
+data/v3_hand_checks_before_fix9_20261006-153246.json	archive/data_snapshots/data/v3_hand_checks_before_fix9_20261006-153246.json	1	3160	copy of a data file taken before a fix
+data/v3_outcomes_before_royal_assent.json	archive/data_snapshots/data/v3_outcomes_before_royal_assent.json	1	1545194	copy of a data file taken before a fix
+data/v3_section_checks_before_s5_20261005-155711.json	archive/data_snapshots/data/v3_section_checks_before_s5_20261005-155711.json	1	20347	copy of a data file taken before a fix
+scripts/v3/apply_us_text_choices_before_joins_20261006-190534.py	archive/script_backups/scripts/v3/apply_us_text_choices_before_joins_20261006-190534.py	1	11004	backup or duplicate copy of a script
+scripts/v3/apply_us_text_choices_before_joins_20261006-192526.py	archive/script_backups/scripts/v3/apply_us_text_choices_before_joins_20261006-192526.py	1	11004	backup or duplicate copy of a script
+scripts/v3/apply_us_text_choices_before_joins_20261006-192938.py	archive/script_backups/scripts/v3/apply_us_text_choices_before_joins_20261006-192938.py	1	11004	backup or duplicate copy of a script
+scripts/v3/apply_us_text_choices_before_joins_20261006-193735.py	archive/script_backups/scripts/v3/apply_us_text_choices_before_joins_20261006-193735.py	1	11004	backup or duplicate copy of a script
+scripts/v3/apply_us_text_choices_before_joins_20261006-194408.py	archive/script_backups/scripts/v3/apply_us_text_choices_before_joins_20261006-194408.py	1	11004	backup or duplicate copy of a script
+scripts/v3/apply_us_text_choices_before_joins_20261006-195908.py	archive/script_backups/scripts/v3/apply_us_text_choices_before_joins_20261006-195908.py	1	11004	backup or duplicate copy of a script
+scripts/v3/apply_us_text_choices_before_usocr_20261006-205843.py	archive/script_backups/scripts/v3/apply_us_text_choices_before_usocr_20261006-205843.py	1	11267	backup or duplicate copy of a script
+scripts/v3/audit_review_data_before_joins_20261006-190534.py	archive/script_backups/scripts/v3/audit_review_data_before_joins_20261006-190534.py	1	47828	backup or duplicate copy of a script
+scripts/v3/audit_review_data_before_joins_20261006-192526.py	archive/script_backups/scripts/v3/audit_review_data_before_joins_20261006-192526.py	1	47828	backup or duplicate copy of a script
+scripts/v3/audit_review_data_before_joins_20261006-192938.py	archive/script_backups/scripts/v3/audit_review_data_before_joins_20261006-192938.py	1	47828	backup or duplicate copy of a script
+scripts/v3/audit_review_data_before_joins_20261006-193735.py	archive/script_backups/scripts/v3/audit_review_data_before_joins_20261006-193735.py	1	47828	backup or duplicate copy of a script
+scripts/v3/audit_review_data_before_joins_20261006-194408.py	archive/script_backups/scripts/v3/audit_review_data_before_joins_20261006-194408.py	1	47828	backup or duplicate copy of a script
+scripts/v3/audit_review_data_before_joins_20261006-195908.py	archive/script_backups/scripts/v3/audit_review_data_before_joins_20261006-195908.py	1	47828	backup or duplicate copy of a script
+scripts/v3/audit_review_data_before_usocr_20261006-205843.py	archive/script_backups/scripts/v3/audit_review_data_before_usocr_20261006-205843.py	1	48082	backup or duplicate copy of a script
+scripts/v3/build_sentences_v3_before_joins_20261006-190534.py	archive/script_backups/scripts/v3/build_sentences_v3_before_joins_20261006-190534.py	1	4954	backup or duplicate copy of a script
+scripts/v3/build_sentences_v3_before_joins_20261006-192526.py	archive/script_backups/scripts/v3/build_sentences_v3_before_joins_20261006-192526.py	1	4954	backup or duplicate copy of a script
+scripts/v3/build_sentences_v3_before_joins_20261006-192938.py	archive/script_backups/scripts/v3/build_sentences_v3_before_joins_20261006-192938.py	1	4954	backup or duplicate copy of a script
+scripts/v3/build_sentences_v3_before_joins_20261006-193735.py	archive/script_backups/scripts/v3/build_sentences_v3_before_joins_20261006-193735.py	1	4954	backup or duplicate copy of a script
+scripts/v3/build_sentences_v3_before_joins_20261006-194408.py	archive/script_backups/scripts/v3/build_sentences_v3_before_joins_20261006-194408.py	1	4954	backup or duplicate copy of a script
+scripts/v3/build_sentences_v3_before_joins_20261006-195908.py	archive/script_backups/scripts/v3/build_sentences_v3_before_joins_20261006-195908.py	1	4954	backup or duplicate copy of a script
+scripts/v3/build_sentences_v3_before_usocr_20261006-205843.py	archive/script_backups/scripts/v3/build_sentences_v3_before_usocr_20261006-205843.py	1	5870	backup or duplicate copy of a script
+scripts/v3/canada_before_after.py	archive/script_backups/scripts/v3/canada_before_after.py	1	7761	backup or duplicate copy of a script
+scripts/v3/compute_scores_v3.py.bak	archive/script_backups/scripts/v3/compute_scores_v3.py.bak	1	6549	backup or duplicate copy of a script
+scripts/v3/extract_predications_v3_before_spans_20261007-124343.py	archive/script_backups/scripts/v3/extract_predications_v3_before_spans_20261007-124343.py	1	7606	backup or duplicate copy of a script
+scripts/v3/extract_predications_v3_before_spans_20261007-124847.py	archive/script_backups/scripts/v3/extract_predications_v3_before_spans_20261007-124847.py	1	7606	backup or duplicate copy of a script
+scripts/v3/extract_predications_v3_before_v17_20261007-161022.py	archive/script_backups/scripts/v3/extract_predications_v3_before_v17_20261007-161022.py	1	9585	backup or duplicate copy of a script
+scripts/v3/extract_predications_v3_before_v17_20261007-163223.py	archive/script_backups/scripts/v3/extract_predications_v3_before_v17_20261007-163223.py	1	9585	backup or duplicate copy of a script
+scripts/v3/extract_predications_v3_before_v18_20261007-203604.py	archive/script_backups/scripts/v3/extract_predications_v3_before_v18_20261007-203604.py	1	32130	backup or duplicate copy of a script
+scripts/v3/extract_predications_v3_before_v19_20261007-230018.py	archive/script_backups/scripts/v3/extract_predications_v3_before_v19_20261007-230018.py	1	34309	backup or duplicate copy of a script
+scripts/v3/extract_predications_v3_before_v19_20261008-072929.py	archive/script_backups/scripts/v3/extract_predications_v3_before_v19_20261008-072929.py	1	34309	backup or duplicate copy of a script
+scripts/v3/ontario_rebuild_before_conflicts2_20261004-113912.py	archive/script_backups/scripts/v3/ontario_rebuild_before_conflicts2_20261004-113912.py	1	41425	backup or duplicate copy of a script
+scripts/v3/ontario_rebuild_before_conflicts_20261003-204920.py	archive/script_backups/scripts/v3/ontario_rebuild_before_conflicts_20261003-204920.py	1	40854	backup or duplicate copy of a script
+scripts/v3/ontario_rebuild_before_order_20261002-115802.py	archive/script_backups/scripts/v3/ontario_rebuild_before_order_20261002-115802.py	1	40511	backup or duplicate copy of a script
+scripts/v3/ontario_rebuild_before_rowid_20261001-121929.py	archive/script_backups/scripts/v3/ontario_rebuild_before_rowid_20261001-121929.py	1	39711	backup or duplicate copy of a script
+scripts/v3/ontario_rebuild_before_supplement_20261006-153236.py	archive/script_backups/scripts/v3/ontario_rebuild_before_supplement_20261006-153236.py	1	42091	backup or duplicate copy of a script
+scripts/v3/outcomes_v3_before_fix9_20261006-153246.py	archive/script_backups/scripts/v3/outcomes_v3_before_fix9_20261006-153246.py	1	30577	backup or duplicate copy of a script
+scripts/v3/patch_sheet_remove_days (1).py	archive/script_backups/scripts/v3/patch_sheet_remove_days (1).py	1	22183	backup or duplicate copy of a script
+scripts/v3/push_text_folders.sh.before_removing_claude	archive/script_backups/scripts/v3/push_text_folders.sh.before_removing_claude	1	7362	backup or duplicate copy of a script
+scripts/v3/quebec_rebuild_before_oldformat2_20261004-224223.py	archive/script_backups/scripts/v3/quebec_rebuild_before_oldformat2_20261004-224223.py	1	36895	backup or duplicate copy of a script
+scripts/v3/quebec_rebuild_before_oldformat3_20261004-233538.py	archive/script_backups/scripts/v3/quebec_rebuild_before_oldformat3_20261004-233538.py	1	38284	backup or duplicate copy of a script
+scripts/v3/quebec_rebuild_before_oldformat4_20261005-120446.py	archive/script_backups/scripts/v3/quebec_rebuild_before_oldformat4_20261005-120446.py	1	40790	backup or duplicate copy of a script
+scripts/v3/quebec_rebuild_before_oldformat_20261004-215702.py	archive/script_backups/scripts/v3/quebec_rebuild_before_oldformat_20261004-215702.py	1	32273	backup or duplicate copy of a script
+scripts/v3/quebec_rebuild_before_verify7_20261003-211933.py	archive/script_backups/scripts/v3/quebec_rebuild_before_verify7_20261003-211933.py	1	31902	backup or duplicate copy of a script
+scripts/v3/sept24_before_after.py	archive/script_backups/scripts/v3/sept24_before_after.py	1	24308	backup or duplicate copy of a script
+scripts/v3/us_rebuild (1).py	archive/script_backups/scripts/v3/us_rebuild (1).py	1	36353	backup or duplicate copy of a script
+scripts/v3/us_rebuild_before_fix.py	archive/script_backups/scripts/v3/us_rebuild_before_fix.py	1	29467	backup or duplicate copy of a script
+scripts/v3/us_rebuild_before_sections_20261002-152813.py	archive/script_backups/scripts/v3/us_rebuild_before_sections_20261002-152813.py	1	37776	backup or duplicate copy of a script
+scripts/v3/us_rebuild_before_sections_20261002-163445.py	archive/script_backups/scripts/v3/us_rebuild_before_sections_20261002-163445.py	1	42213	backup or duplicate copy of a script
+scripts/v3/us_rebuild_before_sections_20261002-200421.py	archive/script_backups/scripts/v3/us_rebuild_before_sections_20261002-200421.py	1	44189	backup or duplicate copy of a script
+scripts/v3/us_rebuild_before_sections_20261002-210429.py	archive/script_backups/scripts/v3/us_rebuild_before_sections_20261002-210429.py	1	44480	backup or duplicate copy of a script
+scripts/v3/us_rebuild_before_sections_20261002-234627.py	archive/script_backups/scripts/v3/us_rebuild_before_sections_20261002-234627.py	1	44509	backup or duplicate copy of a script
+scripts/v6/_before_fix2	archive/script_backups/scripts/v6/_before_fix2	35	333478	copy of the rules before a round of changes
+scripts/v6/_before_oct21	archive/script_backups/scripts/v6/_before_oct21	25	241616	copy of the rules before a round of changes
+scripts/v6/_before_oct22	archive/script_backups/scripts/v6/_before_oct22	28	267777	copy of the rules before a round of changes
+scripts/v6/_before_recipient	archive/script_backups/scripts/v6/_before_recipient	33	314800	copy of the rules before a round of changes
+scripts/archive	archive/scripts_not_used/scripts/archive	117	546557	scripts already set aside; nothing refers to them
+docs/CLAY_Legislative_Health_Factuality.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality.pptx	1	2210127	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v10.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v10.pptx	1	1862935	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v11.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v11.pptx	1	1861380	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v12.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v12.pptx	1	1863968	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v13.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v13.pptx	1	1865679	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v3.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v3.pptx	1	2109109	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v4.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v4.pptx	1	2109522	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v5.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v5.pptx	1	1861388	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v6.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v6.pptx	1	1863699	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v7.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v7.pptx	1	1864726	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v8.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v8.pptx	1	1863711	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_Legislative_Health_Factuality_v9.pptx	archive/old_document_versions/docs/CLAY_Legislative_Health_Factuality_v9.pptx	1	1864267	earlier version of the CLAY deck (v14 is the latest)
+docs/CLAY_speaker_notes_v5.docx	archive/old_document_versions/docs/CLAY_speaker_notes_v5.docx	1	46379	earlier speaker notes or slides made to paste into the deck
+docs/CLAY_speaker_notes_v6.docx	archive/old_document_versions/docs/CLAY_speaker_notes_v6.docx	1	48508	earlier speaker notes or slides made to paste into the deck
+docs/CLAY_speaker_notes_v7.docx	archive/old_document_versions/docs/CLAY_speaker_notes_v7.docx	1	49771	earlier speaker notes or slides made to paste into the deck
+docs/speaker_notes.docx	archive/old_document_versions/docs/speaker_notes.docx	1	45280	earlier speaker notes or slides made to paste into the deck
+docs/New_slides_for_David.pptx	archive/old_document_versions/docs/New_slides_for_David.pptx	1	26091	earlier speaker notes or slides made to paste into the deck
+docs/New_slides_tonight.pptx	archive/old_document_versions/docs/New_slides_tonight.pptx	1	30551	earlier speaker notes or slides made to paste into the deck
+docs/Slides_to_paste.pptx	archive/old_document_versions/docs/Slides_to_paste.pptx	1	46246	earlier speaker notes or slides made to paste into the deck
+docs/Bill_slide_to_paste.pptx	archive/old_document_versions/docs/Bill_slide_to_paste.pptx	1	21011	earlier speaker notes or slides made to paste into the deck
+outputs/health_bills_review_before_patch_20260927-2320.xlsx	archive/old_outputs/outputs/health_bills_review_before_patch_20260927-2320.xlsx	1	29360426	spreadsheet from before the Sept 27 patch
+outputs/transcripts_ontario_before_patch_20260927-2320.xlsx	archive/old_outputs/outputs/transcripts_ontario_before_patch_20260927-2320.xlsx	1	23618296	spreadsheet from before the Sept 27 patch
+outputs/transcripts_us_before_patch_20260927-2320.xlsx	archive/old_outputs/outputs/transcripts_us_before_patch_20260927-2320.xlsx	1	91465566	spreadsheet from before the Sept 27 patch
+outputs/edu/before_fresh	archive/old_outputs/outputs/edu/before_fresh	3	3747882	claims output from before a rerun on Nov 1
+outputs/edu/before_fresh2	archive/old_outputs/outputs/edu/before_fresh2	3	11317189	claims output from before a rerun on Nov 1
+outputs/edu/before_more100	archive/old_outputs/outputs/edu/before_more100	3	935487	claims output from before a rerun on Nov 1
+outputs/edu/before_more100_edu_pipeline_r5.py	archive/old_outputs/outputs/edu/before_more100_edu_pipeline_r5.py	1	89719	claims output from before a rerun on Nov 1
+outputs/full/ontario	archive/old_outputs/outputs/full/ontario	2	738	first start of the full run on Nov 13, stopped before any chunk was saved
+outputs/full/quebec	archive/old_outputs/outputs/full/quebec	2	738	first start of the full run on Nov 13, stopped before any chunk was saved
+outputs/full/log_ontario.txt	archive/old_outputs/outputs/full/log_ontario.txt	1	417	first start of the full run on Nov 13, stopped before any chunk was saved
+outputs/full/log_quebec.txt	archive/old_outputs/outputs/full/log_quebec.txt	1	1095	first start of the full run on Nov 13, stopped before any chunk was saved
+scripts/step3_claims/dj_preview.py	archive/scripts_not_used/scripts/step3_claims/dj_preview.py	1	1544	a preview script that points at folders that are not on this Mac; nothing uses it

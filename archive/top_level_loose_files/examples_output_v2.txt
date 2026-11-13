@@ -1,0 +1,245 @@
+=== 1. SESSION-BASED BILL ALIGNMENT ===
+File: data/canada/ontario/ontario_bill_index.json
+GitHub: https://github.com/capriceculkin/legislative-health-factuality/blob/main/data/canada/ontario/ontario_bill_index.json
+
+Total health bills: 477
+
+  Key: 33-2-Bill94
+  Title: An Act regulating the Amounts that Persons may charge for rendering Services tha
+  Session: 33-2
+  Debate dates: ['1985-12-20', '1986-01-14', '1986-01-17']
+
+  Key: 34-2-Bill52
+  Title: An Act to amend certain Statutes of Ontario Consequent upon Enactment of the Mun
+  Session: 34-2
+  Debate dates: ['1989-07-20', '1989-10-10', '1989-12-06']
+
+  Key: 42-2-Bill175
+  Title: An Act to amend and repeal various Acts respecting home care and community servi
+  Session: 42-2
+  Debate dates: ['2020-02-25', '2020-02-26', '2020-02-27']
+
+  Key: 35-3-Bill50
+  Title: An Act to implement the Government's expenditure control plan and, in that conne
+  Session: 35-3
+  Debate dates: ['1993-11-15', '1993-11-16', '1993-11-17']
+
+  Key: 33-2-Bill113
+  Title: An Act to amend the Homemakers and Nurses Services Act
+  Session: 33-2
+  Debate dates: ['1986-07-03']
+
+=== 2. DAY-BASED BILL-SPEECH ALIGNMENT ===
+File: data/canada/ontario/hansard_api_bill_segments.json
+Yale OneDrive: https://yaleedu-my.sharepoint.com/:u:/g/personal/caprice_culkin_yale_edu/IQCAGMCyyH_0ToGTWu1erpwpAV8Bcot0NVoBJZ5BJPxiTYI?e=NO1Els
+
+Total bills: 212
+Total paragraphs: 63,615
+
+  Bill: 33-2-Bill94
+  Title: An Act regulating the Amounts that Persons may charge for re
+  Debate dates: 26
+    Date: 1986-01-14 | Paragraphs: 71
+    Topic: HEALTH CARE ACCESSIBILITY ACT
+    Speaker: Procedure
+    Text: Hon. Mr. Elston moved second reading of Bill 94, An Act regulating the Amounts that Persons may charge for rendering Services that are Insured Service
+    URL: https://www.ola.org/en/legislative-business/house-documents/parliament-33/sessio
+    Date: 1986-01-20 | Paragraphs: 86
+    Topic: HEALTH CARE ACCESSIBILITY ACT (CONTINUED)
+    Speaker: Procedure
+    Text: Resuming the adjourned debate on the motion for second reading of Bill 94, An Act regulating the Amounts that Persons may Charge for rendering Service
+    URL: https://www.ola.org/en/legislative-business/house-documents/parliament-33/sessio
+
+  Bill: 33-2-Bill54
+  Title: An Act to Authorize and Regulate the Payment by the Minister
+  Debate dates: 13
+    Date: 1985-12-05 | Paragraphs: 136
+    Topic: ONTARIO DRUG BENEFIT ACT
+    Speaker: Procedure
+    Text: Hon. Mr. Elston moved second reading of Bill 54, An Act to Authorize and Regulate the Payment by the Minister to Specified Persons on Behalf of Specif
+    URL: https://www.ola.org/en/legislative-business/house-documents/parliament-33/sessio
+    Date: 1985-12-19 | Paragraphs: 1
+    Topic: BUSINESS OF THE HOUSE
+    Speaker: Hon. Mr. Nixon
+    Text: I would like to indicate the business of the House for the remainder of this week and the week of January 6, 1986.  Tomorrow we will continue with thi
+    URL: https://www.ola.org/en/legislative-business/house-documents/parliament-33/sessio
+
+  Bill: 42-2-Bill175
+  Title: An Act to amend and repeal various Acts respecting home care
+  Debate dates: 10
+    Date: 2020-03-02 | Paragraphs: 105
+    Topic: Connecting People to Home and Community Care Act, 2020 / Loi de 2020 pour connecter la population aux services de soins à domicile et en milieu communautaire
+    Speaker: Mr. Wayne Gates
+    Text: I’m pleased to rise and ask a question here. Bill 175 doesn’t once mention strategies that will ensure the Conservative government is prioritizing the
+    URL: https://www.ola.org/en/legislative-business/house-documents/parliament-42/sessio
+    Date: 2020-03-03 | Paragraphs: 38
+    Topic: Connecting People to Home and Community Care Act, 2020 / Loi de 2020 pour connecter la population aux services de soins à domicile et en milieu communautaire
+    Speaker: Procedure
+    Text: Resuming the debate adjourned on March 2, 2020, on the motion for second reading of the following bill: Bill 175, An Act to amend and repeal various A
+    URL: https://www.ola.org/en/legislative-business/house-documents/parliament-42/sessio
+
+  QUEBEC examples:
+  File: data/canada/quebec_assembly/bill_segments/
+  GitHub: https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/canada/quebec_assembly/bill_segments
+  File: 19851217_bill2.txt
+  Text: débat entourant l'adoption du principe du projet de loi 2 soit
+		fixé à 14 heures et que le tout se termine avant 15 heures.
+M. Chevrette:
+Consentement.
+Le Président:
+Consentement. Affaires du jour.
+M
+
+  File: 19851218_bill2.txt
+  Text: M. le ministre du Revenu propose l'adoption du principe du projet de loi n° 2, Loi modifiant diverses lois fiscales et d'autres dispositions
+		législatives.
+M. Chevrette:
+M. le Président, me permettez
+
+  File: 19851219_bill3.txt
+  Text: aux Mines propose l'adoption du principe du projet de loi 3, Loi modifiant la
+		Loi concernant les droits sur les mines. M. le ministre.
+M. Raymond Savoie
+M. Savoie:
+M. le Président, l'honorable
+		lie
+
+  US examples:
+  File: data/us/congressional_record_speeches/
+  GitHub: https://github.com/capriceculkin/legislative-health-factuality/tree/main/data/us/congressional_record_speeches
+  File: 2006-05-11.txt
+  Text: === Daily Digest/House Committee Meetings; Congressional Record Vol. 152, No. 57 ===
+
+  File: 2006-06-21.txt
+  Text: === Daily Digest/Next Meeting of the SENATE + Next Meeting of the HOUSE OF REPRESENTATIVES + Other End Matter; Congressional Record Vol. 152, No. 81 ===
+
+=== 3. PREDICATIONS EXTRACTED FROM HANSARD RECORDS ===
+
+  ONTARIO: 197,316 predications total
+  File: data/dbpedia_pipeline/ontario/predications.json
+    [19850708-api-1985b32-p2-s4]
+    subject: The board | verb: go | object: a long process
+    hedged: False
+    text: The board goes through a long process of reviewing that, bringing the individual in to be reviewed b
+
+    [19850708-api-1985b32-p5-s4]
+    subject: My friend | verb: shake | object: his head
+    hedged: False
+    text: My friend shakes his head --
+
+    [19850708-api-1985b32-p10-s1]
+    subject: My friend | verb: propose | object: the consumer price index
+    hedged: False
+    text: My friend proposed the consumer price index, while his colleague the member for Dovercourt (Mr.
+
+    [19850708-api-1985b32-p12-s10]
+    subject: The second component | verb: extend | object: 20 workers
+    hedged: False
+    text: The second component extends to some employers with 20 workers or fewer, but it is a fairly recent c
+
+    [19850708-api-1985b32-p14-s14]
+    subject: The entire labour movement | verb: speak | object: a unified voice
+    hedged: False
+    text: The entire labour movement did not speak with a unified voice about the form indexation should take.
+
+  QUEBEC: 41,718 predications total
+  File: data/dbpedia_pipeline/quebec/predications.json
+    [19851219-bill3-t4-s4]
+    subject: Le discours | verb: introduire | object: de nouvelles mesures
+    text: Le discours sur le budget prononcé le 23 avril 1985 a introduit,
+		à compter de cette date, de nouve
+
+    [19851219-bill3-t15-s3]
+    subject: Des régions | verb: savoir | object: quelque chose
+    text: Des régions comme celle que je
+		représente en savent quelque chose.
+
+    [19860319-bill14-t2-s2]
+    subject: Le décret | verb: remplacer | object: la
+		désignation
+    text: Le décret 517-84, adopté conformément
+		à l'article 9 de la Loi sur l'exécutif, avait remplacé la
+		
+
+    [19860319-bill14-t12-s12]
+    subject: Cette situation juridique | verb: amener | object: plusieurs personnes
+    text: Cette situation juridique a
+		amené plusieurs personnes à soulever un doute quant à la
+		survie des 
+
+    [19860319-bill14-t20-s20]
+    subject: La Loi | verb: prévoir | object: le maintien
+    text: La Loi d'interprétation ne prévoit pas le maintien en
+		vigueur des règlements dans le cas où une lo
+
+  US: 141,186 predications total
+  File: data/dbpedia_pipeline/us/predications.json
+    [2000-02-01-2]
+    subject: These figures | verb: include | object: all measures
+    text: 6 === [Daily Digest] [Page D43] From the Congressional Record Online through the Government Publishi
+
+    [2000-02-01-3]
+    subject: a total | verb: file | object: the House
+    text: A total of 0 reports have been filed in the Senate, a total of 2 reports have been filed in the Hous
+
+    [2000-02-01-4]
+    subject: The first table | verb: give | object: a comprehensive resume
+    text: [[Page D43]] Resume of Congressional Activity SECOND SESSION OF THE ONE HUNDRED SIXTH CONGRESS The f
+
+    [2000-02-01-5]
+    subject: The second table | verb: account | object: all nominations
+    text: The second table accounts for all nominations submitted to the Senate by the President for Senate co
+
+    [2000-02-01-196]
+    subject: Total unconfirmed....................................1,150 Total | verb: return | object: Daily Digest/Senate Committee Meetings
+    text: Summary Total nominations carried over from First Session....1,150 Total nominations received this s
+
+=== 4. SVO TRIPLES WITH DBPEDIA ENTITY RECOGNITION ===
+
+NOTE: Current triples were extracted using full sentence text (more entities
+but introduces false positives per David's Sept 11 guidance). Pipeline is
+reverting to subject/object string approach. Examples below are illustrative.
+
+  US: 50,504 triples total
+  File: data/dbpedia_pipeline/us/triples_v2.json
+    [1985-06-18-4]
+    subject: Our hearts | verb: reach | object: the bond
+    DBpedia URIs: ['http://dbpedia.org/resource/Anx', 'http://dbpedia.org/resource/ING_Group']
+
+    [1985-06-18-50]
+    subject: Our legislation | verb: require | object: the Fed Office eral Government
+    DBpedia URIs: ['http://dbpedia.org/resource/Eral', 'http://dbpedia.org/resource/Impose_(magazine)']
+
+    [1985-06-18-93]
+    subject: The crisis | verb: call | object: strong voice
+    DBpedia URIs: ['http://dbpedia.org/resource/President_of_the_United_States', 'http://dbpedia.org/resource/United_States']
+
+  QUEBEC: 8,800 triples total
+  File: data/dbpedia_pipeline/quebec/triples_v2.json
+    [19851219-bill3-t4-s4]
+    subject: Le discours | verb: introduire | object: de nouvelles mesures
+    DBpedia URIs: ['http://fr.dbpedia.org/resource/23_avril', 'http://fr.dbpedia.org/resource/1985']
+
+    [19860319-bill12-t118-s0]
+    subject: la commission | verb: entendre | object: la direction
+    DBpedia URIs: ['http://fr.dbpedia.org/resource/Économie_(discipline)', 'http://fr.dbpedia.org/resource/26_mars']
+
+    [19860319-bill14-t32-s32]
+    subject: le rapport | verb: soulever | object: les
+		problèmes
+    DBpedia URIs: ['http://fr.dbpedia.org/resource/Québec', 'http://fr.dbpedia.org/resource/9_mai']
+
+  ONTARIO: 48,494 triples total
+  File: data/dbpedia_pipeline/ontario/triples_v2.json
+    [19850708-api-1985b32-p34-s4]
+    subject: The proposal | verb: refer | object: annual adjustments
+    DBpedia URIs: ['http://dbpedia.org/resource/White_paper', 'http://dbpedia.org/resource/Inflation']
+
+    [19850708-api-1985b32-p45-s18]
+    subject: the previous Minister | verb: commend | object: the minister
+    DBpedia URIs: ['http://dbpedia.org/resource/Scottish_Labour', 'http://dbpedia.org/resource/Tory']
+
+    [19850708-api-1985b32-p59-s1]
+    subject: A further major reform | verb: commence | object: the publication
+    DBpedia URIs: ['http://dbpedia.org/resource/New_Zealand_Labour_Party', 'http://dbpedia.org/resource/Green_paper']
+

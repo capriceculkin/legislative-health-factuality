@@ -1,0 +1,47 @@
+Health-bill Assembly debates listed: 1207 on 878 Journal pages. Health bills with no Assembly URLs (mostly pre-1994): 118
+  25/878 pages, 0 failed
+  50/878 pages, 0 failed
+  75/878 pages, 0 failed
+  100/878 pages, 1 failed
+  125/878 pages, 1 failed
+  150/878 pages, 1 failed
+  175/878 pages, 1 failed
+  200/878 pages, 1 failed
+  225/878 pages, 1 failed
+  250/878 pages, 1 failed
+  275/878 pages, 1 failed
+  300/878 pages, 1 failed
+  325/878 pages, 1 failed
+  350/878 pages, 1 failed
+  375/878 pages, 1 failed
+  400/878 pages, 1 failed
+  425/878 pages, 1 failed
+  450/878 pages, 1 failed
+  475/878 pages, 1 failed
+  500/878 pages, 1 failed
+  525/878 pages, 1 failed
+  550/878 pages, 1 failed
+  575/878 pages, 1 failed
+  600/878 pages, 1 failed
+  625/878 pages, 1 failed
+  650/878 pages, 1 failed
+  675/878 pages, 1 failed
+  700/878 pages, 1 failed
+  725/878 pages, 1 failed
+  750/878 pages, 1 failed
+  775/878 pages, 1 failed
+  800/878 pages, 1 failed
+  825/878 pages, 1 failed
+  850/878 pages, 1 failed
+  875/878 pages, 1 failed
+  878/878 pages, 1 failed
+Traceback (most recent call last):
+  File "/Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v3/quebec_rebuild.py", line 359, in <module>
+    cmds[sys.argv[1]]()
+  File "/Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v3/quebec_rebuild.py", line 356, in <lambda>
+    "all": lambda: (cmd_fetch(), cmd_segment(), cmd_verify())}
+  File "/Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v3/quebec_rebuild.py", line 301, in cmd_segment
+    save_json(missing, os.path.join(OUT, "segments_missing.json"), indent=1)
+  File "/Users/caprice/MiscellaneousProjects/legislative-health-factuality/scripts/v3/v3_common.py", line 59, in save_json
+    os.replace(tmp, path)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/caprice/MiscellaneousProjects/legislative-health-factuality/data/canada/quebec_assembly/v3/segments_missing.json.tmp' -> '/Users/caprice/MiscellaneousProjects/legislative-health-factuality/data/canada/quebec_assembly/v3/segments_missing.json'

@@ -1,0 +1,47 @@
+us [en] loading en_core_web_lg for 1,043,453 sentences (resuming at 0)
+   25,000/1,043,453 (508/s), predications so far 5,523
+   50,000/1,043,453 (686/s), predications so far 7,794
+   75,000/1,043,453 (773/s), predications so far 10,271
+   100,000/1,043,453 (791/s), predications so far 12,722
+   125,000/1,043,453 (826/s), predications so far 15,714
+   150,000/1,043,453 (827/s), predications so far 18,615
+   175,000/1,043,453 (845/s), predications so far 21,187
+   200,000/1,043,453 (830/s), predications so far 24,108
+   225,000/1,043,453 (834/s), predications so far 26,758
+   250,000/1,043,453 (843/s), predications so far 29,318
+   275,000/1,043,453 (834/s), predications so far 32,073
+   300,000/1,043,453 (841/s), predications so far 34,962
+   325,000/1,043,453 (851/s), predications so far 37,636
+   350,000/1,043,453 (854/s), predications so far 40,331
+   375,000/1,043,453 (862/s), predications so far 42,724
+   400,000/1,043,453 (860/s), predications so far 45,122
+   425,000/1,043,453 (876/s), predications so far 47,753
+   450,000/1,043,453 (875/s), predications so far 51,163
+   475,000/1,043,453 (865/s), predications so far 54,544
+   500,000/1,043,453 (856/s), predications so far 57,950
+   525,000/1,043,453 (851/s), predications so far 61,022
+   550,000/1,043,453 (854/s), predications so far 63,520
+   575,000/1,043,453 (852/s), predications so far 65,487
+   600,000/1,043,453 (850/s), predications so far 68,192
+   625,000/1,043,453 (850/s), predications so far 71,106
+   650,000/1,043,453 (850/s), predications so far 73,681
+   675,000/1,043,453 (855/s), predications so far 76,389
+   700,000/1,043,453 (863/s), predications so far 78,443
+   725,000/1,043,453 (866/s), predications so far 80,899
+   750,000/1,043,453 (874/s), predications so far 82,908
+   775,000/1,043,453 (869/s), predications so far 86,833
+   800,000/1,043,453 (878/s), predications so far 88,870
+   825,000/1,043,453 (884/s), predications so far 90,999
+   850,000/1,043,453 (882/s), predications so far 94,337
+   875,000/1,043,453 (877/s), predications so far 97,781
+   900,000/1,043,453 (876/s), predications so far 100,754
+   925,000/1,043,453 (879/s), predications so far 103,396
+   950,000/1,043,453 (883/s), predications so far 105,620
+   975,000/1,043,453 (883/s), predications so far 108,543
+   1,000,000/1,043,453 (885/s), predications so far 111,382
+   1,025,000/1,043,453 (887/s), predications so far 113,631
+us [fr] loading fr_core_news_lg for 2,116 sentences (resuming at 0)
+us: 116,007 predications from 1,045,569 sentences (11.1%)
+   by language: {'en': 116006, 'fr': 1}
+   hedged: 17,218  negated: 7,390
+   saved /Users/caprice/MiscellaneousProjects/legislative-health-factuality/data/dbpedia_pipeline/us/predications_v3.json

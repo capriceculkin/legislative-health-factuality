@@ -55,6 +55,8 @@ ap.add_argument("--claims", action="store_true", help="run edu_pipeline.py on ev
 ap.add_argument("--status", action="store_true", help="progress and failed sentences")
 ap.add_argument("--verify", action="store_true", help="every pool sentence is in the parses and the claims exactly once")
 ap.add_argument("--check", action="store_true", help="reparse the 900 CLAY sentences and compare to outputs/edu")
+ap.add_argument("--fast", action="store_true", help="skip work the claims never use (see speedups); same parses, tested Nov 15")
+ap.add_argument("--threads", type=int, default=0, help="processor threads per copy (0 leaves the default)")
 A = ap.parse_args()
 
 OUT = PROJECT / "outputs" / "full"
@@ -176,6 +178,28 @@ def pool(j):
     return [{k: x.get(k) for k in ("sentence_id", "text", "lang", "date", "bill_key")} for x in recs]
 
 
+# speedups (--fast), from scripts/step3_claims/speed_test.py on Nov 15: each one gave the same trees on every test sentence
+#   English Stanza without lemmas and the dependency parse, which the claims never read (404/404 same trees, a third less time)
+#   a sentence with one discourse unit reuses its sentence tree as the unit tree instead of parsing the same text again (29/29 same)
+# --threads: 1, 2 and 4 threads gave the same parses (30/30) at the same speed, so copies running side by side can use 1 each
+
+def speedups(V):
+    if A.threads:
+        import torch
+        torch.set_num_threads(A.threads)
+    if A.fast and "en" not in V.ST:
+        import stanza
+        V.ST["en"] = stanza.Pipeline("en", processors="tokenize,mwt,pos,constituency", tokenize_no_ssplit=True,
+                                     verbose=False, download_method=None)
+        V.CONST["en"] = True
+        say("   --fast: English Stanza without lemmas and dependencies")
+
+
+def how():
+    # written into every chunk, so it is always known which way a chunk was parsed
+    return {"fast": A.fast, "threads": A.threads or "default"}
+
+
 # parsing one chunk, the same way edu_collect.py parses its new sentences
 
 class TooSlow(Exception):
@@ -201,7 +225,12 @@ def parse_chunk(recs, j, V, C):
                 d, st = V.rst_parse(s["text"], lang)
                 s["disc_native"], s["disc_native_status"] = d, st
                 s["trees"] = C.tree_of(s["text"], lang)
-                trees[s["n"]] = C.unit_trees(s)
+                edus = (d or {}).get("edus") or []
+                one = (edus[0].get("text") or s["text"][edus[0]["start"]:edus[0]["end"]]).strip() if len(edus) == 1 else None
+                if A.fast and (not edus or one == s["text"]):
+                    trees[s["n"]] = [s["trees"]]         # one unit, the same text as the sentence: the tree is already made
+                else:
+                    trees[s["n"]] = C.unit_trees(s)
                 break
             except TooSlow:
                 s["disc_native"], s["disc_native_status"] = None, f"error: took longer than {A.sentence_timeout}s"
@@ -227,6 +256,7 @@ def parse_all(jurs):
     import parse_corpus_v5 as V          # loads the models only when they are first used
     sys.argv = [sys.argv[0]]             # edu_collect reads its own arguments when imported
     import edu_collect as C              # tree_of and unit_trees, so the parsing matches the samples exactly
+    speedups(V)
     done, t0 = 0, time.time()
     for j in jurs:
         recs = pools[j]
@@ -253,7 +283,7 @@ def parse_all(jurs):
                 say(f"   {j} chunk {k}: {bad} of {len(rows)} sentences failed ({'; '.join(why)}). Chunk not saved.")
                 sys.exit(4)                              # run_full.sh restarts a few times, in case it was the GPU
             if not A.limit:                              # a timing test does not leave chunks behind
-                save(pf, {"made": time.strftime("%Y-%m-%d %H:%M"), "rows": rows})
+                save(pf, {"made": time.strftime("%Y-%m-%d %H:%M"), "how": how(), "rows": rows})
                 save(tf, trees)
             say(f"   {j} chunk {k}: {len(rows)} sentences, {per:.2f}s each" + (f", {bad} failed" if bad else ""))
         if A.limit and done >= A.limit:
@@ -357,6 +387,8 @@ def check():
     import parse_corpus_v5 as V
     sys.argv = [sys.argv[0]]
     import edu_collect as C
+    speedups(V)
+    say(f"check with {how()}")
     saved = json.load(open(PROJECT / "outputs" / "edu" / "more_parses.json", encoding="utf-8"))["rows"]
     saved_trees = json.load(open(PROJECT / "outputs" / "edu" / "edu_trees.json", encoding="utf-8"))
     jname = {v: k for k, v in JUR.items()}

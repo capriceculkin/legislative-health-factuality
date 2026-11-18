@@ -101,7 +101,7 @@ This rebuilds the three sentence files from the debate text and checks that they
 3. **Fingerprint the new files:** shasum -a 256 data/dbpedia_pipeline/*/sentences_v3.json
 4. **Compare** with the first three rows of the table in section 5.
 
-Status: this rebuild has not yet been rerun to confirm that it reproduces the original files byte for byte. If a fingerprint differs, count the sentences (python3 -c "import json; print(len(json.load(open('data/dbpedia_pipeline/us/sentences_v3.json'))))") and send Caprice the counts and the printout. Then unzip the original sentence files again before going on, so the next steps start from the same inputs.
+**Status:** this rebuild has not yet been rerun to confirm that it reproduces the original files byte for byte. If a fingerprint differs, count the sentences (python3 -c "import json; print(len(json.load(open('data/dbpedia_pipeline/us/sentences_v3.json'))))") and send Caprice the counts and the printout. Then unzip the original sentence files again before going on, so the next steps start from the same inputs.
 
 Rebuilding the debate text itself from the original websites (the US Congressional Record, the Ontario Hansard and the Quebec Journal des débats) is described in scripts/step1_debate_text/RUN_ORDER.md, steps 2 to 5. It needs a GovInfo API key and many hours, and the sites change over time, so an exact match is not expected. It is not needed for this replication.
 

@@ -1,5 +1,7 @@
 # Data and Scripts Reference
 
+> **Status, Nov 17, 2026:** Written in September for the first pipeline. Files used by the current pipeline are listed in `REPLICATION.md`.
+
 This file describes every significant file in the repository, organized by directory.
 For each file: what it contains, what produces it, what it feeds into, its size, and how to access it.
 

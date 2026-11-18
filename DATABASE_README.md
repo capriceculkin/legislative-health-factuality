@@ -1,4 +1,7 @@
 # Legislative Health Factuality: Database README
+
+> **Status, Nov 17, 2026:** Written on Sept 4 for the first pipeline, before the September rebuild. See `REPLICATION.md` for the current pipeline.
+
 # For: David Chartash and Joanie Bouchard
 # Project: Does factual accuracy in legislative health debate predict bill outcomes?
 # Jurisdictions: US House (1985-2026), Ontario LA (1985-2026), Quebec NA (1985-2026)

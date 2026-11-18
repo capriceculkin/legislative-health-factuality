@@ -1,5 +1,7 @@
 # Legislative Health Factuality
 
+> **Status, Nov 17, 2026:** This README describes the first pipeline (August and September). The current pipeline, and how to run and replicate it, is in `REPLICATION.md` and `REPO_MAP.md`.
+
 **Research question:** Does the factual accuracy of legislative health debate predict bill passage outcomes?
 
 **Study:** Comparative analysis across the US House of Representatives, Ontario Legislative Assembly, and Quebec National Assembly from 1985 to 2026.

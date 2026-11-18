@@ -1,0 +1,12 @@
+Fingerprints (SHA-256) of the replication input files, made 2026-11-17 on Caprice Culkin's laptop.
+Unzip this file in the project folder (legislative-health-factuality); each file lands at the path shown.
+Check them with: shasum -a 256 <path>   The result must equal the value below.
+
+2e48c3a9d0e4cecdb255a531dde9cb11425c51e7e911ae0f005a431794a65ab7  data/dbpedia_pipeline/us/sentences_v3.json  (99,336,459 bytes, 338,772 sentences)
+544d73eac843ce72f321aaa3555fd4ce9d0fd3473663fb5f31468e19acc86da8  data/dbpedia_pipeline/ontario/sentences_v3.json  (150,443,898 bytes, 500,666 sentences)
+4683f2f27e9d11a285767ab77ddca9d4a9018e9a8745aa4a11936120c8fe9eae  data/dbpedia_pipeline/quebec/sentences_v3.json  (141,507,638 bytes, 438,007 sentences)
+92ae454ca52681c296ae7563684b7837fe9d3283f00188220b7c4a095a948185  data/canada/ontario/v3/hansard_segments_v3.json  (95,414,677 bytes)
+325377b49929f9355b81a2ed5f27001a27dfe4d0f99e65799ad7bd01a523a8c2  data/us/v3/segments_index.json  (1,734,094 bytes)
+c3b384e3c52c5e855c6575f89eaaa78513fdb7c4ca79783d9eb7856d1fca654b  data/canada/quebec_assembly/v3/segments_index.json  (1,047,440 bytes)
+705aab591084ef5b8a4c93ea48eb2ac07303f5fc1748d005b4cea1f796062688  data/us/v3/ocr_word_fixes.json  (2,849,854 bytes)
+b0270769b0232a2e5f81f748838f269ce41017a26b5733cf075ad8cb303817e3  data/canada/quebec_assembly/v3/ocr_word_fixes.json  (109,768 bytes)

@@ -1,5 +1,7 @@
 # v3 rebuild: run order
 
+> **Status, Nov 17, 2026:** Steps 1 to 5 still describe how the debate text and sentences were rebuilt. Steps 6 and 7 (Spotlight, DBpedia and scores) belong to the September design and are not part of the current pipeline. To replicate the current pipeline, follow `REPLICATION.md` at the top of the repository.
+
 Every command runs from the repo root with the venv active. The three jurisdictions use different sources, so steps 2, 3 and 4 can run at the same time in separate terminal tabs.
 
 ```bash

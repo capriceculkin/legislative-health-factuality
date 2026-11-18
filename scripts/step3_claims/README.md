@@ -1,5 +1,7 @@
 # scripts/step3_claims: English-French parity and full predications (Oct 19 to 20, 2026)
 
+> **Status, Nov 17, 2026:** This page was written Oct 19 to 20, for the two-of-three vote design. The current design (discourse first, from the Oct 22 meeting) and the full run are described in `FILES.md` in this folder and in `REPLICATION.md` at the top of the repository.
+
 This folder makes the predication rules treat English and French the same way, and measures whether they do.
 It does not change the full-corpus run: `data/dbpedia_pipeline/*/statements_v5.jsonl` were made with the v5 rules
 in `scripts/step2_parsers/`. Every full-run number stays a v5 number until the corpus is parsed again with these rules.

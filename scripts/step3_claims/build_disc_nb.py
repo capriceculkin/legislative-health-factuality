@@ -12,18 +12,18 @@ md(r"""
 
 The design agreed at the Oct 22 meeting, run step by step. Each step is code; run the cells in order.
 
-| What was agreed on Oct 22 (time in the recording) | Where it is here |
+| What was agreed on Oct 22 (from the Oct 22 meeting notes) | Where it is here |
 |---|---|
-| Run the discourse parse first (27:30, 33:40) | Step 1 |
-| Run the constituency parse on each discourse unit, not on the whole sentence (27:30, 33:45) | Step 2 |
-| Take the subjects and objects from each unit's constituency tree: the connections within a unit (33:45) | Step 3 |
-| Use the discourse parse for the connections between units: unit 1 takes the subject of unit 0 ("inferential substitution", 28:20); "that is why" points to unit 0 and unit 1 together (29:35 to 30:25) | Step 4 |
-| Only these two parsers: no dependency parse, nothing to reconcile (34:10) | Steps 1 to 4; checked in Part 7 |
-| The same for French: the Quebec sentence gives "L'an dernier" as the frame and two facts (35:00 to 38:45) | Part 2 |
-| Write the connections as "unit 0 and unit 1 to unit 2" (47:05) | every relation |
-| The trees expanded, a tree inside a tree, drawn the way Mann and Thompson draw discourse trees (41:40 to 46:15) | Step 5 |
-| Run it on more sentences from each legislature (40:25) | Part 4 |
-| Keep every step in a data structure that can be read, to check what is in DBpedia (48:20) | Part 5 |
+| Run the discourse parse first | Step 1 |
+| Run the constituency parse on each discourse unit, not on the whole sentence | Step 2 |
+| Take the subjects and objects from each unit's constituency tree: the connections within a unit | Step 3 |
+| Use the discourse parse for the connections between units: unit 1 takes the subject of unit 0 ("inferential substitution"); "that is why" points to unit 0 and unit 1 together | Step 4 |
+| Only these two parsers: no dependency parse, nothing to reconcile | Steps 1 to 4; checked in Part 7 |
+| The same for French: the Quebec sentence gives "L'an dernier" as the frame and two facts | Part 2 |
+| Write the connections as "unit 0 and unit 1 to unit 2" | every relation |
+| The trees expanded, a tree inside a tree, drawn the way Mann and Thompson draw discourse trees | Step 5 |
+| Run it on more sentences from each legislature | Part 4 |
+| Keep every step in a data structure that can be read, to check what is in DBpedia | Part 5 |
 
 **Parsers.** On the Mac, with the project's venv, the cells below run the real parsers: isanlp_rst for the discourse parse, Stanza (English) and Berkeley benepar_fr2 (French) for the constituency parse of each unit. Anywhere else the notebook uses the parses saved on Oct 19 and says so at the top of each output.
 
@@ -174,7 +174,7 @@ md(r"""
 
 *A small hardware store in an AHP would be joining an association, sending their premiums not to themselves but off to others, and that is why we need the check.*
 
-What was said should come out (28:20 to 32:30): unit 0 is a fact on its own (the store would be joining an association); unit 1 elaborates unit 0, so its subject is the subject of unit 0 (the store is sending its premiums to others); unit 2 explains unit 0 and unit 1 together, so "that" is all of unit 0 and unit 1; and inside unit 2, we need the check.
+What was said should come out: unit 0 is a fact on its own (the store would be joining an association); unit 1 elaborates unit 0, so its subject is the subject of unit 0 (the store is sending its premiums to others); unit 2 explains unit 0 and unit 1 together, so "that" is all of unit 0 and unit 1; and inside unit 2, we need the check.
 """)
 
 code(r"""
@@ -186,7 +186,7 @@ md(r"""
 
 *L'an dernier, la Chambre a adopté un projet de loi identique au projet de loi 5, mais le Sénat a refusé d'agir.*
 
-What was said should come out (35:00 to 38:45): unit 1 and unit 2 are a contrast; unit 0, "L'an dernier", is the frame for both; and the facts are that the Chambre adopted a bill identical to bill 5, and that the Senate refused to act, both last year. The same steps as for English.
+What was said should come out: unit 1 and unit 2 are a contrast; unit 0, "L'an dernier", is the frame for both; and the facts are that the Chambre adopted a bill identical to bill 5, and that the Senate refused to act, both last year. The same steps as for English.
 """)
 
 code(r"""

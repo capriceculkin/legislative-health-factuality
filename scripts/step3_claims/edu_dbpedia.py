@@ -1,8 +1,8 @@
 """edu_dbpedia.py OUT_DIR RECORDS.json [MORE.json ...] [--concepts-dir scripts/step2_parsers] [--offline] [--oct15 DIR]
 
-Oct 22 (48:16 to 48:38): "the output ... in a data structure that is consumable because then we can look and say, okay,
-well, are there any DBpedia elements in here or not, and why and why not?" and (48:39) "most likely a lot of the
-DBpedia stuff is gonna be found [in] the noun ... it's the walk between nouns."
+Asked for at the Oct 22 meeting: keep the output of each step in a data structure that can be read, to see which
+DBpedia elements are present and why or why not. Most DBpedia matches will likely come from nouns and the links
+between them.
 
 For every claim the discourse-first pipeline read (edu_pipeline.py), this finds the DBpedia concepts at its subject and
 its object with the SAME concept step as the Oct 15 run (scripts/step2_parsers/concepts_v3.py, version 1: the institution list,

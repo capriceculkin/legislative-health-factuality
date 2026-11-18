@@ -85,13 +85,13 @@ ws.column_dimensions["B"].width = 125
 start = [
     ("#TITLE", "DBpedia concepts in the discourse-first claims"),
     ("What was asked (Oct 22)", None),
-    ("47:38", "\"I do expect that ... we're not gonna have as many DBpedia-worthy facts as we think we do, because ... a lot of it's "
-              "gonna end up being just straight up facts that were explained, but aren't concepts in DBpedia.\""),
-    ("48:01", "\"How are we identifying what's in DBpedia and what's not?\""),
-    ("48:16 to 48:38", "\"the output ... in a data structure that is consumable because then we can look and say, okay, well are there "
-                       "any DBpedia elements in here or not and why and why not?\""),
-    ("48:39 to 48:46", "\"Most likely a lot of the DBpedia stuff is gonna be found [in] the noun ... it's the walk between nouns.\""),
-    ("49:43 to 50:15", "It will give a sense of how much of the speech is encyclopedic fact."),
+    ("Oct 22 meeting notes", "David expects fewer DBpedia-worthy facts than hoped, since many claims will be plain statements that "
+                             "are not DBpedia concepts."),
+    ("Oct 22 meeting notes", "How are we identifying what is in DBpedia and what is not?"),
+    ("Oct 22 meeting notes", "Keep the output of each step in a data structure that can be read, to see which DBpedia elements are "
+                             "present and why or why not."),
+    ("Oct 22 meeting notes", "Most DBpedia matches will likely come from nouns and the links between them."),
+    ("Oct 22 meeting notes", "It will give a sense of how much of the speech is encyclopedic fact."),
     ("What this does", None),
     ("Concepts", "The same concept step as the Oct 15 run (scripts/step2_parsers/concepts_v3.py, version 1, unchanged): the institutions of each "
                  "legislature, exact page titles for names, Spotlight's senses re-ranked by the sentence, the common-noun list, French "

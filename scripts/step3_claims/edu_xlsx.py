@@ -248,21 +248,21 @@ start = [
     ("#TITLE", "Discourse first: a constituency tree for each discourse unit"),
     ("What this is", "The design from our Oct 22 meeting, built and run on the saved sentences. Every cell on the gray tabs is printed by "
                      "scripts/step3_claims/edu_xlsx.py from the files run_edu.sh writes (outputs/edu/), so it can be rebuilt after any change."),
-    ("What the meeting asked for (time in the recording)", None),
-    ("Discourse parse first (27:30, 33:40)", "Step 1 Discourse parse: isanlp_rst splits each sentence into units and gives the relations between them."),
-    ("A constituency parse on each unit, not the sentence (27:35, 33:43)", "Step 2 Unit trees: each unit's own text parsed alone (Stanza for English, "
+    ("What the meeting asked for (from the Oct 22 meeting notes)", None),
+    ("Discourse parse first", "Step 1 Discourse parse: isanlp_rst splits each sentence into units and gives the relations between them."),
+    ("A constituency parse on each unit, not the sentence", "Step 2 Unit trees: each unit's own text parsed alone (Stanza for English, "
      "Berkeley benepar_fr2 for French). The sentence's own tree is never read."),
-    ("Subjects and objects from each unit's tree, connections within (33:54 to 34:02)", "Step 3-4 Lines, the Step 3 column: what each unit's tree gives before anything is connected."),
-    ("The discourse parse makes the connections between units (28:23, 29:11 to 30:24, 34:02)", "Step 3-4 Lines, the Step 4 columns: 'sending ...' is "
+    ("Subjects and objects from each unit's tree, connections within", "Step 3-4 Lines, the Step 3 column: what each unit's tree gives before anything is connected."),
+    ("The discourse parse makes the connections between units", "Step 3-4 Lines, the Step 4 columns: 'sending ...' is "
      "inferential to unit 0 and takes its subject; 'that is why' points to unit 0 and unit 1 together. Every borrowed part says which unit and relation it came through."),
-    ("Only these two parsers, nothing to reconcile (34:14)", "No dependency parse and no vote anywhere; the notebook checks that the outputs are identical with the dependency parses deleted."),
-    ("The same for French (35:04 to 39:05)", "Flow 2: 'L'an dernier' is the frame for both units, and the sentence gives its two claims."),
-    ("More sentences from each parliament (40:28)", "20 new sentences each from the US House, Ontario and Quebec (IDs starting 'more'), on every gray tab."),
-    ("The trees in tree form, a tree inside a tree, drawn like Mann and Thompson (18:18, 41:36 to 46:30)", "The flows draw each unit's tree inside the "
+    ("Only these two parsers, nothing to reconcile", "No dependency parse and no vote anywhere; the notebook checks that the outputs are identical with the dependency parses deleted."),
+    ("The same for French", "Flow 2: 'L'an dernier' is the frame for both units, and the sentence gives its two claims."),
+    ("More sentences from each parliament", "20 new sentences each from the US House, Ontario and Quebec (IDs starting 'more'), on every gray tab."),
+    ("The trees in tree form, a tree inside a tree, drawn like Mann and Thompson", "The flows draw each unit's tree inside the "
      "discourse tree. The same drawing for every sentence: docs/discourse_first_figures.html."),
-    ("'unit 0 to unit 2', not 'unit 0 0 to unit 2 2' (47:00)", "Every relation in Step 1 and on the flows is written that way."),
-    ("Bigger figures for the presentation in November (48:06)", "The flow drawings are saved large in figures/ next to this workbook, for the slides."),
-    ("Every step in a consumable data structure, to see which DBpedia elements are there and why or why not (48:16 to 48:38)", "Step 5 Records for "
+    ("'unit 0 to unit 2', not 'unit 0 0 to unit 2 2'", "Every relation in Step 1 and on the flows is written that way."),
+    ("Bigger figures for the presentation in November", "The flow drawings are saved large in figures/ next to this workbook, for the slides."),
+    ("Every step in a consumable data structure, to see which DBpedia elements are there and why or why not", "Step 5 Records for "
      "DBpedia and outputs/edu/discourse_first_records.json. The DBpedia look-up itself has not been run on these yet."),
     ("Results", None),
 ] + [(f"{name}, {lang} ({ns} sentences)", f"found {f}/{n} ({round(100*f/n)}%, 95% CI {fi[0]} to {fi[1]}), exact {e}/{n} ({round(100*e/n)}%, 95% CI {ei[0]} to {ei[1]})")

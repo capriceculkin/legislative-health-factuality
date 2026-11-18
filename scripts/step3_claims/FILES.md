@@ -74,13 +74,13 @@ Each one measures the rules against the answer keys or compares two versions.
 
 Links the claims of the sample sentences to DBpedia and scores the walk. Not yet run on the full corpus.
 
-- `edu_dbpedia.py`: Oct 22 (48:16 to 48:38): "the output ... in a data structure that is consumable because then we can look and say, okay, well, are there any DBpedia elements in here or not, and why and why not?" and (48:39) "most likely a lot of ...
+- `edu_dbpedia.py`: Finds the DBpedia concepts at the subject and object of every claim, and the walk between them, as asked for at the Oct 22 meeting.
 - `edu_dbpedia_book.py`: The DBpedia step, every part: method with exact settings, all counts, worked examples, and a workbook with every candidate, every claim end and every walk for all 190 sentences.
 - `edu_dbpedia_senses.py`: The share of claims with both ends in DBpedia again, counting only concepts whose page was judged the right sense in SENSE_CHECK.csv (columns word, page, reading_A, reading_B). Strict: both readings say right.
 - `edu_dbpedia_sheet.py`: dsheet.py EDU_DBPEDIA.json SPOTLIGHT_RAW.json SENSE_CHECK.csv WALK_BASELINE.json OUT.xlsx The DBpedia step in two tabs: one row per claim (both ends, pages, how found, sense readings, walk), and every Spotlight candidate.
 - `edu_dbpedia_xlsx.py`: The DBpedia check (edu_dbpedia.py) as a workbook to read and mark: a start page, every claim with the concepts at its two ends and why an end has none, every concept once (word and page) to mark right or wrong, the reasons ...
 - `edu_walk_baseline.py`: Is a short walk between a claim's two concepts evidence for the claim? For every claim whose two ends have a concept judged the right sense (lenient: either reading says right), the walk score of the real pair is set beside the ...
-- `run_dbpedia.sh`: Which claims have DBpedia concepts at their ends, why not, and the walk between them (Oct 22, 48:16 to 48:46).
+- `run_dbpedia.sh`: Which claims have DBpedia concepts at their ends, why not, and the walk between them (asked for at the Oct 22 meeting).
 
 ## Figures, books and workbooks
 
